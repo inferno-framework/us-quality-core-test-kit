@@ -1,0 +1,122 @@
+---
+:name: us_quality_core_careteam
+:class_name: USQualityCorev010CareteamSequence
+:version: v0.1.0
+:reformatted_version: v010
+:resource: CareTeam
+:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-careteam
+:profile_name: US Quality Core CareTeam
+:profile_version: 0.1.0
+:title: CareTeam
+:short_description: Verify support for the capabilities required by the US Quality
+  Core CareTeam.
+:is_delayed: false
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :expectation: SHALL
+  :names:
+  - patient
+  - status
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+:search_definitions:
+  :patient:
+    :paths:
+    - subject
+    :full_paths:
+    - CareTeam.subject
+    :comparators: {}
+    :values: []
+    :type: Reference
+    :contains_multiple: false
+    :multiple_or: MAY
+  :status:
+    :paths:
+    - status
+    :full_paths:
+    - CareTeam.status
+    :comparators: {}
+    :values:
+    - proposed
+    - active
+    - suspended
+    - inactive
+    - entered-in-error
+    :type: code
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes: []
+:required_concepts: []
+:must_supports:
+  :extensions: []
+  :slices: []
+  :elements:
+  - :path: status
+  - :path: subject
+    :types:
+    - Reference
+    :target_profiles:
+    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - :path: participant
+  - :path: participant.role
+  - :path: participant.member
+    :types:
+    - Reference
+:mandatory_elements:
+- CareTeam.subject
+- CareTeam.participant
+- CareTeam.participant.role
+- CareTeam.participant.member
+:bindings:
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/care-team-status
+  :path: status
+:references:
+- :path: CareTeam.subject
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+- :path: CareTeam.encounter
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Encounter
+- :path: CareTeam.participant.member
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-relatedperson
+- :path: CareTeam.participant.onBehalfOf
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Organization
+- :path: CareTeam.reasonReference
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Condition
+- :path: CareTeam.managingOrganization
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Organization
+:tests:
+- :id: us_quality_core_v010_care_team_patient_status_search_test
+  :file_name: care_team_patient_status_search_test.rb
+- :id: us_quality_core_v010_care_team_read_test
+  :file_name: care_team_read_test.rb
+- :id: us_quality_core_v010_care_team_validation_test
+  :file_name: care_team_validation_test.rb
+- :id: us_quality_core_v010_care_team_must_support_test
+  :file_name: care_team_must_support_test.rb
+- :id: us_quality_core_v010_care_team_reference_resolution_test
+  :file_name: care_team_reference_resolution_test.rb
+:id: us_quality_core_v010_care_team
+:file_name: care_team_group.rb
+:delayed_references:
+- :path: participant.member
+  :resources:
+  - Practitioner
+  - PractitionerRole
+  - Organization
+:resource_conformance_expectation: SHALL

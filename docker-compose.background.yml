@@ -1,0 +1,53 @@
+services:
+  hl7_validator_service:
+    image: infernocommunity/inferno-resource-validator
+    environment:
+      # Defines how long validator sessions last if unused, in minutes:
+      # Negative values mean sessions never expire, 0 means sessions immediately expire
+      SESSION_CACHE_DURATION: -1
+    volumes:
+      - ./lib/us_quality_core_test_kit/igs:/app/igs
+      # To let the service share your local FHIR package cache,
+      # uncomment the below line
+      # - ~/.fhir:/home/ktor/.fhir
+  fhirpath:
+    image: infernocommunity/fhirpath-service
+    ports:
+      - "6789:6789"
+  nginx:
+    image: nginx
+    volumes:
+      - ./config/nginx.background.conf:/etc/nginx/nginx.conf
+    ports:
+      - "80:80"
+    command: [nginx, '-g', 'daemon off;']
+    depends_on:
+      - fhirpath
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./data/redis:/data
+    command: redis-server --appendonly yes
+  inferno_reference_server:
+    image: infernocommunity/inferno-reference-server:v4.0.1
+    mem_limit: 2500m
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./client-example-resources:/var/lib/jetty/resources/
+    environment:
+      - CUSTOM_BEARER_TOKEN=SAMPLE_TOKEN
+      - READ_ONLY=true
+  db:
+    image: postgres:9.6-alpine
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    volumes:
+      - fhir-pgdata:/var/lib/postgresql/data
+    restart: unless-stopped
+    mem_limit: 600m
+volumes:
+  fhir-pgdata:

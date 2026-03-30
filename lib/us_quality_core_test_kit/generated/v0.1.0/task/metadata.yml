@@ -1,0 +1,205 @@
+---
+:name: us_quality_core_task
+:class_name: USQualityCorev010TaskSequence
+:version: v0.1.0
+:reformatted_version: v010
+:resource: Task
+:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-task
+:profile_name: US Quality Core Task
+:profile_version: 0.1.0
+:title: Task
+:short_description: Verify support for the capabilities required by the US Quality
+  Core Task.
+:is_delayed: false
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :expectation: SHALL
+  :names:
+  - patient
+  - status
+  :names_not_must_support_or_mandatory:
+  - patient
+  :must_support_or_mandatory: false
+- :names:
+  - patient
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory:
+  - patient
+  :must_support_or_mandatory: false
+- :expectation: SHALL
+  :names:
+  - patient
+  - code
+  :names_not_must_support_or_mandatory:
+  - patient
+  :must_support_or_mandatory: false
+:search_definitions:
+  :patient:
+    :paths:
+    - for
+    :full_paths:
+    - Task.for
+    :comparators: {}
+    :values: []
+    :type: Reference
+    :contains_multiple: false
+    :multiple_or: MAY
+  :status:
+    :paths:
+    - status
+    :full_paths:
+    - Task.status
+    :comparators: {}
+    :values:
+    - draft
+    - requested
+    - received
+    - accepted
+    - ready
+    - cancelled
+    - in-progress
+    - on-hold
+    - failed
+    - completed
+    - entered-in-error
+    :type: code
+    :contains_multiple: false
+    :multiple_or: MAY
+  :code:
+    :paths:
+    - code
+    :full_paths:
+    - Task.code
+    :comparators: {}
+    :values: []
+    :type: CodeableConcept
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes: []
+:required_concepts: []
+:must_supports:
+  :extensions: []
+  :slices: []
+  :elements:
+  - :path: basedOn
+    :types:
+    - Reference
+    :us_quality_coreuscdi_plus_quality: true
+  - :path: status
+    :us_quality_coreuscdi_plus_quality: true
+  - :path: statusReason
+    :us_quality_coreuscdi_plus_quality: true
+  - :path: code
+    :us_quality_coreuscdi_plus_quality: true
+  - :path: focus
+    :types:
+    - Reference
+    :us_quality_coreuscdi_plus_quality: true
+  - :path: executionPeriod
+    :us_quality_coreuscdi_plus_quality: true
+  - :path: reasonCode
+    :us_quality_coreuscdi_plus_quality: true
+:mandatory_elements:
+- Task.identifier
+- Task.status
+- Task.intent
+- Task.priority
+- Task.code
+- Task.executionPeriod
+- Task.input.type
+- Task.input.value[x]
+- Task.output.type
+- Task.output.value[x]
+:bindings:
+- :type: code
+  :strength: required
+  :system: http://fhir.org/guides/astp/us-quality-core/ValueSet/us-quality-core-non-negative-task-status
+  :path: status
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/task-intent
+  :path: intent
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/request-priority
+  :path: priority
+:references:
+- :path: Task.basedOn
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Resource|4.0.1
+- :path: Task.partOf
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Task|4.0.1
+- :path: Task.focus
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Resource|4.0.1
+- :path: Task.for
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Resource|4.0.1
+- :path: Task.encounter
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
+- :path: Task.requester
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Device|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Organization|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Patient|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/RelatedPerson|4.0.1
+- :path: Task.owner
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Organization|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/CareTeam|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/HealthcareService|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Patient|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Device|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/RelatedPerson|4.0.1
+- :path: Task.location
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Location|4.0.1
+- :path: Task.reasonReference
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Resource|4.0.1
+- :path: Task.insurance
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Coverage|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/ClaimResponse|4.0.1
+- :path: Task.relevantHistory
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Provenance|4.0.1
+- :path: Task.restriction.recipient
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Patient|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/RelatedPerson|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Group|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Organization|4.0.1
+:tests:
+- :id: us_quality_core_v010_task_patient_status_search_test
+  :file_name: task_patient_status_search_test.rb
+- :id: us_quality_core_v010_task_patient_search_test
+  :file_name: task_patient_search_test.rb
+- :id: us_quality_core_v010_task_patient_code_search_test
+  :file_name: task_patient_code_search_test.rb
+- :id: us_quality_core_v010_task_read_test
+  :file_name: task_read_test.rb
+- :id: us_quality_core_v010_task_validation_test
+  :file_name: task_validation_test.rb
+- :id: us_quality_core_v010_task_must_support_test
+  :file_name: task_must_support_test.rb
+- :id: us_quality_core_v010_task_reference_resolution_test
+  :file_name: task_reference_resolution_test.rb
+:id: us_quality_core_v010_task
+:file_name: task_group.rb
+:delayed_references: []
+:resource_conformance_expectation: SHALL

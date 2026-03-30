@@ -1,0 +1,216 @@
+---
+:name: us_quality_core_procedure
+:class_name: USQualityCorev010ProcedureSequence
+:version: v0.1.0
+:reformatted_version: v010
+:resource: Procedure
+:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-procedure
+:profile_name: US Quality Core Procedure
+:profile_version: 0.1.0
+:title: Procedure
+:short_description: Verify support for the capabilities required by the US Quality
+  Core Procedure.
+:is_delayed: false
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :expectation: SHALL
+  :names:
+  - patient
+  - status
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :names:
+  - patient
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - date
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+:search_definitions:
+  :patient:
+    :paths:
+    - subject
+    :full_paths:
+    - Procedure.subject
+    :comparators: {}
+    :values: []
+    :type: Reference
+    :contains_multiple: false
+    :multiple_or: MAY
+  :status:
+    :paths:
+    - status
+    :full_paths:
+    - Procedure.status
+    :comparators: {}
+    :values:
+    - preparation
+    - in-progress
+    - on-hold
+    - stopped
+    - completed
+    - entered-in-error
+    - unknown
+    :type: code
+    :contains_multiple: false
+    :multiple_or: MAY
+  :date:
+    :paths:
+    - performed
+    :full_paths:
+    - Procedure.performed
+    :comparators:
+      :eq: MAY
+      :ne: MAY
+      :gt: SHALL
+      :ge: SHALL
+      :lt: SHALL
+      :le: SHALL
+      :sa: MAY
+      :eb: MAY
+      :ap: MAY
+    :values: []
+    :type: date
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes: []
+:required_concepts: []
+:must_supports:
+  :extensions:
+  - :id: Procedure.extension:recorded
+    :path: extension
+    :url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-recorded
+    :us_quality_coreuscdi_plus_quality: true
+  :slices: []
+  :elements:
+  - :path: basedOn
+    :uscdi_only: true
+    :types:
+    - Reference
+  - :path: partOf
+    :types:
+    - Reference
+    :us_quality_coreuscdi_plus_quality: true
+  - :path: status
+  - :path: statusReason
+    :us_quality_coreuscdi_plus_quality: true
+  - :path: code
+  - :path: subject
+    :types:
+    - Reference
+    :target_profiles:
+    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - :path: performedDateTime
+    :original_path: performed[x]
+  - :path: reasonCode
+    :us_quality_coreuscdi_plus_quality: true
+  - :path: reasonReference
+    :types:
+    - Reference
+    :us_quality_coreuscdi_plus_quality: true
+:mandatory_elements:
+- Procedure.status
+- Procedure.code
+- Procedure.subject
+- Procedure.performer.actor
+- Procedure.focalDevice.manipulated
+:bindings:
+- :type: code
+  :strength: required
+  :system: http://fhir.org/guides/astp/us-quality-core/ValueSet/us-quality-core-non-negative-event-status
+  :path: status
+:references:
+- :path: Procedure.basedOn
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-careplan
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-servicerequest
+- :path: Procedure.partOf
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Procedure
+  - http://hl7.org/fhir/StructureDefinition/Observation
+  - http://hl7.org/fhir/StructureDefinition/MedicationAdministration
+- :path: Procedure.subject
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+- :path: Procedure.encounter
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Encounter
+- :path: Procedure.recorder
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Patient
+  - http://hl7.org/fhir/StructureDefinition/RelatedPerson
+  - http://hl7.org/fhir/StructureDefinition/Practitioner
+  - http://hl7.org/fhir/StructureDefinition/PractitionerRole
+- :path: Procedure.asserter
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Patient
+  - http://hl7.org/fhir/StructureDefinition/RelatedPerson
+  - http://hl7.org/fhir/StructureDefinition/Practitioner
+  - http://hl7.org/fhir/StructureDefinition/PractitionerRole
+- :path: Procedure.performer.actor
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-relatedperson
+- :path: Procedure.performer.onBehalfOf
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Organization
+- :path: Procedure.location
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Location
+- :path: Procedure.reasonReference
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-diagnosticreport-note
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
+- :path: Procedure.report
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/DiagnosticReport
+  - http://hl7.org/fhir/StructureDefinition/DocumentReference
+  - http://hl7.org/fhir/StructureDefinition/Composition
+- :path: Procedure.complicationDetail
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Condition
+- :path: Procedure.focalDevice.manipulated
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Device
+- :path: Procedure.usedReference
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Device
+  - http://hl7.org/fhir/StructureDefinition/Medication
+  - http://hl7.org/fhir/StructureDefinition/Substance
+:tests:
+- :id: us_quality_core_v010_procedure_patient_status_search_test
+  :file_name: procedure_patient_status_search_test.rb
+- :id: us_quality_core_v010_procedure_patient_search_test
+  :file_name: procedure_patient_search_test.rb
+- :id: us_quality_core_v010_procedure_patient_date_search_test
+  :file_name: procedure_patient_date_search_test.rb
+- :id: us_quality_core_v010_procedure_read_test
+  :file_name: procedure_read_test.rb
+- :id: us_quality_core_v010_procedure_validation_test
+  :file_name: procedure_validation_test.rb
+- :id: us_quality_core_v010_procedure_must_support_test
+  :file_name: procedure_must_support_test.rb
+- :id: us_quality_core_v010_procedure_reference_resolution_test
+  :file_name: procedure_reference_resolution_test.rb
+:id: us_quality_core_v010_procedure
+:file_name: procedure_group.rb
+:delayed_references:
+- :path: performer.actor
+  :resources:
+  - Practitioner
+  - Organization
+:resource_conformance_expectation: SHALL

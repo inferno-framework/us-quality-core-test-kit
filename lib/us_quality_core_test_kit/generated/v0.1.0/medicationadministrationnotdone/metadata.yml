@@ -1,0 +1,179 @@
+---
+:name: us_quality_core_medicationadministrationnotdone
+:class_name: USQualityCorev010MedicationadministrationnotdoneSequence
+:version: v0.1.0
+:reformatted_version: v010
+:resource: MedicationAdministration
+:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-medicationadministrationnotdone
+:profile_name: US Quality Core MedicationAdministration Not Done
+:profile_version: 0.1.0
+:title: MedicationAdministration Not Done
+:short_description: Verify support for the capabilities required by the US Quality
+  Core MedicationAdministration Not Done.
+:is_delayed: false
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :expectation: SHALL
+  :names:
+  - patient
+  - status
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :names:
+  - patient
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - code
+  :names_not_must_support_or_mandatory:
+  - code
+  :must_support_or_mandatory: false
+- :expectation: SHALL
+  :names:
+  - patient
+  - effective-time
+  :names_not_must_support_or_mandatory:
+  - effective-time
+  :must_support_or_mandatory: false
+:search_definitions:
+  :patient:
+    :paths:
+    - subject
+    :full_paths:
+    - MedicationAdministration.subject
+    :comparators: {}
+    :values: []
+    :type: Reference
+    :contains_multiple: false
+    :multiple_or: MAY
+  :status:
+    :paths:
+    - status
+    :full_paths:
+    - MedicationAdministration.status
+    :comparators: {}
+    :values:
+    - not-done
+    :type: code
+    :contains_multiple: false
+    :multiple_or: MAY
+  :code:
+    :paths:
+    - medicationCodeableConcept
+    :full_paths:
+    - MedicationAdministration.medicationCodeableConcept
+    :comparators: {}
+    :values: []
+    :type: CodeableConcept
+    :contains_multiple: false
+    :multiple_or: MAY
+  :effective-time:
+    :paths:
+    - effective
+    :full_paths:
+    - MedicationAdministration.effective
+    :comparators:
+      :eq: MAY
+      :ne: MAY
+      :gt: SHALL
+      :ge: SHALL
+      :lt: SHALL
+      :le: SHALL
+      :sa: MAY
+      :eb: MAY
+      :ap: MAY
+    :values: []
+    :type: date
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes: []
+:required_concepts: []
+:must_supports:
+  :extensions:
+  - :id: MedicationAdministration.medication[x].extension:notDoneValueSet
+    :path: medication[x].extension
+    :url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet
+    :us_quality_coreuscdi_plus_quality: true
+  :slices: []
+  :elements:
+  - :path: status
+    :fixed_value: not-done
+    :us_quality_coreuscdi_plus_quality: true
+  - :path: statusReason
+    :us_quality_coreuscdi_plus_quality: true
+:mandatory_elements:
+- MedicationAdministration.extension
+- MedicationAdministration.status
+- MedicationAdministration.statusReason
+- MedicationAdministration.medication[x]
+- MedicationAdministration.subject
+- MedicationAdministration.effective[x]
+- MedicationAdministration.performer.actor
+:bindings: []
+:references:
+- :path: MedicationAdministration.partOf
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/MedicationAdministration|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Procedure|4.0.1
+- :path: MedicationAdministration.subject
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+- :path: MedicationAdministration.context
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-encounter
+  - http://hl7.org/fhir/StructureDefinition/EpisodeOfCare
+- :path: MedicationAdministration.supportingInformation
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Resource|4.0.1
+- :path: MedicationAdministration.performer.actor
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Patient|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/RelatedPerson|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Device|4.0.1
+- :path: MedicationAdministration.reasonReference
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Condition|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/DiagnosticReport|4.0.1
+- :path: MedicationAdministration.request
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-medicationrequest
+- :path: MedicationAdministration.device
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Device|4.0.1
+- :path: MedicationAdministration.eventHistory
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Provenance|4.0.1
+:tests:
+- :id: us_quality_core_v010_medicationadministrationnotdone_patient_status_search_test
+  :file_name: medicationadministrationnotdone_patient_status_search_test.rb
+- :id: us_quality_core_v010_medicationadministrationnotdone_patient_search_test
+  :file_name: medicationadministrationnotdone_patient_search_test.rb
+- :id: us_quality_core_v010_medicationadministrationnotdone_patient_code_search_test
+  :file_name: medicationadministrationnotdone_patient_code_search_test.rb
+- :id: us_quality_core_v010_medicationadministrationnotdone_patient_effective_time_search_test
+  :file_name: medicationadministrationnotdone_patient_effective_time_search_test.rb
+- :id: us_quality_core_v010_medicationadministrationnotdone_read_test
+  :file_name: medicationadministrationnotdone_read_test.rb
+- :id: us_quality_core_v010_medicationadministrationnotdone_validation_test
+  :file_name: medicationadministrationnotdone_validation_test.rb
+- :id: us_quality_core_v010_medicationadministrationnotdone_must_support_test
+  :file_name: medicationadministrationnotdone_must_support_test.rb
+:id: us_quality_core_v010_medicationadministrationnotdone
+:file_name: medicationadministrationnotdone_group.rb
+:delayed_references:
+- :path: context
+  :resources:
+  - Encounter
+:resource_conformance_expectation: SHALL

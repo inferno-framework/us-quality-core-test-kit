@@ -1,0 +1,250 @@
+---
+:name: us_quality_core_simple_observation
+:class_name: USQualityCorev010SimpleObservationSequence
+:version: v0.1.0
+:reformatted_version: v010
+:resource: Observation
+:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-simple-observation
+:profile_name: US Quality Core Simple Observation
+:profile_version: 0.1.0
+:title: Observation Simple
+:short_description: Verify support for the capabilities required by the US Quality
+  Core Simple Observation.
+:is_delayed: false
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :expectation: SHALL
+  :names:
+  - patient
+  - category
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - category
+  - date
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - code
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+:search_definitions:
+  :patient:
+    :paths:
+    - subject
+    :full_paths:
+    - Observation.subject
+    :comparators: {}
+    :values: []
+    :type: Reference
+    :contains_multiple: false
+    :multiple_or: MAY
+  :category:
+    :paths:
+    - category
+    :full_paths:
+    - Observation.category
+    :comparators: {}
+    :values:
+    - social-history
+    - vital-signs
+    - imaging
+    - laboratory
+    - procedure
+    - survey
+    - exam
+    - therapy
+    - activity
+    :type: CodeableConcept
+    :contains_multiple: true
+    :multiple_or: MAY
+  :date:
+    :paths:
+    - effective
+    :full_paths:
+    - Observation.effective
+    :comparators:
+      :eq: MAY
+      :ne: MAY
+      :gt: SHALL
+      :ge: SHALL
+      :lt: SHALL
+      :le: SHALL
+      :sa: MAY
+      :eb: MAY
+      :ap: MAY
+    :values: []
+    :type: date
+    :contains_multiple: false
+    :multiple_or: MAY
+  :code:
+    :paths:
+    - code
+    :full_paths:
+    - Observation.code
+    :comparators: {}
+    :values: []
+    :type: CodeableConcept
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes: []
+:required_concepts: []
+:must_supports:
+  :extensions: []
+  :slices:
+  - :slice_id: Observation.value[x]:valueCodeableConcept
+    :slice_name: valueCodeableConcept
+    :path: value[x]
+    :discriminator:
+      :type: type
+      :code: CodeableConcept
+  - :slice_id: Observation.category:us-core
+    :slice_name: us-core
+    :path: category
+    :discriminator:
+      :type: requiredBinding
+      :path: ''
+      :values:
+      - :system: http://terminology.hl7.org/CodeSystem/observation-category
+        :code: social-history
+      - :system: http://terminology.hl7.org/CodeSystem/observation-category
+        :code: vital-signs
+      - :system: http://terminology.hl7.org/CodeSystem/observation-category
+        :code: imaging
+      - :system: http://terminology.hl7.org/CodeSystem/observation-category
+        :code: laboratory
+      - :system: http://terminology.hl7.org/CodeSystem/observation-category
+        :code: procedure
+      - :system: http://terminology.hl7.org/CodeSystem/observation-category
+        :code: survey
+      - :system: http://terminology.hl7.org/CodeSystem/observation-category
+        :code: exam
+      - :system: http://terminology.hl7.org/CodeSystem/observation-category
+        :code: therapy
+      - :system: http://terminology.hl7.org/CodeSystem/observation-category
+        :code: activity
+  :elements:
+  - :path: status
+  - :path: category
+  - :path: code
+  - :path: subject
+    :types:
+    - Reference
+    :target_profiles:
+    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - :path: effectiveDateTime
+    :original_path: effective[x]
+  - :path: performer
+    :types:
+    - Reference
+  - :path: valueQuantity
+    :original_path: value[x]
+  - :path: valueCodeableConcept
+    :original_path: value[x]
+  - :path: valueString
+    :original_path: value[x]
+  - :path: valueBoolean
+    :original_path: value[x]
+  - :path: derivedFrom
+    :uscdi_only: true
+    :types:
+    - Reference
+:mandatory_elements:
+- Observation.status
+- Observation.category
+- Observation.code
+- Observation.subject
+- Observation.component.code
+:bindings:
+- :type: code
+  :strength: required
+  :system: http://fhir.org/guides/astp/us-quality-core/ValueSet/us-quality-core-non-negative-observation-status
+  :path: status
+:references:
+- :path: Observation.basedOn
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/CarePlan
+  - http://hl7.org/fhir/StructureDefinition/DeviceRequest
+  - http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation
+  - http://hl7.org/fhir/StructureDefinition/MedicationRequest
+  - http://hl7.org/fhir/StructureDefinition/NutritionOrder
+  - http://hl7.org/fhir/StructureDefinition/ServiceRequest
+- :path: Observation.partOf
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/MedicationAdministration
+  - http://hl7.org/fhir/StructureDefinition/MedicationDispense
+  - http://hl7.org/fhir/StructureDefinition/MedicationStatement
+  - http://hl7.org/fhir/StructureDefinition/Procedure
+  - http://hl7.org/fhir/StructureDefinition/Immunization
+  - http://hl7.org/fhir/StructureDefinition/ImagingStudy
+- :path: Observation.subject
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+- :path: Observation.focus
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Resource
+- :path: Observation.encounter
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Encounter
+- :path: Observation.performer
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-careteam
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-relatedperson
+- :path: Observation.specimen
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Specimen
+- :path: Observation.device
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Device
+  - http://hl7.org/fhir/StructureDefinition/DeviceMetric
+- :path: Observation.hasMember
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Observation
+  - http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse
+  - http://hl7.org/fhir/StructureDefinition/MolecularSequence
+- :path: Observation.derivedFrom
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-simple-observation
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-questionnaireresponse
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-imagingstudy
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
+  - http://hl7.org/fhir/StructureDefinition/Media
+  - http://hl7.org/fhir/StructureDefinition/MolecularSequence
+:tests:
+- :id: us_quality_core_v010_simple_observation_patient_category_search_test
+  :file_name: simple_observation_patient_category_search_test.rb
+- :id: us_quality_core_v010_simple_observation_patient_category_date_search_test
+  :file_name: simple_observation_patient_category_date_search_test.rb
+- :id: us_quality_core_v010_simple_observation_patient_code_search_test
+  :file_name: simple_observation_patient_code_search_test.rb
+- :id: us_quality_core_v010_simple_observation_read_test
+  :file_name: simple_observation_read_test.rb
+- :id: us_quality_core_v010_simple_observation_validation_test
+  :file_name: simple_observation_validation_test.rb
+- :id: us_quality_core_v010_simple_observation_must_support_test
+  :file_name: simple_observation_must_support_test.rb
+- :id: us_quality_core_v010_simple_observation_reference_resolution_test
+  :file_name: simple_observation_reference_resolution_test.rb
+:id: us_quality_core_v010_simple_observation
+:file_name: simple_observation_group.rb
+:delayed_references:
+- :path: performer
+  :resources:
+  - Practitioner
+  - Organization
+  - PractitionerRole
+:resource_conformance_expectation: SHALL

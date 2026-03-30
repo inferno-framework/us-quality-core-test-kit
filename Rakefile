@@ -1,0 +1,34 @@
+# frozen_string_literal: true
+
+begin
+  require 'rspec/core/rake_task'
+  RSpec::Core::RakeTask.new(:spec)
+  task default: :spec
+rescue LoadError # rubocop:disable Lint/SuppressedException
+end
+
+namespace :db do
+  desc 'Apply changes to the database'
+  task :migrate do
+    require 'inferno/config/application'
+    require 'inferno/utils/migration'
+    Inferno::Utils::Migration.new.run
+  end
+end
+
+namespace :us_quality_core do
+  desc 'Generate tests'
+  task :generate do
+    require_relative 'lib/us_quality_core_test_kit/generator'
+    require_relative 'lib/us_quality_core_test_kit/client/generator'
+
+    USQualityCoreTestKit::Generator.generate
+    USQualityCoreTestKit::Client::Generator.generate
+  end
+end
+
+# Alias
+namespace :usqualitycore do
+  desc 'Generate tests'
+  task generate: 'us_quality_core:generate'
+end

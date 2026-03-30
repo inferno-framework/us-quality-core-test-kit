@@ -1,0 +1,112 @@
+require_relative '../../version'
+
+<% group_file_list.each do |file_name| %>require_relative '<%= file_name %>'
+<% end %>
+
+module USQualityCoreTestKit
+  module <%= module_name %>
+    class <%= class_name %> < Inferno::TestSuite
+      title '<%= title %>'
+
+      description %(
+        The US Quality Core Server Test Kit tests server systems for their conformance to the [US Quality Core
+        Implementation Guide](<%=ig_link %>).
+
+        # Scope
+
+        These tests are a DRAFT intended to allow implementers to perform
+        preliminary checks of server systems against the requirements stated
+        in the US Quality Core Implementation Guide and provide feedback on the tests.
+        Future versions of these tests may verify other requirements and may
+        change the test verification logic.
+
+
+        # Test Methodology
+
+        These test simulate a realistic client that is capable of retrieving
+        all necessary information necessary to perform calculation measurement
+        against a single patient from a US Quality Core conformant server.  HL7® FHIR®
+        resources are validated with the Java validator using `tx.fhir.org` as
+        the terminology server.
+      )
+
+      GENERAL_MESSAGE_FILTERS = [
+      ].freeze
+
+<% if version_specific_message_filters.empty? %>
+      VERSION_SPECIFIC_MESSAGE_FILTERS = [].freeze
+<% else %>
+      VERSION_SPECIFIC_MESSAGE_FILTERS = [
+        <%= version_specific_message_filters.map { |filter| "%r{#{filter.source}}" }.join(",\n        ") %>
+      ].freeze
+<% end %>
+
+      VALIDATION_MESSAGE_FILTERS = GENERAL_MESSAGE_FILTERS + VERSION_SPECIFIC_MESSAGE_FILTERS
+
+      def self.metadata
+        @metadata ||= YAML.load_file(File.join(__dir__, 'metadata.yml'), aliases: true)[:groups].map do |raw_metadata|
+            Generator::GroupMetadata.new(raw_metadata)
+          end
+      end
+
+      id :<%= suite_id %>
+
+      fhir_resource_validator do
+        igs '<%= ig_tgz %>'
+
+        message_filters = VALIDATION_MESSAGE_FILTERS
+
+        exclude_message do |message|
+          message_filters.any? { |filter| filter.match? message.message }
+        end
+      end
+
+      input :url,
+        title: 'FHIR Endpoint',
+        description: 'URL of the FHIR endpoint'
+
+      group do
+        input :smart_auth_info,
+          title: 'OAuth Credentials',
+          type: :auth_info,
+          optional: true
+
+        fhir_client do
+          url :url
+          auth_info :smart_auth_info
+        end
+
+        title 'US Quality Core FHIR API'
+
+        id :<%= fhir_api_group_id %>
+
+        config(
+          options: {
+            tag_requests: true
+          }
+        )
+
+        <% group_id_list.each do |id| %>
+        group from: :<%= id %><% end %>
+      end
+
+      links [
+        {
+          type: 'report_issue',
+          label: 'Report Issue',
+          url: 'TODO'
+        },
+        {
+          type: 'source_code',
+          label: 'Open Source',
+          url: 'TODO'
+        },
+        {
+          type: 'download',
+          label: 'Download',
+          url: 'TODO'
+        }
+      ]
+    end
+  end
+end

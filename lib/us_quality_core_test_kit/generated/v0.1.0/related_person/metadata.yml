@@ -1,0 +1,98 @@
+---
+:name: us_quality_core_relatedperson
+:class_name: USQualityCorev010RelatedpersonSequence
+:version: v0.1.0
+:reformatted_version: v010
+:resource: RelatedPerson
+:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-relatedperson
+:profile_name: US Quality Core RelatedPerson
+:profile_version: 0.1.0
+:title: RelatedPerson
+:short_description: Verify support for the capabilities required by the US Quality
+  Core RelatedPerson.
+:is_delayed: false
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :names:
+  - patient
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :names:
+  - _id
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+:search_definitions:
+  :_id:
+    :paths:
+    - id
+    :full_paths:
+    - RelatedPerson.id
+    :comparators: {}
+    :values: []
+    :type: http://hl7.org/fhirpath/System.String
+    :contains_multiple: false
+    :multiple_or: MAY
+  :patient:
+    :paths:
+    - patient
+    :full_paths:
+    - RelatedPerson.patient
+    :comparators: {}
+    :values: []
+    :type: Reference
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes: []
+:required_concepts: []
+:must_supports:
+  :extensions: []
+  :slices: []
+  :elements:
+  - :path: active
+  - :path: patient
+    :types:
+    - Reference
+    :target_profiles:
+    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - :path: relationship
+  - :path: name
+  - :path: telecom
+  - :path: address
+:mandatory_elements:
+- RelatedPerson.active
+- RelatedPerson.patient
+- RelatedPerson.communication.language
+:bindings:
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/administrative-gender
+  :path: gender
+:references:
+- :path: RelatedPerson.patient
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+:tests:
+- :id: us_quality_core_v010_related_person_patient_search_test
+  :file_name: related_person_patient_search_test.rb
+- :id: us_quality_core_v010_related_person__id_search_test
+  :file_name: related_person_id_search_test.rb
+- :id: us_quality_core_v010_related_person_read_test
+  :file_name: related_person_read_test.rb
+- :id: us_quality_core_v010_related_person_validation_test
+  :file_name: related_person_validation_test.rb
+- :id: us_quality_core_v010_related_person_must_support_test
+  :file_name: related_person_must_support_test.rb
+- :id: us_quality_core_v010_related_person_reference_resolution_test
+  :file_name: related_person_reference_resolution_test.rb
+:id: us_quality_core_v010_related_person
+:file_name: related_person_group.rb
+:delayed_references: []
+:resource_conformance_expectation: SHALL

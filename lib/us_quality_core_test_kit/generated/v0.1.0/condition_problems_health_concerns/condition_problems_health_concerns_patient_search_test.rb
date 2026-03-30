@@ -1,0 +1,51 @@
+require_relative '../../../search_test'
+require_relative '../../../generator/group_metadata'
+require_relative '../../../search_test_properties'
+
+module USQualityCoreTestKit
+  module USQualityCoreV010
+    class ConditionProblemsHealthConcernsPatientSearchTest < Inferno::Test
+      include USQualityCoreTestKit::SearchTest
+
+      title 'Server returns valid results for Condition search by patient'
+
+      description %(
+A server SHALL support searching by
+patient on the Condition resource. This test
+will pass if resources are returned and match the search criteria. If
+none are returned, the test is skipped.
+
+
+      )
+
+      id :us_quality_core_v010_condition_problems_health_concerns_patient_search_test
+
+  
+
+  
+      input :patient_ids,
+        title: 'Patient IDs',
+        description: 'Comma separated list of patient IDs that in sum contain all MUST SUPPORT elements'
+  
+
+      def self.properties
+        @properties ||= SearchTestProperties.new(
+          resource_type: 'Condition',
+        search_param_names: ['patient']
+        )
+      end
+
+      def self.metadata
+        @metadata ||= Generator::GroupMetadata.new(YAML.load_file(File.join(__dir__, 'metadata.yml'), aliases: true))
+      end
+
+      def scratch_resources
+        scratch[:condition_problems_health_concerns_resources] ||= {}
+      end
+
+      run do
+        run_search_test
+      end
+    end
+  end
+end

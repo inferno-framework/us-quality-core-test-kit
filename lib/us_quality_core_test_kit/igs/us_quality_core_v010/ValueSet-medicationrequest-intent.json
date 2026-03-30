@@ -1,0 +1,86 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2019-11-01T09:29:23.356+11:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "url": "http://hl7.org/fhir/ValueSet/medicationrequest-intent",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.3.1321"
+    }
+  ],
+  "version": "4.0.1",
+  "name": "medicationRequest Intent",
+  "title": "Medication request  intent",
+  "status": "draft",
+  "experimental": false,
+  "date": "2019-11-01T09:29:23+11:00",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/fhir"
+        }
+      ]
+    }
+  ],
+  "immutable": true,
+  "expansion": {
+    "timestamp": "2026-03-20T20:07:10.511Z",
+    "identifier": "urn:uuid:3169bb11-77ee-4456-b02e-62a9f75e252b",
+    "parameter": [
+      {
+        "name": "used-codesystem",
+        "valueUri": "http://hl7.org/fhir/CodeSystem/medicationrequest-intent|4.0.1"
+      }
+    ],
+    "total": 8,
+    "contains": [
+      {
+        "system": "http://hl7.org/fhir/CodeSystem/medicationrequest-intent",
+        "code": "proposal",
+        "display": "Proposal"
+      },
+      {
+        "system": "http://hl7.org/fhir/CodeSystem/medicationrequest-intent",
+        "code": "plan",
+        "display": "Plan"
+      },
+      {
+        "system": "http://hl7.org/fhir/CodeSystem/medicationrequest-intent",
+        "code": "order",
+        "display": "Order"
+      },
+      {
+        "system": "http://hl7.org/fhir/CodeSystem/medicationrequest-intent",
+        "code": "original-order",
+        "display": "Original Order"
+      },
+      {
+        "system": "http://hl7.org/fhir/CodeSystem/medicationrequest-intent",
+        "code": "reflex-order",
+        "display": "Reflex Order"
+      },
+      {
+        "system": "http://hl7.org/fhir/CodeSystem/medicationrequest-intent",
+        "code": "filler-order",
+        "display": "Filler Order"
+      },
+      {
+        "system": "http://hl7.org/fhir/CodeSystem/medicationrequest-intent",
+        "code": "instance-order",
+        "display": "Instance Order"
+      },
+      {
+        "system": "http://hl7.org/fhir/CodeSystem/medicationrequest-intent",
+        "code": "option",
+        "display": "Option"
+      }
+    ]
+  }
+}

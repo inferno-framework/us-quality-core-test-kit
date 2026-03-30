@@ -1,0 +1,114 @@
+---
+:name: us_quality_core_location
+:class_name: USQualityCorev010LocationSequence
+:version: v0.1.0
+:reformatted_version: v010
+:resource: Location
+:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-location
+:profile_name: US Quality Core Location
+:profile_version: 0.1.0
+:title: Location
+:short_description: Verify support for the capabilities required by the US Quality
+  Core Location.
+:is_delayed: true
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :names:
+  - _id
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+:search_definitions:
+  :_id:
+    :paths:
+    - id
+    :full_paths:
+    - Location.id
+    :comparators: {}
+    :values: []
+    :type: http://hl7.org/fhirpath/System.String
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes: []
+:required_concepts: []
+:must_supports:
+  :extensions: []
+  :slices: []
+  :elements:
+  - :path: status
+  - :path: name
+  - :path: type
+    :us_quality_coreuscdi_plus_quality: true
+  - :path: telecom
+  - :path: address
+  - :path: address.line
+  - :path: address.city
+  - :path: address.state
+  - :path: address.postalCode
+  - :path: managingOrganization
+    :types:
+    - Reference
+    :target_profiles:
+    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
+:mandatory_elements:
+- Location.name
+- Location.position.longitude
+- Location.position.latitude
+:bindings:
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/location-status
+  :path: status
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/location-mode
+  :path: mode
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/address-use
+  :path: address.use
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/address-type
+  :path: address.type
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/days-of-week
+  :path: hoursOfOperation.daysOfWeek
+:references:
+- :path: Location.managingOrganization
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
+- :path: Location.partOf
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-location
+- :path: Location.endpoint
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Endpoint
+:tests:
+- :id: us_quality_core_v010_location_read_test
+  :file_name: location_read_test.rb
+- :id: us_quality_core_v010_location__id_search_test
+  :file_name: location_id_search_test.rb
+- :id: us_quality_core_v010_location_validation_test
+  :file_name: location_validation_test.rb
+- :id: us_quality_core_v010_location_must_support_test
+  :file_name: location_must_support_test.rb
+- :id: us_quality_core_v010_location_reference_resolution_test
+  :file_name: location_reference_resolution_test.rb
+:id: us_quality_core_v010_location
+:file_name: location_group.rb
+:delayed_references:
+- :path: managingOrganization
+  :resources:
+  - Organization
+- :path: partOf
+  :resources:
+  - Location
+:resource_conformance_expectation: SHALL

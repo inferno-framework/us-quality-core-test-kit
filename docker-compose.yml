@@ -1,0 +1,44 @@
+services:
+  inferno:
+    build:
+      context: ./
+    volumes:
+      - ./data:/opt/inferno/data
+    depends_on:
+      - hl7_validator_service
+  worker:
+    build:
+      context: ./
+    volumes:
+      - ./data:/opt/inferno/data
+    command: bundle exec sidekiq -r ./worker.rb
+    depends_on:
+      - redis
+  hl7_validator_service:
+    extends:
+      file: docker-compose.background.yml
+      service: hl7_validator_service
+  fhirpath:
+    extends:
+      file: docker-compose.background.yml
+      service: fhirpath
+  nginx:
+    extends:
+      file: docker-compose.background.yml
+      service: nginx
+    volumes:
+      - ./config/nginx.conf:/etc/nginx/nginx.conf
+  redis:
+    extends:
+      file: docker-compose.background.yml
+      service: redis
+  inferno_reference_server:
+    extends:
+      file: docker-compose.background.yml
+      service: inferno_reference_server
+  db:
+    extends:
+      file: docker-compose.background.yml
+      service: db
+volumes:
+  fhir-pgdata:

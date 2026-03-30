@@ -1,0 +1,70 @@
+# frozen_string_literal: true
+
+module USQualityCoreTestKit
+  module Client
+    module USQualityCoreClient<%= ig_metadata.reformatted_version.upcase %>
+      class <%= class_name %> < Inferno::TestGroup
+        include URLs
+
+        id :us_quality_core_client_access_group_<%= ig_metadata.reformatted_version.downcase %>
+        title 'Client Access'
+        description %(
+          During these tests, Inferno will simulate a US Quality Core FHIR Server for the client to
+          use to access data. Inferno will wait while the client submits requests and will
+          both respond with data and collect the requests for later analysis.
+        )
+
+        run_as_group
+
+        def suite_id
+          return config.options[:endpoint_suite_id] if config.options[:endpoint_suite_id].present?
+
+          'us_quality_core_client_<%= ig_metadata.reformatted_version.downcase %>'
+        end
+
+        group do
+          id :us_quality_core_client_wait_group_<%= ig_metadata.reformatted_version.downcase %>
+          title 'Perform Data Access'
+
+          test do
+            id :us_quality_core_client_wait_test_<%= ig_metadata.reformatted_version.downcase %>
+            title 'Wait for Requests'
+            description %(
+              This test will wait for the client under test to submit requests for resources for
+              each of the US Quality Core profiles, and for requests including all of the required search
+              parameters for each resource type.
+            )
+
+            input :client_id,
+                  title: 'Client Id',
+                  type: 'text'
+
+            run do
+              wait(
+                identifier: client_id,
+                message: %(
+  Inferno will now wait for the client under test to make the required requests against the following base URL:
+
+  #{fhir_url}
+
+  All requests will be recorded. When finished, the requests will be inspected to ensure that the client under test is making the required requests.
+  Requests should target the following patient record:
+  - **Resource ID**: `us-quality-core-test-kit-patient`
+
+  [Click here](#{resume_pass_url}?token=#{client_id}) when finished.
+
+  The following requirements will be checked:
+
+  <%= check_list %>
+
+  [Click here](#{resume_pass_url}?token=#{client_id}) when finished.
+                ),
+                timeout: 900
+              )
+            end
+          end
+        end
+      end
+    end
+  end
+end

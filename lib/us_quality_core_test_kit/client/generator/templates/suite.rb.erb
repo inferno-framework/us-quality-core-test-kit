@@ -1,0 +1,90 @@
+# frozen_string_literal: true
+
+require_relative '../../../version'
+require_relative 'tags'
+require_relative 'urls'
+require_relative '../../metadata_helper'
+require_relative 'read_endpoint'
+require_relative 'search_endpoint'
+require_relative '../../test_helper'
+require_relative 'wait_group'
+
+<%- group_file_list.each do |group| -%>
+require_relative '<%= group %>'
+<%- end -%>
+
+module USQualityCoreTestKit
+  module Client
+    module <%= module_name %>
+      class <%= class_name %> < Inferno::TestSuite
+        include URLs
+
+        id :<%= suite_id %>
+
+        title '<%= title %>'
+
+        description %(
+          <%= description %>
+        )
+
+        links [
+          {
+            type: 'report_issue',
+            label: 'Report Issue',
+            url: 'TODO'
+          },
+          {
+            type: 'source_code',
+            label: 'Open Source',
+            url: 'TODO'
+          },
+          {
+            type: 'download',
+            label: 'Download',
+            url: 'TODO'
+          },
+          {
+            label: 'Implementation Guide',
+            url: '<%= ig_link %>'
+          }
+        ]
+
+        route(:get, METADATA_PATH, USQualityCoreTestKit::Client::MetadataHelper.get_metadata('<%= ig_metadata.reformatted_version.downcase %>'))
+
+        suite_endpoint :post, SEARCH_POST_ROUTE, SearchEndpoint
+        suite_endpoint :get, SEARCH_ROUTE, SearchEndpoint
+        suite_endpoint :get, READ_ROUTE, ReadEndpoint
+
+        resume_test_route :get, RESUME_PASS_ROUTE do |request|
+          request.query_parameters['token']
+        end
+
+        group do
+          id :us_quality_core_client_read_search_group_<%= ig_metadata.reformatted_version.downcase %>
+
+          title 'Read & Search'
+
+          description %(
+            <%= read_and_search_description %>
+          )
+
+          group from: :<%= access_group_id %>
+
+          <%- group_id_list.each do |group| -%>
+          group from: :<%= group %>
+          <%- end -%>
+
+          run do
+            passing_profile_group = groups.find do |group|
+              next if group.id.include?('wait') || group.id.include?('auth')
+
+              results[group.id]&.result == 'pass'
+            end
+
+            assert passing_profile_group.present?, 'At least one profile group must pass.'
+          end
+        end
+      end
+    end
+  end
+end

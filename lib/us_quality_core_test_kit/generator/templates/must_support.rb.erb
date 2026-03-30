@@ -1,0 +1,40 @@
+require_relative '../../../must_support_test'
+
+module USQualityCoreTestKit
+  module <%= module_name %>
+    class <%= class_name %> < Inferno::Test
+      include USQualityCoreTestKit::MustSupportTest
+
+      title 'All must support elements are provided in the <%= resource_type %> resources returned'
+
+      description %(
+        This test will look through the <%= resource_type %> resources
+        found previously for the following Must Support and USCDI-flagged elements:
+
+<%= must_support_list_string %><% if uscdi_plus_quality_list_string.present? %>
+
+        For ASTP USCDI+ Quality requirements, each <%= resource_type %> must support the following additional elements:
+
+<%= uscdi_plus_quality_list_string %><% end %>
+      )
+
+      id :<%= test_id %>
+
+      def resource_type
+        '<%= resource_type %>'
+      end
+
+      def self.metadata
+        @metadata ||= Generator::GroupMetadata.new(YAML.load_file(File.join(__dir__, 'metadata.yml'), aliases: true))
+      end
+
+      def scratch_resources
+        scratch[:<%= profile_identifier %>_resources] ||= {}
+      end
+
+      run do
+        perform_must_support_test(<%= resource_collection_string %>)
+      end
+    end
+  end
+end

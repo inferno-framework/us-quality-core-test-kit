@@ -1,0 +1,195 @@
+---
+:name: us_quality_core_claim
+:class_name: USQualityCorev010ClaimSequence
+:version: v0.1.0
+:reformatted_version: v010
+:resource: Claim
+:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-claim
+:profile_name: US Quality Core Claim
+:profile_version: 0.1.0
+:title: Claim
+:short_description: Verify support for the capabilities required by the US Quality
+  Core Claim.
+:is_delayed: false
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :names:
+  - patient
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+:search_definitions:
+  :patient:
+    :paths:
+    - patient
+    :full_paths:
+    - Claim.patient
+    :comparators: {}
+    :values: []
+    :type: Reference
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes: []
+:required_concepts:
+- diagnosis.onAdmission
+:must_supports:
+  :extensions: []
+  :slices: []
+  :elements:
+  - :path: diagnosis.diagnosis[x]
+    :types:
+    - Reference
+    :us_quality_coreuscdi_plus_quality: true
+  - :path: diagnosis.onAdmission
+    :us_quality_coreuscdi_plus_quality: true
+:mandatory_elements:
+- Claim.status
+- Claim.type
+- Claim.use
+- Claim.patient
+- Claim.created
+- Claim.provider
+- Claim.priority
+- Claim.payee.type
+- Claim.careTeam.sequence
+- Claim.careTeam.provider
+- Claim.supportingInfo.sequence
+- Claim.supportingInfo.category
+- Claim.diagnosis.sequence
+- Claim.diagnosis.diagnosis[x]
+- Claim.procedure.sequence
+- Claim.procedure.procedure[x]
+- Claim.insurance
+- Claim.insurance.sequence
+- Claim.insurance.focal
+- Claim.insurance.coverage
+- Claim.accident.date
+- Claim.item.sequence
+- Claim.item.productOrService
+- Claim.item.detail.sequence
+- Claim.item.detail.productOrService
+- Claim.item.detail.subDetail.sequence
+- Claim.item.detail.subDetail.productOrService
+:bindings:
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/fm-status
+  :path: status
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/claim-use
+  :path: use
+- :type: CodeableConcept
+  :strength: required
+  :system: http://terminology.hl7.org/ValueSet/POAIndicators
+  :path: diagnosis.onAdmission
+:references:
+- :path: Claim.patient
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+- :path: Claim.enterer
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1
+- :path: Claim.insurer
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Organization|4.0.1
+- :path: Claim.provider
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
+- :path: Claim.related.claim
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Claim|4.0.1
+- :path: Claim.prescription
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-devicerequest
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-medicationrequest
+  - http://hl7.org/fhir/StructureDefinition/VisionPrescription
+- :path: Claim.originalPrescription
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/DeviceRequest|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/MedicationRequest|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/VisionPrescription|4.0.1
+- :path: Claim.payee.party
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-relatedperson
+- :path: Claim.referral
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-servicerequest
+- :path: Claim.facility
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-location
+- :path: Claim.careTeam.provider
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
+- :path: Claim.procedure.udi
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Device|4.0.1
+- :path: Claim.insurance.coverage
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Coverage|4.0.1
+- :path: Claim.insurance.claimResponse
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/ClaimResponse|4.0.1
+- :path: Claim.item.udi
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Device|4.0.1
+- :path: Claim.item.encounter
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-encounter
+- :path: Claim.item.detail.udi
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Device|4.0.1
+- :path: Claim.item.detail.subDetail.udi
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Device|4.0.1
+:tests:
+- :id: us_quality_core_v010_claim_patient_search_test
+  :file_name: claim_patient_search_test.rb
+- :id: us_quality_core_v010_claim_read_test
+  :file_name: claim_read_test.rb
+- :id: us_quality_core_v010_claim_validation_test
+  :file_name: claim_validation_test.rb
+- :id: us_quality_core_v010_claim_must_support_test
+  :file_name: claim_must_support_test.rb
+- :id: us_quality_core_v010_claim_reference_resolution_test
+  :file_name: claim_reference_resolution_test.rb
+:id: us_quality_core_v010_claim
+:file_name: claim_group.rb
+:delayed_references:
+- :path: provider
+  :resources:
+  - Practitioner
+  - PractitionerRole
+  - Organization
+- :path: payee.party
+  :resources:
+  - Practitioner
+  - PractitionerRole
+  - Organization
+- :path: facility
+  :resources:
+  - Location
+- :path: careTeam.provider
+  :resources:
+  - Practitioner
+  - PractitionerRole
+  - Organization
+- :path: item.encounter
+  :resources:
+  - Encounter
+:resource_conformance_expectation: SHALL

@@ -1,0 +1,262 @@
+---
+:name: us_quality_core_servicerequest
+:class_name: USQualityCorev010ServicerequestSequence
+:version: v0.1.0
+:reformatted_version: v010
+:resource: ServiceRequest
+:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-servicerequest
+:profile_name: US Quality Core ServiceRequest
+:profile_version: 0.1.0
+:title: ServiceRequest
+:short_description: Verify support for the capabilities required by the US Quality
+  Core ServiceRequest.
+:is_delayed: false
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :expectation: SHALL
+  :names:
+  - patient
+  - category
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :names:
+  - _id
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :names:
+  - patient
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - category
+  - authored
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - code
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+:search_definitions:
+  :_id:
+    :paths:
+    - id
+    :full_paths:
+    - ServiceRequest.id
+    :comparators: {}
+    :values: []
+    :type: http://hl7.org/fhirpath/System.String
+    :contains_multiple: false
+    :multiple_or: MAY
+  :patient:
+    :paths:
+    - subject
+    :full_paths:
+    - ServiceRequest.subject
+    :comparators: {}
+    :values: []
+    :type: Reference
+    :contains_multiple: false
+    :multiple_or: MAY
+  :category:
+    :paths:
+    - category
+    :full_paths:
+    - ServiceRequest.category
+    :comparators: {}
+    :values:
+    - '108252007'
+    - '363679005'
+    - '409063005'
+    - '409073007'
+    - '387713003'
+    :type: CodeableConcept
+    :contains_multiple: true
+    :multiple_or: MAY
+  :authored:
+    :paths:
+    - authoredOn
+    :full_paths:
+    - ServiceRequest.authoredOn
+    :comparators:
+      :eq: MAY
+      :ne: MAY
+      :gt: SHALL
+      :ge: SHALL
+      :lt: SHALL
+      :le: SHALL
+      :sa: MAY
+      :eb: MAY
+      :ap: MAY
+    :values: []
+    :type: dateTime
+    :contains_multiple: false
+    :multiple_or: MAY
+  :code:
+    :paths:
+    - code
+    :full_paths:
+    - ServiceRequest.code
+    :comparators: {}
+    :values: []
+    :type: CodeableConcept
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes: []
+:required_concepts:
+- category
+:must_supports:
+  :extensions: []
+  :slices:
+  - :slice_id: ServiceRequest.category:us-core
+    :slice_name: us-core
+    :path: category
+    :discriminator:
+      :type: requiredBinding
+      :path: ''
+      :values:
+      - :system: http://snomed.info/sct
+        :code: '108252007'
+      - :system: http://snomed.info/sct
+        :code: '363679005'
+      - :system: http://snomed.info/sct
+        :code: '409063005'
+      - :system: http://snomed.info/sct
+        :code: '409073007'
+      - :system: http://snomed.info/sct
+        :code: '387713003'
+  :elements:
+  - :path: status
+  - :path: intent
+  - :path: category
+  - :path: code
+  - :path: subject
+    :types:
+    - Reference
+    :target_profiles:
+    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - :path: occurrencePeriod
+    :original_path: occurrence[x]
+  - :path: authoredOn
+  - :path: requester
+    :types:
+    - Reference
+  - :path: reasonCode
+    :uscdi_only: true
+    :us_quality_coreuscdi_plus_quality: true
+  - :path: reasonReference
+    :uscdi_only: true
+    :types:
+    - Reference
+    :us_quality_coreuscdi_plus_quality: true
+:mandatory_elements:
+- ServiceRequest.status
+- ServiceRequest.intent
+- ServiceRequest.code
+- ServiceRequest.subject
+:bindings:
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/request-status
+  :path: status
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/request-intent
+  :path: intent
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/request-priority
+  :path: priority
+:references:
+- :path: ServiceRequest.basedOn
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/CarePlan
+  - http://hl7.org/fhir/StructureDefinition/ServiceRequest
+  - http://hl7.org/fhir/StructureDefinition/MedicationRequest
+- :path: ServiceRequest.replaces
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/ServiceRequest
+- :path: ServiceRequest.subject
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+- :path: ServiceRequest.encounter
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Encounter
+- :path: ServiceRequest.requester
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-relatedperson
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-device
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device
+- :path: ServiceRequest.performer
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Practitioner
+  - http://hl7.org/fhir/StructureDefinition/PractitionerRole
+  - http://hl7.org/fhir/StructureDefinition/Organization
+  - http://hl7.org/fhir/StructureDefinition/CareTeam
+  - http://hl7.org/fhir/StructureDefinition/HealthcareService
+  - http://hl7.org/fhir/StructureDefinition/Patient
+  - http://hl7.org/fhir/StructureDefinition/Device
+  - http://hl7.org/fhir/StructureDefinition/RelatedPerson
+- :path: ServiceRequest.locationReference
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Location
+- :path: ServiceRequest.reasonReference
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns
+- :path: ServiceRequest.insurance
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Coverage
+  - http://hl7.org/fhir/StructureDefinition/ClaimResponse
+- :path: ServiceRequest.supportingInfo
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Resource
+- :path: ServiceRequest.specimen
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Specimen
+- :path: ServiceRequest.relevantHistory
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Provenance
+:tests:
+- :id: us_quality_core_v010_servicerequest_patient_category_search_test
+  :file_name: servicerequest_patient_category_search_test.rb
+- :id: us_quality_core_v010_servicerequest__id_search_test
+  :file_name: servicerequest_id_search_test.rb
+- :id: us_quality_core_v010_servicerequest_patient_search_test
+  :file_name: servicerequest_patient_search_test.rb
+- :id: us_quality_core_v010_servicerequest_patient_category_authored_search_test
+  :file_name: servicerequest_patient_category_authored_search_test.rb
+- :id: us_quality_core_v010_servicerequest_patient_code_search_test
+  :file_name: servicerequest_patient_code_search_test.rb
+- :id: us_quality_core_v010_servicerequest_read_test
+  :file_name: servicerequest_read_test.rb
+- :id: us_quality_core_v010_servicerequest_validation_test
+  :file_name: servicerequest_validation_test.rb
+- :id: us_quality_core_v010_servicerequest_must_support_test
+  :file_name: servicerequest_must_support_test.rb
+- :id: us_quality_core_v010_servicerequest_reference_resolution_test
+  :file_name: servicerequest_reference_resolution_test.rb
+:id: us_quality_core_v010_servicerequest
+:file_name: servicerequest_group.rb
+:delayed_references:
+- :path: requester
+  :resources:
+  - Practitioner
+  - PractitionerRole
+  - Organization
+:resource_conformance_expectation: SHALL

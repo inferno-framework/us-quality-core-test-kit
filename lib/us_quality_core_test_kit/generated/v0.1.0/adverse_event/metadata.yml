@@ -1,0 +1,212 @@
+---
+:name: us_quality_core_adverseevent
+:class_name: USQualityCorev010AdverseeventSequence
+:version: v0.1.0
+:reformatted_version: v010
+:resource: AdverseEvent
+:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-adverseevent
+:profile_name: US Quality Core AdverseEvent
+:profile_version: 0.1.0
+:title: AdverseEvent
+:short_description: Verify support for the capabilities required by the US Quality
+  Core AdverseEvent.
+:is_delayed: false
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :names:
+  - subject
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - subject
+  - event
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - subject
+  - recordedDate
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+:search_definitions:
+  :subject:
+    :paths:
+    - subject
+    :full_paths:
+    - AdverseEvent.subject
+    :comparators: {}
+    :values: []
+    :type: Reference
+    :contains_multiple: false
+    :multiple_or: MAY
+  :event:
+    :paths:
+    - event
+    :full_paths:
+    - AdverseEvent.event
+    :comparators: {}
+    :values: []
+    :type: CodeableConcept
+    :contains_multiple: false
+    :multiple_or: MAY
+  :recordedDate:
+    :paths:
+    - recordedDate
+    :full_paths:
+    - AdverseEvent.recordedDate
+    :comparators:
+      :eq: MAY
+      :ne: MAY
+      :gt: SHALL
+      :ge: SHALL
+      :lt: SHALL
+      :le: SHALL
+      :sa: MAY
+      :eb: MAY
+      :ap: MAY
+    :values: []
+    :type: dateTime
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes: []
+:required_concepts:
+- severity
+- outcome
+:must_supports:
+  :extensions: []
+  :slices: []
+  :elements:
+  - :path: category
+    :us_quality_coreuscdi_plus_quality: true
+  - :path: event
+    :us_quality_coreuscdi_plus_quality: true
+  - :path: date
+    :us_quality_coreuscdi_plus_quality: true
+  - :path: detected
+    :us_quality_coreuscdi_plus_quality: true
+  - :path: recordedDate
+    :us_quality_coreuscdi_plus_quality: true
+  - :path: suspectEntity.instance
+    :types:
+    - Reference
+    :us_quality_coreuscdi_plus_quality: true
+:mandatory_elements:
+- AdverseEvent.actuality
+- AdverseEvent.event
+- AdverseEvent.subject
+- AdverseEvent.suspectEntity.instance
+:bindings:
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/adverse-event-actuality
+  :path: actuality
+- :type: CodeableConcept
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/adverse-event-severity
+  :path: severity
+- :type: CodeableConcept
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/adverse-event-outcome
+  :path: outcome
+:references:
+- :path: AdverseEvent.subject
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://hl7.org/fhir/StructureDefinition/Group
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-relatedperson
+- :path: AdverseEvent.encounter
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-encounter
+- :path: AdverseEvent.resultingCondition
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis
+- :path: AdverseEvent.location
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-location
+- :path: AdverseEvent.recorder
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-relatedperson
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
+- :path: AdverseEvent.contributor
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-device
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device
+- :path: AdverseEvent.suspectEntity.instance
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-immunization
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-procedure
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-substance
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-medication
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-medicationadministration
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-medicationstatement
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-device
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device
+- :path: AdverseEvent.suspectEntity.causality.author
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1
+- :path: AdverseEvent.subjectMedicalHistory
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-simple-observation
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-familymemberhistory
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-immunization
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-procedure
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis
+- :path: AdverseEvent.referenceDocument
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/DocumentReference|4.0.1
+- :path: AdverseEvent.study
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/ResearchStudy|4.0.1
+:tests:
+- :id: us_quality_core_v010_adverse_event_subject_search_test
+  :file_name: adverse_event_subject_search_test.rb
+- :id: us_quality_core_v010_adverse_event_subject_event_search_test
+  :file_name: adverse_event_subject_event_search_test.rb
+- :id: us_quality_core_v010_adverse_event_subject_recordedDate_search_test
+  :file_name: adverse_event_subject_recordeddate_search_test.rb
+- :id: us_quality_core_v010_adverse_event_read_test
+  :file_name: adverse_event_read_test.rb
+- :id: us_quality_core_v010_adverse_event_validation_test
+  :file_name: adverse_event_validation_test.rb
+- :id: us_quality_core_v010_adverse_event_must_support_test
+  :file_name: adverse_event_must_support_test.rb
+- :id: us_quality_core_v010_adverse_event_reference_resolution_test
+  :file_name: adverse_event_reference_resolution_test.rb
+:id: us_quality_core_v010_adverse_event
+:file_name: adverse_event_group.rb
+:delayed_references:
+- :path: subject
+  :resources:
+  - Practitioner
+- :path: encounter
+  :resources:
+  - Encounter
+- :path: location
+  :resources:
+  - Location
+- :path: recorder
+  :resources:
+  - Practitioner
+  - PractitionerRole
+- :path: contributor
+  :resources:
+  - Practitioner
+  - PractitionerRole
+:resource_conformance_expectation: SHALL

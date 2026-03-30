@@ -1,0 +1,147 @@
+---
+:name: us_quality_core_devicerequest
+:class_name: USQualityCorev010DevicerequestSequence
+:version: v0.1.0
+:reformatted_version: v010
+:resource: DeviceRequest
+:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-devicerequest
+:profile_name: US Quality Core DeviceRequest
+:profile_version: 0.1.0
+:title: DeviceRequest
+:short_description: Verify support for the capabilities required by the US Quality
+  Core DeviceRequest.
+:is_delayed: false
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :names:
+  - patient
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - code
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+:search_definitions:
+  :patient:
+    :paths:
+    - subject
+    :full_paths:
+    - DeviceRequest.subject
+    :comparators: {}
+    :values: []
+    :type: Reference
+    :contains_multiple: false
+    :multiple_or: MAY
+  :code:
+    :paths:
+    - codeCodeableConcept
+    :full_paths:
+    - DeviceRequest.codeCodeableConcept
+    :comparators: {}
+    :values: []
+    :type: CodeableConcept
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes: []
+:required_concepts: []
+:must_supports:
+  :extensions: []
+  :slices: []
+  :elements:
+  - :path: code[x]
+    :types:
+    - Reference
+    :us_quality_coreuscdi_plus_quality: true
+:mandatory_elements:
+- DeviceRequest.modifierExtension.url
+- DeviceRequest.modifierExtension.value[x]
+- DeviceRequest.intent
+- DeviceRequest.code[x]
+- DeviceRequest.subject
+:bindings:
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/request-status
+  :path: status
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/request-intent
+  :path: intent
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/request-priority
+  :path: priority
+:references:
+- :path: DeviceRequest.basedOn
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Resource|4.0.1
+- :path: DeviceRequest.priorRequest
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Resource|4.0.1
+- :path: DeviceRequest.code[x]
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Device|4.0.1
+- :path: DeviceRequest.subject
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+- :path: DeviceRequest.encounter
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
+- :path: DeviceRequest.requester
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Device|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Organization|4.0.1
+- :path: DeviceRequest.performer
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Organization|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/CareTeam|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/HealthcareService|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Patient|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Device|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/RelatedPerson|4.0.1
+- :path: DeviceRequest.reasonReference
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Condition|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/DiagnosticReport|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/DocumentReference|4.0.1
+- :path: DeviceRequest.insurance
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Coverage|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/ClaimResponse|4.0.1
+- :path: DeviceRequest.supportingInfo
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Resource|4.0.1
+- :path: DeviceRequest.relevantHistory
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Provenance|4.0.1
+:tests:
+- :id: us_quality_core_v010_devicerequest_patient_search_test
+  :file_name: devicerequest_patient_search_test.rb
+- :id: us_quality_core_v010_devicerequest_patient_code_search_test
+  :file_name: devicerequest_patient_code_search_test.rb
+- :id: us_quality_core_v010_devicerequest_read_test
+  :file_name: devicerequest_read_test.rb
+- :id: us_quality_core_v010_devicerequest_validation_test
+  :file_name: devicerequest_validation_test.rb
+- :id: us_quality_core_v010_devicerequest_must_support_test
+  :file_name: devicerequest_must_support_test.rb
+- :id: us_quality_core_v010_devicerequest_reference_resolution_test
+  :file_name: devicerequest_reference_resolution_test.rb
+:id: us_quality_core_v010_devicerequest
+:file_name: devicerequest_group.rb
+:delayed_references: []
+:resource_conformance_expectation: SHALL

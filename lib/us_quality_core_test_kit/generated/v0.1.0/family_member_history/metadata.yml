@@ -1,0 +1,80 @@
+---
+:name: us_quality_core_familymemberhistory
+:class_name: USQualityCorev010FamilymemberhistorySequence
+:version: v0.1.0
+:reformatted_version: v010
+:resource: FamilyMemberHistory
+:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-familymemberhistory
+:profile_name: US Quality Core FamilyMemberHistory
+:profile_version: 0.1.0
+:title: FamilyMemberHistory
+:short_description: Verify support for the capabilities required by the US Quality
+  Core FamilyMemberHistory.
+:is_delayed: false
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :names:
+  - patient
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+:search_definitions:
+  :patient:
+    :paths:
+    - patient
+    :full_paths:
+    - FamilyMemberHistory.patient
+    :comparators: {}
+    :values: []
+    :type: Reference
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes: []
+:required_concepts: []
+:must_supports:
+  :extensions: []
+  :slices: []
+  :elements:
+  - :path: condition.code
+    :us_quality_coreuscdi_plus_quality: true
+:mandatory_elements:
+- FamilyMemberHistory.status
+- FamilyMemberHistory.patient
+- FamilyMemberHistory.relationship
+- FamilyMemberHistory.condition.code
+:bindings:
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/history-status
+  :path: status
+:references:
+- :path: FamilyMemberHistory.patient
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+- :path: FamilyMemberHistory.reasonReference
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Condition|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/AllergyIntolerance|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/DiagnosticReport|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/DocumentReference|4.0.1
+:tests:
+- :id: us_quality_core_v010_family_member_history_patient_search_test
+  :file_name: family_member_history_patient_search_test.rb
+- :id: us_quality_core_v010_family_member_history_read_test
+  :file_name: family_member_history_read_test.rb
+- :id: us_quality_core_v010_family_member_history_validation_test
+  :file_name: family_member_history_validation_test.rb
+- :id: us_quality_core_v010_family_member_history_must_support_test
+  :file_name: family_member_history_must_support_test.rb
+:id: us_quality_core_v010_family_member_history
+:file_name: family_member_history_group.rb
+:delayed_references: []
+:resource_conformance_expectation: SHALL

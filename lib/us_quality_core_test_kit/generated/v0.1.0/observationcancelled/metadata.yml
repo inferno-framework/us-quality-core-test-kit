@@ -1,0 +1,203 @@
+---
+:name: us_quality_core_observationcancelled
+:class_name: USQualityCorev010ObservationcancelledSequence
+:version: v0.1.0
+:reformatted_version: v010
+:resource: Observation
+:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-observationcancelled
+:profile_name: US Quality Core Observation Cancelled
+:profile_version: 0.1.0
+:title: Observation Cancelled
+:short_description: Verify support for the capabilities required by the US Quality
+  Core Observation Cancelled.
+:is_delayed: false
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :expectation: SHALL
+  :names:
+  - patient
+  - code
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - category
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - category
+  - date
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+:search_definitions:
+  :patient:
+    :paths:
+    - subject
+    :full_paths:
+    - Observation.subject
+    :comparators: {}
+    :values: []
+    :type: Reference
+    :contains_multiple: false
+    :multiple_or: MAY
+  :category:
+    :paths:
+    - category
+    :full_paths:
+    - Observation.category
+    :comparators: {}
+    :values: []
+    :type: CodeableConcept
+    :contains_multiple: true
+    :multiple_or: MAY
+  :date:
+    :paths:
+    - effective
+    :full_paths:
+    - Observation.effective
+    :comparators:
+      :eq: MAY
+      :ne: MAY
+      :gt: SHALL
+      :ge: SHALL
+      :lt: SHALL
+      :le: SHALL
+      :sa: MAY
+      :eb: MAY
+      :ap: MAY
+    :values: []
+    :type: date
+    :contains_multiple: false
+    :multiple_or: MAY
+  :code:
+    :paths:
+    - code
+    :full_paths:
+    - Observation.code
+    :comparators: {}
+    :values: []
+    :type: CodeableConcept
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes: []
+:required_concepts: []
+:must_supports:
+  :extensions:
+  - :id: Observation.extension:notDoneReason
+    :path: extension
+    :url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-notDoneReason
+    :us_quality_coreuscdi_plus_quality: true
+  - :id: Observation.code.extension:notDoneValueSet
+    :path: code.extension
+    :url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet
+    :us_quality_coreuscdi_plus_quality: true
+  :slices: []
+  :elements:
+  - :path: status
+    :fixed_value: cancelled
+    :us_quality_coreuscdi_plus_quality: true
+  - :path: category
+    :us_quality_coreuscdi_plus_quality: true
+  - :path: code
+    :us_quality_coreuscdi_plus_quality: true
+  - :path: effective[x]
+    :us_quality_coreuscdi_plus_quality: true
+  - :path: value[x]
+    :us_quality_coreuscdi_plus_quality: true
+:mandatory_elements:
+- Observation.extension
+- Observation.status
+- Observation.category
+- Observation.code
+- Observation.subject
+- Observation.issued
+- Observation.component.code
+:bindings:
+- :type: CodeableConcept
+  :strength: extensible
+  :system: http://fhir.org/guides/astp/us-quality-core/ValueSet/us-quality-core-negation-reason
+  :path: value
+  :extensions:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-notDoneReason
+:references:
+- :path: Observation.basedOn
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/CarePlan|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/DeviceRequest|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/MedicationRequest|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/NutritionOrder|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/ServiceRequest|4.0.1
+- :path: Observation.partOf
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/MedicationAdministration|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/MedicationDispense|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/MedicationStatement|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Procedure|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Immunization|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/ImagingStudy|4.0.1
+- :path: Observation.subject
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+- :path: Observation.focus
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Resource|4.0.1
+- :path: Observation.encounter
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
+- :path: Observation.performer
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-relatedperson
+- :path: Observation.specimen
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Specimen|4.0.1
+- :path: Observation.device
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Device|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/DeviceMetric|4.0.1
+- :path: Observation.hasMember
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/MolecularSequence|4.0.1
+- :path: Observation.derivedFrom
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-simple-observation
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-questionnaireresponse
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
+  - http://hl7.org/fhir/StructureDefinition/ImagingStudy
+  - http://hl7.org/fhir/StructureDefinition/Media
+  - http://hl7.org/fhir/StructureDefinition/MolecularSequence
+:tests:
+- :id: us_quality_core_v010_observationcancelled_patient_code_search_test
+  :file_name: observationcancelled_patient_code_search_test.rb
+- :id: us_quality_core_v010_observationcancelled_patient_category_search_test
+  :file_name: observationcancelled_patient_category_search_test.rb
+- :id: us_quality_core_v010_observationcancelled_patient_category_date_search_test
+  :file_name: observationcancelled_patient_category_date_search_test.rb
+- :id: us_quality_core_v010_observationcancelled_read_test
+  :file_name: observationcancelled_read_test.rb
+- :id: us_quality_core_v010_observationcancelled_validation_test
+  :file_name: observationcancelled_validation_test.rb
+- :id: us_quality_core_v010_observationcancelled_must_support_test
+  :file_name: observationcancelled_must_support_test.rb
+:id: us_quality_core_v010_observationcancelled
+:file_name: observationcancelled_group.rb
+:delayed_references:
+- :path: performer
+  :resources:
+  - Practitioner
+  - Organization
+:resource_conformance_expectation: SHALL

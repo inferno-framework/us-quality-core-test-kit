@@ -1,0 +1,27 @@
+require_relative '../../../read_test'
+
+module USQualityCoreTestKit
+  module USQualityCoreV010
+    class ImmunizationnotdoneReadTest < Inferno::Test
+      include USQualityCoreTestKit::ReadTest
+
+      title 'Server returns correct Immunization resource from Immunization read interaction'
+
+      description 'A server SHALL support the Immunization read interaction.'
+
+      id :us_quality_core_v010_immunizationnotdone_read_test
+
+      def resource_type
+        'Immunization'
+      end
+
+      def scratch_resources
+        scratch[:immunizationnotdone_resources] ||= {}
+      end
+
+      run do
+        perform_read_test(all_scratch_resources)
+      end
+    end
+  end
+end

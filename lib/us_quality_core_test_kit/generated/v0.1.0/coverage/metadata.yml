@@ -1,0 +1,151 @@
+---
+:name: us_quality_core_coverage
+:class_name: USQualityCorev010CoverageSequence
+:version: v0.1.0
+:reformatted_version: v010
+:resource: Coverage
+:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-coverage
+:profile_name: US Quality Core Coverage
+:profile_version: 0.1.0
+:title: Coverage
+:short_description: Verify support for the capabilities required by the US Quality
+  Core Coverage.
+:is_delayed: false
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :names:
+  - patient
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+:search_definitions:
+  :patient:
+    :paths:
+    - beneficiary
+    :full_paths:
+    - Coverage.beneficiary
+    :comparators: {}
+    :values: []
+    :type: Reference
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes: []
+:required_concepts: []
+:must_supports:
+  :extensions: []
+  :slices:
+  - :slice_id: Coverage.identifier:memberid
+    :slice_name: memberid
+    :path: identifier
+    :discriminator:
+      :type: patternCodeableConcept
+      :path: type
+      :code: MB
+      :system: http://terminology.hl7.org/CodeSystem/v2-0203
+  - :slice_id: Coverage.class:group
+    :slice_name: group
+    :path: class
+    :discriminator:
+      :type: patternCodeableConcept
+      :path: type
+      :code: group
+      :system: http://terminology.hl7.org/CodeSystem/coverage-class
+  - :slice_id: Coverage.class:plan
+    :slice_name: plan
+    :path: class
+    :discriminator:
+      :type: patternCodeableConcept
+      :path: type
+      :code: plan
+      :system: http://terminology.hl7.org/CodeSystem/coverage-class
+  :elements:
+  - :path: identifier
+  - :path: identifier:memberid.type
+  - :path: status
+  - :path: type
+  - :path: subscriberId
+  - :path: beneficiary
+    :types:
+    - Reference
+    :target_profiles:
+    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - :path: relationship
+  - :path: period
+  - :path: payor
+    :types:
+    - Reference
+  - :path: class
+  - :path: class:group.value
+  - :path: class:group.name
+  - :path: class:plan.value
+  - :path: class:plan.name
+:mandatory_elements:
+- Coverage.identifier.type
+- Coverage.status
+- Coverage.beneficiary
+- Coverage.relationship
+- Coverage.payor
+- Coverage.class.type
+- Coverage.class.value
+- Coverage.costToBeneficiary.value[x]
+- Coverage.costToBeneficiary.exception.type
+:bindings:
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/identifier-use
+  :path: identifier.use
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/fm-status
+  :path: status
+:references:
+- :path: Coverage.identifier.assigner
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Organization
+- :path: Coverage.policyHolder
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-relatedperson
+- :path: Coverage.subscriber
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Patient
+  - http://hl7.org/fhir/StructureDefinition/RelatedPerson
+- :path: Coverage.beneficiary
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+- :path: Coverage.payor
+  :profiles:
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
+  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-relatedperson
+- :path: Coverage.contract
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Contract
+:tests:
+- :id: us_quality_core_v010_coverage_patient_search_test
+  :file_name: coverage_patient_search_test.rb
+- :id: us_quality_core_v010_coverage_read_test
+  :file_name: coverage_read_test.rb
+- :id: us_quality_core_v010_coverage_validation_test
+  :file_name: coverage_validation_test.rb
+- :id: us_quality_core_v010_coverage_must_support_test
+  :file_name: coverage_must_support_test.rb
+- :id: us_quality_core_v010_coverage_reference_resolution_test
+  :file_name: coverage_reference_resolution_test.rb
+:id: us_quality_core_v010_coverage
+:file_name: coverage_group.rb
+:delayed_references:
+- :path: policyHolder
+  :resources:
+  - Organization
+- :path: payor
+  :resources:
+  - Organization
+:resource_conformance_expectation: SHALL

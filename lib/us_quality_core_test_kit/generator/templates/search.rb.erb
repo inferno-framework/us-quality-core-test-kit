@@ -1,0 +1,101 @@
+require_relative '../../../search_test'
+require_relative '../../../generator/group_metadata'
+require_relative '../../../search_test_properties'
+
+module USQualityCoreTestKit
+  module <%= module_name %>
+    class <%= class_name %> < Inferno::Test
+      include USQualityCoreTestKit::SearchTest
+
+      title 'Server returns valid results for <%= resource_type %> search by <%= search_param_name_string %>'
+
+      description %(
+<%= description %>
+      )
+
+      id :<%= test_id %>
+
+  <% if optional? %>optional<% end %>
+
+  <% if needs_patient_id? %>
+      input :patient_ids,
+        title: 'Patient IDs',
+        description: 'Comma separated list of patient IDs that in sum contain all MUST SUPPORT elements'
+  <% end %>
+
+      def self.properties
+        @properties ||= SearchTestProperties.new(
+  <%= search_test_properties_string %>
+        )
+      end
+
+      def self.metadata
+        @metadata ||= Generator::GroupMetadata.new(YAML.load_file(File.join(__dir__, 'metadata.yml'), aliases: true))
+      end
+
+      def scratch_resources
+        scratch[:<%= profile_identifier %>_resources] ||= {}
+      end
+
+      run do
+        run_search_test
+      <%- if needs_patient_id? && profile_identifier == 'devicerequest' -%>
+
+        scratch_resources[:all]&.reject! do |r|
+          r&.modifierExtension&.any? do |e|
+            e&.url&.include?('doNotPerform') && e&.valueBoolean
+          end
+        end
+        skip_if scratch_resources[:all].nil? || scratch_resources[:all].empty?,
+          'Search returned DeviceRequest resources, but all have modifierExtension:doNotPerform=true.'
+      <%- end -%>
+      <%- if needs_patient_id? && profile_identifier == 'devicenotrequested' -%>
+
+        scratch_resources[:all]&.select! do |r|
+          r&.modifierExtension&.any? do |e|
+            e&.url&.include?('doNotPerform') && e&.valueBoolean
+          end
+        end
+        skip_if scratch_resources[:all].nil? || scratch_resources[:all].empty?,
+          'Search returned DeviceRequest resources, but none have modifierExtension:doNotPerform=true.'
+      <%- end -%>
+      <%- if needs_patient_id? && profile_identifier == 'medicationrequest' -%>
+
+        scratch_resources[:all]&.reject! { |r| r&.doNotPerform }
+        skip_if scratch_resources[:all].nil? || scratch_resources[:all].empty?,
+          'Search returned MedicationRequest resources, but all have doNotPerform=true.'
+      <%- end -%>
+      <%- if needs_patient_id? && profile_identifier == 'medicationnotrequested' -%>
+
+        scratch_resources[:all]&.select! { |r| r&.doNotPerform }
+        skip_if scratch_resources[:all].nil? || scratch_resources[:all].empty?,
+          'Search returned MedicationRequest resources, but none have doNotPerform=true.'
+      <%- end -%>
+      <%- if needs_patient_id? && profile_identifier == 'servicerequest' -%>
+
+        scratch_resources[:all]&.reject! { |r| r&.doNotPerform }
+        skip_if scratch_resources[:all].nil? || scratch_resources[:all].empty?,
+          'Search returned ServiceRequest resources, but all have doNotPerform=true.'
+      <%- end -%>
+      <%- if needs_patient_id? && profile_identifier == 'servicenotrequested' -%>
+
+        scratch_resources[:all]&.select! { |r| r&.doNotPerform }
+        skip_if scratch_resources[:all].nil? || scratch_resources[:all].empty?,
+          'Search returned ServiceRequest resources, but none have doNotPerform=true.'
+      <%- end -%>
+      <%- if needs_patient_id? && profile_identifier.include?('observation') && profile_identifier != 'observationcancelled' -%>
+
+        scratch_resources[:all]&.reject! { |r| r&.status == 'cancelled' }
+        skip_if scratch_resources[:all].nil? || scratch_resources[:all].empty?,
+          'Search returned Observation resources, but all have status=cancelled.'
+      <%- end -%>
+      <%- if needs_patient_id? && profile_identifier == 'observationcancelled' -%>
+
+        scratch_resources[:all]&.select! { |r| r&.status == 'cancelled' }
+        skip_if scratch_resources[:all].nil? || scratch_resources[:all].empty?,
+          'Search returned Observation resources, but none have status=cancelled.'
+      <%- end -%>
+      end
+    end
+  end
+end

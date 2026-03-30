@@ -1,0 +1,84 @@
+{
+  "resourceType": "CapabilityStatement",
+  "status": "active",
+  "date": "2021-06-17T18:03:00+00:00",
+  "publisher": "MITRE",
+  "kind": "instance",
+  "instantiates": [
+    "http://fhir.org/guides/astp/us-quality-core/CapabilityStatement/us-quality-core-server"
+  ],
+  "implementation": {
+    "description": "Inferno US Quality Core Testing Simulation Server",
+    "url": "<%= Inferno::Application['base_url'] %>/custom/us_quality_core_client_<%= version %>/fhir"
+  },
+  "fhirVersion": "4.0.1",
+  "format": [
+    "application/fhir+json"
+  ],
+  "implementationGuide": [
+    "http://fhir.org/guides/astp/us-quality-core/ImplementationGuide/hl7.fhir.us.quality-core"
+  ],
+  "rest": [
+    {
+      "mode": "server",
+      "security": {
+        "extension": [
+          {
+            "url": "http://fhir-registry.smarthealthit.org/StructureDefinition/oauth-uris",
+            "extension": [
+              {
+                "url": "token",
+                "valueUri": "<%= Inferno::Application['base_url']  %>/custom/us_quality_core_client_<%= version %>/auth/token"
+              },
+              {
+                "url": "authorize",
+                "valueUri": "<%= Inferno::Application['base_url']  %>/custom/us_quality_core_client_<%= version %>/auth/authorization"
+              }
+            ]
+          }
+        ],
+        "service": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/restful-security-service",
+                "code": "SMART-on-FHIR"
+              }
+            ],
+            "text": "OAuth2 using SMART-on-FHIR profile (see http://docs.smarthealthit.org)"
+          }
+        ]
+      },
+      "resource": [
+        {
+          "type": "Patient",
+          "supportedProfile": [
+            "http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient"
+          ],
+          "interaction": [
+            {
+              "code": "read"
+            },
+            {
+              "code": "search-type"
+            }
+          ]
+        },
+        {
+          "type": "AllergyIntolerance",
+          "supportedProfile": [
+            "http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance"
+          ],
+          "interaction": [
+            {
+              "code": "read"
+            },
+            {
+              "code": "search-type"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
