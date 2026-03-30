@@ -70,6 +70,7 @@ module USQualityCoreTestKit
       )
 
       GENERAL_MESSAGE_FILTERS = [
+        %r{Unknown Code System 'http://hl7.org/fhir/us/core/CodeSystem/us-core-tags'}, # Validator has an issue with this US Core 5 code system in US Core 6 resource
       ].freeze
 
 
