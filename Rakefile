@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require 'pry'
+require 'pry-byebug'
+
 begin
   require 'rspec/core/rake_task'
   RSpec::Core::RakeTask.new(:spec)
