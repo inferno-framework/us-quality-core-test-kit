@@ -1823,47 +1823,9 @@
       - DiagnosticReport.category
       :comparators: {}
       :values:
-      - AU
-      - BG
-      - BLB
-      - CG
-      - CH
-      - CP
-      - CT
-      - CTH
-      - CUS
-      - EC
-      - EN
-      - GE
-      - HM
-      - ICU
-      - IMM
-      - LAB
-      - MB
-      - MCB
-      - MYC
-      - NMR
-      - NMS
-      - NRS
-      - OSL
-      - OT
-      - OTH
-      - OUS
-      - PF
-      - PHR
-      - PHY
-      - PT
-      - RAD
-      - RC
-      - RT
-      - RUS
-      - RX
-      - SP
-      - SR
-      - TX
-      - VR
-      - VUS
-      - XRC
+      - LP29684-5
+      - LP29708-2
+      - LP7839-6
       :type: CodeableConcept
       :contains_multiple: true
       :multiple_or: MAY
@@ -1910,88 +1872,12 @@
         :type: requiredBinding
         :path: ''
         :values:
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: AU
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: BG
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: BLB
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: CG
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: CH
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: CP
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: CT
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: CTH
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: CUS
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: EC
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: EN
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: GE
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: HM
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: ICU
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: IMM
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: LAB
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: MB
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: MCB
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: MYC
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: NMR
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: NMS
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: NRS
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: OSL
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: OT
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: OTH
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: OUS
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: PF
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: PHR
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: PHY
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: PT
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: RAD
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: RC
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: RT
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: RUS
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: RX
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: SP
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: SR
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: TX
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: VR
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: VUS
-        - :system: http://terminology.hl7.org/CodeSystem/v2-0074
-          :code: XRC
+        - :system: http://loinc.org
+          :code: LP29684-5
+        - :system: http://loinc.org
+          :code: LP29708-2
+        - :system: http://loinc.org
+          :code: LP7839-6
     :elements:
     - :path: status
     - :path: category
