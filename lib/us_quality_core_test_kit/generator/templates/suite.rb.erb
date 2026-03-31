@@ -31,7 +31,7 @@ module USQualityCoreTestKit
       )
 
       GENERAL_MESSAGE_FILTERS = [
-        %r{Unknown Code System 'http://hl7.org/fhir/us/core/CodeSystem/us-core-tags'}, # Validator has an issue with this US Core 5 code system in US Core 6 resource
+        %r{No definition could be found for URL value 'http://hl7.org/fhir/us/core/CodeSystem/us-core-tags'}, # Validator has an issue with this US Core 5 code system in US Core 6 resource
         # temporary disable these two errors. 
         # us-core-medication-adherence and http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-needed are defined in us-core-7 
         # but us-quality-core is based on us-core-6
