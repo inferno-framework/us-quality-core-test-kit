@@ -4,7 +4,7 @@
 :version: v0.1.0
 :reformatted_version: v010
 :resource: Organization
-:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
+:profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization
 :profile_name: US Quality Core Organization
 :profile_version: 0.1.0
 :title: Organization
@@ -98,7 +98,7 @@
   - http://hl7.org/fhir/StructureDefinition/Organization|4.0.1
 - :path: Organization.partOf
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization
 - :path: Organization.endpoint
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Endpoint

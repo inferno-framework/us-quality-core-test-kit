@@ -4,7 +4,7 @@
 :version: v0.1.0
 :reformatted_version: v010
 :resource: ServiceRequest
-:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-servicenotrequested
+:profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-servicenotrequested
 :profile_name: US Quality Core Service Not Requested
 :profile_version: 0.1.0
 :title: ServiceRequest Service Not Requested
@@ -145,7 +145,7 @@
     :types:
     - Reference
     :target_profiles:
-    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+    - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
   - :path: occurrencePeriod
     :original_path: occurrence[x]
   - :path: authoredOn
@@ -183,10 +183,10 @@
   :path: priority
 - :type: CodeableConcept
   :strength: extensible
-  :system: http://fhir.org/guides/astp/us-quality-core/ValueSet/us-quality-core-negation-reason
+  :system: http://fhir.org/guides/onc/us-quality-core/ValueSet/us-quality-core-negation-reason
   :path: value
   :extensions:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-doNotPerformReason
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-doNotPerformReason
 :references:
 - :path: ServiceRequest.basedOn
   :profiles:
@@ -198,18 +198,18 @@
   - http://hl7.org/fhir/StructureDefinition/ServiceRequest
 - :path: ServiceRequest.subject
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 - :path: ServiceRequest.encounter
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Encounter
 - :path: ServiceRequest.requester
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitioner
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-relatedperson
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-device
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-relatedperson
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-device
   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device
 - :path: ServiceRequest.performer
   :profiles:
@@ -226,8 +226,8 @@
   - http://hl7.org/fhir/StructureDefinition/Location
 - :path: ServiceRequest.reasonReference
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns
 - :path: ServiceRequest.insurance
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Coverage

@@ -4,7 +4,7 @@
 :version: v0.1.0
 :reformatted_version: v010
 :resource: Goal
-:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-goal
+:profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-goal
 :profile_name: US Quality Core Goal
 :profile_version: 0.1.0
 :title: Goal
@@ -47,7 +47,7 @@
     :types:
     - Reference
     :target_profiles:
-    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+    - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
   - :path: startDate
     :original_path: start[x]
   - :path: target
@@ -65,7 +65,7 @@
 :references:
 - :path: Goal.subject
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 - :path: Goal.expressedBy
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Patient

@@ -4,7 +4,7 @@
 :version: v0.1.0
 :reformatted_version: v010
 :resource: MedicationAdministration
-:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-medicationadministration
+:profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationadministration
 :profile_name: US Quality Core MedicationAdministration
 :profile_version: 0.1.0
 :title: MedicationAdministration
@@ -127,7 +127,7 @@
 :bindings:
 - :type: code
   :strength: required
-  :system: http://fhir.org/guides/astp/us-quality-core/ValueSet/us-quality-core-non-negative-medication-admin-status
+  :system: http://fhir.org/guides/onc/us-quality-core/ValueSet/us-quality-core-non-negative-medication-admin-status
   :path: status
 :references:
 - :path: MedicationAdministration.partOf
@@ -136,10 +136,10 @@
   - http://hl7.org/fhir/StructureDefinition/Procedure|4.0.1
 - :path: MedicationAdministration.subject
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 - :path: MedicationAdministration.context
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-encounter
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter
   - http://hl7.org/fhir/StructureDefinition/EpisodeOfCare
 - :path: MedicationAdministration.supportingInformation
   :profiles:
@@ -158,7 +158,7 @@
   - http://hl7.org/fhir/StructureDefinition/DiagnosticReport|4.0.1
 - :path: MedicationAdministration.request
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-medicationrequest
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationrequest
 - :path: MedicationAdministration.device
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Device|4.0.1

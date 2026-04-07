@@ -4,7 +4,7 @@
 :version: v0.1.0
 :reformatted_version: v010
 :resource: DiagnosticReport
-:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-diagnosticreport-lab
+:profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-diagnosticreport-lab
 :profile_name: US Quality Core DiagnosticReport Profile for Laboratory Results Reporting
 :profile_version: 0.1.0
 :title: DiagnosticReport for Laboratory Results Reporting
@@ -115,7 +115,7 @@
     :types:
     - Reference
     :target_profiles:
-    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+    - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
   - :path: effectiveDateTime
     :original_path: effective[x]
   - :path: issued
@@ -126,7 +126,7 @@
     :types:
     - Reference
     :target_profiles:
-    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-observation-lab
+    - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-lab
 :mandatory_elements:
 - DiagnosticReport.status
 - DiagnosticReport.category
@@ -141,22 +141,22 @@
 :references:
 - :path: DiagnosticReport.basedOn
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-careplan
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-immunizationrecommendation
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-medicationrequest
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-nutritionorder
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-servicerequest
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-careplan
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-immunizationrecommendation
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationrequest
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-nutritionorder
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-servicerequest
 - :path: DiagnosticReport.subject
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 - :path: DiagnosticReport.encounter
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Encounter
 - :path: DiagnosticReport.performer
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitioner
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization
 - :path: DiagnosticReport.resultsInterpreter
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Practitioner
@@ -168,7 +168,7 @@
   - http://hl7.org/fhir/StructureDefinition/Specimen
 - :path: DiagnosticReport.result
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-observation-lab
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-lab
 - :path: DiagnosticReport.imagingStudy
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/ImagingStudy

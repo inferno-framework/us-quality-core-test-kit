@@ -4,7 +4,7 @@
 :version: v0.1.0
 :reformatted_version: v010
 :resource: Patient
-:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+:profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 :profile_name: US Quality Core Patient
 :profile_version: 0.1.0
 :title: Patient
@@ -166,7 +166,7 @@
   - http://hl7.org/fhir/StructureDefinition/Organization
 - :path: Patient.link.other
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 :tests:
 - :id: us_quality_core_v010_patient__id_search_test
   :file_name: patient_id_search_test.rb

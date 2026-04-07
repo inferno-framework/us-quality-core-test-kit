@@ -4,7 +4,7 @@
 :version: v0.1.0
 :reformatted_version: v010
 :resource: Immunization
-:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-immunizationnotdone
+:profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-immunizationnotdone
 :profile_name: US Quality Core Immunization Not Done
 :profile_version: 0.1.0
 :title: Immunization Not Done
@@ -83,7 +83,7 @@
   :extensions:
   - :id: Immunization.vaccineCode.extension:notDoneValueSet
     :path: vaccineCode.extension
-    :url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet
+    :url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet
     :us_quality_coreuscdi_plus_quality: true
   :slices: []
   :elements:
@@ -95,7 +95,7 @@
     :types:
     - Reference
     :target_profiles:
-    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+    - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
   - :path: occurrenceDateTime
     :original_path: occurrence[x]
   - :path: primarySource
@@ -112,7 +112,7 @@
 :references:
 - :path: Immunization.patient
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 - :path: Immunization.encounter
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Encounter

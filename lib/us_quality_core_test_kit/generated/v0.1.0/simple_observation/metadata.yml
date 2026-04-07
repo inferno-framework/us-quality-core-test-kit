@@ -4,7 +4,7 @@
 :version: v0.1.0
 :reformatted_version: v010
 :resource: Observation
-:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-simple-observation
+:profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation
 :profile_name: US Quality Core Simple Observation
 :profile_version: 0.1.0
 :title: Observation Simple
@@ -141,7 +141,7 @@
     :types:
     - Reference
     :target_profiles:
-    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+    - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
   - :path: effectiveDateTime
     :original_path: effective[x]
   - :path: performer
@@ -168,7 +168,7 @@
 :bindings:
 - :type: code
   :strength: required
-  :system: http://fhir.org/guides/astp/us-quality-core/ValueSet/us-quality-core-non-negative-observation-status
+  :system: http://fhir.org/guides/onc/us-quality-core/ValueSet/us-quality-core-non-negative-observation-status
   :path: status
 :references:
 - :path: Observation.basedOn
@@ -189,7 +189,7 @@
   - http://hl7.org/fhir/StructureDefinition/ImagingStudy
 - :path: Observation.subject
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 - :path: Observation.focus
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Resource
@@ -198,12 +198,12 @@
   - http://hl7.org/fhir/StructureDefinition/Encounter
 - :path: Observation.performer
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitioner
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-careteam
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-relatedperson
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-careteam
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-relatedperson
 - :path: Observation.specimen
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Specimen
@@ -218,9 +218,9 @@
   - http://hl7.org/fhir/StructureDefinition/MolecularSequence
 - :path: Observation.derivedFrom
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-simple-observation
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-questionnaireresponse
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-imagingstudy
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-questionnaireresponse
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-imagingstudy
   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
   - http://hl7.org/fhir/StructureDefinition/Media
   - http://hl7.org/fhir/StructureDefinition/MolecularSequence

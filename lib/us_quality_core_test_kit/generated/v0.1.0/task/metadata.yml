@@ -4,7 +4,7 @@
 :version: v0.1.0
 :reformatted_version: v010
 :resource: Task
-:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-task
+:profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-task
 :profile_name: US Quality Core Task
 :profile_version: 0.1.0
 :title: Task
@@ -119,7 +119,7 @@
 :bindings:
 - :type: code
   :strength: required
-  :system: http://fhir.org/guides/astp/us-quality-core/ValueSet/us-quality-core-non-negative-task-status
+  :system: http://fhir.org/guides/onc/us-quality-core/ValueSet/us-quality-core-non-negative-task-status
   :path: status
 - :type: code
   :strength: required

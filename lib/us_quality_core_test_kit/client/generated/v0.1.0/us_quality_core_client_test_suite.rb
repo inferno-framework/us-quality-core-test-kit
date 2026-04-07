@@ -63,7 +63,7 @@ module USQualityCoreTestKit
         description %(
           
 The US Quality Core Test Kit Client Suite tests client systems for
-conformance to the [US Quality Core Implementation Guide](http://fhir.org/guides/astp/us-quality-core).
+conformance to the [US Quality Core Implementation Guide](http://fhir.org/guides/onc/us-quality-core).
 
 # Scope
 
@@ -134,7 +134,7 @@ The tests will not pass unless at least one profile group passes.
           },
           {
             label: 'Implementation Guide',
-            url: 'http://fhir.org/guides/astp/us-quality-core'
+            url: 'http://fhir.org/guides/onc/us-quality-core'
           }
         ]
 
@@ -158,7 +158,7 @@ The tests will not pass unless at least one profile group passes.
 During these tests, the US Quality Core client system will interact with
 Inferno's simulated US Quality Core Server and demonstrate its ability to
 perform the FHIR interactions described in the [US Quality Core Client
-CapabilityStatement](http://fhir.org/guides/astp/us-quality-core/CapabilityStatement-US Quality Core-client.html).
+CapabilityStatement](http://fhir.org/guides/onc/us-quality-core/CapabilityStatement-US Quality Core-client.html).
 
 
           )

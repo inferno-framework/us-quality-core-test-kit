@@ -4,7 +4,7 @@
 :version: v0.1.0
 :reformatted_version: v010
 :resource: Procedure
-:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-procedurenotdone
+:profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-procedurenotdone
 :profile_name: US Quality Core Procedure Not Done
 :profile_version: 0.1.0
 :title: Procedure Not Done
@@ -83,7 +83,7 @@
   :extensions:
   - :id: Procedure.extension:recorded
     :path: extension
-    :url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-recorded
+    :url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-recorded
     :us_quality_coreuscdi_plus_quality: true
   :slices: []
   :elements:
@@ -104,7 +104,7 @@
     :types:
     - Reference
     :target_profiles:
-    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+    - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
   - :path: performedDateTime
     :original_path: performed[x]
   - :path: reasonCode
@@ -125,8 +125,8 @@
 :references:
 - :path: Procedure.basedOn
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-careplan
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-servicerequest
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-careplan
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-servicerequest
 - :path: Procedure.partOf
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Procedure
@@ -134,7 +134,7 @@
   - http://hl7.org/fhir/StructureDefinition/MedicationAdministration
 - :path: Procedure.subject
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 - :path: Procedure.encounter
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Encounter

@@ -4,7 +4,7 @@
 :version: v0.1.0
 :reformatted_version: v010
 :resource: Practitioner
-:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitioner
+:profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner
 :profile_name: US Quality Core Practitioner
 :profile_version: 0.1.0
 :title: Practitioner

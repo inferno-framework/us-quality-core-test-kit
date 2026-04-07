@@ -4,7 +4,7 @@
 :version: v0.1.0
 :reformatted_version: v010
 :resource: Task
-:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-taskrejected
+:profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-taskrejected
 :profile_name: US Quality Core Task Rejected
 :profile_version: 0.1.0
 :title: Task Rejected
@@ -77,7 +77,7 @@
   :extensions:
   - :id: Task.code.extension:notDoneValueSet
     :path: code.extension
-    :url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet
+    :url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet
     :us_quality_coreuscdi_plus_quality: true
   :slices: []
   :elements:
@@ -132,10 +132,10 @@
   - http://hl7.org/fhir/StructureDefinition/Resource|4.0.1
 - :path: Task.for
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 - :path: Task.encounter
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-encounter
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter
 - :path: Task.requester
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Device|4.0.1

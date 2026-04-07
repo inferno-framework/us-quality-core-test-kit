@@ -4,7 +4,7 @@
 :version: v0.1.0
 :reformatted_version: v010
 :resource: FamilyMemberHistory
-:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-familymemberhistory
+:profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-familymemberhistory
 :profile_name: US Quality Core FamilyMemberHistory
 :profile_version: 0.1.0
 :title: FamilyMemberHistory
@@ -56,7 +56,7 @@
 :references:
 - :path: FamilyMemberHistory.patient
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 - :path: FamilyMemberHistory.reasonReference
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Condition|4.0.1
