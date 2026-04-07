@@ -4,7 +4,7 @@
 :version: v0.1.0
 :reformatted_version: v010
 :resource: DeviceRequest
-:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-devicenotrequested
+:profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-devicenotrequested
 :profile_name: US Quality Core Device Not Requested
 :profile_version: 0.1.0
 :title: DeviceRequest Device Not Requested
@@ -83,10 +83,10 @@
   :path: priority
 - :type: CodeableConcept
   :strength: extensible
-  :system: http://fhir.org/guides/astp/us-quality-core/ValueSet/us-quality-core-negation-reason
+  :system: http://fhir.org/guides/onc/us-quality-core/ValueSet/us-quality-core-negation-reason
   :path: value
   :extensions:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-doNotPerformReason
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-doNotPerformReason
 :references:
 - :path: DeviceRequest.basedOn
   :profiles:
@@ -96,7 +96,7 @@
   - http://hl7.org/fhir/StructureDefinition/Resource|4.0.1
 - :path: DeviceRequest.subject
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 - :path: DeviceRequest.encounter
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1

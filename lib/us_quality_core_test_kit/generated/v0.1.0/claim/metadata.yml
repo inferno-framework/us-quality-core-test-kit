@@ -4,7 +4,7 @@
 :version: v0.1.0
 :reformatted_version: v010
 :resource: Claim
-:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-claim
+:profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-claim
 :profile_name: US Quality Core Claim
 :profile_version: 0.1.0
 :title: Claim
@@ -92,7 +92,7 @@
 :references:
 - :path: Claim.patient
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 - :path: Claim.enterer
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
@@ -102,16 +102,16 @@
   - http://hl7.org/fhir/StructureDefinition/Organization|4.0.1
 - :path: Claim.provider
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitioner
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization
 - :path: Claim.related.claim
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Claim|4.0.1
 - :path: Claim.prescription
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-devicerequest
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-medicationrequest
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-devicerequest
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationrequest
   - http://hl7.org/fhir/StructureDefinition/VisionPrescription
 - :path: Claim.originalPrescription
   :profiles:
@@ -120,22 +120,22 @@
   - http://hl7.org/fhir/StructureDefinition/VisionPrescription|4.0.1
 - :path: Claim.payee.party
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitioner
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-relatedperson
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-relatedperson
 - :path: Claim.referral
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-servicerequest
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-servicerequest
 - :path: Claim.facility
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-location
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-location
 - :path: Claim.careTeam.provider
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitioner
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization
 - :path: Claim.procedure.udi
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Device|4.0.1
@@ -150,7 +150,7 @@
   - http://hl7.org/fhir/StructureDefinition/Device|4.0.1
 - :path: Claim.item.encounter
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-encounter
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter
 - :path: Claim.item.detail.udi
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Device|4.0.1

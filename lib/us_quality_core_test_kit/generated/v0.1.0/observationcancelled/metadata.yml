@@ -4,7 +4,7 @@
 :version: v0.1.0
 :reformatted_version: v010
 :resource: Observation
-:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-observationcancelled
+:profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observationcancelled
 :profile_name: US Quality Core Observation Cancelled
 :profile_version: 0.1.0
 :title: Observation Cancelled
@@ -94,11 +94,11 @@
   :extensions:
   - :id: Observation.extension:notDoneReason
     :path: extension
-    :url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-notDoneReason
+    :url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneReason
     :us_quality_coreuscdi_plus_quality: true
   - :id: Observation.code.extension:notDoneValueSet
     :path: code.extension
-    :url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet
+    :url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet
     :us_quality_coreuscdi_plus_quality: true
   :slices: []
   :elements:
@@ -124,10 +124,10 @@
 :bindings:
 - :type: CodeableConcept
   :strength: extensible
-  :system: http://fhir.org/guides/astp/us-quality-core/ValueSet/us-quality-core-negation-reason
+  :system: http://fhir.org/guides/onc/us-quality-core/ValueSet/us-quality-core-negation-reason
   :path: value
   :extensions:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-notDoneReason
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneReason
 :references:
 - :path: Observation.basedOn
   :profiles:
@@ -147,7 +147,7 @@
   - http://hl7.org/fhir/StructureDefinition/ImagingStudy|4.0.1
 - :path: Observation.subject
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 - :path: Observation.focus
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Resource|4.0.1
@@ -156,10 +156,10 @@
   - http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
 - :path: Observation.performer
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitioner
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-relatedperson
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-relatedperson
 - :path: Observation.specimen
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Specimen|4.0.1
@@ -174,8 +174,8 @@
   - http://hl7.org/fhir/StructureDefinition/MolecularSequence|4.0.1
 - :path: Observation.derivedFrom
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-simple-observation
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-questionnaireresponse
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-questionnaireresponse
   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
   - http://hl7.org/fhir/StructureDefinition/ImagingStudy
   - http://hl7.org/fhir/StructureDefinition/Media

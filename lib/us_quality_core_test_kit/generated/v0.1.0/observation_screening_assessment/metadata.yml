@@ -4,7 +4,7 @@
 :version: v0.1.0
 :reformatted_version: v010
 :resource: Observation
-:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-observation-screening-assessment
+:profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-screening-assessment
 :profile_name: US Quality Core Observation Screening Assessment
 :profile_version: 0.1.0
 :title: Observation Screening Assessment
@@ -135,7 +135,7 @@
     :types:
     - Reference
     :target_profiles:
-    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+    - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
   - :path: effectiveDateTime
     :original_path: effective[x]
   - :path: performer
@@ -163,7 +163,7 @@
 :bindings:
 - :type: code
   :strength: required
-  :system: http://fhir.org/guides/astp/us-quality-core/ValueSet/us-quality-core-non-negative-observation-status
+  :system: http://fhir.org/guides/onc/us-quality-core/ValueSet/us-quality-core-non-negative-observation-status
   :path: status
 - :type: CodeableConcept
   :strength: required
@@ -193,7 +193,7 @@
   - http://hl7.org/fhir/StructureDefinition/ImagingStudy
 - :path: Observation.subject
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 - :path: Observation.focus
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Resource
@@ -202,12 +202,12 @@
   - http://hl7.org/fhir/StructureDefinition/Encounter
 - :path: Observation.performer
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitioner
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-careteam
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-relatedperson
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-careteam
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-relatedperson
 - :path: Observation.specimen
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Specimen
@@ -217,12 +217,12 @@
   - http://hl7.org/fhir/StructureDefinition/DeviceMetric
 - :path: Observation.hasMember
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-observation-screening-assessment
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-questionnaireresponse
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-screening-assessment
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-questionnaireresponse
 - :path: Observation.derivedFrom
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-observation-screening-assessment
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-questionnaireresponse
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-screening-assessment
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-questionnaireresponse
 :tests:
 - :id: us_quality_core_v010_observation_screening_assessment_patient_category_search_test
   :file_name: observation_screening_assessment_patient_category_search_test.rb

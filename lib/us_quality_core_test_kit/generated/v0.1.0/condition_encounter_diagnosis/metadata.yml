@@ -4,7 +4,7 @@
 :version: v0.1.0
 :reformatted_version: v010
 :resource: Condition
-:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis
+:profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis
 :profile_name: US Quality Core Condition Encounter Diagnosis
 :profile_version: 0.1.0
 :title: Condition Encounter Diagnosis
@@ -149,12 +149,12 @@
     :types:
     - Reference
     :target_profiles:
-    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+    - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
   - :path: encounter
     :types:
     - Reference
     :target_profiles:
-    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-encounter
+    - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter
   - :path: onsetDateTime
     :original_path: onset[x]
   - :path: abatementDateTime
@@ -176,10 +176,10 @@
 :references:
 - :path: Condition.subject
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 - :path: Condition.encounter
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-encounter
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter
 - :path: Condition.recorder
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Practitioner

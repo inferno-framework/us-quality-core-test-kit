@@ -49,7 +49,7 @@ module USQualityCoreTestKit
 
       description %(
         The US Quality Core Server Test Kit tests server systems for their conformance to the [US Quality Core
-        Implementation Guide](http://fhir.org/guides/astp/us-quality-core).
+        Implementation Guide](http://fhir.org/guides/onc/us-quality-core).
 
         # Scope
 

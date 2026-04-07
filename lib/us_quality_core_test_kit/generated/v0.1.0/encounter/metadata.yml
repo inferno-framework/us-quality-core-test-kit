@@ -4,7 +4,7 @@
 :version: v0.1.0
 :reformatted_version: v010
 :resource: Encounter
-:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-encounter
+:profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter
 :profile_name: US Quality Core Encounter
 :profile_version: 0.1.0
 :title: Encounter
@@ -107,7 +107,7 @@
     :types:
     - Reference
     :target_profiles:
-    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+    - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
   - :path: participant
   - :path: participant.type
   - :path: participant.period
@@ -126,12 +126,12 @@
     :types:
     - Reference
     :target_profiles:
-    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-location
+    - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-location
   - :path: serviceProvider
     :types:
     - Reference
     :target_profiles:
-    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
+    - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization
 :mandatory_elements:
 - Encounter.identifier.system
 - Encounter.identifier.value
@@ -168,7 +168,7 @@
   - http://hl7.org/fhir/StructureDefinition/Organization
 - :path: Encounter.subject
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 - :path: Encounter.episodeOfCare
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/EpisodeOfCare
@@ -177,19 +177,19 @@
   - http://hl7.org/fhir/StructureDefinition/ServiceRequest
 - :path: Encounter.participant.individual
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitioner
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-relatedperson
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-relatedperson
 - :path: Encounter.appointment
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Appointment
 - :path: Encounter.reasonReference
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-procedure
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-simple-observation
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-immunizationrecommendation
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-procedure
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-immunizationrecommendation
 - :path: Encounter.diagnosis.condition
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Condition
@@ -199,19 +199,19 @@
   - http://hl7.org/fhir/StructureDefinition/Account
 - :path: Encounter.hospitalization.origin
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-location
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-location
 - :path: Encounter.hospitalization.destination
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-location
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-location
 - :path: Encounter.location.location
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-location
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-location
 - :path: Encounter.serviceProvider
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization
 - :path: Encounter.partOf
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-encounter
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter
 :tests:
 - :id: us_quality_core_v010_encounter_read_test
   :file_name: encounter_read_test.rb

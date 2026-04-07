@@ -4,7 +4,7 @@
 :version: v0.1.0
 :reformatted_version: v010
 :resource: Coverage
-:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-coverage
+:profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-coverage
 :profile_name: US Quality Core Coverage
 :profile_version: 0.1.0
 :title: Coverage
@@ -74,7 +74,7 @@
     :types:
     - Reference
     :target_profiles:
-    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+    - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
   - :path: relationship
   - :path: period
   - :path: payor
@@ -110,21 +110,21 @@
   - http://hl7.org/fhir/StructureDefinition/Organization
 - :path: Coverage.policyHolder
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-relatedperson
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-relatedperson
 - :path: Coverage.subscriber
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Patient
   - http://hl7.org/fhir/StructureDefinition/RelatedPerson
 - :path: Coverage.beneficiary
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 - :path: Coverage.payor
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-relatedperson
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-relatedperson
 - :path: Coverage.contract
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Contract

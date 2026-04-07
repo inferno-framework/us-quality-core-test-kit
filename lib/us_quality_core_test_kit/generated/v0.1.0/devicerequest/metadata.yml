@@ -4,7 +4,7 @@
 :version: v0.1.0
 :reformatted_version: v010
 :resource: DeviceRequest
-:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-devicerequest
+:profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-devicerequest
 :profile_name: US Quality Core DeviceRequest
 :profile_version: 0.1.0
 :title: DeviceRequest
@@ -92,7 +92,7 @@
   - http://hl7.org/fhir/StructureDefinition/Device|4.0.1
 - :path: DeviceRequest.subject
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 - :path: DeviceRequest.encounter
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1

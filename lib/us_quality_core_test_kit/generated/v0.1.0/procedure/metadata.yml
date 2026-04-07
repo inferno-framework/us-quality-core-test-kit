@@ -4,7 +4,7 @@
 :version: v0.1.0
 :reformatted_version: v010
 :resource: Procedure
-:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-procedure
+:profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-procedure
 :profile_name: US Quality Core Procedure
 :profile_version: 0.1.0
 :title: Procedure
@@ -89,7 +89,7 @@
   :extensions:
   - :id: Procedure.extension:recorded
     :path: extension
-    :url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-recorded
+    :url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-recorded
     :us_quality_coreuscdi_plus_quality: true
   :slices: []
   :elements:
@@ -109,7 +109,7 @@
     :types:
     - Reference
     :target_profiles:
-    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+    - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
   - :path: performedDateTime
     :original_path: performed[x]
   - :path: reasonCode
@@ -127,13 +127,13 @@
 :bindings:
 - :type: code
   :strength: required
-  :system: http://fhir.org/guides/astp/us-quality-core/ValueSet/us-quality-core-non-negative-event-status
+  :system: http://fhir.org/guides/onc/us-quality-core/ValueSet/us-quality-core-non-negative-event-status
   :path: status
 :references:
 - :path: Procedure.basedOn
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-careplan
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-servicerequest
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-careplan
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-servicerequest
 - :path: Procedure.partOf
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Procedure
@@ -141,7 +141,7 @@
   - http://hl7.org/fhir/StructureDefinition/MedicationAdministration
 - :path: Procedure.subject
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 - :path: Procedure.encounter
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Encounter
@@ -159,10 +159,10 @@
   - http://hl7.org/fhir/StructureDefinition/PractitionerRole
 - :path: Procedure.performer.actor
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitioner
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-relatedperson
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-relatedperson
 - :path: Procedure.performer.onBehalfOf
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Organization
@@ -171,9 +171,9 @@
   - http://hl7.org/fhir/StructureDefinition/Location
 - :path: Procedure.reasonReference
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-diagnosticreport-note
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-diagnosticreport-note
   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
 - :path: Procedure.report
   :profiles:

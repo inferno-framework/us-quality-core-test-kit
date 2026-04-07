@@ -4,7 +4,7 @@
 :version: v0.1.0
 :reformatted_version: v010
 :resource: MedicationAdministration
-:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-medicationadministrationnotdone
+:profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationadministrationnotdone
 :profile_name: US Quality Core MedicationAdministration Not Done
 :profile_version: 0.1.0
 :title: MedicationAdministration Not Done
@@ -101,7 +101,7 @@
   :extensions:
   - :id: MedicationAdministration.medication[x].extension:notDoneValueSet
     :path: medication[x].extension
-    :url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet
+    :url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet
     :us_quality_coreuscdi_plus_quality: true
   :slices: []
   :elements:
@@ -126,10 +126,10 @@
   - http://hl7.org/fhir/StructureDefinition/Procedure|4.0.1
 - :path: MedicationAdministration.subject
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 - :path: MedicationAdministration.context
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-encounter
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter
   - http://hl7.org/fhir/StructureDefinition/EpisodeOfCare
 - :path: MedicationAdministration.supportingInformation
   :profiles:
@@ -148,7 +148,7 @@
   - http://hl7.org/fhir/StructureDefinition/DiagnosticReport|4.0.1
 - :path: MedicationAdministration.request
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-medicationrequest
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationrequest
 - :path: MedicationAdministration.device
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Device|4.0.1

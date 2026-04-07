@@ -11,7 +11,7 @@ module USQualityCoreTestKit
 
       description %(
 This test verifies resources returned from the first search conform to
-the [US Quality Core MedicationDispense Declined](http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-medicationdispensedeclined).
+the [US Quality Core MedicationDispense Declined](http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationdispensedeclined).
 Systems must demonstrate at least one valid example in order to pass this test.
 
 It verifies the presence of mandatory elements and that elements with
@@ -34,7 +34,7 @@ fail if their code/system are not found in the valueset.
 
       run do
         perform_validation_test(scratch_resources[:all] || [],
-                                'http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-medicationdispensedeclined',
+                                'http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationdispensedeclined',
                                 '0.1.0',
                                 skip_if_empty: true)
       end

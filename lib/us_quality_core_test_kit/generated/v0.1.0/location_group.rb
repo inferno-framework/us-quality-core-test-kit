@@ -54,7 +54,7 @@ in the first test for these elements.
 
 ## Profile Validation
 Each resource returned from the first search is expected to conform to
-the [US Quality Core Location Profile](http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-location). Each element is checked against
+the [US Quality Core Location Profile](http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-location). Each element is checked against
 teminology binding and cardinality requirements.
 
 Elements with a required binding are validated against their bound

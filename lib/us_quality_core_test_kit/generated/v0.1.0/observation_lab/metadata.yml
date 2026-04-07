@@ -4,7 +4,7 @@
 :version: v0.1.0
 :reformatted_version: v010
 :resource: Observation
-:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-observation-lab
+:profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-lab
 :profile_name: US Quality Core Laboratory Result Observation
 :profile_version: 0.1.0
 :title: Observation Laboratory Result
@@ -110,7 +110,7 @@
     :types:
     - Reference
     :target_profiles:
-    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+    - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
   - :path: effectiveDateTime
     :original_path: effective[x]
   - :path: issued
@@ -138,7 +138,7 @@
 :bindings:
 - :type: code
   :strength: required
-  :system: http://fhir.org/guides/astp/us-quality-core/ValueSet/us-quality-core-non-negative-observation-status
+  :system: http://fhir.org/guides/onc/us-quality-core/ValueSet/us-quality-core-non-negative-observation-status
   :path: status
 - :type: CodeableConcept
   :strength: required
@@ -164,7 +164,7 @@
   - http://hl7.org/fhir/StructureDefinition/ImagingStudy
 - :path: Observation.subject
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-patient
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 - :path: Observation.focus
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Resource

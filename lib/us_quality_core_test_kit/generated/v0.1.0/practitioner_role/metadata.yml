@@ -4,7 +4,7 @@
 :version: v0.1.0
 :reformatted_version: v010
 :resource: PractitionerRole
-:profile_url: http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
+:profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
 :profile_name: US Quality Core PractitionerRole
 :profile_version: 0.1.0
 :title: PractitionerRole
@@ -51,19 +51,19 @@
     :types:
     - Reference
     :target_profiles:
-    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitioner
+    - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner
   - :path: organization
     :types:
     - Reference
     :target_profiles:
-    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
+    - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization
   - :path: code
   - :path: specialty
   - :path: location
     :types:
     - Reference
     :target_profiles:
-    - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-location
+    - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-location
   - :path: telecom
   - :path: telecom.system
   - :path: telecom.value
@@ -103,13 +103,13 @@
   - http://hl7.org/fhir/StructureDefinition/Organization|4.0.1
 - :path: PractitionerRole.practitioner
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner
 - :path: PractitionerRole.organization
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-organization
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization
 - :path: PractitionerRole.location
   :profiles:
-  - http://fhir.org/guides/astp/us-quality-core/StructureDefinition/us-quality-core-location
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-location
 - :path: PractitionerRole.healthcareService
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/HealthcareService
