@@ -13,7 +13,7 @@ module USQualityCoreTestKit
 
 
 
-        For ASTP USCDI+ Quality requirements, each Claim must support the following additional elements:
+        For ONC USCDI+ Quality requirements, each Claim must support the following additional elements:
 
         * Claim.diagnosis.diagnosis[x]
         * Claim.diagnosis.onAdmission

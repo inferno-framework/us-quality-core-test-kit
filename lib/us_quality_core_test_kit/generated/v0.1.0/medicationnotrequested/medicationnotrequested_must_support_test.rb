@@ -31,7 +31,7 @@ module USQualityCoreTestKit
         * MedicationRequest.status
         * MedicationRequest.subject
 
-        For ASTP USCDI+ Quality requirements, each MedicationRequest must support the following additional elements:
+        For ONC USCDI+ Quality requirements, each MedicationRequest must support the following additional elements:
 
         * MedicationRequest.doNotPerform
         * MedicationRequest.medication[x].extension:notDoneValueSet

@@ -21,7 +21,7 @@ module USQualityCoreTestKit
         * ServiceRequest.status
         * ServiceRequest.subject
 
-        For ASTP USCDI+ Quality requirements, each ServiceRequest must support the following additional elements:
+        For ONC USCDI+ Quality requirements, each ServiceRequest must support the following additional elements:
 
         * ServiceRequest.reasonCode
         * ServiceRequest.reasonReference

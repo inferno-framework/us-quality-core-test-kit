@@ -23,7 +23,7 @@ module USQualityCoreTestKit
         * Condition.subject
         * Condition.verificationStatus
 
-        For ASTP USCDI+ Quality requirements, each Condition must support the following additional elements:
+        For ONC USCDI+ Quality requirements, each Condition must support the following additional elements:
 
         * Condition.severity
       )

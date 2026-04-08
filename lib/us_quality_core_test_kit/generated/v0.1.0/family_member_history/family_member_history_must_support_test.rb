@@ -13,7 +13,7 @@ module USQualityCoreTestKit
 
 
 
-        For ASTP USCDI+ Quality requirements, each FamilyMemberHistory must support the following additional elements:
+        For ONC USCDI+ Quality requirements, each FamilyMemberHistory must support the following additional elements:
 
         * FamilyMemberHistory.condition.code
       )

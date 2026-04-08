@@ -21,7 +21,7 @@ module USQualityCoreTestKit
         * PractitionerRole.telecom.system
         * PractitionerRole.telecom.value
 
-        For ASTP USCDI+ Quality requirements, each PractitionerRole must support the following additional elements:
+        For ONC USCDI+ Quality requirements, each PractitionerRole must support the following additional elements:
 
         * PractitionerRole.identifier
         * PractitionerRole.identifier.system

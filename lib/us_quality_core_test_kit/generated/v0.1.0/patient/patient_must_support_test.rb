@@ -30,7 +30,7 @@ module USQualityCoreTestKit
         * Patient.telecom.use
         * Patient.telecom.value
 
-        For ASTP USCDI+ Quality requirements, each Patient must support the following additional elements:
+        For ONC USCDI+ Quality requirements, each Patient must support the following additional elements:
 
         * Patient.address.period
         * Patient.address.use
