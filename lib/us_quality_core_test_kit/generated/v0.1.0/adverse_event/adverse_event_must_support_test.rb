@@ -13,7 +13,7 @@ module USQualityCoreTestKit
 
 
 
-        For ASTP USCDI+ Quality requirements, each AdverseEvent must support the following additional elements:
+        For ONC USCDI+ Quality requirements, each AdverseEvent must support the following additional elements:
 
         * AdverseEvent.category
         * AdverseEvent.date

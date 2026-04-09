@@ -26,7 +26,7 @@ module USQualityCoreTestKit
         * MedicationDispense.type
         * MedicationDispense.whenHandedOver
 
-        For ASTP USCDI+ Quality requirements, each MedicationDispense must support the following additional elements:
+        For ONC USCDI+ Quality requirements, each MedicationDispense must support the following additional elements:
 
         * MedicationDispense.medication[x].extension:notDoneValueSet
         * MedicationDispense.statusReason[x]

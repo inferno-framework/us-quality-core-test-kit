@@ -18,7 +18,7 @@ module USQualityCoreTestKit
         * AllergyIntolerance.reaction.manifestation
         * AllergyIntolerance.verificationStatus
 
-        For ASTP USCDI+ Quality requirements, each AllergyIntolerance must support the following additional elements:
+        For ONC USCDI+ Quality requirements, each AllergyIntolerance must support the following additional elements:
 
         * AllergyIntolerance.lastOccurrence
         * AllergyIntolerance.onset[x]

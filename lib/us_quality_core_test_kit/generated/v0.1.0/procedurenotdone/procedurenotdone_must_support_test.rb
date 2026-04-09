@@ -17,7 +17,7 @@ module USQualityCoreTestKit
         * Procedure.status
         * Procedure.subject
 
-        For ASTP USCDI+ Quality requirements, each Procedure must support the following additional elements:
+        For ONC USCDI+ Quality requirements, each Procedure must support the following additional elements:
 
         * Procedure.extension:recorded
         * Procedure.partOf

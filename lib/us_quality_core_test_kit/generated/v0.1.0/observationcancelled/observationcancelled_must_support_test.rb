@@ -13,7 +13,7 @@ module USQualityCoreTestKit
 
 
 
-        For ASTP USCDI+ Quality requirements, each Observation must support the following additional elements:
+        For ONC USCDI+ Quality requirements, each Observation must support the following additional elements:
 
         * Observation.category
         * Observation.code

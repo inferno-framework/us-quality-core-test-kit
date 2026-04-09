@@ -25,7 +25,7 @@ module USQualityCoreTestKit
         * DiagnosticReport.status
         * DiagnosticReport.subject
 
-        For ASTP USCDI+ Quality requirements, each DiagnosticReport must support the following additional elements:
+        For ONC USCDI+ Quality requirements, each DiagnosticReport must support the following additional elements:
 
         * DiagnosticReport.imagingStudy
       )

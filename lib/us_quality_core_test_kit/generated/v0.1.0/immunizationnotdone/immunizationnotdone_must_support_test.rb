@@ -18,7 +18,7 @@ module USQualityCoreTestKit
         * Immunization.statusReason
         * Immunization.vaccineCode
 
-        For ASTP USCDI+ Quality requirements, each Immunization must support the following additional elements:
+        For ONC USCDI+ Quality requirements, each Immunization must support the following additional elements:
 
         * Immunization.vaccineCode.extension:notDoneValueSet
       )

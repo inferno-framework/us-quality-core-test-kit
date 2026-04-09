@@ -21,7 +21,7 @@ module USQualityCoreTestKit
         * Location.status
         * Location.telecom
 
-        For ASTP USCDI+ Quality requirements, each Location must support the following additional elements:
+        For ONC USCDI+ Quality requirements, each Location must support the following additional elements:
 
         * Location.type
       )

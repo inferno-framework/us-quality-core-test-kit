@@ -28,7 +28,7 @@ module USQualityCoreTestKit
         * Practitioner.telecom.system
         * Practitioner.telecom.value
 
-        For ASTP USCDI+ Quality requirements, each Practitioner must support the following additional elements:
+        For ONC USCDI+ Quality requirements, each Practitioner must support the following additional elements:
 
         * Practitioner.identifier:NPI.system
         * Practitioner.identifier:NPI.value

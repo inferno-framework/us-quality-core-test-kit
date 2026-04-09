@@ -13,7 +13,7 @@ module USQualityCoreTestKit
 
 
 
-        For ASTP USCDI+ Quality requirements, each MedicationAdministration must support the following additional elements:
+        For ONC USCDI+ Quality requirements, each MedicationAdministration must support the following additional elements:
 
         * MedicationAdministration.dosage
         * MedicationAdministration.dosage.dose
