@@ -9,7 +9,7 @@ module USQualityCoreTestKit
         # remove '_' from search parameter name, such as _id or _tag
         normalized_name = name.to_s.delete_prefix('_')
 
-        # TODO: We don't need this logic when we don't need SearchParameter overlays
+        # The below logic adds support for SearchParameter overlays
         candidates = resources_by_type['SearchParameter'].select do |param|
           (param.id == "us-quality-core-#{resource.downcase}-#{normalized_name}") || param.name == name
         end
