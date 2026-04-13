@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby-version: ['3.3.6']
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby-version }}
+          bundler-cache: true
+      - name: Run RuboCop
+        run: bundle exec rubocop
+      - name: Check Test Generator Diffs
+        run: |
+          bundle exec rake usqualitycore:generate
+          if [[ -n "$(git status --porcelain lib/us_quality_core_test_kit/generated lib/us_quality_core_test_kit/client/generated)" ]]; then
+            echo "Generated tests are outdated. Run 'bundle exec rake usqualitycore:generate' and commit the changes."
+            git diff
+            exit 1
+          fi
