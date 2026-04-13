@@ -1,8 +1,6 @@
 <% test_file_list.each do |file_name| %>require_relative '<%= file_name %>'
 <% end %>
 
-# TEST
-
 module USQualityCoreTestKit
   module <%= module_name %>
     class <%= class_name %> < Inferno::TestGroup
