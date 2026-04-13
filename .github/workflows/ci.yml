@@ -3,23 +3,29 @@ name: CI
 on:
   push:
 
+env:
+  RUBY_VERSION: '3.3.6'
+
 jobs:
-  build:
+  ci:
+    name: Ruby CI
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        ruby-version: ['3.3.6']
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: ${{ matrix.ruby-version }}
+          ruby-version: ${{ env.RUBY_VERSION }}
           bundler-cache: true
+
+      - name: Install dependencies
+        run: bundle install
+
       - name: Run RuboCop
         run: bundle exec rubocop
+
       - name: Check Test Generator Diffs
         run: |
           bundle exec rake usqualitycore:generate

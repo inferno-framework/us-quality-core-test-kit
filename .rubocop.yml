@@ -1,7 +1,11 @@
 AllCops:
+  TargetRubyVersion: 3.3.6
   NewCops: enable
   SuggestExtensions: false
   Exclude:
+   - 'cache/**/*'
+   - 'vendor/**/*'
+   - 'vendor/bundle/**/*'
    - 'lib/us_quality_core_test_kit/generated/**/*'
    - 'lib/us_quality_core_test_kit/client/generated/**/*'
    - 'client-example-resources/*'
