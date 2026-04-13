@@ -70,6 +70,7 @@ module USQualityCoreTestKit
       )
 
       GENERAL_MESSAGE_FILTERS = [
+        /Observation\.effective\.ofType\(Period\): .*vs-1:/, # Invalid invariant in FHIR v4.0.1
         %r{No definition could be found for URL value 'http://hl7.org/fhir/us/core/CodeSystem/us-core-tags'}, # Validator has an issue with this US Core 5 code system in US Core 6 resource
         # temporary disable these two errors. 
         # us-core-medication-adherence and http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-needed are defined in us-core-7 
