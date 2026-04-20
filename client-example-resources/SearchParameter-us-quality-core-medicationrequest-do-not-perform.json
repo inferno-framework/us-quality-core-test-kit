@@ -1,0 +1,19 @@
+{
+  "id": "us-quality-core-medicationrequest-do-not-perform",
+  "url": "http://fhir.org/guides/onc/us-quality-core/SearchParameter/us-quality-core-medicationrequest-do-not-perform",
+  "version": "0.1.0",
+  "name": "UsQualityCoreMedicationrequestDoNotPerform",
+  "status": "active",
+  "date": "2026-03-31",
+  "description": "US Quality Core MedicationRequest Do-not-perform Search Parameter",
+  "code": "do-not-perform",
+  "base": [
+    "MedicationRequest"
+  ],
+  "type": "token",
+  "expression": "MedicationRequest.doNotPerform",
+  "xpathUsage": "normal",
+  "multipleOr": true,
+  "multipleAnd": true,
+  "resourceType": "SearchParameter"
+}

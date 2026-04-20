@@ -1,0 +1,19 @@
+{
+  "id": "us-quality-core-servicerequest-do-not-perform",
+  "url": "http://fhir.org/guides/onc/us-quality-core/SearchParameter/us-quality-core-servicerequest-do-not-perform",
+  "version": "0.1.0",
+  "name": "UsQualityCoreServicerequestDoNotPerform",
+  "status": "active",
+  "date": "2026-03-31",
+  "description": "US Quality Core ServiceRequest Do-not-perform Search Parameter",
+  "code": "do-not-perform",
+  "base": [
+    "ServiceRequest"
+  ],
+  "type": "token",
+  "expression": "ServiceRequest.doNotPerform",
+  "xpathUsage": "normal",
+  "multipleOr": true,
+  "multipleAnd": true,
+  "resourceType": "SearchParameter"
+}

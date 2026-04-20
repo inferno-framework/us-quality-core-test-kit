@@ -1,0 +1,19 @@
+{
+  "id": "us-quality-core-devicerequest-do-not-perform",
+  "url": "http://fhir.org/guides/onc/us-quality-core/SearchParameter/us-quality-core-devicerequest-do-not-perform",
+  "version": "0.1.0",
+  "name": "UsQualityCoreDevicerequestDoNotPerform",
+  "status": "active",
+  "date": "2026-03-31",
+  "description": "US Quality Core DeviceRequest Do-not-perform Search Parameter",
+  "code": "do-not-perform",
+  "base": [
+    "DeviceRequest"
+  ],
+  "type": "token",
+  "expression": "DeviceRequest.modifierExtension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceRequest.doNotPerform').value",
+  "xpathUsage": "normal",
+  "multipleOr": true,
+  "multipleAnd": true,
+  "resourceType": "SearchParameter"
+}
