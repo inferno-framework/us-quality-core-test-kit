@@ -1,6 +1,6 @@
 require_relative 'adverse_event/adverse_event_subject_search_test'
 require_relative 'adverse_event/adverse_event_subject_event_search_test'
-require_relative 'adverse_event/adverse_event_subject_recordeddate_search_test'
+require_relative 'adverse_event/adverse_event_subject_recorded_date_search_test'
 require_relative 'adverse_event/adverse_event_read_test'
 require_relative 'adverse_event/adverse_event_validation_test'
 require_relative 'adverse_event/adverse_event_must_support_test'
@@ -29,7 +29,7 @@ following parameters:
 
 * subject
 * subject + event
-* subject + recordedDate
+* subject + recorded-date
 
 ### Search Parameters
 The first search uses the selected patient(s) from the prior launch
@@ -86,7 +86,7 @@ read succeeds.
   
       test from: :us_quality_core_v010_adverse_event_subject_search_test
       test from: :us_quality_core_v010_adverse_event_subject_event_search_test
-      test from: :us_quality_core_v010_adverse_event_subject_recordedDate_search_test
+      test from: :us_quality_core_v010_adverse_event_subject_recorded_date_search_test
       test from: :us_quality_core_v010_adverse_event_read_test
       test from: :us_quality_core_v010_adverse_event_validation_test
       test from: :us_quality_core_v010_adverse_event_must_support_test

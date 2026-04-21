@@ -1,11 +1,11 @@
 {
   "resourceType" : "SearchParameter",
-  "id" : "us-quality-core-adverseevent-recordedDate",
+  "id" : "us-quality-core-adverseevent-recorded-date",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: SearchParameter us-quality-core-adverseevent-recordedDate</b></p><a name=\"us-quality-core-adverseevent-recordedDate\"> </a><a name=\"hcus-quality-core-adverseevent-recordedDate\"> </a><h2>UsQualityCoreAdverseeventRecordedDate</h2><p>Parameter <code>recordedDate</code>:<code>date</code></p><div><p>US Quality Core AdverseEvent RecordedDate Search Parameter</p>\n</div><table class=\"grid\"><tr><td>Resource</td><td><a href=\"http://hl7.org/fhir/R4/adverseevent.html\">AdverseEvent</a></td></tr><tr><td>Expression</td><td><code>AdverseEvent.recordedDate</code></td></tr><tr><td>Processing Mode</td><td>Normal</td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: The parameter may repeat in order to specify multiple values that must all be true</li><li>multipleOr: The parameter may have multiple values (separated by comma) where at least one must be true</li></ul></td></tr><tr><td>Comparators</td><td>Allowed: eq, ne, gt, ge, lt, le, sa, eb, ap</td></tr></table></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: SearchParameter us-quality-core-adverseevent-recorded-date</b></p><a name=\"us-quality-core-adverseevent-recorded-date\"> </a><a name=\"hcus-quality-core-adverseevent-recorded-date\"> </a><h2>UsQualityCoreAdverseeventRecordedDate</h2><p>Parameter <code>recorded-date</code>:<code>date</code></p><div><p>US Quality Core AdverseEvent Recorded-date Search Parameter</p>\n</div><table class=\"grid\"><tr><td>Resource</td><td><a href=\"http://hl7.org/fhir/R4/adverseevent.html\">AdverseEvent</a></td></tr><tr><td>Expression</td><td><code>AdverseEvent.recordedDate</code></td></tr><tr><td>Processing Mode</td><td>Normal</td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: The parameter may repeat in order to specify multiple values that must all be true</li><li>multipleOr: The parameter may have multiple values (separated by comma) where at least one must be true</li></ul></td></tr><tr><td>Comparators</td><td>Allowed: eq, ne, gt, ge, lt, le, sa, eb, ap</td></tr></table></div>"
   },
-  "url" : "http://fhir.org/guides/onc/us-quality-core/SearchParameter/us-quality-core-adverseevent-recordedDate",
+  "url" : "http://fhir.org/guides/onc/us-quality-core/SearchParameter/us-quality-core-adverseevent-recorded-date",
   "version" : "0.1.0",
   "name" : "UsQualityCoreAdverseeventRecordedDate",
   "status" : "active",
@@ -17,7 +17,7 @@
       "value" : "https://www.healthit.gov/"
     }]
   }],
-  "description" : "US Quality Core AdverseEvent RecordedDate Search Parameter",
+  "description" : "US Quality Core AdverseEvent Recorded-date Search Parameter",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -26,7 +26,7 @@
     }],
     "text" : "USA"
   }],
-  "code" : "recordedDate",
+  "code" : "recorded-date",
   "base" : ["AdverseEvent"],
   "type" : "date",
   "expression" : "AdverseEvent.recordedDate",
