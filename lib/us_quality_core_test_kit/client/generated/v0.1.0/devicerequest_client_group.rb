@@ -3,6 +3,7 @@
 require_relative 'devicerequest/devicerequest_client_read_test'
 require_relative 'devicerequest/devicerequest_patient_client_search_test'
 require_relative 'devicerequest/devicerequest_patient_code_client_search_test'
+require_relative 'devicerequest/devicerequest_patient_do_not_perform_client_search_test'
 
 module USQualityCoreTestKit
   module Client
@@ -40,6 +41,7 @@ DeviceRequest resource type with the following required parameters:
 
 * patient
 * patient + code
+* patient + do-not-perform
 
 Inferno will also look for searches using the following optional parameters:
 
@@ -55,6 +57,7 @@ Inferno will also look for searches using the following optional parameters:
         test from: :us_quality_core_v010_devicerequest_client_read_test
         test from: :us_quality_core_v010_devicerequest_patient_client_search_test
         test from: :us_quality_core_v010_devicerequest_patient_code_client_search_test
+        test from: :us_quality_core_v010_devicerequest_patient_do_not_perform_client_search_test
       end
     end
   end

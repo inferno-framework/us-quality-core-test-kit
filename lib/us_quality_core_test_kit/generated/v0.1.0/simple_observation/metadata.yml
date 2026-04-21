@@ -28,6 +28,13 @@
   :names:
   - patient
   - category
+  - status
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - category
   - date
   :names_not_must_support_or_mandatory: []
   :must_support_or_mandatory: true
@@ -66,6 +73,23 @@
     - activity
     :type: CodeableConcept
     :contains_multiple: true
+    :multiple_or: MAY
+  :status:
+    :paths:
+    - status
+    :full_paths:
+    - Observation.status
+    :comparators: {}
+    :values:
+    - registered
+    - preliminary
+    - final
+    - amended
+    - corrected
+    - entered-in-error
+    - unknown
+    :type: code
+    :contains_multiple: false
     :multiple_or: MAY
   :date:
     :paths:
@@ -227,6 +251,8 @@
 :tests:
 - :id: us_quality_core_v010_simple_observation_patient_category_search_test
   :file_name: simple_observation_patient_category_search_test.rb
+- :id: us_quality_core_v010_simple_observation_patient_category_status_search_test
+  :file_name: simple_observation_patient_category_status_search_test.rb
 - :id: us_quality_core_v010_simple_observation_patient_category_date_search_test
   :file_name: simple_observation_patient_category_date_search_test.rb
 - :id: us_quality_core_v010_simple_observation_patient_code_search_test

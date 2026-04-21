@@ -17,7 +17,6 @@ module USQualityCoreTestKit
 
         * Observation.category
         * Observation.code
-        * Observation.code.extension:notDoneValueSet
         * Observation.effective[x]
         * Observation.extension:notDoneReason
         * Observation.status

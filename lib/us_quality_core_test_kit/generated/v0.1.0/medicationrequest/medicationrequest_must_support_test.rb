@@ -23,6 +23,7 @@ module USQualityCoreTestKit
         * MedicationRequest.dosageInstruction.text
         * MedicationRequest.dosageInstruction.timing
         * MedicationRequest.encounter
+        * MedicationRequest.extension:medicationAdherence
         * MedicationRequest.intent
         * MedicationRequest.medication[x]
         * MedicationRequest.reportedReference

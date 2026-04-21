@@ -1,5 +1,6 @@
 require_relative 'devicerequest/devicerequest_patient_search_test'
 require_relative 'devicerequest/devicerequest_patient_code_search_test'
+require_relative 'devicerequest/devicerequest_patient_do_not_perform_search_test'
 require_relative 'devicerequest/devicerequest_read_test'
 require_relative 'devicerequest/devicerequest_validation_test'
 require_relative 'devicerequest/devicerequest_must_support_test'
@@ -28,6 +29,7 @@ following parameters:
 
 * patient
 * patient + code
+* patient + do-not-perform
 
 ### Search Parameters
 The first search uses the selected patient(s) from the prior launch
@@ -84,6 +86,7 @@ read succeeds.
   
       test from: :us_quality_core_v010_devicerequest_patient_search_test
       test from: :us_quality_core_v010_devicerequest_patient_code_search_test
+      test from: :us_quality_core_v010_devicerequest_patient_do_not_perform_search_test
       test from: :us_quality_core_v010_devicerequest_read_test
       test from: :us_quality_core_v010_devicerequest_validation_test
       test from: :us_quality_core_v010_devicerequest_must_support_test

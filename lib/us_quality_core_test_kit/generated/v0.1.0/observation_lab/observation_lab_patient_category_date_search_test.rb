@@ -32,6 +32,7 @@ none are returned, the test is skipped.
         @properties ||= SearchTestProperties.new(
           resource_type: 'Observation',
         search_param_names: ['patient', 'category', 'date'],
+        possible_status_search: true,
         token_search_params: ['category'],
         params_with_comparators: ['date']
         )

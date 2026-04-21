@@ -2,6 +2,7 @@
 
 require_relative 'simple_observation/simple_observation_client_read_test'
 require_relative 'simple_observation/simple_observation_patient_category_client_search_test'
+require_relative 'simple_observation/simple_observation_patient_category_status_client_search_test'
 require_relative 'simple_observation/simple_observation_patient_category_date_client_search_test'
 require_relative 'simple_observation/simple_observation_patient_code_client_search_test'
 
@@ -40,6 +41,7 @@ These tests will check that the client performed searches against the
 Observation resource type with the following required parameters:
 
 * patient + category
+* patient + category + status
 * patient + category + date
 * patient + code
 
@@ -56,6 +58,7 @@ Inferno will also look for searches using the following optional parameters:
 
         test from: :us_quality_core_v010_simple_observation_client_read_test
         test from: :us_quality_core_v010_simple_observation_patient_category_client_search_test
+        test from: :us_quality_core_v010_simple_observation_patient_category_status_client_search_test
         test from: :us_quality_core_v010_simple_observation_patient_category_date_client_search_test
         test from: :us_quality_core_v010_simple_observation_patient_code_client_search_test
       end

@@ -16,13 +16,11 @@ module USQualityCoreTestKit
         * Location.address.line
         * Location.address.postalCode
         * Location.address.state
+        * Location.identifier
         * Location.managingOrganization
         * Location.name
         * Location.status
         * Location.telecom
-
-        For ONC USCDI+ Quality requirements, each Location must support the following additional elements:
-
         * Location.type
       )
 

@@ -55,11 +55,7 @@
 :revincludes: []
 :required_concepts: []
 :must_supports:
-  :extensions:
-  - :id: MedicationDispense.medication[x].extension:notDoneValueSet
-    :path: medication[x].extension
-    :url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet
-    :us_quality_coreuscdi_plus_quality: true
+  :extensions: []
   :slices: []
   :elements:
   - :path: status
@@ -74,6 +70,11 @@
     - Reference
     :target_profiles:
     - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
+  - :path: context
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
   - :path: performer
   - :path: performer.actor
     :types:
@@ -114,7 +115,7 @@
   - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 - :path: MedicationDispense.context
   :profiles:
-  - http://hl7.org/fhir/StructureDefinition/Encounter
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
   - http://hl7.org/fhir/StructureDefinition/EpisodeOfCare
 - :path: MedicationDispense.supportingInformation
   :profiles:

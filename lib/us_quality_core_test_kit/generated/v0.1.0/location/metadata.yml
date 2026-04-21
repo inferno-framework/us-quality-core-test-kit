@@ -41,10 +41,10 @@
   :extensions: []
   :slices: []
   :elements:
+  - :path: identifier
   - :path: status
   - :path: name
   - :path: type
-    :us_quality_coreuscdi_plus_quality: true
   - :path: telecom
   - :path: address
   - :path: address.line

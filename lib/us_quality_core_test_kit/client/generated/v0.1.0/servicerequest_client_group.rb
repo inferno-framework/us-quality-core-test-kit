@@ -6,6 +6,7 @@ require_relative 'servicerequest/servicerequest_id_client_search_test'
 require_relative 'servicerequest/servicerequest_patient_client_search_test'
 require_relative 'servicerequest/servicerequest_patient_category_authored_client_search_test'
 require_relative 'servicerequest/servicerequest_patient_code_client_search_test'
+require_relative 'servicerequest/servicerequest_patient_do_not_perform_client_search_test'
 
 module USQualityCoreTestKit
   module Client
@@ -46,6 +47,7 @@ ServiceRequest resource type with the following required parameters:
 * patient
 * patient + category + authored
 * patient + code
+* patient + do-not-perform
 
 Inferno will also look for searches using the following optional parameters:
 
@@ -64,6 +66,7 @@ Inferno will also look for searches using the following optional parameters:
         test from: :us_quality_core_v010_servicerequest_patient_client_search_test
         test from: :us_quality_core_v010_servicerequest_patient_category_authored_client_search_test
         test from: :us_quality_core_v010_servicerequest_patient_code_client_search_test
+        test from: :us_quality_core_v010_servicerequest_patient_do_not_perform_client_search_test
       end
     end
   end

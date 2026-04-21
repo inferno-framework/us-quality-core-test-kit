@@ -17,6 +17,7 @@ module USQualityCoreTestKit
         Elements which may provide external references include:
 
         * MedicationDispense.authorizingPrescription
+        * MedicationDispense.context
         * MedicationDispense.medication[x]
         * MedicationDispense.performer.actor
         * MedicationDispense.subject

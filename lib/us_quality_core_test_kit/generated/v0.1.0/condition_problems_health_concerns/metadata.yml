@@ -157,6 +157,8 @@
       - :system: http://terminology.hl7.org/CodeSystem/condition-category
         :code: encounter-diagnosis
   :elements:
+  - :path: meta
+  - :path: meta.lastUpdated
   - :path: clinicalStatus
   - :path: verificationStatus
   - :path: category

@@ -1,4 +1,5 @@
 require_relative 'observation_screening_assessment/observation_screening_assessment_patient_category_search_test'
+require_relative 'observation_screening_assessment/observation_screening_assessment_patient_category_status_search_test'
 require_relative 'observation_screening_assessment/observation_screening_assessment_patient_category_date_search_test'
 require_relative 'observation_screening_assessment/observation_screening_assessment_patient_code_search_test'
 require_relative 'observation_screening_assessment/observation_screening_assessment_read_test'
@@ -28,6 +29,7 @@ with this resource. This sequence will perform searches with the
 following parameters:
 
 * patient + category
+* patient + category + status
 * patient + category + date
 * patient + code
 
@@ -85,6 +87,7 @@ read succeeds.
 
   
       test from: :us_quality_core_v010_observation_screening_assessment_patient_category_search_test
+      test from: :us_quality_core_v010_observation_screening_assessment_patient_category_status_search_test
       test from: :us_quality_core_v010_observation_screening_assessment_patient_category_date_search_test
       test from: :us_quality_core_v010_observation_screening_assessment_patient_code_search_test
       test from: :us_quality_core_v010_observation_screening_assessment_read_test

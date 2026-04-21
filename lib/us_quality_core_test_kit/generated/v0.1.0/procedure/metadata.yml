@@ -110,11 +110,18 @@
     - Reference
     :target_profiles:
     - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
+  - :path: encounter
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
   - :path: performedDateTime
     :original_path: performed[x]
   - :path: reasonCode
+    :uscdi_only: true
     :us_quality_coreuscdi_plus_quality: true
   - :path: reasonReference
+    :uscdi_only: true
     :types:
     - Reference
     :us_quality_coreuscdi_plus_quality: true
@@ -144,7 +151,7 @@
   - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 - :path: Procedure.encounter
   :profiles:
-  - http://hl7.org/fhir/StructureDefinition/Encounter
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
 - :path: Procedure.recorder
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Patient

@@ -80,11 +80,7 @@
 :revincludes: []
 :required_concepts: []
 :must_supports:
-  :extensions:
-  - :id: Immunization.vaccineCode.extension:notDoneValueSet
-    :path: vaccineCode.extension
-    :url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet
-    :us_quality_coreuscdi_plus_quality: true
+  :extensions: []
   :slices: []
   :elements:
   - :path: status
@@ -96,9 +92,19 @@
     - Reference
     :target_profiles:
     - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
+  - :path: encounter
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
   - :path: occurrenceDateTime
     :original_path: occurrence[x]
   - :path: primarySource
+  - :path: location
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
 :mandatory_elements:
 - Immunization.status
 - Immunization.statusReason
@@ -115,10 +121,10 @@
   - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 - :path: Immunization.encounter
   :profiles:
-  - http://hl7.org/fhir/StructureDefinition/Encounter
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
 - :path: Immunization.location
   :profiles:
-  - http://hl7.org/fhir/StructureDefinition/Location
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
 - :path: Immunization.manufacturer
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Organization

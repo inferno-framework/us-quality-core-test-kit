@@ -16,6 +16,11 @@ module USQualityCoreTestKit
         * Observation.code
         * Observation.dataAbsentReason
         * Observation.effectiveDateTime
+        * Observation.encounter
+        * Observation.interpretation
+        * Observation.meta
+        * Observation.meta.lastUpdated
+        * Observation.referenceRange
         * Observation.specimen
         * Observation.status
         * Observation.subject
@@ -25,7 +30,6 @@ module USQualityCoreTestKit
 
         For ONC USCDI+ Quality requirements, each Observation must support the following additional elements:
 
-        * Observation.interpretation
         * Observation.issued
       )
 

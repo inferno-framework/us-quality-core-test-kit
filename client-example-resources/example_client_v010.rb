@@ -145,6 +145,7 @@ FHIR::DeviceRequest.read('us-quality-core-test-kit-devicerequest')
 ## Search
 results? FHIR::DeviceRequest.search(patient: 'us-quality-core-test-kit-patient')
 results? FHIR::DeviceRequest.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::DeviceRequest.search(patient: 'us-quality-core-test-kit-patient')
 
 
 
@@ -154,6 +155,7 @@ results? FHIR::DeviceRequest.search(patient: 'us-quality-core-test-kit-patient')
 FHIR::DeviceRequest.read('us-quality-core-test-kit-devicenotrequested')
 
 ## Search
+results? FHIR::DeviceRequest.search(patient: 'us-quality-core-test-kit-patient')
 results? FHIR::DeviceRequest.search(patient: 'us-quality-core-test-kit-patient')
 results? FHIR::DeviceRequest.search(patient: 'us-quality-core-test-kit-patient')
 
@@ -284,6 +286,7 @@ FHIR::MedicationRequest.read('us-quality-core-test-kit-medicationrequest')
 
 ## Search
 results? FHIR::MedicationRequest.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::MedicationRequest.search(patient: 'us-quality-core-test-kit-patient')
 
 
 
@@ -293,6 +296,7 @@ results? FHIR::MedicationRequest.search(patient: 'us-quality-core-test-kit-patie
 FHIR::MedicationRequest.read('us-quality-core-test-kit-medicationnotrequested')
 
 ## Search
+results? FHIR::MedicationRequest.search(patient: 'us-quality-core-test-kit-patient')
 results? FHIR::MedicationRequest.search(patient: 'us-quality-core-test-kit-patient')
 
 
@@ -304,6 +308,7 @@ FHIR::Observation.read('us-quality-core-test-kit-observation-clinical-result')
 FHIR::Observation.read('us-quality-core-test-kit-observation-lab')
 
 ## Search
+results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
 results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
 results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
 results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
@@ -319,6 +324,7 @@ FHIR::Observation.read('us-quality-core-test-kit-simple-observation')
 results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
 results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
 results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
 
 
 
@@ -328,6 +334,7 @@ results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
 FHIR::Observation.read('us-quality-core-test-kit-observation-screening-assessment')
 
 ## Search
+results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
 results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
 results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
 results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
@@ -343,6 +350,7 @@ FHIR::Observation.read('us-quality-core-test-kit-observationcancelled')
 results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
 results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
 results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
 
 
 
@@ -352,6 +360,7 @@ results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
 FHIR::Observation.read('us-quality-core-test-kit-observation-lab')
 
 ## Search
+results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
 results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
 results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
 results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
@@ -404,6 +413,7 @@ results? FHIR::ServiceRequest.search(_id: 'us-quality-core-test-kit-servicereque
 results? FHIR::ServiceRequest.search(patient: 'us-quality-core-test-kit-patient')
 results? FHIR::ServiceRequest.search(patient: 'us-quality-core-test-kit-patient')
 results? FHIR::ServiceRequest.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::ServiceRequest.search(patient: 'us-quality-core-test-kit-patient')
 
 
 
@@ -415,6 +425,7 @@ FHIR::ServiceRequest.read('us-quality-core-test-kit-servicenotrequested')
 ## Search
 results? FHIR::ServiceRequest.search(patient: 'us-quality-core-test-kit-patient')
 results? FHIR::ServiceRequest.search(_id: 'us-quality-core-test-kit-servicenotrequested')
+results? FHIR::ServiceRequest.search(patient: 'us-quality-core-test-kit-patient')
 results? FHIR::ServiceRequest.search(patient: 'us-quality-core-test-kit-patient')
 results? FHIR::ServiceRequest.search(patient: 'us-quality-core-test-kit-patient')
 results? FHIR::ServiceRequest.search(patient: 'us-quality-core-test-kit-patient')

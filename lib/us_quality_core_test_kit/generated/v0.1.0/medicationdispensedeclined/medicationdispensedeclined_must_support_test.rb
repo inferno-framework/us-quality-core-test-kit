@@ -12,6 +12,7 @@ module USQualityCoreTestKit
         found previously for the following Must Support and USCDI-flagged elements:
 
         * MedicationDispense.authorizingPrescription
+        * MedicationDispense.context
         * MedicationDispense.dosageInstruction
         * MedicationDispense.dosageInstruction.doseAndRate
         * MedicationDispense.dosageInstruction.doseAndRate.doseQuantity
@@ -28,7 +29,6 @@ module USQualityCoreTestKit
 
         For ONC USCDI+ Quality requirements, each MedicationDispense must support the following additional elements:
 
-        * MedicationDispense.medication[x].extension:notDoneValueSet
         * MedicationDispense.statusReason[x]
       )
 
