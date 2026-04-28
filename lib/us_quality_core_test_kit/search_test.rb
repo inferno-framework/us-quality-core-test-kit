@@ -23,16 +23,16 @@ module USQualityCoreTestKit
       paths = search_param_paths(name)
       search_value = nil
       paths.each do |path|
-        element = find_a_value_at(resource, path) { |element| element_has_valid_value?(element, include_system) }
+        element = find_a_value_at(resource, path) { |ele| element_has_valid_value?(ele, include_system) }
 
         search_value =
           case element
           when FHIR::Period
             if element.start.present?
-              'gt' + (DateTime.xmlschema(element.start) - 1).xmlschema
+              "gt#{(DateTime.xmlschema(element.start) - 1).xmlschema}"
             else
               end_datetime = get_fhir_datetime_range(element.end)[:end]
-              'lt' + (end_datetime + 1).xmlschema
+              "lt#{(end_datetime + 1).xmlschema}"
             end
           when FHIR::Reference
             element.reference
@@ -72,8 +72,8 @@ module USQualityCoreTestKit
       end
 
       search_value.to_s.gsub(',', '\\,')
-    end  
-    
+    end
+
     def resource_matches_param?(resource, search_param_name, escaped_search_value, values_found = [])
       search_value = unescape_search_value(escaped_search_value)
       paths = search_param_paths(search_param_name)
@@ -157,7 +157,7 @@ module USQualityCoreTestKit
           else
             # searching by patient requires special case because we are searching by a resource identifier
             # references can also be URLs, so we may need to resolve those URLs
-            if ['subject', 'patient'].include? search_param_name.to_s
+            if %w[subject patient].include? search_param_name.to_s
               id = search_value.split('Patient/').last
               possible_values = [id, "Patient/#{id}", "#{url}/Patient/#{id}"]
               values_found.any? do |reference|
@@ -187,6 +187,6 @@ module USQualityCoreTestKit
             false
           end
         end
-    end    
+    end
   end
 end
