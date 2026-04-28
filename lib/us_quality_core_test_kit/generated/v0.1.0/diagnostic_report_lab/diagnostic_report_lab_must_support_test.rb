@@ -15,7 +15,10 @@ module USQualityCoreTestKit
         * DiagnosticReport.category:LaboratorySlice
         * DiagnosticReport.code
         * DiagnosticReport.effectiveDateTime
+        * DiagnosticReport.encounter
         * DiagnosticReport.issued
+        * DiagnosticReport.meta
+        * DiagnosticReport.meta.lastUpdated
         * DiagnosticReport.performer
         * DiagnosticReport.result
         * DiagnosticReport.status

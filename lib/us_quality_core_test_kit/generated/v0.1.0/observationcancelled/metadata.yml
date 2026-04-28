@@ -28,6 +28,13 @@
   :names:
   - patient
   - category
+  - status
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - category
   :names_not_must_support_or_mandatory: []
   :must_support_or_mandatory: true
 - :expectation: SHALL
@@ -57,6 +64,17 @@
     :values: []
     :type: CodeableConcept
     :contains_multiple: true
+    :multiple_or: MAY
+  :status:
+    :paths:
+    - status
+    :full_paths:
+    - Observation.status
+    :comparators: {}
+    :values:
+    - cancelled
+    :type: code
+    :contains_multiple: false
     :multiple_or: MAY
   :date:
     :paths:
@@ -95,10 +113,6 @@
   - :id: Observation.extension:notDoneReason
     :path: extension
     :url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneReason
-    :us_quality_coreuscdi_plus_quality: true
-  - :id: Observation.code.extension:notDoneValueSet
-    :path: code.extension
-    :url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet
     :us_quality_coreuscdi_plus_quality: true
   :slices: []
   :elements:
@@ -183,6 +197,8 @@
 :tests:
 - :id: us_quality_core_v010_observationcancelled_patient_code_search_test
   :file_name: observationcancelled_patient_code_search_test.rb
+- :id: us_quality_core_v010_observationcancelled_patient_category_status_search_test
+  :file_name: observationcancelled_patient_category_status_search_test.rb
 - :id: us_quality_core_v010_observationcancelled_patient_category_search_test
   :file_name: observationcancelled_patient_category_search_test.rb
 - :id: us_quality_core_v010_observationcancelled_patient_category_date_search_test

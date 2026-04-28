@@ -16,6 +16,8 @@ module USQualityCoreTestKit
 
         Elements which may provide external references include:
 
+        * Immunization.encounter
+        * Immunization.location
         * Immunization.patient
       )
 

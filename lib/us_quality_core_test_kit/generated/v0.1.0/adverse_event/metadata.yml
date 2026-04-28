@@ -32,7 +32,7 @@
 - :expectation: SHALL
   :names:
   - subject
-  - recordedDate
+  - recorded-date
   :names_not_must_support_or_mandatory: []
   :must_support_or_mandatory: true
 :search_definitions:
@@ -56,7 +56,7 @@
     :type: CodeableConcept
     :contains_multiple: false
     :multiple_or: MAY
-  :recordedDate:
+  :recorded-date:
     :paths:
     - recordedDate
     :full_paths:
@@ -179,8 +179,8 @@
   :file_name: adverse_event_subject_search_test.rb
 - :id: us_quality_core_v010_adverse_event_subject_event_search_test
   :file_name: adverse_event_subject_event_search_test.rb
-- :id: us_quality_core_v010_adverse_event_subject_recordedDate_search_test
-  :file_name: adverse_event_subject_recordeddate_search_test.rb
+- :id: us_quality_core_v010_adverse_event_subject_recorded_date_search_test
+  :file_name: adverse_event_subject_recorded_date_search_test.rb
 - :id: us_quality_core_v010_adverse_event_read_test
   :file_name: adverse_event_read_test.rb
 - :id: us_quality_core_v010_adverse_event_validation_test

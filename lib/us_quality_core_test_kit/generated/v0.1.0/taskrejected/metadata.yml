@@ -74,11 +74,7 @@
 :revincludes: []
 :required_concepts: []
 :must_supports:
-  :extensions:
-  - :id: Task.code.extension:notDoneValueSet
-    :path: code.extension
-    :url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet
-    :us_quality_coreuscdi_plus_quality: true
+  :extensions: []
   :slices: []
   :elements:
   - :path: basedOn

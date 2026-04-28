@@ -11,16 +11,14 @@ module USQualityCoreTestKit
         This test will look through the Immunization resources
         found previously for the following Must Support and USCDI-flagged elements:
 
+        * Immunization.encounter
+        * Immunization.location
         * Immunization.occurrenceDateTime
         * Immunization.patient
         * Immunization.primarySource
         * Immunization.status
         * Immunization.statusReason
         * Immunization.vaccineCode
-
-        For ONC USCDI+ Quality requirements, each Immunization must support the following additional elements:
-
-        * Immunization.vaccineCode.extension:notDoneValueSet
       )
 
       id :us_quality_core_v010_immunizationnotdone_must_support_test

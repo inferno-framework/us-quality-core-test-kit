@@ -29,6 +29,13 @@
   - code
   :names_not_must_support_or_mandatory: []
   :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - do-not-perform
+  :names_not_must_support_or_mandatory:
+  - do-not-perform
+  :must_support_or_mandatory: false
 :search_definitions:
   :patient:
     :paths:
@@ -48,6 +55,16 @@
     :comparators: {}
     :values: []
     :type: CodeableConcept
+    :contains_multiple: false
+    :multiple_or: MAY
+  :do-not-perform:
+    :paths:
+    - modifierExtension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-doNotPerform').value
+    :full_paths:
+    - DeviceRequest.modifierExtension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceRequest.doNotPerform').value
+    :comparators: {}
+    :values: []
+    :type: token
     :contains_multiple: false
     :multiple_or: MAY
 :include_params: []
@@ -133,6 +150,8 @@
   :file_name: devicerequest_patient_search_test.rb
 - :id: us_quality_core_v010_devicerequest_patient_code_search_test
   :file_name: devicerequest_patient_code_search_test.rb
+- :id: us_quality_core_v010_devicerequest_patient_do_not_perform_search_test
+  :file_name: devicerequest_patient_do_not_perform_search_test.rb
 - :id: us_quality_core_v010_devicerequest_read_test
   :file_name: devicerequest_read_test.rb
 - :id: us_quality_core_v010_devicerequest_validation_test

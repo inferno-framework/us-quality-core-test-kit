@@ -17,7 +17,6 @@ module USQualityCoreTestKit
 
         * Task.basedOn
         * Task.code
-        * Task.code.extension:notDoneValueSet
         * Task.executionPeriod
         * Task.focus
         * Task.reasonCode

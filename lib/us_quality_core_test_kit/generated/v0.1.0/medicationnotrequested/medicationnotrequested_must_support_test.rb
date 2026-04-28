@@ -23,6 +23,7 @@ module USQualityCoreTestKit
         * MedicationRequest.dosageInstruction.text
         * MedicationRequest.dosageInstruction.timing
         * MedicationRequest.encounter
+        * MedicationRequest.extension:medicationAdherence
         * MedicationRequest.intent
         * MedicationRequest.medication[x]
         * MedicationRequest.reasonReference
@@ -34,7 +35,6 @@ module USQualityCoreTestKit
         For ONC USCDI+ Quality requirements, each MedicationRequest must support the following additional elements:
 
         * MedicationRequest.doNotPerform
-        * MedicationRequest.medication[x].extension:notDoneValueSet
         * MedicationRequest.reasonCode
       )
 

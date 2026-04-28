@@ -13,6 +13,7 @@ module USQualityCoreTestKit
 
         * Procedure.basedOn
         * Procedure.code
+        * Procedure.encounter
         * Procedure.performedDateTime
         * Procedure.status
         * Procedure.subject

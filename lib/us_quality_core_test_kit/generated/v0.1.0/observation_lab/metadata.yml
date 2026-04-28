@@ -28,6 +28,13 @@
   :names:
   - patient
   - category
+  - status
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - category
   - date
   :names_not_must_support_or_mandatory: []
   :must_support_or_mandatory: true
@@ -58,6 +65,23 @@
     - laboratory
     :type: CodeableConcept
     :contains_multiple: true
+    :multiple_or: MAY
+  :status:
+    :paths:
+    - status
+    :full_paths:
+    - Observation.status
+    :comparators: {}
+    :values:
+    - registered
+    - preliminary
+    - final
+    - amended
+    - corrected
+    - entered-in-error
+    - unknown
+    :type: code
+    :contains_multiple: false
     :multiple_or: MAY
   :date:
     :paths:
@@ -103,6 +127,8 @@
       :code: laboratory
       :system: http://terminology.hl7.org/CodeSystem/observation-category
   :elements:
+  - :path: meta
+  - :path: meta.lastUpdated
   - :path: status
   - :path: category
   - :path: code
@@ -111,6 +137,11 @@
     - Reference
     :target_profiles:
     - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
+  - :path: encounter
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
   - :path: effectiveDateTime
     :original_path: effective[x]
   - :path: issued
@@ -123,12 +154,12 @@
     :original_path: value[x]
   - :path: dataAbsentReason
   - :path: interpretation
-    :us_quality_coreuscdi_plus_quality: true
   - :path: specimen
     :types:
     - Reference
     :target_profiles:
     - http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen
+  - :path: referenceRange
 :mandatory_elements:
 - Observation.status
 - Observation.category
@@ -170,7 +201,7 @@
   - http://hl7.org/fhir/StructureDefinition/Resource
 - :path: Observation.encounter
   :profiles:
-  - http://hl7.org/fhir/StructureDefinition/Encounter
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
 - :path: Observation.performer
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Practitioner
@@ -202,6 +233,8 @@
 :tests:
 - :id: us_quality_core_v010_observation_lab_patient_category_search_test
   :file_name: observation_lab_patient_category_search_test.rb
+- :id: us_quality_core_v010_observation_lab_patient_category_status_search_test
+  :file_name: observation_lab_patient_category_status_search_test.rb
 - :id: us_quality_core_v010_observation_lab_patient_category_date_search_test
   :file_name: observation_lab_patient_category_date_search_test.rb
 - :id: us_quality_core_v010_observation_lab_patient_code_search_test

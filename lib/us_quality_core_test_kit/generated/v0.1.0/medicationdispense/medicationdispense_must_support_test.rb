@@ -12,6 +12,7 @@ module USQualityCoreTestKit
         found previously for the following Must Support and USCDI-flagged elements:
 
         * MedicationDispense.authorizingPrescription
+        * MedicationDispense.context
         * MedicationDispense.dosageInstruction
         * MedicationDispense.dosageInstruction.doseAndRate
         * MedicationDispense.dosageInstruction.doseAndRate.doseQuantity

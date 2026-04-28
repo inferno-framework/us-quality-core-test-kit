@@ -24,6 +24,13 @@
   - intent
   :names_not_must_support_or_mandatory: []
   :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - intent
+  - do-not-perform
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
 :search_definitions:
   :patient:
     :paths:
@@ -53,16 +60,26 @@
     :type: code
     :contains_multiple: false
     :multiple_or: MAY
+  :do-not-perform:
+    :paths:
+    - doNotPerform
+    :full_paths:
+    - MedicationRequest.doNotPerform
+    :comparators: {}
+    :values: []
+    :type: boolean
+    :contains_multiple: false
+    :multiple_or: MAY
 :include_params: []
 :revincludes: []
 :required_concepts:
 - category
 :must_supports:
   :extensions:
-  - :id: MedicationRequest.medication[x].extension:notDoneValueSet
-    :path: medication[x].extension
-    :url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet
-    :us_quality_coreuscdi_plus_quality: true
+  - :id: MedicationRequest.extension:medicationAdherence
+    :path: extension
+    :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence
+    :uscdi_only: true
   :slices:
   - :slice_id: MedicationRequest.category:us-core
     :slice_name: us-core
@@ -206,6 +223,8 @@
 :tests:
 - :id: us_quality_core_v010_medicationnotrequested_patient_intent_search_test
   :file_name: medicationnotrequested_patient_intent_search_test.rb
+- :id: us_quality_core_v010_medicationnotrequested_patient_intent_do_not_perform_search_test
+  :file_name: medicationnotrequested_patient_intent_do_not_perform_search_test.rb
 - :id: us_quality_core_v010_medicationnotrequested_read_test
   :file_name: medicationnotrequested_read_test.rb
 - :id: us_quality_core_v010_medicationnotrequested_validation_test

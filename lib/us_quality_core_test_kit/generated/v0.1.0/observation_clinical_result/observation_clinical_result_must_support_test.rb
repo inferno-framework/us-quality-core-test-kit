@@ -16,6 +16,7 @@ module USQualityCoreTestKit
         * Observation.code
         * Observation.dataAbsentReason
         * Observation.effectiveDateTime
+        * Observation.encounter
         * Observation.status
         * Observation.subject
         * Observation.valueCodeableConcept

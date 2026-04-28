@@ -15,7 +15,6 @@ module USQualityCoreTestKit
 
         For ONC USCDI+ Quality requirements, each MedicationAdministration must support the following additional elements:
 
-        * MedicationAdministration.medication[x].extension:notDoneValueSet
         * MedicationAdministration.status
         * MedicationAdministration.statusReason
       )
