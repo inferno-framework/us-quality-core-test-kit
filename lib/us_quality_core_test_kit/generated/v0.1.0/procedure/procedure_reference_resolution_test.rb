@@ -17,7 +17,6 @@ module USQualityCoreTestKit
         Elements which may provide external references include:
 
         * Procedure.basedOn
-        * Procedure.encounter
         * Procedure.partOf
         * Procedure.reasonReference
         * Procedure.subject

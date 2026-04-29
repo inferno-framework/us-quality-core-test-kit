@@ -41,17 +41,17 @@
   :extensions:
   - :id: Patient.extension:race
     :path: extension
-    :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-race
+    :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-race|6.1.0
     :uscdi_only: true
     :us_quality_coreuscdi_plus_quality: true
   - :id: Patient.extension:ethnicity
     :path: extension
-    :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity
+    :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity|6.1.0
     :uscdi_only: true
     :us_quality_coreuscdi_plus_quality: true
   - :id: Patient.extension:tribalAffiliation
     :path: extension
-    :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation
+    :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation|6.1.0
     :uscdi_only: true
     :us_quality_coreuscdi_plus_quality: true
   - :id: Patient.extension:sex

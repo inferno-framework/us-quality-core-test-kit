@@ -22,13 +22,13 @@
   :names:
   - patient
   - category
+  - status
   :names_not_must_support_or_mandatory: []
   :must_support_or_mandatory: true
 - :expectation: SHALL
   :names:
   - patient
   - category
-  - status
   :names_not_must_support_or_mandatory: []
   :must_support_or_mandatory: true
 - :expectation: SHALL
@@ -238,10 +238,10 @@
   - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-screening-assessment
   - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-questionnaireresponse
 :tests:
-- :id: us_quality_core_v010_observation_screening_assessment_patient_category_search_test
-  :file_name: observation_screening_assessment_patient_category_search_test.rb
 - :id: us_quality_core_v010_observation_screening_assessment_patient_category_status_search_test
   :file_name: observation_screening_assessment_patient_category_status_search_test.rb
+- :id: us_quality_core_v010_observation_screening_assessment_patient_category_search_test
+  :file_name: observation_screening_assessment_patient_category_search_test.rb
 - :id: us_quality_core_v010_observation_screening_assessment_patient_category_date_search_test
   :file_name: observation_screening_assessment_patient_category_date_search_test.rb
 - :id: us_quality_core_v010_observation_screening_assessment_patient_code_search_test

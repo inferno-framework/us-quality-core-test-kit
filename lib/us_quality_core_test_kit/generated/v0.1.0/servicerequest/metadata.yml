@@ -21,9 +21,10 @@
 - :expectation: SHALL
   :names:
   - patient
-  - category
-  :names_not_must_support_or_mandatory: []
-  :must_support_or_mandatory: true
+  - do-not-perform
+  :names_not_must_support_or_mandatory:
+  - do-not-perform
+  :must_support_or_mandatory: false
 - :names:
   - _id
   :expectation: SHALL
@@ -32,6 +33,12 @@
 - :names:
   - patient
   :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - category
   :names_not_must_support_or_mandatory: []
   :must_support_or_mandatory: true
 - :expectation: SHALL
@@ -47,13 +54,6 @@
   - code
   :names_not_must_support_or_mandatory: []
   :must_support_or_mandatory: true
-- :expectation: SHALL
-  :names:
-  - patient
-  - do-not-perform
-  :names_not_must_support_or_mandatory:
-  - do-not-perform
-  :must_support_or_mandatory: false
 :search_definitions:
   :_id:
     :paths:
@@ -163,11 +163,6 @@
     - Reference
     :target_profiles:
     - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
-  - :path: encounter
-    :types:
-    - Reference
-    :target_profiles:
-    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
   - :path: occurrencePeriod
     :original_path: occurrence[x]
   - :path: authoredOn
@@ -214,7 +209,7 @@
   - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 - :path: ServiceRequest.encounter
   :profiles:
-  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+  - http://hl7.org/fhir/StructureDefinition/Encounter
 - :path: ServiceRequest.requester
   :profiles:
   - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner
@@ -223,7 +218,7 @@
   - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
   - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-relatedperson
   - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-device
-  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device|6.1.0
 - :path: ServiceRequest.performer
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Practitioner
@@ -255,18 +250,18 @@
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Provenance
 :tests:
-- :id: us_quality_core_v010_servicerequest_patient_category_search_test
-  :file_name: servicerequest_patient_category_search_test.rb
+- :id: us_quality_core_v010_servicerequest_patient_do_not_perform_search_test
+  :file_name: servicerequest_patient_do_not_perform_search_test.rb
 - :id: us_quality_core_v010_servicerequest__id_search_test
   :file_name: servicerequest_id_search_test.rb
 - :id: us_quality_core_v010_servicerequest_patient_search_test
   :file_name: servicerequest_patient_search_test.rb
+- :id: us_quality_core_v010_servicerequest_patient_category_search_test
+  :file_name: servicerequest_patient_category_search_test.rb
 - :id: us_quality_core_v010_servicerequest_patient_category_authored_search_test
   :file_name: servicerequest_patient_category_authored_search_test.rb
 - :id: us_quality_core_v010_servicerequest_patient_code_search_test
   :file_name: servicerequest_patient_code_search_test.rb
-- :id: us_quality_core_v010_servicerequest_patient_do_not_perform_search_test
-  :file_name: servicerequest_patient_do_not_perform_search_test.rb
 - :id: us_quality_core_v010_servicerequest_read_test
   :file_name: servicerequest_read_test.rb
 - :id: us_quality_core_v010_servicerequest_validation_test

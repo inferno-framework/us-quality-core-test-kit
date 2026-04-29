@@ -47,10 +47,6 @@ none are returned, the test is skipped.
 
       run do
         run_search_test
-
-        scratch_resources[:all]&.reject! { |r| r&.status == 'cancelled' }
-        skip_if scratch_resources[:all].nil? || scratch_resources[:all].empty?,
-          'Search returned Observation resources, but all have status=cancelled.'
       end
     end
   end

@@ -11,8 +11,6 @@ module USQualityCoreTestKit
         This test will look through the Immunization resources
         found previously for the following Must Support and USCDI-flagged elements:
 
-        * Immunization.encounter
-        * Immunization.location
         * Immunization.occurrenceDateTime
         * Immunization.patient
         * Immunization.primarySource

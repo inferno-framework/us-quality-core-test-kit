@@ -144,7 +144,7 @@
   - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner
   - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
   - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-device
-  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device|6.1.0
 - :path: AdverseEvent.suspectEntity.instance
   :profiles:
   - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-immunization
@@ -154,7 +154,7 @@
   - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationadministration
   - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationstatement
   - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-device
-  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device|6.1.0
 - :path: AdverseEvent.suspectEntity.causality.author
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1

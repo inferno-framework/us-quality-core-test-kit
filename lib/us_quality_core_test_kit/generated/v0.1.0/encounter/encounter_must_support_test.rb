@@ -19,8 +19,6 @@ module USQualityCoreTestKit
         * Encounter.identifier.value
         * Encounter.location
         * Encounter.location.location
-        * Encounter.meta
-        * Encounter.meta.lastUpdated
         * Encounter.participant
         * Encounter.participant.individual
         * Encounter.participant.period

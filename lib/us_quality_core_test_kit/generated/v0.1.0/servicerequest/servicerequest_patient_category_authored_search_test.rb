@@ -47,10 +47,6 @@ none are returned, the test is skipped.
 
       run do
         run_search_test
-
-        scratch_resources[:all]&.reject! { |r| r&.doNotPerform }
-        skip_if scratch_resources[:all].nil? || scratch_resources[:all].empty?,
-          'Search returned ServiceRequest resources, but all have doNotPerform=true.'
       end
     end
   end

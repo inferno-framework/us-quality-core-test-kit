@@ -15,7 +15,6 @@ module USQualityCoreTestKit
         * ServiceRequest.category
         * ServiceRequest.category:us-core
         * ServiceRequest.code
-        * ServiceRequest.encounter
         * ServiceRequest.intent
         * ServiceRequest.occurrencePeriod
         * ServiceRequest.requester

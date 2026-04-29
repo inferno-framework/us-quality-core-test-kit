@@ -1,7 +1,7 @@
-require_relative 'observationcancelled/observationcancelled_patient_code_search_test'
 require_relative 'observationcancelled/observationcancelled_patient_category_status_search_test'
 require_relative 'observationcancelled/observationcancelled_patient_category_search_test'
 require_relative 'observationcancelled/observationcancelled_patient_category_date_search_test'
+require_relative 'observationcancelled/observationcancelled_patient_code_search_test'
 require_relative 'observationcancelled/observationcancelled_read_test'
 require_relative 'observationcancelled/observationcancelled_validation_test'
 require_relative 'observationcancelled/observationcancelled_must_support_test'
@@ -27,10 +27,10 @@ This test sequence will first perform each required search associated
 with this resource. This sequence will perform searches with the
 following parameters:
 
-* patient + code
 * patient + category + status
 * patient + category
 * patient + category + date
+* patient + code
 
 ### Search Parameters
 The first search uses the selected patient(s) from the prior launch
@@ -85,10 +85,10 @@ read succeeds.
       end
 
   
-      test from: :us_quality_core_v010_observationcancelled_patient_code_search_test
       test from: :us_quality_core_v010_observationcancelled_patient_category_status_search_test
       test from: :us_quality_core_v010_observationcancelled_patient_category_search_test
       test from: :us_quality_core_v010_observationcancelled_patient_category_date_search_test
+      test from: :us_quality_core_v010_observationcancelled_patient_code_search_test
       test from: :us_quality_core_v010_observationcancelled_read_test
       test from: :us_quality_core_v010_observationcancelled_validation_test
       test from: :us_quality_core_v010_observationcancelled_must_support_test

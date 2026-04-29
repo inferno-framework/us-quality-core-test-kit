@@ -4387,6 +4387,7 @@
             ]
           }
         ],
+        "doNotPerform": false,
         "reportedReference": {
           "reference": "Practitioner/us-quality-core-test-kit-practitioner"
         },
@@ -6724,6 +6725,7 @@
           }
         ],
         "priority": "urgent",
+        "doNotPerform": false,
         "code": {
           "coding": [
             {
