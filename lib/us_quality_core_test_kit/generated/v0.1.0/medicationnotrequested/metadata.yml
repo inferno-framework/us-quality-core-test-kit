@@ -66,7 +66,8 @@
     :full_paths:
     - MedicationRequest.doNotPerform
     :comparators: {}
-    :values: []
+    :values:
+    - 'true'
     :type: boolean
     :contains_multiple: false
     :multiple_or: MAY

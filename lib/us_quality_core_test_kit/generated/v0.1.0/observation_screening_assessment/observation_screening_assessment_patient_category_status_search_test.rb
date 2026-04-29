@@ -60,6 +60,24 @@ FHIR R4 specification.
         scratch[:observation_screening_assessment_resources] ||= {}
       end
 
+      def fixed_value_search_param_values
+        [
+          { "category" => "survey", "status" => "registered" },
+          { "category" => "survey", "status" => "preliminary" },
+          { "category" => "survey", "status" => "final" },
+          { "category" => "survey", "status" => "amended" },
+          { "category" => "survey", "status" => "corrected" },
+          { "category" => "survey", "status" => "entered-in-error" },
+          { "category" => "survey", "status" => "unknown" }
+        ]
+      end
+
+      def fixed_value_search_params(values, patient_id)
+        search_param_names.each_with_object({}) do |name, params|
+          params[name] = patient_id_param?(name) ? patient_id : values[name]
+        end
+      end
+
       run do
         run_search_test
       end

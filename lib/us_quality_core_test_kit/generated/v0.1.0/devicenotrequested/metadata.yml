@@ -59,12 +59,13 @@
     :multiple_or: MAY
   :do-not-perform:
     :paths:
-    - modifierExtension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-doNotPerform').value
+    - modifierExtension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceRequest.doNotPerform').value
     :full_paths:
     - DeviceRequest.modifierExtension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceRequest.doNotPerform').value
     :comparators: {}
-    :values: []
-    :type: token
+    :values:
+    - 'true'
+    :type: boolean
     :contains_multiple: false
     :multiple_or: MAY
 :include_params: []

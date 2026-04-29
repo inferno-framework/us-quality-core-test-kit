@@ -1528,12 +1528,13 @@
       :multiple_or: MAY
     :do-not-perform:
       :paths:
-      - modifierExtension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-doNotPerform').value
+      - modifierExtension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceRequest.doNotPerform').value
       :full_paths:
       - DeviceRequest.modifierExtension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceRequest.doNotPerform').value
       :comparators: {}
-      :values: []
-      :type: token
+      :values:
+      - 'false'
+      :type: boolean
       :contains_multiple: false
       :multiple_or: MAY
   :include_params: &3 []
@@ -1693,12 +1694,13 @@
       :multiple_or: MAY
     :do-not-perform:
       :paths:
-      - modifierExtension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-doNotPerform').value
+      - modifierExtension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceRequest.doNotPerform').value
       :full_paths:
       - DeviceRequest.modifierExtension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceRequest.doNotPerform').value
       :comparators: {}
-      :values: []
-      :type: token
+      :values:
+      - 'true'
+      :type: boolean
       :contains_multiple: false
       :multiple_or: MAY
   :include_params: *3
@@ -3911,7 +3913,8 @@
       :full_paths:
       - MedicationRequest.doNotPerform
       :comparators: {}
-      :values: []
+      :values:
+      - 'false'
       :type: boolean
       :contains_multiple: false
       :multiple_or: MAY
@@ -4192,7 +4195,8 @@
       :full_paths:
       - MedicationRequest.doNotPerform
       :comparators: {}
-      :values: []
+      :values:
+      - 'true'
       :type: boolean
       :contains_multiple: false
       :multiple_or: MAY
@@ -4433,15 +4437,7 @@
       - Observation.category
       :comparators: {}
       :values:
-      - social-history
-      - vital-signs
-      - imaging
-      - laboratory
-      - procedure
-      - survey
       - exam
-      - therapy
-      - activity
       :type: CodeableConcept
       :contains_multiple: true
       :multiple_or: MAY
@@ -4689,14 +4685,6 @@
       - Observation.category
       :comparators: {}
       :values:
-      - social-history
-      - vital-signs
-      - imaging
-      - laboratory
-      - procedure
-      - survey
-      - exam
-      - therapy
       - activity
       :type: CodeableConcept
       :contains_multiple: true
@@ -5227,7 +5215,8 @@
       :full_paths:
       - Observation.category
       :comparators: {}
-      :values: []
+      :values:
+      - activity
       :type: CodeableConcept
       :contains_multiple: true
       :multiple_or: MAY
@@ -6861,7 +6850,8 @@
       :full_paths:
       - ServiceRequest.doNotPerform
       :comparators: {}
-      :values: []
+      :values:
+      - 'false'
       :type: boolean
       :contains_multiple: false
       :multiple_or: MAY
@@ -7140,7 +7130,8 @@
       :full_paths:
       - ServiceRequest.doNotPerform
       :comparators: {}
-      :values: []
+      :values:
+      - 'true'
       :type: boolean
       :contains_multiple: false
       :multiple_or: MAY

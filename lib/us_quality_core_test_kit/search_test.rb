@@ -7,6 +7,14 @@ module USQualityCoreTestKit
     include USCoreTestKit::SearchTest
     extend USCoreTestKit::SearchTest
 
+    EXTENSION_VALUE_PATH_REGEX = /
+      \A
+      (?<extension_type>modifierExtension|extension)
+      \.where\(url='(?<url>[^']+)'\)
+      \.(?<value_path>value(?:[A-Z]\w*)?)
+      \z
+    /x
+
     def patient_id_param?(name)
       name == 'patient' || name == 'subject' || (name == '_id' && resource_type == 'Patient')
     end
@@ -83,7 +91,7 @@ module USQualityCoreTestKit
       paths.each do |path|
         type = metadata.search_definitions[search_param_name.to_sym][:type]
 
-        resolve_path(resource, path).each do |value|
+        resolve_search_param_path(resource, path).each do |value|
           values_found <<
             if value.is_a? FHIR::Reference
               value.reference
@@ -148,7 +156,7 @@ module USQualityCoreTestKit
             end
           when 'boolean'
             search_values = parse_boolean_search_values(search_value)
-            values_found.any? { |value_found| search_values.include?(value_found) }
+            values_found.any? { |value_found| search_values.include?(normalize_boolean_value(value_found)) }
           when 'string'
             searched_values = search_value.downcase.split(/(?<!\\\\),/).map { |string| string.gsub('\\,', ',') }
             values_found.any? do |value_found|
@@ -175,11 +183,47 @@ module USQualityCoreTestKit
       match_found
     end
 
+    def resolve_search_param_path(resource, path)
+      values = resolve_path(resource, path)
+
+      return values if values.present?
+
+      extension_values_for_search_path(resource, path)
+    end
+
+    def extension_values_for_search_path(resource, path)
+      match = path.match(EXTENSION_VALUE_PATH_REGEX)
+
+      return [] if match.blank?
+
+      Array.wrap(resource.public_send(match[:extension_type]))
+           .select { |extension| extension.url == match[:url] }
+           .map { |extension| extension_search_value(extension, match[:value_path]) }
+           .compact
+    rescue NoMethodError
+      []
+    end
+
+    def extension_search_value(extension, value_path)
+      return extension.public_send(value_path) if value_path != 'value' && extension.respond_to?(value_path)
+
+      value_methods = extension.methods.select do |method|
+        method.to_s.match?(/\Avalue[A-Z]/) && extension.method(method).arity.zero?
+      end
+
+      value_method = value_methods.find do |method|
+        value = extension.public_send(method)
+        value.present? || value == false
+      end
+
+      extension.public_send(value_method) if value_method.present?
+    end
+
     def parse_boolean_search_values(search_value)
       search_value
         .split(/(?<!\\\\),/)
         .map { |value| value.gsub('\\,', ',').downcase }
-        .filter_map do |value|
+        .map do |value|
           case value
           when 'true'
             true
@@ -187,6 +231,18 @@ module USQualityCoreTestKit
             false
           end
         end
+        .compact
+    end
+
+    def normalize_boolean_value(value)
+      return value if [true, false].include?(value)
+
+      case value.to_s.downcase
+      when 'true'
+        true
+      when 'false'
+        false
+      end
     end
   end
 end

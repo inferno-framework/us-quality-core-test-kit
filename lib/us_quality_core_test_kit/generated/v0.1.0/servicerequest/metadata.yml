@@ -125,7 +125,8 @@
     :full_paths:
     - ServiceRequest.doNotPerform
     :comparators: {}
-    :values: []
+    :values:
+    - 'false'
     :type: boolean
     :contains_multiple: false
     :multiple_or: MAY

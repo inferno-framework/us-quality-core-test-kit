@@ -64,6 +64,25 @@ FHIR R4 specification.
         scratch[:medicationrequest_resources] ||= {}
       end
 
+      def fixed_value_search_param_values
+        [
+          { "intent" => "proposal", "do-not-perform" => "false" },
+          { "intent" => "plan", "do-not-perform" => "false" },
+          { "intent" => "order", "do-not-perform" => "false" },
+          { "intent" => "original-order", "do-not-perform" => "false" },
+          { "intent" => "reflex-order", "do-not-perform" => "false" },
+          { "intent" => "filler-order", "do-not-perform" => "false" },
+          { "intent" => "instance-order", "do-not-perform" => "false" },
+          { "intent" => "option", "do-not-perform" => "false" }
+        ]
+      end
+
+      def fixed_value_search_params(values, patient_id)
+        search_param_names.each_with_object({}) do |name, params|
+          params[name] = patient_id_param?(name) ? patient_id : values[name]
+        end
+      end
+
       run do
         run_search_test
       end

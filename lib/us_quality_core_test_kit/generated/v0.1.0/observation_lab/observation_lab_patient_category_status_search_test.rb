@@ -59,6 +59,24 @@ FHIR R4 specification.
         scratch[:observation_lab_resources] ||= {}
       end
 
+      def fixed_value_search_param_values
+        [
+          { "category" => "laboratory", "status" => "registered" },
+          { "category" => "laboratory", "status" => "preliminary" },
+          { "category" => "laboratory", "status" => "final" },
+          { "category" => "laboratory", "status" => "amended" },
+          { "category" => "laboratory", "status" => "corrected" },
+          { "category" => "laboratory", "status" => "entered-in-error" },
+          { "category" => "laboratory", "status" => "unknown" }
+        ]
+      end
+
+      def fixed_value_search_params(values, patient_id)
+        search_param_names.each_with_object({}) do |name, params|
+          params[name] = patient_id_param?(name) ? patient_id : values[name]
+        end
+      end
+
       run do
         run_search_test
       end

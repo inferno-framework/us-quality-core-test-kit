@@ -2567,13 +2567,14 @@
         "status": "completed",
         "intent": "original-order",
         "codeCodeableConcept": {
-          "extension": [
+          "coding": [
             {
-              "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
-              "valueCanonical": "http://cts.nlm.nih.gov/fhir/2.16.840.1.113883.3.117.1.7.1.230"
+              "system": "http://snomed.info/sct",
+              "code": "86184003",
+              "display": "Electrocardiographic monitor and recorder"
             }
           ],
-          "text": "Not Done Value Set: Venous Foot Pumps (VFP)"
+          "text": "ECG"
         },
         "subject": {
           "reference": "Patient/us-quality-core-test-kit-patient"
@@ -2599,6 +2600,12 @@
             "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-devicerequest"
           ]
         },
+        "modifierExtension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceRequest.doNotPerform",
+            "valueBoolean": false
+          }
+        ],
         "status": "completed",
         "intent": "original-order",
         "codeCodeableConcept": {
@@ -3899,13 +3906,13 @@
           }
         ],
         "medicationCodeableConcept": {
-          "extension": [
+          "coding": [
             {
-              "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
-              "valueCanonical": "http://cts.nlm.nih.gov/fhir/2.16.840.1.113883.3.88.12.80.16"
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1594660",
+              "display": "alemtuzumab 10 MG/ML [Lemtrada]"
             }
-          ],
-          "text": "Not Done Value Set: Low Dose Unfractionated Heparin for VTE Prophylaxis"
+          ]
         },
         "subject": {
           "reference": "Patient/us-quality-core-test-kit-patient",
@@ -5277,6 +5284,21 @@
               }
             ],
             "text": "Survey"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "social-history",
+                "display": "Social History"
+              },
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "functional-status",
+                "display": "Functional Status"
+              }
+            ],
+            "text": "Functional Status"
           }
         ],
         "code": {
@@ -5358,6 +5380,21 @@
               }
             ],
             "text": "Survey"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "social-history",
+                "display": "Social History"
+              },
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "functional-status",
+                "display": "Functional Status"
+              }
+            ],
+            "text": "Functional Status"
           }
         ],
         "code": {
@@ -5417,6 +5454,21 @@
               }
             ],
             "text": "Survey"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "social-history",
+                "display": "Social History"
+              },
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "functional-status",
+                "display": "Functional Status"
+              }
+            ],
+            "text": "Functional Status"
           }
         ],
         "code": {
@@ -5485,6 +5537,21 @@
               }
             ],
             "text": "Survey"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "social-history",
+                "display": "Social History"
+              },
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "functional-status",
+                "display": "Functional Status"
+              }
+            ],
+            "text": "Functional Status"
           }
         ],
         "code": {
@@ -5570,13 +5637,13 @@
           }
         ],
         "code": {
-          "extension": [
+          "coding": [
             {
-              "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
-              "valueCanonical": "http://cts.nlm.nih.gov/fhir/2.16.840.1.113762.1.4.1045.131"
+              "system": "http://loinc.org",
+              "code": "99354-3",
+              "display": "Mobility device or aid is regularly used"
             }
-          ],
-          "text": "Not Done Value Set: Hemoglobin lab test"
+          ]
         },
         "subject": {
           "reference": "Patient/us-quality-core-test-kit-patient"
@@ -5747,7 +5814,7 @@
                 "valueString": "Mixed"
               }
             ],
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race|6.1.0"
           },
           {
             "extension": [
@@ -5764,7 +5831,7 @@
                 "valueString": "Hispanic or Latino"
               }
             ],
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity|6.1.0"
           },
           {
             "extension": [
@@ -5786,7 +5853,7 @@
                 "valueBoolean": false
               }
             ],
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation"
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation|6.1.0"
           },
           {
             "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
@@ -6641,13 +6708,14 @@
         "priority": "urgent",
         "doNotPerform": true,
         "code": {
-          "extension": [
+          "coding": [
             {
-              "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
-              "valueCanonical": "http://cts.nlm.nih.gov/fhir/2.16.840.1.113883.3.117.1.7.1.214"
+              "system": "http://snomed.info/sct",
+              "code": "80146002",
+              "display": "Excision of appendix (procedure)"
             }
           ],
-          "text": "Not Done Value Set: Intermittent pneumatic compression devices (IPC)"
+          "text": "Excision of appendix (procedure)"
         },
         "subject": {
           "reference": "Patient/us-quality-core-test-kit-patient"
@@ -6925,6 +6993,125 @@
         "text": {
           "status": "generated",
           "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-simple-observation-2</div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/us-quality-core-test-kit-simple-observation-3",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/us-quality-core-test-kit-simple-observation-3"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "us-quality-core-test-kit-simple-observation-3",
+        "meta": {
+          "profile": [
+            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "activity",
+                "display": "Activity"
+              }
+            ],
+            "text": "Activity"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "99354-3",
+              "display": "Mobility device or aid is regularly used"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/us-quality-core-test-kit-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/us-quality-core-test-kit-encounter"
+        },
+        "effectiveDateTime": "2013-04-03T10:30:10+01:00",
+        "issued": "2013-04-03T15:30:10+01:00",
+        "performer": [
+          {
+            "reference": "Organization/us-quality-core-test-kit-organization",
+            "display": "Hendricks Country Hospital"
+          }
+        ],
+        "valueQuantity": {
+          "value": 1,
+          "unit": "score",
+          "system": "http://unitsofmeasure.org",
+          "code": "{score}"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-simple-observation-3</div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/us-quality-core-test-kit-simple-observation-4",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/us-quality-core-test-kit-simple-observation-4"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "us-quality-core-test-kit-simple-observation-4",
+        "meta": {
+          "profile": [
+            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "activity",
+                "display": "Activity"
+              }
+            ],
+            "text": "Activity"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "99354-3",
+              "display": "Mobility device or aid is regularly used"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/us-quality-core-test-kit-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/us-quality-core-test-kit-encounter"
+        },
+        "effectiveDateTime": "2013-04-04T10:30:10+01:00",
+        "issued": "2013-04-04T15:30:10+01:00",
+        "performer": [
+          {
+            "reference": "Practitioner/us-quality-core-test-kit-practitioner",
+            "display": "Practitioner"
+          }
+        ],
+        "valueString": "Uses a mobility device daily",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-simple-observation-4</div>"
         }
       }
     },

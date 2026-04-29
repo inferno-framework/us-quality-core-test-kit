@@ -48,6 +48,12 @@ module USQualityCoreTestKit
 
       VERSION_SPECIFIC_CATEGORY_FIRST_PROFILES = {}.freeze
 
+      PROFILE_CATEGORY_SEARCH_VALUES = {
+        OBSERVATION_CLINICAL_RESULT => ['exam'],
+        SIMPLE_OBSERVATION => ['activity'],
+        OBSERVATION_CANCELLED => ['activity']
+      }.freeze
+
       class << self
         def exclude_group?(group)
           RESOURCES_TO_EXCLUDE.key?(group.resource) &&
