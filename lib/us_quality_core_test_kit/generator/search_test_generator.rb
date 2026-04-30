@@ -39,34 +39,6 @@ module USQualityCoreTestKit
           !group_metadata.delayed? && resource_type != 'Patient'
       end
 
-      def fixed_value_search_param_names
-        search_param_names.reject { |name| %w[patient subject].include?(name) }
-      end
-
-      def multi_param_fixed_value_search?
-        fixed_value_search? && fixed_value_search_param_names.length > 1
-      end
-
-      def fixed_value_search_param_combinations
-        param_values =
-          fixed_value_search_param_names
-          .map { |name| Array.wrap(search_definition(name)[:values]).map { |value| [name, value] } }
-
-        return [] if param_values.any?(&:empty?)
-
-        param_values.first.product(*param_values.drop(1)).map(&:to_h)
-      end
-
-      def fixed_value_search_param_combinations_string
-        fixed_value_search_param_combinations
-          .map do |combo|
-            formatted_values =
-              combo.map { |name, value| "#{name.inspect} => #{value.inspect}" }.join(', ')
-            "          { #{formatted_values} }"
-          end
-          .join(",\n")
-      end
-
       def test_id
         "us_quality_core_#{group_metadata.reformatted_version}_#{profile_identifier}_#{search_identifier}_search_test"
       end
