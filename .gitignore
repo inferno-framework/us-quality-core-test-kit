@@ -1,7 +1,9 @@
-/data/*.db
-/data/redis/**/*.rdb
-/data/redis/**/*.aof
-/data/redis/**/*.manifest
+data/*.db
+/data/*.db-journal
+/data/igs/*.tgz
+/data/redis/*.rdb
+/data/redis/*.aof
+/data/redis/appendonlydir
 /tmp
 .env.local
 .env.*.local
