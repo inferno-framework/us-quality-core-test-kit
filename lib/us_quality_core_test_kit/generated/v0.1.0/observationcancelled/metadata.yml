@@ -21,12 +21,6 @@
 - :expectation: SHALL
   :names:
   - patient
-  - code
-  :names_not_must_support_or_mandatory: []
-  :must_support_or_mandatory: true
-- :expectation: SHALL
-  :names:
-  - patient
   - category
   - status
   :names_not_must_support_or_mandatory: []
@@ -42,6 +36,12 @@
   - patient
   - category
   - date
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - code
   :names_not_must_support_or_mandatory: []
   :must_support_or_mandatory: true
 :search_definitions:
@@ -61,7 +61,8 @@
     :full_paths:
     - Observation.category
     :comparators: {}
-    :values: []
+    :values:
+    - activity
     :type: CodeableConcept
     :contains_multiple: true
     :multiple_or: MAY
@@ -190,19 +191,19 @@
   :profiles:
   - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation
   - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-questionnaireresponse
-  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|6.1.0
   - http://hl7.org/fhir/StructureDefinition/ImagingStudy
   - http://hl7.org/fhir/StructureDefinition/Media
   - http://hl7.org/fhir/StructureDefinition/MolecularSequence
 :tests:
-- :id: us_quality_core_v010_observationcancelled_patient_code_search_test
-  :file_name: observationcancelled_patient_code_search_test.rb
 - :id: us_quality_core_v010_observationcancelled_patient_category_status_search_test
   :file_name: observationcancelled_patient_category_status_search_test.rb
 - :id: us_quality_core_v010_observationcancelled_patient_category_search_test
   :file_name: observationcancelled_patient_category_search_test.rb
 - :id: us_quality_core_v010_observationcancelled_patient_category_date_search_test
   :file_name: observationcancelled_patient_category_date_search_test.rb
+- :id: us_quality_core_v010_observationcancelled_patient_code_search_test
+  :file_name: observationcancelled_patient_code_search_test.rb
 - :id: us_quality_core_v010_observationcancelled_read_test
   :file_name: observationcancelled_read_test.rb
 - :id: us_quality_core_v010_observationcancelled_validation_test

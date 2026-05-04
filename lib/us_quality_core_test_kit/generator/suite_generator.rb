@@ -9,8 +9,12 @@ module USQualityCoreTestKit
   class Generator
     class SuiteGenerator < USCoreTestKit::Generator::SuiteGenerator
       def version_specific_message_filters
-        # TODO: Fix DeviceRequest.modifierExtension:doNotPerform so this doesn't need to be suppressed
         [
+          # Patient validation warnings suppressed for US Core extensions because
+          # validator tries to validate against different US Core version than we require
+          %r{Patient.*Patient\.extension\[\d+\]\[url='http://hl7\.org/fhir/us/core/StructureDefinition/us-core-(race|ethnicity|tribal-affiliation)\|\d+\.\d+(?:\.\d+)?'\]:\s*The extension URL must not contain a version\.},
+          %r{Patient.*Patient\.extension\[\d+\]\.url:\s*Value is 'http://hl7\.org/fhir/us/core/StructureDefinition/us-core-(race|ethnicity|tribal-affiliation)\|\d+\.\d+(?:\.\d+)?'\s*but is fixed to 'http://hl7\.org/fhir/us/core/StructureDefinition/us-core-(race|ethnicity|tribal-affiliation)'\s*in the profile http://hl7\.org/fhir/us/core/StructureDefinition/us-core-(race|ethnicity|tribal-affiliation)\|\d+\.\d+(?:\.\d+)?#Extension\.url},
+          # This extension is correct but is not yet correctly passing in the validator
           %r{DeviceRequest.*DeviceRequest\.modifierExtension\[\d+\]:\s*Slicing cannot be evaluated:\s*Unable to resolve profile CanonicalType\[http://hl7\.org/fhir/5\.0/StructureDefinition/extension-DeviceRequest\.doNotPerform\]}
         ]
       end

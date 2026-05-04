@@ -22,13 +22,13 @@
   :names:
   - patient
   - category
+  - status
   :names_not_must_support_or_mandatory: []
   :must_support_or_mandatory: true
 - :expectation: SHALL
   :names:
   - patient
   - category
-  - status
   :names_not_must_support_or_mandatory: []
   :must_support_or_mandatory: true
 - :expectation: SHALL
@@ -62,15 +62,7 @@
     - Observation.category
     :comparators: {}
     :values:
-    - social-history
-    - vital-signs
-    - imaging
-    - laboratory
-    - procedure
-    - survey
     - exam
-    - therapy
-    - activity
     :type: CodeableConcept
     :contains_multiple: true
     :multiple_or: MAY
@@ -160,11 +152,6 @@
     - Reference
     :target_profiles:
     - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
-  - :path: encounter
-    :types:
-    - Reference
-    :target_profiles:
-    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
   - :path: effectiveDateTime
     :original_path: effective[x]
   - :path: valueQuantity
@@ -210,7 +197,7 @@
   - http://hl7.org/fhir/StructureDefinition/Resource
 - :path: Observation.encounter
   :profiles:
-  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+  - http://hl7.org/fhir/StructureDefinition/Encounter
 - :path: Observation.performer
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Practitioner
@@ -240,10 +227,10 @@
   - http://hl7.org/fhir/StructureDefinition/Observation
   - http://hl7.org/fhir/StructureDefinition/MolecularSequence
 :tests:
-- :id: us_quality_core_v010_observation_clinical_result_patient_category_search_test
-  :file_name: observation_clinical_result_patient_category_search_test.rb
 - :id: us_quality_core_v010_observation_clinical_result_patient_category_status_search_test
   :file_name: observation_clinical_result_patient_category_status_search_test.rb
+- :id: us_quality_core_v010_observation_clinical_result_patient_category_search_test
+  :file_name: observation_clinical_result_patient_category_search_test.rb
 - :id: us_quality_core_v010_observation_clinical_result_patient_category_date_search_test
   :file_name: observation_clinical_result_patient_category_date_search_test.rb
 - :id: us_quality_core_v010_observation_clinical_result_patient_code_search_test

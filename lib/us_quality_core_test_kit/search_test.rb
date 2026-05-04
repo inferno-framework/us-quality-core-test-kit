@@ -7,6 +7,14 @@ module USQualityCoreTestKit
     include USCoreTestKit::SearchTest
     extend USCoreTestKit::SearchTest
 
+    EXTENSION_VALUE_PATH_REGEX = /
+      \A
+      (?<extension_type>modifierExtension|extension)
+      \.where\(url='(?<url>[^']+)'\)
+      \.(?<value_path>value(?:[A-Z]\w*|\[x\])?)
+      \z
+    /x
+
     def patient_id_param?(name)
       name == 'patient' || name == 'subject' || (name == '_id' && resource_type == 'Patient')
     end
@@ -17,6 +25,30 @@ module USQualityCoreTestKit
 
     def no_resources_skip_message(resource_type = self.resource_type)
       "No #{resource_type} resources appear to be available. Please use patients with more information"
+    end
+
+    # Override to allow for multiple combination search parameters
+    # in addition to the patient or subject
+    def fixed_value_search_params(value, patient_id)
+      return super unless value.is_a? Hash
+
+      search_param_names.each_with_object({}) do |name, params|
+        params[name] = patient_id_param?(name) ? patient_id : value[name]
+      end
+    end
+
+    def fixed_value_search_param_values
+      names = fixed_value_search_param_names
+      values = names.map { |name| Array(metadata.search_definitions.dig(name.to_sym, :values)) }
+
+      return values.first if values.one?
+      return [] if values.empty? || values.any?(&:empty?)
+
+      values.first.product(*values.drop(1)).map { |combination| names.zip(combination).to_h }
+    end
+
+    def fixed_value_search_param_names
+      search_param_names.reject { |name| patient_id_param?(name) }
     end
 
     def search_param_value(name, resource, include_system: false)
@@ -83,7 +115,7 @@ module USQualityCoreTestKit
       paths.each do |path|
         type = metadata.search_definitions[search_param_name.to_sym][:type]
 
-        resolve_path(resource, path).each do |value|
+        resolve_search_param_path(resource, path).each do |value|
           values_found <<
             if value.is_a? FHIR::Reference
               value.reference
@@ -147,10 +179,10 @@ module USQualityCoreTestKit
               values_found.any? { |identifier| identifier.value == search_value }
             end
           when 'boolean'
-            search_values = parse_boolean_search_values(search_value)
-            values_found.any? { |value_found| search_values.include?(value_found) }
+            search_values = split_escaped_search_values(search_value).map(&:downcase)
+            values_found.any? { |value_found| search_values.include?(value_found.to_s.downcase) }
           when 'string'
-            searched_values = search_value.downcase.split(/(?<!\\\\),/).map { |string| string.gsub('\\,', ',') }
+            searched_values = split_escaped_search_values(search_value).map(&:downcase)
             values_found.any? do |value_found|
               searched_values.any? { |searched_value| value_found.downcase.starts_with? searched_value }
             end
@@ -164,7 +196,7 @@ module USQualityCoreTestKit
                 possible_values.include? reference
               end
             else
-              search_values = search_value.split(/(?<!\\\\),/).map { |string| string.gsub('\\,', ',') }
+              search_values = split_escaped_search_values(search_value)
               values_found.any? { |value_found| search_values.include? value_found }
             end
           end
@@ -175,18 +207,35 @@ module USQualityCoreTestKit
       match_found
     end
 
-    def parse_boolean_search_values(search_value)
-      search_value
-        .split(/(?<!\\\\),/)
-        .map { |value| value.gsub('\\,', ',').downcase }
-        .filter_map do |value|
-          case value
-          when 'true'
-            true
-          when 'false'
-            false
-          end
+    def resolve_search_param_path(resource, path)
+      values = resolve_path(resource, path)
+      match = path.match(EXTENSION_VALUE_PATH_REGEX)
+
+      return values if values.present? || match.blank?
+
+      value_path = match[:value_path]
+      generic_value_path = %w[value value[x]].include?(value_path)
+      extensions =
+        case match[:extension_type]
+        when 'modifierExtension'
+          resource.modifierExtension if resource.respond_to?(:modifierExtension)
+        when 'extension'
+          resource.extension if resource.respond_to?(:extension)
         end
+
+      Array(extensions)
+        .select { |extension| extension.url == match[:url] }
+        .map do |extension|
+          extension_hash = extension.to_hash
+          generic_value_path ? extension_hash.find { |key, _value| key.start_with?('value') }&.last : extension_hash[value_path]
+        end
+        .compact
+    rescue NoMethodError
+      []
+    end
+
+    def split_escaped_search_values(search_value)
+      search_value.split(/(?<!\\\\),/).map { |value| value.gsub('\\,', ',') }
     end
   end
 end

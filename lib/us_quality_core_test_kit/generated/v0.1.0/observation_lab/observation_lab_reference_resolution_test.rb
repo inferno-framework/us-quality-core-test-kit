@@ -16,7 +16,6 @@ module USQualityCoreTestKit
 
         Elements which may provide external references include:
 
-        * Observation.encounter
         * Observation.specimen
         * Observation.subject
       )

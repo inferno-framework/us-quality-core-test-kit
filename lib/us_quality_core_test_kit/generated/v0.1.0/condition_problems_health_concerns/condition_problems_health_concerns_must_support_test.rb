@@ -18,8 +18,6 @@ module USQualityCoreTestKit
         * Condition.clinicalStatus
         * Condition.code
         * Condition.extension:assertedDate
-        * Condition.meta
-        * Condition.meta.lastUpdated
         * Condition.onsetDateTime
         * Condition.recordedDate
         * Condition.subject

@@ -46,14 +46,6 @@ none are returned, the test is skipped.
 
       run do
         run_search_test
-
-        scratch_resources[:all]&.select! do |r|
-          r&.modifierExtension&.any? do |e|
-            e&.url&.include?('doNotPerform') && e&.valueBoolean
-          end
-        end
-        skip_if scratch_resources[:all].nil? || scratch_resources[:all].empty?,
-          'Search returned DeviceRequest resources, but none have modifierExtension:doNotPerform=true.'
       end
     end
   end

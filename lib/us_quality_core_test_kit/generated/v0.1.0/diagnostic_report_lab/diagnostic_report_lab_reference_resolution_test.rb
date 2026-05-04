@@ -16,7 +16,6 @@ module USQualityCoreTestKit
 
         Elements which may provide external references include:
 
-        * DiagnosticReport.encounter
         * DiagnosticReport.performer
         * DiagnosticReport.result
         * DiagnosticReport.subject

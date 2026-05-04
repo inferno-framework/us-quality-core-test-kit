@@ -110,18 +110,11 @@
     - Reference
     :target_profiles:
     - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
-  - :path: encounter
-    :types:
-    - Reference
-    :target_profiles:
-    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
   - :path: performedDateTime
     :original_path: performed[x]
   - :path: reasonCode
-    :uscdi_only: true
     :us_quality_coreuscdi_plus_quality: true
   - :path: reasonReference
-    :uscdi_only: true
     :types:
     - Reference
     :us_quality_coreuscdi_plus_quality: true
@@ -151,7 +144,7 @@
   - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
 - :path: Procedure.encounter
   :profiles:
-  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+  - http://hl7.org/fhir/StructureDefinition/Encounter
 - :path: Procedure.recorder
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Patient
@@ -181,7 +174,7 @@
   - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis
   - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns
   - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-diagnosticreport-note
-  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|6.1.0
 - :path: Procedure.report
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/DiagnosticReport

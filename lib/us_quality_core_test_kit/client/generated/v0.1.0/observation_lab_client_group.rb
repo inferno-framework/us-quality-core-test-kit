@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require_relative 'observation_lab/observation_lab_client_read_test'
-require_relative 'observation_lab/observation_lab_patient_category_client_search_test'
 require_relative 'observation_lab/observation_lab_patient_category_status_client_search_test'
+require_relative 'observation_lab/observation_lab_patient_category_client_search_test'
 require_relative 'observation_lab/observation_lab_patient_category_date_client_search_test'
 require_relative 'observation_lab/observation_lab_patient_code_client_search_test'
 
@@ -40,8 +40,8 @@ This test will check that the client performed a read of the following id:
 These tests will check that the client performed searches against the
 Observation resource type with the following required parameters:
 
-* patient + category
 * patient + category + status
+* patient + category
 * patient + category + date
 * patient + code
 
@@ -57,8 +57,8 @@ Inferno will also look for searches using the following optional parameters:
         run_as_group
 
         test from: :us_quality_core_v010_observation_lab_client_read_test
-        test from: :us_quality_core_v010_observation_lab_patient_category_client_search_test
         test from: :us_quality_core_v010_observation_lab_patient_category_status_client_search_test
+        test from: :us_quality_core_v010_observation_lab_patient_category_client_search_test
         test from: :us_quality_core_v010_observation_lab_patient_category_date_client_search_test
         test from: :us_quality_core_v010_observation_lab_patient_code_client_search_test
       end

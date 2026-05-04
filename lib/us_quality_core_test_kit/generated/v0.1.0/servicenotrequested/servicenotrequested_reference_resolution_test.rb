@@ -16,7 +16,6 @@ module USQualityCoreTestKit
 
         Elements which may provide external references include:
 
-        * ServiceRequest.encounter
         * ServiceRequest.reasonReference
         * ServiceRequest.requester
         * ServiceRequest.subject

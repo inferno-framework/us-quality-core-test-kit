@@ -114,16 +114,16 @@ module USQualityCoreTestKit
   * read id:
     * us-quality-core-test-kit-devicerequest
   * searches:
+    * patient + do-not-perform
     * patient
     * patient + code
-    * patient + do-not-perform
 * **Devicenotrequested**
   * read id:
     * us-quality-core-test-kit-devicenotrequested
   * searches:
+    * patient + do-not-perform
     * patient
     * patient + code
-    * patient + do-not-perform
 * **DiagnosticReportNote**
   * read id:
     * us-quality-core-test-kit-diagnosticreport-note
@@ -196,52 +196,52 @@ module USQualityCoreTestKit
   * read id:
     * us-quality-core-test-kit-medicationrequest
   * searches:
-    * patient + intent
     * patient + intent + do-not-perform
+    * patient + intent
 * **Medicationnotrequested**
   * read id:
     * us-quality-core-test-kit-medicationnotrequested
   * searches:
-    * patient + intent
     * patient + intent + do-not-perform
+    * patient + intent
 * **ObservationClinicalResult**
   * read id:
     * us-quality-core-test-kit-observation-clinical-result
   * searches:
-    * patient + category
     * patient + category + status
+    * patient + category
     * patient + category + date
     * patient + code
 * **SimpleObservation**
   * read id:
     * us-quality-core-test-kit-simple-observation
   * searches:
-    * patient + category
     * patient + category + status
+    * patient + category
     * patient + category + date
     * patient + code
 * **ObservationScreeningAssessment**
   * read id:
     * us-quality-core-test-kit-observation-screening-assessment
   * searches:
-    * patient + category
     * patient + category + status
+    * patient + category
     * patient + category + date
     * patient + code
 * **Observationcancelled**
   * read id:
     * us-quality-core-test-kit-observationcancelled
   * searches:
-    * patient + code
     * patient + category + status
     * patient + category
     * patient + category + date
+    * patient + code
 * **ObservationLab**
   * read id:
     * us-quality-core-test-kit-observation-lab
   * searches:
-    * patient + category
     * patient + category + status
+    * patient + category
     * patient + category + date
     * patient + code
 * **Procedure**
@@ -268,22 +268,22 @@ module USQualityCoreTestKit
   * read id:
     * us-quality-core-test-kit-servicerequest
   * searches:
-    * patient + category
+    * patient + do-not-perform
     * _id
     * patient
+    * patient + category
     * patient + category + authored
     * patient + code
-    * patient + do-not-perform
 * **Servicenotrequested**
   * read id:
     * us-quality-core-test-kit-servicenotrequested
   * searches:
-    * patient + category
+    * patient + do-not-perform
     * _id
     * patient
+    * patient + category
     * patient + category + authored
     * patient + code
-    * patient + do-not-perform
 * **Task**
   * read id:
     * us-quality-core-test-kit-task
