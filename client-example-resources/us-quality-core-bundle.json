@@ -44,7 +44,7 @@
       },
       "resource": {
         "resourceType": "Claim",
-        "id": "example",
+        "id": "us-quality-core-test-kit-claim",
         "meta": {
           "profile": [
             "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-claim"
@@ -228,7 +228,7 @@
         ],
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: example</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-claim</div>"
         }
       }
     },

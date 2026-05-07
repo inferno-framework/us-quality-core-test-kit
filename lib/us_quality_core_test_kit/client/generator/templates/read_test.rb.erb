@@ -26,7 +26,7 @@ module USQualityCoreTestKit
           requests = load_tagged_requests(READ_<%= resource.underscore.upcase %>_TAG)
           skip_if requests.blank?, skip_message
 
-          requests_for_id = filter_requests_by_resource_id(requests, '<%= expected_resource_id %>')
+          requests_for_id = filter_requests_by_resource_id(requests, <%= expected_resource_id_literal %>)
           assert requests_for_id.any?, failure_message
         end
       end
