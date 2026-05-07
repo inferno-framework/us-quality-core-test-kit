@@ -49,6 +49,12 @@ module USQualityCoreTestKit
           Array(expected_resource_id).map { |id| "`#{resource_type}/#{id}`" }.join(', ')
         end
 
+        def expected_resource_id_literal
+          return expected_resource_id.inspect if expected_resource_id.is_a?(Array)
+
+          "'#{expected_resource_id}'"
+        end
+
         def title
           "#{conformance_expectation} support read of #{profile_identifier.camelize}"
         end

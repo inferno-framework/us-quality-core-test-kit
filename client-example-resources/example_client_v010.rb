@@ -43,7 +43,7 @@ end
 FHIR::Patient.read('us-quality-core-test-kit-patient')
 
 ## Search
-results? FHIR::Patient.search(_id: 'us-quality-core-test-kit-patient')
+results? FHIR::Patient.search({"_id"=>"us-quality-core-test-kit-patient"})
 
 
 
@@ -53,9 +53,9 @@ results? FHIR::Patient.search(_id: 'us-quality-core-test-kit-patient')
 FHIR::AdverseEvent.read('us-quality-core-test-kit-adverse-event')
 
 ## Search
-results? FHIR::AdverseEvent.search(subject: 'us-quality-core-test-kit-patient')
-results? FHIR::AdverseEvent.search(subject: 'us-quality-core-test-kit-patient')
-results? FHIR::AdverseEvent.search(subject: 'us-quality-core-test-kit-patient')
+results? FHIR::AdverseEvent.search({"subject"=>"us-quality-core-test-kit-patient"})
+results? FHIR::AdverseEvent.search({"subject"=>"us-quality-core-test-kit-patient", "event"=>"725119006"})
+results? FHIR::AdverseEvent.search({"subject"=>"us-quality-core-test-kit-patient", "recorded-date"=>"ge2017-01-29"})
 
 
 
@@ -65,7 +65,7 @@ results? FHIR::AdverseEvent.search(subject: 'us-quality-core-test-kit-patient')
 FHIR::AllergyIntolerance.read('us-quality-core-test-kit-allergy-intolerance')
 
 ## Search
-results? FHIR::AllergyIntolerance.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::AllergyIntolerance.search({"patient"=>"us-quality-core-test-kit-patient"})
 
 
 
@@ -75,7 +75,7 @@ results? FHIR::AllergyIntolerance.search(patient: 'us-quality-core-test-kit-pati
 FHIR::CarePlan.read('us-quality-core-test-kit-care-plan')
 
 ## Search
-results? FHIR::CarePlan.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::CarePlan.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"assess-plan"})
 
 
 
@@ -85,7 +85,7 @@ results? FHIR::CarePlan.search(patient: 'us-quality-core-test-kit-patient')
 FHIR::CareTeam.read('us-quality-core-test-kit-care-team')
 
 ## Search
-results? FHIR::CareTeam.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::CareTeam.search({"patient"=>"us-quality-core-test-kit-patient", "status"=>"active"})
 
 
 
@@ -95,7 +95,7 @@ results? FHIR::CareTeam.search(patient: 'us-quality-core-test-kit-patient')
 FHIR::Claim.read('us-quality-core-test-kit-claim')
 
 ## Search
-results? FHIR::Claim.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::Claim.search({"patient"=>"us-quality-core-test-kit-patient"})
 
 
 
@@ -105,11 +105,11 @@ results? FHIR::Claim.search(patient: 'us-quality-core-test-kit-patient')
 FHIR::Condition.read('us-quality-core-test-kit-condition-encounter-diagnosis')
 
 ## Search
-results? FHIR::Condition.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Condition.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Condition.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Condition.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Condition.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::Condition.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"problem-list-item"})
+results? FHIR::Condition.search({"patient"=>"us-quality-core-test-kit-patient"})
+results? FHIR::Condition.search({"patient"=>"us-quality-core-test-kit-patient", "abatement-date"=>"ge2007-12-21"})
+results? FHIR::Condition.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"247824007"})
+results? FHIR::Condition.search({"patient"=>"us-quality-core-test-kit-patient", "onset-date"=>"ge2007-12-14"})
 
 
 
@@ -119,11 +119,11 @@ results? FHIR::Condition.search(patient: 'us-quality-core-test-kit-patient')
 FHIR::Condition.read('us-quality-core-test-kit-condition-problems-health-concerns')
 
 ## Search
-results? FHIR::Condition.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Condition.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Condition.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Condition.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Condition.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::Condition.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"problem-list-item"})
+results? FHIR::Condition.search({"patient"=>"us-quality-core-test-kit-patient"})
+results? FHIR::Condition.search({"patient"=>"us-quality-core-test-kit-patient", "abatement-date"=>"ge2007-12-21"})
+results? FHIR::Condition.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"247824007"})
+results? FHIR::Condition.search({"patient"=>"us-quality-core-test-kit-patient", "onset-date"=>"ge2007-12-14"})
 
 
 
@@ -133,7 +133,7 @@ results? FHIR::Condition.search(patient: 'us-quality-core-test-kit-patient')
 FHIR::Coverage.read('us-quality-core-test-kit-coverage')
 
 ## Search
-results? FHIR::Coverage.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::Coverage.search({"patient"=>"us-quality-core-test-kit-patient"})
 
 
 
@@ -143,9 +143,9 @@ results? FHIR::Coverage.search(patient: 'us-quality-core-test-kit-patient')
 FHIR::DeviceRequest.read('us-quality-core-test-kit-devicerequest')
 
 ## Search
-results? FHIR::DeviceRequest.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::DeviceRequest.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::DeviceRequest.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::DeviceRequest.search({"patient"=>"us-quality-core-test-kit-patient", "do-not-perform"=>"false"})
+results? FHIR::DeviceRequest.search({"patient"=>"us-quality-core-test-kit-patient"})
+results? FHIR::DeviceRequest.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"86184003"})
 
 
 
@@ -155,9 +155,9 @@ results? FHIR::DeviceRequest.search(patient: 'us-quality-core-test-kit-patient')
 FHIR::DeviceRequest.read('us-quality-core-test-kit-devicenotrequested')
 
 ## Search
-results? FHIR::DeviceRequest.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::DeviceRequest.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::DeviceRequest.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::DeviceRequest.search({"patient"=>"us-quality-core-test-kit-patient", "do-not-perform"=>true})
+results? FHIR::DeviceRequest.search({"patient"=>"us-quality-core-test-kit-patient"})
+results? FHIR::DeviceRequest.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"86184003"})
 
 
 
@@ -167,10 +167,10 @@ results? FHIR::DeviceRequest.search(patient: 'us-quality-core-test-kit-patient')
 FHIR::DiagnosticReport.read('us-quality-core-test-kit-diagnostic-report-note')
 
 ## Search
-results? FHIR::DiagnosticReport.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::DiagnosticReport.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::DiagnosticReport.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::DiagnosticReport.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::DiagnosticReport.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"LP29684-5"})
+results? FHIR::DiagnosticReport.search({"patient"=>"us-quality-core-test-kit-patient"})
+results? FHIR::DiagnosticReport.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"LP29684-5", "date"=>"ge2005-07-05"})
+results? FHIR::DiagnosticReport.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"30746-2"})
 
 
 
@@ -180,10 +180,10 @@ results? FHIR::DiagnosticReport.search(patient: 'us-quality-core-test-kit-patien
 FHIR::DiagnosticReport.read('us-quality-core-test-kit-diagnostic-report-lab')
 
 ## Search
-results? FHIR::DiagnosticReport.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::DiagnosticReport.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::DiagnosticReport.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::DiagnosticReport.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::DiagnosticReport.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"LAB"})
+results? FHIR::DiagnosticReport.search({"patient"=>"us-quality-core-test-kit-patient"})
+results? FHIR::DiagnosticReport.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"LAB", "date"=>"ge2005-07-05"})
+results? FHIR::DiagnosticReport.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"58410-2"})
 
 
 
@@ -193,7 +193,7 @@ results? FHIR::DiagnosticReport.search(patient: 'us-quality-core-test-kit-patien
 FHIR::FamilyMemberHistory.read('us-quality-core-test-kit-family-member-history')
 
 ## Search
-results? FHIR::FamilyMemberHistory.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::FamilyMemberHistory.search({"patient"=>"us-quality-core-test-kit-patient"})
 
 
 
@@ -203,7 +203,7 @@ results? FHIR::FamilyMemberHistory.search(patient: 'us-quality-core-test-kit-pat
 FHIR::Goal.read('us-quality-core-test-kit-goal')
 
 ## Search
-results? FHIR::Goal.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::Goal.search({"patient"=>"us-quality-core-test-kit-patient"})
 
 
 
@@ -213,9 +213,9 @@ results? FHIR::Goal.search(patient: 'us-quality-core-test-kit-patient')
 FHIR::Immunization.read('us-quality-core-test-kit-immunization')
 
 ## Search
-results? FHIR::Immunization.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Immunization.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Immunization.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::Immunization.search({"patient"=>"us-quality-core-test-kit-patient", "status"=>"completed"})
+results? FHIR::Immunization.search({"patient"=>"us-quality-core-test-kit-patient"})
+results? FHIR::Immunization.search({"patient"=>"us-quality-core-test-kit-patient", "date"=>"ge2013-01-01"})
 
 
 
@@ -225,9 +225,9 @@ results? FHIR::Immunization.search(patient: 'us-quality-core-test-kit-patient')
 FHIR::Immunization.read('us-quality-core-test-kit-immunizationnotdone')
 
 ## Search
-results? FHIR::Immunization.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Immunization.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Immunization.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::Immunization.search({"patient"=>"us-quality-core-test-kit-patient", "status"=>"not-done"})
+results? FHIR::Immunization.search({"patient"=>"us-quality-core-test-kit-patient"})
+results? FHIR::Immunization.search({"patient"=>"us-quality-core-test-kit-patient", "date"=>"ge2013-01-01"})
 
 
 
@@ -237,10 +237,10 @@ results? FHIR::Immunization.search(patient: 'us-quality-core-test-kit-patient')
 FHIR::MedicationAdministration.read('us-quality-core-test-kit-medicationadministration')
 
 ## Search
-results? FHIR::MedicationAdministration.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::MedicationAdministration.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::MedicationAdministration.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::MedicationAdministration.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::MedicationAdministration.search({"patient"=>"us-quality-core-test-kit-patient", "status"=>"completed"})
+results? FHIR::MedicationAdministration.search({"patient"=>"us-quality-core-test-kit-patient"})
+results? FHIR::MedicationAdministration.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"1594660"})
+results? FHIR::MedicationAdministration.search({"patient"=>"us-quality-core-test-kit-patient", "effective-time"=>"ge2015-01-15"})
 
 
 
@@ -250,10 +250,10 @@ results? FHIR::MedicationAdministration.search(patient: 'us-quality-core-test-ki
 FHIR::MedicationAdministration.read('us-quality-core-test-kit-medicationadministrationnotdone')
 
 ## Search
-results? FHIR::MedicationAdministration.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::MedicationAdministration.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::MedicationAdministration.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::MedicationAdministration.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::MedicationAdministration.search({"patient"=>"us-quality-core-test-kit-patient", "status"=>"not-done"})
+results? FHIR::MedicationAdministration.search({"patient"=>"us-quality-core-test-kit-patient"})
+results? FHIR::MedicationAdministration.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"1594660"})
+results? FHIR::MedicationAdministration.search({"patient"=>"us-quality-core-test-kit-patient", "effective-time"=>"ge2015-01-15"})
 
 
 
@@ -263,8 +263,8 @@ results? FHIR::MedicationAdministration.search(patient: 'us-quality-core-test-ki
 FHIR::MedicationDispense.read('us-quality-core-test-kit-medicationdispense')
 
 ## Search
-results? FHIR::MedicationDispense.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::MedicationDispense.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::MedicationDispense.search({"patient"=>"us-quality-core-test-kit-patient", "status"=>"completed"})
+results? FHIR::MedicationDispense.search({"patient"=>"us-quality-core-test-kit-patient"})
 
 
 
@@ -274,8 +274,8 @@ results? FHIR::MedicationDispense.search(patient: 'us-quality-core-test-kit-pati
 FHIR::MedicationDispense.read('us-quality-core-test-kit-medicationdispensedeclined')
 
 ## Search
-results? FHIR::MedicationDispense.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::MedicationDispense.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::MedicationDispense.search({"patient"=>"us-quality-core-test-kit-patient", "status"=>"declined"})
+results? FHIR::MedicationDispense.search({"patient"=>"us-quality-core-test-kit-patient"})
 
 
 
@@ -285,8 +285,8 @@ results? FHIR::MedicationDispense.search(patient: 'us-quality-core-test-kit-pati
 FHIR::MedicationRequest.read('us-quality-core-test-kit-medicationrequest')
 
 ## Search
-results? FHIR::MedicationRequest.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::MedicationRequest.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::MedicationRequest.search({"patient"=>"us-quality-core-test-kit-patient", "intent"=>"order", "do-not-perform"=>"false"})
+results? FHIR::MedicationRequest.search({"patient"=>"us-quality-core-test-kit-patient", "intent"=>"order"})
 
 
 
@@ -296,8 +296,8 @@ results? FHIR::MedicationRequest.search(patient: 'us-quality-core-test-kit-patie
 FHIR::MedicationRequest.read('us-quality-core-test-kit-medicationnotrequested')
 
 ## Search
-results? FHIR::MedicationRequest.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::MedicationRequest.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::MedicationRequest.search({"patient"=>"us-quality-core-test-kit-patient", "intent"=>"order", "do-not-perform"=>true})
+results? FHIR::MedicationRequest.search({"patient"=>"us-quality-core-test-kit-patient", "intent"=>"order"})
 
 
 
@@ -308,10 +308,10 @@ FHIR::Observation.read('us-quality-core-test-kit-observation-clinical-result')
 FHIR::Observation.read('us-quality-core-test-kit-observation-lab')
 
 ## Search
-results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"exam", "status"=>"final"})
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"exam"})
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"exam", "date"=>"ge2021-11-10"})
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"8884-9"})
 
 
 
@@ -321,10 +321,10 @@ results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
 FHIR::Observation.read('us-quality-core-test-kit-simple-observation')
 
 ## Search
-results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"activity", "status"=>"final"})
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"activity"})
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"activity", "date"=>"ge2013-04-02"})
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"99354-3"})
 
 
 
@@ -334,10 +334,10 @@ results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
 FHIR::Observation.read('us-quality-core-test-kit-observation-screening-assessment')
 
 ## Search
-results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"survey", "status"=>"final"})
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"survey"})
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"survey", "date"=>"ge2005-07-05"})
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"28139-4"})
 
 
 
@@ -347,10 +347,10 @@ results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
 FHIR::Observation.read('us-quality-core-test-kit-observationcancelled')
 
 ## Search
-results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"activity", "status"=>"cancelled"})
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"activity"})
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"activity", "date"=>"ge2013-04-02"})
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"99354-3"})
 
 
 
@@ -360,10 +360,10 @@ results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
 FHIR::Observation.read('us-quality-core-test-kit-observation-lab')
 
 ## Search
-results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"laboratory", "status"=>"final"})
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"laboratory"})
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"laboratory", "date"=>"ge2005-07-05"})
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"2339-0"})
 
 
 
@@ -373,9 +373,9 @@ results? FHIR::Observation.search(patient: 'us-quality-core-test-kit-patient')
 FHIR::Procedure.read('us-quality-core-test-kit-procedure')
 
 ## Search
-results? FHIR::Procedure.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Procedure.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Procedure.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::Procedure.search({"patient"=>"us-quality-core-test-kit-patient", "status"=>"completed"})
+results? FHIR::Procedure.search({"patient"=>"us-quality-core-test-kit-patient"})
+results? FHIR::Procedure.search({"patient"=>"us-quality-core-test-kit-patient", "date"=>"ge2013-04-05"})
 
 
 
@@ -385,9 +385,9 @@ results? FHIR::Procedure.search(patient: 'us-quality-core-test-kit-patient')
 FHIR::Procedure.read('us-quality-core-test-kit-procedurenotdone')
 
 ## Search
-results? FHIR::Procedure.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Procedure.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Procedure.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::Procedure.search({"patient"=>"us-quality-core-test-kit-patient", "status"=>"not-done"})
+results? FHIR::Procedure.search({"patient"=>"us-quality-core-test-kit-patient"})
+results? FHIR::Procedure.search({"patient"=>"us-quality-core-test-kit-patient", "date"=>"ge2013-04-05"})
 
 
 
@@ -397,8 +397,8 @@ results? FHIR::Procedure.search(patient: 'us-quality-core-test-kit-patient')
 FHIR::RelatedPerson.read('us-quality-core-test-kit-related-person')
 
 ## Search
-results? FHIR::RelatedPerson.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::RelatedPerson.search(_id: 'us-quality-core-test-kit-related-person')
+results? FHIR::RelatedPerson.search({"patient"=>"us-quality-core-test-kit-patient"})
+results? FHIR::RelatedPerson.search({"_id"=>"us-quality-core-test-kit-related-person"})
 
 
 
@@ -408,12 +408,12 @@ results? FHIR::RelatedPerson.search(_id: 'us-quality-core-test-kit-related-perso
 FHIR::ServiceRequest.read('us-quality-core-test-kit-servicerequest')
 
 ## Search
-results? FHIR::ServiceRequest.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::ServiceRequest.search(_id: 'us-quality-core-test-kit-servicerequest')
-results? FHIR::ServiceRequest.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::ServiceRequest.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::ServiceRequest.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::ServiceRequest.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::ServiceRequest.search({"patient"=>"us-quality-core-test-kit-patient", "do-not-perform"=>"false"})
+results? FHIR::ServiceRequest.search({"_id"=>"us-quality-core-test-kit-servicerequest"})
+results? FHIR::ServiceRequest.search({"patient"=>"us-quality-core-test-kit-patient"})
+results? FHIR::ServiceRequest.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"387713003"})
+results? FHIR::ServiceRequest.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"387713003", "authored"=>"ge2013-04-04"})
+results? FHIR::ServiceRequest.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"80146002"})
 
 
 
@@ -423,12 +423,12 @@ results? FHIR::ServiceRequest.search(patient: 'us-quality-core-test-kit-patient'
 FHIR::ServiceRequest.read('us-quality-core-test-kit-servicenotrequested')
 
 ## Search
-results? FHIR::ServiceRequest.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::ServiceRequest.search(_id: 'us-quality-core-test-kit-servicenotrequested')
-results? FHIR::ServiceRequest.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::ServiceRequest.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::ServiceRequest.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::ServiceRequest.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::ServiceRequest.search({"patient"=>"us-quality-core-test-kit-patient", "do-not-perform"=>true})
+results? FHIR::ServiceRequest.search({"_id"=>"us-quality-core-test-kit-servicenotrequested"})
+results? FHIR::ServiceRequest.search({"patient"=>"us-quality-core-test-kit-patient"})
+results? FHIR::ServiceRequest.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"387713003"})
+results? FHIR::ServiceRequest.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"387713003", "authored"=>"ge2013-04-04"})
+results? FHIR::ServiceRequest.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"80146002"})
 
 
 
@@ -438,9 +438,9 @@ results? FHIR::ServiceRequest.search(patient: 'us-quality-core-test-kit-patient'
 FHIR::Task.read('us-quality-core-test-kit-task')
 
 ## Search
-results? FHIR::Task.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Task.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Task.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::Task.search({"patient"=>"us-quality-core-test-kit-patient", "status"=>"accepted"})
+results? FHIR::Task.search({"patient"=>"us-quality-core-test-kit-patient"})
+results? FHIR::Task.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"approve"})
 
 
 
@@ -450,9 +450,9 @@ results? FHIR::Task.search(patient: 'us-quality-core-test-kit-patient')
 FHIR::Task.read('us-quality-core-test-kit-taskrejected')
 
 ## Search
-results? FHIR::Task.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Task.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Task.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::Task.search({"patient"=>"us-quality-core-test-kit-patient", "status"=>"rejected"})
+results? FHIR::Task.search({"patient"=>"us-quality-core-test-kit-patient"})
+results? FHIR::Task.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"approve"})
 
 
 
@@ -462,10 +462,10 @@ results? FHIR::Task.search(patient: 'us-quality-core-test-kit-patient')
 FHIR::Encounter.read('us-quality-core-test-kit-encounter')
 
 ## Search
-results? FHIR::Encounter.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Encounter.search(_id: 'us-quality-core-test-kit-encounter')
-results? FHIR::Encounter.search(patient: 'us-quality-core-test-kit-patient')
-results? FHIR::Encounter.search(patient: 'us-quality-core-test-kit-patient')
+results? FHIR::Encounter.search({"patient"=>"us-quality-core-test-kit-patient"})
+results? FHIR::Encounter.search({"_id"=>"us-quality-core-test-kit-encounter"})
+results? FHIR::Encounter.search({"patient"=>"us-quality-core-test-kit-patient", "type"=>"99223"})
+results? FHIR::Encounter.search({"patient"=>"us-quality-core-test-kit-patient", "date"=>"ge2015-02-15"})
 
 
 
@@ -475,7 +475,7 @@ results? FHIR::Encounter.search(patient: 'us-quality-core-test-kit-patient')
 FHIR::Location.read('us-quality-core-test-kit-location')
 
 ## Search
-results? FHIR::Location.search(_id: 'us-quality-core-test-kit-location')
+results? FHIR::Location.search({"_id"=>"us-quality-core-test-kit-location"})
 
 
 
@@ -494,7 +494,7 @@ FHIR::Organization.read('us-quality-core-test-kit-organization')
 FHIR::Practitioner.read('us-quality-core-test-kit-practitioner')
 
 ## Search
-results? FHIR::Practitioner.search(_id: 'us-quality-core-test-kit-practitioner')
+results? FHIR::Practitioner.search({"_id"=>"us-quality-core-test-kit-practitioner"})
 
 
 
@@ -504,5 +504,5 @@ results? FHIR::Practitioner.search(_id: 'us-quality-core-test-kit-practitioner')
 FHIR::PractitionerRole.read('us-quality-core-test-kit-practitioner-role')
 
 ## Search
-results? FHIR::PractitionerRole.search(_id: 'us-quality-core-test-kit-practitioner-role')
+results? FHIR::PractitionerRole.search({"_id"=>"us-quality-core-test-kit-practitioner-role"})
 

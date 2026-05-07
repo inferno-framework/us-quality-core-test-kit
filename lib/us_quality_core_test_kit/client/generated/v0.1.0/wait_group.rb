@@ -62,24 +62,24 @@ module USQualityCoreTestKit
     * _id
 * **AdverseEvent**
   * read id:
-    * us-quality-core-test-kit-adverseevent
+    * us-quality-core-test-kit-adverse-event
   * searches:
     * subject
     * subject + event
     * subject + recorded-date
 * **AllergyIntolerance**
   * read id:
-    * us-quality-core-test-kit-allergyintolerance
+    * us-quality-core-test-kit-allergy-intolerance
   * searches:
     * patient
 * **CarePlan**
   * read id:
-    * us-quality-core-test-kit-careplan
+    * us-quality-core-test-kit-care-plan
   * searches:
     * patient + category
 * **CareTeam**
   * read id:
-    * us-quality-core-test-kit-careteam
+    * us-quality-core-test-kit-care-team
   * searches:
     * patient + status
 * **Claim**
@@ -126,7 +126,7 @@ module USQualityCoreTestKit
     * patient + code
 * **DiagnosticReportNote**
   * read id:
-    * us-quality-core-test-kit-diagnosticreport-note
+    * us-quality-core-test-kit-diagnostic-report-note
   * searches:
     * patient + category
     * patient
@@ -134,7 +134,7 @@ module USQualityCoreTestKit
     * patient + code
 * **DiagnosticReportLab**
   * read id:
-    * us-quality-core-test-kit-diagnosticreport-lab
+    * us-quality-core-test-kit-diagnostic-report-lab
   * searches:
     * patient + category
     * patient
@@ -142,7 +142,7 @@ module USQualityCoreTestKit
     * patient + code
 * **FamilyMemberHistory**
   * read id:
-    * us-quality-core-test-kit-familymemberhistory
+    * us-quality-core-test-kit-family-member-history
   * searches:
     * patient
 * **Goal**
@@ -207,6 +207,7 @@ module USQualityCoreTestKit
 * **ObservationClinicalResult**
   * read id:
     * us-quality-core-test-kit-observation-clinical-result
+    * us-quality-core-test-kit-observation-lab
   * searches:
     * patient + category + status
     * patient + category
@@ -260,7 +261,7 @@ module USQualityCoreTestKit
     * patient + date
 * **RelatedPerson**
   * read id:
-    * us-quality-core-test-kit-relatedperson
+    * us-quality-core-test-kit-related-person
   * searches:
     * patient
     * _id
@@ -323,7 +324,7 @@ module USQualityCoreTestKit
     * _id
 * **PractitionerRole**
   * read id:
-    * us-quality-core-test-kit-practitionerrole
+    * us-quality-core-test-kit-practitioner-role
   * searches:
     * _id
 

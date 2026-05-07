@@ -26,7 +26,7 @@ module USQualityCoreTestKit
           requests = load_tagged_requests(READ_OBSERVATION_TAG)
           skip_if requests.blank?, skip_message
 
-          requests_for_id = filter_requests_by_resource_id(requests, '["us-quality-core-test-kit-observation-clinical-result", "us-quality-core-test-kit-observation-lab"]')
+          requests_for_id = filter_requests_by_resource_id(requests, ["us-quality-core-test-kit-observation-clinical-result", "us-quality-core-test-kit-observation-lab"])
           assert requests_for_id.any?, failure_message
         end
       end

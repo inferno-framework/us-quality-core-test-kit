@@ -46,7 +46,7 @@ FHIR::<%= details[:resource] %>.read('<%= id %>')
 
 ## Search
 <%- details[:searches].each do |search| -%>
-results? FHIR::<%= details[:resource] %>.search(<%= search[:param] %>: '<%= search[:value] %>')
+results? FHIR::<%= details[:resource] %>.search(<%= search[:params].inspect %>)
 <%- end -%>
 
 <%- end -%>
