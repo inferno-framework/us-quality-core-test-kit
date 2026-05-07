@@ -97,6 +97,9 @@ module USQualityCoreTestKit
         def format_primitive_search_value(value, type)
           return value unless value.is_a?(String) && %w[Period date dateTime instant].include?(type)
 
+          # Date searches are only checked for the parameter name in client tests, but the
+          # example client still needs a non-empty response so it can keep making requests.
+          # Use an inclusive lower bound for date-like fields, including Period starts.
           "ge#{value.first(10)}"
         end
       end
