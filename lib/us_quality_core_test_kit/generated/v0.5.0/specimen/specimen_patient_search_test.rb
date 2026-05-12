@@ -3,15 +3,15 @@ require_relative '../../../generator/group_metadata'
 require_relative '../../../search_test_properties'
 
 module USQualityCoreTestKit
-  module USQualityCoreV050
-    class ObservationLabPatientCategoryStatusSearchTest < Inferno::Test
+  module USQualityCoreV010
+    class SpecimenPatientSearchTest < Inferno::Test
       include USQualityCoreTestKit::SearchTest
 
-      title 'Server returns valid results for Observation search by patient + category + status'
+      title 'Server returns valid results for Specimen search by patient'
 
       description %(
-A server SHALL support searching by
-patient + category + status on the Observation resource. This test
+A server SHOULD support searching by
+patient on the Specimen resource. This test
 will pass if resources are returned and match the search criteria. If
 none are returned, the test is skipped.
 
@@ -29,9 +29,9 @@ FHIR R4 specification.
 
       )
 
-      id :us_quality_core_v050_observation_lab_patient_category_status_search_test
+      id :us_quality_core_v010_specimen_patient_search_test
 
-  
+  optional
 
   
       input :patient_ids,
@@ -42,11 +42,8 @@ FHIR R4 specification.
       def self.properties
         @properties ||= SearchTestProperties.new(
           first_search: true,
-        fixed_value_search: true,
-        resource_type: 'Observation',
-        search_param_names: ['patient', 'category', 'status'],
-        saves_delayed_references: true,
-        token_search_params: ['category'],
+        resource_type: 'Specimen',
+        search_param_names: ['patient'],
         test_reference_variants: true,
         test_post_search: true
         )
@@ -57,7 +54,7 @@ FHIR R4 specification.
       end
 
       def scratch_resources
-        scratch[:observation_lab_resources] ||= {}
+        scratch[:specimen_resources] ||= {}
       end
 
       run do

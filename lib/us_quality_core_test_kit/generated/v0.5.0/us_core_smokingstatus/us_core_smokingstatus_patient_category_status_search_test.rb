@@ -3,8 +3,8 @@ require_relative '../../../generator/group_metadata'
 require_relative '../../../search_test_properties'
 
 module USQualityCoreTestKit
-  module USQualityCoreV050
-    class ObservationLabPatientCategoryStatusSearchTest < Inferno::Test
+  module USQualityCoreV010
+    class UsCoreSmokingstatusPatientCategoryStatusSearchTest < Inferno::Test
       include USQualityCoreTestKit::SearchTest
 
       title 'Server returns valid results for Observation search by patient + category + status'
@@ -29,7 +29,7 @@ FHIR R4 specification.
 
       )
 
-      id :us_quality_core_v050_observation_lab_patient_category_status_search_test
+      id :us_quality_core_v010_us_core_smokingstatus_patient_category_status_search_test
 
   
 
@@ -45,7 +45,6 @@ FHIR R4 specification.
         fixed_value_search: true,
         resource_type: 'Observation',
         search_param_names: ['patient', 'category', 'status'],
-        saves_delayed_references: true,
         token_search_params: ['category'],
         test_reference_variants: true,
         test_post_search: true
@@ -57,7 +56,7 @@ FHIR R4 specification.
       end
 
       def scratch_resources
-        scratch[:observation_lab_resources] ||= {}
+        scratch[:us_core_smokingstatus_resources] ||= {}
       end
 
       run do

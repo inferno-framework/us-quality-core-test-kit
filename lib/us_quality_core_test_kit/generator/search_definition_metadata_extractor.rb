@@ -15,6 +15,16 @@ module USQualityCoreTestKit
         @value_extractor ||= ValueExactor.new(ig_resources, resource, profile_elements)
       end
 
+      def param_hash
+        return param.source_hash if param.respond_to?(:source_hash)
+
+        param.to_hash
+      end
+
+      def chain_extensions
+        param_hash['_chain'] || []
+      end
+
       def paths
         @paths ||= full_paths.map { |a_path| a_path.delete_prefix("#{resource}.") }
       end

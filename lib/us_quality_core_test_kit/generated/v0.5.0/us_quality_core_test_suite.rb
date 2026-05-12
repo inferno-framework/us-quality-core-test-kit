@@ -29,6 +29,7 @@ require_relative 'simple_observation_group'
 require_relative 'observation_screening_assessment_group'
 require_relative 'observationcancelled_group'
 require_relative 'observation_lab_group'
+require_relative 'us_core_smokingstatus_group'
 require_relative 'procedure_group'
 require_relative 'procedurenotdone_group'
 require_relative 'related_person_group'
@@ -41,6 +42,7 @@ require_relative 'location_group'
 require_relative 'organization_group'
 require_relative 'practitioner_group'
 require_relative 'practitioner_role_group'
+require_relative 'specimen_group'
 
 
 module USQualityCoreTestKit
@@ -134,6 +136,7 @@ module USQualityCoreTestKit
         )
 
         
+<<<<<<< HEAD:lib/us_quality_core_test_kit/generated/v0.5.0/us_quality_core_test_suite.rb
         group from: :us_quality_core_v050_patient
         group from: :us_quality_core_v050_adverse_event
         group from: :us_quality_core_v050_allergy_intolerance
@@ -175,6 +178,50 @@ module USQualityCoreTestKit
         group from: :us_quality_core_v050_organization
         group from: :us_quality_core_v050_practitioner
         group from: :us_quality_core_v050_practitioner_role
+=======
+        group from: :us_quality_core_v010_patient
+        group from: :us_quality_core_v010_adverse_event
+        group from: :us_quality_core_v010_allergy_intolerance
+        group from: :us_quality_core_v010_care_plan
+        group from: :us_quality_core_v010_care_team
+        group from: :us_quality_core_v010_claim
+        group from: :us_quality_core_v010_condition_encounter_diagnosis
+        group from: :us_quality_core_v010_condition_problems_health_concerns
+        group from: :us_quality_core_v010_coverage
+        group from: :us_quality_core_v010_devicerequest
+        group from: :us_quality_core_v010_devicenotrequested
+        group from: :us_quality_core_v010_diagnostic_report_note
+        group from: :us_quality_core_v010_diagnostic_report_lab
+        group from: :us_quality_core_v010_family_member_history
+        group from: :us_quality_core_v010_goal
+        group from: :us_quality_core_v010_immunization
+        group from: :us_quality_core_v010_immunizationnotdone
+        group from: :us_quality_core_v010_medicationadministration
+        group from: :us_quality_core_v010_medicationadministrationnotdone
+        group from: :us_quality_core_v010_medicationdispense
+        group from: :us_quality_core_v010_medicationdispensedeclined
+        group from: :us_quality_core_v010_medicationrequest
+        group from: :us_quality_core_v010_medicationnotrequested
+        group from: :us_quality_core_v010_observation_clinical_result
+        group from: :us_quality_core_v010_simple_observation
+        group from: :us_quality_core_v010_observation_screening_assessment
+        group from: :us_quality_core_v010_observationcancelled
+        group from: :us_quality_core_v010_observation_lab
+        group from: :us_quality_core_v010_us_core_smokingstatus
+        group from: :us_quality_core_v010_procedure
+        group from: :us_quality_core_v010_procedurenotdone
+        group from: :us_quality_core_v010_related_person
+        group from: :us_quality_core_v010_servicerequest
+        group from: :us_quality_core_v010_servicenotrequested
+        group from: :us_quality_core_v010_task
+        group from: :us_quality_core_v010_taskrejected
+        group from: :us_quality_core_v010_encounter
+        group from: :us_quality_core_v010_location
+        group from: :us_quality_core_v010_organization
+        group from: :us_quality_core_v010_practitioner
+        group from: :us_quality_core_v010_practitioner_role
+        group from: :us_quality_core_v010_specimen
+>>>>>>> 590b0ec (generate Specimen):lib/us_quality_core_test_kit/generated/v0.1.0/us_quality_core_test_suite.rb
       end
 
       links [
