@@ -15,6 +15,7 @@ require_relative 'diagnostic_report_note_group'
 require_relative 'diagnostic_report_lab_group'
 require_relative 'family_member_history_group'
 require_relative 'goal_group'
+require_relative 'imaging_study_group'
 require_relative 'immunization_group'
 require_relative 'immunizationnotdone_group'
 require_relative 'medicationadministration_group'
@@ -148,6 +149,7 @@ module USQualityCoreTestKit
         group from: :us_quality_core_v010_diagnostic_report_lab
         group from: :us_quality_core_v010_family_member_history
         group from: :us_quality_core_v010_goal
+        group from: :us_quality_core_v010_imaging_study
         group from: :us_quality_core_v010_immunization
         group from: :us_quality_core_v010_immunizationnotdone
         group from: :us_quality_core_v010_medicationadministration

@@ -24,6 +24,7 @@ require_relative 'diagnostic_report_note_client_group'
 require_relative 'diagnostic_report_lab_client_group'
 require_relative 'family_member_history_client_group'
 require_relative 'goal_client_group'
+require_relative 'imaging_study_client_group'
 require_relative 'immunization_client_group'
 require_relative 'immunizationnotdone_client_group'
 require_relative 'medicationadministration_client_group'
@@ -180,6 +181,7 @@ CapabilityStatement](http://fhir.org/guides/onc/us-quality-core/CapabilityStatem
           group from: :us_quality_core_client_v010_diagnostic_report_lab
           group from: :us_quality_core_client_v010_family_member_history
           group from: :us_quality_core_client_v010_goal
+          group from: :us_quality_core_client_v010_imaging_study
           group from: :us_quality_core_client_v010_immunization
           group from: :us_quality_core_client_v010_immunizationnotdone
           group from: :us_quality_core_client_v010_medicationadministration

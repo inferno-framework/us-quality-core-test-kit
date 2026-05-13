@@ -301,14 +301,14 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/ImagingStudy/us-quality-core-imaging-study",
+      "fullUrl": "http://example.org/fhir/ImagingStudy/us-quality-core-test-kit-imaging-study",
       "request": {
         "method": "PUT",
-        "url": "ImagingStudy/us-quality-core-imaging-study"
+        "url": "ImagingStudy/us-quality-core-test-kit-imaging-study"
       },
       "resource": {
         "resourceType": "ImagingStudy",
-        "id": "us-quality-core-imaging-study",
+        "id": "us-quality-core-test-kit-imaging-study",
         "meta": {
           "profile": [
             "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-imagingstudy"
@@ -317,6 +317,14 @@
         "status": "available",
         "subject": {
           "reference": "Patient/us-quality-core-test-kit-patient"
+        },
+        "endpoint": [
+          {
+            "reference": "Endpoint/endpoint"
+          }
+        ],
+        "procedureReference": {
+          "reference": "Procedure/us-quality-core-test-kit-procedure"
         },
         "started": "2011-01-01T11:01:20+03:00",
         "numberOfSeries": 1,
@@ -340,7 +348,7 @@
         ],
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-imaging-study</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-imaging-study</div>"
         }
       }
     },
@@ -2755,7 +2763,7 @@
         ],
         "imagingStudy": [
           {
-            "reference": "ImagingStudy/us-quality-core-imaging-study"
+            "reference": "ImagingStudy/us-quality-core-test-kit-imaging-study"
           }
         ],
         "media": [

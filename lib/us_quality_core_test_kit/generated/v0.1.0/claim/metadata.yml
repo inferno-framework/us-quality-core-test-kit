@@ -42,6 +42,10 @@
   :extensions: []
   :slices: []
   :elements:
+  - :path: diagnosis
+    :us_quality_coreuscdi_plus_quality: true
+  - :path: diagnosis.sequence
+    :us_quality_coreuscdi_plus_quality: true
   - :path: diagnosis.diagnosis[x]
     :types:
     - Reference

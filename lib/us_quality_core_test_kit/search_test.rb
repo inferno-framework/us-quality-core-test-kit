@@ -23,6 +23,43 @@ module USQualityCoreTestKit
       resources # NOOP for US Quality Core
     end
 
+    def get_next_value(element, property)
+      return resolve_reference_value(element) if property.to_s == 'resolve()'
+
+      super
+    end
+
+    def resolve_reference_value(element)
+      reference = element&.reference
+      return if reference.blank? || reference.start_with?('#')
+
+      resolved_reference_cache[reference] ||= begin
+        resource_type, resource_id = resource_type_and_id_from_reference(reference)
+
+        if resource_type.blank? || resource_id.blank?
+          nil
+        else
+          fhir_read(resource_type, resource_id)&.resource
+        end
+      rescue StandardError => e
+        Inferno::Application['logger'].error("Unable to resolve reference #{reference}")
+        Inferno::Application['logger'].error(e.full_message)
+        nil
+      end
+    end
+
+    def resolved_reference_cache
+      @resolved_reference_cache ||= {}
+    end
+
+    def resource_type_and_id_from_reference(reference)
+      parts = reference.split('/')
+      history_index = parts.index('_history')
+      parts = parts.first(history_index) if history_index
+
+      parts.last(2)
+    end
+
     def no_resources_skip_message(resource_type = self.resource_type)
       "No #{resource_type} resources appear to be available. Please use patients with more information"
     end
@@ -152,32 +189,8 @@ module USQualityCoreTestKit
                 address&.postalCode&.downcase&.start_with?(search_value_downcase) ||
                 address&.country&.downcase&.start_with?(search_value_downcase)
             end
-          when 'CodeableConcept'
-            # FHIR token search (https://www.hl7.org/fhir/search.html#token): "When in doubt, servers SHOULD
-            # treat tokens in a case-insensitive manner, on the grounds that including undesired data has
-            # less safety implications than excluding desired behavior".
-            codings = values_found.flat_map(&:coding)
-            if search_value.include? '|'
-              system = search_value.split('|').first
-              code = search_value.split('|').last
-              codings&.any? { |coding| coding.system == system && coding.code&.casecmp?(code) }
-            else
-              codings&.any? { |coding| coding.code&.casecmp?(search_value) }
-            end
-          when 'Coding'
-            if search_value.include? '|'
-              system = search_value.split('|').first
-              code = search_value.split('|').last
-              values_found.any? { |coding| coding.system == system && coding.code&.casecmp?(code) }
-            else
-              values_found.any? { |coding| coding.code&.casecmp?(search_value) }
-            end
-          when 'Identifier'
-            if search_value.include? '|'
-              values_found.any? { |identifier| "#{identifier.system}|#{identifier.value}" == search_value }
-            else
-              values_found.any? { |identifier| identifier.value == search_value }
-            end
+          when 'CodeableConcept', 'Coding', 'Identifier', 'token'
+            token_value_matches?(values_found, search_value)
           when 'boolean'
             search_values = split_escaped_search_values(search_value).map(&:downcase)
             values_found.any? { |value_found| search_values.include?(value_found.to_s.downcase) }
@@ -205,6 +218,46 @@ module USQualityCoreTestKit
       end
 
       match_found
+    end
+
+    def token_value_matches?(values_found, search_value)
+      token_values = values_found.flat_map { |value| token_values_from_element(value) }
+      search_tokens = split_escaped_search_values(search_value)
+
+      search_tokens.any? do |search_token|
+        system, code = token_search_system_and_code(search_token)
+        token_values.any? { |token| token_matches?(token, system, code) }
+      end
+    end
+
+    def token_values_from_element(value)
+      case value
+      when FHIR::CodeableConcept
+        value.coding.flat_map { |coding| token_values_from_element(coding) }
+      when FHIR::Coding
+        [{ system: value.system, code: value.code, case_sensitive: false }]
+      when FHIR::Identifier
+        [{ system: value.system, code: value.value, case_sensitive: true }]
+      else
+        [{ system: nil, code: value.to_s, case_sensitive: false }]
+      end
+    end
+
+    def token_search_system_and_code(search_value)
+      search_value.include?('|') ? search_value.split('|', 2) : [nil, search_value]
+    end
+
+    def token_matches?(token, system, code)
+      return false if token[:code].blank?
+
+      code_matches =
+        if token[:case_sensitive]
+          token[:code] == code
+        else
+          token[:code].casecmp?(code)
+        end
+
+      code_matches && (system.blank? || token[:system] == system)
     end
 
     def resolve_search_param_path(resource, path)

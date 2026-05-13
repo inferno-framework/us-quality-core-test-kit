@@ -1,0 +1,42 @@
+{
+  "id": "us-quality-core-imagingstudy-procedure-code",
+  "url": "http://fhir.org/guides/onc/us-quality-core/SearchParameter/us-quality-core-imagingstudy-procedure-code",
+  "version": "0.1.0",
+  "name": "UsQualityCoreImagingstudyProcedureCode",
+  "status": "active",
+  "date": "2026-03-31",
+  "publisher": "ONC",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.healthit.gov/"
+        }
+      ]
+    }
+  ],
+  "description": "US Quality Core ImagingStudy Procedure Code Search Parameter",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ],
+      "text": "USA"
+    }
+  ],
+  "code": "procedure-code",
+  "base": [
+    "ImagingStudy"
+  ],
+  "type": "token",
+  "expression": "ImagingStudy.procedureReference.resolve().code",
+  "xpathUsage": "normal",
+  "multipleOr": true,
+  "multipleAnd": true,
+  "resourceType": "SearchParameter"
+}

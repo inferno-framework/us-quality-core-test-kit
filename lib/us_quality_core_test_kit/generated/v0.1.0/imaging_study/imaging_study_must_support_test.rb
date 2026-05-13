@@ -2,29 +2,26 @@ require_relative '../../../must_support_test'
 
 module USQualityCoreTestKit
   module USQualityCoreV010
-    class ClaimMustSupportTest < Inferno::Test
+    class ImagingStudyMustSupportTest < Inferno::Test
       include USQualityCoreTestKit::MustSupportTest
 
-      title 'All must support elements are provided in the Claim resources returned'
+      title 'All must support elements are provided in the ImagingStudy resources returned'
 
       description %(
-        This test will look through the Claim resources
+        This test will look through the ImagingStudy resources
         found previously for the following Must Support and USCDI-flagged elements:
 
 
 
-        For ONC USCDI+ Quality requirements, each Claim must support the following additional elements:
+        For ONC USCDI+ Quality requirements, each ImagingStudy must support the following additional elements:
 
-        * Claim.diagnosis
-        * Claim.diagnosis.diagnosis[x]
-        * Claim.diagnosis.onAdmission
-        * Claim.diagnosis.sequence
+        * ImagingStudy.endpoint
       )
 
-      id :us_quality_core_v010_claim_must_support_test
+      id :us_quality_core_v010_imaging_study_must_support_test
 
       def resource_type
-        'Claim'
+        'ImagingStudy'
       end
 
       def self.metadata
@@ -32,7 +29,7 @@ module USQualityCoreTestKit
       end
 
       def scratch_resources
-        scratch[:claim_resources] ||= {}
+        scratch[:imaging_study_resources] ||= {}
       end
 
       run do

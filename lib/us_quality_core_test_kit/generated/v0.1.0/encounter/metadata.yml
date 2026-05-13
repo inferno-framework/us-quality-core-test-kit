@@ -119,6 +119,8 @@
   - :path: reasonReference
     :types:
     - Reference
+  - :path: diagnosis
+    :us_quality_coreuscdi_plus_quality: true
   - :path: hospitalization
   - :path: hospitalization.dischargeDisposition
   - :path: location

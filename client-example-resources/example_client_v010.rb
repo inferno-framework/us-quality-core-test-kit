@@ -207,6 +207,17 @@ results? FHIR::Goal.search({"patient"=>"us-quality-core-test-kit-patient"})
 
 
 
+# ImagingStudy
+
+## Read
+FHIR::ImagingStudy.read('us-quality-core-test-kit-imaging-study')
+
+## Search
+results? FHIR::ImagingStudy.search({"patient"=>"us-quality-core-test-kit-patient"})
+results? FHIR::ImagingStudy.search({"patient"=>"us-quality-core-test-kit-patient", "procedure-code"=>"80146002"})
+
+
+
 # Immunization
 
 ## Read

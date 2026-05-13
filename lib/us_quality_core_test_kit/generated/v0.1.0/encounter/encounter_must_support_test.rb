@@ -30,6 +30,10 @@ module USQualityCoreTestKit
         * Encounter.status
         * Encounter.subject
         * Encounter.type
+
+        For ONC USCDI+ Quality requirements, each Encounter must support the following additional elements:
+
+        * Encounter.diagnosis
       )
 
       id :us_quality_core_v010_encounter_must_support_test
