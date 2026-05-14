@@ -326,6 +326,15 @@
         "procedureReference": {
           "reference": "Procedure/us-quality-core-test-kit-procedure"
         },
+        "procedureCode": [
+          {
+            "coding": [
+              {
+                "code": "80146002"
+              }
+            ]
+          }
+        ],
         "started": "2011-01-01T11:01:20+03:00",
         "numberOfSeries": 1,
         "numberOfInstances": 1,
