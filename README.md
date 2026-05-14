@@ -109,6 +109,28 @@ to help keep updates to this bundle as consistent as possible. You use it, run:
 ruby scripts/clean_bundle.rb ./client-example-resources/us-quality-core-bundle.json
 ```
 
+## Known Limitations
+
+### ImagingStudy `procedure-code` Search on the Local Reference Server
+
+The US Quality Core ImagingStudy `procedure-code` SearchParameter currently uses
+the FHIRPath expression `ImagingStudy.procedureReference.resolve().code`. This
+expression is valid FHIRPath, but the local HAPI-based reference server does not
+appear to index search parameters that require resolving a referenced resource
+during search indexing.
+
+As a result, the local reference server accepts the search request
+`GET /ImagingStudy?patient={id}&procedure-code={code}` but returns no matching
+ImagingStudy resources, even when the ImagingStudy references a Procedure whose
+`code` matches the requested token. Inferno reports this as a single optional
+skip in the ImagingStudy patient + procedure-code search test.
+
+This is a limitation of the local reference-server test environment rather than
+evidence that the generated test is incorrect. A local compatibility workaround
+is to define the SearchParameter expression against a directly indexed element
+such as `ImagingStudy.procedureCode`, but that differs from the current
+IG-defined SearchParameter.
+
 ## Trademark Notice
 
 HL7, FHIR and the FHIR [FLAME DESIGN] are the registered trademarks of Health
