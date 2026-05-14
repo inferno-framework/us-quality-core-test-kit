@@ -72,8 +72,8 @@ module USQualityCoreTestKit
     DESCRIPTION
 
     suite_ids %i[
-      us_quality_core_v010
-      us_quality_core_client_v010
+      us_quality_core_v050
+      us_quality_core_client_v050
     ]
 
     tags ['US-Quality-Core']

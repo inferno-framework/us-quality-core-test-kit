@@ -10,7 +10,7 @@ module USQualityCoreTestKit
       # The generator will not create tests for resources found in this list
       # for the specified IG versions.
       RESOURCES_TO_EXCLUDE = {
-        'Medication' => %w[v010]
+        'Medication' => %w[v050]
       }.freeze
 
       # This list is meant to capture "abstract" profiles that do not themselves
@@ -33,8 +33,8 @@ module USQualityCoreTestKit
       # These resources will be gathered for testing via references from other
       # resources.
       DELAYED = {
-        'Encounter' => %w[v010],
-        'Location' => %w[v010]
+        'Encounter' => %w[v050],
+        'Location' => %w[v050]
       }.freeze
 
       # Category should be included in the initial search for these profiles.

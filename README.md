@@ -3,7 +3,7 @@
 The US Quality Core Test Kit validates the conformance of server and client
 implementations to an enhanced version of the US Quality Core Implementation Guide that
 includes USCDI+ Quality guidance and more concrete requirements on support for
-the standard RESTful FHIR API. The current focus is US Quality Core v0.1.0, which
+the standard RESTful FHIR API. The current focus is US Quality Core v0.5.0, which
 aligns with US Core STU v6.1.0 and FHIR R4 (4.0.1). While US Quality Core derives from
 and extends US Core, the test kit only verifies US Quality Core specific requirements.
 
@@ -60,13 +60,13 @@ The general layout of the source code for this test kit is as follows:
 │       │   +-- generator                               # Source code for generating client test suites
 │       │   │   +-- templates                           # ERB templates used by the client generator
 │       │   +-- generated                               # Generated client suites by IG version
-│       │   │   +-- v0.1.0
+│       │   │   +-- v0.5.0
 │       │   │       +-- us_quality_core_test_suite.rb   # Client test suite for this IG version
 │       │   +-- metadata                                # Content used to help simulate a FHIR server for client testing
 │       +-- generator                                   # Source code for generating server test suites
 │       │   +-- templates                               # ERB templates used by the server generator
 │       +-- generated                                   # Generated server suites by IG version
-│       │   +-- v0.1.0
+│       │   +-- v0.5.0
 │       │       +-- us_quality_core_test_suite.rb       # Server test suite for this IG version
 │       +-- igs                                         # US Quality Core IG packages
 │       +-- us_quality_core_test_kit.rb                 # References all generated test suites
@@ -90,7 +90,7 @@ bundle exec rake usqualitycore:generate
 
 Place the IG Package archive (`package.tgz`) in the `lib/us_quality_core_test_kit/igs/` directory. Rename
 the file such that it corresponds to the following pattern: `us_quality_core_v<version without dots>.tgz`
-(e.g. `us_quality_core_v010.tgz`). Re-run the generator rake task, and inspect the results. Depending on
+(e.g. `us_quality_core_v050.tgz`). Re-run the generator rake task, and inspect the results. Depending on
 future changes to the IG, changes may need to be made to the
 `lib/us_quality_core_test_kit/generator/special_cases.rb` source file. See that file for more details.
 

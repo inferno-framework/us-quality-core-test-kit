@@ -1,10 +1,15 @@
 {
+  "resourceType": "SearchParameter",
   "id": "us-quality-core-imagingstudy-procedure-code",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: SearchParameter us-quality-core-imagingstudy-procedure-code</b></p><a name=\"us-quality-core-imagingstudy-procedure-code\"> </a><a name=\"hcus-quality-core-imagingstudy-procedure-code\"> </a><h2>UsQualityCoreImagingstudyProcedureCode</h2><p>Parameter <code>procedure-code</code>:<code>token</code></p><div><p>US Quality Core ImagingStudy Procedure Code Search Parameter</p>\n</div><table class=\"grid\"><tr><td>Resource</td><td><a href=\"http://hl7.org/fhir/R4/imagingstudy.html\">ImagingStudy</a></td></tr><tr><td>Expression</td><td><code>ImagingStudy.procedureReference.resolve().code</code></td></tr><tr><td>Processing Mode</td><td>Normal</td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: The parameter may repeat in order to specify multiple values that must all be true</li><li>multipleOr: The parameter may have multiple values (separated by comma) where at least one must be true</li></ul></td></tr></table></div>"
+  },
   "url": "http://fhir.org/guides/onc/us-quality-core/SearchParameter/us-quality-core-imagingstudy-procedure-code",
-  "version": "0.1.0",
+  "version": "0.5.0",
   "name": "UsQualityCoreImagingstudyProcedureCode",
   "status": "active",
-  "date": "2026-03-31",
+  "date": "2026-05-15",
   "publisher": "ONC",
   "contact": [
     {
@@ -37,6 +42,5 @@
   "expression": "ImagingStudy.procedureReference.resolve().code",
   "xpathUsage": "normal",
   "multipleOr": true,
-  "multipleAnd": true,
-  "resourceType": "SearchParameter"
+  "multipleAnd": true
 }

@@ -96,7 +96,7 @@ module USQualityCoreTestKit
       SPECIMEN = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen'
 
       IG_LINKS = {
-        'v0.1.0' => 'http://fhir.org/guides/onc/us-quality-core'
+        'v0.5.0' => 'http://fhir.org/guides/onc/us-quality-core'
       }.freeze
 
       class << self

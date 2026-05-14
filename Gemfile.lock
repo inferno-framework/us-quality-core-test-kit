@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    us_quality_core_test_kit (0.1.0)
+    us_quality_core_test_kit (0.5.0)
       inferno_core (~> 1.0.6)
       us_core_test_kit (~> 1.0.0)
 
