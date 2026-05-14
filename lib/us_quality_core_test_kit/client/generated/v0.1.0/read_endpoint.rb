@@ -49,6 +49,8 @@ module USQualityCoreTestKit
               READ_FAMILY_MEMBER_HISTORY_TAG
             when 'Goal'
               READ_GOAL_TAG
+            when 'ImagingStudy'
+              READ_IMAGING_STUDY_TAG
             when 'Immunization'
               READ_IMMUNIZATION_TAG
             when 'MedicationAdministration'

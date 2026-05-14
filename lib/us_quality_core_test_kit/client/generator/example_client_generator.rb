@@ -61,6 +61,8 @@ module USQualityCoreTestKit
           when Array
             value.flat_map { |child| child_values(child, segment) }
           when Hash
+            return resolved_reference_values(value) if segment == 'resolve()'
+
             if value.key?(segment)
               [value[segment]]
             else
@@ -71,6 +73,24 @@ module USQualityCoreTestKit
           else
             []
           end
+        end
+
+        def resolved_reference_values(value)
+          reference = value['reference']
+          return [] if reference.nil? || reference.start_with?('#')
+
+          resource_type, resource_id = resource_type_and_id_from_reference(reference)
+          resolved_resource = resource_by_type_and_id[[resource_type, resource_id]]
+
+          resolved_resource.nil? ? [] : [resolved_resource]
+        end
+
+        def resource_type_and_id_from_reference(reference)
+          parts = reference.split('/')
+          history_index = parts.index('_history')
+          parts = parts.first(history_index) if history_index
+
+          parts.last(2)
         end
 
         def format_search_value(value, type)

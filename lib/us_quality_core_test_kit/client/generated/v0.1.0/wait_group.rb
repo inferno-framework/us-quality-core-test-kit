@@ -150,6 +150,12 @@ module USQualityCoreTestKit
     * us-quality-core-test-kit-goal
   * searches:
     * patient
+* **ImagingStudy**
+  * read id:
+    * us-quality-core-test-kit-imaging-study
+  * searches:
+    * patient
+    * patient + procedure-code
 * **Immunization**
   * read id:
     * us-quality-core-test-kit-immunization

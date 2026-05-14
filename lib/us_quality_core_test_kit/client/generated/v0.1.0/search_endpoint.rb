@@ -49,6 +49,8 @@ module USQualityCoreTestKit
               SEARCH_FAMILY_MEMBER_HISTORY_TAG
             when 'Goal'
               SEARCH_GOAL_TAG
+            when 'ImagingStudy'
+              SEARCH_IMAGING_STUDY_TAG
             when 'Immunization'
               SEARCH_IMMUNIZATION_TAG
             when 'MedicationAdministration'
