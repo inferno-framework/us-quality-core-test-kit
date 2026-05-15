@@ -18,10 +18,11 @@ module USQualityCoreTestKit
       def add_missing_supported_profiles; end
 
       def remove_extra_supported_profiles
-        ig_resources.capability_statement.rest.first.resource
-                    .find { |resource| resource.type == 'Observation' }
-                    .supportedProfile.delete_if do |profile_url|
-          SpecialCases::PROFILES_TO_EXCLUDE.include?(profile_url)
+        resources_in_capability_statement.each do |resource|
+          resource.supportedProfile&.delete_if do |profile_url|
+            SpecialCases::PROFILES_TO_EXCLUDE.include?(profile_url) ||
+              ig_resources.profile_by_url(profile_url).nil?
+          end
         end
       end
 
