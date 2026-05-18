@@ -13,7 +13,7 @@ module USQualityCoreTestKit
         end
       end
 
-      def add_us_quality_coreuscdi_plus_quality_flag(profile_element, metadata_element)
+      def add_us_quality_coreuscdi_plus_quality_flag(profile_element, metadata_element)        
         if uscdi_plus_quality_element?(profile_element)
           metadata_element.merge(us_quality_coreuscdi_plus_quality: true)
         else
@@ -44,12 +44,15 @@ module USQualityCoreTestKit
       end
 
       def must_support_elements
-        super.map do |element|
+        ms_elements = super
+        return ms_elements unless profile.url.include?('us-quality-core')
+
+        ms_elements.map do |element|
           profile_element = plain_must_support_elements.find do |e|
             path = e.id.gsub("#{resource}.", '')
             [element[:path], element[:original_path]].include?(path)
           end
-
+          binding.pry if profile_element.nil?
           add_us_quality_coreuscdi_plus_quality_flag(profile_element, element)
         end
       end

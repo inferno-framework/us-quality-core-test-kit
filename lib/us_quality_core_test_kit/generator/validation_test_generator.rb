@@ -9,6 +9,7 @@ module USQualityCoreTestKit
   class Generator
     class ValidationTestGenerator < USCoreTestKit::Generator::ValidationTestGenerator
       class << self
+        binding.pry
         def generate(ig_metadata, base_output_dir)
           ig_metadata.groups
                      .reject { |group| SpecialCases.exclude_group? group }
@@ -17,6 +18,22 @@ module USQualityCoreTestKit
           end
         end
       end
+
+      def generate
+        FileUtils.mkdir_p(output_file_directory)
+        File.write(output_file_name, output)
+
+        test_metadata = {
+          id: test_id,
+          file_name: base_output_file_name
+        }
+        binding.pry if resource_type == 'Medication'
+        if resource_type == 'Medication'
+          medication_request_metadata.add_test(**test_metadata)
+        else
+          group_metadata.add_test(**test_metadata)
+        end
+      end      
 
       def template
         @template ||= File.read(File.join(__dir__, 'templates', 'validation.rb.erb'))
