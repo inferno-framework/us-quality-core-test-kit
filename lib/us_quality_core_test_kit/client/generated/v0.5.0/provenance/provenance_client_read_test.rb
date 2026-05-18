@@ -1,0 +1,35 @@
+# frozen_string_literal: true
+
+module USQualityCoreTestKit
+  module Client
+    module USQualityCoreClientV050
+      class ProvenanceClientReadTest < Inferno::Test
+        include TestHelper
+
+        id :us_quality_core_v050_provenance_client_read_test
+
+        title 'SHALL support read of Provenance'
+
+        description %(
+          The client demonstrates SHALL support for reading Provenance.
+        )
+
+        def skip_message
+          "Inferno did not receive any read requests for the `Provenance` resource type."
+        end
+
+        def failure_message
+          "Inferno did not receive the expected read request for the target instance of the US Core Provenance Profile: `Provenance/us-quality-core-test-kit-provenance`."
+        end
+
+        run do
+          requests = load_tagged_requests(READ_PROVENANCE_TAG)
+          skip_if requests.blank?, skip_message
+
+          requests_for_id = filter_requests_by_resource_id(requests, 'us-quality-core-test-kit-provenance')
+          assert requests_for_id.any?, failure_message
+        end
+      end
+    end
+  end
+end

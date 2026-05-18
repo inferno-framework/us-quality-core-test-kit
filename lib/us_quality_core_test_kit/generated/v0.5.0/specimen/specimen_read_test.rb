@@ -1,7 +1,7 @@
 require_relative '../../../read_test'
 
 module USQualityCoreTestKit
-  module USQualityCoreV010
+  module USQualityCoreV050
     class SpecimenReadTest < Inferno::Test
       include USQualityCoreTestKit::ReadTest
 
@@ -9,7 +9,7 @@ module USQualityCoreTestKit
 
       description 'A server SHALL support the Specimen read interaction.'
 
-      id :us_quality_core_v010_specimen_read_test
+      id :us_quality_core_v050_specimen_read_test
 
       def resource_type
         'Specimen'

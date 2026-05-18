@@ -82,11 +82,12 @@
     - ServiceRequest.category
     :comparators: {}
     :values:
-    - '108252007'
-    - '363679005'
-    - '409063005'
-    - '409073007'
-    - '387713003'
+    - sdoh
+    - functional-status
+    - disability-status
+    - cognitive-status
+    - '386053000'
+    - '410606002'
     :type: CodeableConcept
     :contains_multiple: true
     :multiple_or: MAY
@@ -145,16 +146,18 @@
       :type: requiredBinding
       :path: ''
       :values:
+      - :system: http://hl7.org/fhir/us/core/CodeSystem/us-core-category
+        :code: sdoh
+      - :system: http://hl7.org/fhir/us/core/CodeSystem/us-core-category
+        :code: functional-status
+      - :system: http://hl7.org/fhir/us/core/CodeSystem/us-core-category
+        :code: disability-status
+      - :system: http://hl7.org/fhir/us/core/CodeSystem/us-core-category
+        :code: cognitive-status
       - :system: http://snomed.info/sct
-        :code: '108252007'
+        :code: '386053000'
       - :system: http://snomed.info/sct
-        :code: '363679005'
-      - :system: http://snomed.info/sct
-        :code: '409063005'
-      - :system: http://snomed.info/sct
-        :code: '409073007'
-      - :system: http://snomed.info/sct
-        :code: '387713003'
+        :code: '410606002'
   :elements:
   - :path: status
   - :path: intent

@@ -9,7 +9,7 @@ require_relative 'us_core_smokingstatus/us_core_smokingstatus_reference_resoluti
 
 
 module USQualityCoreTestKit
-  module USQualityCoreV010
+  module USQualityCoreV050
     class UsCoreSmokingstatusGroup < Inferno::TestGroup
       title 'Observation US Core Smoking Status Tests'
 
@@ -75,7 +75,7 @@ read succeeds.
 
       )
 
-      id :us_quality_core_v010_us_core_smokingstatus
+      id :us_quality_core_v050_us_core_smokingstatus
 
       run_as_group
 
@@ -86,14 +86,14 @@ read succeeds.
       end
 
   
-      test from: :us_quality_core_v010_us_core_smokingstatus_patient_category_status_search_test
-      test from: :us_quality_core_v010_us_core_smokingstatus_patient_category_search_test
-      test from: :us_quality_core_v010_us_core_smokingstatus_patient_category_date_search_test
-      test from: :us_quality_core_v010_us_core_smokingstatus_patient_code_search_test
-      test from: :us_quality_core_v010_us_core_smokingstatus_read_test
-      test from: :us_quality_core_v010_us_core_smokingstatus_validation_test
-      test from: :us_quality_core_v010_us_core_smokingstatus_must_support_test
-      test from: :us_quality_core_v010_us_core_smokingstatus_reference_resolution_test
+      test from: :us_quality_core_v050_us_core_smokingstatus_patient_category_status_search_test
+      test from: :us_quality_core_v050_us_core_smokingstatus_patient_category_search_test
+      test from: :us_quality_core_v050_us_core_smokingstatus_patient_category_date_search_test
+      test from: :us_quality_core_v050_us_core_smokingstatus_patient_code_search_test
+      test from: :us_quality_core_v050_us_core_smokingstatus_read_test
+      test from: :us_quality_core_v050_us_core_smokingstatus_validation_test
+      test from: :us_quality_core_v050_us_core_smokingstatus_must_support_test
+      test from: :us_quality_core_v050_us_core_smokingstatus_reference_resolution_test
     end
   end
 end

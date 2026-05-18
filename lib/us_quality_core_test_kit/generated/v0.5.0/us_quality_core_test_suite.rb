@@ -13,6 +13,7 @@ require_relative 'devicerequest_group'
 require_relative 'devicenotrequested_group'
 require_relative 'diagnostic_report_note_group'
 require_relative 'diagnostic_report_lab_group'
+require_relative 'document_reference_group'
 require_relative 'family_member_history_group'
 require_relative 'goal_group'
 require_relative 'imaging_study_group'
@@ -28,8 +29,22 @@ require_relative 'observation_clinical_result_group'
 require_relative 'simple_observation_group'
 require_relative 'observation_screening_assessment_group'
 require_relative 'observationcancelled_group'
-require_relative 'observation_lab_group'
+require_relative 'us_core_observation_pregnancyintent_group'
+require_relative 'us_core_observation_pregnancystatus_group'
 require_relative 'us_core_smokingstatus_group'
+require_relative 'observation_lab_group'
+require_relative 'us_core_observation_occupation_group'
+require_relative 'us_core_blood_pressure_group'
+require_relative 'us_core_bmi_group'
+require_relative 'pediatric_bmi_for_age_group'
+require_relative 'us_core_body_height_group'
+require_relative 'us_core_body_temperature_group'
+require_relative 'us_core_body_weight_group'
+require_relative 'head_occipital_frontal_circumference_percentile_group'
+require_relative 'us_core_heart_rate_group'
+require_relative 'us_core_pulse_oximetry_group'
+require_relative 'us_core_respiratory_rate_group'
+require_relative 'pediatric_weight_for_height_group'
 require_relative 'procedure_group'
 require_relative 'procedurenotdone_group'
 require_relative 'related_person_group'
@@ -42,6 +57,7 @@ require_relative 'location_group'
 require_relative 'organization_group'
 require_relative 'practitioner_group'
 require_relative 'practitioner_role_group'
+require_relative 'provenance_group'
 require_relative 'specimen_group'
 
 
@@ -136,7 +152,6 @@ module USQualityCoreTestKit
         )
 
         
-<<<<<<< HEAD:lib/us_quality_core_test_kit/generated/v0.5.0/us_quality_core_test_suite.rb
         group from: :us_quality_core_v050_patient
         group from: :us_quality_core_v050_adverse_event
         group from: :us_quality_core_v050_allergy_intolerance
@@ -150,6 +165,7 @@ module USQualityCoreTestKit
         group from: :us_quality_core_v050_devicenotrequested
         group from: :us_quality_core_v050_diagnostic_report_note
         group from: :us_quality_core_v050_diagnostic_report_lab
+        group from: :us_quality_core_v050_document_reference
         group from: :us_quality_core_v050_family_member_history
         group from: :us_quality_core_v050_goal
         group from: :us_quality_core_v050_imaging_study
@@ -165,7 +181,22 @@ module USQualityCoreTestKit
         group from: :us_quality_core_v050_simple_observation
         group from: :us_quality_core_v050_observation_screening_assessment
         group from: :us_quality_core_v050_observationcancelled
+        group from: :us_quality_core_v050_us_core_observation_pregnancyintent
+        group from: :us_quality_core_v050_us_core_observation_pregnancystatus
+        group from: :us_quality_core_v050_us_core_smokingstatus
         group from: :us_quality_core_v050_observation_lab
+        group from: :us_quality_core_v050_us_core_observation_occupation
+        group from: :us_quality_core_v050_us_core_blood_pressure
+        group from: :us_quality_core_v050_us_core_bmi
+        group from: :us_quality_core_v050_pediatric_bmi_for_age
+        group from: :us_quality_core_v050_us_core_body_height
+        group from: :us_quality_core_v050_us_core_body_temperature
+        group from: :us_quality_core_v050_us_core_body_weight
+        group from: :us_quality_core_v050_head_occipital_frontal_circumference_percentile
+        group from: :us_quality_core_v050_us_core_heart_rate
+        group from: :us_quality_core_v050_us_core_pulse_oximetry
+        group from: :us_quality_core_v050_us_core_respiratory_rate
+        group from: :us_quality_core_v050_pediatric_weight_for_height
         group from: :us_quality_core_v050_procedure
         group from: :us_quality_core_v050_procedurenotdone
         group from: :us_quality_core_v050_related_person
@@ -178,50 +209,8 @@ module USQualityCoreTestKit
         group from: :us_quality_core_v050_organization
         group from: :us_quality_core_v050_practitioner
         group from: :us_quality_core_v050_practitioner_role
-=======
-        group from: :us_quality_core_v010_patient
-        group from: :us_quality_core_v010_adverse_event
-        group from: :us_quality_core_v010_allergy_intolerance
-        group from: :us_quality_core_v010_care_plan
-        group from: :us_quality_core_v010_care_team
-        group from: :us_quality_core_v010_claim
-        group from: :us_quality_core_v010_condition_encounter_diagnosis
-        group from: :us_quality_core_v010_condition_problems_health_concerns
-        group from: :us_quality_core_v010_coverage
-        group from: :us_quality_core_v010_devicerequest
-        group from: :us_quality_core_v010_devicenotrequested
-        group from: :us_quality_core_v010_diagnostic_report_note
-        group from: :us_quality_core_v010_diagnostic_report_lab
-        group from: :us_quality_core_v010_family_member_history
-        group from: :us_quality_core_v010_goal
-        group from: :us_quality_core_v010_immunization
-        group from: :us_quality_core_v010_immunizationnotdone
-        group from: :us_quality_core_v010_medicationadministration
-        group from: :us_quality_core_v010_medicationadministrationnotdone
-        group from: :us_quality_core_v010_medicationdispense
-        group from: :us_quality_core_v010_medicationdispensedeclined
-        group from: :us_quality_core_v010_medicationrequest
-        group from: :us_quality_core_v010_medicationnotrequested
-        group from: :us_quality_core_v010_observation_clinical_result
-        group from: :us_quality_core_v010_simple_observation
-        group from: :us_quality_core_v010_observation_screening_assessment
-        group from: :us_quality_core_v010_observationcancelled
-        group from: :us_quality_core_v010_observation_lab
-        group from: :us_quality_core_v010_us_core_smokingstatus
-        group from: :us_quality_core_v010_procedure
-        group from: :us_quality_core_v010_procedurenotdone
-        group from: :us_quality_core_v010_related_person
-        group from: :us_quality_core_v010_servicerequest
-        group from: :us_quality_core_v010_servicenotrequested
-        group from: :us_quality_core_v010_task
-        group from: :us_quality_core_v010_taskrejected
-        group from: :us_quality_core_v010_encounter
-        group from: :us_quality_core_v010_location
-        group from: :us_quality_core_v010_organization
-        group from: :us_quality_core_v010_practitioner
-        group from: :us_quality_core_v010_practitioner_role
-        group from: :us_quality_core_v010_specimen
->>>>>>> 590b0ec (generate Specimen):lib/us_quality_core_test_kit/generated/v0.1.0/us_quality_core_test_suite.rb
+        group from: :us_quality_core_v050_provenance
+        group from: :us_quality_core_v050_specimen
       end
 
       links [

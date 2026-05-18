@@ -1,11 +1,11 @@
 require_relative '../../../validation_test'
 
 module USQualityCoreTestKit
-  module USQualityCoreV010
+  module USQualityCoreV050
     class UsCoreSmokingstatusValidationTest < Inferno::Test
       include USQualityCoreTestKit::ValidationTest
 
-      id :us_quality_core_v010_us_core_smokingstatus_validation_test
+      id :us_quality_core_v050_us_core_smokingstatus_validation_test
 
       title 'Observation resources returned during previous tests conform to the US Core Smoking Status Observation Profile'
 

@@ -1,7 +1,7 @@
 require_relative '../../../reference_resolution_test'
 
 module USQualityCoreTestKit
-  module USQualityCoreV010
+  module USQualityCoreV050
     class UsCoreSmokingstatusReferenceResolutionTest < Inferno::Test
       include USQualityCoreTestKit::ReferenceResolutionTest
 
@@ -19,7 +19,7 @@ module USQualityCoreTestKit
         * Observation.subject
       )
 
-      id :us_quality_core_v010_us_core_smokingstatus_reference_resolution_test
+      id :us_quality_core_v050_us_core_smokingstatus_reference_resolution_test
 
       def resource_type
         'Observation'

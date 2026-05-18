@@ -1,11 +1,11 @@
 require_relative '../../../validation_test'
 
 module USQualityCoreTestKit
-  module USQualityCoreV010
+  module USQualityCoreV050
     class SpecimenValidationTest < Inferno::Test
       include USQualityCoreTestKit::ValidationTest
 
-      id :us_quality_core_v010_specimen_validation_test
+      id :us_quality_core_v050_specimen_validation_test
 
       title 'Specimen resources returned during previous tests conform to the US Core Specimen Profile'
 

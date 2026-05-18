@@ -3,7 +3,7 @@ require_relative '../../../generator/group_metadata'
 require_relative '../../../search_test_properties'
 
 module USQualityCoreTestKit
-  module USQualityCoreV010
+  module USQualityCoreV050
     class UsCoreSmokingstatusPatientCategoryStatusSearchTest < Inferno::Test
       include USQualityCoreTestKit::SearchTest
 
@@ -29,7 +29,7 @@ FHIR R4 specification.
 
       )
 
-      id :us_quality_core_v010_us_core_smokingstatus_patient_category_status_search_test
+      id :us_quality_core_v050_us_core_smokingstatus_patient_category_status_search_test
 
   
 

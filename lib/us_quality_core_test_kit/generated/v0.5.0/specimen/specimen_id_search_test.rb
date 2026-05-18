@@ -3,7 +3,7 @@ require_relative '../../../generator/group_metadata'
 require_relative '../../../search_test_properties'
 
 module USQualityCoreTestKit
-  module USQualityCoreV010
+  module USQualityCoreV050
     class SpecimenIdSearchTest < Inferno::Test
       include USQualityCoreTestKit::SearchTest
 
@@ -15,10 +15,17 @@ _id on the Specimen resource. This test
 will pass if resources are returned and match the search criteria. If
 none are returned, the test is skipped.
 
+Because this is the first search of the sequence, resources in the
+response will be used for subsequent tests.
+
+Additionally, this test will check that GET and POST search methods
+return the same number of results. Search by POST is required by the
+FHIR R4 specification.
+
 
       )
 
-      id :us_quality_core_v010_specimen__id_search_test
+      id :us_quality_core_v050_specimen__id_search_test
 
   
 
@@ -26,8 +33,10 @@ none are returned, the test is skipped.
 
       def self.properties
         @properties ||= SearchTestProperties.new(
-          resource_type: 'Specimen',
-        search_param_names: ['_id']
+          first_search: true,
+        resource_type: 'Specimen',
+        search_param_names: ['_id'],
+        test_post_search: true
         )
       end
 

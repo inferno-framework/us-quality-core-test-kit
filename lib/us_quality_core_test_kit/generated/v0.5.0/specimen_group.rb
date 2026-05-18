@@ -1,5 +1,4 @@
 require_relative 'specimen/specimen_read_test'
-require_relative 'specimen/specimen_patient_search_test'
 require_relative 'specimen/specimen_id_search_test'
 require_relative 'specimen/specimen_validation_test'
 require_relative 'specimen/specimen_must_support_test'
@@ -7,7 +6,7 @@ require_relative 'specimen/specimen_reference_resolution_test'
 
 
 module USQualityCoreTestKit
-  module USQualityCoreV010
+  module USQualityCoreV050
     class SpecimenGroup < Inferno::TestGroup
       title 'US Core Specimen Tests'
 
@@ -70,7 +69,7 @@ read succeeds.
 
       )
 
-      id :us_quality_core_v010_specimen
+      id :us_quality_core_v050_specimen
 
       run_as_group
 
@@ -81,12 +80,11 @@ read succeeds.
       end
 
   
-      test from: :us_quality_core_v010_specimen_read_test
-      test from: :us_quality_core_v010_specimen_patient_search_test
-      test from: :us_quality_core_v010_specimen__id_search_test
-      test from: :us_quality_core_v010_specimen_validation_test
-      test from: :us_quality_core_v010_specimen_must_support_test
-      test from: :us_quality_core_v010_specimen_reference_resolution_test
+      test from: :us_quality_core_v050_specimen_read_test
+      test from: :us_quality_core_v050_specimen__id_search_test
+      test from: :us_quality_core_v050_specimen_validation_test
+      test from: :us_quality_core_v050_specimen_must_support_test
+      test from: :us_quality_core_v050_specimen_reference_resolution_test
     end
   end
 end

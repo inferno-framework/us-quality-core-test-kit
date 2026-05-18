@@ -3,7 +3,7 @@ require_relative '../../../generator/group_metadata'
 require_relative '../../../search_test_properties'
 
 module USQualityCoreTestKit
-  module USQualityCoreV010
+  module USQualityCoreV050
     class UsCoreSmokingstatusPatientCodeSearchTest < Inferno::Test
       include USQualityCoreTestKit::SearchTest
 
@@ -18,7 +18,7 @@ none are returned, the test is skipped.
 
       )
 
-      id :us_quality_core_v010_us_core_smokingstatus_patient_code_search_test
+      id :us_quality_core_v050_us_core_smokingstatus_patient_code_search_test
 
   
 

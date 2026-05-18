@@ -1,7 +1,7 @@
 require_relative '../../../must_support_test'
 
 module USQualityCoreTestKit
-  module USQualityCoreV010
+  module USQualityCoreV050
     class SpecimenMustSupportTest < Inferno::Test
       include USQualityCoreTestKit::MustSupportTest
 
@@ -15,7 +15,7 @@ module USQualityCoreTestKit
         * Specimen.type
       )
 
-      id :us_quality_core_v010_specimen_must_support_test
+      id :us_quality_core_v050_specimen_must_support_test
 
       def resource_type
         'Specimen'

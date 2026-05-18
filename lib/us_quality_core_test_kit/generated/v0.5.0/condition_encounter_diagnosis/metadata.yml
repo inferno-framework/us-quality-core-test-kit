@@ -63,7 +63,8 @@
     :full_paths:
     - Condition.code
     :comparators: {}
-    :values: []
+    :values:
+    - '160245001'
     :type: CodeableConcept
     :contains_multiple: false
     :multiple_or: MAY

@@ -1,0 +1,248 @@
+---
+:name: us_core_documentreference
+:class_name: UsCoreDocumentreferenceSequence
+:version: v0.5.0
+:reformatted_version: v050
+:resource: DocumentReference
+:profile_url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
+:profile_name: US Core DocumentReference Profile
+:profile_version: 6.1.0
+:title: US Core DocumentReference
+:short_description: Verify support for the capabilities required by the US Core DocumentReference
+  Profile.
+:is_delayed: false
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :names:
+  - patient
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :names:
+  - _id
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - type
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - category
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - category
+  - date
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+:search_definitions:
+  :patient:
+    :paths:
+    - subject
+    :full_paths:
+    - DocumentReference.subject
+    :comparators: {}
+    :values: []
+    :type: Reference
+    :contains_multiple: false
+    :multiple_or: MAY
+  :_id:
+    :paths:
+    - id
+    :full_paths:
+    - DocumentReference.id
+    :comparators: {}
+    :values: []
+    :type: http://hl7.org/fhirpath/System.String
+    :contains_multiple: false
+    :multiple_or: MAY
+  :type:
+    :paths:
+    - type
+    :full_paths:
+    - DocumentReference.type
+    :comparators: {}
+    :values:
+    - 18842-5
+    - 11488-4
+    - 34117-2
+    - 11506-3
+    - 28570-0
+    :type: CodeableConcept
+    :contains_multiple: false
+    :multiple_or: MAY
+  :category:
+    :paths:
+    - category
+    :full_paths:
+    - DocumentReference.category
+    :comparators: {}
+    :values:
+    - clinical-note
+    :type: CodeableConcept
+    :contains_multiple: true
+    :multiple_or: MAY
+  :date:
+    :paths:
+    - date
+    :full_paths:
+    - DocumentReference.date
+    :comparators:
+      :eq: MAY
+      :ne: MAY
+      :gt: SHALL
+      :ge: SHALL
+      :lt: SHALL
+      :le: SHALL
+      :sa: MAY
+      :eb: MAY
+      :ap: MAY
+    :values: []
+    :type: instant
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes:
+- Provenance:target
+:required_concepts:
+- type
+- category
+:must_supports:
+  :extensions: []
+  :slices:
+  - :slice_id: DocumentReference.category:uscore
+    :slice_name: uscore
+    :path: category
+    :discriminator:
+      :type: requiredBinding
+      :path: ''
+      :values:
+      - :system: http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category
+        :code: clinical-note
+    :uscdi_only: true
+  :elements:
+  - :path: identifier
+  - :path: status
+  - :path: type
+  - :path: category
+  - :path: subject
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+  - :path: date
+  - :path: author
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+  - :path: content
+  - :path: content.attachment
+  - :path: content.attachment.contentType
+  - :path: content.attachment.data
+  - :path: content.attachment.url
+  - :path: content.format
+  - :path: context
+  - :path: context.encounter
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+  - :path: context.period
+:mandatory_elements:
+- DocumentReference.status
+- DocumentReference.type
+- DocumentReference.category
+- DocumentReference.subject
+- DocumentReference.relatesTo.code
+- DocumentReference.relatesTo.target
+- DocumentReference.content
+- DocumentReference.content.attachment
+:bindings:
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/document-reference-status
+  :path: status
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/composition-status
+  :path: docStatus
+- :type: CodeableConcept
+  :strength: required
+  :system: http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-type
+  :path: type
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/document-relationship-type
+  :path: relatesTo.code
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/mimetypes
+  :path: content.attachment.contentType
+:references:
+- :path: DocumentReference.subject
+  :profiles:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+- :path: DocumentReference.author
+  :profiles:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
+  - http://hl7.org/fhir/StructureDefinition/Device
+- :path: DocumentReference.authenticator
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Practitioner
+  - http://hl7.org/fhir/StructureDefinition/PractitionerRole
+  - http://hl7.org/fhir/StructureDefinition/Organization
+- :path: DocumentReference.custodian
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Organization
+- :path: DocumentReference.relatesTo.target
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/DocumentReference
+- :path: DocumentReference.context.encounter
+  :profiles:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+- :path: DocumentReference.context.sourcePatientInfo
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Patient
+- :path: DocumentReference.context.related
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Resource
+:tests:
+- :id: us_quality_core_v050_document_reference_patient_search_test
+  :file_name: document_reference_patient_search_test.rb
+- :id: us_quality_core_v050_document_reference__id_search_test
+  :file_name: document_reference_id_search_test.rb
+- :id: us_quality_core_v050_document_reference_patient_type_search_test
+  :file_name: document_reference_patient_type_search_test.rb
+- :id: us_quality_core_v050_document_reference_patient_category_search_test
+  :file_name: document_reference_patient_category_search_test.rb
+- :id: us_quality_core_v050_document_reference_patient_category_date_search_test
+  :file_name: document_reference_patient_category_date_search_test.rb
+- :id: us_quality_core_v050_document_reference_read_test
+  :file_name: document_reference_read_test.rb
+- :id: us_quality_core_v050_document_reference_validation_test
+  :file_name: document_reference_validation_test.rb
+- :id: us_quality_core_v050_document_reference_must_support_test
+  :file_name: document_reference_must_support_test.rb
+- :id: us_quality_core_v050_document_reference_reference_resolution_test
+  :file_name: document_reference_reference_resolution_test.rb
+:id: us_quality_core_v050_document_reference
+:file_name: document_reference_group.rb
+:delayed_references: []
+:resource_conformance_expectation: SHALL

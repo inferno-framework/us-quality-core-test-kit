@@ -45,6 +45,8 @@ module USQualityCoreTestKit
               SEARCH_DEVICE_REQUEST_TAG
             when 'DiagnosticReport'
               SEARCH_DIAGNOSTIC_REPORT_TAG
+            when 'DocumentReference'
+              SEARCH_DOCUMENT_REFERENCE_TAG
             when 'FamilyMemberHistory'
               SEARCH_FAMILY_MEMBER_HISTORY_TAG
             when 'Goal'
@@ -79,6 +81,10 @@ module USQualityCoreTestKit
               SEARCH_PRACTITIONER_TAG
             when 'PractitionerRole'
               SEARCH_PRACTITIONER_ROLE_TAG
+            when 'Provenance'
+              SEARCH_PROVENANCE_TAG
+            when 'Specimen'
+              SEARCH_SPECIMEN_TAG
           end
         end
 
