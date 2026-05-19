@@ -44,7 +44,10 @@ module USQualityCoreTestKit
       end
 
       def must_support_elements
-        super.map do |element|
+        ms_elements = super        
+        return ms_elements unless profile.url.include?('us-quality-core')
+
+        ms_elements.map do |element|
           profile_element = plain_must_support_elements.find do |e|
             path = e.id.gsub("#{resource}.", '')
             [element[:path], element[:original_path]].include?(path)
@@ -52,6 +55,27 @@ module USQualityCoreTestKit
 
           add_us_quality_coreuscdi_plus_quality_flag(profile_element, element)
         end
+      end
+
+      def handle_type_must_support_target_profiles(type, metadata)
+        target_profiles =
+          if type.targetProfile&.length == 1
+            [type.targetProfile.first]
+          elsif type.respond_to?(:source_hash)
+            binding.pry
+            (type.source_hash['_targetProfile'] || []).each_with_index.filter_map do |hash, index|
+              next if hash.blank?
+
+              element = FHIR::Element.new(hash)
+              type.targetProfile[index] if type_must_support_extension?(element.extension)
+            end
+          else
+            Array(type.targetProfile)
+          end
+
+        target_profiles.map! { |reference| reference.split('|').first }
+        target_profiles.delete_if { |reference| reference.start_with?('http://hl7.org/fhir/StructureDefinition') }
+        metadata[:target_profiles] = target_profiles if target_profiles.present?
       end
 
       # Aligns US Core v6.1.0 must support requirements to [USCDI v3.1](https://isp.healthit.gov/united-states-core-data-interoperability-uscdi#uscdi-v3-1)
