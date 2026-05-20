@@ -209,13 +209,62 @@ CapabilityStatement](http://fhir.org/guides/onc/us-quality-core/CapabilityStatem
           group from: :us_quality_core_client_v050_practitioner_role
 
           run do
-            passing_profile_group = groups.find do |group|
-              next if group.id.include?('wait') || group.id.include?('auth')
+            profile_group_ids = %w[
+              us_quality_core_client_v050_patient
+              us_quality_core_client_v050_adverse_event
+              us_quality_core_client_v050_allergy_intolerance
+              us_quality_core_client_v050_care_plan
+              us_quality_core_client_v050_care_team
+              us_quality_core_client_v050_claim
+              us_quality_core_client_v050_condition_encounter_diagnosis
+              us_quality_core_client_v050_condition_problems_health_concerns
+              us_quality_core_client_v050_coverage
+              us_quality_core_client_v050_devicerequest
+              us_quality_core_client_v050_devicenotrequested
+              us_quality_core_client_v050_diagnostic_report_note
+              us_quality_core_client_v050_diagnostic_report_lab
+              us_quality_core_client_v050_family_member_history
+              us_quality_core_client_v050_goal
+              us_quality_core_client_v050_imaging_study
+              us_quality_core_client_v050_immunization
+              us_quality_core_client_v050_immunizationnotdone
+              us_quality_core_client_v050_medicationadministration
+              us_quality_core_client_v050_medicationadministrationnotdone
+              us_quality_core_client_v050_medicationdispense
+              us_quality_core_client_v050_medicationdispensedeclined
+              us_quality_core_client_v050_medicationrequest
+              us_quality_core_client_v050_medicationnotrequested
+              us_quality_core_client_v050_observation_clinical_result
+              us_quality_core_client_v050_simple_observation
+              us_quality_core_client_v050_observation_screening_assessment
+              us_quality_core_client_v050_observationcancelled
+              us_quality_core_client_v050_observation_lab
+              us_quality_core_client_v050_procedure
+              us_quality_core_client_v050_procedurenotdone
+              us_quality_core_client_v050_related_person
+              us_quality_core_client_v050_servicerequest
+              us_quality_core_client_v050_servicenotrequested
+              us_quality_core_client_v050_task
+              us_quality_core_client_v050_taskrejected
+              us_quality_core_client_v050_encounter
+              us_quality_core_client_v050_location
+              us_quality_core_client_v050_organization
+              us_quality_core_client_v050_practitioner
+              us_quality_core_client_v050_practitioner_role
+            ]
 
-              results[group.id]&.result == 'pass'
+            passing_profile_group = results.any? do |result|
+              next false unless result.result == 'pass'
+
+              result_group_id = result.test_group_id || result.runnable&.id
+              next false unless result_group_id
+
+              profile_group_ids.any? do |group_id|
+                result_group_id == group_id || result_group_id.end_with?("-#{group_id}")
+              end
             end
 
-            assert passing_profile_group.present?, 'At least one profile group must pass.'
+            assert passing_profile_group, 'At least one profile group must pass.'
           end
         end
       end
