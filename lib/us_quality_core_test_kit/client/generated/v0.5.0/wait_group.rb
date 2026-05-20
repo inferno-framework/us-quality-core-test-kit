@@ -49,7 +49,7 @@ module USQualityCoreTestKit
 
   All requests will be recorded. When finished, the requests will be inspected to ensure that the client under test is making the required requests.
   Requests should target the following patient record:
-  - **Resource ID**: `us-quality-core-test-kit-patient`
+  - **Resource ID**: `usqualitycore-patient`
 
   [Click here](#{resume_pass_url}?token=#{client_id}) when finished.
 
@@ -57,72 +57,72 @@ module USQualityCoreTestKit
 
   * **Patient**
   * read id:
-    * us-quality-core-test-kit-patient
+    * usqualitycore-patient
   * searches:
     * _id
 * **AdverseEvent**
   * read id:
-    * us-quality-core-test-kit-adverse-event
+    * usqualitycore-adverse-event
   * searches:
     * subject
     * subject + event
     * subject + recorded-date
 * **AllergyIntolerance**
   * read id:
-    * us-quality-core-test-kit-allergy-intolerance
+    * usqualitycore-allergy-intolerance
   * searches:
     * patient
 * **CarePlan**
   * read id:
-    * us-quality-core-test-kit-care-plan
+    * usqualitycore-care-plan
   * searches:
     * patient + category
 * **CareTeam**
   * read id:
-    * us-quality-core-test-kit-care-team
+    * usqualitycore-care-team
   * searches:
     * patient + status
 * **Claim**
   * read id:
-    * us-quality-core-test-kit-claim
+    * usqualitycore-claim
   * searches:
     * patient
 * **ConditionEncounterDiagnosis**
   * read id:
-    * us-quality-core-test-kit-condition-encounter-diagnosis
+    * usqualitycore-condition-encounter-diagnosis
   * searches:
     * patient + category
     * patient
     * patient + code
 * **ConditionProblemsHealthConcerns**
   * read id:
-    * us-quality-core-test-kit-condition-problems-health-concerns
+    * usqualitycore-condition-problems-health-concerns
   * searches:
     * patient + category
     * patient
     * patient + code
 * **Coverage**
   * read id:
-    * us-quality-core-test-kit-coverage
+    * usqualitycore-coverage
   * searches:
     * patient
 * **Devicerequest**
   * read id:
-    * us-quality-core-test-kit-devicerequest
+    * usqualitycore-devicerequest
   * searches:
     * patient + do-not-perform
     * patient
     * patient + code
 * **Devicenotrequested**
   * read id:
-    * us-quality-core-test-kit-devicenotrequested
+    * usqualitycore-devicenotrequested
   * searches:
     * patient + do-not-perform
     * patient
     * patient + code
 * **DiagnosticReportNote**
   * read id:
-    * us-quality-core-test-kit-diagnostic-report-note
+    * usqualitycore-diagnostic-report-note
   * searches:
     * patient + category
     * patient
@@ -130,7 +130,7 @@ module USQualityCoreTestKit
     * patient + code
 * **DiagnosticReportLab**
   * read id:
-    * us-quality-core-test-kit-diagnostic-report-lab
+    * usqualitycore-diagnostic-report-lab
   * searches:
     * patient + category
     * patient
@@ -138,35 +138,35 @@ module USQualityCoreTestKit
     * patient + code
 * **FamilyMemberHistory**
   * read id:
-    * us-quality-core-test-kit-family-member-history
+    * usqualitycore-family-member-history
   * searches:
     * patient
 * **Goal**
   * read id:
-    * us-quality-core-test-kit-goal
+    * usqualitycore-goal
   * searches:
     * patient
 * **ImagingStudy**
   * read id:
-    * us-quality-core-test-kit-imaging-study
+    * usqualitycore-imaging-study
   * searches:
     * patient
     * patient + procedure-code
 * **Immunization**
   * read id:
-    * us-quality-core-test-kit-immunization
+    * usqualitycore-immunization
   * searches:
     * patient + status
     * patient
 * **Immunizationnotdone**
   * read id:
-    * us-quality-core-test-kit-immunizationnotdone
+    * usqualitycore-immunizationnotdone
   * searches:
     * patient + status
     * patient
 * **Medicationadministration**
   * read id:
-    * us-quality-core-test-kit-medicationadministration
+    * usqualitycore-medicationadministration
   * searches:
     * patient + status
     * patient
@@ -174,7 +174,7 @@ module USQualityCoreTestKit
     * patient + effective-time
 * **Medicationadministrationnotdone**
   * read id:
-    * us-quality-core-test-kit-medicationadministrationnotdone
+    * usqualitycore-medicationadministrationnotdone
   * searches:
     * patient + status
     * patient
@@ -182,32 +182,32 @@ module USQualityCoreTestKit
     * patient + effective-time
 * **Medicationdispense**
   * read id:
-    * us-quality-core-test-kit-medicationdispense
+    * usqualitycore-medicationdispense
   * searches:
     * patient + status
     * patient
 * **Medicationdispensedeclined**
   * read id:
-    * us-quality-core-test-kit-medicationdispensedeclined
+    * usqualitycore-medicationdispensedeclined
   * searches:
     * patient + status
     * patient
 * **Medicationrequest**
   * read id:
-    * us-quality-core-test-kit-medicationrequest
+    * usqualitycore-medicationrequest
   * searches:
     * patient + intent + do-not-perform
     * patient + intent
 * **Medicationnotrequested**
   * read id:
-    * us-quality-core-test-kit-medicationnotrequested
+    * usqualitycore-medicationnotrequested
   * searches:
     * patient + intent + do-not-perform
     * patient + intent
 * **ObservationClinicalResult**
   * read id:
-    * us-quality-core-test-kit-observation-clinical-result
-    * us-quality-core-test-kit-observation-lab
+    * usqualitycore-observation-clinical-result
+    * usqualitycore-observation-lab
   * searches:
     * patient + category + status
     * patient + category
@@ -215,7 +215,7 @@ module USQualityCoreTestKit
     * patient + code
 * **SimpleObservation**
   * read id:
-    * us-quality-core-test-kit-simple-observation
+    * usqualitycore-simple-observation
   * searches:
     * patient + category + status
     * patient + category
@@ -223,7 +223,7 @@ module USQualityCoreTestKit
     * patient + code
 * **ObservationScreeningAssessment**
   * read id:
-    * us-quality-core-test-kit-observation-screening-assessment
+    * usqualitycore-observation-screening-assessment
   * searches:
     * patient + category + status
     * patient + category
@@ -231,7 +231,7 @@ module USQualityCoreTestKit
     * patient + code
 * **Observationcancelled**
   * read id:
-    * us-quality-core-test-kit-observationcancelled
+    * usqualitycore-observationcancelled
   * searches:
     * patient + category + status
     * patient + category
@@ -239,7 +239,7 @@ module USQualityCoreTestKit
     * patient + code
 * **ObservationLab**
   * read id:
-    * us-quality-core-test-kit-observation-lab
+    * usqualitycore-observation-lab
   * searches:
     * patient + category + status
     * patient + category
@@ -247,27 +247,27 @@ module USQualityCoreTestKit
     * patient + code
 * **Procedure**
   * read id:
-    * us-quality-core-test-kit-procedure
+    * usqualitycore-procedure
   * searches:
     * patient + status
     * patient
     * patient + date
 * **Procedurenotdone**
   * read id:
-    * us-quality-core-test-kit-procedurenotdone
+    * usqualitycore-procedurenotdone
   * searches:
     * patient + status
     * patient
     * patient + date
 * **RelatedPerson**
   * read id:
-    * us-quality-core-test-kit-related-person
+    * usqualitycore-related-person
   * searches:
     * patient
     * _id
 * **Servicerequest**
   * read id:
-    * us-quality-core-test-kit-servicerequest
+    * usqualitycore-servicerequest
   * searches:
     * patient + do-not-perform
     * _id
@@ -277,7 +277,7 @@ module USQualityCoreTestKit
     * patient + code
 * **Servicenotrequested**
   * read id:
-    * us-quality-core-test-kit-servicenotrequested
+    * usqualitycore-servicenotrequested
   * searches:
     * patient + do-not-perform
     * _id
@@ -287,21 +287,21 @@ module USQualityCoreTestKit
     * patient + code
 * **Task**
   * read id:
-    * us-quality-core-test-kit-task
+    * usqualitycore-task
   * searches:
     * patient + status
     * patient
     * patient + code
 * **Taskrejected**
   * read id:
-    * us-quality-core-test-kit-taskrejected
+    * usqualitycore-taskrejected
   * searches:
     * patient + status
     * patient
     * patient + code
 * **Encounter**
   * read id:
-    * us-quality-core-test-kit-encounter
+    * usqualitycore-encounter
   * searches:
     * patient
     * _id
@@ -309,22 +309,22 @@ module USQualityCoreTestKit
     * patient + date
 * **Location**
   * read id:
-    * us-quality-core-test-kit-location
+    * usqualitycore-location
   * searches:
 
 * **Organization**
   * read id:
-    * us-quality-core-test-kit-organization
+    * usqualitycore-organization
   * searches:
 
 * **Practitioner**
   * read id:
-    * us-quality-core-test-kit-practitioner
+    * usqualitycore-practitioner
   * searches:
 
 * **PractitionerRole**
   * read id:
-    * us-quality-core-test-kit-practitioner-role
+    * usqualitycore-practitioner-role
   * searches:
 
 
