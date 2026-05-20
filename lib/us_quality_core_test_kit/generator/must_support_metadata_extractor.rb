@@ -44,7 +44,7 @@ module USQualityCoreTestKit
       end
 
       def must_support_elements
-        ms_elements = super        
+        ms_elements = super
         return ms_elements unless profile.url.include?('us-quality-core')
 
         ms_elements.map do |element|

@@ -23,22 +23,16 @@ generate_us_quality_core = lambda do
   supported_modes = %w[server client].freeze
   mode = ENV['mode'].to_s.strip
 
-  unless mode.empty? || supported_modes.include?(mode)
-    abort "Unsupported generation mode: #{mode}. Use mode=server, mode=client, or no mode for both."
-  end
+  abort "Unsupported generation mode: #{mode}. Use mode=server, mode=client, or no mode for both." unless mode.empty? || supported_modes.include?(mode)
 
   targets = mode.empty? ? supported_modes : [mode]
 
   require_relative 'lib/us_quality_core_test_kit/generator'
   require_relative 'lib/us_quality_core_test_kit/client/generator'
 
-  if targets.include?('server')
-    USQualityCoreTestKit::Generator.generate
-  end
+  USQualityCoreTestKit::Generator.generate if targets.include?('server')
 
-  if targets.include?('client')
-    USQualityCoreTestKit::Client::Generator.generate
-  end
+  USQualityCoreTestKit::Client::Generator.generate if targets.include?('client')
 end
 
 namespace :us_quality_core do

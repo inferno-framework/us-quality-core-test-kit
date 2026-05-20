@@ -40,7 +40,7 @@ module USQualityCoreTestKit
 
           exact_id_match || resource_scoped_code_match
         end
-        
+
         return candidates.first if candidates.length <= 1
 
         expression_candidates = candidates.select { |p| p.respond_to?(:expression) && p.expression.to_s.strip != '' }

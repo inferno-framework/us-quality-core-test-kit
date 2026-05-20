@@ -65,7 +65,7 @@ module USQualityCoreTestKit
         end
 
         ig_resources.add(resource)
-      end      
+      end
     end
   end
 end
