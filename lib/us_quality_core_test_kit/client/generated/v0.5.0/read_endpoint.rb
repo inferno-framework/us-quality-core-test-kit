@@ -45,6 +45,8 @@ module USQualityCoreTestKit
               READ_DEVICE_REQUEST_TAG
             when 'DiagnosticReport'
               READ_DIAGNOSTIC_REPORT_TAG
+            when 'DocumentReference'
+              READ_DOCUMENT_REFERENCE_TAG
             when 'FamilyMemberHistory'
               READ_FAMILY_MEMBER_HISTORY_TAG
             when 'Goal'
@@ -79,6 +81,10 @@ module USQualityCoreTestKit
               READ_PRACTITIONER_TAG
             when 'PractitionerRole'
               READ_PRACTITIONER_ROLE_TAG
+            when 'Provenance'
+              READ_PROVENANCE_TAG
+            when 'Specimen'
+              READ_SPECIMEN_TAG
           end
         end
 
