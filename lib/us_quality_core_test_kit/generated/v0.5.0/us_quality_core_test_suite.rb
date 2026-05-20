@@ -181,17 +181,17 @@ module USQualityCoreTestKit
         {
           type: 'report_issue',
           label: 'Report Issue',
-          url: 'TODO'
+          url: 'https://github.com/inferno-framework/us-quality-core-test-kit/issues'
         },
         {
           type: 'source_code',
           label: 'Open Source',
-          url: 'TODO'
+          url: 'https://github.com/inferno-framework/us-quality-core-test-kit'
         },
         {
           type: 'download',
           label: 'Download',
-          url: 'TODO'
+          url: 'https://github.com/inferno-framework/us-quality-core-test-kit/releases'
         }
       ]
     end

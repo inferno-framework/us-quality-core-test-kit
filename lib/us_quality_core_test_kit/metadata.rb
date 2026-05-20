@@ -56,7 +56,7 @@ module USQualityCoreTestKit
 
       ## Repository
 
-      The [US Quality Core Test Kit](https://github.com/inferno-framework/TODO)
+      The [US Quality Core Test Kit](https://github.com/inferno-framework/us-quality-core-test-kit)
       repository provides all source code for this test kit.
 
 
