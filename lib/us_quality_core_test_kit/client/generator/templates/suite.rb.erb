@@ -75,21 +75,12 @@ module USQualityCoreTestKit
           <%- end -%>
 
           run do
-            profile_group_ids = %w[
-              <%- group_id_list.each do |group| -%>
-              <%= group %>
-              <%- end -%>
-            ]
+            profile_groups = groups.reject do |group|
+              group.id == '<%= access_group_id %>' || group.id.end_with?('-<%= access_group_id %>')
+            end
 
-            passing_profile_group = results.any? do |result|
-              next false unless result.result == 'pass'
-
-              result_group_id = result.test_group_id || result.runnable&.id
-              next false unless result_group_id
-
-              profile_group_ids.any? do |group_id|
-                result_group_id == group_id || result_group_id.end_with?("-#{group_id}")
-              end
+            passing_profile_group = profile_groups.any? do |group|
+              results[group.id]&.result == 'pass'
             end
 
             assert passing_profile_group, 'At least one profile group must pass.'
