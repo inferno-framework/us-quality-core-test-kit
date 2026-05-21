@@ -336,7 +336,7 @@ module USQualityCoreTestKit
     * patient + code
 * **HeadOccipitalFrontalCircumferencePercentile**
   * read id:
-    * us-quality-core-test-kit-head-occipital-frontal-circumference-percentile
+    * us-quality-core-test-kit-head-circumference-percentile
   * searches:
     * patient + category + status
     * patient + category

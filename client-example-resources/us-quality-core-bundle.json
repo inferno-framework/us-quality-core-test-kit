@@ -1074,14 +1074,14 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/us-quality-core-test-kit-head-occipital-frontal-circumference-percentile",
+      "fullUrl": "http://example.org/fhir/Observation/us-quality-core-test-kit-head-circumference-percentile",
       "request": {
         "method": "PUT",
-        "url": "Observation/us-quality-core-test-kit-head-occipital-frontal-circumference-percentile"
+        "url": "Observation/us-quality-core-test-kit-head-circumference-percentile"
       },
       "resource": {
         "resourceType": "Observation",
-        "id": "us-quality-core-test-kit-head-occipital-frontal-circumference-percentile",
+        "id": "us-quality-core-test-kit-head-circumference-percentile",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/head-occipital-frontal-circumference-percentile|6.1.0"
@@ -1130,7 +1130,7 @@
         },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-head-occipital-frontal-circumference-percentile</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-head-circumference-percentile</div>"
         }
       }
     },

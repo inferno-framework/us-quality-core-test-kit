@@ -99,6 +99,11 @@ module USQualityCoreTestKit
         'v0.5.0' => 'http://fhir.org/guides/onc/us-quality-core'
       }.freeze
 
+      INSTANCE_ID_OVERRIDES = {
+        'head_occipital_frontal_circumference_percentile' =>
+          'us-quality-core-test-kit-head-circumference-percentile'
+      }.freeze
+
       class << self
         def resources_with_multiple_profiles
           %w[Communication Condition DeviceRequest DiagnosticReport Immunization MedicationAdministration
@@ -130,6 +135,8 @@ module USQualityCoreTestKit
         end
 
         def instance_id_for_profile(profile)
+          return INSTANCE_ID_OVERRIDES.fetch(profile) if INSTANCE_ID_OVERRIDES.key?(profile)
+
           tag = profile.gsub('us-quality-core-', '').underscore.dasherize
 
           "us-quality-core-test-kit-#{tag}"

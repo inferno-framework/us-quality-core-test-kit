@@ -519,7 +519,7 @@ results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient"
 # Observation US Core Pediatric Head Occipital Frontal Circumference Percentile
 
 ## Read
-FHIR::Observation.read('us-quality-core-test-kit-head-occipital-frontal-circumference-percentile')
+FHIR::Observation.read('us-quality-core-test-kit-head-circumference-percentile')
 
 ## Search
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs", "status"=>"final"})
