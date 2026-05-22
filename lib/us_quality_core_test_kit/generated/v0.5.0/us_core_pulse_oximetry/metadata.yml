@@ -199,12 +199,10 @@
   - :path: valueQuantity:valueQuantity.code
     :original_path: value[x]:valueQuantity.code
     :fixed_value: "%"
-  - :path: dataAbsentReason
   - :path: component
   - :path: component.code
   - :path: component.valueQuantity
     :original_path: component.value[x]
-  - :path: component.dataAbsentReason
   - :path: component:FlowRate.code
   - :path: component:FlowRate.valueQuantity
     :original_path: component:FlowRate.value[x]
@@ -218,7 +216,6 @@
   - :path: component:FlowRate.valueQuantity.code
     :original_path: component:FlowRate.value[x].code
     :fixed_value: L/min
-  - :path: component:FlowRate.dataAbsentReason
   - :path: component:Concentration.code
   - :path: component:Concentration.valueQuantity
     :original_path: component:Concentration.value[x]
@@ -232,7 +229,6 @@
   - :path: component:Concentration.valueQuantity.code
     :original_path: component:Concentration.value[x].code
     :fixed_value: "%"
-  - :path: component:Concentration.dataAbsentReason
 :mandatory_elements:
 - Observation.status
 - Observation.category

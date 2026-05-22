@@ -21,6 +21,12 @@
 - :expectation: SHALL
   :names:
   - patient
+  - code
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
   - category
   - status
   :names_not_must_support_or_mandatory: []
@@ -36,12 +42,6 @@
   - patient
   - category
   - date
-  :names_not_must_support_or_mandatory: []
-  :must_support_or_mandatory: true
-- :expectation: SHALL
-  :names:
-  - patient
-  - code
   :names_not_must_support_or_mandatory: []
   :must_support_or_mandatory: true
 :search_definitions:
@@ -166,12 +166,6 @@
   - :path: valueQuantity:valueQuantity.code
     :original_path: value[x]:valueQuantity.code
     :fixed_value: "%"
-  - :path: dataAbsentReason
-  - :path: component
-  - :path: component.code
-  - :path: component.valueQuantity
-    :original_path: component.value[x]
-  - :path: component.dataAbsentReason
 :mandatory_elements:
 - Observation.status
 - Observation.category
@@ -250,14 +244,14 @@
   - http://hl7.org/fhir/StructureDefinition/MolecularSequence
   - http://hl7.org/fhir/StructureDefinition/vitalsigns
 :tests:
+- :id: us_quality_core_v050_pediatric_bmi_for_age_patient_code_search_test
+  :file_name: pediatric_bmi_for_age_patient_code_search_test.rb
 - :id: us_quality_core_v050_pediatric_bmi_for_age_patient_category_status_search_test
   :file_name: pediatric_bmi_for_age_patient_category_status_search_test.rb
 - :id: us_quality_core_v050_pediatric_bmi_for_age_patient_category_search_test
   :file_name: pediatric_bmi_for_age_patient_category_search_test.rb
 - :id: us_quality_core_v050_pediatric_bmi_for_age_patient_category_date_search_test
   :file_name: pediatric_bmi_for_age_patient_category_date_search_test.rb
-- :id: us_quality_core_v050_pediatric_bmi_for_age_patient_code_search_test
-  :file_name: pediatric_bmi_for_age_patient_code_search_test.rb
 - :id: us_quality_core_v050_pediatric_bmi_for_age_read_test
   :file_name: pediatric_bmi_for_age_read_test.rb
 - :id: us_quality_core_v050_pediatric_bmi_for_age_validation_test

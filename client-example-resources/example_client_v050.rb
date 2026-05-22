@@ -470,10 +470,10 @@ results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient"
 FHIR::Observation.read('us-quality-core-test-kit-pediatric-bmi-for-age')
 
 ## Search
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"59576-9"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs", "status"=>"final"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs", "date"=>"ge2019-05-04"})
-results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"59576-9"})
 
 
 
@@ -522,10 +522,10 @@ results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient"
 FHIR::Observation.read('us-quality-core-test-kit-head-circumference-percentile')
 
 ## Search
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"8289-1"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs", "status"=>"final"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs", "date"=>"ge2020-07-01"})
-results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"8289-1"})
 
 
 
@@ -574,10 +574,10 @@ results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient"
 FHIR::Observation.read('us-quality-core-test-kit-pediatric-weight-for-height')
 
 ## Search
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"77606-2"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs", "status"=>"final"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs", "date"=>"ge2020-07-02"})
-results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"77606-2"})
 
 
 

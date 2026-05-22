@@ -306,10 +306,10 @@ module USQualityCoreTestKit
   * read id:
     * us-quality-core-test-kit-pediatric-bmi-for-age
   * searches:
+    * patient + code
     * patient + category + status
     * patient + category
     * patient + category + date
-    * patient + code
 * **UsCoreBodyHeight**
   * read id:
     * us-quality-core-test-kit-us-core-body-height
@@ -338,10 +338,10 @@ module USQualityCoreTestKit
   * read id:
     * us-quality-core-test-kit-head-circumference-percentile
   * searches:
+    * patient + code
     * patient + category + status
     * patient + category
     * patient + category + date
-    * patient + code
 * **UsCoreHeartRate**
   * read id:
     * us-quality-core-test-kit-us-core-heart-rate
@@ -370,10 +370,10 @@ module USQualityCoreTestKit
   * read id:
     * us-quality-core-test-kit-pediatric-weight-for-height
   * searches:
+    * patient + code
     * patient + category + status
     * patient + category
     * patient + category + date
-    * patient + code
 * **Procedure**
   * read id:
     * us-quality-core-test-kit-procedure

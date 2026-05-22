@@ -157,7 +157,6 @@
     :original_path: value[x]
   - :path: valueString
     :original_path: value[x]
-  - :path: dataAbsentReason
 :mandatory_elements:
 - Observation.status
 - Observation.category

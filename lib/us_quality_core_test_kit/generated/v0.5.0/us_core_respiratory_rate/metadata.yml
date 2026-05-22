@@ -166,12 +166,6 @@
   - :path: valueQuantity:valueQuantity.code
     :original_path: value[x]:valueQuantity.code
     :fixed_value: "/min"
-  - :path: dataAbsentReason
-  - :path: component
-  - :path: component.code
-  - :path: component.valueQuantity
-    :original_path: component.value[x]
-  - :path: component.dataAbsentReason
 :mandatory_elements:
 - Observation.status
 - Observation.category

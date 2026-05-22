@@ -164,9 +164,6 @@
     - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
   - :path: effectiveDateTime
     :original_path: effective[x]
-  - :path: valueQuantity
-    :original_path: value[x]
-  - :path: dataAbsentReason
   - :path: component
   - :path: component.code
   - :path: component.valueQuantity

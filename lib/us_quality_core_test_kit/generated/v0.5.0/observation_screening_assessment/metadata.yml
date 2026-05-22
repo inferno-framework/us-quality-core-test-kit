@@ -162,7 +162,6 @@
     :original_path: value[x]
   - :path: valueString
     :original_path: value[x]
-  - :path: dataAbsentReason
   - :path: hasMember
     :types:
     - Reference

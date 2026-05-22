@@ -442,6 +442,7 @@
           "coding": [
             {
               "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/sct/731000124108",
               "code": "454381000124105",
               "display": "Not sure of desire to become pregnant (finding)"
             }
@@ -573,10 +574,10 @@
             {
               "system": "http://snomed.info/sct",
               "code": "428041000124106",
-              "display": "Current some day smoker"
+              "display": "Occasional tobacco smoker"
             }
           ],
-          "text": "Current some day smoker"
+          "text": "Occasional tobacco smoker"
         },
         "text": {
           "status": "generated",
@@ -765,6 +766,107 @@
         "text": {
           "status": "generated",
           "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-us-core-blood-pressure</div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/us-quality-core-test-kit-us-core-bp-data-absent-reason",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/us-quality-core-test-kit-us-core-bp-data-absent-reason"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "us-quality-core-test-kit-us-core-bp-data-absent-reason",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure|6.1.0"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "85354-9",
+              "display": "Blood pressure panel with all children optional"
+            }
+          ],
+          "text": "Blood pressure panel with all children optional"
+        },
+        "subject": {
+          "reference": "Patient/us-quality-core-test-kit-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/us-quality-core-test-kit-encounter"
+        },
+        "effectiveDateTime": "1999-07-03",
+        "performer": [
+          {
+            "reference": "Organization/us-quality-core-test-kit-organization"
+          }
+        ],
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure"
+                }
+              ],
+              "text": "Systolic blood pressure"
+            },
+            "dataAbsentReason": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+                  "code": "unknown",
+                  "display": "Unknown"
+                }
+              ],
+              "text": "Unknown"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure"
+                }
+              ],
+              "text": "Diastolic blood pressure"
+            },
+            "dataAbsentReason": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+                  "code": "unknown",
+                  "display": "Unknown"
+                }
+              ],
+              "text": "Unknown"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-us-core-bp-data-absent-reason</div>"
         }
       }
     },
@@ -1437,7 +1539,277 @@
         },
         "target": [
           {
+            "reference": "Claim/us-quality-core-test-kit-claim"
+          },
+          {
+            "reference": "Specimen/us-quality-core-test-kit-specimen"
+          },
+          {
             "reference": "DocumentReference/us-quality-core-test-kit-document-reference"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-us-core-observation-pregnancyintent"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-us-core-observation-pregnancystatus"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-us-core-smokingstatus"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-us-core-observation-occupation"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-us-core-blood-pressure"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-us-core-bp-data-absent-reason"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-us-core-bmi"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-pediatric-bmi-for-age"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-us-core-body-height"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-us-core-body-temperature"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-us-core-body-weight"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-head-circumference-percentile"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-us-core-heart-rate"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-us-core-pulse-oximetry"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-us-core-respiratory-rate"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-pediatric-weight-for-height"
+          },
+          {
+            "reference": "ImagingStudy/us-quality-core-test-kit-imaging-study"
+          },
+          {
+            "reference": "AdverseEvent/us-quality-core-test-kit-adverse-event"
+          },
+          {
+            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance"
+          },
+          {
+            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup1"
+          },
+          {
+            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup10"
+          },
+          {
+            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup11"
+          },
+          {
+            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup12"
+          },
+          {
+            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup13"
+          },
+          {
+            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup14"
+          },
+          {
+            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup15"
+          },
+          {
+            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup16"
+          },
+          {
+            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup17"
+          },
+          {
+            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup18"
+          },
+          {
+            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup19"
+          },
+          {
+            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup2"
+          },
+          {
+            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup20"
+          },
+          {
+            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup3"
+          },
+          {
+            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup4"
+          },
+          {
+            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup5"
+          },
+          {
+            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup6"
+          },
+          {
+            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup7"
+          },
+          {
+            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup8"
+          },
+          {
+            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup9"
+          },
+          {
+            "reference": "CarePlan/us-quality-core-test-kit-care-plan"
+          },
+          {
+            "reference": "CareTeam/us-quality-core-test-kit-care-team"
+          },
+          {
+            "reference": "Condition/us-quality-core-test-kit-condition-encounter-diagnosis"
+          },
+          {
+            "reference": "Condition/us-quality-core-test-kit-condition-problems-health-concerns"
+          },
+          {
+            "reference": "Coverage/us-quality-core-test-kit-coverage"
+          },
+          {
+            "reference": "Device/us-quality-core-test-kit-device"
+          },
+          {
+            "reference": "DeviceRequest/us-quality-core-test-kit-devicenotrequested"
+          },
+          {
+            "reference": "DeviceRequest/us-quality-core-test-kit-devicerequest"
+          },
+          {
+            "reference": "DiagnosticReport/us-quality-core-test-kit-diagnostic-report-lab"
+          },
+          {
+            "reference": "DiagnosticReport/us-quality-core-test-kit-diagnostic-report-note"
+          },
+          {
+            "reference": "Encounter/us-quality-core-test-kit-encounter"
+          },
+          {
+            "reference": "FamilyMemberHistory/us-quality-core-test-kit-family-member-history"
+          },
+          {
+            "reference": "Goal/us-quality-core-test-kit-goal"
+          },
+          {
+            "reference": "Group/us-quality-core-test-kit-group"
+          },
+          {
+            "reference": "Immunization/us-quality-core-test-kit-immunization"
+          },
+          {
+            "reference": "Immunization/us-quality-core-test-kit-immunizationnotdone"
+          },
+          {
+            "reference": "Immunization/us-quality-core-test-kit-immunizationnotdone-2"
+          },
+          {
+            "reference": "MedicationAdministration/us-quality-core-test-kit-medicationadministration"
+          },
+          {
+            "reference": "MedicationAdministration/us-quality-core-test-kit-medicationadministrationnotdone"
+          },
+          {
+            "reference": "MedicationDispense/us-quality-core-test-kit-medicationdispense"
+          },
+          {
+            "reference": "MedicationDispense/us-quality-core-test-kit-medicationdispensedeclined"
+          },
+          {
+            "reference": "MedicationRequest/us-quality-core-test-kit-medicationnotrequested"
+          },
+          {
+            "reference": "MedicationRequest/us-quality-core-test-kit-medicationrequest"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-observation-clinical-result"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-observation-clinical-result-2"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-observation-clinical-result-3"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-observation-clinical-result-4"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-observation-lab"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-observation-lab-2"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-observation-lab-3"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-observation-lab-4"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-observation-screening-assessment"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-observation-screening-assessment-2"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-observation-screening-assessment-3"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-observation-screening-assessment-4"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-observationcancelled"
+          },
+          {
+            "reference": "Procedure/us-quality-core-test-kit-procedure"
+          },
+          {
+            "reference": "Procedure/us-quality-core-test-kit-procedurenotdone"
+          },
+          {
+            "reference": "QuestionnaireResponse/us-quality-core-test-kit-questionnaire-response"
+          },
+          {
+            "reference": "RelatedPerson/us-quality-core-test-kit-related-person"
+          },
+          {
+            "reference": "ServiceRequest/us-quality-core-test-kit-servicenotrequested"
+          },
+          {
+            "reference": "ServiceRequest/us-quality-core-test-kit-servicerequest"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-simple-observation"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-simple-observation-2"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-simple-observation-3"
+          },
+          {
+            "reference": "Observation/us-quality-core-test-kit-simple-observation-4"
+          },
+          {
+            "reference": "Task/us-quality-core-test-kit-task"
+          },
+          {
+            "reference": "Task/us-quality-core-test-kit-taskrejected"
+          },
+          {
+            "reference": "Task/us-quality-core-test-kit-taskrejected-2"
           }
         ],
         "recorded": "2015-02-15T16:30:00Z",
@@ -3525,6 +3897,16 @@
                 "code": "encounter-diagnosis"
               }
             ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "functional-status",
+                "display": "Functional Status"
+              }
+            ],
+            "text": "Functional Status"
           }
         ],
         "severity": {
@@ -7908,6 +8290,16 @@
                 "display": "Surgical Procedure"
               }
             ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "functional-status",
+                "display": "Functional Status"
+              }
+            ],
+            "text": "Functional Status"
           }
         ],
         "priority": "urgent",
@@ -7995,6 +8387,16 @@
                 "display": "Surgical Procedure"
               }
             ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "functional-status",
+                "display": "Functional Status"
+              }
+            ],
+            "text": "Functional Status"
           }
         ],
         "priority": "urgent",

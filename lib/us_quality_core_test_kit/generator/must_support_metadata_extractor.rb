@@ -67,6 +67,9 @@ module USQualityCoreTestKit
 
       def handle_special_cases
         remove_patient_gender_identity
+        remove_vital_sign_component
+        remove_blood_pressure_value_data_absent_reason
+        remove_observation_data_absent_reason
       end
     end
   end

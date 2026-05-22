@@ -17,11 +17,6 @@ module USQualityCoreTestKit
         * Observation.category:VSCat.coding.code
         * Observation.category:VSCat.coding.system
         * Observation.code.coding.code
-        * Observation.component
-        * Observation.component.code
-        * Observation.component.dataAbsentReason
-        * Observation.component.valueQuantity
-        * Observation.dataAbsentReason
         * Observation.effectiveDateTime
         * Observation.status
         * Observation.subject

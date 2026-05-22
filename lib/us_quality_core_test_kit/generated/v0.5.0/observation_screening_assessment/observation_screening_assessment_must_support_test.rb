@@ -15,7 +15,6 @@ module USQualityCoreTestKit
         * Observation.category:screening-assessment
         * Observation.category:survey
         * Observation.code
-        * Observation.dataAbsentReason
         * Observation.derivedFrom
         * Observation.effectiveDateTime
         * Observation.hasMember

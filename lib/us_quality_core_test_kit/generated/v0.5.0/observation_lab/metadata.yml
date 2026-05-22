@@ -146,7 +146,6 @@
     :original_path: value[x]
   - :path: valueString
     :original_path: value[x]
-  - :path: dataAbsentReason
   - :path: interpretation
     :us_quality_coreuscdi_plus_quality: true
   - :path: specimen

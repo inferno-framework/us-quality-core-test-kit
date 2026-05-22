@@ -22,11 +22,9 @@ module USQualityCoreTestKit
         * Observation.code.coding:PulseOx
         * Observation.component
         * Observation.component.code
-        * Observation.component.dataAbsentReason
         * Observation.component.valueQuantity
         * Observation.component:Concentration
         * Observation.component:Concentration.code
-        * Observation.component:Concentration.dataAbsentReason
         * Observation.component:Concentration.valueQuantity
         * Observation.component:Concentration.valueQuantity.code
         * Observation.component:Concentration.valueQuantity.system
@@ -34,13 +32,11 @@ module USQualityCoreTestKit
         * Observation.component:Concentration.valueQuantity.value
         * Observation.component:FlowRate
         * Observation.component:FlowRate.code
-        * Observation.component:FlowRate.dataAbsentReason
         * Observation.component:FlowRate.valueQuantity
         * Observation.component:FlowRate.valueQuantity.code
         * Observation.component:FlowRate.valueQuantity.system
         * Observation.component:FlowRate.valueQuantity.unit
         * Observation.component:FlowRate.valueQuantity.value
-        * Observation.dataAbsentReason
         * Observation.effectiveDateTime
         * Observation.status
         * Observation.subject

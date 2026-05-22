@@ -37,11 +37,9 @@ module USQualityCoreTestKit
         * Observation.component:systolic.valueQuantity.system
         * Observation.component:systolic.valueQuantity.unit
         * Observation.component:systolic.valueQuantity.value
-        * Observation.dataAbsentReason
         * Observation.effectiveDateTime
         * Observation.status
         * Observation.subject
-        * Observation.valueQuantity
       )
 
       id :us_quality_core_v050_us_core_blood_pressure_must_support_test
