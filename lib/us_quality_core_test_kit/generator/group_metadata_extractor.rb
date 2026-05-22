@@ -29,7 +29,11 @@ module USQualityCoreTestKit
           if category_first_profile?
             %w[patient category]
           elsif %w[Observation].include?(resource)
-            %w[patient category status]
+            if name.start_with?('us_core')
+              %w[patient code]
+            else 
+              %w[patient category status]
+            end
           elsif resource == 'MedicationRequest'
             %w[patient intent do-not-perform]
           elsif %w[DeviceRequest ServiceRequest].include?(resource)

@@ -361,7 +361,7 @@
             "attachment": {
               "contentType": "text/plain",
               "data": "VVMgUXVhbGl0eSBDb3JlIHRlc3Qga2l0IERvY3VtZW50UmVmZXJlbmNlIGNsaW5pY2FsIG5vdGUu",
-              "url": "http://example.org/fhir/Binary/us-quality-core-test-kit-document-reference-note",
+              "url": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
               "title": "US Quality Core test kit clinical note",
               "creation": "2015-02-15T16:30:00Z"
             },
@@ -8082,6 +8082,16 @@
               }
             ],
             "text": "Activity"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "functional-status",
+                "display": "Functional Status"
+              }
+            ],
+            "text": "Functional Status"
           }
         ],
         "code": {

@@ -21,6 +21,12 @@
 - :expectation: SHALL
   :names:
   - patient
+  - code
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
   - category
   - status
   :names_not_must_support_or_mandatory: []
@@ -36,12 +42,6 @@
   - patient
   - category
   - date
-  :names_not_must_support_or_mandatory: []
-  :must_support_or_mandatory: true
-- :expectation: SHALL
-  :names:
-  - patient
-  - code
   :names_not_must_support_or_mandatory: []
   :must_support_or_mandatory: true
 :search_definitions:
@@ -253,14 +253,14 @@
   - http://hl7.org/fhir/StructureDefinition/MolecularSequence
   - http://hl7.org/fhir/StructureDefinition/vitalsigns
 :tests:
+- :id: us_quality_core_v050_us_core_body_height_patient_code_search_test
+  :file_name: us_core_body_height_patient_code_search_test.rb
 - :id: us_quality_core_v050_us_core_body_height_patient_category_status_search_test
   :file_name: us_core_body_height_patient_category_status_search_test.rb
 - :id: us_quality_core_v050_us_core_body_height_patient_category_search_test
   :file_name: us_core_body_height_patient_category_search_test.rb
 - :id: us_quality_core_v050_us_core_body_height_patient_category_date_search_test
   :file_name: us_core_body_height_patient_category_date_search_test.rb
-- :id: us_quality_core_v050_us_core_body_height_patient_code_search_test
-  :file_name: us_core_body_height_patient_code_search_test.rb
 - :id: us_quality_core_v050_us_core_body_height_read_test
   :file_name: us_core_body_height_read_test.rb
 - :id: us_quality_core_v050_us_core_body_height_validation_test

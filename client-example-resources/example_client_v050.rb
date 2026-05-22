@@ -379,10 +379,10 @@ results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient"
 FHIR::Observation.read('us-quality-core-test-kit-us-core-observation-pregnancyintent')
 
 ## Search
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"86645-9"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"social-history", "status"=>"final"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"social-history"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"social-history", "date"=>"ge2022-09-23"})
-results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"86645-9"})
 
 
 
@@ -392,10 +392,10 @@ results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient"
 FHIR::Observation.read('us-quality-core-test-kit-us-core-observation-pregnancystatus')
 
 ## Search
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"82810-3"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"social-history", "status"=>"final"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"social-history"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"social-history", "date"=>"ge2022-08-24"})
-results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"82810-3"})
 
 
 
@@ -405,10 +405,10 @@ results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient"
 FHIR::Observation.read('us-quality-core-test-kit-us-core-smokingstatus')
 
 ## Search
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"72166-2"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"social-history", "status"=>"final"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"social-history"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"social-history", "date"=>"ge2016-03-18"})
-results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"72166-2"})
 
 
 
@@ -431,10 +431,10 @@ results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient"
 FHIR::Observation.read('us-quality-core-test-kit-us-core-observation-occupation')
 
 ## Search
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"11341-5"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"social-history", "status"=>"final"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"social-history"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"social-history", "date"=>"ge2015-04-24"})
-results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"11341-5"})
 
 
 
@@ -444,10 +444,10 @@ results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient"
 FHIR::Observation.read('us-quality-core-test-kit-us-core-blood-pressure')
 
 ## Search
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"85354-9"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs", "status"=>"final"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs", "date"=>"ge1999-07-02"})
-results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"85354-9"})
 
 
 
@@ -457,10 +457,10 @@ results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient"
 FHIR::Observation.read('us-quality-core-test-kit-us-core-bmi')
 
 ## Search
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"39156-5"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs", "status"=>"final"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs", "date"=>"ge1999-07-02"})
-results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"39156-5"})
 
 
 
@@ -483,10 +483,10 @@ results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient"
 FHIR::Observation.read('us-quality-core-test-kit-us-core-body-height')
 
 ## Search
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"8302-2"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs", "status"=>"final"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs", "date"=>"ge1999-07-02"})
-results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"8302-2"})
 
 
 
@@ -496,10 +496,10 @@ results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient"
 FHIR::Observation.read('us-quality-core-test-kit-us-core-body-temperature')
 
 ## Search
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"8310-5"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs", "status"=>"final"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs", "date"=>"ge1999-07-02"})
-results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"8310-5"})
 
 
 
@@ -509,10 +509,10 @@ results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient"
 FHIR::Observation.read('us-quality-core-test-kit-us-core-body-weight')
 
 ## Search
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"29463-7"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs", "status"=>"final"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs", "date"=>"ge1999-07-02"})
-results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"29463-7"})
 
 
 
@@ -535,10 +535,10 @@ results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient"
 FHIR::Observation.read('us-quality-core-test-kit-us-core-heart-rate')
 
 ## Search
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"8867-4"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs", "status"=>"final"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs", "date"=>"ge1999-07-02"})
-results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"8867-4"})
 
 
 
@@ -548,10 +548,10 @@ results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient"
 FHIR::Observation.read('us-quality-core-test-kit-us-core-pulse-oximetry')
 
 ## Search
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"59408-5"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs", "status"=>"final"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs", "date"=>"ge1999-07-02"})
-results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"59408-5"})
 
 
 
@@ -561,10 +561,10 @@ results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient"
 FHIR::Observation.read('us-quality-core-test-kit-us-core-respiratory-rate')
 
 ## Search
+results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"9279-1"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs", "status"=>"final"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs"})
 results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "category"=>"vital-signs", "date"=>"ge1999-07-02"})
-results? FHIR::Observation.search({"patient"=>"us-quality-core-test-kit-patient", "code"=>"9279-1"})
 
 
 
