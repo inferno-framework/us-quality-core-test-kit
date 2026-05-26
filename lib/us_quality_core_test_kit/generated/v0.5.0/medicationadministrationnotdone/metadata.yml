@@ -163,6 +163,8 @@
   :file_name: medicationadministrationnotdone_patient_effective_time_search_test.rb
 - :id: us_quality_core_v050_medicationadministrationnotdone_read_test
   :file_name: medicationadministrationnotdone_read_test.rb
+- :id: us_quality_core_v050_medicationadministrationnotdone_provenance_revinclude_search_test
+  :file_name: medicationadministrationnotdone_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_medicationadministrationnotdone_validation_test
   :file_name: medicationadministrationnotdone_validation_test.rb
 - :id: us_quality_core_v050_medicationadministrationnotdone_must_support_test

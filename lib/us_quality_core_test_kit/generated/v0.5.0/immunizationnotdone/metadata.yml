@@ -117,6 +117,8 @@
   :file_name: immunizationnotdone_patient_search_test.rb
 - :id: us_quality_core_v050_immunizationnotdone_read_test
   :file_name: immunizationnotdone_read_test.rb
+- :id: us_quality_core_v050_immunizationnotdone_provenance_revinclude_search_test
+  :file_name: immunizationnotdone_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_immunizationnotdone_validation_test
   :file_name: immunizationnotdone_validation_test.rb
 - :id: us_quality_core_v050_immunizationnotdone_must_support_test

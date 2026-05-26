@@ -2,8 +2,8 @@ require_relative '../../../search_test'
 require_relative '../../../generator/group_metadata'
 
 module USQualityCoreTestKit
-  module USCoreV050
-    class ObservationPregnancyintentProvenanceRevincludeSearchTest < Inferno::Test
+  module USQualityCoreV050
+    class UsCoreObservationPregnancyintentProvenanceRevincludeSearchTest < Inferno::Test
       include USQualityCoreTestKit::SearchTest
 
       title 'Server returns Provenance resources from Observation search by patient + code + revInclude:Provenance:target'
@@ -14,7 +14,7 @@ module USQualityCoreTestKit
         will pass if a Provenance resource is found in the response.
       %)
 
-      id :us_core_v050_observation_pregnancyintent_provenance_revinclude_search_test
+      id :us_quality_core_v050_us_core_observation_pregnancyintent_provenance_revinclude_search_test
   
       input :patient_ids,
         title: 'Patient IDs',
@@ -38,7 +38,7 @@ module USQualityCoreTestKit
       end
 
       def scratch_resources
-        scratch[:observation_pregnancyintent_resources] ||= {}
+        scratch[:us_core_observation_pregnancyintent_resources] ||= {}
       end
 
       def scratch_provenance_resources

@@ -3,6 +3,7 @@ require_relative 'us_core_observation_occupation/us_core_observation_occupation_
 require_relative 'us_core_observation_occupation/us_core_observation_occupation_patient_category_search_test'
 require_relative 'us_core_observation_occupation/us_core_observation_occupation_patient_category_date_search_test'
 require_relative 'us_core_observation_occupation/us_core_observation_occupation_read_test'
+require_relative 'us_core_observation_occupation/us_core_observation_occupation_provenance_revinclude_search_test'
 require_relative 'us_core_observation_occupation/us_core_observation_occupation_validation_test'
 require_relative 'us_core_observation_occupation/us_core_observation_occupation_must_support_test'
 require_relative 'us_core_observation_occupation/us_core_observation_occupation_reference_resolution_test'
@@ -91,6 +92,7 @@ read succeeds.
       test from: :us_quality_core_v050_us_core_observation_occupation_patient_category_search_test
       test from: :us_quality_core_v050_us_core_observation_occupation_patient_category_date_search_test
       test from: :us_quality_core_v050_us_core_observation_occupation_read_test
+      test from: :us_quality_core_v050_us_core_observation_occupation_provenance_revinclude_search_test
       test from: :us_quality_core_v050_us_core_observation_occupation_validation_test
       test from: :us_quality_core_v050_us_core_observation_occupation_must_support_test
       test from: :us_quality_core_v050_us_core_observation_occupation_reference_resolution_test

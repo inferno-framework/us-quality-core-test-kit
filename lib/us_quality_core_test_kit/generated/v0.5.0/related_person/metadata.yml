@@ -87,6 +87,8 @@
   :file_name: related_person_id_search_test.rb
 - :id: us_quality_core_v050_related_person_read_test
   :file_name: related_person_read_test.rb
+- :id: us_quality_core_v050_related_person_provenance_revinclude_search_test
+  :file_name: related_person_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_related_person_validation_test
   :file_name: related_person_validation_test.rb
 - :id: us_quality_core_v050_related_person_must_support_test

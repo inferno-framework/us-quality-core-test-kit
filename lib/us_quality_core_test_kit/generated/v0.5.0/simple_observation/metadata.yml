@@ -242,6 +242,8 @@
   :file_name: simple_observation_patient_code_search_test.rb
 - :id: us_quality_core_v050_simple_observation_read_test
   :file_name: simple_observation_read_test.rb
+- :id: us_quality_core_v050_simple_observation_provenance_revinclude_search_test
+  :file_name: simple_observation_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_simple_observation_validation_test
   :file_name: simple_observation_validation_test.rb
 - :id: us_quality_core_v050_simple_observation_must_support_test

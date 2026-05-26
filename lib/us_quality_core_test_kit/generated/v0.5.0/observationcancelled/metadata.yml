@@ -207,6 +207,8 @@
   :file_name: observationcancelled_patient_code_search_test.rb
 - :id: us_quality_core_v050_observationcancelled_read_test
   :file_name: observationcancelled_read_test.rb
+- :id: us_quality_core_v050_observationcancelled_provenance_revinclude_search_test
+  :file_name: observationcancelled_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_observationcancelled_validation_test
   :file_name: observationcancelled_validation_test.rb
 - :id: us_quality_core_v050_observationcancelled_must_support_test

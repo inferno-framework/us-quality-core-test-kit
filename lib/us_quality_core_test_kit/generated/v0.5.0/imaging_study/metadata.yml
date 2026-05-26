@@ -134,6 +134,8 @@
   :file_name: imaging_study_patient_procedure_code_search_test.rb
 - :id: us_quality_core_v050_imaging_study_read_test
   :file_name: imaging_study_read_test.rb
+- :id: us_quality_core_v050_imaging_study_provenance_revinclude_search_test
+  :file_name: imaging_study_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_imaging_study_validation_test
   :file_name: imaging_study_validation_test.rb
 - :id: us_quality_core_v050_imaging_study_must_support_test

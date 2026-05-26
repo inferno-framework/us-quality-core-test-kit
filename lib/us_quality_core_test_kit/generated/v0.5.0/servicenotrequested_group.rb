@@ -5,6 +5,7 @@ require_relative 'servicenotrequested/servicenotrequested_patient_category_searc
 require_relative 'servicenotrequested/servicenotrequested_patient_category_authored_search_test'
 require_relative 'servicenotrequested/servicenotrequested_patient_code_search_test'
 require_relative 'servicenotrequested/servicenotrequested_read_test'
+require_relative 'servicenotrequested/servicenotrequested_provenance_revinclude_search_test'
 require_relative 'servicenotrequested/servicenotrequested_validation_test'
 require_relative 'servicenotrequested/servicenotrequested_must_support_test'
 require_relative 'servicenotrequested/servicenotrequested_reference_resolution_test'
@@ -97,6 +98,7 @@ read succeeds.
       test from: :us_quality_core_v050_servicenotrequested_patient_category_authored_search_test
       test from: :us_quality_core_v050_servicenotrequested_patient_code_search_test
       test from: :us_quality_core_v050_servicenotrequested_read_test
+      test from: :us_quality_core_v050_servicenotrequested_provenance_revinclude_search_test
       test from: :us_quality_core_v050_servicenotrequested_validation_test
       test from: :us_quality_core_v050_servicenotrequested_must_support_test
       test from: :us_quality_core_v050_servicenotrequested_reference_resolution_test

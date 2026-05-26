@@ -2,6 +2,7 @@ require_relative 'task/task_patient_status_search_test'
 require_relative 'task/task_patient_search_test'
 require_relative 'task/task_patient_code_search_test'
 require_relative 'task/task_read_test'
+require_relative 'task/task_provenance_revinclude_search_test'
 require_relative 'task/task_validation_test'
 require_relative 'task/task_must_support_test'
 require_relative 'task/task_reference_resolution_test'
@@ -88,6 +89,7 @@ read succeeds.
       test from: :us_quality_core_v050_task_patient_search_test
       test from: :us_quality_core_v050_task_patient_code_search_test
       test from: :us_quality_core_v050_task_read_test
+      test from: :us_quality_core_v050_task_provenance_revinclude_search_test
       test from: :us_quality_core_v050_task_validation_test
       test from: :us_quality_core_v050_task_must_support_test
       test from: :us_quality_core_v050_task_reference_resolution_test

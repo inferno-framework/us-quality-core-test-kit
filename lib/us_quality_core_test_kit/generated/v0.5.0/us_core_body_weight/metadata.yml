@@ -257,6 +257,8 @@
   :file_name: us_core_body_weight_patient_category_date_search_test.rb
 - :id: us_quality_core_v050_us_core_body_weight_read_test
   :file_name: us_core_body_weight_read_test.rb
+- :id: us_quality_core_v050_us_core_body_weight_provenance_revinclude_search_test
+  :file_name: us_core_body_weight_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_us_core_body_weight_validation_test
   :file_name: us_core_body_weight_validation_test.rb
 - :id: us_quality_core_v050_us_core_body_weight_must_support_test

@@ -262,6 +262,8 @@
   :file_name: medicationrequest_patient_intent_search_test.rb
 - :id: us_quality_core_v050_medicationrequest_read_test
   :file_name: medicationrequest_read_test.rb
+- :id: us_quality_core_v050_medicationrequest_provenance_revinclude_search_test
+  :file_name: medicationrequest_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_medicationrequest_validation_test
   :file_name: medicationrequest_validation_test.rb
 - :id: us_quality_core_v050_medicationrequest_must_support_test

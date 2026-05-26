@@ -226,6 +226,8 @@
   :file_name: patient_id_search_test.rb
 - :id: us_quality_core_v050_patient_read_test
   :file_name: patient_read_test.rb
+- :id: us_quality_core_v050_patient_provenance_revinclude_search_test
+  :file_name: patient_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_patient_validation_test
   :file_name: patient_validation_test.rb
 - :id: us_quality_core_v050_patient_must_support_test

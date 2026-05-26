@@ -2,6 +2,7 @@ require_relative 'adverse_event/adverse_event_subject_search_test'
 require_relative 'adverse_event/adverse_event_subject_event_search_test'
 require_relative 'adverse_event/adverse_event_subject_recorded_date_search_test'
 require_relative 'adverse_event/adverse_event_read_test'
+require_relative 'adverse_event/adverse_event_provenance_revinclude_search_test'
 require_relative 'adverse_event/adverse_event_validation_test'
 require_relative 'adverse_event/adverse_event_must_support_test'
 require_relative 'adverse_event/adverse_event_reference_resolution_test'
@@ -88,6 +89,7 @@ read succeeds.
       test from: :us_quality_core_v050_adverse_event_subject_event_search_test
       test from: :us_quality_core_v050_adverse_event_subject_recorded_date_search_test
       test from: :us_quality_core_v050_adverse_event_read_test
+      test from: :us_quality_core_v050_adverse_event_provenance_revinclude_search_test
       test from: :us_quality_core_v050_adverse_event_validation_test
       test from: :us_quality_core_v050_adverse_event_must_support_test
       test from: :us_quality_core_v050_adverse_event_reference_resolution_test

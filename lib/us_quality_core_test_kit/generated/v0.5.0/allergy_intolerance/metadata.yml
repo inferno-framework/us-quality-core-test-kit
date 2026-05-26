@@ -113,6 +113,8 @@
   :file_name: allergy_intolerance_patient_search_test.rb
 - :id: us_quality_core_v050_allergy_intolerance_read_test
   :file_name: allergy_intolerance_read_test.rb
+- :id: us_quality_core_v050_allergy_intolerance_provenance_revinclude_search_test
+  :file_name: allergy_intolerance_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_allergy_intolerance_validation_test
   :file_name: allergy_intolerance_validation_test.rb
 - :id: us_quality_core_v050_allergy_intolerance_must_support_test

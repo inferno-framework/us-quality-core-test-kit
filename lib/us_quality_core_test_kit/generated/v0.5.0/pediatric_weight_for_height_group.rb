@@ -3,6 +3,7 @@ require_relative 'pediatric_weight_for_height/pediatric_weight_for_height_patien
 require_relative 'pediatric_weight_for_height/pediatric_weight_for_height_patient_category_search_test'
 require_relative 'pediatric_weight_for_height/pediatric_weight_for_height_patient_category_date_search_test'
 require_relative 'pediatric_weight_for_height/pediatric_weight_for_height_read_test'
+require_relative 'pediatric_weight_for_height/pediatric_weight_for_height_provenance_revinclude_search_test'
 require_relative 'pediatric_weight_for_height/pediatric_weight_for_height_validation_test'
 require_relative 'pediatric_weight_for_height/pediatric_weight_for_height_must_support_test'
 require_relative 'pediatric_weight_for_height/pediatric_weight_for_height_reference_resolution_test'
@@ -91,6 +92,7 @@ read succeeds.
       test from: :us_quality_core_v050_pediatric_weight_for_height_patient_category_search_test
       test from: :us_quality_core_v050_pediatric_weight_for_height_patient_category_date_search_test
       test from: :us_quality_core_v050_pediatric_weight_for_height_read_test
+      test from: :us_quality_core_v050_pediatric_weight_for_height_provenance_revinclude_search_test
       test from: :us_quality_core_v050_pediatric_weight_for_height_validation_test
       test from: :us_quality_core_v050_pediatric_weight_for_height_must_support_test
       test from: :us_quality_core_v050_pediatric_weight_for_height_reference_resolution_test

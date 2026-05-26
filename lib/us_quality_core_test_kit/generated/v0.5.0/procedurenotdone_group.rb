@@ -2,6 +2,7 @@ require_relative 'procedurenotdone/procedurenotdone_patient_status_search_test'
 require_relative 'procedurenotdone/procedurenotdone_patient_search_test'
 require_relative 'procedurenotdone/procedurenotdone_patient_date_search_test'
 require_relative 'procedurenotdone/procedurenotdone_read_test'
+require_relative 'procedurenotdone/procedurenotdone_provenance_revinclude_search_test'
 require_relative 'procedurenotdone/procedurenotdone_validation_test'
 require_relative 'procedurenotdone/procedurenotdone_must_support_test'
 require_relative 'procedurenotdone/procedurenotdone_reference_resolution_test'
@@ -88,6 +89,7 @@ read succeeds.
       test from: :us_quality_core_v050_procedurenotdone_patient_search_test
       test from: :us_quality_core_v050_procedurenotdone_patient_date_search_test
       test from: :us_quality_core_v050_procedurenotdone_read_test
+      test from: :us_quality_core_v050_procedurenotdone_provenance_revinclude_search_test
       test from: :us_quality_core_v050_procedurenotdone_validation_test
       test from: :us_quality_core_v050_procedurenotdone_must_support_test
       test from: :us_quality_core_v050_procedurenotdone_reference_resolution_test

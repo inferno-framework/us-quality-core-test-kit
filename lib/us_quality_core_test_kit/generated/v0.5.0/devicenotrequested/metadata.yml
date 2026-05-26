@@ -160,6 +160,8 @@
   :file_name: devicenotrequested_patient_code_search_test.rb
 - :id: us_quality_core_v050_devicenotrequested_read_test
   :file_name: devicenotrequested_read_test.rb
+- :id: us_quality_core_v050_devicenotrequested_provenance_revinclude_search_test
+  :file_name: devicenotrequested_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_devicenotrequested_validation_test
   :file_name: devicenotrequested_validation_test.rb
 - :id: us_quality_core_v050_devicenotrequested_must_support_test

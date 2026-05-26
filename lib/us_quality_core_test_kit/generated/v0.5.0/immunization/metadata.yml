@@ -119,6 +119,8 @@
   :file_name: immunization_patient_search_test.rb
 - :id: us_quality_core_v050_immunization_read_test
   :file_name: immunization_read_test.rb
+- :id: us_quality_core_v050_immunization_provenance_revinclude_search_test
+  :file_name: immunization_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_immunization_validation_test
   :file_name: immunization_validation_test.rb
 - :id: us_quality_core_v050_immunization_must_support_test

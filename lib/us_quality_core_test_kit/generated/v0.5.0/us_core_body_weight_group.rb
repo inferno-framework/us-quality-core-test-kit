@@ -3,6 +3,7 @@ require_relative 'us_core_body_weight/us_core_body_weight_patient_category_statu
 require_relative 'us_core_body_weight/us_core_body_weight_patient_category_search_test'
 require_relative 'us_core_body_weight/us_core_body_weight_patient_category_date_search_test'
 require_relative 'us_core_body_weight/us_core_body_weight_read_test'
+require_relative 'us_core_body_weight/us_core_body_weight_provenance_revinclude_search_test'
 require_relative 'us_core_body_weight/us_core_body_weight_validation_test'
 require_relative 'us_core_body_weight/us_core_body_weight_must_support_test'
 require_relative 'us_core_body_weight/us_core_body_weight_reference_resolution_test'
@@ -91,6 +92,7 @@ read succeeds.
       test from: :us_quality_core_v050_us_core_body_weight_patient_category_search_test
       test from: :us_quality_core_v050_us_core_body_weight_patient_category_date_search_test
       test from: :us_quality_core_v050_us_core_body_weight_read_test
+      test from: :us_quality_core_v050_us_core_body_weight_provenance_revinclude_search_test
       test from: :us_quality_core_v050_us_core_body_weight_validation_test
       test from: :us_quality_core_v050_us_core_body_weight_must_support_test
       test from: :us_quality_core_v050_us_core_body_weight_reference_resolution_test

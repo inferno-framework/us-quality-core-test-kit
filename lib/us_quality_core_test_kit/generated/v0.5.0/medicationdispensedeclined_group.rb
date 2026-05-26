@@ -1,6 +1,7 @@
 require_relative 'medicationdispensedeclined/medicationdispensedeclined_patient_status_search_test'
 require_relative 'medicationdispensedeclined/medicationdispensedeclined_patient_search_test'
 require_relative 'medicationdispensedeclined/medicationdispensedeclined_read_test'
+require_relative 'medicationdispensedeclined/medicationdispensedeclined_provenance_revinclude_search_test'
 require_relative 'medicationdispensedeclined/medicationdispensedeclined_validation_test'
 require_relative 'medicationdispensedeclined/medicationdispensedeclined_must_support_test'
 require_relative 'medicationdispensedeclined/medicationdispensedeclined_reference_resolution_test'
@@ -85,6 +86,7 @@ read succeeds.
       test from: :us_quality_core_v050_medicationdispensedeclined_patient_status_search_test
       test from: :us_quality_core_v050_medicationdispensedeclined_patient_search_test
       test from: :us_quality_core_v050_medicationdispensedeclined_read_test
+      test from: :us_quality_core_v050_medicationdispensedeclined_provenance_revinclude_search_test
       test from: :us_quality_core_v050_medicationdispensedeclined_validation_test
       test from: :us_quality_core_v050_medicationdispensedeclined_must_support_test
       test from: :us_quality_core_v050_medicationdispensedeclined_reference_resolution_test

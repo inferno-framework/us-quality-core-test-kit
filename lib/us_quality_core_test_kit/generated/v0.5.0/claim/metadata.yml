@@ -167,6 +167,8 @@
   :file_name: claim_patient_search_test.rb
 - :id: us_quality_core_v050_claim_read_test
   :file_name: claim_read_test.rb
+- :id: us_quality_core_v050_claim_provenance_revinclude_search_test
+  :file_name: claim_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_claim_validation_test
   :file_name: claim_validation_test.rb
 - :id: us_quality_core_v050_claim_must_support_test

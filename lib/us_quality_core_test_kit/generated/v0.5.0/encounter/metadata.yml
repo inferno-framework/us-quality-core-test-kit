@@ -226,6 +226,8 @@
   :file_name: encounter_patient_type_search_test.rb
 - :id: us_quality_core_v050_encounter_patient_date_search_test
   :file_name: encounter_patient_date_search_test.rb
+- :id: us_quality_core_v050_encounter_provenance_revinclude_search_test
+  :file_name: encounter_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_encounter_validation_test
   :file_name: encounter_validation_test.rb
 - :id: us_quality_core_v050_encounter_must_support_test

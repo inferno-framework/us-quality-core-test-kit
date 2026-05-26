@@ -194,6 +194,8 @@
   :file_name: task_patient_code_search_test.rb
 - :id: us_quality_core_v050_task_read_test
   :file_name: task_read_test.rb
+- :id: us_quality_core_v050_task_provenance_revinclude_search_test
+  :file_name: task_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_task_validation_test
   :file_name: task_validation_test.rb
 - :id: us_quality_core_v050_task_must_support_test

@@ -179,6 +179,8 @@
   :file_name: condition_problems_health_concerns_patient_code_search_test.rb
 - :id: us_quality_core_v050_condition_problems_health_concerns_read_test
   :file_name: condition_problems_health_concerns_read_test.rb
+- :id: us_quality_core_v050_condition_problems_health_concerns_provenance_revinclude_search_test
+  :file_name: condition_problems_health_concerns_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_condition_problems_health_concerns_validation_test
   :file_name: condition_problems_health_concerns_validation_test.rb
 - :id: us_quality_core_v050_condition_problems_health_concerns_must_support_test

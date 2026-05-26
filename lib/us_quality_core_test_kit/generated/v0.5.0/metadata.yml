@@ -186,6 +186,8 @@
     :file_name: adverse_event_subject_recorded_date_search_test.rb
   - :id: us_quality_core_v050_adverse_event_read_test
     :file_name: adverse_event_read_test.rb
+  - :id: us_quality_core_v050_adverse_event_provenance_revinclude_search_test
+    :file_name: adverse_event_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_adverse_event_validation_test
     :file_name: adverse_event_validation_test.rb
   - :id: us_quality_core_v050_adverse_event_must_support_test
@@ -327,6 +329,8 @@
     :file_name: allergy_intolerance_patient_search_test.rb
   - :id: us_quality_core_v050_allergy_intolerance_read_test
     :file_name: allergy_intolerance_read_test.rb
+  - :id: us_quality_core_v050_allergy_intolerance_provenance_revinclude_search_test
+    :file_name: allergy_intolerance_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_allergy_intolerance_validation_test
     :file_name: allergy_intolerance_validation_test.rb
   - :id: us_quality_core_v050_allergy_intolerance_must_support_test
@@ -527,6 +531,8 @@
     :file_name: care_plan_patient_category_search_test.rb
   - :id: us_quality_core_v050_care_plan_read_test
     :file_name: care_plan_read_test.rb
+  - :id: us_quality_core_v050_care_plan_provenance_revinclude_search_test
+    :file_name: care_plan_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_care_plan_validation_test
     :file_name: care_plan_validation_test.rb
   - :id: us_quality_core_v050_care_plan_must_support_test
@@ -644,6 +650,8 @@
     :file_name: care_team_patient_status_search_test.rb
   - :id: us_quality_core_v050_care_team_read_test
     :file_name: care_team_read_test.rb
+  - :id: us_quality_core_v050_care_team_provenance_revinclude_search_test
+    :file_name: care_team_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_care_team_validation_test
     :file_name: care_team_validation_test.rb
   - :id: us_quality_core_v050_care_team_must_support_test
@@ -827,6 +835,8 @@
     :file_name: claim_patient_search_test.rb
   - :id: us_quality_core_v050_claim_read_test
     :file_name: claim_read_test.rb
+  - :id: us_quality_core_v050_claim_provenance_revinclude_search_test
+    :file_name: claim_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_claim_validation_test
     :file_name: claim_validation_test.rb
   - :id: us_quality_core_v050_claim_must_support_test
@@ -1016,6 +1026,8 @@
     :file_name: condition_encounter_diagnosis_patient_code_search_test.rb
   - :id: us_quality_core_v050_condition_encounter_diagnosis_read_test
     :file_name: condition_encounter_diagnosis_read_test.rb
+  - :id: us_quality_core_v050_condition_encounter_diagnosis_provenance_revinclude_search_test
+    :file_name: condition_encounter_diagnosis_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_condition_encounter_diagnosis_validation_test
     :file_name: condition_encounter_diagnosis_validation_test.rb
   - :id: us_quality_core_v050_condition_encounter_diagnosis_must_support_test
@@ -1208,6 +1220,8 @@
     :file_name: condition_problems_health_concerns_patient_code_search_test.rb
   - :id: us_quality_core_v050_condition_problems_health_concerns_read_test
     :file_name: condition_problems_health_concerns_read_test.rb
+  - :id: us_quality_core_v050_condition_problems_health_concerns_provenance_revinclude_search_test
+    :file_name: condition_problems_health_concerns_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_condition_problems_health_concerns_validation_test
     :file_name: condition_problems_health_concerns_validation_test.rb
   - :id: us_quality_core_v050_condition_problems_health_concerns_must_support_test
@@ -1353,6 +1367,8 @@
     :file_name: coverage_patient_search_test.rb
   - :id: us_quality_core_v050_coverage_read_test
     :file_name: coverage_read_test.rb
+  - :id: us_quality_core_v050_coverage_provenance_revinclude_search_test
+    :file_name: coverage_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_coverage_validation_test
     :file_name: coverage_validation_test.rb
   - :id: us_quality_core_v050_coverage_must_support_test
@@ -1526,6 +1542,8 @@
     :file_name: devicerequest_patient_code_search_test.rb
   - :id: us_quality_core_v050_devicerequest_read_test
     :file_name: devicerequest_read_test.rb
+  - :id: us_quality_core_v050_devicerequest_provenance_revinclude_search_test
+    :file_name: devicerequest_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_devicerequest_validation_test
     :file_name: devicerequest_validation_test.rb
   - :id: us_quality_core_v050_devicerequest_must_support_test
@@ -1696,6 +1714,8 @@
     :file_name: devicenotrequested_patient_code_search_test.rb
   - :id: us_quality_core_v050_devicenotrequested_read_test
     :file_name: devicenotrequested_read_test.rb
+  - :id: us_quality_core_v050_devicenotrequested_provenance_revinclude_search_test
+    :file_name: devicenotrequested_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_devicenotrequested_validation_test
     :file_name: devicenotrequested_validation_test.rb
   - :id: us_quality_core_v050_devicenotrequested_must_support_test
@@ -1914,6 +1934,8 @@
     :file_name: diagnostic_report_note_patient_code_search_test.rb
   - :id: us_quality_core_v050_diagnostic_report_note_read_test
     :file_name: diagnostic_report_note_read_test.rb
+  - :id: us_quality_core_v050_diagnostic_report_note_provenance_revinclude_search_test
+    :file_name: diagnostic_report_note_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_diagnostic_report_note_validation_test
     :file_name: diagnostic_report_note_validation_test.rb
   - :id: us_quality_core_v050_diagnostic_report_note_must_support_test
@@ -2118,6 +2140,8 @@
     :file_name: diagnostic_report_lab_patient_code_search_test.rb
   - :id: us_quality_core_v050_diagnostic_report_lab_read_test
     :file_name: diagnostic_report_lab_read_test.rb
+  - :id: us_quality_core_v050_diagnostic_report_lab_provenance_revinclude_search_test
+    :file_name: diagnostic_report_lab_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_diagnostic_report_lab_validation_test
     :file_name: diagnostic_report_lab_validation_test.rb
   - :id: us_quality_core_v050_diagnostic_report_lab_must_support_test
@@ -2370,6 +2394,8 @@
     :file_name: document_reference_patient_category_date_search_test.rb
   - :id: us_quality_core_v050_document_reference_read_test
     :file_name: document_reference_read_test.rb
+  - :id: us_quality_core_v050_document_reference_provenance_revinclude_search_test
+    :file_name: document_reference_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_document_reference_validation_test
     :file_name: document_reference_validation_test.rb
   - :id: us_quality_core_v050_document_reference_must_support_test
@@ -2607,6 +2633,8 @@
     :file_name: encounter_patient_type_search_test.rb
   - :id: us_quality_core_v050_encounter_patient_date_search_test
     :file_name: encounter_patient_date_search_test.rb
+  - :id: us_quality_core_v050_encounter_provenance_revinclude_search_test
+    :file_name: encounter_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_encounter_validation_test
     :file_name: encounter_validation_test.rb
   - :id: us_quality_core_v050_encounter_must_support_test
@@ -2708,6 +2736,8 @@
     :file_name: family_member_history_patient_search_test.rb
   - :id: us_quality_core_v050_family_member_history_read_test
     :file_name: family_member_history_read_test.rb
+  - :id: us_quality_core_v050_family_member_history_provenance_revinclude_search_test
+    :file_name: family_member_history_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_family_member_history_validation_test
     :file_name: family_member_history_validation_test.rb
   - :id: us_quality_core_v050_family_member_history_must_support_test
@@ -2806,6 +2836,8 @@
     :file_name: goal_patient_search_test.rb
   - :id: us_quality_core_v050_goal_read_test
     :file_name: goal_read_test.rb
+  - :id: us_quality_core_v050_goal_provenance_revinclude_search_test
+    :file_name: goal_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_goal_validation_test
     :file_name: goal_validation_test.rb
   - :id: us_quality_core_v050_goal_must_support_test
@@ -2951,6 +2983,8 @@
     :file_name: imaging_study_patient_procedure_code_search_test.rb
   - :id: us_quality_core_v050_imaging_study_read_test
     :file_name: imaging_study_read_test.rb
+  - :id: us_quality_core_v050_imaging_study_provenance_revinclude_search_test
+    :file_name: imaging_study_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_imaging_study_validation_test
     :file_name: imaging_study_validation_test.rb
   - :id: us_quality_core_v050_imaging_study_must_support_test
@@ -3100,6 +3134,8 @@
     :file_name: immunization_patient_search_test.rb
   - :id: us_quality_core_v050_immunization_read_test
     :file_name: immunization_read_test.rb
+  - :id: us_quality_core_v050_immunization_provenance_revinclude_search_test
+    :file_name: immunization_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_immunization_validation_test
     :file_name: immunization_validation_test.rb
   - :id: us_quality_core_v050_immunization_must_support_test
@@ -3227,6 +3263,8 @@
     :file_name: immunizationnotdone_patient_search_test.rb
   - :id: us_quality_core_v050_immunizationnotdone_read_test
     :file_name: immunizationnotdone_read_test.rb
+  - :id: us_quality_core_v050_immunizationnotdone_provenance_revinclude_search_test
+    :file_name: immunizationnotdone_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_immunizationnotdone_validation_test
     :file_name: immunizationnotdone_validation_test.rb
   - :id: us_quality_core_v050_immunizationnotdone_must_support_test
@@ -3571,6 +3609,8 @@
     :file_name: medicationadministration_patient_effective_time_search_test.rb
   - :id: us_quality_core_v050_medicationadministration_read_test
     :file_name: medicationadministration_read_test.rb
+  - :id: us_quality_core_v050_medicationadministration_provenance_revinclude_search_test
+    :file_name: medicationadministration_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_medicationadministration_validation_test
     :file_name: medicationadministration_validation_test.rb
   - :id: us_quality_core_v050_medicationadministration_must_support_test
@@ -3747,6 +3787,8 @@
     :file_name: medicationadministrationnotdone_patient_effective_time_search_test.rb
   - :id: us_quality_core_v050_medicationadministrationnotdone_read_test
     :file_name: medicationadministrationnotdone_read_test.rb
+  - :id: us_quality_core_v050_medicationadministrationnotdone_provenance_revinclude_search_test
+    :file_name: medicationadministrationnotdone_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_medicationadministrationnotdone_validation_test
     :file_name: medicationadministrationnotdone_validation_test.rb
   - :id: us_quality_core_v050_medicationadministrationnotdone_must_support_test
@@ -3922,6 +3964,8 @@
     :file_name: medicationdispense_patient_search_test.rb
   - :id: us_quality_core_v050_medicationdispense_read_test
     :file_name: medicationdispense_read_test.rb
+  - :id: us_quality_core_v050_medicationdispense_provenance_revinclude_search_test
+    :file_name: medicationdispense_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_medicationdispense_validation_test
     :file_name: medicationdispense_validation_test.rb
   - :id: us_quality_core_v050_medicationdispense_must_support_test
@@ -4086,6 +4130,8 @@
     :file_name: medicationdispensedeclined_patient_search_test.rb
   - :id: us_quality_core_v050_medicationdispensedeclined_read_test
     :file_name: medicationdispensedeclined_read_test.rb
+  - :id: us_quality_core_v050_medicationdispensedeclined_provenance_revinclude_search_test
+    :file_name: medicationdispensedeclined_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_medicationdispensedeclined_validation_test
     :file_name: medicationdispensedeclined_validation_test.rb
   - :id: us_quality_core_v050_medicationdispensedeclined_must_support_test
@@ -4359,6 +4405,8 @@
     :file_name: medicationrequest_patient_intent_search_test.rb
   - :id: us_quality_core_v050_medicationrequest_read_test
     :file_name: medicationrequest_read_test.rb
+  - :id: us_quality_core_v050_medicationrequest_provenance_revinclude_search_test
+    :file_name: medicationrequest_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_medicationrequest_validation_test
     :file_name: medicationrequest_validation_test.rb
   - :id: us_quality_core_v050_medicationrequest_must_support_test
@@ -4605,6 +4653,8 @@
     :file_name: medicationnotrequested_patient_intent_search_test.rb
   - :id: us_quality_core_v050_medicationnotrequested_read_test
     :file_name: medicationnotrequested_read_test.rb
+  - :id: us_quality_core_v050_medicationnotrequested_provenance_revinclude_search_test
+    :file_name: medicationnotrequested_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_medicationnotrequested_validation_test
     :file_name: medicationnotrequested_validation_test.rb
   - :id: us_quality_core_v050_medicationnotrequested_must_support_test
@@ -4860,6 +4910,8 @@
     :file_name: observation_clinical_result_patient_code_search_test.rb
   - :id: us_quality_core_v050_observation_clinical_result_read_test
     :file_name: observation_clinical_result_read_test.rb
+  - :id: us_quality_core_v050_observation_clinical_result_provenance_revinclude_search_test
+    :file_name: observation_clinical_result_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_observation_clinical_result_validation_test
     :file_name: observation_clinical_result_validation_test.rb
   - :id: us_quality_core_v050_observation_clinical_result_must_support_test
@@ -5112,6 +5164,8 @@
     :file_name: simple_observation_patient_code_search_test.rb
   - :id: us_quality_core_v050_simple_observation_read_test
     :file_name: simple_observation_read_test.rb
+  - :id: us_quality_core_v050_simple_observation_provenance_revinclude_search_test
+    :file_name: simple_observation_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_simple_observation_validation_test
     :file_name: simple_observation_validation_test.rb
   - :id: us_quality_core_v050_simple_observation_must_support_test
@@ -5375,6 +5429,8 @@
     :file_name: observation_screening_assessment_patient_code_search_test.rb
   - :id: us_quality_core_v050_observation_screening_assessment_read_test
     :file_name: observation_screening_assessment_read_test.rb
+  - :id: us_quality_core_v050_observation_screening_assessment_provenance_revinclude_search_test
+    :file_name: observation_screening_assessment_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_observation_screening_assessment_validation_test
     :file_name: observation_screening_assessment_validation_test.rb
   - :id: us_quality_core_v050_observation_screening_assessment_must_support_test
@@ -5597,6 +5653,8 @@
     :file_name: observationcancelled_patient_code_search_test.rb
   - :id: us_quality_core_v050_observationcancelled_read_test
     :file_name: observationcancelled_read_test.rb
+  - :id: us_quality_core_v050_observationcancelled_provenance_revinclude_search_test
+    :file_name: observationcancelled_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_observationcancelled_validation_test
     :file_name: observationcancelled_validation_test.rb
   - :id: us_quality_core_v050_observationcancelled_must_support_test
@@ -5837,6 +5895,8 @@
     :file_name: us_core_observation_pregnancyintent_patient_category_date_search_test.rb
   - :id: us_quality_core_v050_us_core_observation_pregnancyintent_read_test
     :file_name: us_core_observation_pregnancyintent_read_test.rb
+  - :id: us_quality_core_v050_us_core_observation_pregnancyintent_provenance_revinclude_search_test
+    :file_name: us_core_observation_pregnancyintent_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_us_core_observation_pregnancyintent_validation_test
     :file_name: us_core_observation_pregnancyintent_validation_test.rb
   - :id: us_quality_core_v050_us_core_observation_pregnancyintent_must_support_test
@@ -6075,6 +6135,8 @@
     :file_name: us_core_observation_pregnancystatus_patient_category_date_search_test.rb
   - :id: us_quality_core_v050_us_core_observation_pregnancystatus_read_test
     :file_name: us_core_observation_pregnancystatus_read_test.rb
+  - :id: us_quality_core_v050_us_core_observation_pregnancystatus_provenance_revinclude_search_test
+    :file_name: us_core_observation_pregnancystatus_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_us_core_observation_pregnancystatus_validation_test
     :file_name: us_core_observation_pregnancystatus_validation_test.rb
   - :id: us_quality_core_v050_us_core_observation_pregnancystatus_must_support_test
@@ -6303,6 +6365,8 @@
     :file_name: us_core_smokingstatus_patient_category_date_search_test.rb
   - :id: us_quality_core_v050_us_core_smokingstatus_read_test
     :file_name: us_core_smokingstatus_read_test.rb
+  - :id: us_quality_core_v050_us_core_smokingstatus_provenance_revinclude_search_test
+    :file_name: us_core_smokingstatus_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_us_core_smokingstatus_validation_test
     :file_name: us_core_smokingstatus_validation_test.rb
   - :id: us_quality_core_v050_us_core_smokingstatus_must_support_test
@@ -6547,6 +6611,8 @@
     :file_name: observation_lab_patient_code_search_test.rb
   - :id: us_quality_core_v050_observation_lab_read_test
     :file_name: observation_lab_read_test.rb
+  - :id: us_quality_core_v050_observation_lab_provenance_revinclude_search_test
+    :file_name: observation_lab_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_observation_lab_validation_test
     :file_name: observation_lab_validation_test.rb
   - :id: us_quality_core_v050_observation_lab_must_support_test
@@ -6799,6 +6865,8 @@
     :file_name: us_core_observation_occupation_patient_category_date_search_test.rb
   - :id: us_quality_core_v050_us_core_observation_occupation_read_test
     :file_name: us_core_observation_occupation_read_test.rb
+  - :id: us_quality_core_v050_us_core_observation_occupation_provenance_revinclude_search_test
+    :file_name: us_core_observation_occupation_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_us_core_observation_occupation_validation_test
     :file_name: us_core_observation_occupation_validation_test.rb
   - :id: us_quality_core_v050_us_core_observation_occupation_must_support_test
@@ -7099,6 +7167,8 @@
     :file_name: us_core_blood_pressure_patient_category_date_search_test.rb
   - :id: us_quality_core_v050_us_core_blood_pressure_read_test
     :file_name: us_core_blood_pressure_read_test.rb
+  - :id: us_quality_core_v050_us_core_blood_pressure_provenance_revinclude_search_test
+    :file_name: us_core_blood_pressure_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_us_core_blood_pressure_validation_test
     :file_name: us_core_blood_pressure_validation_test.rb
   - :id: us_quality_core_v050_us_core_blood_pressure_must_support_test
@@ -7363,6 +7433,8 @@
     :file_name: us_core_bmi_patient_category_date_search_test.rb
   - :id: us_quality_core_v050_us_core_bmi_read_test
     :file_name: us_core_bmi_read_test.rb
+  - :id: us_quality_core_v050_us_core_bmi_provenance_revinclude_search_test
+    :file_name: us_core_bmi_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_us_core_bmi_validation_test
     :file_name: us_core_bmi_validation_test.rb
   - :id: us_quality_core_v050_us_core_bmi_must_support_test
@@ -7627,6 +7699,8 @@
     :file_name: pediatric_bmi_for_age_patient_category_date_search_test.rb
   - :id: us_quality_core_v050_pediatric_bmi_for_age_read_test
     :file_name: pediatric_bmi_for_age_read_test.rb
+  - :id: us_quality_core_v050_pediatric_bmi_for_age_provenance_revinclude_search_test
+    :file_name: pediatric_bmi_for_age_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_pediatric_bmi_for_age_validation_test
     :file_name: pediatric_bmi_for_age_validation_test.rb
   - :id: us_quality_core_v050_pediatric_bmi_for_age_must_support_test
@@ -7894,6 +7968,8 @@
     :file_name: us_core_body_height_patient_category_date_search_test.rb
   - :id: us_quality_core_v050_us_core_body_height_read_test
     :file_name: us_core_body_height_read_test.rb
+  - :id: us_quality_core_v050_us_core_body_height_provenance_revinclude_search_test
+    :file_name: us_core_body_height_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_us_core_body_height_validation_test
     :file_name: us_core_body_height_validation_test.rb
   - :id: us_quality_core_v050_us_core_body_height_must_support_test
@@ -8161,6 +8237,8 @@
     :file_name: us_core_body_temperature_patient_category_date_search_test.rb
   - :id: us_quality_core_v050_us_core_body_temperature_read_test
     :file_name: us_core_body_temperature_read_test.rb
+  - :id: us_quality_core_v050_us_core_body_temperature_provenance_revinclude_search_test
+    :file_name: us_core_body_temperature_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_us_core_body_temperature_validation_test
     :file_name: us_core_body_temperature_validation_test.rb
   - :id: us_quality_core_v050_us_core_body_temperature_must_support_test
@@ -8428,6 +8506,8 @@
     :file_name: us_core_body_weight_patient_category_date_search_test.rb
   - :id: us_quality_core_v050_us_core_body_weight_read_test
     :file_name: us_core_body_weight_read_test.rb
+  - :id: us_quality_core_v050_us_core_body_weight_provenance_revinclude_search_test
+    :file_name: us_core_body_weight_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_us_core_body_weight_validation_test
     :file_name: us_core_body_weight_validation_test.rb
   - :id: us_quality_core_v050_us_core_body_weight_must_support_test
@@ -8693,6 +8773,8 @@
     :file_name: head_occipital_frontal_circumference_percentile_patient_category_date_search_test.rb
   - :id: us_quality_core_v050_head_occipital_frontal_circumference_percentile_read_test
     :file_name: head_occipital_frontal_circumference_percentile_read_test.rb
+  - :id: us_quality_core_v050_head_occipital_frontal_circumference_percentile_provenance_revinclude_search_test
+    :file_name: head_occipital_frontal_circumference_percentile_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_head_occipital_frontal_circumference_percentile_validation_test
     :file_name: head_occipital_frontal_circumference_percentile_validation_test.rb
   - :id: us_quality_core_v050_head_occipital_frontal_circumference_percentile_must_support_test
@@ -8957,6 +9039,8 @@
     :file_name: us_core_heart_rate_patient_category_date_search_test.rb
   - :id: us_quality_core_v050_us_core_heart_rate_read_test
     :file_name: us_core_heart_rate_read_test.rb
+  - :id: us_quality_core_v050_us_core_heart_rate_provenance_revinclude_search_test
+    :file_name: us_core_heart_rate_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_us_core_heart_rate_validation_test
     :file_name: us_core_heart_rate_validation_test.rb
   - :id: us_quality_core_v050_us_core_heart_rate_must_support_test
@@ -9297,6 +9381,8 @@
     :file_name: us_core_pulse_oximetry_patient_category_date_search_test.rb
   - :id: us_quality_core_v050_us_core_pulse_oximetry_read_test
     :file_name: us_core_pulse_oximetry_read_test.rb
+  - :id: us_quality_core_v050_us_core_pulse_oximetry_provenance_revinclude_search_test
+    :file_name: us_core_pulse_oximetry_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_us_core_pulse_oximetry_validation_test
     :file_name: us_core_pulse_oximetry_validation_test.rb
   - :id: us_quality_core_v050_us_core_pulse_oximetry_must_support_test
@@ -9561,6 +9647,8 @@
     :file_name: us_core_respiratory_rate_patient_category_date_search_test.rb
   - :id: us_quality_core_v050_us_core_respiratory_rate_read_test
     :file_name: us_core_respiratory_rate_read_test.rb
+  - :id: us_quality_core_v050_us_core_respiratory_rate_provenance_revinclude_search_test
+    :file_name: us_core_respiratory_rate_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_us_core_respiratory_rate_validation_test
     :file_name: us_core_respiratory_rate_validation_test.rb
   - :id: us_quality_core_v050_us_core_respiratory_rate_must_support_test
@@ -9825,6 +9913,8 @@
     :file_name: pediatric_weight_for_height_patient_category_date_search_test.rb
   - :id: us_quality_core_v050_pediatric_weight_for_height_read_test
     :file_name: pediatric_weight_for_height_read_test.rb
+  - :id: us_quality_core_v050_pediatric_weight_for_height_provenance_revinclude_search_test
+    :file_name: pediatric_weight_for_height_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_pediatric_weight_for_height_validation_test
     :file_name: pediatric_weight_for_height_validation_test.rb
   - :id: us_quality_core_v050_pediatric_weight_for_height_must_support_test
@@ -10179,6 +10269,8 @@
     :file_name: patient_id_search_test.rb
   - :id: us_quality_core_v050_patient_read_test
     :file_name: patient_read_test.rb
+  - :id: us_quality_core_v050_patient_provenance_revinclude_search_test
+    :file_name: patient_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_patient_validation_test
     :file_name: patient_validation_test.rb
   - :id: us_quality_core_v050_patient_must_support_test
@@ -10645,6 +10737,8 @@
     :file_name: procedure_patient_date_search_test.rb
   - :id: us_quality_core_v050_procedure_read_test
     :file_name: procedure_read_test.rb
+  - :id: us_quality_core_v050_procedure_provenance_revinclude_search_test
+    :file_name: procedure_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_procedure_validation_test
     :file_name: procedure_validation_test.rb
   - :id: us_quality_core_v050_procedure_must_support_test
@@ -10856,6 +10950,8 @@
     :file_name: procedurenotdone_patient_date_search_test.rb
   - :id: us_quality_core_v050_procedurenotdone_read_test
     :file_name: procedurenotdone_read_test.rb
+  - :id: us_quality_core_v050_procedurenotdone_provenance_revinclude_search_test
+    :file_name: procedurenotdone_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_procedurenotdone_validation_test
     :file_name: procedurenotdone_validation_test.rb
   - :id: us_quality_core_v050_procedurenotdone_must_support_test
@@ -11095,6 +11191,8 @@
     :file_name: related_person_id_search_test.rb
   - :id: us_quality_core_v050_related_person_read_test
     :file_name: related_person_read_test.rb
+  - :id: us_quality_core_v050_related_person_provenance_revinclude_search_test
+    :file_name: related_person_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_related_person_validation_test
     :file_name: related_person_validation_test.rb
   - :id: us_quality_core_v050_related_person_must_support_test
@@ -11375,6 +11473,8 @@
     :file_name: servicerequest_patient_code_search_test.rb
   - :id: us_quality_core_v050_servicerequest_read_test
     :file_name: servicerequest_read_test.rb
+  - :id: us_quality_core_v050_servicerequest_provenance_revinclude_search_test
+    :file_name: servicerequest_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_servicerequest_validation_test
     :file_name: servicerequest_validation_test.rb
   - :id: us_quality_core_v050_servicerequest_must_support_test
@@ -11667,6 +11767,8 @@
     :file_name: servicenotrequested_patient_code_search_test.rb
   - :id: us_quality_core_v050_servicenotrequested_read_test
     :file_name: servicenotrequested_read_test.rb
+  - :id: us_quality_core_v050_servicenotrequested_provenance_revinclude_search_test
+    :file_name: servicenotrequested_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_servicenotrequested_validation_test
     :file_name: servicenotrequested_validation_test.rb
   - :id: us_quality_core_v050_servicenotrequested_must_support_test
@@ -11964,6 +12066,8 @@
     :file_name: task_patient_code_search_test.rb
   - :id: us_quality_core_v050_task_read_test
     :file_name: task_read_test.rb
+  - :id: us_quality_core_v050_task_provenance_revinclude_search_test
+    :file_name: task_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_task_validation_test
     :file_name: task_validation_test.rb
   - :id: us_quality_core_v050_task_must_support_test
@@ -12155,6 +12259,8 @@
     :file_name: taskrejected_patient_code_search_test.rb
   - :id: us_quality_core_v050_taskrejected_read_test
     :file_name: taskrejected_read_test.rb
+  - :id: us_quality_core_v050_taskrejected_provenance_revinclude_search_test
+    :file_name: taskrejected_provenance_revinclude_search_test.rb
   - :id: us_quality_core_v050_taskrejected_validation_test
     :file_name: taskrejected_validation_test.rb
   - :id: us_quality_core_v050_taskrejected_must_support_test

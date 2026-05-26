@@ -2,6 +2,7 @@ require_relative 'devicenotrequested/devicenotrequested_patient_do_not_perform_s
 require_relative 'devicenotrequested/devicenotrequested_patient_search_test'
 require_relative 'devicenotrequested/devicenotrequested_patient_code_search_test'
 require_relative 'devicenotrequested/devicenotrequested_read_test'
+require_relative 'devicenotrequested/devicenotrequested_provenance_revinclude_search_test'
 require_relative 'devicenotrequested/devicenotrequested_validation_test'
 require_relative 'devicenotrequested/devicenotrequested_must_support_test'
 
@@ -87,6 +88,7 @@ read succeeds.
       test from: :us_quality_core_v050_devicenotrequested_patient_search_test
       test from: :us_quality_core_v050_devicenotrequested_patient_code_search_test
       test from: :us_quality_core_v050_devicenotrequested_read_test
+      test from: :us_quality_core_v050_devicenotrequested_provenance_revinclude_search_test
       test from: :us_quality_core_v050_devicenotrequested_validation_test
       test from: :us_quality_core_v050_devicenotrequested_must_support_test
     end

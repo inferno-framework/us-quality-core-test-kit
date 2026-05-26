@@ -1,5 +1,6 @@
 require_relative 'allergy_intolerance/allergy_intolerance_patient_search_test'
 require_relative 'allergy_intolerance/allergy_intolerance_read_test'
+require_relative 'allergy_intolerance/allergy_intolerance_provenance_revinclude_search_test'
 require_relative 'allergy_intolerance/allergy_intolerance_validation_test'
 require_relative 'allergy_intolerance/allergy_intolerance_must_support_test'
 require_relative 'allergy_intolerance/allergy_intolerance_reference_resolution_test'
@@ -82,6 +83,7 @@ read succeeds.
   
       test from: :us_quality_core_v050_allergy_intolerance_patient_search_test
       test from: :us_quality_core_v050_allergy_intolerance_read_test
+      test from: :us_quality_core_v050_allergy_intolerance_provenance_revinclude_search_test
       test from: :us_quality_core_v050_allergy_intolerance_validation_test
       test from: :us_quality_core_v050_allergy_intolerance_must_support_test
       test from: :us_quality_core_v050_allergy_intolerance_reference_resolution_test

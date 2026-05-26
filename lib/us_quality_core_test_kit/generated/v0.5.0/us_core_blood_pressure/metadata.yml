@@ -290,6 +290,8 @@
   :file_name: us_core_blood_pressure_patient_category_date_search_test.rb
 - :id: us_quality_core_v050_us_core_blood_pressure_read_test
   :file_name: us_core_blood_pressure_read_test.rb
+- :id: us_quality_core_v050_us_core_blood_pressure_provenance_revinclude_search_test
+  :file_name: us_core_blood_pressure_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_us_core_blood_pressure_validation_test
   :file_name: us_core_blood_pressure_validation_test.rb
 - :id: us_quality_core_v050_us_core_blood_pressure_must_support_test

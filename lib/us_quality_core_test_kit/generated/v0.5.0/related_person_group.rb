@@ -1,6 +1,7 @@
 require_relative 'related_person/related_person_patient_search_test'
 require_relative 'related_person/related_person_id_search_test'
 require_relative 'related_person/related_person_read_test'
+require_relative 'related_person/related_person_provenance_revinclude_search_test'
 require_relative 'related_person/related_person_validation_test'
 require_relative 'related_person/related_person_must_support_test'
 require_relative 'related_person/related_person_reference_resolution_test'
@@ -85,6 +86,7 @@ read succeeds.
       test from: :us_quality_core_v050_related_person_patient_search_test
       test from: :us_quality_core_v050_related_person__id_search_test
       test from: :us_quality_core_v050_related_person_read_test
+      test from: :us_quality_core_v050_related_person_provenance_revinclude_search_test
       test from: :us_quality_core_v050_related_person_validation_test
       test from: :us_quality_core_v050_related_person_must_support_test
       test from: :us_quality_core_v050_related_person_reference_resolution_test

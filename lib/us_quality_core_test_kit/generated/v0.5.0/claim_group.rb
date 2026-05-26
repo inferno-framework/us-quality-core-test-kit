@@ -1,5 +1,6 @@
 require_relative 'claim/claim_patient_search_test'
 require_relative 'claim/claim_read_test'
+require_relative 'claim/claim_provenance_revinclude_search_test'
 require_relative 'claim/claim_validation_test'
 require_relative 'claim/claim_must_support_test'
 require_relative 'claim/claim_reference_resolution_test'
@@ -82,6 +83,7 @@ read succeeds.
   
       test from: :us_quality_core_v050_claim_patient_search_test
       test from: :us_quality_core_v050_claim_read_test
+      test from: :us_quality_core_v050_claim_provenance_revinclude_search_test
       test from: :us_quality_core_v050_claim_validation_test
       test from: :us_quality_core_v050_claim_must_support_test
       test from: :us_quality_core_v050_claim_reference_resolution_test

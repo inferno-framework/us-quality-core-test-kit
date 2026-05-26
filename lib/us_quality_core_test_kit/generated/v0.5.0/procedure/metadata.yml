@@ -201,6 +201,8 @@
   :file_name: procedure_patient_date_search_test.rb
 - :id: us_quality_core_v050_procedure_read_test
   :file_name: procedure_read_test.rb
+- :id: us_quality_core_v050_procedure_provenance_revinclude_search_test
+  :file_name: procedure_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_procedure_validation_test
   :file_name: procedure_validation_test.rb
 - :id: us_quality_core_v050_procedure_must_support_test

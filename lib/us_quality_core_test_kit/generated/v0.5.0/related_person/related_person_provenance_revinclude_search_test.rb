@@ -2,7 +2,7 @@ require_relative '../../../search_test'
 require_relative '../../../generator/group_metadata'
 
 module USQualityCoreTestKit
-  module USCoreV050
+  module USQualityCoreV050
     class RelatedPersonProvenanceRevincludeSearchTest < Inferno::Test
       include USQualityCoreTestKit::SearchTest
 
@@ -14,7 +14,7 @@ module USQualityCoreTestKit
         will pass if a Provenance resource is found in the response.
       %)
 
-      id :us_core_v050_related_person_provenance_revinclude_search_test
+      id :us_quality_core_v050_related_person_provenance_revinclude_search_test
   
       input :patient_ids,
         title: 'Patient IDs',

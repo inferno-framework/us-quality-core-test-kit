@@ -2,19 +2,19 @@ require_relative '../../../search_test'
 require_relative '../../../generator/group_metadata'
 
 module USQualityCoreTestKit
-  module USCoreV050
-    class DeviceRequestProvenanceRevincludeSearchTest < Inferno::Test
+  module USQualityCoreV050
+    class UsCoreObservationPregnancystatusProvenanceRevincludeSearchTest < Inferno::Test
       include USQualityCoreTestKit::SearchTest
 
-      title 'Server returns Provenance resources from DeviceRequest search by patient + do-not-perform + revInclude:Provenance:target'
+      title 'Server returns Provenance resources from Observation search by patient + code + revInclude:Provenance:target'
       description %(
         A server SHALL be capable of supporting _revIncludes:Provenance:target.
 
-        This test will perform a search by patient + do-not-perform + revInclude:Provenance:target and
+        This test will perform a search by patient + code + revInclude:Provenance:target and
         will pass if a Provenance resource is found in the response.
       %)
 
-      id :us_core_v050_device_request_provenance_revinclude_search_test
+      id :us_quality_core_v050_us_core_observation_pregnancystatus_provenance_revinclude_search_test
   
       input :patient_ids,
         title: 'Patient IDs',
@@ -23,8 +23,9 @@ module USQualityCoreTestKit
       def properties
         @properties ||= SearchTestProperties.new(
           fixed_value_search: true,
-        resource_type: 'DeviceRequest',
-        search_param_names: ['patient', 'do-not-perform']
+        resource_type: 'Observation',
+        search_param_names: ['patient', 'code'],
+        possible_status_search: true
         )
       end
 
@@ -37,7 +38,7 @@ module USQualityCoreTestKit
       end
 
       def scratch_resources
-        scratch[:device_request_resources] ||= {}
+        scratch[:us_core_observation_pregnancystatus_resources] ||= {}
       end
 
       def scratch_provenance_resources

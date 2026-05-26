@@ -1,5 +1,6 @@
 require_relative 'family_member_history/family_member_history_patient_search_test'
 require_relative 'family_member_history/family_member_history_read_test'
+require_relative 'family_member_history/family_member_history_provenance_revinclude_search_test'
 require_relative 'family_member_history/family_member_history_validation_test'
 require_relative 'family_member_history/family_member_history_must_support_test'
 
@@ -81,6 +82,7 @@ read succeeds.
   
       test from: :us_quality_core_v050_family_member_history_patient_search_test
       test from: :us_quality_core_v050_family_member_history_read_test
+      test from: :us_quality_core_v050_family_member_history_provenance_revinclude_search_test
       test from: :us_quality_core_v050_family_member_history_validation_test
       test from: :us_quality_core_v050_family_member_history_must_support_test
     end

@@ -277,6 +277,8 @@
   :file_name: servicenotrequested_patient_code_search_test.rb
 - :id: us_quality_core_v050_servicenotrequested_read_test
   :file_name: servicenotrequested_read_test.rb
+- :id: us_quality_core_v050_servicenotrequested_provenance_revinclude_search_test
+  :file_name: servicenotrequested_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_servicenotrequested_validation_test
   :file_name: servicenotrequested_validation_test.rb
 - :id: us_quality_core_v050_servicenotrequested_must_support_test
