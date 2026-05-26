@@ -26,7 +26,7 @@
       "type": "text",
       "title": "Patient IDs",
       "description": "Comma separated list of patient IDs that in sum contain all MUST SUPPORT elements",
-      "value": "us-quality-core-test-kit-patient"
+      "value": "usqualitycore-patient"
     }
   ]
 }

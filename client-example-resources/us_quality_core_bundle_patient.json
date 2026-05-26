@@ -253,14 +253,14 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Specimen/us-quality-core-test-kit-specimen",
+      "fullUrl": "http://example.org/fhir/Specimen/usqualitycore-specimen",
       "request": {
         "method": "PUT",
-        "url": "Specimen/us-quality-core-test-kit-specimen"
+        "url": "Specimen/usqualitycore-specimen"
       },
       "resource": {
         "resourceType": "Specimen",
-        "id": "us-quality-core-test-kit-specimen",
+        "id": "usqualitycore-specimen",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen|6.1.0"
@@ -296,19 +296,19 @@
         ],
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-specimen</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-specimen</div>"
         }
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/DocumentReference/us-quality-core-test-kit-document-reference",
+      "fullUrl": "http://example.org/fhir/DocumentReference/usqualitycore-document-reference",
       "request": {
         "method": "PUT",
-        "url": "DocumentReference/us-quality-core-test-kit-document-reference"
+        "url": "DocumentReference/usqualitycore-document-reference"
       },
       "resource": {
         "resourceType": "DocumentReference",
-        "id": "us-quality-core-test-kit-document-reference",
+        "id": "usqualitycore-document-reference",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|6.1.0"
@@ -317,7 +317,7 @@
         "identifier": [
           {
             "system": "https://github.com/inferno-framework/us-quality-core-test-kit/document-reference",
-            "value": "us-quality-core-test-kit-document-reference"
+            "value": "usqualitycore-document-reference"
           }
         ],
         "status": "current",
@@ -344,16 +344,16 @@
           }
         ],
         "subject": {
-          "reference": "Patient/us-quality-core-test-kit-patient"
+          "reference": "Patient/usqualitycore-patient"
         },
         "date": "2015-02-15T16:30:00Z",
         "author": [
           {
-            "reference": "Practitioner/us-quality-core-test-kit-practitioner"
+            "reference": "Practitioner/usqualitycore-practitioner"
           }
         ],
         "custodian": {
-          "reference": "Organization/us-quality-core-test-kit-organization"
+          "reference": "Organization/usqualitycore-organization"
         },
         "description": "History and physical note for the US Quality Core test kit encounter.",
         "content": [
@@ -375,7 +375,7 @@
         "context": {
           "encounter": [
             {
-              "reference": "Encounter/us-quality-core-test-kit-encounter"
+              "reference": "Encounter/usqualitycore-encounter"
             }
           ],
           "period": {
@@ -385,19 +385,19 @@
         },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-document-reference</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-document-reference</div>"
         }
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/us-quality-core-test-kit-us-core-observation-pregnancyintent",
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-observation-pregnancyintent",
       "request": {
         "method": "PUT",
-        "url": "Observation/us-quality-core-test-kit-us-core-observation-pregnancyintent"
+        "url": "Observation/usqualitycore-us-core-observation-pregnancyintent"
       },
       "resource": {
         "resourceType": "Observation",
-        "id": "us-quality-core-test-kit-us-core-observation-pregnancyintent",
+        "id": "usqualitycore-us-core-observation-pregnancyintent",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancyintent|6.1.0"
@@ -427,15 +427,15 @@
           "text": "Pregnancy intention in the next year - Reported"
         },
         "subject": {
-          "reference": "Patient/us-quality-core-test-kit-patient"
+          "reference": "Patient/usqualitycore-patient"
         },
         "encounter": {
-          "reference": "Encounter/us-quality-core-test-kit-encounter"
+          "reference": "Encounter/usqualitycore-encounter"
         },
         "effectiveDateTime": "2022-09-23T22:39:43Z",
         "performer": [
           {
-            "reference": "Organization/us-quality-core-test-kit-organization"
+            "reference": "Organization/usqualitycore-organization"
           }
         ],
         "valueCodeableConcept": {
@@ -451,19 +451,19 @@
         },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-us-core-observation-pregnancyintent</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-observation-pregnancyintent</div>"
         }
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/us-quality-core-test-kit-us-core-observation-pregnancystatus",
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-observation-pregnancystatus",
       "request": {
         "method": "PUT",
-        "url": "Observation/us-quality-core-test-kit-us-core-observation-pregnancystatus"
+        "url": "Observation/usqualitycore-us-core-observation-pregnancystatus"
       },
       "resource": {
         "resourceType": "Observation",
-        "id": "us-quality-core-test-kit-us-core-observation-pregnancystatus",
+        "id": "usqualitycore-us-core-observation-pregnancystatus",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus|6.1.0"
@@ -493,15 +493,15 @@
           "text": "Pregnancy status"
         },
         "subject": {
-          "reference": "Patient/us-quality-core-test-kit-patient"
+          "reference": "Patient/usqualitycore-patient"
         },
         "encounter": {
-          "reference": "Encounter/us-quality-core-test-kit-encounter"
+          "reference": "Encounter/usqualitycore-encounter"
         },
         "effectiveDateTime": "2022-08-24T10:39:52Z",
         "performer": [
           {
-            "reference": "Organization/us-quality-core-test-kit-organization"
+            "reference": "Organization/usqualitycore-organization"
           }
         ],
         "valueCodeableConcept": {
@@ -516,19 +516,19 @@
         },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-us-core-observation-pregnancystatus</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-observation-pregnancystatus</div>"
         }
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/us-quality-core-test-kit-us-core-smokingstatus",
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-smokingstatus",
       "request": {
         "method": "PUT",
-        "url": "Observation/us-quality-core-test-kit-us-core-smokingstatus"
+        "url": "Observation/usqualitycore-us-core-smokingstatus"
       },
       "resource": {
         "resourceType": "Observation",
-        "id": "us-quality-core-test-kit-us-core-smokingstatus",
+        "id": "usqualitycore-us-core-smokingstatus",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus|6.1.0"
@@ -558,15 +558,15 @@
           "text": "Tobacco smoking status"
         },
         "subject": {
-          "reference": "Patient/us-quality-core-test-kit-patient"
+          "reference": "Patient/usqualitycore-patient"
         },
         "encounter": {
-          "reference": "Encounter/us-quality-core-test-kit-encounter"
+          "reference": "Encounter/usqualitycore-encounter"
         },
         "effectiveDateTime": "2016-03-18T05:27:04Z",
         "performer": [
           {
-            "reference": "Organization/us-quality-core-test-kit-organization"
+            "reference": "Organization/usqualitycore-organization"
           }
         ],
         "valueCodeableConcept": {
@@ -581,19 +581,19 @@
         },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-us-core-smokingstatus</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-smokingstatus</div>"
         }
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/us-quality-core-test-kit-us-core-observation-occupation",
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-observation-occupation",
       "request": {
         "method": "PUT",
-        "url": "Observation/us-quality-core-test-kit-us-core-observation-occupation"
+        "url": "Observation/usqualitycore-us-core-observation-occupation"
       },
       "resource": {
         "resourceType": "Observation",
-        "id": "us-quality-core-test-kit-us-core-observation-occupation",
+        "id": "usqualitycore-us-core-observation-occupation",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation|6.1.0"
@@ -623,17 +623,17 @@
           "text": "History of Occupation"
         },
         "subject": {
-          "reference": "Patient/us-quality-core-test-kit-patient"
+          "reference": "Patient/usqualitycore-patient"
         },
         "encounter": {
-          "reference": "Encounter/us-quality-core-test-kit-encounter"
+          "reference": "Encounter/usqualitycore-encounter"
         },
         "effectivePeriod": {
           "start": "2015-04-24"
         },
         "performer": [
           {
-            "reference": "Organization/us-quality-core-test-kit-organization"
+            "reference": "Organization/usqualitycore-organization"
           }
         ],
         "valueCodeableConcept": {
@@ -672,19 +672,19 @@
         ],
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-us-core-observation-occupation</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-observation-occupation</div>"
         }
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/us-quality-core-test-kit-us-core-blood-pressure",
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-blood-pressure",
       "request": {
         "method": "PUT",
-        "url": "Observation/us-quality-core-test-kit-us-core-blood-pressure"
+        "url": "Observation/usqualitycore-us-core-blood-pressure"
       },
       "resource": {
         "resourceType": "Observation",
-        "id": "us-quality-core-test-kit-us-core-blood-pressure",
+        "id": "usqualitycore-us-core-blood-pressure",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure|6.1.0"
@@ -714,15 +714,15 @@
           "text": "Blood pressure panel with all children optional"
         },
         "subject": {
-          "reference": "Patient/us-quality-core-test-kit-patient"
+          "reference": "Patient/usqualitycore-patient"
         },
         "encounter": {
-          "reference": "Encounter/us-quality-core-test-kit-encounter"
+          "reference": "Encounter/usqualitycore-encounter"
         },
         "effectiveDateTime": "1999-07-02",
         "performer": [
           {
-            "reference": "Organization/us-quality-core-test-kit-organization"
+            "reference": "Organization/usqualitycore-organization"
           }
         ],
         "component": [
@@ -765,19 +765,19 @@
         ],
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-us-core-blood-pressure</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-blood-pressure</div>"
         }
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/us-quality-core-test-kit-us-core-bp-data-absent-reason",
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-bp-data-absent-reason",
       "request": {
         "method": "PUT",
-        "url": "Observation/us-quality-core-test-kit-us-core-bp-data-absent-reason"
+        "url": "Observation/usqualitycore-us-core-bp-data-absent-reason"
       },
       "resource": {
         "resourceType": "Observation",
-        "id": "us-quality-core-test-kit-us-core-bp-data-absent-reason",
+        "id": "usqualitycore-us-core-bp-data-absent-reason",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure|6.1.0"
@@ -807,15 +807,15 @@
           "text": "Blood pressure panel with all children optional"
         },
         "subject": {
-          "reference": "Patient/us-quality-core-test-kit-patient"
+          "reference": "Patient/usqualitycore-patient"
         },
         "encounter": {
-          "reference": "Encounter/us-quality-core-test-kit-encounter"
+          "reference": "Encounter/usqualitycore-encounter"
         },
         "effectiveDateTime": "1999-07-03",
         "performer": [
           {
-            "reference": "Organization/us-quality-core-test-kit-organization"
+            "reference": "Organization/usqualitycore-organization"
           }
         ],
         "component": [
@@ -866,19 +866,19 @@
         ],
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-us-core-bp-data-absent-reason</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-bp-data-absent-reason</div>"
         }
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/us-quality-core-test-kit-us-core-bmi",
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-bmi",
       "request": {
         "method": "PUT",
-        "url": "Observation/us-quality-core-test-kit-us-core-bmi"
+        "url": "Observation/usqualitycore-us-core-bmi"
       },
       "resource": {
         "resourceType": "Observation",
-        "id": "us-quality-core-test-kit-us-core-bmi",
+        "id": "usqualitycore-us-core-bmi",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bmi|6.1.0"
@@ -908,15 +908,15 @@
           "text": "Body mass index (BMI) [Ratio]"
         },
         "subject": {
-          "reference": "Patient/us-quality-core-test-kit-patient"
+          "reference": "Patient/usqualitycore-patient"
         },
         "encounter": {
-          "reference": "Encounter/us-quality-core-test-kit-encounter"
+          "reference": "Encounter/usqualitycore-encounter"
         },
         "effectiveDateTime": "1999-07-02",
         "performer": [
           {
-            "reference": "Organization/us-quality-core-test-kit-organization"
+            "reference": "Organization/usqualitycore-organization"
           }
         ],
         "valueQuantity": {
@@ -927,19 +927,19 @@
         },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-us-core-bmi</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-bmi</div>"
         }
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/us-quality-core-test-kit-pediatric-bmi-for-age",
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-pediatric-bmi-for-age",
       "request": {
         "method": "PUT",
-        "url": "Observation/us-quality-core-test-kit-pediatric-bmi-for-age"
+        "url": "Observation/usqualitycore-pediatric-bmi-for-age"
       },
       "resource": {
         "resourceType": "Observation",
-        "id": "us-quality-core-test-kit-pediatric-bmi-for-age",
+        "id": "usqualitycore-pediatric-bmi-for-age",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-bmi-for-age|6.1.0"
@@ -969,15 +969,15 @@
           "text": "Body mass index (BMI) [Percentile] Per age and sex"
         },
         "subject": {
-          "reference": "Patient/us-quality-core-test-kit-patient"
+          "reference": "Patient/usqualitycore-patient"
         },
         "encounter": {
-          "reference": "Encounter/us-quality-core-test-kit-encounter"
+          "reference": "Encounter/usqualitycore-encounter"
         },
         "effectiveDateTime": "2019-05-04T12:12:29-07:00",
         "performer": [
           {
-            "reference": "Organization/us-quality-core-test-kit-organization"
+            "reference": "Organization/usqualitycore-organization"
           }
         ],
         "valueQuantity": {
@@ -988,19 +988,19 @@
         },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-pediatric-bmi-for-age</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-pediatric-bmi-for-age</div>"
         }
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/us-quality-core-test-kit-us-core-body-height",
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-body-height",
       "request": {
         "method": "PUT",
-        "url": "Observation/us-quality-core-test-kit-us-core-body-height"
+        "url": "Observation/usqualitycore-us-core-body-height"
       },
       "resource": {
         "resourceType": "Observation",
-        "id": "us-quality-core-test-kit-us-core-body-height",
+        "id": "usqualitycore-us-core-body-height",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height|6.1.0"
@@ -1030,15 +1030,15 @@
           "text": "Body height"
         },
         "subject": {
-          "reference": "Patient/us-quality-core-test-kit-patient"
+          "reference": "Patient/usqualitycore-patient"
         },
         "encounter": {
-          "reference": "Encounter/us-quality-core-test-kit-encounter"
+          "reference": "Encounter/usqualitycore-encounter"
         },
         "effectiveDateTime": "1999-07-02",
         "performer": [
           {
-            "reference": "Organization/us-quality-core-test-kit-organization"
+            "reference": "Organization/usqualitycore-organization"
           }
         ],
         "valueQuantity": {
@@ -1049,19 +1049,19 @@
         },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-us-core-body-height</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-body-height</div>"
         }
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/us-quality-core-test-kit-us-core-body-temperature",
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-body-temperature",
       "request": {
         "method": "PUT",
-        "url": "Observation/us-quality-core-test-kit-us-core-body-temperature"
+        "url": "Observation/usqualitycore-us-core-body-temperature"
       },
       "resource": {
         "resourceType": "Observation",
-        "id": "us-quality-core-test-kit-us-core-body-temperature",
+        "id": "usqualitycore-us-core-body-temperature",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature|6.1.0"
@@ -1091,15 +1091,15 @@
           "text": "Body temperature"
         },
         "subject": {
-          "reference": "Patient/us-quality-core-test-kit-patient"
+          "reference": "Patient/usqualitycore-patient"
         },
         "encounter": {
-          "reference": "Encounter/us-quality-core-test-kit-encounter"
+          "reference": "Encounter/usqualitycore-encounter"
         },
         "effectiveDateTime": "1999-07-02",
         "performer": [
           {
-            "reference": "Organization/us-quality-core-test-kit-organization"
+            "reference": "Organization/usqualitycore-organization"
           }
         ],
         "valueQuantity": {
@@ -1110,19 +1110,19 @@
         },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-us-core-body-temperature</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-body-temperature</div>"
         }
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/us-quality-core-test-kit-us-core-body-weight",
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-body-weight",
       "request": {
         "method": "PUT",
-        "url": "Observation/us-quality-core-test-kit-us-core-body-weight"
+        "url": "Observation/usqualitycore-us-core-body-weight"
       },
       "resource": {
         "resourceType": "Observation",
-        "id": "us-quality-core-test-kit-us-core-body-weight",
+        "id": "usqualitycore-us-core-body-weight",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-weight|6.1.0"
@@ -1152,15 +1152,15 @@
           "text": "Body Weight"
         },
         "subject": {
-          "reference": "Patient/us-quality-core-test-kit-patient"
+          "reference": "Patient/usqualitycore-patient"
         },
         "encounter": {
-          "reference": "Encounter/us-quality-core-test-kit-encounter"
+          "reference": "Encounter/usqualitycore-encounter"
         },
         "effectiveDateTime": "1999-07-02",
         "performer": [
           {
-            "reference": "Organization/us-quality-core-test-kit-organization"
+            "reference": "Organization/usqualitycore-organization"
           }
         ],
         "valueQuantity": {
@@ -1171,19 +1171,19 @@
         },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-us-core-body-weight</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-body-weight</div>"
         }
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/us-quality-core-test-kit-head-circumference-percentile",
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-head-circumference-percentile",
       "request": {
         "method": "PUT",
-        "url": "Observation/us-quality-core-test-kit-head-circumference-percentile"
+        "url": "Observation/usqualitycore-head-circumference-percentile"
       },
       "resource": {
         "resourceType": "Observation",
-        "id": "us-quality-core-test-kit-head-circumference-percentile",
+        "id": "usqualitycore-head-circumference-percentile",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/head-occipital-frontal-circumference-percentile|6.1.0"
@@ -1213,15 +1213,15 @@
           "text": "Head Occipital-frontal circumference Percentile"
         },
         "subject": {
-          "reference": "Patient/us-quality-core-test-kit-patient"
+          "reference": "Patient/usqualitycore-patient"
         },
         "encounter": {
-          "reference": "Encounter/us-quality-core-test-kit-encounter"
+          "reference": "Encounter/usqualitycore-encounter"
         },
         "effectiveDateTime": "2020-07-01",
         "performer": [
           {
-            "reference": "Organization/us-quality-core-test-kit-organization"
+            "reference": "Organization/usqualitycore-organization"
           }
         ],
         "valueQuantity": {
@@ -1232,19 +1232,19 @@
         },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-head-circumference-percentile</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-head-circumference-percentile</div>"
         }
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/us-quality-core-test-kit-us-core-heart-rate",
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-heart-rate",
       "request": {
         "method": "PUT",
-        "url": "Observation/us-quality-core-test-kit-us-core-heart-rate"
+        "url": "Observation/usqualitycore-us-core-heart-rate"
       },
       "resource": {
         "resourceType": "Observation",
-        "id": "us-quality-core-test-kit-us-core-heart-rate",
+        "id": "usqualitycore-us-core-heart-rate",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate|6.1.0"
@@ -1274,15 +1274,15 @@
           "text": "Heart Rate"
         },
         "subject": {
-          "reference": "Patient/us-quality-core-test-kit-patient"
+          "reference": "Patient/usqualitycore-patient"
         },
         "encounter": {
-          "reference": "Encounter/us-quality-core-test-kit-encounter"
+          "reference": "Encounter/usqualitycore-encounter"
         },
         "effectiveDateTime": "1999-07-02",
         "performer": [
           {
-            "reference": "Organization/us-quality-core-test-kit-organization"
+            "reference": "Organization/usqualitycore-organization"
           }
         ],
         "valueQuantity": {
@@ -1293,19 +1293,19 @@
         },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-us-core-heart-rate</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-heart-rate</div>"
         }
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/us-quality-core-test-kit-us-core-pulse-oximetry",
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-pulse-oximetry",
       "request": {
         "method": "PUT",
-        "url": "Observation/us-quality-core-test-kit-us-core-pulse-oximetry"
+        "url": "Observation/usqualitycore-us-core-pulse-oximetry"
       },
       "resource": {
         "resourceType": "Observation",
-        "id": "us-quality-core-test-kit-us-core-pulse-oximetry",
+        "id": "usqualitycore-us-core-pulse-oximetry",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry|6.1.0"
@@ -1340,15 +1340,15 @@
           "text": "Oxygen saturation in Arterial blood by Pulse oximetry"
         },
         "subject": {
-          "reference": "Patient/us-quality-core-test-kit-patient"
+          "reference": "Patient/usqualitycore-patient"
         },
         "encounter": {
-          "reference": "Encounter/us-quality-core-test-kit-encounter"
+          "reference": "Encounter/usqualitycore-encounter"
         },
         "effectiveDateTime": "1999-07-02",
         "performer": [
           {
-            "reference": "Organization/us-quality-core-test-kit-organization"
+            "reference": "Organization/usqualitycore-organization"
           }
         ],
         "valueQuantity": {
@@ -1397,19 +1397,19 @@
         ],
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-us-core-pulse-oximetry</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-pulse-oximetry</div>"
         }
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/us-quality-core-test-kit-us-core-respiratory-rate",
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-respiratory-rate",
       "request": {
         "method": "PUT",
-        "url": "Observation/us-quality-core-test-kit-us-core-respiratory-rate"
+        "url": "Observation/usqualitycore-us-core-respiratory-rate"
       },
       "resource": {
         "resourceType": "Observation",
-        "id": "us-quality-core-test-kit-us-core-respiratory-rate",
+        "id": "usqualitycore-us-core-respiratory-rate",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate|6.1.0"
@@ -1439,15 +1439,15 @@
           "text": "Respiratory rate"
         },
         "subject": {
-          "reference": "Patient/us-quality-core-test-kit-patient"
+          "reference": "Patient/usqualitycore-patient"
         },
         "encounter": {
-          "reference": "Encounter/us-quality-core-test-kit-encounter"
+          "reference": "Encounter/usqualitycore-encounter"
         },
         "effectiveDateTime": "1999-07-02",
         "performer": [
           {
-            "reference": "Organization/us-quality-core-test-kit-organization"
+            "reference": "Organization/usqualitycore-organization"
           }
         ],
         "valueQuantity": {
@@ -1458,19 +1458,19 @@
         },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-us-core-respiratory-rate</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-respiratory-rate</div>"
         }
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/us-quality-core-test-kit-pediatric-weight-for-height",
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-pediatric-weight-for-height",
       "request": {
         "method": "PUT",
-        "url": "Observation/us-quality-core-test-kit-pediatric-weight-for-height"
+        "url": "Observation/usqualitycore-pediatric-weight-for-height"
       },
       "resource": {
         "resourceType": "Observation",
-        "id": "us-quality-core-test-kit-pediatric-weight-for-height",
+        "id": "usqualitycore-pediatric-weight-for-height",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-weight-for-height|6.1.0"
@@ -1500,15 +1500,15 @@
           "text": "Weight-for-length Per age and sex"
         },
         "subject": {
-          "reference": "Patient/us-quality-core-test-kit-patient"
+          "reference": "Patient/usqualitycore-patient"
         },
         "encounter": {
-          "reference": "Encounter/us-quality-core-test-kit-encounter"
+          "reference": "Encounter/usqualitycore-encounter"
         },
         "effectiveDateTime": "2020-07-02",
         "performer": [
           {
-            "reference": "Organization/us-quality-core-test-kit-organization"
+            "reference": "Organization/usqualitycore-organization"
           }
         ],
         "valueQuantity": {
@@ -1519,19 +1519,19 @@
         },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-pediatric-weight-for-height</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-pediatric-weight-for-height</div>"
         }
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Provenance/us-quality-core-test-kit-provenance",
+      "fullUrl": "http://example.org/fhir/Provenance/usqualitycore-provenance",
       "request": {
         "method": "PUT",
-        "url": "Provenance/us-quality-core-test-kit-provenance"
+        "url": "Provenance/usqualitycore-provenance"
       },
       "resource": {
         "resourceType": "Provenance",
-        "id": "us-quality-core-test-kit-provenance",
+        "id": "usqualitycore-provenance",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|6.1.0"
@@ -1539,280 +1539,280 @@
         },
         "target": [
           {
-            "reference": "Patient/us-quality-core-test-kit-patient"
+            "reference": "Patient/usqualitycore-patient"
           },
           {
-            "reference": "Claim/us-quality-core-test-kit-claim"
+            "reference": "Claim/usqualitycore-claim"
           },
           {
-            "reference": "Specimen/us-quality-core-test-kit-specimen"
+            "reference": "Specimen/usqualitycore-specimen"
           },
           {
-            "reference": "DocumentReference/us-quality-core-test-kit-document-reference"
+            "reference": "DocumentReference/usqualitycore-document-reference"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-us-core-observation-pregnancyintent"
+            "reference": "Observation/usqualitycore-us-core-observation-pregnancyintent"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-us-core-observation-pregnancystatus"
+            "reference": "Observation/usqualitycore-us-core-observation-pregnancystatus"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-us-core-smokingstatus"
+            "reference": "Observation/usqualitycore-us-core-smokingstatus"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-us-core-observation-occupation"
+            "reference": "Observation/usqualitycore-us-core-observation-occupation"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-us-core-blood-pressure"
+            "reference": "Observation/usqualitycore-us-core-blood-pressure"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-us-core-bp-data-absent-reason"
+            "reference": "Observation/usqualitycore-us-core-bp-data-absent-reason"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-us-core-bmi"
+            "reference": "Observation/usqualitycore-us-core-bmi"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-pediatric-bmi-for-age"
+            "reference": "Observation/usqualitycore-pediatric-bmi-for-age"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-us-core-body-height"
+            "reference": "Observation/usqualitycore-us-core-body-height"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-us-core-body-temperature"
+            "reference": "Observation/usqualitycore-us-core-body-temperature"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-us-core-body-weight"
+            "reference": "Observation/usqualitycore-us-core-body-weight"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-head-circumference-percentile"
+            "reference": "Observation/usqualitycore-head-circumference-percentile"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-us-core-heart-rate"
+            "reference": "Observation/usqualitycore-us-core-heart-rate"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-us-core-pulse-oximetry"
+            "reference": "Observation/usqualitycore-us-core-pulse-oximetry"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-us-core-respiratory-rate"
+            "reference": "Observation/usqualitycore-us-core-respiratory-rate"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-pediatric-weight-for-height"
+            "reference": "Observation/usqualitycore-pediatric-weight-for-height"
           },
           {
-            "reference": "ImagingStudy/us-quality-core-test-kit-imaging-study"
+            "reference": "ImagingStudy/usqualitycore-imaging-study"
           },
           {
-            "reference": "AdverseEvent/us-quality-core-test-kit-adverse-event"
+            "reference": "AdverseEvent/usqualitycore-adverse-event"
           },
           {
-            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance"
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance"
           },
           {
-            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup1"
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup1"
           },
           {
-            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup10"
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup10"
           },
           {
-            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup11"
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup11"
           },
           {
-            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup12"
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup12"
           },
           {
-            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup13"
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup13"
           },
           {
-            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup14"
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup14"
           },
           {
-            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup15"
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup15"
           },
           {
-            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup16"
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup16"
           },
           {
-            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup17"
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup17"
           },
           {
-            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup18"
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup18"
           },
           {
-            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup19"
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup19"
           },
           {
-            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup2"
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup2"
           },
           {
-            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup20"
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup20"
           },
           {
-            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup3"
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup3"
           },
           {
-            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup4"
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup4"
           },
           {
-            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup5"
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup5"
           },
           {
-            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup6"
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup6"
           },
           {
-            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup7"
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup7"
           },
           {
-            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup8"
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup8"
           },
           {
-            "reference": "AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance-dup9"
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup9"
           },
           {
-            "reference": "CarePlan/us-quality-core-test-kit-care-plan"
+            "reference": "CarePlan/usqualitycore-care-plan"
           },
           {
-            "reference": "CareTeam/us-quality-core-test-kit-care-team"
+            "reference": "CareTeam/usqualitycore-care-team"
           },
           {
-            "reference": "Condition/us-quality-core-test-kit-condition-encounter-diagnosis"
+            "reference": "Condition/usqualitycore-condition-encounter-diagnosis"
           },
           {
-            "reference": "Condition/us-quality-core-test-kit-condition-problems-health-concerns"
+            "reference": "Condition/usqualitycore-condition-problems-health-concerns"
           },
           {
-            "reference": "Coverage/us-quality-core-test-kit-coverage"
+            "reference": "Coverage/usqualitycore-coverage"
           },
           {
-            "reference": "Device/us-quality-core-test-kit-device"
+            "reference": "Device/usqualitycore-device"
           },
           {
-            "reference": "DeviceRequest/us-quality-core-test-kit-devicenotrequested"
+            "reference": "DeviceRequest/usqualitycore-devicenotrequested"
           },
           {
-            "reference": "DeviceRequest/us-quality-core-test-kit-devicerequest"
+            "reference": "DeviceRequest/usqualitycore-devicerequest"
           },
           {
-            "reference": "DiagnosticReport/us-quality-core-test-kit-diagnostic-report-lab"
+            "reference": "DiagnosticReport/usqualitycore-diagnostic-report-lab"
           },
           {
-            "reference": "DiagnosticReport/us-quality-core-test-kit-diagnostic-report-note"
+            "reference": "DiagnosticReport/usqualitycore-diagnostic-report-note"
           },
           {
-            "reference": "Encounter/us-quality-core-test-kit-encounter"
+            "reference": "Encounter/usqualitycore-encounter"
           },
           {
-            "reference": "FamilyMemberHistory/us-quality-core-test-kit-family-member-history"
+            "reference": "FamilyMemberHistory/usqualitycore-family-member-history"
           },
           {
-            "reference": "Goal/us-quality-core-test-kit-goal"
+            "reference": "Goal/usqualitycore-goal"
           },
           {
-            "reference": "Group/us-quality-core-test-kit-group"
+            "reference": "Group/usqualitycore-group"
           },
           {
-            "reference": "Immunization/us-quality-core-test-kit-immunization"
+            "reference": "Immunization/usqualitycore-immunization"
           },
           {
-            "reference": "Immunization/us-quality-core-test-kit-immunizationnotdone"
+            "reference": "Immunization/usqualitycore-immunizationnotdone"
           },
           {
-            "reference": "Immunization/us-quality-core-test-kit-immunizationnotdone-2"
+            "reference": "Immunization/usqualitycore-immunizationnotdone-2"
           },
           {
-            "reference": "MedicationAdministration/us-quality-core-test-kit-medicationadministration"
+            "reference": "MedicationAdministration/usqualitycore-medicationadministration"
           },
           {
-            "reference": "MedicationAdministration/us-quality-core-test-kit-medicationadministrationnotdone"
+            "reference": "MedicationAdministration/usqualitycore-medicationadministrationnotdone"
           },
           {
-            "reference": "MedicationDispense/us-quality-core-test-kit-medicationdispense"
+            "reference": "MedicationDispense/usqualitycore-medicationdispense"
           },
           {
-            "reference": "MedicationDispense/us-quality-core-test-kit-medicationdispensedeclined"
+            "reference": "MedicationDispense/usqualitycore-medicationdispensedeclined"
           },
           {
-            "reference": "MedicationRequest/us-quality-core-test-kit-medicationnotrequested"
+            "reference": "MedicationRequest/usqualitycore-medicationnotrequested"
           },
           {
-            "reference": "MedicationRequest/us-quality-core-test-kit-medicationrequest"
+            "reference": "MedicationRequest/usqualitycore-medicationrequest"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-observation-clinical-result"
+            "reference": "Observation/usqualitycore-observation-clinical-result"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-observation-clinical-result-2"
+            "reference": "Observation/usqualitycore-observation-clinical-result-2"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-observation-clinical-result-3"
+            "reference": "Observation/usqualitycore-observation-clinical-result-3"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-observation-clinical-result-4"
+            "reference": "Observation/usqualitycore-observation-clinical-result-4"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-observation-lab"
+            "reference": "Observation/usqualitycore-observation-lab"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-observation-lab-2"
+            "reference": "Observation/usqualitycore-observation-lab-2"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-observation-lab-3"
+            "reference": "Observation/usqualitycore-observation-lab-3"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-observation-lab-4"
+            "reference": "Observation/usqualitycore-observation-lab-4"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-observation-screening-assessment"
+            "reference": "Observation/usqualitycore-observation-screening-assessment"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-observation-screening-assessment-2"
+            "reference": "Observation/usqualitycore-observation-screening-assessment-2"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-observation-screening-assessment-3"
+            "reference": "Observation/usqualitycore-observation-screening-assessment-3"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-observation-screening-assessment-4"
+            "reference": "Observation/usqualitycore-observation-screening-assessment-4"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-observationcancelled"
+            "reference": "Observation/usqualitycore-observationcancelled"
           },
           {
-            "reference": "Procedure/us-quality-core-test-kit-procedure"
+            "reference": "Procedure/usqualitycore-procedure"
           },
           {
-            "reference": "Procedure/us-quality-core-test-kit-procedurenotdone"
+            "reference": "Procedure/usqualitycore-procedurenotdone"
           },
           {
-            "reference": "QuestionnaireResponse/us-quality-core-test-kit-questionnaire-response"
+            "reference": "QuestionnaireResponse/usqualitycore-questionnaire-response"
           },
           {
-            "reference": "RelatedPerson/us-quality-core-test-kit-related-person"
+            "reference": "RelatedPerson/usqualitycore-related-person"
           },
           {
-            "reference": "ServiceRequest/us-quality-core-test-kit-servicenotrequested"
+            "reference": "ServiceRequest/usqualitycore-servicenotrequested"
           },
           {
-            "reference": "ServiceRequest/us-quality-core-test-kit-servicerequest"
+            "reference": "ServiceRequest/usqualitycore-servicerequest"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-simple-observation"
+            "reference": "Observation/usqualitycore-simple-observation"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-simple-observation-2"
+            "reference": "Observation/usqualitycore-simple-observation-2"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-simple-observation-3"
+            "reference": "Observation/usqualitycore-simple-observation-3"
           },
           {
-            "reference": "Observation/us-quality-core-test-kit-simple-observation-4"
+            "reference": "Observation/usqualitycore-simple-observation-4"
           },
           {
-            "reference": "Task/us-quality-core-test-kit-task"
+            "reference": "Task/usqualitycore-task"
           },
           {
-            "reference": "Task/us-quality-core-test-kit-taskrejected"
+            "reference": "Task/usqualitycore-taskrejected"
           },
           {
-            "reference": "Task/us-quality-core-test-kit-taskrejected-2"
+            "reference": "Task/usqualitycore-taskrejected-2"
           }
         ],
         "recorded": "2015-02-15T16:30:00Z",
@@ -1828,10 +1828,10 @@
               ]
             },
             "who": {
-              "reference": "Practitioner/us-quality-core-test-kit-practitioner"
+              "reference": "Practitioner/usqualitycore-practitioner"
             },
             "onBehalfOf": {
-              "reference": "Organization/us-quality-core-test-kit-organization"
+              "reference": "Organization/usqualitycore-organization"
             }
           },
           {
@@ -1845,7 +1845,7 @@
               ]
             },
             "who": {
-              "reference": "Organization/us-quality-core-test-kit-organization"
+              "reference": "Organization/usqualitycore-organization"
             }
           }
         ],
@@ -1853,13 +1853,13 @@
           {
             "role": "source",
             "what": {
-              "reference": "DocumentReference/us-quality-core-test-kit-document-reference"
+              "reference": "DocumentReference/usqualitycore-document-reference"
             }
           }
         ],
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-quality-core-test-kit-provenance</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-provenance</div>"
         }
       }
     },
@@ -6495,7 +6495,7 @@
           "system": "http://unitsofmeasure.org"
         },
         "specimen": {
-          "reference": "Specimen/us-quality-core-test-kit-specimen"
+          "reference": "Specimen/usqualitycore-specimen"
         },
         "referenceRange": [
           {
@@ -6592,7 +6592,7 @@
         ],
         "valueString": "Test",
         "specimen": {
-          "reference": "Specimen/us-quality-core-test-kit-specimen"
+          "reference": "Specimen/usqualitycore-specimen"
         },
         "interpretation": [
           {
@@ -6709,7 +6709,7 @@
           "text": "Negative for Chlamydia Trachomatis rRNA"
         },
         "specimen": {
-          "reference": "Specimen/us-quality-core-test-kit-specimen"
+          "reference": "Specimen/usqualitycore-specimen"
         },
         "referenceRange": [
           {
@@ -6815,7 +6815,7 @@
           "text": "Unknown"
         },
         "specimen": {
-          "reference": "Specimen/us-quality-core-test-kit-specimen"
+          "reference": "Specimen/usqualitycore-specimen"
         },
         "referenceRange": [
           {
