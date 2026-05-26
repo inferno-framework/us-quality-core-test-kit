@@ -19,14 +19,14 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Quality Core Condition Problems Health Concerns: `Condition/us-quality-core-test-kit-condition-problems-health-concerns`."
+          "Inferno did not receive the expected read request for the target instance of the US Quality Core Condition Problems Health Concerns: `Condition/usqualitycore-condition-problems-health-concerns`."
         end
 
         run do
           requests = load_tagged_requests(READ_CONDITION_TAG)
           skip_if requests.blank?, skip_message
 
-          requests_for_id = filter_requests_by_resource_id(requests, 'us-quality-core-test-kit-condition-problems-health-concerns')
+          requests_for_id = filter_requests_by_resource_id(requests, 'usqualitycore-condition-problems-health-concerns')
           assert requests_for_id.any?, failure_message
         end
       end

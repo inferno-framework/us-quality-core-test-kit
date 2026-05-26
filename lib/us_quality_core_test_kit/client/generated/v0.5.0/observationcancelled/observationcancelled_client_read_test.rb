@@ -19,14 +19,14 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Quality Core Observation Cancelled: `Observation/us-quality-core-test-kit-observationcancelled`."
+          "Inferno did not receive the expected read request for the target instance of the US Quality Core Observation Cancelled: `Observation/usqualitycore-observationcancelled`."
         end
 
         run do
           requests = load_tagged_requests(READ_OBSERVATION_TAG)
           skip_if requests.blank?, skip_message
 
-          requests_for_id = filter_requests_by_resource_id(requests, 'us-quality-core-test-kit-observationcancelled')
+          requests_for_id = filter_requests_by_resource_id(requests, 'usqualitycore-observationcancelled')
           assert requests_for_id.any?, failure_message
         end
       end

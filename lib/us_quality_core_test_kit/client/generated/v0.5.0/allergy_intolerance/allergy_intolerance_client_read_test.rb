@@ -19,14 +19,14 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Quality Core AllergyIntolerance: `AllergyIntolerance/us-quality-core-test-kit-allergy-intolerance`."
+          "Inferno did not receive the expected read request for the target instance of the US Quality Core AllergyIntolerance: `AllergyIntolerance/usqualitycore-allergy-intolerance`."
         end
 
         run do
           requests = load_tagged_requests(READ_ALLERGY_INTOLERANCE_TAG)
           skip_if requests.blank?, skip_message
 
-          requests_for_id = filter_requests_by_resource_id(requests, 'us-quality-core-test-kit-allergy-intolerance')
+          requests_for_id = filter_requests_by_resource_id(requests, 'usqualitycore-allergy-intolerance')
           assert requests_for_id.any?, failure_message
         end
       end

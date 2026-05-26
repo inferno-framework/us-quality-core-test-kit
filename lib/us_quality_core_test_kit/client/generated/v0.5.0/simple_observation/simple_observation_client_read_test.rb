@@ -19,14 +19,14 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Quality Core Simple Observation: `Observation/us-quality-core-test-kit-simple-observation`."
+          "Inferno did not receive the expected read request for the target instance of the US Quality Core Simple Observation: `Observation/usqualitycore-simple-observation`."
         end
 
         run do
           requests = load_tagged_requests(READ_OBSERVATION_TAG)
           skip_if requests.blank?, skip_message
 
-          requests_for_id = filter_requests_by_resource_id(requests, 'us-quality-core-test-kit-simple-observation')
+          requests_for_id = filter_requests_by_resource_id(requests, 'usqualitycore-simple-observation')
           assert requests_for_id.any?, failure_message
         end
       end

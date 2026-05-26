@@ -132,7 +132,7 @@ module USQualityCoreTestKit
         def instance_id_for_profile(profile)
           tag = profile.gsub('us-quality-core-', '').underscore.dasherize
 
-          "us-quality-core-test-kit-#{tag}"
+          "usqualitycore-#{tag}"
         end
       end
     end
