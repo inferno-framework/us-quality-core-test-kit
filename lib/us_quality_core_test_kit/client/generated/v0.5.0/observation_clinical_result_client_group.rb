@@ -34,8 +34,8 @@ for the resource type is required, and omitted otherwise.
 ## Reading
 This test will check that the client performed a read of one of the following ids:
 
-* `us-quality-core-test-kit-observation-clinical-result`
-* `us-quality-core-test-kit-observation-lab`
+* `usqualitycore-observation-clinical-result`
+* `usqualitycore-observation-lab`
 
 ## Searching
 These tests will check that the client performed searches against the

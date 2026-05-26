@@ -31,17 +31,17 @@ module USQualityCoreTestKit
           {
             type: 'report_issue',
             label: 'Report Issue',
-            url: 'TODO'
+            url: 'https://github.com/inferno-framework/us-quality-core-test-kit/issues'
           },
           {
             type: 'source_code',
             label: 'Open Source',
-            url: 'TODO'
+            url: 'https://github.com/inferno-framework/us-quality-core-test-kit'
           },
           {
             type: 'download',
             label: 'Download',
-            url: 'TODO'
+            url: 'https://github.com/inferno-framework/us-quality-core-test-kit/releases'
           },
           {
             label: 'Implementation Guide',
@@ -75,13 +75,15 @@ module USQualityCoreTestKit
           <%- end -%>
 
           run do
-            passing_profile_group = groups.find do |group|
-              next if group.id.include?('wait') || group.id.include?('auth')
+            profile_groups = groups.reject do |group|
+              group.id == '<%= access_group_id %>' || group.id.end_with?('-<%= access_group_id %>')
+            end
 
+            passing_profile_group = profile_groups.any? do |group|
               results[group.id]&.result == 'pass'
             end
 
-            assert passing_profile_group.present?, 'At least one profile group must pass.'
+            assert passing_profile_group, 'At least one profile group must pass.'
           end
         end
       end

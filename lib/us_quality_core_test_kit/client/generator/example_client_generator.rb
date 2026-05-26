@@ -146,7 +146,7 @@ module USQualityCoreTestKit
         end
 
         def bundle_file_name
-          File.join(base_output_dir, 'us-quality-core-bundle.json')
+          File.join(base_output_dir, 'us_quality_core_bundle_patient.json')
         end
 
         def search_parameter_builder

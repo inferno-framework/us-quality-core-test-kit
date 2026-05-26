@@ -139,17 +139,17 @@ The tests will not pass unless at least one profile group passes.
           {
             type: 'report_issue',
             label: 'Report Issue',
-            url: 'TODO'
+            url: 'https://github.com/inferno-framework/us-quality-core-test-kit/issues'
           },
           {
             type: 'source_code',
             label: 'Open Source',
-            url: 'TODO'
+            url: 'https://github.com/inferno-framework/us-quality-core-test-kit'
           },
           {
             type: 'download',
             label: 'Download',
-            url: 'TODO'
+            url: 'https://github.com/inferno-framework/us-quality-core-test-kit/releases'
           },
           {
             label: 'Implementation Guide',
@@ -245,13 +245,15 @@ CapabilityStatement](http://fhir.org/guides/onc/us-quality-core/CapabilityStatem
           group from: :us_quality_core_client_v050_specimen
 
           run do
-            passing_profile_group = groups.find do |group|
-              next if group.id.include?('wait') || group.id.include?('auth')
+            profile_groups = groups.reject do |group|
+              group.id == 'us_quality_core_client_access_group_v050' || group.id.end_with?('-us_quality_core_client_access_group_v050')
+            end
 
+            passing_profile_group = profile_groups.any? do |group|
               results[group.id]&.result == 'pass'
             end
 
-            assert passing_profile_group.present?, 'At least one profile group must pass.'
+            assert passing_profile_group, 'At least one profile group must pass.'
           end
         end
       end

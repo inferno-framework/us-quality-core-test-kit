@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'inferno'
+
 require_relative 'us_quality_core_test_kit/metadata'
 
 # Server Suites

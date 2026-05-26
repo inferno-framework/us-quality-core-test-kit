@@ -106,7 +106,7 @@ There is a script available under the `./scripts` directory called `clean_bundle
 to help keep updates to this bundle as consistent as possible. You use it, run:
 
 ```sh
-ruby scripts/clean_bundle.rb ./client-example-resources/us-quality-core-bundle.json
+ruby scripts/clean_bundle.rb ./client-example-resources/us_quality_core_bundle_patient.json
 ```
 
 ## Known Limitations

@@ -19,14 +19,14 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Quality Core DiagnosticReport Profile for Laboratory Results Reporting: `DiagnosticReport/us-quality-core-test-kit-diagnostic-report-lab`."
+          "Inferno did not receive the expected read request for the target instance of the US Quality Core DiagnosticReport Profile for Laboratory Results Reporting: `DiagnosticReport/usqualitycore-diagnostic-report-lab`."
         end
 
         run do
           requests = load_tagged_requests(READ_DIAGNOSTIC_REPORT_TAG)
           skip_if requests.blank?, skip_message
 
-          requests_for_id = filter_requests_by_resource_id(requests, 'us-quality-core-test-kit-diagnostic-report-lab')
+          requests_for_id = filter_requests_by_resource_id(requests, 'usqualitycore-diagnostic-report-lab')
           assert requests_for_id.any?, failure_message
         end
       end

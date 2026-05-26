@@ -30,7 +30,7 @@ for the resource type is required, and omitted otherwise.
 ## Reading
 This test will check that the client performed a read of the following id:
 
-* `us-quality-core-test-kit-practitioner`
+* `usqualitycore-practitioner`
 
 ## Searching
 These tests will check that the client performed searches against the

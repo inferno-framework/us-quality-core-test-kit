@@ -12,10 +12,10 @@ docker volume rm us-quality-core-test-kit_fhir-pgdata
 
 ## Contents
 
-- `us-quality-core-bundle.json`
+- `us_quality_core_bundle_patient.json`
   A transaction bundle containing the sample patient and related clinical data used by the client test suite.
 
-- `SearchParameter-us-quality-core-*.json`
+- `us_quality_core_bundle_search_parameters.json`
   Custom search parameter definitions needed for US Quality Core testing when the required behavior is not covered by the base FHIR specification or US Core.
 
 - `example_client_v050.rb`
