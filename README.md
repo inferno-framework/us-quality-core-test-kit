@@ -131,6 +131,11 @@ is to define the SearchParameter expression against a directly indexed element
 such as `ImagingStudy.procedureCode`, but that differs from the current
 IG-defined SearchParameter.
 
+### Provenance and Provenance `revInclude` search are not included
+
+The US Core Provenance test group and Provenance `revInclude` search is currently
+under development. 
+
 ## Trademark Notice
 
 HL7, FHIR and the FHIR [FLAME DESIGN] are the registered trademarks of Health

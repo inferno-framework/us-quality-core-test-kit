@@ -1539,6 +1539,9 @@
         },
         "target": [
           {
+            "reference": "Patient/us-quality-core-test-kit-patient"
+          },
+          {
             "reference": "Claim/us-quality-core-test-kit-claim"
           },
           {
