@@ -101,7 +101,7 @@ module USQualityCoreTestKit
 
       INSTANCE_ID_OVERRIDES = {
         'head_occipital_frontal_circumference_percentile' =>
-          'us-quality-core-test-kit-head-circumference-percentile'
+          'usqualitycore-head-circumference-percentile'
       }.freeze
 
       class << self

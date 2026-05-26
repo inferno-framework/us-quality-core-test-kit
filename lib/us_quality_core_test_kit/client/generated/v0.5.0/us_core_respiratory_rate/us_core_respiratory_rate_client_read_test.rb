@@ -19,14 +19,14 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Core Respiratory Rate Profile: `Observation/us-quality-core-test-kit-us-core-respiratory-rate`."
+          "Inferno did not receive the expected read request for the target instance of the US Core Respiratory Rate Profile: `Observation/usqualitycore-us-core-respiratory-rate`."
         end
 
         run do
           requests = load_tagged_requests(READ_OBSERVATION_TAG)
           skip_if requests.blank?, skip_message
 
-          requests_for_id = filter_requests_by_resource_id(requests, 'us-quality-core-test-kit-us-core-respiratory-rate')
+          requests_for_id = filter_requests_by_resource_id(requests, 'usqualitycore-us-core-respiratory-rate')
           assert requests_for_id.any?, failure_message
         end
       end

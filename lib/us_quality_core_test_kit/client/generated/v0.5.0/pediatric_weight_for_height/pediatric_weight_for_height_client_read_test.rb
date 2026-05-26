@@ -19,14 +19,14 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Core Pediatric Weight for Height Observation Profile: `Observation/us-quality-core-test-kit-pediatric-weight-for-height`."
+          "Inferno did not receive the expected read request for the target instance of the US Core Pediatric Weight for Height Observation Profile: `Observation/usqualitycore-pediatric-weight-for-height`."
         end
 
         run do
           requests = load_tagged_requests(READ_OBSERVATION_TAG)
           skip_if requests.blank?, skip_message
 
-          requests_for_id = filter_requests_by_resource_id(requests, 'us-quality-core-test-kit-pediatric-weight-for-height')
+          requests_for_id = filter_requests_by_resource_id(requests, 'usqualitycore-pediatric-weight-for-height')
           assert requests_for_id.any?, failure_message
         end
       end

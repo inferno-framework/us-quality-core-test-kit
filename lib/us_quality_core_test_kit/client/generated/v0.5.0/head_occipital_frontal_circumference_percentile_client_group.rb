@@ -34,7 +34,7 @@ for the resource type is required, and omitted otherwise.
 ## Reading
 This test will check that the client performed a read of the following id:
 
-* `us-quality-core-test-kit-head-circumference-percentile`
+* `usqualitycore-head-circumference-percentile`
 
 ## Searching
 These tests will check that the client performed searches against the

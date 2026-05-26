@@ -19,14 +19,14 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Core Specimen Profile: `Specimen/us-quality-core-test-kit-specimen`."
+          "Inferno did not receive the expected read request for the target instance of the US Core Specimen Profile: `Specimen/usqualitycore-specimen`."
         end
 
         run do
           requests = load_tagged_requests(READ_SPECIMEN_TAG)
           skip_if requests.blank?, skip_message
 
-          requests_for_id = filter_requests_by_resource_id(requests, 'us-quality-core-test-kit-specimen')
+          requests_for_id = filter_requests_by_resource_id(requests, 'usqualitycore-specimen')
           assert requests_for_id.any?, failure_message
         end
       end

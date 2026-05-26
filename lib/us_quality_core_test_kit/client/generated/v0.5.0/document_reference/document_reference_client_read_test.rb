@@ -19,14 +19,14 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Core DocumentReference Profile: `DocumentReference/us-quality-core-test-kit-document-reference`."
+          "Inferno did not receive the expected read request for the target instance of the US Core DocumentReference Profile: `DocumentReference/usqualitycore-document-reference`."
         end
 
         run do
           requests = load_tagged_requests(READ_DOCUMENT_REFERENCE_TAG)
           skip_if requests.blank?, skip_message
 
-          requests_for_id = filter_requests_by_resource_id(requests, 'us-quality-core-test-kit-document-reference')
+          requests_for_id = filter_requests_by_resource_id(requests, 'usqualitycore-document-reference')
           assert requests_for_id.any?, failure_message
         end
       end

@@ -138,7 +138,7 @@ module USQualityCoreTestKit
     * patient + code
 * **DocumentReference**
   * read id:
-    * us-quality-core-test-kit-document-reference
+    * usqualitycore-document-reference
   * searches:
     * patient
     * _id
@@ -248,7 +248,7 @@ module USQualityCoreTestKit
     * patient + code
 * **UsCoreObservationPregnancyintent**
   * read id:
-    * us-quality-core-test-kit-us-core-observation-pregnancyintent
+    * usqualitycore-us-core-observation-pregnancyintent
   * searches:
     * patient + code
     * patient + category + status
@@ -256,7 +256,7 @@ module USQualityCoreTestKit
     * patient + category + date
 * **UsCoreObservationPregnancystatus**
   * read id:
-    * us-quality-core-test-kit-us-core-observation-pregnancystatus
+    * usqualitycore-us-core-observation-pregnancystatus
   * searches:
     * patient + code
     * patient + category + status
@@ -264,7 +264,7 @@ module USQualityCoreTestKit
     * patient + category + date
 * **UsCoreSmokingstatus**
   * read id:
-    * us-quality-core-test-kit-us-core-smokingstatus
+    * usqualitycore-us-core-smokingstatus
   * searches:
     * patient + code
     * patient + category + status
@@ -280,7 +280,7 @@ module USQualityCoreTestKit
     * patient + code
 * **UsCoreObservationOccupation**
   * read id:
-    * us-quality-core-test-kit-us-core-observation-occupation
+    * usqualitycore-us-core-observation-occupation
   * searches:
     * patient + code
     * patient + category + status
@@ -288,7 +288,7 @@ module USQualityCoreTestKit
     * patient + category + date
 * **UsCoreBloodPressure**
   * read id:
-    * us-quality-core-test-kit-us-core-blood-pressure
+    * usqualitycore-us-core-blood-pressure
   * searches:
     * patient + code
     * patient + category + status
@@ -296,7 +296,7 @@ module USQualityCoreTestKit
     * patient + category + date
 * **UsCoreBmi**
   * read id:
-    * us-quality-core-test-kit-us-core-bmi
+    * usqualitycore-us-core-bmi
   * searches:
     * patient + code
     * patient + category + status
@@ -304,7 +304,7 @@ module USQualityCoreTestKit
     * patient + category + date
 * **PediatricBmiForAge**
   * read id:
-    * us-quality-core-test-kit-pediatric-bmi-for-age
+    * usqualitycore-pediatric-bmi-for-age
   * searches:
     * patient + code
     * patient + category + status
@@ -312,7 +312,7 @@ module USQualityCoreTestKit
     * patient + category + date
 * **UsCoreBodyHeight**
   * read id:
-    * us-quality-core-test-kit-us-core-body-height
+    * usqualitycore-us-core-body-height
   * searches:
     * patient + code
     * patient + category + status
@@ -320,7 +320,7 @@ module USQualityCoreTestKit
     * patient + category + date
 * **UsCoreBodyTemperature**
   * read id:
-    * us-quality-core-test-kit-us-core-body-temperature
+    * usqualitycore-us-core-body-temperature
   * searches:
     * patient + code
     * patient + category + status
@@ -328,7 +328,7 @@ module USQualityCoreTestKit
     * patient + category + date
 * **UsCoreBodyWeight**
   * read id:
-    * us-quality-core-test-kit-us-core-body-weight
+    * usqualitycore-us-core-body-weight
   * searches:
     * patient + code
     * patient + category + status
@@ -336,7 +336,7 @@ module USQualityCoreTestKit
     * patient + category + date
 * **HeadOccipitalFrontalCircumferencePercentile**
   * read id:
-    * us-quality-core-test-kit-head-circumference-percentile
+    * usqualitycore-head-circumference-percentile
   * searches:
     * patient + code
     * patient + category + status
@@ -344,7 +344,7 @@ module USQualityCoreTestKit
     * patient + category + date
 * **UsCoreHeartRate**
   * read id:
-    * us-quality-core-test-kit-us-core-heart-rate
+    * usqualitycore-us-core-heart-rate
   * searches:
     * patient + code
     * patient + category + status
@@ -352,7 +352,7 @@ module USQualityCoreTestKit
     * patient + category + date
 * **UsCorePulseOximetry**
   * read id:
-    * us-quality-core-test-kit-us-core-pulse-oximetry
+    * usqualitycore-us-core-pulse-oximetry
   * searches:
     * patient + code
     * patient + category + status
@@ -360,7 +360,7 @@ module USQualityCoreTestKit
     * patient + category + date
 * **UsCoreRespiratoryRate**
   * read id:
-    * us-quality-core-test-kit-us-core-respiratory-rate
+    * usqualitycore-us-core-respiratory-rate
   * searches:
     * patient + code
     * patient + category + status
@@ -368,7 +368,7 @@ module USQualityCoreTestKit
     * patient + category + date
 * **PediatricWeightForHeight**
   * read id:
-    * us-quality-core-test-kit-pediatric-weight-for-height
+    * usqualitycore-pediatric-weight-for-height
   * searches:
     * patient + code
     * patient + category + status
@@ -458,12 +458,12 @@ module USQualityCoreTestKit
 
 * **Provenance**
   * read id:
-    * us-quality-core-test-kit-provenance
+    * usqualitycore-provenance
   * searches:
 
 * **Specimen**
   * read id:
-    * us-quality-core-test-kit-specimen
+    * usqualitycore-specimen
   * searches:
     * _id
 
