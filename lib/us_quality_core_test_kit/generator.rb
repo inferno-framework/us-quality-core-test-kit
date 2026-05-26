@@ -73,7 +73,7 @@ module USQualityCoreTestKit
 
     def generate_provenance_revinclude_search_tests
       ProvenanceRevincludeSearchTestGenerator.generate(ig_metadata, base_output_dir)
-    end    
+    end
 
     def generate_validation_tests
       ValidationTestGenerator.generate(ig_metadata, base_output_dir)

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'us_core_test_kit/generator/provenance_revinclude_search_test_generator'
 
 require_relative 'naming'
@@ -24,7 +26,7 @@ module USQualityCoreTestKit
 
       def module_name
         "USQualityCore#{group_metadata.reformatted_version.upcase}"
-      end      
+      end
     end
   end
 end

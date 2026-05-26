@@ -29,7 +29,7 @@ module USQualityCoreTestKit
           if category_first_profile?
             %w[patient category]
           elsif %w[Observation].include?(resource)
-            if name.start_with?('us_quality_core_') 
+            if name.start_with?('us_quality_core_')
               %w[patient category status]
             else
               %w[patient code]
