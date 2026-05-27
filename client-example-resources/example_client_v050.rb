@@ -183,6 +183,20 @@ results? FHIR::DiagnosticReport.search({"patient"=>"usqualitycore-patient", "cod
 
 
 
+# US Core DocumentReference
+
+## Read
+FHIR::DocumentReference.read('usqualitycore-document-reference')
+
+## Search
+results? FHIR::DocumentReference.search({"patient"=>"usqualitycore-patient"})
+results? FHIR::DocumentReference.search({"_id"=>"usqualitycore-document-reference"})
+results? FHIR::DocumentReference.search({"patient"=>"usqualitycore-patient", "type"=>"34117-2"})
+results? FHIR::DocumentReference.search({"patient"=>"usqualitycore-patient", "category"=>"clinical-note"})
+results? FHIR::DocumentReference.search({"patient"=>"usqualitycore-patient", "category"=>"clinical-note", "date"=>"ge2015-02-15"})
+
+
+
 # FamilyMemberHistory
 
 ## Read
@@ -359,6 +373,45 @@ results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "code"=>"
 
 
 
+# Observation US Core Pregnancy Intent
+
+## Read
+FHIR::Observation.read('usqualitycore-us-core-observation-pregnancyintent')
+
+## Search
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "code"=>"86645-9"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"social-history", "status"=>"final"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"social-history"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"social-history", "date"=>"ge2022-09-23"})
+
+
+
+# Observation US Core Pregnancy Status
+
+## Read
+FHIR::Observation.read('usqualitycore-us-core-observation-pregnancystatus')
+
+## Search
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "code"=>"82810-3"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"social-history", "status"=>"final"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"social-history"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"social-history", "date"=>"ge2022-08-24"})
+
+
+
+# Observation US Core Smoking Status
+
+## Read
+FHIR::Observation.read('usqualitycore-us-core-smokingstatus')
+
+## Search
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "code"=>"72166-2"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"social-history", "status"=>"final"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"social-history"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"social-history", "date"=>"ge2016-03-18"})
+
+
+
 # Observation Laboratory Result
 
 ## Read
@@ -369,6 +422,162 @@ results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category
 results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"laboratory"})
 results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"laboratory", "date"=>"ge2005-07-05"})
 results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "code"=>"2339-0"})
+
+
+
+# Observation US Core Occupation
+
+## Read
+FHIR::Observation.read('usqualitycore-us-core-observation-occupation')
+
+## Search
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "code"=>"11341-5"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"social-history", "status"=>"final"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"social-history"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"social-history", "date"=>"ge2015-04-24"})
+
+
+
+# Observation US Core Blood Pressure
+
+## Read
+FHIR::Observation.read('usqualitycore-us-core-blood-pressure')
+
+## Search
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "code"=>"85354-9"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs", "status"=>"final"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs", "date"=>"ge1999-07-02"})
+
+
+
+# Observation US Core BMI
+
+## Read
+FHIR::Observation.read('usqualitycore-us-core-bmi')
+
+## Search
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "code"=>"39156-5"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs", "status"=>"final"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs", "date"=>"ge1999-07-02"})
+
+
+
+# Observation US Core Pediatric BMI for Age
+
+## Read
+FHIR::Observation.read('usqualitycore-pediatric-bmi-for-age')
+
+## Search
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "code"=>"59576-9"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs", "status"=>"final"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs", "date"=>"ge2019-05-04"})
+
+
+
+# Observation US Core Body Height
+
+## Read
+FHIR::Observation.read('usqualitycore-us-core-body-height')
+
+## Search
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "code"=>"8302-2"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs", "status"=>"final"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs", "date"=>"ge1999-07-02"})
+
+
+
+# Observation US Core Body Temperature
+
+## Read
+FHIR::Observation.read('usqualitycore-us-core-body-temperature')
+
+## Search
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "code"=>"8310-5"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs", "status"=>"final"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs", "date"=>"ge1999-07-02"})
+
+
+
+# Observation US Core Body Weight
+
+## Read
+FHIR::Observation.read('usqualitycore-us-core-body-weight')
+
+## Search
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "code"=>"29463-7"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs", "status"=>"final"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs", "date"=>"ge1999-07-02"})
+
+
+
+# Observation US Core Pediatric Head Occipital Frontal Circumference Percentile
+
+## Read
+FHIR::Observation.read('usqualitycore-head-circumference-percentile')
+
+## Search
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "code"=>"8289-1"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs", "status"=>"final"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs", "date"=>"ge2020-07-01"})
+
+
+
+# Observation US Core Heart Rate
+
+## Read
+FHIR::Observation.read('usqualitycore-us-core-heart-rate')
+
+## Search
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "code"=>"8867-4"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs", "status"=>"final"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs", "date"=>"ge1999-07-02"})
+
+
+
+# Observation US Core Pulse Oximetry
+
+## Read
+FHIR::Observation.read('usqualitycore-us-core-pulse-oximetry')
+
+## Search
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "code"=>"59408-5"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs", "status"=>"final"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs", "date"=>"ge1999-07-02"})
+
+
+
+# Observation US Core Respiratory Rate
+
+## Read
+FHIR::Observation.read('usqualitycore-us-core-respiratory-rate')
+
+## Search
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "code"=>"9279-1"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs", "status"=>"final"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs", "date"=>"ge1999-07-02"})
+
+
+
+# Observation US Core Pediatric Weight for Height
+
+## Read
+FHIR::Observation.read('usqualitycore-pediatric-weight-for-height')
+
+## Search
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "code"=>"77606-2"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs", "status"=>"final"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs"})
+results? FHIR::Observation.search({"patient"=>"usqualitycore-patient", "category"=>"vital-signs", "date"=>"ge2020-07-02"})
 
 
 
@@ -507,4 +716,23 @@ FHIR::Practitioner.read('usqualitycore-practitioner')
 FHIR::PractitionerRole.read('usqualitycore-practitioner-role')
 
 ## Search
+
+
+
+# US Core Provenance
+
+## Read
+FHIR::Provenance.read('usqualitycore-provenance')
+
+## Search
+
+
+
+# US Core Specimen
+
+## Read
+FHIR::Specimen.read('usqualitycore-specimen')
+
+## Search
+results? FHIR::Specimen.search({"_id"=>"usqualitycore-specimen"})
 

@@ -2,6 +2,7 @@ require_relative 'devicerequest/devicerequest_patient_do_not_perform_search_test
 require_relative 'devicerequest/devicerequest_patient_search_test'
 require_relative 'devicerequest/devicerequest_patient_code_search_test'
 require_relative 'devicerequest/devicerequest_read_test'
+require_relative 'devicerequest/devicerequest_provenance_revinclude_search_test'
 require_relative 'devicerequest/devicerequest_validation_test'
 require_relative 'devicerequest/devicerequest_must_support_test'
 require_relative 'devicerequest/devicerequest_reference_resolution_test'
@@ -88,6 +89,7 @@ read succeeds.
       test from: :us_quality_core_v050_devicerequest_patient_search_test
       test from: :us_quality_core_v050_devicerequest_patient_code_search_test
       test from: :us_quality_core_v050_devicerequest_read_test
+      test from: :us_quality_core_v050_devicerequest_provenance_revinclude_search_test
       test from: :us_quality_core_v050_devicerequest_validation_test
       test from: :us_quality_core_v050_devicerequest_must_support_test
       test from: :us_quality_core_v050_devicerequest_reference_resolution_test

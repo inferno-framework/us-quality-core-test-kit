@@ -131,6 +131,11 @@ is to define the SearchParameter expression against a directly indexed element
 such as `ImagingStudy.procedureCode`, but that differs from the current
 IG-defined SearchParameter.
 
+### AdverseEvent Provenance `revInclude` search on the local Reference Server
+
+The US Quality Core AdverseEvent Provenance `revInclude` test is skipped on the 
+local Reference Server. This issue is currently under investigation.
+
 ## Trademark Notice
 
 HL7, FHIR and the FHIR [FLAME DESIGN] are the registered trademarks of Health

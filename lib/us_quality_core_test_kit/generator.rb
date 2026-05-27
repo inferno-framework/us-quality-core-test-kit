@@ -6,6 +6,7 @@ require_relative 'generator/search_test_generator'
 require_relative 'generator/read_test_generator'
 require_relative 'generator/validation_test_generator'
 require_relative 'generator/must_support_test_generator'
+require_relative 'generator/provenance_revinclude_search_test_generator'
 require_relative 'generator/reference_resolution_test_generator'
 require_relative 'generator/group_generator'
 require_relative 'generator/suite_generator'
@@ -37,6 +38,7 @@ module USQualityCoreTestKit
       FileUtils.mkdir_p(base_output_dir)
       generate_search_tests
       generate_read_tests
+      generate_provenance_revinclude_search_tests
       generate_validation_tests
       generate_must_support_tests
       generate_reference_resolution_tests
@@ -67,6 +69,10 @@ module USQualityCoreTestKit
 
     def generate_read_tests
       ReadTestGenerator.generate(ig_metadata, base_output_dir)
+    end
+
+    def generate_provenance_revinclude_search_tests
+      ProvenanceRevincludeSearchTestGenerator.generate(ig_metadata, base_output_dir)
     end
 
     def generate_validation_tests

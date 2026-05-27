@@ -197,6 +197,8 @@
   :file_name: procedurenotdone_patient_date_search_test.rb
 - :id: us_quality_core_v050_procedurenotdone_read_test
   :file_name: procedurenotdone_read_test.rb
+- :id: us_quality_core_v050_procedurenotdone_provenance_revinclude_search_test
+  :file_name: procedurenotdone_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_procedurenotdone_validation_test
   :file_name: procedurenotdone_validation_test.rb
 - :id: us_quality_core_v050_procedurenotdone_must_support_test

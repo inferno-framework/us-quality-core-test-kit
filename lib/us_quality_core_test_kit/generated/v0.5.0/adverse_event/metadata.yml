@@ -184,6 +184,8 @@
   :file_name: adverse_event_subject_recorded_date_search_test.rb
 - :id: us_quality_core_v050_adverse_event_read_test
   :file_name: adverse_event_read_test.rb
+- :id: us_quality_core_v050_adverse_event_provenance_revinclude_search_test
+  :file_name: adverse_event_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_adverse_event_validation_test
   :file_name: adverse_event_validation_test.rb
 - :id: us_quality_core_v050_adverse_event_must_support_test

@@ -162,7 +162,6 @@
     :original_path: value[x]
   - :path: valueString
     :original_path: value[x]
-  - :path: dataAbsentReason
   - :path: hasMember
     :types:
     - Reference
@@ -249,6 +248,8 @@
   :file_name: observation_screening_assessment_patient_code_search_test.rb
 - :id: us_quality_core_v050_observation_screening_assessment_read_test
   :file_name: observation_screening_assessment_read_test.rb
+- :id: us_quality_core_v050_observation_screening_assessment_provenance_revinclude_search_test
+  :file_name: observation_screening_assessment_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_observation_screening_assessment_validation_test
   :file_name: observation_screening_assessment_validation_test.rb
 - :id: us_quality_core_v050_observation_screening_assessment_must_support_test

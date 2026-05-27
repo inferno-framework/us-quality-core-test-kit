@@ -177,6 +177,8 @@
   :file_name: medicationadministration_patient_effective_time_search_test.rb
 - :id: us_quality_core_v050_medicationadministration_read_test
   :file_name: medicationadministration_read_test.rb
+- :id: us_quality_core_v050_medicationadministration_provenance_revinclude_search_test
+  :file_name: medicationadministration_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_medicationadministration_validation_test
   :file_name: medicationadministration_validation_test.rb
 - :id: us_quality_core_v050_medicationadministration_must_support_test

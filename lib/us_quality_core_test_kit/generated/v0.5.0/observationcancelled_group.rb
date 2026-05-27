@@ -3,6 +3,7 @@ require_relative 'observationcancelled/observationcancelled_patient_category_sea
 require_relative 'observationcancelled/observationcancelled_patient_category_date_search_test'
 require_relative 'observationcancelled/observationcancelled_patient_code_search_test'
 require_relative 'observationcancelled/observationcancelled_read_test'
+require_relative 'observationcancelled/observationcancelled_provenance_revinclude_search_test'
 require_relative 'observationcancelled/observationcancelled_validation_test'
 require_relative 'observationcancelled/observationcancelled_must_support_test'
 
@@ -90,6 +91,7 @@ read succeeds.
       test from: :us_quality_core_v050_observationcancelled_patient_category_date_search_test
       test from: :us_quality_core_v050_observationcancelled_patient_code_search_test
       test from: :us_quality_core_v050_observationcancelled_read_test
+      test from: :us_quality_core_v050_observationcancelled_provenance_revinclude_search_test
       test from: :us_quality_core_v050_observationcancelled_validation_test
       test from: :us_quality_core_v050_observationcancelled_must_support_test
     end

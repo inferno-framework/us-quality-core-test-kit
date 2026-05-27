@@ -154,6 +154,8 @@
   :file_name: medicationdispensedeclined_patient_search_test.rb
 - :id: us_quality_core_v050_medicationdispensedeclined_read_test
   :file_name: medicationdispensedeclined_read_test.rb
+- :id: us_quality_core_v050_medicationdispensedeclined_provenance_revinclude_search_test
+  :file_name: medicationdispensedeclined_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_medicationdispensedeclined_validation_test
   :file_name: medicationdispensedeclined_validation_test.rb
 - :id: us_quality_core_v050_medicationdispensedeclined_must_support_test

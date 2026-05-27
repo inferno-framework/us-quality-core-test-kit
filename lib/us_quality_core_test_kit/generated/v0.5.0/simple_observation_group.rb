@@ -3,6 +3,7 @@ require_relative 'simple_observation/simple_observation_patient_category_search_
 require_relative 'simple_observation/simple_observation_patient_category_date_search_test'
 require_relative 'simple_observation/simple_observation_patient_code_search_test'
 require_relative 'simple_observation/simple_observation_read_test'
+require_relative 'simple_observation/simple_observation_provenance_revinclude_search_test'
 require_relative 'simple_observation/simple_observation_validation_test'
 require_relative 'simple_observation/simple_observation_must_support_test'
 require_relative 'simple_observation/simple_observation_reference_resolution_test'
@@ -91,6 +92,7 @@ read succeeds.
       test from: :us_quality_core_v050_simple_observation_patient_category_date_search_test
       test from: :us_quality_core_v050_simple_observation_patient_code_search_test
       test from: :us_quality_core_v050_simple_observation_read_test
+      test from: :us_quality_core_v050_simple_observation_provenance_revinclude_search_test
       test from: :us_quality_core_v050_simple_observation_validation_test
       test from: :us_quality_core_v050_simple_observation_must_support_test
       test from: :us_quality_core_v050_simple_observation_reference_resolution_test

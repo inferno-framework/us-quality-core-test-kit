@@ -89,6 +89,8 @@
   :file_name: goal_patient_search_test.rb
 - :id: us_quality_core_v050_goal_read_test
   :file_name: goal_read_test.rb
+- :id: us_quality_core_v050_goal_provenance_revinclude_search_test
+  :file_name: goal_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_goal_validation_test
   :file_name: goal_validation_test.rb
 - :id: us_quality_core_v050_goal_must_support_test

@@ -17,6 +17,7 @@ module USQualityCoreTestKit
       READ_COVERAGE_TAG = 'us_quality_core_coverage_read'
       READ_DEVICE_REQUEST_TAG = 'us_quality_core_device_request_read'
       READ_DIAGNOSTIC_REPORT_TAG = 'us_quality_core_diagnostic_report_read'
+      READ_DOCUMENT_REFERENCE_TAG = 'us_quality_core_document_reference_read'
       READ_FAMILY_MEMBER_HISTORY_TAG = 'us_quality_core_family_member_history_read'
       READ_GOAL_TAG = 'us_quality_core_goal_read'
       READ_IMAGING_STUDY_TAG = 'us_quality_core_imaging_study_read'
@@ -35,6 +36,8 @@ module USQualityCoreTestKit
       READ_ORGANIZATION_TAG = 'us_quality_core_organization_read'
       READ_PRACTITIONER_TAG = 'us_quality_core_practitioner_read'
       READ_PRACTITIONER_ROLE_TAG = 'us_quality_core_practitioner_role_read'
+      READ_PROVENANCE_TAG = 'us_quality_core_provenance_read'
+      READ_SPECIMEN_TAG = 'us_quality_core_specimen_read'
 
       # SEARCH tags
 
@@ -50,6 +53,7 @@ module USQualityCoreTestKit
       SEARCH_COVERAGE_TAG = 'us_quality_core_coverage_search'
       SEARCH_DEVICE_REQUEST_TAG = 'us_quality_core_device_request_search'
       SEARCH_DIAGNOSTIC_REPORT_TAG = 'us_quality_core_diagnostic_report_search'
+      SEARCH_DOCUMENT_REFERENCE_TAG = 'us_quality_core_document_reference_search'
       SEARCH_FAMILY_MEMBER_HISTORY_TAG = 'us_quality_core_family_member_history_search'
       SEARCH_GOAL_TAG = 'us_quality_core_goal_search'
       SEARCH_IMAGING_STUDY_TAG = 'us_quality_core_imaging_study_search'
@@ -68,6 +72,8 @@ module USQualityCoreTestKit
       SEARCH_ORGANIZATION_TAG = 'us_quality_core_organization_search'
       SEARCH_PRACTITIONER_TAG = 'us_quality_core_practitioner_search'
       SEARCH_PRACTITIONER_ROLE_TAG = 'us_quality_core_practitioner_role_search'
+      SEARCH_PROVENANCE_TAG = 'us_quality_core_provenance_search'
+      SEARCH_SPECIMEN_TAG = 'us_quality_core_specimen_search'
     end
   end
 end

@@ -134,6 +134,8 @@
   :file_name: coverage_patient_search_test.rb
 - :id: us_quality_core_v050_coverage_read_test
   :file_name: coverage_read_test.rb
+- :id: us_quality_core_v050_coverage_provenance_revinclude_search_test
+  :file_name: coverage_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_coverage_validation_test
   :file_name: coverage_validation_test.rb
 - :id: us_quality_core_v050_coverage_must_support_test

@@ -1,5 +1,6 @@
 require_relative 'patient/patient_id_search_test'
 require_relative 'patient/patient_read_test'
+require_relative 'patient/patient_provenance_revinclude_search_test'
 require_relative 'patient/patient_validation_test'
 require_relative 'patient/patient_must_support_test'
 
@@ -81,6 +82,7 @@ read succeeds.
   
       test from: :us_quality_core_v050_patient__id_search_test
       test from: :us_quality_core_v050_patient_read_test
+      test from: :us_quality_core_v050_patient_provenance_revinclude_search_test
       test from: :us_quality_core_v050_patient_validation_test
       test from: :us_quality_core_v050_patient_must_support_test
     end

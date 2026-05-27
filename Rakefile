@@ -19,19 +19,33 @@ namespace :db do
   end
 end
 
-namespace :us_quality_core do
-  desc 'Generate tests'
-  task :generate do
-    require_relative 'lib/us_quality_core_test_kit/generator'
-    require_relative 'lib/us_quality_core_test_kit/client/generator'
+generate_us_quality_core = lambda do
+  supported_modes = %w[server client].freeze
+  mode = ENV['mode'].to_s.strip
 
-    USQualityCoreTestKit::Generator.generate
-    USQualityCoreTestKit::Client::Generator.generate
+  abort "Unsupported generation mode: #{mode}. Use mode=server, mode=client, or no mode for both." unless mode.empty? || supported_modes.include?(mode)
+
+  targets = mode.empty? ? supported_modes : [mode]
+
+  require_relative 'lib/us_quality_core_test_kit/generator'
+  require_relative 'lib/us_quality_core_test_kit/client/generator'
+
+  USQualityCoreTestKit::Generator.generate if targets.include?('server')
+
+  USQualityCoreTestKit::Client::Generator.generate if targets.include?('client')
+end
+
+namespace :us_quality_core do
+  desc 'Generate tests (mode=server or mode=client; defaults to both)'
+  task :generate do
+    generate_us_quality_core.call
   end
 end
 
 # Alias
 namespace :usqualitycore do
-  desc 'Generate tests'
-  task generate: 'us_quality_core:generate'
+  desc 'Generate tests (mode=server or mode=client; defaults to both)'
+  task :generate do
+    generate_us_quality_core.call
+  end
 end

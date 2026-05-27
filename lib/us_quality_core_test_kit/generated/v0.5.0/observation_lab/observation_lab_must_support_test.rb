@@ -14,7 +14,6 @@ module USQualityCoreTestKit
         * Observation.category
         * Observation.category:us-core
         * Observation.code
-        * Observation.dataAbsentReason
         * Observation.effectiveDateTime
         * Observation.specimen
         * Observation.status

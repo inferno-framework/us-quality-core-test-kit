@@ -1,5 +1,6 @@
 require_relative 'care_plan/care_plan_patient_category_search_test'
 require_relative 'care_plan/care_plan_read_test'
+require_relative 'care_plan/care_plan_provenance_revinclude_search_test'
 require_relative 'care_plan/care_plan_validation_test'
 require_relative 'care_plan/care_plan_must_support_test'
 require_relative 'care_plan/care_plan_reference_resolution_test'
@@ -82,6 +83,7 @@ read succeeds.
   
       test from: :us_quality_core_v050_care_plan_patient_category_search_test
       test from: :us_quality_core_v050_care_plan_read_test
+      test from: :us_quality_core_v050_care_plan_provenance_revinclude_search_test
       test from: :us_quality_core_v050_care_plan_validation_test
       test from: :us_quality_core_v050_care_plan_must_support_test
       test from: :us_quality_core_v050_care_plan_reference_resolution_test

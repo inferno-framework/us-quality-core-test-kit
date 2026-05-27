@@ -3,6 +3,7 @@ require_relative 'medicationadministrationnotdone/medicationadministrationnotdon
 require_relative 'medicationadministrationnotdone/medicationadministrationnotdone_patient_code_search_test'
 require_relative 'medicationadministrationnotdone/medicationadministrationnotdone_patient_effective_time_search_test'
 require_relative 'medicationadministrationnotdone/medicationadministrationnotdone_read_test'
+require_relative 'medicationadministrationnotdone/medicationadministrationnotdone_provenance_revinclude_search_test'
 require_relative 'medicationadministrationnotdone/medicationadministrationnotdone_validation_test'
 require_relative 'medicationadministrationnotdone/medicationadministrationnotdone_must_support_test'
 
@@ -90,6 +91,7 @@ read succeeds.
       test from: :us_quality_core_v050_medicationadministrationnotdone_patient_code_search_test
       test from: :us_quality_core_v050_medicationadministrationnotdone_patient_effective_time_search_test
       test from: :us_quality_core_v050_medicationadministrationnotdone_read_test
+      test from: :us_quality_core_v050_medicationadministrationnotdone_provenance_revinclude_search_test
       test from: :us_quality_core_v050_medicationadministrationnotdone_validation_test
       test from: :us_quality_core_v050_medicationadministrationnotdone_must_support_test
     end

@@ -225,6 +225,8 @@
   :file_name: medicationnotrequested_patient_intent_search_test.rb
 - :id: us_quality_core_v050_medicationnotrequested_read_test
   :file_name: medicationnotrequested_read_test.rb
+- :id: us_quality_core_v050_medicationnotrequested_provenance_revinclude_search_test
+  :file_name: medicationnotrequested_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_medicationnotrequested_validation_test
   :file_name: medicationnotrequested_validation_test.rb
 - :id: us_quality_core_v050_medicationnotrequested_must_support_test

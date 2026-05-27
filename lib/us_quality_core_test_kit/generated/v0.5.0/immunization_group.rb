@@ -1,6 +1,7 @@
 require_relative 'immunization/immunization_patient_status_search_test'
 require_relative 'immunization/immunization_patient_search_test'
 require_relative 'immunization/immunization_read_test'
+require_relative 'immunization/immunization_provenance_revinclude_search_test'
 require_relative 'immunization/immunization_validation_test'
 require_relative 'immunization/immunization_must_support_test'
 require_relative 'immunization/immunization_reference_resolution_test'
@@ -85,6 +86,7 @@ read succeeds.
       test from: :us_quality_core_v050_immunization_patient_status_search_test
       test from: :us_quality_core_v050_immunization_patient_search_test
       test from: :us_quality_core_v050_immunization_read_test
+      test from: :us_quality_core_v050_immunization_provenance_revinclude_search_test
       test from: :us_quality_core_v050_immunization_validation_test
       test from: :us_quality_core_v050_immunization_must_support_test
       test from: :us_quality_core_v050_immunization_reference_resolution_test

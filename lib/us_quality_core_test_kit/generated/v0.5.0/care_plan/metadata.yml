@@ -189,6 +189,8 @@
   :file_name: care_plan_patient_category_search_test.rb
 - :id: us_quality_core_v050_care_plan_read_test
   :file_name: care_plan_read_test.rb
+- :id: us_quality_core_v050_care_plan_provenance_revinclude_search_test
+  :file_name: care_plan_provenance_revinclude_search_test.rb
 - :id: us_quality_core_v050_care_plan_validation_test
   :file_name: care_plan_validation_test.rb
 - :id: us_quality_core_v050_care_plan_must_support_test

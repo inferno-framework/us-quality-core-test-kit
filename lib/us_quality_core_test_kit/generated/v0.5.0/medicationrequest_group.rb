@@ -1,6 +1,7 @@
 require_relative 'medicationrequest/medicationrequest_patient_intent_do_not_perform_search_test'
 require_relative 'medicationrequest/medicationrequest_patient_intent_search_test'
 require_relative 'medicationrequest/medicationrequest_read_test'
+require_relative 'medicationrequest/medicationrequest_provenance_revinclude_search_test'
 require_relative 'medicationrequest/medicationrequest_validation_test'
 require_relative 'medicationrequest/medicationrequest_must_support_test'
 require_relative 'medicationrequest/medicationrequest_reference_resolution_test'
@@ -85,6 +86,7 @@ read succeeds.
       test from: :us_quality_core_v050_medicationrequest_patient_intent_do_not_perform_search_test
       test from: :us_quality_core_v050_medicationrequest_patient_intent_search_test
       test from: :us_quality_core_v050_medicationrequest_read_test
+      test from: :us_quality_core_v050_medicationrequest_provenance_revinclude_search_test
       test from: :us_quality_core_v050_medicationrequest_validation_test
       test from: :us_quality_core_v050_medicationrequest_must_support_test
       test from: :us_quality_core_v050_medicationrequest_reference_resolution_test

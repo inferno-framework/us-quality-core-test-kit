@@ -44,7 +44,10 @@ module USQualityCoreTestKit
       end
 
       def must_support_elements
-        super.map do |element|
+        ms_elements = super
+        return ms_elements unless profile.url.include?('us-quality-core')
+
+        ms_elements.map do |element|
           profile_element = plain_must_support_elements.find do |e|
             path = e.id.gsub("#{resource}.", '')
             [element[:path], element[:original_path]].include?(path)
@@ -64,6 +67,9 @@ module USQualityCoreTestKit
 
       def handle_special_cases
         remove_patient_gender_identity
+        remove_vital_sign_component
+        remove_blood_pressure_value_data_absent_reason
+        remove_observation_data_absent_reason
       end
     end
   end

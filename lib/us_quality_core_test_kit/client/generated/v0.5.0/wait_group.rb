@@ -136,6 +136,15 @@ module USQualityCoreTestKit
     * patient
     * patient + category + date
     * patient + code
+* **DocumentReference**
+  * read id:
+    * usqualitycore-document-reference
+  * searches:
+    * patient
+    * _id
+    * patient + type
+    * patient + category
+    * patient + category + date
 * **FamilyMemberHistory**
   * read id:
     * usqualitycore-family-member-history
@@ -237,6 +246,30 @@ module USQualityCoreTestKit
     * patient + category
     * patient + category + date
     * patient + code
+* **UsCoreObservationPregnancyintent**
+  * read id:
+    * usqualitycore-us-core-observation-pregnancyintent
+  * searches:
+    * patient + code
+    * patient + category + status
+    * patient + category
+    * patient + category + date
+* **UsCoreObservationPregnancystatus**
+  * read id:
+    * usqualitycore-us-core-observation-pregnancystatus
+  * searches:
+    * patient + code
+    * patient + category + status
+    * patient + category
+    * patient + category + date
+* **UsCoreSmokingstatus**
+  * read id:
+    * usqualitycore-us-core-smokingstatus
+  * searches:
+    * patient + code
+    * patient + category + status
+    * patient + category
+    * patient + category + date
 * **ObservationLab**
   * read id:
     * usqualitycore-observation-lab
@@ -245,6 +278,102 @@ module USQualityCoreTestKit
     * patient + category
     * patient + category + date
     * patient + code
+* **UsCoreObservationOccupation**
+  * read id:
+    * usqualitycore-us-core-observation-occupation
+  * searches:
+    * patient + code
+    * patient + category + status
+    * patient + category
+    * patient + category + date
+* **UsCoreBloodPressure**
+  * read id:
+    * usqualitycore-us-core-blood-pressure
+  * searches:
+    * patient + code
+    * patient + category + status
+    * patient + category
+    * patient + category + date
+* **UsCoreBmi**
+  * read id:
+    * usqualitycore-us-core-bmi
+  * searches:
+    * patient + code
+    * patient + category + status
+    * patient + category
+    * patient + category + date
+* **PediatricBmiForAge**
+  * read id:
+    * usqualitycore-pediatric-bmi-for-age
+  * searches:
+    * patient + code
+    * patient + category + status
+    * patient + category
+    * patient + category + date
+* **UsCoreBodyHeight**
+  * read id:
+    * usqualitycore-us-core-body-height
+  * searches:
+    * patient + code
+    * patient + category + status
+    * patient + category
+    * patient + category + date
+* **UsCoreBodyTemperature**
+  * read id:
+    * usqualitycore-us-core-body-temperature
+  * searches:
+    * patient + code
+    * patient + category + status
+    * patient + category
+    * patient + category + date
+* **UsCoreBodyWeight**
+  * read id:
+    * usqualitycore-us-core-body-weight
+  * searches:
+    * patient + code
+    * patient + category + status
+    * patient + category
+    * patient + category + date
+* **HeadOccipitalFrontalCircumferencePercentile**
+  * read id:
+    * usqualitycore-head-circumference-percentile
+  * searches:
+    * patient + code
+    * patient + category + status
+    * patient + category
+    * patient + category + date
+* **UsCoreHeartRate**
+  * read id:
+    * usqualitycore-us-core-heart-rate
+  * searches:
+    * patient + code
+    * patient + category + status
+    * patient + category
+    * patient + category + date
+* **UsCorePulseOximetry**
+  * read id:
+    * usqualitycore-us-core-pulse-oximetry
+  * searches:
+    * patient + code
+    * patient + category + status
+    * patient + category
+    * patient + category + date
+* **UsCoreRespiratoryRate**
+  * read id:
+    * usqualitycore-us-core-respiratory-rate
+  * searches:
+    * patient + code
+    * patient + category + status
+    * patient + category
+    * patient + category + date
+* **PediatricWeightForHeight**
+  * read id:
+    * usqualitycore-pediatric-weight-for-height
+  * searches:
+    * patient + code
+    * patient + category + status
+    * patient + category
+    * patient + category + date
 * **Procedure**
   * read id:
     * usqualitycore-procedure
@@ -327,6 +456,16 @@ module USQualityCoreTestKit
     * usqualitycore-practitioner-role
   * searches:
 
+* **Provenance**
+  * read id:
+    * usqualitycore-provenance
+  * searches:
+
+* **Specimen**
+  * read id:
+    * usqualitycore-specimen
+  * searches:
+    * _id
 
   [Click here](#{resume_pass_url}?token=#{client_id}) when finished.
                 ),

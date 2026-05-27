@@ -253,17 +253,17 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Specimen/us-core-specimen",
+      "fullUrl": "http://example.org/fhir/Specimen/usqualitycore-specimen",
       "request": {
         "method": "PUT",
-        "url": "Specimen/us-core-specimen"
+        "url": "Specimen/usqualitycore-specimen"
       },
       "resource": {
         "resourceType": "Specimen",
-        "id": "us-core-specimen",
+        "id": "usqualitycore-specimen",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen"
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen|6.1.0"
           ]
         },
         "type": {
@@ -296,7 +296,1570 @@
         ],
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: us-core-specimen</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-specimen</div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/DocumentReference/usqualitycore-document-reference",
+      "request": {
+        "method": "PUT",
+        "url": "DocumentReference/usqualitycore-document-reference"
+      },
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "usqualitycore-document-reference",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|6.1.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://github.com/inferno-framework/us-quality-core-test-kit/document-reference",
+            "value": "usqualitycore-document-reference"
+          }
+        ],
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "34117-2",
+              "display": "History and physical note"
+            }
+          ],
+          "text": "History and physical note"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+                "code": "clinical-note",
+                "display": "Clinical Note"
+              }
+            ],
+            "text": "Clinical Note"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/usqualitycore-patient"
+        },
+        "date": "2015-02-15T16:30:00Z",
+        "author": [
+          {
+            "reference": "Practitioner/usqualitycore-practitioner"
+          }
+        ],
+        "custodian": {
+          "reference": "Organization/usqualitycore-organization"
+        },
+        "description": "History and physical note for the US Quality Core test kit encounter.",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "VVMgUXVhbGl0eSBDb3JlIHRlc3Qga2l0IERvY3VtZW50UmVmZXJlbmNlIGNsaW5pY2FsIG5vdGUu",
+              "url": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+              "title": "US Quality Core test kit clinical note",
+              "creation": "2015-02-15T16:30:00Z"
+            },
+            "format": {
+              "system": "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+              "code": "urn:hl7-org:sdwg:ccda-structuredBody:2.1",
+              "display": "For documents following C-CDA 2.1 constraints using a structured body."
+            }
+          }
+        ],
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/usqualitycore-encounter"
+            }
+          ],
+          "period": {
+            "start": "2015-02-15T14:30:00+01:00",
+            "end": "2015-02-15T16:30:00+01:00"
+          }
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-document-reference</div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-observation-pregnancyintent",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/usqualitycore-us-core-observation-pregnancyintent"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "usqualitycore-us-core-observation-pregnancyintent",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancyintent|6.1.0"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "social-history",
+                "display": "Social History"
+              }
+            ],
+            "text": "Social History"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "86645-9",
+              "display": "Pregnancy intention in the next year - Reported"
+            }
+          ],
+          "text": "Pregnancy intention in the next year - Reported"
+        },
+        "subject": {
+          "reference": "Patient/usqualitycore-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/usqualitycore-encounter"
+        },
+        "effectiveDateTime": "2022-09-23T22:39:43Z",
+        "performer": [
+          {
+            "reference": "Organization/usqualitycore-organization"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/sct/731000124108",
+              "code": "454381000124105",
+              "display": "Not sure of desire to become pregnant (finding)"
+            }
+          ],
+          "text": "Not sure of desire to become pregnant (finding)"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-observation-pregnancyintent</div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-observation-pregnancystatus",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/usqualitycore-us-core-observation-pregnancystatus"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "usqualitycore-us-core-observation-pregnancystatus",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus|6.1.0"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "social-history",
+                "display": "Social History"
+              }
+            ],
+            "text": "Social History"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "82810-3",
+              "display": "Pregnancy status"
+            }
+          ],
+          "text": "Pregnancy status"
+        },
+        "subject": {
+          "reference": "Patient/usqualitycore-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/usqualitycore-encounter"
+        },
+        "effectiveDateTime": "2022-08-24T10:39:52Z",
+        "performer": [
+          {
+            "reference": "Organization/usqualitycore-organization"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "77386006",
+              "display": "Pregnant"
+            }
+          ],
+          "text": "Pregnant"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-observation-pregnancystatus</div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-smokingstatus",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/usqualitycore-us-core-smokingstatus"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "usqualitycore-us-core-smokingstatus",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus|6.1.0"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "social-history",
+                "display": "Social History"
+              }
+            ],
+            "text": "Social History"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72166-2",
+              "display": "Tobacco smoking status"
+            }
+          ],
+          "text": "Tobacco smoking status"
+        },
+        "subject": {
+          "reference": "Patient/usqualitycore-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/usqualitycore-encounter"
+        },
+        "effectiveDateTime": "2016-03-18T05:27:04Z",
+        "performer": [
+          {
+            "reference": "Organization/usqualitycore-organization"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "428041000124106",
+              "display": "Occasional tobacco smoker"
+            }
+          ],
+          "text": "Occasional tobacco smoker"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-smokingstatus</div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-observation-occupation",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/usqualitycore-us-core-observation-occupation"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "usqualitycore-us-core-observation-occupation",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation|6.1.0"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "social-history",
+                "display": "Social History"
+              }
+            ],
+            "text": "Social History"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11341-5",
+              "display": "History of Occupation"
+            }
+          ],
+          "text": "History of Occupation"
+        },
+        "subject": {
+          "reference": "Patient/usqualitycore-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/usqualitycore-encounter"
+        },
+        "effectivePeriod": {
+          "start": "2015-04-24"
+        },
+        "performer": [
+          {
+            "reference": "Organization/usqualitycore-organization"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH",
+              "code": "31-1014.00.007136",
+              "display": "Certified Nursing Assistant (CNA) [Nursing Assistants]"
+            }
+          ],
+          "text": "Certified Nursing Assistant (CNA) [Nursing Assistants]"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "86188-0",
+                  "display": "History of Occupation Industry"
+                }
+              ],
+              "text": "History of Occupation Industry"
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH",
+                  "code": "621610.008495",
+                  "display": "Home nursing services"
+                }
+              ],
+              "text": "Home nursing services"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-observation-occupation</div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-blood-pressure",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/usqualitycore-us-core-blood-pressure"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "usqualitycore-us-core-blood-pressure",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure|6.1.0"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "85354-9",
+              "display": "Blood pressure panel with all children optional"
+            }
+          ],
+          "text": "Blood pressure panel with all children optional"
+        },
+        "subject": {
+          "reference": "Patient/usqualitycore-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/usqualitycore-encounter"
+        },
+        "effectiveDateTime": "1999-07-02",
+        "performer": [
+          {
+            "reference": "Organization/usqualitycore-organization"
+          }
+        ],
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure"
+                }
+              ],
+              "text": "Systolic blood pressure"
+            },
+            "valueQuantity": {
+              "value": 109,
+              "unit": "mmHg",
+              "system": "http://unitsofmeasure.org",
+              "code": "mm[Hg]"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure"
+                }
+              ],
+              "text": "Diastolic blood pressure"
+            },
+            "valueQuantity": {
+              "value": 44,
+              "unit": "mmHg",
+              "system": "http://unitsofmeasure.org",
+              "code": "mm[Hg]"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-blood-pressure</div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-bp-data-absent-reason",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/usqualitycore-us-core-bp-data-absent-reason"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "usqualitycore-us-core-bp-data-absent-reason",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure|6.1.0"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "85354-9",
+              "display": "Blood pressure panel with all children optional"
+            }
+          ],
+          "text": "Blood pressure panel with all children optional"
+        },
+        "subject": {
+          "reference": "Patient/usqualitycore-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/usqualitycore-encounter"
+        },
+        "effectiveDateTime": "1999-07-03",
+        "performer": [
+          {
+            "reference": "Organization/usqualitycore-organization"
+          }
+        ],
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure"
+                }
+              ],
+              "text": "Systolic blood pressure"
+            },
+            "dataAbsentReason": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+                  "code": "unknown",
+                  "display": "Unknown"
+                }
+              ],
+              "text": "Unknown"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure"
+                }
+              ],
+              "text": "Diastolic blood pressure"
+            },
+            "dataAbsentReason": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+                  "code": "unknown",
+                  "display": "Unknown"
+                }
+              ],
+              "text": "Unknown"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-bp-data-absent-reason</div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-bmi",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/usqualitycore-us-core-bmi"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "usqualitycore-us-core-bmi",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bmi|6.1.0"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "39156-5",
+              "display": "Body mass index (BMI) [Ratio]"
+            }
+          ],
+          "text": "Body mass index (BMI) [Ratio]"
+        },
+        "subject": {
+          "reference": "Patient/usqualitycore-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/usqualitycore-encounter"
+        },
+        "effectiveDateTime": "1999-07-02",
+        "performer": [
+          {
+            "reference": "Organization/usqualitycore-organization"
+          }
+        ],
+        "valueQuantity": {
+          "value": 16.2,
+          "unit": "kg/m2",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg/m2"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-bmi</div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-pediatric-bmi-for-age",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/usqualitycore-pediatric-bmi-for-age"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "usqualitycore-pediatric-bmi-for-age",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-bmi-for-age|6.1.0"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59576-9",
+              "display": "Body mass index (BMI) [Percentile] Per age and sex"
+            }
+          ],
+          "text": "Body mass index (BMI) [Percentile] Per age and sex"
+        },
+        "subject": {
+          "reference": "Patient/usqualitycore-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/usqualitycore-encounter"
+        },
+        "effectiveDateTime": "2019-05-04T12:12:29-07:00",
+        "performer": [
+          {
+            "reference": "Organization/usqualitycore-organization"
+          }
+        ],
+        "valueQuantity": {
+          "value": 65,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-pediatric-bmi-for-age</div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-body-height",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/usqualitycore-us-core-body-height"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "usqualitycore-us-core-body-height",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height|6.1.0"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8302-2",
+              "display": "Body height"
+            }
+          ],
+          "text": "Body height"
+        },
+        "subject": {
+          "reference": "Patient/usqualitycore-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/usqualitycore-encounter"
+        },
+        "effectiveDateTime": "1999-07-02",
+        "performer": [
+          {
+            "reference": "Organization/usqualitycore-organization"
+          }
+        ],
+        "valueQuantity": {
+          "value": 111.506,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-body-height</div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-body-temperature",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/usqualitycore-us-core-body-temperature"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "usqualitycore-us-core-body-temperature",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature|6.1.0"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "Patient/usqualitycore-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/usqualitycore-encounter"
+        },
+        "effectiveDateTime": "1999-07-02",
+        "performer": [
+          {
+            "reference": "Organization/usqualitycore-organization"
+          }
+        ],
+        "valueQuantity": {
+          "value": 36.6,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-body-temperature</div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-body-weight",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/usqualitycore-us-core-body-weight"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "usqualitycore-us-core-body-weight",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-weight|6.1.0"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/usqualitycore-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/usqualitycore-encounter"
+        },
+        "effectiveDateTime": "1999-07-02",
+        "performer": [
+          {
+            "reference": "Organization/usqualitycore-organization"
+          }
+        ],
+        "valueQuantity": {
+          "value": 20.09,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-body-weight</div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-head-circumference-percentile",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/usqualitycore-head-circumference-percentile"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "usqualitycore-head-circumference-percentile",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/head-occipital-frontal-circumference-percentile|6.1.0"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8289-1",
+              "display": "Head Occipital-frontal circumference Percentile"
+            }
+          ],
+          "text": "Head Occipital-frontal circumference Percentile"
+        },
+        "subject": {
+          "reference": "Patient/usqualitycore-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/usqualitycore-encounter"
+        },
+        "effectiveDateTime": "2020-07-01",
+        "performer": [
+          {
+            "reference": "Organization/usqualitycore-organization"
+          }
+        ],
+        "valueQuantity": {
+          "value": 82,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-head-circumference-percentile</div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-heart-rate",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/usqualitycore-us-core-heart-rate"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "usqualitycore-us-core-heart-rate",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate|6.1.0"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart Rate"
+            }
+          ],
+          "text": "Heart Rate"
+        },
+        "subject": {
+          "reference": "Patient/usqualitycore-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/usqualitycore-encounter"
+        },
+        "effectiveDateTime": "1999-07-02",
+        "performer": [
+          {
+            "reference": "Organization/usqualitycore-organization"
+          }
+        ],
+        "valueQuantity": {
+          "value": 44,
+          "unit": "beats/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-heart-rate</div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-pulse-oximetry",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/usqualitycore-us-core-pulse-oximetry"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "usqualitycore-us-core-pulse-oximetry",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry|6.1.0"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation in Arterial blood by Pulse oximetry"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "2708-6",
+              "display": "Oxygen saturation in Arterial blood"
+            }
+          ],
+          "text": "Oxygen saturation in Arterial blood by Pulse oximetry"
+        },
+        "subject": {
+          "reference": "Patient/usqualitycore-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/usqualitycore-encounter"
+        },
+        "effectiveDateTime": "1999-07-02",
+        "performer": [
+          {
+            "reference": "Organization/usqualitycore-organization"
+          }
+        ],
+        "valueQuantity": {
+          "value": 99,
+          "unit": "%O2",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "3151-8",
+                  "display": "Inhaled oxygen flow rate"
+                }
+              ],
+              "text": "Inhaled oxygen flow rate"
+            },
+            "valueQuantity": {
+              "value": 2,
+              "unit": "L/min",
+              "system": "http://unitsofmeasure.org",
+              "code": "L/min"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "3150-0",
+                  "display": "Inhaled oxygen concentration"
+                }
+              ],
+              "text": "Inhaled oxygen concentration"
+            },
+            "valueQuantity": {
+              "value": 21,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "%"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-pulse-oximetry</div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-respiratory-rate",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/usqualitycore-us-core-respiratory-rate"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "usqualitycore-us-core-respiratory-rate",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate|6.1.0"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "Patient/usqualitycore-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/usqualitycore-encounter"
+        },
+        "effectiveDateTime": "1999-07-02",
+        "performer": [
+          {
+            "reference": "Organization/usqualitycore-organization"
+          }
+        ],
+        "valueQuantity": {
+          "value": 26,
+          "unit": "breaths per minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-respiratory-rate</div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-pediatric-weight-for-height",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/usqualitycore-pediatric-weight-for-height"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "usqualitycore-pediatric-weight-for-height",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-weight-for-height|6.1.0"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "77606-2",
+              "display": "Weight-for-length Per age and sex"
+            }
+          ],
+          "text": "Weight-for-length Per age and sex"
+        },
+        "subject": {
+          "reference": "Patient/usqualitycore-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/usqualitycore-encounter"
+        },
+        "effectiveDateTime": "2020-07-02",
+        "performer": [
+          {
+            "reference": "Organization/usqualitycore-organization"
+          }
+        ],
+        "valueQuantity": {
+          "value": 65,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-pediatric-weight-for-height</div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Provenance/usqualitycore-provenance",
+      "request": {
+        "method": "PUT",
+        "url": "Provenance/usqualitycore-provenance"
+      },
+      "resource": {
+        "resourceType": "Provenance",
+        "id": "usqualitycore-provenance",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|6.1.0"
+          ]
+        },
+        "target": [
+          {
+            "reference": "Patient/usqualitycore-patient"
+          },
+          {
+            "reference": "Claim/usqualitycore-claim"
+          },
+          {
+            "reference": "Specimen/usqualitycore-specimen"
+          },
+          {
+            "reference": "DocumentReference/usqualitycore-document-reference"
+          },
+          {
+            "reference": "Observation/usqualitycore-us-core-observation-pregnancyintent"
+          },
+          {
+            "reference": "Observation/usqualitycore-us-core-observation-pregnancystatus"
+          },
+          {
+            "reference": "Observation/usqualitycore-us-core-smokingstatus"
+          },
+          {
+            "reference": "Observation/usqualitycore-us-core-observation-occupation"
+          },
+          {
+            "reference": "Observation/usqualitycore-us-core-blood-pressure"
+          },
+          {
+            "reference": "Observation/usqualitycore-us-core-bp-data-absent-reason"
+          },
+          {
+            "reference": "Observation/usqualitycore-us-core-bmi"
+          },
+          {
+            "reference": "Observation/usqualitycore-pediatric-bmi-for-age"
+          },
+          {
+            "reference": "Observation/usqualitycore-us-core-body-height"
+          },
+          {
+            "reference": "Observation/usqualitycore-us-core-body-temperature"
+          },
+          {
+            "reference": "Observation/usqualitycore-us-core-body-weight"
+          },
+          {
+            "reference": "Observation/usqualitycore-head-circumference-percentile"
+          },
+          {
+            "reference": "Observation/usqualitycore-us-core-heart-rate"
+          },
+          {
+            "reference": "Observation/usqualitycore-us-core-pulse-oximetry"
+          },
+          {
+            "reference": "Observation/usqualitycore-us-core-respiratory-rate"
+          },
+          {
+            "reference": "Observation/usqualitycore-pediatric-weight-for-height"
+          },
+          {
+            "reference": "ImagingStudy/usqualitycore-imaging-study"
+          },
+          {
+            "reference": "AdverseEvent/usqualitycore-adverse-event"
+          },
+          {
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance"
+          },
+          {
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup1"
+          },
+          {
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup10"
+          },
+          {
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup11"
+          },
+          {
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup12"
+          },
+          {
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup13"
+          },
+          {
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup14"
+          },
+          {
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup15"
+          },
+          {
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup16"
+          },
+          {
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup17"
+          },
+          {
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup18"
+          },
+          {
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup19"
+          },
+          {
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup2"
+          },
+          {
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup20"
+          },
+          {
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup3"
+          },
+          {
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup4"
+          },
+          {
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup5"
+          },
+          {
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup6"
+          },
+          {
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup7"
+          },
+          {
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup8"
+          },
+          {
+            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup9"
+          },
+          {
+            "reference": "CarePlan/usqualitycore-care-plan"
+          },
+          {
+            "reference": "CareTeam/usqualitycore-care-team"
+          },
+          {
+            "reference": "Condition/usqualitycore-condition-encounter-diagnosis"
+          },
+          {
+            "reference": "Condition/usqualitycore-condition-problems-health-concerns"
+          },
+          {
+            "reference": "Coverage/usqualitycore-coverage"
+          },
+          {
+            "reference": "Device/usqualitycore-device"
+          },
+          {
+            "reference": "DeviceRequest/usqualitycore-devicenotrequested"
+          },
+          {
+            "reference": "DeviceRequest/usqualitycore-devicerequest"
+          },
+          {
+            "reference": "DiagnosticReport/usqualitycore-diagnostic-report-lab"
+          },
+          {
+            "reference": "DiagnosticReport/usqualitycore-diagnostic-report-note"
+          },
+          {
+            "reference": "Encounter/usqualitycore-encounter"
+          },
+          {
+            "reference": "FamilyMemberHistory/usqualitycore-family-member-history"
+          },
+          {
+            "reference": "Goal/usqualitycore-goal"
+          },
+          {
+            "reference": "Group/usqualitycore-group"
+          },
+          {
+            "reference": "Immunization/usqualitycore-immunization"
+          },
+          {
+            "reference": "Immunization/usqualitycore-immunizationnotdone"
+          },
+          {
+            "reference": "Immunization/usqualitycore-immunizationnotdone-2"
+          },
+          {
+            "reference": "MedicationAdministration/usqualitycore-medicationadministration"
+          },
+          {
+            "reference": "MedicationAdministration/usqualitycore-medicationadministrationnotdone"
+          },
+          {
+            "reference": "MedicationDispense/usqualitycore-medicationdispense"
+          },
+          {
+            "reference": "MedicationDispense/usqualitycore-medicationdispensedeclined"
+          },
+          {
+            "reference": "MedicationRequest/usqualitycore-medicationnotrequested"
+          },
+          {
+            "reference": "MedicationRequest/usqualitycore-medicationrequest"
+          },
+          {
+            "reference": "Observation/usqualitycore-observation-clinical-result"
+          },
+          {
+            "reference": "Observation/usqualitycore-observation-clinical-result-2"
+          },
+          {
+            "reference": "Observation/usqualitycore-observation-clinical-result-3"
+          },
+          {
+            "reference": "Observation/usqualitycore-observation-clinical-result-4"
+          },
+          {
+            "reference": "Observation/usqualitycore-observation-lab"
+          },
+          {
+            "reference": "Observation/usqualitycore-observation-lab-2"
+          },
+          {
+            "reference": "Observation/usqualitycore-observation-lab-3"
+          },
+          {
+            "reference": "Observation/usqualitycore-observation-lab-4"
+          },
+          {
+            "reference": "Observation/usqualitycore-observation-screening-assessment"
+          },
+          {
+            "reference": "Observation/usqualitycore-observation-screening-assessment-2"
+          },
+          {
+            "reference": "Observation/usqualitycore-observation-screening-assessment-3"
+          },
+          {
+            "reference": "Observation/usqualitycore-observation-screening-assessment-4"
+          },
+          {
+            "reference": "Observation/usqualitycore-observationcancelled"
+          },
+          {
+            "reference": "Procedure/usqualitycore-procedure"
+          },
+          {
+            "reference": "Procedure/usqualitycore-procedurenotdone"
+          },
+          {
+            "reference": "QuestionnaireResponse/usqualitycore-questionnaire-response"
+          },
+          {
+            "reference": "RelatedPerson/usqualitycore-related-person"
+          },
+          {
+            "reference": "ServiceRequest/usqualitycore-servicenotrequested"
+          },
+          {
+            "reference": "ServiceRequest/usqualitycore-servicerequest"
+          },
+          {
+            "reference": "Observation/usqualitycore-simple-observation"
+          },
+          {
+            "reference": "Observation/usqualitycore-simple-observation-2"
+          },
+          {
+            "reference": "Observation/usqualitycore-simple-observation-3"
+          },
+          {
+            "reference": "Observation/usqualitycore-simple-observation-4"
+          },
+          {
+            "reference": "Task/usqualitycore-task"
+          },
+          {
+            "reference": "Task/usqualitycore-taskrejected"
+          },
+          {
+            "reference": "Task/usqualitycore-taskrejected-2"
+          }
+        ],
+        "recorded": "2015-02-15T16:30:00Z",
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+                  "code": "author",
+                  "display": "Author"
+                }
+              ]
+            },
+            "who": {
+              "reference": "Practitioner/usqualitycore-practitioner"
+            },
+            "onBehalfOf": {
+              "reference": "Organization/usqualitycore-organization"
+            }
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type",
+                  "code": "transmitter",
+                  "display": "Transmitter"
+                }
+              ]
+            },
+            "who": {
+              "reference": "Organization/usqualitycore-organization"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "reference": "DocumentReference/usqualitycore-document-reference"
+            }
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-provenance</div>"
         }
       }
     },
@@ -2337,6 +3900,16 @@
                 "code": "encounter-diagnosis"
               }
             ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "functional-status",
+                "display": "Functional Status"
+              }
+            ],
+            "text": "Functional Status"
           }
         ],
         "severity": {
@@ -4922,7 +6495,7 @@
           "system": "http://unitsofmeasure.org"
         },
         "specimen": {
-          "reference": "Specimen/us-core-specimen"
+          "reference": "Specimen/usqualitycore-specimen"
         },
         "referenceRange": [
           {
@@ -5019,7 +6592,7 @@
         ],
         "valueString": "Test",
         "specimen": {
-          "reference": "Specimen/us-core-specimen"
+          "reference": "Specimen/usqualitycore-specimen"
         },
         "interpretation": [
           {
@@ -5136,7 +6709,7 @@
           "text": "Negative for Chlamydia Trachomatis rRNA"
         },
         "specimen": {
-          "reference": "Specimen/us-core-specimen"
+          "reference": "Specimen/usqualitycore-specimen"
         },
         "referenceRange": [
           {
@@ -5242,7 +6815,7 @@
           "text": "Unknown"
         },
         "specimen": {
-          "reference": "Specimen/us-core-specimen"
+          "reference": "Specimen/usqualitycore-specimen"
         },
         "referenceRange": [
           {
@@ -6720,6 +8293,16 @@
                 "display": "Surgical Procedure"
               }
             ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "functional-status",
+                "display": "Functional Status"
+              }
+            ],
+            "text": "Functional Status"
           }
         ],
         "priority": "urgent",
@@ -6807,6 +8390,16 @@
                 "display": "Surgical Procedure"
               }
             ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "functional-status",
+                "display": "Functional Status"
+              }
+            ],
+            "text": "Functional Status"
           }
         ],
         "priority": "urgent",
@@ -6894,6 +8487,16 @@
               }
             ],
             "text": "Activity"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "functional-status",
+                "display": "Functional Status"
+              }
+            ],
+            "text": "Functional Status"
           }
         ],
         "code": {

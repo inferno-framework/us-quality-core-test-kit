@@ -2,6 +2,7 @@ require_relative 'procedure/procedure_patient_status_search_test'
 require_relative 'procedure/procedure_patient_search_test'
 require_relative 'procedure/procedure_patient_date_search_test'
 require_relative 'procedure/procedure_read_test'
+require_relative 'procedure/procedure_provenance_revinclude_search_test'
 require_relative 'procedure/procedure_validation_test'
 require_relative 'procedure/procedure_must_support_test'
 require_relative 'procedure/procedure_reference_resolution_test'
@@ -88,6 +89,7 @@ read succeeds.
       test from: :us_quality_core_v050_procedure_patient_search_test
       test from: :us_quality_core_v050_procedure_patient_date_search_test
       test from: :us_quality_core_v050_procedure_read_test
+      test from: :us_quality_core_v050_procedure_provenance_revinclude_search_test
       test from: :us_quality_core_v050_procedure_validation_test
       test from: :us_quality_core_v050_procedure_must_support_test
       test from: :us_quality_core_v050_procedure_reference_resolution_test
