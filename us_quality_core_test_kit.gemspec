@@ -10,9 +10,8 @@ Gem::Specification.new do |spec|
   spec.license       = 'Apache-2.0'
   spec.authors       = ['MITRE']
 
-  spec.add_dependency 'connection_pool', '< 3.0'
-  spec.add_dependency 'inferno_core', '~> 1.1.0'
-  spec.add_dependency 'us_core_test_kit', '~> 1.1.1'
+  spec.add_dependency 'inferno_core', '~> 1.3', '>= 1.3.1'
+  spec.add_dependency 'us_core_test_kit', '~> 1.1.3'
 
   spec.required_ruby_version = Gem::Requirement.new('>= 3.3.6')
   spec.metadata['inferno_test_kit'] = 'true'
