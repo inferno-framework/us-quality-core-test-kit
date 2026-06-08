@@ -111,26 +111,6 @@ ruby scripts/clean_bundle.rb ./client-example-resources/us_quality_core_bundle_p
 
 ## Known Limitations
 
-### ImagingStudy `procedure-code` Search on the Local Reference Server
-
-The US Quality Core ImagingStudy `procedure-code` SearchParameter currently uses
-the FHIRPath expression `ImagingStudy.procedureReference.resolve().code`. This
-expression is valid FHIRPath, but the local HAPI-based reference server does not
-appear to index search parameters that require resolving a referenced resource
-during search indexing.
-
-As a result, the local reference server accepts the search request
-`GET /ImagingStudy?patient={id}&procedure-code={code}` but returns no matching
-ImagingStudy resources, even when the ImagingStudy references a Procedure whose
-`code` matches the requested token. Inferno reports this as a single optional
-skip in the ImagingStudy patient + procedure-code search test.
-
-This is a limitation of the local reference-server test environment rather than
-evidence that the generated test is incorrect. A local compatibility workaround
-is to define the SearchParameter expression against a directly indexed element
-such as `ImagingStudy.procedureCode`, but that differs from the current
-IG-defined SearchParameter.
-
 ### AdverseEvent Provenance `revInclude` search on the local Reference Server
 
 The US Quality Core AdverseEvent Provenance `revInclude` test is skipped on the 
