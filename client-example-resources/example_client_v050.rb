@@ -130,16 +130,6 @@ results? FHIR::CareTeam.search({"patient"=>"usqualitycore-patient", "status"=>"a
 
 
 
-# Claim
-
-## Read
-FHIR::Claim.read('usqualitycore-claim')
-
-## Search
-results? FHIR::Claim.search({"patient"=>"usqualitycore-patient"})
-
-
-
 # Condition Encounter Diagnosis
 
 ## Read
@@ -255,17 +245,6 @@ FHIR::Goal.read('usqualitycore-goal')
 
 ## Search
 results? FHIR::Goal.search({"patient"=>"usqualitycore-patient"})
-
-
-
-# ImagingStudy
-
-## Read
-FHIR::ImagingStudy.read('usqualitycore-imaging-study')
-
-## Search
-results? FHIR::ImagingStudy.search({"patient"=>"usqualitycore-patient"})
-results? FHIR::ImagingStudy.search({"patient"=>"usqualitycore-patient", "procedure-code"=>"80146002"})
 
 
 

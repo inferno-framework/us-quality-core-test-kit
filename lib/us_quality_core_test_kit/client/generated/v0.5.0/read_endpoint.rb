@@ -35,8 +35,6 @@ module USQualityCoreTestKit
               READ_CARE_PLAN_TAG
             when 'CareTeam'
               READ_CARE_TEAM_TAG
-            when 'Claim'
-              READ_CLAIM_TAG
             when 'Condition'
               READ_CONDITION_TAG
             when 'Coverage'
@@ -51,8 +49,6 @@ module USQualityCoreTestKit
               READ_FAMILY_MEMBER_HISTORY_TAG
             when 'Goal'
               READ_GOAL_TAG
-            when 'ImagingStudy'
-              READ_IMAGING_STUDY_TAG
             when 'Immunization'
               READ_IMMUNIZATION_TAG
             when 'MedicationAdministration'

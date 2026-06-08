@@ -24,10 +24,6 @@ module USQualityCoreTestKit
         * DiagnosticReport.result
         * DiagnosticReport.status
         * DiagnosticReport.subject
-
-        For ONC USCDI+ Quality requirements, each DiagnosticReport must support the following additional elements:
-
-        * DiagnosticReport.imagingStudy
       )
 
       id :us_quality_core_v050_diagnostic_report_note_must_support_test
