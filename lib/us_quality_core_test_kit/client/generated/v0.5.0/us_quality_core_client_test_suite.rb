@@ -155,7 +155,10 @@ The tests will not pass unless at least one profile group passes.
           }
         ]
 
-        route(:get, METADATA_PATH, USQualityCoreTestKit::Client::MetadataHelper.get_metadata('v050'))
+        route(:get, METADATA_PATH, USQualityCoreTestKit::Client::MetadataHelper.get_metadata(
+          'v050',
+          File.join(__dir__, 'capability_statement_v050.json.erb')
+        ))
 
         suite_endpoint :post, SEARCH_POST_ROUTE, SearchEndpoint
         suite_endpoint :get, SEARCH_ROUTE, SearchEndpoint

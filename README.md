@@ -53,7 +53,7 @@ The general layout of the source code for this test kit is as follows:
 
 ```
 .
-+-- client-example-resources                            # Example resources used for the client test suite
++-- client-example-resources                            # Example resources used to populate the reference server for client testing
 +-- lib
 │   +-- us_quality_core_test_kit
 │       +-- client                                      # Client suite source code
@@ -61,8 +61,9 @@ The general layout of the source code for this test kit is as follows:
 │       │   │   +-- templates                           # ERB templates used by the client generator
 │       │   +-- generated                               # Generated client suites by IG version
 │       │   │   +-- v0.5.0
-│       │   │       +-- us_quality_core_test_suite.rb   # Client test suite for this IG version
-│       │   +-- metadata                                # Content used to help simulate a FHIR server for client testing
+│       │   │       +-- capability_statement_v050.json.erb # Simulated FHIR server CapabilityStatement template served by client tests
+│       │   │       +-- example_client_v050.postman_collection.json # Example example client Postman collection for this IG version
+│       │   │       +-- us_quality_core_client_test_suite.rb # Client test suite for this IG version
 │       +-- generator                                   # Source code for generating server test suites
 │       │   +-- templates                               # ERB templates used by the server generator
 │       +-- generated                                   # Generated server suites by IG version

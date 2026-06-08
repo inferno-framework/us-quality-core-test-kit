@@ -1,0 +1,60 @@
+<%
+client_suite_base_url_template = '<' + '%= client_suite_base_url %' + '>'
+
+capability_statement = {
+  resourceType: 'CapabilityStatement',
+  status: 'active',
+  date: '2026-06-08T12:00:00+00:00',
+  publisher: 'MITRE',
+  kind: 'instance',
+  instantiates: [
+    'http://fhir.org/guides/onc/us-quality-core/CapabilityStatement/us-quality-core-server'
+  ],
+  implementation: {
+    description: 'Inferno US Quality Core Testing Simulation Server',
+    url: "#{client_suite_base_url_template}/fhir"
+  },
+  fhirVersion: '4.0.1',
+  format: [
+    'application/fhir+json'
+  ],
+  implementationGuide: [
+    'http://fhir.org/guides/onc/us-quality-core/ImplementationGuide/hl7.fhir.us.quality-core'
+  ],
+  rest: [
+    {
+      mode: 'server',
+      security: {
+        extension: [
+          {
+            url: 'http://fhir-registry.smarthealthit.org/StructureDefinition/oauth-uris',
+            extension: [
+              {
+                url: 'token',
+                valueUri: "#{client_suite_base_url_template}/auth/token"
+              },
+              {
+                url: 'authorize',
+                valueUri: "#{client_suite_base_url_template}/auth/authorization"
+              }
+            ]
+          }
+        ],
+        service: [
+          {
+            coding: [
+              {
+                system: 'http://hl7.org/fhir/restful-security-service',
+                code: 'SMART-on-FHIR'
+              }
+            ],
+            text: 'OAuth2 using SMART-on-FHIR profile (see http://docs.smarthealthit.org)'
+          }
+        ]
+      },
+      resource: resource_metadata
+    }
+  ]
+}
+-%>
+<%= JSON.pretty_generate(capability_statement) %>

@@ -49,7 +49,10 @@ module USQualityCoreTestKit
           }
         ]
 
-        route(:get, METADATA_PATH, USQualityCoreTestKit::Client::MetadataHelper.get_metadata('<%= ig_metadata.reformatted_version.downcase %>'))
+        route(:get, METADATA_PATH, USQualityCoreTestKit::Client::MetadataHelper.get_metadata(
+          '<%= ig_metadata.reformatted_version.downcase %>',
+          File.join(__dir__, 'capability_statement_<%= ig_metadata.reformatted_version.downcase %>.json.erb')
+        ))
 
         suite_endpoint :post, SEARCH_POST_ROUTE, SearchEndpoint
         suite_endpoint :get, SEARCH_ROUTE, SearchEndpoint
