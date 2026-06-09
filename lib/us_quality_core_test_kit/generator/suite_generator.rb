@@ -31,10 +31,6 @@ module USQualityCoreTestKit
         'USQualityCoreTestSuite'
       end
 
-      def ig_tgz
-        "igs/us_quality_core_#{ig_metadata.reformatted_version}.tgz"
-      end
-
       def module_name
         "USCore#{ig_metadata.reformatted_version.upcase}"
       end

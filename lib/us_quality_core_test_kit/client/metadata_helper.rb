@@ -8,9 +8,11 @@ module USQualityCoreTestKit
       module_function
 
       def get_metadata(version, metadata_path)
+        rendered_capability_statement = nil
+
         proc {
           [200, { 'Content-Type' => 'application/fhir+json;charset=utf-8', 'Access-Control-Allow-Origin' => '*' },
-           [capability_statement(metadata_path, version)]]
+           [rendered_capability_statement ||= capability_statement(metadata_path, version)]]
         }
       end
 
