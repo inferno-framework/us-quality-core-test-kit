@@ -53,7 +53,7 @@ The general layout of the source code for this test kit is as follows:
 
 ```
 .
-+-- client-example-resources                            # Example resources used for the client test suite
++-- client-example-resources                            # Example resources used to populate the reference server for client testing
 +-- lib
 │   +-- us_quality_core_test_kit
 │       +-- client                                      # Client suite source code
@@ -61,8 +61,9 @@ The general layout of the source code for this test kit is as follows:
 │       │   │   +-- templates                           # ERB templates used by the client generator
 │       │   +-- generated                               # Generated client suites by IG version
 │       │   │   +-- v0.5.0
-│       │   │       +-- us_quality_core_test_suite.rb   # Client test suite for this IG version
-│       │   +-- metadata                                # Content used to help simulate a FHIR server for client testing
+│       │   │       +-- capability_statement_v050.json.erb # Simulated FHIR server CapabilityStatement template served by client tests
+│       │   │       +-- example_client_v050.postman_collection.json # Example client Postman collection for this IG version
+│       │   │       +-- us_quality_core_client_test_suite.rb # Client test suite for this IG version
 │       +-- generator                                   # Source code for generating server test suites
 │       │   +-- templates                               # ERB templates used by the server generator
 │       +-- generated                                   # Generated server suites by IG version
@@ -110,26 +111,6 @@ ruby scripts/clean_bundle.rb ./client-example-resources/us_quality_core_bundle_p
 ```
 
 ## Known Limitations
-
-### ImagingStudy `procedure-code` Search on the Local Reference Server
-
-The US Quality Core ImagingStudy `procedure-code` SearchParameter currently uses
-the FHIRPath expression `ImagingStudy.procedureReference.resolve().code`. This
-expression is valid FHIRPath, but the local HAPI-based reference server does not
-appear to index search parameters that require resolving a referenced resource
-during search indexing.
-
-As a result, the local reference server accepts the search request
-`GET /ImagingStudy?patient={id}&procedure-code={code}` but returns no matching
-ImagingStudy resources, even when the ImagingStudy references a Procedure whose
-`code` matches the requested token. Inferno reports this as a single optional
-skip in the ImagingStudy patient + procedure-code search test.
-
-This is a limitation of the local reference-server test environment rather than
-evidence that the generated test is incorrect. A local compatibility workaround
-is to define the SearchParameter expression against a directly indexed element
-such as `ImagingStudy.procedureCode`, but that differs from the current
-IG-defined SearchParameter.
 
 ### AdverseEvent Provenance `revInclude` search on the local Reference Server
 

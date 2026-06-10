@@ -95,7 +95,10 @@
 - Provenance:target
 :required_concepts: []
 :must_supports:
-  :extensions: []
+  :extensions:
+  - :id: Encounter.diagnosis.extension:diagnosisPresentOnAdmission
+    :path: diagnosis.extension
+    :url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter-diagnosisPresentOnAdmission
   :slices: []
   :elements:
   - :path: identifier
@@ -104,6 +107,8 @@
   - :path: status
   - :path: class
   - :path: type
+  - :path: priority
+    :us_quality_coreuscdi_plus_quality: true
   - :path: subject
     :types:
     - Reference
@@ -165,6 +170,12 @@
   :strength: required
   :system: http://hl7.org/fhir/ValueSet/encounter-location-status
   :path: location.status
+- :type: CodeableConcept
+  :strength: required
+  :system: http://fhir.org/guides/onc/us-quality-core/ValueSet/us-quality-core-present-on-admission
+  :path: value
+  :extensions:
+  - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter-diagnosisPresentOnAdmission
 :references:
 - :path: Encounter.identifier.assigner
   :profiles:

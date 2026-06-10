@@ -14,8 +14,6 @@
 :interactions:
 - :code: read
   :expectation: SHALL
-- :code: search-type
-  :expectation: SHALL
 :operations: []
 :searches: []
 :search_definitions: {}

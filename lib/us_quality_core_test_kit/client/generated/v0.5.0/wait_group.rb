@@ -82,11 +82,6 @@ module USQualityCoreTestKit
     * usqualitycore-care-team
   * searches:
     * patient + status
-* **Claim**
-  * read id:
-    * usqualitycore-claim
-  * searches:
-    * patient
 * **ConditionEncounterDiagnosis**
   * read id:
     * usqualitycore-condition-encounter-diagnosis
@@ -155,12 +150,6 @@ module USQualityCoreTestKit
     * usqualitycore-goal
   * searches:
     * patient
-* **ImagingStudy**
-  * read id:
-    * usqualitycore-imaging-study
-  * searches:
-    * patient
-    * patient + procedure-code
 * **Immunization**
   * read id:
     * usqualitycore-immunization

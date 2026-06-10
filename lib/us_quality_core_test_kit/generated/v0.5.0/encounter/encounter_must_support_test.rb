@@ -12,6 +12,7 @@ module USQualityCoreTestKit
         found previously for the following Must Support and USCDI-flagged elements:
 
         * Encounter.class
+        * Encounter.diagnosis.extension:diagnosisPresentOnAdmission
         * Encounter.hospitalization
         * Encounter.hospitalization.dischargeDisposition
         * Encounter.identifier
@@ -34,6 +35,7 @@ module USQualityCoreTestKit
         For ONC USCDI+ Quality requirements, each Encounter must support the following additional elements:
 
         * Encounter.diagnosis
+        * Encounter.priority
       )
 
       id :us_quality_core_v050_encounter_must_support_test

@@ -31,10 +31,6 @@ module USQualityCoreTestKit
         'USQualityCoreTestSuite'
       end
 
-      def ig_tgz
-        "igs/us_quality_core_#{ig_metadata.reformatted_version}.tgz"
-      end
-
       def module_name
         "USCore#{ig_metadata.reformatted_version.upcase}"
       end
@@ -53,7 +49,7 @@ module USQualityCoreTestKit
 
       def ig_identifier
         version = ig_metadata.ig_version[1..] # Remove leading 'v'
-        "hl7.fhir.us.quality-core##{version}"
+        "fhir.onc.us-quality-core##{version}"
       end
 
       def ig_link

@@ -5,7 +5,6 @@ require_relative 'adverse_event_group'
 require_relative 'allergy_intolerance_group'
 require_relative 'care_plan_group'
 require_relative 'care_team_group'
-require_relative 'claim_group'
 require_relative 'condition_encounter_diagnosis_group'
 require_relative 'condition_problems_health_concerns_group'
 require_relative 'coverage_group'
@@ -16,7 +15,6 @@ require_relative 'diagnostic_report_lab_group'
 require_relative 'document_reference_group'
 require_relative 'family_member_history_group'
 require_relative 'goal_group'
-require_relative 'imaging_study_group'
 require_relative 'immunization_group'
 require_relative 'immunizationnotdone_group'
 require_relative 'medicationadministration_group'
@@ -117,7 +115,7 @@ module USQualityCoreTestKit
       id :us_quality_core_v050
 
       fhir_resource_validator do
-        igs 'igs/us_quality_core_v050.tgz'
+        igs 'fhir.onc.us-quality-core#0.5.0'
 
         message_filters = VALIDATION_MESSAGE_FILTERS
 
@@ -157,7 +155,6 @@ module USQualityCoreTestKit
         group from: :us_quality_core_v050_allergy_intolerance
         group from: :us_quality_core_v050_care_plan
         group from: :us_quality_core_v050_care_team
-        group from: :us_quality_core_v050_claim
         group from: :us_quality_core_v050_condition_encounter_diagnosis
         group from: :us_quality_core_v050_condition_problems_health_concerns
         group from: :us_quality_core_v050_coverage
@@ -168,7 +165,6 @@ module USQualityCoreTestKit
         group from: :us_quality_core_v050_document_reference
         group from: :us_quality_core_v050_family_member_history
         group from: :us_quality_core_v050_goal
-        group from: :us_quality_core_v050_imaging_study
         group from: :us_quality_core_v050_immunization
         group from: :us_quality_core_v050_immunizationnotdone
         group from: :us_quality_core_v050_medicationadministration

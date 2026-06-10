@@ -9,6 +9,7 @@ require_relative '../generator/ig_metadata_extractor'
 require_relative 'generator/group_generator'
 require_relative 'generator/tags_generator'
 require_relative 'generator/urls_generator'
+require_relative 'generator/capability_statement_generator'
 require_relative 'generator/suite_generator'
 require_relative 'generator/read_test_generator'
 require_relative 'generator/search_test_generator'
@@ -51,6 +52,7 @@ module USQualityCoreTestKit
         generate_suites
 
         generate_example_client
+        generate_capability_statement
 
         puts 'done.'
       end
@@ -104,7 +106,11 @@ module USQualityCoreTestKit
       end
 
       def generate_example_client
-        ExampleClientGenerator.generate(ig_metadata)
+        ExampleClientGenerator.generate(ig_metadata, base_output_dir)
+      end
+
+      def generate_capability_statement
+        CapabilityStatementGenerator.generate(ig_metadata, ig_resources, base_output_dir)
       end
     end
   end

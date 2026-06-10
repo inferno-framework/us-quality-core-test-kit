@@ -3,14 +3,14 @@
   "resourceType": "Bundle",
   "entry": [
     {
-      "fullUrl": "http://example.org/fhir/Endpoint/endpoint",
+      "fullUrl": "http://example.org/fhir/Endpoint/usqualitycore-r4-endpoint",
       "request": {
         "method": "PUT",
-        "url": "Endpoint/endpoint"
+        "url": "Endpoint/usqualitycore-r4-endpoint"
       },
       "resource": {
         "resourceType": "Endpoint",
-        "id": "endpoint",
+        "id": "usqualitycore-r4-endpoint",
         "status": "active",
         "connectionType": {
           "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
@@ -32,215 +32,19 @@
         "address": "mailto:Willena258.Oberbrunner298@example.com",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: endpoint</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-r4-endpoint</div>"
         }
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Claim/usqualitycore-claim",
+      "fullUrl": "http://example.org/fhir/Media/usqualitycore-r4-media",
       "request": {
         "method": "PUT",
-        "url": "Claim/usqualitycore-claim"
-      },
-      "resource": {
-        "resourceType": "Claim",
-        "id": "usqualitycore-claim",
-        "meta": {
-          "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-claim"
-          ]
-        },
-        "identifier": [
-          {
-            "system": "http://happysight.com/claim",
-            "value": "6612346"
-          }
-        ],
-        "status": "active",
-        "type": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/claim-type",
-              "code": "vision"
-            }
-          ]
-        },
-        "use": "claim",
-        "patient": {
-          "reference": "Patient/usqualitycore-patient"
-        },
-        "created": "2014-08-16",
-        "insurer": {
-          "reference": "Organization/usqualitycore-organization"
-        },
-        "provider": {
-          "reference": "Practitioner/usqualitycore-practitioner"
-        },
-        "priority": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/processpriority",
-              "code": "normal"
-            }
-          ]
-        },
-        "prescription": {
-          "reference": "MedicationRequest/usqualitycore-medicationrequest"
-        },
-        "payee": {
-          "type": {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/payeetype",
-                "code": "provider"
-              }
-            ]
-          },
-          "party": {
-            "reference": "Practitioner/usqualitycore-practitioner"
-          }
-        },
-        "careTeam": [
-          {
-            "sequence": 1,
-            "provider": {
-              "reference": "Practitioner/usqualitycore-practitioner"
-            }
-          }
-        ],
-        "diagnosis": [
-          {
-            "sequence": 1,
-            "diagnosisCodeableConcept": {
-              "coding": [
-                {
-                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
-                  "code": "H44.23"
-                }
-              ]
-            },
-            "onAdmission": {
-              "coding": [
-                {
-                  "system": "https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/HospitalAcqCond/Coding",
-                  "code": "Y"
-                }
-              ]
-            }
-          }
-        ],
-        "insurance": [
-          {
-            "sequence": 1,
-            "focal": true,
-            "coverage": {
-              "reference": "Coverage/usqualitycore-coverage"
-            }
-          }
-        ],
-        "item": [
-          {
-            "sequence": 1,
-            "careTeamSequence": [
-              1
-            ],
-            "productOrService": {
-              "coding": [
-                {
-                  "system": "http://terminology.hl7.org/CodeSystem/ex-USCLS",
-                  "code": "99555",
-                  "display": "Expense"
-                }
-              ]
-            },
-            "servicedDate": "2014-08-16",
-            "unitPrice": {
-              "value": 214.0,
-              "currency": "USD"
-            },
-            "detail": [
-              {
-                "sequence": 1,
-                "productOrService": {
-                  "coding": [
-                    {
-                      "system": "http://terminology.hl7.org/CodeSystem/ex-USCLS",
-                      "code": "99555",
-                      "display": "Expense"
-                    }
-                  ]
-                },
-                "unitPrice": {
-                  "value": 100.0,
-                  "currency": "USD"
-                },
-                "net": {
-                  "value": 100.0,
-                  "currency": "USD"
-                }
-              },
-              {
-                "sequence": 2,
-                "productOrService": {
-                  "coding": [
-                    {
-                      "system": "http://terminology.hl7.org/CodeSystem/ex-USCLS",
-                      "code": "99555",
-                      "display": "Expense"
-                    }
-                  ]
-                },
-                "quantity": {
-                  "value": 2
-                },
-                "unitPrice": {
-                  "value": 50.0,
-                  "currency": "USD"
-                },
-                "net": {
-                  "value": 100.0,
-                  "currency": "USD"
-                }
-              },
-              {
-                "sequence": 3,
-                "productOrService": {
-                  "coding": [
-                    {
-                      "system": "http://terminology.hl7.org/CodeSystem/ex-USCLS",
-                      "code": "99555",
-                      "display": "Expense"
-                    }
-                  ]
-                },
-                "unitPrice": {
-                  "value": 200.0,
-                  "currency": "USD"
-                },
-                "factor": 0.07,
-                "net": {
-                  "value": 14.0,
-                  "currency": "USD"
-                }
-              }
-            ]
-          }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-claim</div>"
-        }
-      }
-    },
-    {
-      "fullUrl": "http://example.org/fhir/Media/r4-media",
-      "request": {
-        "method": "PUT",
-        "url": "Media/r4-media"
+        "url": "Media/usqualitycore-r4-media"
       },
       "resource": {
         "resourceType": "Media",
-        "id": "r4-media",
+        "id": "usqualitycore-r4-media",
         "status": "completed",
         "content": {
           "contentType": "application/dicom",
@@ -248,7 +52,7 @@
         },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: r4-media</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-r4-media</div>"
         }
       }
     },
@@ -1542,9 +1346,6 @@
             "reference": "Patient/usqualitycore-patient"
           },
           {
-            "reference": "Claim/usqualitycore-claim"
-          },
-          {
             "reference": "Specimen/usqualitycore-specimen"
           },
           {
@@ -1597,9 +1398,6 @@
           },
           {
             "reference": "Observation/usqualitycore-pediatric-weight-for-height"
-          },
-          {
-            "reference": "ImagingStudy/usqualitycore-imaging-study"
           },
           {
             "reference": "AdverseEvent/usqualitycore-adverse-event"
@@ -1860,67 +1658,6 @@
         "text": {
           "status": "generated",
           "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-provenance</div>"
-        }
-      }
-    },
-    {
-      "fullUrl": "http://example.org/fhir/ImagingStudy/usqualitycore-imaging-study",
-      "request": {
-        "method": "PUT",
-        "url": "ImagingStudy/usqualitycore-imaging-study"
-      },
-      "resource": {
-        "resourceType": "ImagingStudy",
-        "id": "usqualitycore-imaging-study",
-        "meta": {
-          "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-imagingstudy"
-          ]
-        },
-        "status": "available",
-        "subject": {
-          "reference": "Patient/usqualitycore-patient"
-        },
-        "endpoint": [
-          {
-            "reference": "Endpoint/endpoint"
-          }
-        ],
-        "procedureReference": {
-          "reference": "Procedure/usqualitycore-procedure"
-        },
-        "procedureCode": [
-          {
-            "coding": [
-              {
-                "code": "80146002"
-              }
-            ]
-          }
-        ],
-        "started": "2011-01-01T11:01:20+03:00",
-        "numberOfSeries": 1,
-        "numberOfInstances": 1,
-        "series": [
-          {
-            "uid": "2.16.124.113543.6003.2588828330.45298.17418.2723805630",
-            "number": 3,
-            "modality": {
-              "system": "http://dicom.nema.org/resources/ontology/DCM",
-              "code": "CT"
-            },
-            "description": "CT Surview 180",
-            "numberOfInstances": 1,
-            "bodySite": {
-              "system": "http://snomed.info/sct",
-              "code": "67734004",
-              "display": "Upper Trunk Structure"
-            }
-          }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-imaging-study</div>"
         }
       }
     },
@@ -4343,15 +4080,10 @@
             "reference": "Observation/usqualitycore-observation-lab"
           }
         ],
-        "imagingStudy": [
-          {
-            "reference": "ImagingStudy/usqualitycore-imaging-study"
-          }
-        ],
         "media": [
           {
             "link": {
-              "reference": "http://example.org/fhir/Media/r4-media"
+              "reference": "http://example.org/fhir/Media/usqualitycore-r4-media"
             }
           }
         ],
@@ -4404,6 +4136,15 @@
             ]
           }
         ],
+        "priority": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+              "code": "R",
+              "display": "routine"
+            }
+          ]
+        },
         "subject": {
           "reference": "Patient/usqualitycore-patient"
         },
@@ -4476,6 +4217,19 @@
         },
         "diagnosis": [
           {
+            "extension": [
+              {
+                "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter-diagnosisPresentOnAdmission",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/HospitalAcqCond/Coding",
+                      "code": "Y"
+                    }
+                  ]
+                }
+              }
+            ],
             "condition": {
               "reference": "Condition/usqualitycore-condition-problems-health-concerns"
             },
@@ -7801,7 +7555,7 @@
         ],
         "endpoint": [
           {
-            "reference": "Endpoint/endpoint"
+            "reference": "Endpoint/usqualitycore-r4-endpoint"
           }
         ],
         "text": {

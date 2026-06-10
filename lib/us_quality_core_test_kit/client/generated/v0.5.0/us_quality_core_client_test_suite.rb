@@ -14,7 +14,6 @@ require_relative 'adverse_event_client_group'
 require_relative 'allergy_intolerance_client_group'
 require_relative 'care_plan_client_group'
 require_relative 'care_team_client_group'
-require_relative 'claim_client_group'
 require_relative 'condition_encounter_diagnosis_client_group'
 require_relative 'condition_problems_health_concerns_client_group'
 require_relative 'coverage_client_group'
@@ -25,7 +24,6 @@ require_relative 'diagnostic_report_lab_client_group'
 require_relative 'document_reference_client_group'
 require_relative 'family_member_history_client_group'
 require_relative 'goal_client_group'
-require_relative 'imaging_study_client_group'
 require_relative 'immunization_client_group'
 require_relative 'immunizationnotdone_client_group'
 require_relative 'medicationadministration_client_group'
@@ -157,7 +155,10 @@ The tests will not pass unless at least one profile group passes.
           }
         ]
 
-        route(:get, METADATA_PATH, USQualityCoreTestKit::Client::MetadataHelper.get_metadata('v050'))
+        route(:get, METADATA_PATH, USQualityCoreTestKit::Client::MetadataHelper.get_metadata(
+          'v050',
+          File.join(__dir__, 'capability_statement_v050.json.erb')
+        ))
 
         suite_endpoint :post, SEARCH_POST_ROUTE, SearchEndpoint
         suite_endpoint :get, SEARCH_ROUTE, SearchEndpoint
@@ -189,7 +190,6 @@ CapabilityStatement](http://fhir.org/guides/onc/us-quality-core/CapabilityStatem
           group from: :us_quality_core_client_v050_allergy_intolerance
           group from: :us_quality_core_client_v050_care_plan
           group from: :us_quality_core_client_v050_care_team
-          group from: :us_quality_core_client_v050_claim
           group from: :us_quality_core_client_v050_condition_encounter_diagnosis
           group from: :us_quality_core_client_v050_condition_problems_health_concerns
           group from: :us_quality_core_client_v050_coverage
@@ -200,7 +200,6 @@ CapabilityStatement](http://fhir.org/guides/onc/us-quality-core/CapabilityStatem
           group from: :us_quality_core_client_v050_document_reference
           group from: :us_quality_core_client_v050_family_member_history
           group from: :us_quality_core_client_v050_goal
-          group from: :us_quality_core_client_v050_imaging_study
           group from: :us_quality_core_client_v050_immunization
           group from: :us_quality_core_client_v050_immunizationnotdone
           group from: :us_quality_core_client_v050_medicationadministration

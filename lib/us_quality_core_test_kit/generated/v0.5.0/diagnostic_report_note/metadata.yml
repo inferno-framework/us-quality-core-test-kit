@@ -139,12 +139,6 @@
   - :path: result
     :types:
     - Reference
-  - :path: imagingStudy
-    :types:
-    - Reference
-    :target_profiles:
-    - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-imagingstudy
-    :us_quality_coreuscdi_plus_quality: true
   - :path: media
   - :path: media.link
     :types:

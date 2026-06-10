@@ -35,8 +35,6 @@ module USQualityCoreTestKit
               SEARCH_CARE_PLAN_TAG
             when 'CareTeam'
               SEARCH_CARE_TEAM_TAG
-            when 'Claim'
-              SEARCH_CLAIM_TAG
             when 'Condition'
               SEARCH_CONDITION_TAG
             when 'Coverage'
@@ -51,8 +49,6 @@ module USQualityCoreTestKit
               SEARCH_FAMILY_MEMBER_HISTORY_TAG
             when 'Goal'
               SEARCH_GOAL_TAG
-            when 'ImagingStudy'
-              SEARCH_IMAGING_STUDY_TAG
             when 'Immunization'
               SEARCH_IMMUNIZATION_TAG
             when 'MedicationAdministration'

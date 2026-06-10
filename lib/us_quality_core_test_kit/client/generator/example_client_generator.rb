@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
+require 'erb'
 require 'json'
+require 'uri'
 
 require_relative '../../generator/naming'
 require_relative '../../generator/special_cases'
@@ -124,29 +126,31 @@ module USQualityCoreTestKit
         end
       end
 
+      # rubocop:disable Metrics/ClassLength
       class ExampleClientGenerator
         class << self
-          def generate(ig_metadata)
-            new(ig_metadata).generate
+          def generate(ig_metadata, base_output_dir)
+            new(ig_metadata, base_output_dir).generate
           end
         end
 
-        attr_accessor :ig_metadata
+        attr_accessor :ig_metadata, :base_output_dir
 
-        def initialize(ig_metadata)
+        def initialize(ig_metadata, base_output_dir)
           self.ig_metadata = ig_metadata
+          self.base_output_dir = base_output_dir
         end
 
         def template
-          @template ||= File.read(File.join(__dir__, 'templates', 'example_client.rb.erb'))
+          @template ||= File.read(File.join(__dir__, 'templates', 'example_client.postman_collection.json.erb'))
         end
 
-        def base_output_dir
+        def client_example_resources_dir
           'client-example-resources'
         end
 
         def bundle_file_name
-          File.join(base_output_dir, 'us_quality_core_bundle_patient.json')
+          File.join(client_example_resources_dir, 'us_quality_core_bundle_patient.json')
         end
 
         def search_parameter_builder
@@ -154,7 +158,8 @@ module USQualityCoreTestKit
         end
 
         def description
-          "Demonstration script for running against the US Quality Core #{ig_metadata.reformatted_version} client suite."
+          'Demonstration Postman collection for running against the US Quality Core ' \
+            "#{ig_metadata.reformatted_version} client suite."
         end
 
         def groups
@@ -198,12 +203,24 @@ module USQualityCoreTestKit
           by_profile
         end
 
+        def postman_collection
+          {
+            info: {
+              name: "US Quality Core #{ig_metadata.reformatted_version} Example Client",
+              description:,
+              schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
+            },
+            variable: collection_variables,
+            item: items
+          }
+        end
+
         def output
           @output ||= ERB.new(template, trim_mode: '-').result(binding)
         end
 
         def base_output_file_name
-          "example_client_#{ig_metadata.reformatted_version.downcase}.rb"
+          "example_client_#{ig_metadata.reformatted_version.downcase}.postman_collection.json"
         end
 
         def output_file_name
@@ -213,7 +230,98 @@ module USQualityCoreTestKit
         def generate
           File.write(output_file_name, output)
         end
+
+        def collection_variables
+          [
+            {
+              key: 'base_url',
+              value: "http://localhost:4567/custom/us_quality_core_client_#{ig_metadata.reformatted_version}/fhir",
+              type: 'string'
+            },
+            { key: 'client_id', value: 'test', type: 'string' }
+          ]
+        end
+
+        def items
+          requests.map do |title, details|
+            {
+              name: title,
+              item: [
+                *details[:read_ids].map { |id| read_item(details[:resource], id) },
+                *details[:searches].map { |search| search_item(details[:resource], search[:params]) }
+              ]
+            }
+          end
+        end
+
+        def read_item(resource, id)
+          {
+            name: "Read #{resource}/#{id}",
+            request: get_request("#{resource}/#{id}"),
+            event: [test_event(read_test_script(resource))]
+          }
+        end
+
+        def search_item(resource, params)
+          {
+            name: "Search #{resource} #{params.keys.join(' + ')}",
+            request: get_request("#{resource}?#{URI.encode_www_form(params.transform_values(&:to_s))}"),
+            event: [test_event(search_test_script)]
+          }
+        end
+
+        def get_request(path)
+          {
+            method: 'GET',
+            header: [
+              { key: 'Accept', value: 'application/fhir+json' },
+              { key: 'Authorization', value: 'Bearer {{client_id}}' }
+            ],
+            url: "{{base_url}}/#{path}"
+          }
+        end
+
+        def test_event(script)
+          { listen: 'test', script: { type: 'text/javascript', exec: script } }
+        end
+
+        def read_test_script(resource)
+          success_response_test +
+            [
+              '',
+              "pm.test('response body is a #{resource} resource', function () {",
+              '  const body = pm.response.json();',
+              "  pm.expect(body.resourceType).to.eql('#{resource}');",
+              '});'
+            ]
+        end
+
+        def search_test_script
+          success_response_test +
+            [
+              '',
+              "pm.test('response body is a search Bundle', function () {",
+              '  const body = pm.response.json();',
+              "  pm.expect(body.resourceType).to.eql('Bundle');",
+              '});',
+              '',
+              'const bundle = pm.response.json();',
+              'if (!Array.isArray(bundle.entry) || bundle.entry.length === 0) {',
+              "  const selfLink = (bundle.link || []).find((link) => link.relation === 'self');",
+              '  console.warn(`SKIP: ${selfLink?.url || pm.info.requestName} - search response bundle was empty`);',
+              '}'
+            ]
+        end
+
+        def success_response_test
+          [
+            "pm.test('response status is 2xx', function () {",
+            '  pm.expect(pm.response.code).to.be.within(200, 299);',
+            '});'
+          ]
+        end
       end
+      # rubocop:enable Metrics/ClassLength
     end
   end
 end
