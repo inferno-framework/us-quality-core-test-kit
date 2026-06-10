@@ -11,7 +11,7 @@ module USQualityCoreTestKit
     description <<~DESCRIPTION
       The US Quality Core Test Kit validates server and client implementations
       against the [US Quality Core Implementation Guide
-      v0.5.0](https://fhir.org/guides/onc/us-quality-core/0.5.0/).
+      v0.5.0](https://fhir.org/guides/onc/us-quality-core/).
 
       <!-- break -->
 
@@ -26,32 +26,41 @@ module USQualityCoreTestKit
       ## Status
 
       These tests are a DRAFT intended to allow US Quality Core implementers to
-      perform preliminary checks of their implementations against US Quality
-      Core and USCDI+ Quality requirements and provide feedback on the tests.
-      Future versions may validate additional requirements or change how these
-      requirements are tested.
+      perform preliminary checks of their implementations against the
+      [US Quality Core conformance requirements](https://fhir.org/guides/onc/us-quality-core/general-requirements.html)
+      and provide feedback on the tests. Future versions may validate
+      additional requirements or change how these requirements are tested.
+
+      ## Scope
+
+      The scope of this test kit is intended to match the conformance scope
+      defined by US Quality Core v0.5.0. The IG is derived from QI-Core STU 6
+      and includes inherited profiles to ease adoption, but its conformance
+      requirements are focused on USCDI+ Quality V1 data. The IG's
+      [USCDI+ Quality mapping](https://fhir.org/guides/onc/us-quality-core/uscdiquality.html)
+      identifies the in-scope V1 data elements. For conformance,
+      implementations are expected to support profile types with at least one
+      USCDI+ Quality-flagged data element, all USCDI+ Quality-flagged elements,
+      and inherited US Core MustSupport elements.
 
       ## Server Suite
 
-      The US Quality Core Server Suite verifies [conformance with US Quality
-      Core](https://fhir.org/guides/onc/us-quality-core/0.5.0/en/general-requirements.html)
-      and aligned US Core requirements for resources an implementation
-      exchanges. It includes:
+      The US Quality Core Server Suite verifies support for the IG's in-scope
+      profile, element, and API requirements. It includes:
 
-      * Support for US Quality Core profiles that implement USCDI+ Quality V1 data elements
-      * Support for US Core profiles that implement USCDI+ Quality V1 data elements
-      * Support for FHIR read and search operations for required profiles
-      * Support for "Must Support" and USCDI+ Quality tagged elements for relevant required profiles
+      * Support for in-scope US Quality Core and US Core profiles that implement USCDI+ Quality V1 data elements
+      * Support for USCDI+ Quality-flagged elements and inherited US Core MustSupport elements
+      * Support for FHIR read and search operations required by the [US Quality Core Server CapabilityStatement](https://fhir.org/guides/onc/us-quality-core/CapabilityStatement-us-quality-core-server.html)
       * Support for base FHIR requirements and terminology bindings, with validation performed by the HL7 FHIR Validator using tx.fhir.org
 
       ## Client Suite
 
       The US Quality Core Client Suite verifies a client's ability to ingest
-      relevant data from a conformant US Quality Core server over the standard
-      FHIR API. It includes evaluating:
+      in-scope USCDI+ Quality data from a conformant US Quality Core server over
+      the standard FHIR API. It includes evaluating:
 
-      * The ability to request data on all US Quality Core profiles supported by the server
-      * Support for read and search interaction requests
+      * The ability to request profile-conformant data from Inferno's simulated US Quality Core server
+      * Support for read and search interaction requests described by the [US Quality Core CapabilityStatements](https://fhir.org/guides/onc/us-quality-core/capability-statements.html)
 
       ## Repository
 
