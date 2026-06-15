@@ -16,13 +16,17 @@ The US Quality Core Client Suite is intended to:
 
 ## Testing Options
 
-Users of the client suite provide a `Client Id` during the Client Access step.
-Inferno uses that value to identify the requests being evaluated. The client
-must send requests to the FHIR base URL displayed by Inferno and include:
+During the Client Access step, Inferno generates a unique access token for the
+run. The client must send
+requests to the FHIR base URL displayed by Inferno and include:
 
 ```text
-Authorization: Bearer <Client Id>
+Authorization: Bearer <Access Token>
 ```
+
+If the client configuration asks for an access token, enter only the generated
+token value shown by Inferno. Do not include the `Bearer` scheme unless
+configuring the full HTTP header directly.
 
 The current generated client suite targets US Quality Core v0.5.0.
 
@@ -39,8 +43,9 @@ If using the Docker setup through the non-developer `http://localhost`
 entrypoint, update `base_url` to
 `http://localhost/custom/us_quality_core_client_v050/fhir`. For hosted Inferno
 runs, update `base_url` to the FHIR base URL shown by the Client Access step.
-The collection's `client_id` variable must match the **Client Id** entered in
-Inferno.
+The collection's `access_token` variable must match the generated access token
+shown by Inferno for the current Client Access run. Update the imported
+collection variable to the generated token before running the collection.
 
 ## Test Prerequisites
 

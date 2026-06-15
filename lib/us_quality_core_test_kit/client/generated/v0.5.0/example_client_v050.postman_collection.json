@@ -11,8 +11,8 @@
       "type": "string"
     },
     {
-      "key": "client_id",
-      "value": "test",
+      "key": "access_token",
+      "value": "",
       "type": "string"
     }
   ],
@@ -31,7 +31,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Patient/usqualitycore-patient"
@@ -66,7 +66,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Patient?_id=usqualitycore-patient"
@@ -112,7 +112,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/AdverseEvent/usqualitycore-adverse-event"
@@ -147,7 +147,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/AdverseEvent?subject=usqualitycore-patient"
@@ -188,7 +188,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/AdverseEvent?subject=usqualitycore-patient&event=725119006"
@@ -229,7 +229,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/AdverseEvent?subject=usqualitycore-patient&recorded-date=ge2017-01-29"
@@ -275,7 +275,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/AllergyIntolerance/usqualitycore-allergy-intolerance"
@@ -310,7 +310,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/AllergyIntolerance?patient=usqualitycore-patient"
@@ -356,7 +356,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/CarePlan/usqualitycore-care-plan"
@@ -391,7 +391,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/CarePlan?patient=usqualitycore-patient&category=assess-plan"
@@ -437,7 +437,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/CareTeam/usqualitycore-care-team"
@@ -472,7 +472,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/CareTeam?patient=usqualitycore-patient&status=active"
@@ -518,7 +518,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Condition/usqualitycore-condition-encounter-diagnosis"
@@ -553,7 +553,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Condition?patient=usqualitycore-patient&category=problem-list-item"
@@ -594,7 +594,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Condition?patient=usqualitycore-patient"
@@ -635,7 +635,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Condition?patient=usqualitycore-patient&code=247824007"
@@ -681,7 +681,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Condition/usqualitycore-condition-problems-health-concerns"
@@ -716,7 +716,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Condition?patient=usqualitycore-patient&category=problem-list-item"
@@ -757,7 +757,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Condition?patient=usqualitycore-patient"
@@ -798,7 +798,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Condition?patient=usqualitycore-patient&code=247824007"
@@ -844,7 +844,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Coverage/usqualitycore-coverage"
@@ -879,7 +879,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Coverage?patient=usqualitycore-patient"
@@ -925,7 +925,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/DeviceRequest/usqualitycore-devicerequest"
@@ -960,7 +960,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/DeviceRequest?patient=usqualitycore-patient&do-not-perform=false"
@@ -1001,7 +1001,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/DeviceRequest?patient=usqualitycore-patient"
@@ -1042,7 +1042,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/DeviceRequest?patient=usqualitycore-patient&code=86184003"
@@ -1088,7 +1088,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/DeviceRequest/usqualitycore-devicenotrequested"
@@ -1123,7 +1123,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/DeviceRequest?patient=usqualitycore-patient&do-not-perform=true"
@@ -1164,7 +1164,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/DeviceRequest?patient=usqualitycore-patient"
@@ -1205,7 +1205,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/DeviceRequest?patient=usqualitycore-patient&code=86184003"
@@ -1251,7 +1251,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/DiagnosticReport/usqualitycore-diagnostic-report-note"
@@ -1286,7 +1286,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/DiagnosticReport?patient=usqualitycore-patient&category=LP29684-5"
@@ -1327,7 +1327,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/DiagnosticReport?patient=usqualitycore-patient"
@@ -1368,7 +1368,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/DiagnosticReport?patient=usqualitycore-patient&category=LP29684-5&date=ge2005-07-05"
@@ -1409,7 +1409,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/DiagnosticReport?patient=usqualitycore-patient&code=30746-2"
@@ -1455,7 +1455,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/DiagnosticReport/usqualitycore-diagnostic-report-lab"
@@ -1490,7 +1490,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/DiagnosticReport?patient=usqualitycore-patient&category=LAB"
@@ -1531,7 +1531,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/DiagnosticReport?patient=usqualitycore-patient"
@@ -1572,7 +1572,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/DiagnosticReport?patient=usqualitycore-patient&category=LAB&date=ge2005-07-05"
@@ -1613,7 +1613,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/DiagnosticReport?patient=usqualitycore-patient&code=58410-2"
@@ -1659,7 +1659,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/DocumentReference/usqualitycore-document-reference"
@@ -1694,7 +1694,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/DocumentReference?patient=usqualitycore-patient"
@@ -1735,7 +1735,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/DocumentReference?_id=usqualitycore-document-reference"
@@ -1776,7 +1776,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/DocumentReference?patient=usqualitycore-patient&type=34117-2"
@@ -1817,7 +1817,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/DocumentReference?patient=usqualitycore-patient&category=clinical-note"
@@ -1858,7 +1858,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/DocumentReference?patient=usqualitycore-patient&category=clinical-note&date=ge2015-02-15"
@@ -1904,7 +1904,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/FamilyMemberHistory/usqualitycore-family-member-history"
@@ -1939,7 +1939,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/FamilyMemberHistory?patient=usqualitycore-patient"
@@ -1985,7 +1985,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Goal/usqualitycore-goal"
@@ -2020,7 +2020,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Goal?patient=usqualitycore-patient"
@@ -2066,7 +2066,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Immunization/usqualitycore-immunization"
@@ -2101,7 +2101,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Immunization?patient=usqualitycore-patient&status=completed"
@@ -2142,7 +2142,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Immunization?patient=usqualitycore-patient"
@@ -2188,7 +2188,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Immunization/usqualitycore-immunizationnotdone"
@@ -2223,7 +2223,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Immunization?patient=usqualitycore-patient&status=not-done"
@@ -2264,7 +2264,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Immunization?patient=usqualitycore-patient"
@@ -2310,7 +2310,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/MedicationAdministration/usqualitycore-medicationadministration"
@@ -2345,7 +2345,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/MedicationAdministration?patient=usqualitycore-patient&status=completed"
@@ -2386,7 +2386,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/MedicationAdministration?patient=usqualitycore-patient"
@@ -2427,7 +2427,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/MedicationAdministration?patient=usqualitycore-patient&code=1594660"
@@ -2468,7 +2468,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/MedicationAdministration?patient=usqualitycore-patient&effective-time=ge2015-01-15"
@@ -2514,7 +2514,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/MedicationAdministration/usqualitycore-medicationadministrationnotdone"
@@ -2549,7 +2549,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/MedicationAdministration?patient=usqualitycore-patient&status=not-done"
@@ -2590,7 +2590,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/MedicationAdministration?patient=usqualitycore-patient"
@@ -2631,7 +2631,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/MedicationAdministration?patient=usqualitycore-patient&code=1594660"
@@ -2672,7 +2672,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/MedicationAdministration?patient=usqualitycore-patient&effective-time=ge2015-01-15"
@@ -2718,7 +2718,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/MedicationDispense/usqualitycore-medicationdispense"
@@ -2753,7 +2753,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/MedicationDispense?patient=usqualitycore-patient&status=completed"
@@ -2794,7 +2794,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/MedicationDispense?patient=usqualitycore-patient"
@@ -2840,7 +2840,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/MedicationDispense/usqualitycore-medicationdispensedeclined"
@@ -2875,7 +2875,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/MedicationDispense?patient=usqualitycore-patient&status=declined"
@@ -2916,7 +2916,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/MedicationDispense?patient=usqualitycore-patient"
@@ -2962,7 +2962,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/MedicationRequest/usqualitycore-medicationrequest"
@@ -2997,7 +2997,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/MedicationRequest?patient=usqualitycore-patient&intent=order&do-not-perform=false"
@@ -3038,7 +3038,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/MedicationRequest?patient=usqualitycore-patient&intent=order"
@@ -3084,7 +3084,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/MedicationRequest/usqualitycore-medicationnotrequested"
@@ -3119,7 +3119,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/MedicationRequest?patient=usqualitycore-patient&intent=order&do-not-perform=true"
@@ -3160,7 +3160,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/MedicationRequest?patient=usqualitycore-patient&intent=order"
@@ -3206,7 +3206,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation/usqualitycore-observation-clinical-result"
@@ -3241,7 +3241,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation/usqualitycore-observation-lab"
@@ -3276,7 +3276,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=exam&status=final"
@@ -3317,7 +3317,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=exam"
@@ -3358,7 +3358,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=exam&date=ge2021-11-10"
@@ -3399,7 +3399,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&code=8884-9"
@@ -3445,7 +3445,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation/usqualitycore-simple-observation"
@@ -3480,7 +3480,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=activity&status=final"
@@ -3521,7 +3521,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=activity"
@@ -3562,7 +3562,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=activity&date=ge2013-04-02"
@@ -3603,7 +3603,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&code=99354-3"
@@ -3649,7 +3649,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation/usqualitycore-observation-screening-assessment"
@@ -3684,7 +3684,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=survey&status=final"
@@ -3725,7 +3725,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=survey"
@@ -3766,7 +3766,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=survey&date=ge2005-07-05"
@@ -3807,7 +3807,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&code=28139-4"
@@ -3853,7 +3853,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation/usqualitycore-observationcancelled"
@@ -3888,7 +3888,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=activity&status=cancelled"
@@ -3929,7 +3929,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=activity"
@@ -3970,7 +3970,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=activity&date=ge2013-04-02"
@@ -4011,7 +4011,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&code=99354-3"
@@ -4057,7 +4057,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation/usqualitycore-us-core-observation-pregnancyintent"
@@ -4092,7 +4092,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&code=86645-9"
@@ -4133,7 +4133,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=social-history&status=final"
@@ -4174,7 +4174,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=social-history"
@@ -4215,7 +4215,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=social-history&date=ge2022-09-23"
@@ -4261,7 +4261,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation/usqualitycore-us-core-observation-pregnancystatus"
@@ -4296,7 +4296,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&code=82810-3"
@@ -4337,7 +4337,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=social-history&status=final"
@@ -4378,7 +4378,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=social-history"
@@ -4419,7 +4419,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=social-history&date=ge2022-08-24"
@@ -4465,7 +4465,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation/usqualitycore-us-core-smokingstatus"
@@ -4500,7 +4500,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&code=72166-2"
@@ -4541,7 +4541,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=social-history&status=final"
@@ -4582,7 +4582,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=social-history"
@@ -4623,7 +4623,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=social-history&date=ge2016-03-18"
@@ -4669,7 +4669,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation/usqualitycore-observation-lab"
@@ -4704,7 +4704,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=laboratory&status=final"
@@ -4745,7 +4745,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=laboratory"
@@ -4786,7 +4786,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=laboratory&date=ge2005-07-05"
@@ -4827,7 +4827,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&code=2339-0"
@@ -4873,7 +4873,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation/usqualitycore-us-core-observation-occupation"
@@ -4908,7 +4908,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&code=11341-5"
@@ -4949,7 +4949,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=social-history&status=final"
@@ -4990,7 +4990,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=social-history"
@@ -5031,7 +5031,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=social-history&date=ge2015-04-24"
@@ -5077,7 +5077,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation/usqualitycore-us-core-blood-pressure"
@@ -5112,7 +5112,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&code=85354-9"
@@ -5153,7 +5153,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs&status=final"
@@ -5194,7 +5194,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs"
@@ -5235,7 +5235,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs&date=ge1999-07-02"
@@ -5281,7 +5281,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation/usqualitycore-us-core-bmi"
@@ -5316,7 +5316,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&code=39156-5"
@@ -5357,7 +5357,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs&status=final"
@@ -5398,7 +5398,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs"
@@ -5439,7 +5439,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs&date=ge1999-07-02"
@@ -5485,7 +5485,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation/usqualitycore-pediatric-bmi-for-age"
@@ -5520,7 +5520,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&code=59576-9"
@@ -5561,7 +5561,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs&status=final"
@@ -5602,7 +5602,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs"
@@ -5643,7 +5643,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs&date=ge2019-05-04"
@@ -5689,7 +5689,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation/usqualitycore-us-core-body-height"
@@ -5724,7 +5724,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&code=8302-2"
@@ -5765,7 +5765,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs&status=final"
@@ -5806,7 +5806,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs"
@@ -5847,7 +5847,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs&date=ge1999-07-02"
@@ -5893,7 +5893,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation/usqualitycore-us-core-body-temperature"
@@ -5928,7 +5928,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&code=8310-5"
@@ -5969,7 +5969,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs&status=final"
@@ -6010,7 +6010,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs"
@@ -6051,7 +6051,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs&date=ge1999-07-02"
@@ -6097,7 +6097,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation/usqualitycore-us-core-body-weight"
@@ -6132,7 +6132,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&code=29463-7"
@@ -6173,7 +6173,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs&status=final"
@@ -6214,7 +6214,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs"
@@ -6255,7 +6255,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs&date=ge1999-07-02"
@@ -6301,7 +6301,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation/usqualitycore-head-circumference-percentile"
@@ -6336,7 +6336,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&code=8289-1"
@@ -6377,7 +6377,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs&status=final"
@@ -6418,7 +6418,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs"
@@ -6459,7 +6459,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs&date=ge2020-07-01"
@@ -6505,7 +6505,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation/usqualitycore-us-core-heart-rate"
@@ -6540,7 +6540,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&code=8867-4"
@@ -6581,7 +6581,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs&status=final"
@@ -6622,7 +6622,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs"
@@ -6663,7 +6663,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs&date=ge1999-07-02"
@@ -6709,7 +6709,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation/usqualitycore-us-core-pulse-oximetry"
@@ -6744,7 +6744,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&code=59408-5"
@@ -6785,7 +6785,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs&status=final"
@@ -6826,7 +6826,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs"
@@ -6867,7 +6867,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs&date=ge1999-07-02"
@@ -6913,7 +6913,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation/usqualitycore-us-core-respiratory-rate"
@@ -6948,7 +6948,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&code=9279-1"
@@ -6989,7 +6989,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs&status=final"
@@ -7030,7 +7030,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs"
@@ -7071,7 +7071,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs&date=ge1999-07-02"
@@ -7117,7 +7117,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation/usqualitycore-pediatric-weight-for-height"
@@ -7152,7 +7152,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&code=77606-2"
@@ -7193,7 +7193,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs&status=final"
@@ -7234,7 +7234,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs"
@@ -7275,7 +7275,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=vital-signs&date=ge2020-07-02"
@@ -7321,7 +7321,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Procedure/usqualitycore-procedure"
@@ -7356,7 +7356,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Procedure?patient=usqualitycore-patient&status=completed"
@@ -7397,7 +7397,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Procedure?patient=usqualitycore-patient"
@@ -7438,7 +7438,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Procedure?patient=usqualitycore-patient&date=ge2013-04-05"
@@ -7484,7 +7484,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Procedure/usqualitycore-procedurenotdone"
@@ -7519,7 +7519,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Procedure?patient=usqualitycore-patient&status=not-done"
@@ -7560,7 +7560,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Procedure?patient=usqualitycore-patient"
@@ -7601,7 +7601,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Procedure?patient=usqualitycore-patient&date=ge2013-04-05"
@@ -7647,7 +7647,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/RelatedPerson/usqualitycore-related-person"
@@ -7682,7 +7682,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/RelatedPerson?patient=usqualitycore-patient"
@@ -7723,7 +7723,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/RelatedPerson?_id=usqualitycore-related-person"
@@ -7769,7 +7769,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/ServiceRequest/usqualitycore-servicerequest"
@@ -7804,7 +7804,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/ServiceRequest?patient=usqualitycore-patient&do-not-perform=false"
@@ -7845,7 +7845,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/ServiceRequest?_id=usqualitycore-servicerequest"
@@ -7886,7 +7886,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/ServiceRequest?patient=usqualitycore-patient"
@@ -7927,7 +7927,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/ServiceRequest?patient=usqualitycore-patient&category=387713003"
@@ -7968,7 +7968,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/ServiceRequest?patient=usqualitycore-patient&category=387713003&authored=ge2013-04-04"
@@ -8009,7 +8009,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/ServiceRequest?patient=usqualitycore-patient&code=80146002"
@@ -8055,7 +8055,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/ServiceRequest/usqualitycore-servicenotrequested"
@@ -8090,7 +8090,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/ServiceRequest?patient=usqualitycore-patient&do-not-perform=true"
@@ -8131,7 +8131,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/ServiceRequest?_id=usqualitycore-servicenotrequested"
@@ -8172,7 +8172,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/ServiceRequest?patient=usqualitycore-patient"
@@ -8213,7 +8213,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/ServiceRequest?patient=usqualitycore-patient&category=387713003"
@@ -8254,7 +8254,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/ServiceRequest?patient=usqualitycore-patient&category=387713003&authored=ge2013-04-04"
@@ -8295,7 +8295,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/ServiceRequest?patient=usqualitycore-patient&code=80146002"
@@ -8341,7 +8341,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Task/usqualitycore-task"
@@ -8376,7 +8376,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Task?patient=usqualitycore-patient&status=accepted"
@@ -8417,7 +8417,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Task?patient=usqualitycore-patient"
@@ -8458,7 +8458,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Task?patient=usqualitycore-patient&code=approve"
@@ -8504,7 +8504,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Task/usqualitycore-taskrejected"
@@ -8539,7 +8539,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Task?patient=usqualitycore-patient&status=rejected"
@@ -8580,7 +8580,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Task?patient=usqualitycore-patient"
@@ -8621,7 +8621,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Task?patient=usqualitycore-patient&code=approve"
@@ -8667,7 +8667,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Encounter/usqualitycore-encounter"
@@ -8702,7 +8702,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Encounter?patient=usqualitycore-patient"
@@ -8743,7 +8743,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Encounter?_id=usqualitycore-encounter"
@@ -8784,7 +8784,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Encounter?patient=usqualitycore-patient&type=99223"
@@ -8825,7 +8825,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Encounter?patient=usqualitycore-patient&date=ge2015-02-15"
@@ -8871,7 +8871,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Location/usqualitycore-location"
@@ -8911,7 +8911,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Organization/usqualitycore-organization"
@@ -8951,7 +8951,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Practitioner/usqualitycore-practitioner"
@@ -8991,7 +8991,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/PractitionerRole/usqualitycore-practitioner-role"
@@ -9031,7 +9031,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Provenance/usqualitycore-provenance"
@@ -9071,7 +9071,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Specimen/usqualitycore-specimen"
@@ -9106,7 +9106,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "Bearer {{client_id}}"
+                "value": "Bearer {{access_token}}"
               }
             ],
             "url": "{{base_url}}/Specimen?_id=usqualitycore-specimen"
