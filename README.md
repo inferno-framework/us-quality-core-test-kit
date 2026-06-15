@@ -1,121 +1,72 @@
 # US Quality Core Test Kit
 
-The US Quality Core Test Kit validates the conformance of server and client
-implementations to an enhanced version of the US Quality Core Implementation Guide that
-includes USCDI+ Quality guidance and more concrete requirements on support for
-the standard RESTful FHIR API. The current focus is US Quality Core v0.5.0, which
-aligns with US Core STU v6.1.0 and FHIR R4 (4.0.1). While US Quality Core derives from
-and extends US Core, the test kit only verifies US Quality Core specific requirements.
+The **US Quality Core Test Kit** validates the conformance of server and client
+implementations to the [2026 US Quality Core Implementation Guide
+v0.5.0](https://fhir.org/guides/onc/us-quality-core/). The test kit includes
+server and client suites focused on the IG's conformance scope for USCDI+
+Quality V1 data.
 
-This test kit provides testing for US Quality Core clients and servers.
+For additional details on the tests, including their scope, usage, and local
+demonstration notes, see the
+[US Quality Core Test Kit documentation](https://github.com/inferno-framework/us-quality-core-test-kit/wiki).
 
 ## Getting Started
 
-The quickest way to run this test kit locally is with [Docker](https://www.docker.com/).
+The quickest way to run this test kit locally is with
+[Docker](https://www.docker.com/).
 
 - Install Docker
-- Clone this repository
-- Run `./setup.sh` within the test kit directory to download necessary dependencies
-- Run `./run.sh` within the test kit directory to start the application
+- Clone or download this repository
+- Open a terminal in the test kit directory
+- Run `./setup.sh` to download necessary dependencies
+- Run `./run.sh` to start the application
 - Navigate to `http://localhost`
 
-### Inferno US Core R4 Reference Server
+Detailed step-by-step instructions for running the tests can be found in the
+wiki:
 
-The client tests require an instance of the [Inferno Reference
-Server](https://github.com/inferno-framework/inferno-reference-server) to be
-running so that realistic content can be served to the client. The reference
-server should be loaded with US Quality Core example data, which is included in the
-`./client-example-resources` directory.
+- [Preset Walkthrough](https://github.com/inferno-framework/us-quality-core-test-kit/wiki/Preset-Walkthrough)
+- [Server Suite Overview](https://github.com/inferno-framework/us-quality-core-test-kit/wiki/Overview-Server)
+- [Client Suite Overview](https://github.com/inferno-framework/us-quality-core-test-kit/wiki/Overview-Client)
 
-The provided docker-compose file runs the reference server as a background service,
-which will be automatically loaded with the necessary data if there are no resources
-yet loaded.
+The Docker setup starts an [Inferno Reference
+Server](https://github.com/inferno-framework/inferno-reference-server) loaded
+from `client-example-resources/` when the reference server database is empty.
+This supports local client testing and can also be useful for server-suite
+development.
 
-To clear the resources of the file to force a reload, run `docker volume rm
-us-quality-core-test-kit_fhir-pgdata`. See the [Inferno Reference
-Server](https://github.com/inferno-framework/inferno-reference-server) for more
-information.
+More information on using Inferno Test Kits is available on the [Inferno
+Framework documentation site](https://inferno-framework.github.io/docs).
+
+### Multi-user Installations
+
+The default configuration of this test kit uses SQLite for data persistence and
+is optimized for running on a local machine with a single user. For
+installations on shared servers that may have multiple tests running
+simultaneously, please [configure the installation to use
+PostgreSQL](https://inferno-framework.github.io/docs/deployment/database.html#postgresql-with-docker)
+to ensure stability in this type of environment.
 
 ## Contributing to this Test Kit
 
 Developers contributing to this test kit should be familiar with
 [authoring Inferno Framework test suites](https://inferno-framework.github.io/docs/writing-tests/).
+Additional design and maintenance information is available in the
+[Technical Overview](https://github.com/inferno-framework/us-quality-core-test-kit/wiki/Technical-Overview).
 
-This test kit follows much of the same approach taken by the
-[US Core Test Kit](https://github.com/inferno-framework/us-core-test-kit/tree/main)
-for generating client and server test suites. At the moment the US Quality Core generators
-extend and modify the US Core generators where needed, however this may change
-in the future depending on evolving requirements.
+## Providing Feedback and Reporting Issues
 
-### Source Code Structure
+We welcome feedback on the tests, including validation logic, requirements
+coverage, user experience, and documentation.
 
-The general layout of the source code for this test kit is as follows:
+Please report problems or suggestions in the
+[issues section](https://github.com/inferno-framework/us-quality-core-test-kit/issues)
+of this repository. The team may also be reached in the
+[#inferno Zulip stream](https://chat.fhir.org/#narrow/stream/179309-inferno).
 
-```
-.
-+-- client-example-resources                            # Example resources used to populate the reference server for client testing
-+-- lib
-│   +-- us_quality_core_test_kit
-│       +-- client                                      # Client suite source code
-│       │   +-- generator                               # Source code for generating client test suites
-│       │   │   +-- templates                           # ERB templates used by the client generator
-│       │   +-- generated                               # Generated client suites by IG version
-│       │   │   +-- v0.5.0
-│       │   │       +-- capability_statement_v050.json.erb # Simulated FHIR server CapabilityStatement template served by client tests
-│       │   │       +-- example_client_v050.postman_collection.json # Example client Postman collection for this IG version
-│       │   │       +-- us_quality_core_client_test_suite.rb # Client test suite for this IG version
-│       +-- generator                                   # Source code for generating server test suites
-│       │   +-- templates                               # ERB templates used by the server generator
-│       +-- generated                                   # Generated server suites by IG version
-│       │   +-- v0.5.0
-│       │       +-- us_quality_core_test_suite.rb       # Server test suite for this IG version
-│       +-- igs                                         # US Quality Core IG packages
-│       +-- us_quality_core_test_kit.rb                 # References all generated test suites
-+-- scripts                                             # Helpful scripts for testing & maintaining the test kit
-```
+## License
 
-### Making Changes
-
-Do not manually update files in either `generated` directory, as they
-will be overwritten the next time the generators are run. Instead, changes should
-be made to the relevant generators and/or templates.
-
-To (re)generate client and server test suites for every version of the IG found
-in `/lib/us_quality_core_test_kit/igs`, run:
-
-```sh
-bundle exec rake usqualitycore:generate
-```
-
-#### Adding New US Quality Core IG Versions
-
-Place the IG Package archive (`package.tgz`) in the `lib/us_quality_core_test_kit/igs/` directory. Rename
-the file such that it corresponds to the following pattern: `us_quality_core_v<version without dots>.tgz`
-(e.g. `us_quality_core_v050.tgz`). Re-run the generator rake task, and inspect the results. Depending on
-future changes to the IG, changes may need to be made to the
-`lib/us_quality_core_test_kit/generator/special_cases.rb` source file. See that file for more details.
-
-#### Client Suite Test Data
-
-The [Inferno Reference Server](https://github.com/inferno-framework/inferno-reference-server)
-backed client tests require valid US Quality Core data such that realistic content can be served to
-the client during testing. When generating new client test suites for new versions of the
-US Quality Core IG, this bundle of test data (location in the `./client-example-resources` directory)
-should be updated.
-
-There is a script available under the `./scripts` directory called `clean_bundle.rb`, meant
-to help keep updates to this bundle as consistent as possible. You use it, run:
-
-```sh
-ruby scripts/clean_bundle.rb ./client-example-resources/us_quality_core_bundle_patient.json
-```
-
-## Known Limitations
-
-### AdverseEvent Provenance `revInclude` search on the local Reference Server
-
-The US Quality Core AdverseEvent Provenance `revInclude` test is skipped on the 
-local Reference Server. This issue is currently under investigation.
+Licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE).
 
 ## Trademark Notice
 
