@@ -16,10 +16,13 @@ module USQualityCoreTestKit
 
       id :us_quality_core_v050_adverse_event_provenance_revinclude_search_test
   
+      input :patient_ids,
+        title: 'Patient IDs',
+        description: 'Comma separated list of patient IDs that in sum contain all MUST SUPPORT elements'
+  
       def properties
         @properties ||= SearchTestProperties.new(
-          fixed_value_search: true,
-        resource_type: 'AdverseEvent',
+          resource_type: 'AdverseEvent',
         search_param_names: ['subject']
         )
       end
