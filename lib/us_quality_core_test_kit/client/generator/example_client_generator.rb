@@ -238,7 +238,7 @@ module USQualityCoreTestKit
               value: "http://localhost:4567/custom/us_quality_core_client_#{ig_metadata.reformatted_version}/fhir",
               type: 'string'
             },
-            { key: 'client_id', value: 'test', type: 'string' }
+            { key: 'access_token', value: '', type: 'string' }
           ]
         end
 
@@ -275,7 +275,7 @@ module USQualityCoreTestKit
             method: 'GET',
             header: [
               { key: 'Accept', value: 'application/fhir+json' },
-              { key: 'Authorization', value: 'Bearer {{client_id}}' }
+              { key: 'Authorization', value: 'Bearer {{access_token}}' }
             ],
             url: "{{base_url}}/#{path}"
           }

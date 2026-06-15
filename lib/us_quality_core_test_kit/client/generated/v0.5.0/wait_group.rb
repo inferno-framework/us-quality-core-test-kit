@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'securerandom'
+
 module USQualityCoreTestKit
   module Client
     module USQualityCoreClientV050
@@ -35,23 +37,35 @@ module USQualityCoreTestKit
               parameters for each resource type.
             )
 
-            input :client_id,
-                  title: 'Client Id',
-                  type: 'text'
+            output :access_token
 
             run do
+              token = SecureRandom.uuid
+              output access_token: token
+
               wait(
-                identifier: client_id,
+                identifier: token,
                 message: %(
   Inferno will now wait for the client under test to make the required requests against the following base URL:
 
   #{fhir_url}
 
+  Inferno generated this access token for the current run:
+
+  `#{token}`
+
+  Configure the client under test to send the following HTTP header with every request.
+  Clients must send this exact value as the bearer token for this run.
+  If the client system already adds the `Bearer` scheme, enter only the access
+  token value shown above in the client configuration.
+
+  `Authorization: Bearer #{token}`
+
   All requests will be recorded. When finished, the requests will be inspected to ensure that the client under test is making the required requests.
   Requests should target the following patient record:
   - **Resource ID**: `usqualitycore-patient`
 
-  [Click here](#{resume_pass_url}?token=#{client_id}) when finished.
+  [Click here](#{resume_pass_url}?token=#{token}) when finished.
 
   The following requirements will be checked:
 
@@ -455,8 +469,6 @@ module USQualityCoreTestKit
     * usqualitycore-specimen
   * searches:
     * _id
-
-  [Click here](#{resume_pass_url}?token=#{client_id}) when finished.
                 ),
                 timeout: 900
               )
