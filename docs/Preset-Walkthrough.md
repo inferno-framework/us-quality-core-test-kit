@@ -52,15 +52,7 @@ included in the Docker setup.
 
 This preset is useful for local development because it points the server suite
 at the same reference server used by the client tests. The local data is
-intended to exercise the generated tests, but local reference-server limitations
-may still apply.
-
-### Local Reference Server Demonstration Note
-
-The US Quality Core AdverseEvent Provenance `_revinclude` test is skipped when
-running against the local Inferno Reference Server. This is a limitation of the
-local demonstration path, not a general limitation of the server suite when
-testing other systems.
+intended to exercise the generated tests.
 
 ## Server Suite Against the Public US Core Reference Server
 
