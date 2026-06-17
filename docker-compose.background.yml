@@ -36,11 +36,13 @@ services:
     restart: unless-stopped
     ports:
       - "8080:8080"
-    volumes:
-      - ./client-example-resources:/var/lib/jetty/resources/
     environment:
       - CUSTOM_BEARER_TOKEN=SAMPLE_TOKEN
       - READ_ONLY=true
+      # If the server's database is empty, data will be automatically loaded
+      # from this repository and branch.
+      - SOURCE_DATA_REPO=https://github.com/inferno-framework/inferno-reference-server-data
+      - SOURCE_DATA_BRANCH=us-quality-core-v050-resources
   db:
     image: postgres:9.6-alpine
     environment:
