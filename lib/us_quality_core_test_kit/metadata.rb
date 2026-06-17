@@ -88,7 +88,7 @@ module USQualityCoreTestKit
       us_quality_core_client_v050
     ]
 
-    tags ['US-Quality-Core']
+    tags ['US Quality Core']
 
     version VERSION
 
