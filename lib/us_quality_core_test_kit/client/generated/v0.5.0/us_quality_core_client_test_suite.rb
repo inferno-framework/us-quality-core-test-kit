@@ -178,7 +178,7 @@ The tests will not pass unless at least one profile group passes.
 During these tests, the US Quality Core client system will interact with
 Inferno's simulated US Quality Core Server and demonstrate its ability to
 perform the FHIR interactions described in the [US Quality Core Client
-CapabilityStatement](http://fhir.org/guides/onc/us-quality-core/CapabilityStatement-US Quality Core-client.html).
+CapabilityStatement](http://fhir.org/guides/onc/us-quality-core/CapabilityStatement-us-quality-core-server.html).
 
 
           )

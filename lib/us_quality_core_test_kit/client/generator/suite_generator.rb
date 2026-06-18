@@ -110,7 +110,7 @@ module USQualityCoreTestKit
             During these tests, the US Quality Core client system will interact with
             Inferno's simulated US Quality Core Server and demonstrate its ability to
             perform the FHIR interactions described in the [US Quality Core Client
-            CapabilityStatement](#{ig_link}/CapabilityStatement-US Quality Core-client.html).
+            CapabilityStatement](#{ig_link}/CapabilityStatement-us-quality-core-server.html).
 
           DESCRIPTION
         end
