@@ -3,7 +3,6 @@
   "resourceType": "Bundle",
   "entry": [
     {
-      "fullUrl": "http://example.org/fhir/Endpoint/usqualitycore-r4-endpoint",
       "request": {
         "method": "PUT",
         "url": "Endpoint/usqualitycore-r4-endpoint"
@@ -37,7 +36,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Media/usqualitycore-r4-media",
       "request": {
         "method": "PUT",
         "url": "Media/usqualitycore-r4-media"
@@ -57,7 +55,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Specimen/usqualitycore-specimen",
       "request": {
         "method": "PUT",
         "url": "Specimen/usqualitycore-specimen"
@@ -105,7 +102,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/DocumentReference/usqualitycore-document-reference",
       "request": {
         "method": "PUT",
         "url": "DocumentReference/usqualitycore-document-reference"
@@ -194,7 +190,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-observation-pregnancyintent",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-us-core-observation-pregnancyintent"
@@ -260,7 +255,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-observation-pregnancystatus",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-us-core-observation-pregnancystatus"
@@ -325,7 +319,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-smokingstatus",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-us-core-smokingstatus"
@@ -390,7 +383,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-observation-occupation",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-us-core-observation-occupation"
@@ -481,7 +473,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-blood-pressure",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-us-core-blood-pressure"
@@ -574,7 +565,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-bp-data-absent-reason",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-us-core-bp-data-absent-reason"
@@ -675,7 +665,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-bmi",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-us-core-bmi"
@@ -736,7 +725,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-pediatric-bmi-for-age",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-pediatric-bmi-for-age"
@@ -797,7 +785,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-body-height",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-us-core-body-height"
@@ -858,7 +845,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-body-temperature",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-us-core-body-temperature"
@@ -919,7 +905,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-body-weight",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-us-core-body-weight"
@@ -980,7 +965,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-head-circumference-percentile",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-head-circumference-percentile"
@@ -1041,7 +1025,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-heart-rate",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-us-core-heart-rate"
@@ -1102,7 +1085,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-pulse-oximetry",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-us-core-pulse-oximetry"
@@ -1206,7 +1188,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-us-core-respiratory-rate",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-us-core-respiratory-rate"
@@ -1267,7 +1248,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-pediatric-weight-for-height",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-pediatric-weight-for-height"
@@ -1328,7 +1308,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Provenance/usqualitycore-provenance",
       "request": {
         "method": "PUT",
         "url": "Provenance/usqualitycore-provenance"
@@ -1662,7 +1641,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/AdverseEvent/usqualitycore-adverse-event",
       "request": {
         "method": "PUT",
         "url": "AdverseEvent/usqualitycore-adverse-event"
@@ -1753,7 +1731,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/AllergyIntolerance/usqualitycore-allergy-intolerance",
       "request": {
         "method": "PUT",
         "url": "AllergyIntolerance/usqualitycore-allergy-intolerance"
@@ -1882,7 +1859,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/AllergyIntolerance/usqualitycore-allergy-intolerance-dup1",
       "request": {
         "method": "PUT",
         "url": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup1"
@@ -1944,7 +1920,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/AllergyIntolerance/usqualitycore-allergy-intolerance-dup10",
       "request": {
         "method": "PUT",
         "url": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup10"
@@ -2006,7 +1981,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/AllergyIntolerance/usqualitycore-allergy-intolerance-dup11",
       "request": {
         "method": "PUT",
         "url": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup11"
@@ -2068,7 +2042,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/AllergyIntolerance/usqualitycore-allergy-intolerance-dup12",
       "request": {
         "method": "PUT",
         "url": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup12"
@@ -2130,7 +2103,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/AllergyIntolerance/usqualitycore-allergy-intolerance-dup13",
       "request": {
         "method": "PUT",
         "url": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup13"
@@ -2192,7 +2164,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/AllergyIntolerance/usqualitycore-allergy-intolerance-dup14",
       "request": {
         "method": "PUT",
         "url": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup14"
@@ -2254,7 +2225,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/AllergyIntolerance/usqualitycore-allergy-intolerance-dup15",
       "request": {
         "method": "PUT",
         "url": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup15"
@@ -2316,7 +2286,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/AllergyIntolerance/usqualitycore-allergy-intolerance-dup16",
       "request": {
         "method": "PUT",
         "url": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup16"
@@ -2378,7 +2347,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/AllergyIntolerance/usqualitycore-allergy-intolerance-dup17",
       "request": {
         "method": "PUT",
         "url": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup17"
@@ -2440,7 +2408,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/AllergyIntolerance/usqualitycore-allergy-intolerance-dup18",
       "request": {
         "method": "PUT",
         "url": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup18"
@@ -2502,7 +2469,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/AllergyIntolerance/usqualitycore-allergy-intolerance-dup19",
       "request": {
         "method": "PUT",
         "url": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup19"
@@ -2564,7 +2530,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/AllergyIntolerance/usqualitycore-allergy-intolerance-dup2",
       "request": {
         "method": "PUT",
         "url": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup2"
@@ -2626,7 +2591,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/AllergyIntolerance/usqualitycore-allergy-intolerance-dup20",
       "request": {
         "method": "PUT",
         "url": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup20"
@@ -2688,7 +2652,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/AllergyIntolerance/usqualitycore-allergy-intolerance-dup3",
       "request": {
         "method": "PUT",
         "url": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup3"
@@ -2750,7 +2713,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/AllergyIntolerance/usqualitycore-allergy-intolerance-dup4",
       "request": {
         "method": "PUT",
         "url": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup4"
@@ -2812,7 +2774,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/AllergyIntolerance/usqualitycore-allergy-intolerance-dup5",
       "request": {
         "method": "PUT",
         "url": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup5"
@@ -2874,7 +2835,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/AllergyIntolerance/usqualitycore-allergy-intolerance-dup6",
       "request": {
         "method": "PUT",
         "url": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup6"
@@ -2936,7 +2896,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/AllergyIntolerance/usqualitycore-allergy-intolerance-dup7",
       "request": {
         "method": "PUT",
         "url": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup7"
@@ -2998,7 +2957,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/AllergyIntolerance/usqualitycore-allergy-intolerance-dup8",
       "request": {
         "method": "PUT",
         "url": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup8"
@@ -3060,7 +3018,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/AllergyIntolerance/usqualitycore-allergy-intolerance-dup9",
       "request": {
         "method": "PUT",
         "url": "AllergyIntolerance/usqualitycore-allergy-intolerance-dup9"
@@ -3122,7 +3079,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/CarePlan/usqualitycore-care-plan",
       "request": {
         "method": "PUT",
         "url": "CarePlan/usqualitycore-care-plan"
@@ -3429,7 +3385,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/CareTeam/usqualitycore-care-team",
       "request": {
         "method": "PUT",
         "url": "CareTeam/usqualitycore-care-team"
@@ -3467,7 +3422,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Condition/usqualitycore-condition-encounter-diagnosis",
       "request": {
         "method": "PUT",
         "url": "Condition/usqualitycore-condition-encounter-diagnosis"
@@ -3572,7 +3526,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Condition/usqualitycore-condition-problems-health-concerns",
       "request": {
         "method": "PUT",
         "url": "Condition/usqualitycore-condition-problems-health-concerns"
@@ -3684,7 +3637,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Coverage/usqualitycore-coverage",
       "request": {
         "method": "PUT",
         "url": "Coverage/usqualitycore-coverage"
@@ -3782,7 +3734,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Device/usqualitycore-device",
       "request": {
         "method": "PUT",
         "url": "Device/usqualitycore-device"
@@ -3858,7 +3809,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/DeviceRequest/usqualitycore-devicenotrequested",
       "request": {
         "method": "PUT",
         "url": "DeviceRequest/usqualitycore-devicenotrequested"
@@ -3914,7 +3864,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/DeviceRequest/usqualitycore-devicerequest",
       "request": {
         "method": "PUT",
         "url": "DeviceRequest/usqualitycore-devicerequest"
@@ -3956,7 +3905,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/DiagnosticReport/usqualitycore-diagnostic-report-lab",
       "request": {
         "method": "PUT",
         "url": "DiagnosticReport/usqualitycore-diagnostic-report-lab"
@@ -4016,7 +3964,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/DiagnosticReport/usqualitycore-diagnostic-report-note",
       "request": {
         "method": "PUT",
         "url": "DiagnosticReport/usqualitycore-diagnostic-report-note"
@@ -4083,7 +4030,7 @@
         "media": [
           {
             "link": {
-              "reference": "http://example.org/fhir/Media/usqualitycore-r4-media"
+              "reference": "Media/usqualitycore-r4-media"
             }
           }
         ],
@@ -4100,7 +4047,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Encounter/usqualitycore-encounter",
       "request": {
         "method": "PUT",
         "url": "Encounter/usqualitycore-encounter"
@@ -4252,7 +4198,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/FamilyMemberHistory/usqualitycore-family-member-history",
       "request": {
         "method": "PUT",
         "url": "FamilyMemberHistory/usqualitycore-family-member-history"
@@ -4335,7 +4280,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Goal/usqualitycore-goal",
       "request": {
         "method": "PUT",
         "url": "Goal/usqualitycore-goal"
@@ -4440,7 +4384,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Group/usqualitycore-group",
       "request": {
         "method": "PUT",
         "url": "Group/usqualitycore-group"
@@ -4467,7 +4410,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Immunization/usqualitycore-immunization",
       "request": {
         "method": "PUT",
         "url": "Immunization/usqualitycore-immunization"
@@ -4630,7 +4572,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Immunization/usqualitycore-immunizationnotdone",
       "request": {
         "method": "PUT",
         "url": "Immunization/usqualitycore-immunizationnotdone"
@@ -4787,7 +4728,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Immunization/usqualitycore-immunizationnotdone-2",
       "request": {
         "method": "PUT",
         "url": "Immunization/usqualitycore-immunizationnotdone-2"
@@ -4950,7 +4890,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Location/usqualitycore-location",
       "request": {
         "method": "PUT",
         "url": "Location/usqualitycore-location"
@@ -5044,7 +4983,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Medication/usqualitycore-medication",
       "request": {
         "method": "PUT",
         "url": "Medication/usqualitycore-medication"
@@ -5074,11 +5012,11 @@
               }
             ],
             "active": true,
-            "name": "Genzyme",
+            "name": "Example Org",
             "telecom": [
               {
                 "system": "url",
-                "value": "https://www.sanofigenzyme.com/",
+                "value": "https://www.example.com/",
                 "use": "work"
               }
             ],
@@ -5149,7 +5087,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/MedicationAdministration/usqualitycore-medicationadministration",
       "request": {
         "method": "PUT",
         "url": "MedicationAdministration/usqualitycore-medicationadministration"
@@ -5218,7 +5155,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/MedicationAdministration/usqualitycore-medicationadministrationnotdone",
       "request": {
         "method": "PUT",
         "url": "MedicationAdministration/usqualitycore-medicationadministrationnotdone"
@@ -5298,7 +5234,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/MedicationDispense/usqualitycore-medicationdispense",
       "request": {
         "method": "PUT",
         "url": "MedicationDispense/usqualitycore-medicationdispense"
@@ -5441,7 +5376,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/MedicationDispense/usqualitycore-medicationdispensedeclined",
       "request": {
         "method": "PUT",
         "url": "MedicationDispense/usqualitycore-medicationdispensedeclined"
@@ -5593,7 +5527,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/MedicationRequest/usqualitycore-medicationnotrequested",
       "request": {
         "method": "PUT",
         "url": "MedicationRequest/usqualitycore-medicationnotrequested"
@@ -5712,7 +5645,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/MedicationRequest/usqualitycore-medicationrequest",
       "request": {
         "method": "PUT",
         "url": "MedicationRequest/usqualitycore-medicationrequest"
@@ -5841,7 +5773,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-observation-clinical-result",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-observation-clinical-result"
@@ -5921,7 +5852,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-observation-clinical-result-2",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-observation-clinical-result-2"
@@ -6005,7 +5935,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-observation-clinical-result-3",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-observation-clinical-result-3"
@@ -6094,7 +6023,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-observation-clinical-result-4",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-observation-clinical-result-4"
@@ -6183,7 +6111,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-observation-lab",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-observation-lab"
@@ -6284,7 +6211,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-observation-lab-2",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-observation-lab-2"
@@ -6392,7 +6318,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-observation-lab-3",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-observation-lab-3"
@@ -6498,7 +6423,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-observation-lab-4",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-observation-lab-4"
@@ -6604,7 +6528,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-observation-screening-assessment",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-observation-screening-assessment"
@@ -6700,7 +6623,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-observation-screening-assessment-2",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-observation-screening-assessment-2"
@@ -6774,7 +6696,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-observation-screening-assessment-3",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-observation-screening-assessment-3"
@@ -6857,7 +6778,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-observation-screening-assessment-4",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-observation-screening-assessment-4"
@@ -6940,7 +6860,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-observationcancelled",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-observationcancelled"
@@ -7022,7 +6941,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Organization/usqualitycore-organization",
       "request": {
         "method": "PUT",
         "url": "Organization/usqualitycore-organization"
@@ -7097,7 +7015,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Patient/usqualitycore-patient",
       "request": {
         "method": "PUT",
         "url": "Patient/usqualitycore-patient"
@@ -7395,7 +7312,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Practitioner/usqualitycore-practitioner",
       "request": {
         "method": "PUT",
         "url": "Practitioner/usqualitycore-practitioner"
@@ -7489,7 +7405,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/PractitionerRole/usqualitycore-practitioner-role",
       "request": {
         "method": "PUT",
         "url": "PractitionerRole/usqualitycore-practitioner-role"
@@ -7565,7 +7480,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Procedure/usqualitycore-procedure",
       "request": {
         "method": "PUT",
         "url": "Procedure/usqualitycore-procedure"
@@ -7668,7 +7582,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Procedure/usqualitycore-procedurenotdone",
       "request": {
         "method": "PUT",
         "url": "Procedure/usqualitycore-procedurenotdone"
@@ -7771,7 +7684,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/QuestionnaireResponse/usqualitycore-questionnaire-response",
       "request": {
         "method": "PUT",
         "url": "QuestionnaireResponse/usqualitycore-questionnaire-response"
@@ -7937,7 +7849,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/RelatedPerson/usqualitycore-related-person",
       "request": {
         "method": "PUT",
         "url": "RelatedPerson/usqualitycore-related-person"
@@ -8009,7 +7920,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/ServiceRequest/usqualitycore-servicenotrequested",
       "request": {
         "method": "PUT",
         "url": "ServiceRequest/usqualitycore-servicenotrequested"
@@ -8120,7 +8030,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/ServiceRequest/usqualitycore-servicerequest",
       "request": {
         "method": "PUT",
         "url": "ServiceRequest/usqualitycore-servicerequest"
@@ -8217,7 +8126,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-simple-observation",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-simple-observation"
@@ -8295,7 +8203,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-simple-observation-2",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-simple-observation-2"
@@ -8371,7 +8278,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-simple-observation-3",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-simple-observation-3"
@@ -8433,7 +8339,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Observation/usqualitycore-simple-observation-4",
       "request": {
         "method": "PUT",
         "url": "Observation/usqualitycore-simple-observation-4"
@@ -8490,7 +8395,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Task/usqualitycore-task",
       "request": {
         "method": "PUT",
         "url": "Task/usqualitycore-task"
@@ -8549,7 +8453,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Task/usqualitycore-taskrejected",
       "request": {
         "method": "PUT",
         "url": "Task/usqualitycore-taskrejected"
@@ -8608,7 +8511,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/Task/usqualitycore-taskrejected-2",
       "request": {
         "method": "PUT",
         "url": "Task/usqualitycore-taskrejected-2"
