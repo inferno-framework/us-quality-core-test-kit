@@ -3,7 +3,6 @@
   "type": "transaction",
   "entry": [
     {
-      "fullUrl": "http://example.org/fhir/SearchParameter/us-quality-core-adverseevent-recorded-date",
       "request": {
         "method": "PUT",
         "url": "SearchParameter/us-quality-core-adverseevent-recorded-date"
@@ -141,7 +140,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/SearchParameter/us-quality-core-devicerequest-do-not-perform",
       "request": {
         "method": "PUT",
         "url": "SearchParameter/us-quality-core-devicerequest-do-not-perform"
@@ -194,7 +192,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/SearchParameter/us-quality-core-medicationrequest-do-not-perform",
       "request": {
         "method": "PUT",
         "url": "SearchParameter/us-quality-core-medicationrequest-do-not-perform"
@@ -247,7 +244,6 @@
       }
     },
     {
-      "fullUrl": "http://example.org/fhir/SearchParameter/us-quality-core-servicerequest-do-not-perform",
       "request": {
         "method": "PUT",
         "url": "SearchParameter/us-quality-core-servicerequest-do-not-perform"
