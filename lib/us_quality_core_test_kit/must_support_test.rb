@@ -1,10 +1,20 @@
-# frozen_string_literal: true
-
-require 'us_core_test_kit/must_support_test'
+require_relative 'fhir_resource_navigation'
 
 module USQualityCoreTestKit
   module MustSupportTest
-    include USCoreTestKit::MustSupportTest
-    extend USCoreTestKit::MustSupportTest
+    include Inferno::DSL::FHIRResourceNavigation
+    extend Forwardable
+
+    def_delegators 'self.class', :metadata
+
+    def all_scratch_resources
+      scratch_resources[:all]
+    end
+
+    def perform_must_support_test(resources)
+      skip_if resources.blank?, "No #{resource_type} resources were found"
+
+      skip { assert_must_support_elements_present(resources, nil, metadata:) }
+    end
   end
 end

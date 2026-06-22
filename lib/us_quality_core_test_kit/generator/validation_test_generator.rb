@@ -1,13 +1,72 @@
 # frozen_string_literal: true
 
-require 'us_core_test_kit/generator/validation_test_generator'
-
 require_relative 'naming'
 require_relative 'special_cases'
 
 module USQualityCoreTestKit
   class Generator
-    class ValidationTestGenerator < USCoreTestKit::Generator::ValidationTestGenerator
+    class ValidationTestGenerator
+      attr_accessor :group_metadata, :medication_request_metadata, :base_output_dir
+
+
+      def initialize(group_metadata, medication_request_metadata = nil, base_output_dir:)
+        self.group_metadata = group_metadata
+        self.medication_request_metadata = medication_request_metadata
+        self.base_output_dir = base_output_dir
+      end
+
+      def output
+        @output ||= ERB.new(template, trim_mode: '-').result(binding)
+      end
+
+      def base_output_file_name
+        "#{class_name.underscore}.rb"
+      end
+
+      def output_file_directory
+        File.join(base_output_dir, directory_name)
+      end
+
+      def output_file_name
+        File.join(output_file_directory, base_output_file_name)
+      end
+
+      def profile_url
+        group_metadata.profile_url
+      end
+
+      def profile_name
+        group_metadata.profile_name
+      end
+
+      def profile_version
+        group_metadata.profile_version
+      end
+
+      def resource_type
+        group_metadata.resource
+      end
+
+      def conformance_expectation
+        read_interaction[:expectation]
+      end
+
+      def generate
+        FileUtils.mkdir_p(output_file_directory)
+        File.write(output_file_name, output)
+
+        test_metadata = {
+          id: test_id,
+          file_name: base_output_file_name
+        }
+
+        if resource_type == 'Medication'
+          medication_request_metadata.add_test(**test_metadata)
+        else
+          group_metadata.add_test(**test_metadata)
+        end
+      end
+
       class << self
         def generate(ig_metadata, base_output_dir)
           ig_metadata.groups

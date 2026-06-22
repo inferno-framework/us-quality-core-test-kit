@@ -1,10 +1,29 @@
 # frozen_string_literal: true
 
-require 'us_core_test_kit/generator/ig_resources'
 
 module USQualityCoreTestKit
   class Generator
-    class IGResources < USCoreTestKit::Generator::IGResources
+    class IGResources
+      def add(resource)
+        resources_by_type[resource.resourceType] << resource
+      end
+
+      def ig
+        resources_by_type['ImplementationGuide'].first
+      end
+
+      def inspect
+        'IGResources'
+      end
+
+      def value_set_by_url(url)
+        resources_by_type['ValueSet'].find { |profile| profile.url == url }
+      end
+
+      def code_system_by_url(url)
+        resources_by_type['CodeSystem'].find { |system| system.url == url }
+      end
+
       def capability_statement(mode = 'server')
         resources_by_type['CapabilityStatement'].reverse.find do |capability_statement_resource|
           capability_statement_resource.rest.any? { |r| r.mode == mode }
@@ -55,6 +74,12 @@ module USQualityCoreTestKit
         return resource_scoped.first unless resource_scoped.empty?
 
         candidates.first
+      end
+
+      private
+
+      def resources_by_type
+        @resources_by_type ||= Hash.new { |hash, key| hash[key] = [] }
       end
     end
   end

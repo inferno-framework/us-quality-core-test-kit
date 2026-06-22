@@ -35,7 +35,6 @@ module USQualityCoreTestKit
 
         def groups
           ig_metadata.ordered_groups
-                     .reject { |group| USCoreTestKit::Generator::SpecialCases.exclude_group? group }
         end
 
         def resources

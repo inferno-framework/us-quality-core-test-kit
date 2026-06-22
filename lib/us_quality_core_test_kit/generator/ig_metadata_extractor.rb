@@ -1,21 +1,40 @@
 # frozen_string_literal: true
 
-require 'us_core_test_kit/generator/ig_metadata_extractor'
-
 require_relative 'ig_metadata'
 require_relative 'group_metadata_extractor'
 require_relative 'special_cases'
 
 module USQualityCoreTestKit
   class Generator
-    class IGMetadataExtractor < USCoreTestKit::Generator::IGMetadataExtractor
-      def initialize(ig_resources)
-        super
+    class IGMetadataExtractor
+      attr_accessor :ig_resources, :metadata
 
+      def initialize(ig_resources)
+        self.ig_resources = ig_resources
+        remove_version_from_supported_profiles
+        remove_extra_supported_profiles
         self.metadata = IGMetadata.new
       end
 
-      def add_missing_supported_profiles; end
+      def extract
+        add_metadata_from_ig
+        add_metadata_from_resources
+        metadata
+      end
+
+      def add_metadata_from_ig
+        metadata.ig_version = "v#{ig_resources.ig.version}".delete('-ballot')
+      end
+
+      def resources_in_capability_statement
+        ig_resources.capability_statement.rest.first.resource
+      end
+
+      def remove_version_from_supported_profiles
+        resources_in_capability_statement.each do |resource|
+          resource.supportedProfile.map! { |profile_url| profile_url.split('|').first }
+        end
+      end
 
       def remove_extra_supported_profiles
         resources_in_capability_statement.each do |resource|
