@@ -112,7 +112,6 @@ module USQualityCoreTestKit
 
       perform_comparator_searches(params, patient_id) if params_with_comparators.present?
 
-      filter_conditions(resources_returned) if resource_type == 'Condition' && metadata.version == 'v5.0.1'
       filter_devices(resources_returned) if resource_type == 'Device'
 
       if first_search?
@@ -145,7 +144,6 @@ module USQualityCoreTestKit
         resource.resourceType == resource_type
       end
 
-      filter_conditions(post_search_resources) if resource_type == 'Condition' && metadata.version == 'v5.0.1'
       filter_devices(post_search_resources) if resource_type == 'Device'
 
       get_resource_count = get_search_resources.length
@@ -176,19 +174,6 @@ module USQualityCoreTestKit
         else
           code = exclude_code
           coding.code == code
-        end
-      end
-    end
-
-    def filter_conditions(resources)
-      # HL7 JIRA FHIR-37917. US Core v5.0.1 does not required patient+category.
-      # In order to distinguish which resources matches the current profile, Inferno has to manually filter
-      # the result of first search, which is searching by patient.
-      resources.select! do |resource|
-        resource.category.any? do |category|
-          category.coding.any? do |coding|
-            metadata.search_definitions[:category][:values].include? coding.code
-          end
         end
       end
     end
@@ -293,7 +278,6 @@ module USQualityCoreTestKit
         fetch_and_assert_all_bundled_resources(params: new_search_params)
           .select { |resource| resource.resourceType == resource_type }
 
-      filter_conditions(reference_with_type_resources) if resource_type == 'Condition' && metadata.version == 'v5.0.1'
       filter_devices(reference_with_type_resources) if resource_type == 'Device'
 
       new_resource_count = reference_with_type_resources.count
