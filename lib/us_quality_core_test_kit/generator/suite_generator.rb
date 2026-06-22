@@ -37,14 +37,6 @@ module USQualityCoreTestKit
           groups.map { |group| group.file_name.delete_suffix('.rb') }
       end
 
-      def capability_statement_file_name
-        "../../custom_groups/#{ig_metadata.ig_version}/capability_statement_group"
-      end
-
-      def capability_statement_group_id
-        "us_core_#{ig_metadata.reformatted_version}_capability_statement"
-      end
-
       def version_specific_message_filters
         [
           # Patient validation warnings suppressed for US Core extensions because
