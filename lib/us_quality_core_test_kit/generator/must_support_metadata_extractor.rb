@@ -241,10 +241,6 @@ module USQualityCoreTestKit
       end
 
       def handle_type_must_support_target_profiles(type, metadata)
-        # US Core 3.1.1 profiles do not have US Core target profiles.
-        # Vital Sign proifles from FHIR R4 (version 4.0.1) do not have US Core target profiles either.
-        return if ['3.1.1', '4.0.1'].include?(profile.version)
-
         target_profiles = []
 
         if type.targetProfile&.length == 1
@@ -311,10 +307,7 @@ module USQualityCoreTestKit
         @must_supports[:elements].delete_if do |element|
           element[:path].start_with?('value[x]') ||
           element[:original_path]&.start_with?('value[x]') ||
-          element[:path] == ('dataAbsentReason') ||
-          (
-            pattern.match?(element[:path]) && ['3.1.1', '4.0.0'].include?(ig_resources.ig.version)
-          )
+          element[:path] == ('dataAbsentReason') 
         end
 
         @must_supports[:slices].delete_if do |slice|
