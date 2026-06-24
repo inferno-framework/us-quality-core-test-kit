@@ -36,7 +36,7 @@ module USQualityCoreTestKit
       range
     end
 
-    def fhir_date_comparer(search_range, target_range, comparator, extend_start = false, extend_end = false)
+    def fhir_date_comparer(search_range, target_range, comparator, extend_start: false, extend_end: false)
       # Implicitly, a missing lower boundary is "less than" any actual date. A missing upper boundary is "greater than" any actual date.
       case comparator
       when 'eq' # the range of the search value fully contains the range of the target value
@@ -77,12 +77,12 @@ module USQualityCoreTestKit
     def validate_datetime_search(search_value, target_value)
       comparator = search_value[0..1]
       if %w[eq ge gt le lt ne sa eb ap].include? comparator
-        search_value = search_value[2..-1]
+        search_value = search_value[2..]
       else
         comparator = 'eq'
       end
-      search_is_date = is_date?(search_value)
-      target_is_date = is_date?(target_value)
+      search_is_date = date?(search_value)
+      target_is_date = date?(target_value)
       search_range = get_fhir_datetime_range(search_value)
       target_range = get_fhir_datetime_range(target_value)
       fhir_date_comparer(search_range, target_range, comparator, !search_is_date && target_is_date, !search_is_date && target_is_date)
@@ -91,17 +91,17 @@ module USQualityCoreTestKit
     def validate_period_search(search_value, target_value)
       comparator = search_value[0..1]
       if %w[eq ge gt le lt ne sa eb ap].include? comparator
-        search_value = search_value[2..-1]
+        search_value = search_value[2..]
       else
         comparator = 'eq'
       end
-      search_is_date = is_date?(search_value)
+      search_is_date = date?(search_value)
       search_range = get_fhir_datetime_range(search_value)
       target_range = get_fhir_period_range(target_value)
-      fhir_date_comparer(search_range, target_range, comparator, !search_is_date && is_date?(target_value.start), !search_is_date && is_date?(target_value.end))
+      fhir_date_comparer(search_range, target_range, comparator, !search_is_date && date?(target_value.start), !search_is_date && date?(target_value.end))
     end
 
-    def is_date?(value)
+    def date?(value)
       /^\d{4}(-\d{2})?(-\d{2})?$/.match?(value) # YYYY or YYYY-MM or YYYY-MM-DD
     end
   end

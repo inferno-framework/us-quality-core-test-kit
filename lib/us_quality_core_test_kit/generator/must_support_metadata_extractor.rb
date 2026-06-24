@@ -26,7 +26,7 @@ module USQualityCoreTestKit
         @must_supports
       end
 
-      def is_uscdi_requirement_element?(element)
+      def uscdi_requirement_element?(element)
         element.extension.any? do |extension|
           extension.url == 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' &&
             extension.valueBoolean
@@ -82,7 +82,7 @@ module USQualityCoreTestKit
             path: current_element.path.gsub("#{resource}.", ''),
             discriminator: discriminator
           }.tap do |metadata|
-            metadata[:uscdi_only] = true if is_uscdi_requirement_element?(current_element)
+            metadata[:uscdi_only] = true if uscdi_requirement_element?(current_element)
           end
         end
       end
@@ -142,7 +142,7 @@ module USQualityCoreTestKit
               metadata[:discriminator] = pattern_value
             end
 
-            metadata[:uscdi_only] = true if is_uscdi_requirement_element?(current_element)
+            metadata[:uscdi_only] = true if uscdi_requirement_element?(current_element)
           end
         end
       end
@@ -216,7 +216,7 @@ module USQualityCoreTestKit
       end
 
       def save_type_code?(type)
-        'Reference' == type.code
+        type.code == 'Reference'
       end
 
       def get_type_must_support_metadata(current_metadata, current_element)
@@ -268,23 +268,23 @@ module USQualityCoreTestKit
 
       #### SPECIAL CASE ####
 
-      def is_vital_sign?
+      def vital_sign?
         [
           'http://hl7.org/fhir/StructureDefinition/vitalsigns',
           'http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs'
         ].include?(profile.baseDefinition)
       end
 
-      def is_blood_pressure?
+      def blood_pressure?
         %w[bp us-core-blood-pressure us-core-average-blood-pressure].include?(profile.id)
       end
 
       # Exclude Observation.component from vital sign profiles except observation-bp and observation-pulse-ox
 
       def remove_vital_sign_component
-        return if is_blood_pressure? || profile.name == 'USCorePulseOximetryProfile'
+        return if blood_pressure? || profile.name == 'USCorePulseOximetryProfile'
 
-        return unless is_vital_sign?
+        return unless vital_sign?
 
         @must_supports[:elements].delete_if do |element|
           element[:path].start_with?('component')
@@ -294,7 +294,7 @@ module USQualityCoreTestKit
       # Exclude Observation.value[x] from observation-bp
 
       def remove_blood_pressure_value_data_absent_reason
-        return unless is_blood_pressure?
+        return unless blood_pressure?
 
         @must_supports[:elements].delete_if do |element|
           element[:path].start_with?('value[x]') ||
@@ -315,7 +315,7 @@ module USQualityCoreTestKit
       # US Quality Core Test Kit has to keep this as there are still profiles either are us-core or inherit from us-core
 
       def remove_observation_data_absent_reason
-        return if is_blood_pressure?
+        return if blood_pressure?
 
         pattern = /(component(:[^.]+)?\.)?dataAbsentReason/
 
@@ -342,7 +342,7 @@ module USQualityCoreTestKit
 
       def all_must_support_elements
         profile_elements.select do |element|
-          element.mustSupport || uscdi_plus_quality_element?(element) || is_uscdi_requirement_element?(element)
+          element.mustSupport || uscdi_plus_quality_element?(element) || uscdi_requirement_element?(element)
         end
       end
 
@@ -354,7 +354,7 @@ module USQualityCoreTestKit
             url: element.type.first.profile.first
           }
 
-          metadata[:uscdi_only] = true if is_uscdi_requirement_element?(element)
+          metadata[:uscdi_only] = true if uscdi_requirement_element?(element)
 
           add_us_quality_coreuscdi_plus_quality_flag(element, metadata)
         end
@@ -380,7 +380,7 @@ module USQualityCoreTestKit
                 next if must_support_slice_elements.none? { |slice| slice.sliceName == slice_name }
               end
 
-              current_metadata[:uscdi_only] = true if is_uscdi_requirement_element?(current_element)
+              current_metadata[:uscdi_only] = true if uscdi_requirement_element?(current_element)
 
               type_must_support_metadata = get_type_must_support_metadata(current_metadata, current_element)
 
