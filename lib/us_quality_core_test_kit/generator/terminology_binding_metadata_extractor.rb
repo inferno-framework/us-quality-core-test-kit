@@ -30,7 +30,7 @@ module USQualityCoreTestKit
       end
 
       def element_has_optional_binding_slice?(element)
-        element.sliceName.present? && element.zero?
+        element.sliceName.present? && element.min.zero?
       end
 
       def profile_elements_with_bindings
@@ -49,7 +49,7 @@ module USQualityCoreTestKit
             path: element.path.gsub('[x]', '').gsub("#{resource}.", '')
           }
 
-          binding[:required_binding_slice] = true if element.sliceName.present? && element.positive?
+          binding[:required_binding_slice] = true if element.sliceName.present? && element.min.positive?
 
           binding
         end

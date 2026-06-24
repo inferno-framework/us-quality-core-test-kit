@@ -154,7 +154,7 @@ module USQualityCoreTestKit
           .select { |slice| [short_path, "#{short_path}.coding"].include?(slice[:path]) }
           .map do |slice|
             slice_element = profile_elements.find { |element| slice[:slice_id] == element.id }
-            next if profile_element.positive? && slice_element.none? && mandatory_slice_only
+            next if profile_element.min.positive? && slice_element.min.zero? && mandatory_slice_only
 
             case slice[:discriminator][:type]
             when 'patternCoding', 'patternCodeableConcept'
