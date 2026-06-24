@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'fhir_resource_navigation'
 
 module USQualityCoreTestKit
@@ -10,7 +12,7 @@ module USQualityCoreTestKit
     def perform_reference_resolution_test(resources)
       skip_if resources.blank?, no_resources_skip_message
 
-      pass if unresolved_references(resources).length.zero?
+      pass if unresolved_references(resources).empty?
 
       skip "Could not resolve and validate any Must Support references for #{unresolved_references_strings.join(', ')}"
     end
@@ -39,7 +41,7 @@ module USQualityCoreTestKit
       end
     end
 
-    def is_reference_resolved?(reference, target_profile)
+    def reference_resolved?(reference, target_profile)
       resolved_references.any? do |item|
         item[:reference] == reference.reference &&
           (
@@ -108,7 +110,7 @@ module USQualityCoreTestKit
     end
 
     def validate_reference_resolution(resource, reference, target_profile)
-      return true if is_reference_resolved?(reference, target_profile)
+      return true if reference_resolved?(reference, target_profile)
 
       if reference.contained?
         # if reference_id is blank it is referring to itself, so we know it exists

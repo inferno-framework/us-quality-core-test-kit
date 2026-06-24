@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'fhir_resource_navigation'
 
 module USQualityCoreTestKit

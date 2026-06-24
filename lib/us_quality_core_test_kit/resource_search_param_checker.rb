@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'fhir_resource_navigation'
 
 module USQualityCoreTestKit
@@ -18,7 +20,7 @@ module USQualityCoreTestKit
       when FHIR::CodeableConcept
         if include_system
           coding =
-            find_a_value_at(element, 'coding') { |coding| coding.code.present? && coding.system.present? }
+            find_a_value_at(element, 'coding') { |a_coding| a_coding.code.present? && a_coding.system.present? }
           coding.present?
         else
           find_a_value_at(element, 'coding.code').present?

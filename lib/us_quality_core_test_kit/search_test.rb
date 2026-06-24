@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'date_search_validation'
 require_relative 'resource_search_param_checker'
 require_relative 'search_test_properties'
@@ -37,8 +39,8 @@ module USQualityCoreTestKit
             else
               [search_params_with_values(search_param_names, patient_id)]
             end
-          new_params.reject! do |params|
-            params.any? { |_key, value| value.blank? }
+          new_params.reject! do |a_params|
+            a_params.any? { |_key, value| value.blank? }
           end
 
           params[patient_id].concat(new_params)
@@ -112,8 +114,6 @@ module USQualityCoreTestKit
 
       perform_comparator_searches(params, patient_id) if params_with_comparators.present?
 
-      filter_devices(resources_returned) if resource_type == 'Device'
-
       if first_search?
         all_scratch_resources.concat(resources_returned).uniq!
         scratch_resources_for_patient(patient_id).concat(resources_returned).uniq!
@@ -155,10 +155,6 @@ module USQualityCoreTestKit
              'Expected search by POST to return the same results as search by GET, ' \
              "but GET search returned #{get_resource_count} resources, and POST search " \
              "returned #{post_resource_count} resources."
-    end
-
-    def filter_devices(resources)
-      resources # NOOP for US Quality Core
     end
 
     def excluded_code?(coding, codes_to_exclude)
@@ -263,7 +259,7 @@ module USQualityCoreTestKit
     end
 
     def perform_reference_with_type_search(params, resource_count)
-      return if resource_count == 0
+      return if resource_count.zero?
       return if search_variant_test_records[:reference_variants]
 
       new_search_params = params.merge('patient' => "Patient/#{params['patient']}")
@@ -272,8 +268,6 @@ module USQualityCoreTestKit
       reference_with_type_resources =
         fetch_and_assert_all_bundled_resources(params: new_search_params)
         .select { |resource| resource.resourceType == resource_type }
-
-      filter_devices(reference_with_type_resources) if resource_type == 'Device'
 
       new_resource_count = reference_with_type_resources.count
 
@@ -353,7 +347,7 @@ module USQualityCoreTestKit
 
         multiple_or_search_params.each do |param_name|
           search_value = default_search_values(param_name.to_sym)
-          search_params = search_params.merge("#{param_name}" => search_value)
+          search_params = search_params.merge(param_name.to_s => search_value)
           existing_values[param_name.to_sym] =
             scratch_resources_for_patient(patient_id).map(&param_name.to_sym).compact.uniq
         end
@@ -424,13 +418,13 @@ module USQualityCoreTestKit
 
       matched_base_resources = base_resources_with_external_reference.select do |base_resource|
         included_medications.any? do |medication_reference|
-          is_reference_match?(base_resource.medicationReference.reference, medication_reference)
+          reference_match?(base_resource.medicationReference.reference, medication_reference)
         end
       end
 
       not_matched_included_medications = included_medications.select do |medication_reference|
         matched_base_resources.none? do |base_resource|
-          is_reference_match?(base_resource.medicationReference.reference, medication_reference)
+          reference_match?(base_resource.medicationReference.reference, medication_reference)
         end
       end
 
@@ -446,7 +440,7 @@ module USQualityCoreTestKit
       search_variant_test_records[:medication_inclusion] = true
     end
 
-    def is_reference_match?(reference, local_reference)
+    def reference_match?(reference, local_reference)
       regex_pattern = %r{^(#{Regexp.escape(local_reference)}|\S+/#{Regexp.escape(local_reference)}(?:[/|]\S+)*)$}
       reference.match?(regex_pattern)
     end
@@ -680,23 +674,23 @@ module USQualityCoreTestKit
     def save_delayed_references(resources, containing_resource_type = resource_type)
       resources.each do |resource|
         references_to_save(containing_resource_type).each do |reference_to_save|
-          resolve_path(resource, reference_to_save[:path])
-            .select do |reference|
+          references = resolve_path(resource, reference_to_save[:path]).select do |reference|
             reference.is_a?(FHIR::Reference) &&
               !reference.contained? && reference.reference.present?
           end
-            .each do |reference|
-              resource_type = reference.resource_class.name.demodulize
-              need_to_save = reference_to_save[:resources].include?(resource_type)
-              next unless need_to_save
 
-              reference_resource_type = resource.resourceType
-              reference_resource_id = resource.id
+          references.each do |reference|
+            resource_type = reference.resource_class.name.demodulize
+            need_to_save = reference_to_save[:resources].include?(resource_type)
+            next unless need_to_save
 
-              referencing_resource = "#{reference_resource_type}/#{reference_resource_id}"
+            reference_resource_type = resource.resourceType
+            reference_resource_id = resource.id
 
-              save_resource_reference(resource_type, reference, referencing_resource)
-            end
+            referencing_resource = "#{reference_resource_type}/#{reference_resource_id}"
+
+            save_resource_reference(resource_type, reference, referencing_resource)
+          end
         end
       end
     end

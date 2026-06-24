@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module USQualityCoreTestKit
   module ReadTest
     def all_scratch_resources
@@ -49,16 +51,16 @@ module USQualityCoreTestKit
     end
 
     def readable_references(resources)
-      resources
-        .filter_map do |resource|
-          next unless resource[:reference].present? && resource[:reference].is_a?(FHIR::Reference)
+      references = resources.filter_map do |resource|
+        next unless resource[:reference].present? && resource[:reference].is_a?(FHIR::Reference)
 
-          reference_id = resource[:reference].reference&.split('/')&.last
-          next unless reference_id&.present?
+        reference_id = resource[:reference].reference&.split('/')&.last
+        next unless reference_id&.present?
 
-          resource
-        end
-        .uniq { |resource| resource[:reference].reference.split('/').last }
+        resource
+      end
+
+      references.uniq { |resource| resource[:reference].reference.split('/').last }
     end
 
     def readable_resources(resources)
