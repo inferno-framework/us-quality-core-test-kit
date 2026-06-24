@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
-
 module USQualityCoreTestKit
   class Generator
     class ValueExactor
       attr_accessor :ig_resources, :resource, :profile_elements
-
 
       def initialize(ig_resources, resource, profile_elements)
         self.ig_resources = ig_resources
@@ -53,7 +51,7 @@ module USQualityCoreTestKit
 
         additional_binding_ext = binding&.extension&.find do |ext|
           ext.url == 'http://hl7.org/fhir/tools/StructureDefinition/additional-binding' &&
-          ext.extension.any? { |sub_ext| sub_ext.url == 'purpose' && sub_ext.valueCode == 'minimum' }
+            ext.extension.any? { |sub_ext| sub_ext.url == 'purpose' && sub_ext.valueCode == 'minimum' }
         end
 
         min_valueset_ext = binding&.extension&.find do |ext|

@@ -1,4 +1,4 @@
-require_relative './primitive_type'
+require_relative 'primitive_type'
 
 module USQualityCoreTestKit
   # This functionality has been moved to Inferno Core, but this reference is

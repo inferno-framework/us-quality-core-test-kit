@@ -258,7 +258,7 @@ module USQualityCoreTestKit
 
           search_and_check_response(params_with_comparator)
 
-          comparator_resources = fetch_and_assert_all_bundled_resources(params: params_with_comparator).each do |resource|
+          fetch_and_assert_all_bundled_resources(params: params_with_comparator).each do |resource|
             check_resource_against_params(resource, params_with_comparator) if resource.resourceType == resource_type
           end
         end
@@ -276,7 +276,7 @@ module USQualityCoreTestKit
 
       reference_with_type_resources =
         fetch_and_assert_all_bundled_resources(params: new_search_params)
-          .select { |resource| resource.resourceType == resource_type }
+        .select { |resource| resource.resourceType == resource_type }
 
       filter_devices(reference_with_type_resources) if resource_type == 'Device'
 
@@ -301,7 +301,7 @@ module USQualityCoreTestKit
 
       resources_returned =
         fetch_and_assert_all_bundled_resources(params: search_params)
-          .select { |resource| resource.resourceType == resource_type }
+        .select { |resource| resource.resourceType == resource_type }
 
       assert resources_returned.present?, 'No resources were returned when searching by `system|code`'
 
@@ -310,7 +310,7 @@ module USQualityCoreTestKit
 
     def perform_search_with_status(
       original_params,
-      patient_id,
+      _patient_id,
       status_search_values: self.status_search_values,
       resource_type: self.resource_type
     )
@@ -372,7 +372,7 @@ module USQualityCoreTestKit
 
         resources_returned =
           fetch_and_assert_all_bundled_resources(params: search_params)
-            .select { |resource| resource.resourceType == resource_type }
+          .select { |resource| resource.resourceType == resource_type }
 
         multiple_or_search_params.each do |param_name|
           missing_values[param_name.to_sym] =
@@ -380,9 +380,9 @@ module USQualityCoreTestKit
         end
 
         missing_value_message = missing_values
-          .reject { |_param_name, missing_value| missing_value.empty? }
-          .map { |param_name, missing_value| "#{missing_value.join(',')} values from #{param_name}" }
-          .join(' and ')
+                                .reject { |_param_name, missing_value| missing_value.empty? }
+                                .map { |param_name, missing_value| "#{missing_value.join(',')} values from #{param_name}" }
+                                .join(' and ')
 
         assert missing_value_message.blank?,
                "Could not find #{missing_value_message} in any of the resources returned for Patient/#{patient_id}"
@@ -401,14 +401,14 @@ module USQualityCoreTestKit
 
       base_resources_with_external_reference =
         base_resources
-          .select { |request| request&.medicationReference&.present? }
-          .reject { |request| request&.medicationReference&.reference&.start_with? '#' }
+        .select { |request| request&.medicationReference&.present? }
+        .reject { |request| request&.medicationReference&.reference&.start_with? '#' }
 
       contained_medications =
         base_resources
-          .select { |request| request&.medicationReference&.reference&.start_with? '#' }
-          .flat_map(&:contained)
-          .select { |resource| resource.resourceType == 'Medication' }
+        .select { |request| request&.medicationReference&.reference&.start_with? '#' }
+        .flat_map(&:contained)
+        .select { |resource| resource.resourceType == 'Medication' }
 
       scratch[:medication_resources][:all] += contained_medications
       scratch[:medication_resources][patient_id] += contained_medications
@@ -422,7 +422,7 @@ module USQualityCoreTestKit
 
       medications =
         fetch_and_assert_all_bundled_resources(params: search_params)
-          .select { |resource| resource.resourceType == 'Medication' }
+        .select { |resource| resource.resourceType == 'Medication' }
       assert medications.present?, 'No Medications were included in the search results'
 
       included_medications = medications.map { |medication| "#{medication.resourceType}/#{medication.id}" }
@@ -554,9 +554,7 @@ module USQualityCoreTestKit
     def no_resources_skip_message(resource_type = self.resource_type)
       msg = "No #{resource_type} resources appear to be available"
 
-      if resource_type == 'Device' && implantable_device_codes.present?
-        msg.concat(" with the following Device Type Code filter: #{implantable_device_codes}")
-      end
+      msg.concat(" with the following Device Type Code filter: #{implantable_device_codes}") if resource_type == 'Device' && implantable_device_codes.present?
 
       msg + '. Please use patients with more information'
     end
@@ -570,7 +568,7 @@ module USQualityCoreTestKit
     )
       tags = tags(params)
       bundle = resource
-      additional_resource_types << 'Medication' if ['MedicationRequest', 'MedicationDispense'].include?(resource_type)
+      additional_resource_types << 'Medication' if %w[MedicationRequest MedicationDispense].include?(resource_type)
 
       assert_handler = proc do |response|
         assert_response_status(200, response: response)
@@ -806,7 +804,7 @@ module USQualityCoreTestKit
           else
             # searching by patient requires special case because we are searching by a resource identifier
             # references can also be URLs, so we may need to resolve those URLs
-            if ['subject', 'patient'].include? search_param_name.to_s
+            if %w[subject patient].include? search_param_name.to_s
               id = search_value.split('Patient/').last
               possible_values = [id, "Patient/#{id}", "#{url}/Patient/#{id}"]
               values_found.any? do |reference|
@@ -829,9 +827,7 @@ module USQualityCoreTestKit
 
       return nil if params.blank?
 
-      if ['Condition', 'DiagnosticReport', 'DocumentReference', 'Observation', 'ServiceRequest'].include? resource_type
-        return [search_params_tag(params)]
-      end
+      return [search_params_tag(params)] if %w[Condition DiagnosticReport DocumentReference Observation ServiceRequest].include? resource_type
 
       nil
     end

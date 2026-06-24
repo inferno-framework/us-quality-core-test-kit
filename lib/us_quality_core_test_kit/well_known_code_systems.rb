@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module USQualityCoreTestKit
   module WellKnownCodeSystems
     HL7_CODE_SYSTEMS = [

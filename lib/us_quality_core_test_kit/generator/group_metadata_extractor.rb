@@ -13,7 +13,6 @@ module USQualityCoreTestKit
     class GroupMetadataExtractor
       attr_accessor :resource_capabilities, :profile_url, :ig_metadata, :ig_resources
 
-
       def initialize(resource_capabilities, profile_url, ig_metadata, ig_resources)
         self.resource_capabilities = resource_capabilities
         self.profile_url = profile_url
@@ -71,7 +70,6 @@ module USQualityCoreTestKit
       end
 
       ### END SPECIAL CASES ###
-
 
       def profile
         @profile ||= ig_resources.profile_by_url(profile_url)
@@ -170,21 +168,21 @@ module USQualityCoreTestKit
       def mandatory_elements
         @mandatory_elements ||=
           profile_elements
-            .select { |element| element.min.positive? }
-            .map { |element| element.path }
-            .uniq
+          .select { |element| element.min.positive? }
+          .map { |element| element.path }
+          .uniq
       end
 
       def references
         @references ||=
           profile_elements
-            .select { |element| element.type&.first&.code == 'Reference' }
-            .map do |reference_definition|
-              {
-                path: reference_definition.path,
-                profiles: reference_definition.type.first.targetProfile
-              }
-            end
+          .select { |element| element.type&.first&.code == 'Reference' }
+          .map do |reference_definition|
+            {
+              path: reference_definition.path,
+              profiles: reference_definition.type.first.targetProfile
+            }
+          end
       end
 
       def resource_conformance_expectation

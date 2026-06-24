@@ -8,7 +8,6 @@ module USQualityCoreTestKit
     class MustSupportTestGenerator
       attr_accessor :group_metadata, :base_output_dir
 
-
       def initialize(group_metadata, base_output_dir)
         self.group_metadata = group_metadata
         self.base_output_dir = base_output_dir

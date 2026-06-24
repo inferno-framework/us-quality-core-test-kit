@@ -8,7 +8,6 @@ module USQualityCoreTestKit
     class ValidationTestGenerator
       attr_accessor :group_metadata, :medication_request_metadata, :base_output_dir
 
-
       def initialize(group_metadata, medication_request_metadata = nil, base_output_dir:)
         self.group_metadata = group_metadata
         self.medication_request_metadata = medication_request_metadata

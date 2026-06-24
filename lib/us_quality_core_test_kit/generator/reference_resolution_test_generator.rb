@@ -8,7 +8,6 @@ module USQualityCoreTestKit
     class ReferenceResolutionTestGenerator
       attr_accessor :group_metadata, :base_output_dir
 
-
       def initialize(group_metadata, base_output_dir)
         self.group_metadata = group_metadata
         self.base_output_dir = base_output_dir
@@ -40,7 +39,7 @@ module USQualityCoreTestKit
 
       def must_support_references
         group_metadata.must_supports[:elements]
-          .select { |element| element[:types]&.include?('Reference') }
+                      .select { |element| element[:types]&.include?('Reference') }
       end
 
       def must_support_reference_list_string
@@ -55,7 +54,7 @@ module USQualityCoreTestKit
         return if must_support_references.empty?
 
         FileUtils.mkdir_p(output_file_directory)
-        File.open(output_file_name, 'w') { |f| f.write(output) }
+        File.write(output_file_name, output)
 
         group_metadata.add_test(
           id: test_id,

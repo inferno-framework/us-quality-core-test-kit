@@ -1,13 +1,14 @@
+# frozen_string_literal: true
+
 module USQualityCoreTestKit
   module ValidationTest
-    DAR_CODE_SYSTEM_URL = 'http://terminology.hl7.org/CodeSystem/data-absent-reason'.freeze
-    DAR_EXTENSION_URL = 'http://hl7.org/fhir/StructureDefinition/data-absent-reason'.freeze
+    DAR_CODE_SYSTEM_URL = 'http://terminology.hl7.org/CodeSystem/data-absent-reason'
+    DAR_EXTENSION_URL = 'http://hl7.org/fhir/StructureDefinition/data-absent-reason'
 
     def perform_validation_test(resources,
                                 profile_url,
                                 profile_version,
                                 skip_if_empty: true)
-
       skip_if skip_if_empty && resources.blank?,
               "No #{resource_type} resources conforming to the #{profile_url} profile were returned"
 
@@ -27,16 +28,16 @@ module USQualityCoreTestKit
 
     def check_for_dar(resource)
       unless scratch[:dar_code_found]
-        resource.each_element do |element, meta, _path|
+        resource.each_element do |element, _meta, _path|
           next unless element.is_a?(FHIR::Coding)
 
           check_for_dar_code(element)
         end
       end
 
-      unless scratch[:dar_extension_found]
-        check_for_dar_extension(resource)
-      end
+      return if scratch[:dar_extension_found]
+
+      check_for_dar_extension(resource)
     end
 
     def check_for_dar_code(coding)

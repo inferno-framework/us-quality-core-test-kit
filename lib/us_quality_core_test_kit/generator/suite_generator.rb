@@ -14,7 +14,6 @@ module USQualityCoreTestKit
 
       attr_accessor :ig_metadata, :base_output_dir
 
-
       def initialize(ig_metadata, base_output_dir)
         self.ig_metadata = ig_metadata
         self.base_output_dir = base_output_dir
@@ -27,7 +26,7 @@ module USQualityCoreTestKit
       def output_file_name
         File.join(base_output_dir, base_output_file_name)
       end
-      
+
       def generate
         File.write(output_file_name, output)
       end

@@ -9,14 +9,13 @@ module USQualityCoreTestKit
       class << self
         def generate(ig_metadata, base_output_dir)
           ig_metadata.groups
-            .reject { |group| SpecialCases.exclude_group? group }
-            .select { |group| group.revincludes.include? 'Provenance:target' }
-            .each { |group| new(group, group.searches.first, base_output_dir).generate }
+                     .reject { |group| SpecialCases.exclude_group? group }
+                     .select { |group| group.revincludes.include? 'Provenance:target' }
+                     .each { |group| new(group, group.searches.first, base_output_dir).generate }
         end
       end
 
       attr_accessor :group_metadata, :search_metadata, :base_output_dir
-
 
       def initialize(group_metadata, search_metadata, base_output_dir)
         self.group_metadata = group_metadata
@@ -103,7 +102,6 @@ module USQualityCoreTestKit
       #     (resource_type == 'Patient' && param[:name] == '_id')
       # end
 
-
       def search_definition(name)
         group_metadata.search_definitions[name.to_sym]
       end
@@ -119,7 +117,7 @@ module USQualityCoreTestKit
       def token_search_params
         @token_search_params ||=
           search_param_names.select do |name|
-            ['Identifier', 'CodeableConcept', 'Coding'].include? group_metadata.search_definitions[name.to_sym][:type]
+            %w[Identifier CodeableConcept Coding].include? group_metadata.search_definitions[name.to_sym][:type]
           end
       end
 
@@ -153,7 +151,7 @@ module USQualityCoreTestKit
 
       def generate
         FileUtils.mkdir_p(output_file_directory)
-        File.open(output_file_name, 'w') { |f| f.write(output) }
+        File.write(output_file_name, output)
 
         group_metadata.add_test(
           id: test_id,

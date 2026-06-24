@@ -4,7 +4,7 @@ module USQualityCoreTestKit
       scratch_resources[:all] ||= []
     end
 
-    def perform_read_test(resources, reply_handler = nil, delayed_reference: false)
+    def perform_read_test(resources, _reply_handler = nil, delayed_reference: false)
       skip_if resources.blank?, no_resources_skip_message
 
       resources_to_read = if delayed_reference

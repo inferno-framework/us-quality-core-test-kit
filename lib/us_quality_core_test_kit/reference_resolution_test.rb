@@ -27,9 +27,7 @@ module USQualityCoreTestKit
       saved_reference = resolved_references.find { |item| item[:reference] == reference.reference }
 
       if saved_reference.present?
-        if target_profile.present? && !saved_reference[:profiles].include?(target_profile)
-          saved_reference[:profiles] << target_profile
-        end
+        saved_reference[:profiles] << target_profile if target_profile.present? && !saved_reference[:profiles].include?(target_profile)
       else
         saved_reference = {
           reference: reference.reference,
@@ -44,9 +42,9 @@ module USQualityCoreTestKit
     def is_reference_resolved?(reference, target_profile)
       resolved_references.any? do |item|
         item[:reference] == reference.reference &&
-        (
-          target_profile.blank? || item[:profiles].include?(target_profile)
-        )
+          (
+            target_profile.blank? || item[:profiles].include?(target_profile)
+          )
       end
     end
 
@@ -56,7 +54,7 @@ module USQualityCoreTestKit
 
     def no_resources_skip_message
       "No #{resource_type} resources appear to be available. " \
-      'Please use patients with more information.'
+        'Please use patients with more information.'
     end
 
     def must_support_references
@@ -102,7 +100,7 @@ module USQualityCoreTestKit
           choice_profiles = metadata.must_supports[:choices].find { |choice| choice[:target_profiles]&.include?(reference[:target_profile]) }
 
           choice_profiles.present? &&
-          choice_profiles[:target_profiles]&.any? { |profile| @unresolved_references.none? { |element| element[:target_profile] == profile } }
+            choice_profiles[:target_profiles]&.any? { |profile| @unresolved_references.none? { |element| element[:target_profile] == profile } }
         end
       end
 
@@ -117,8 +115,8 @@ module USQualityCoreTestKit
         return true if reference.reference_id.blank?
 
         return resource.contained.any? do |contained_resource|
-            contained_resource&.id == reference.reference_id &&
-              resource_is_valid_with_target_profile?(contained_resource, target_profile)
+          contained_resource&.id == reference.reference_id &&
+          resource_is_valid_with_target_profile?(contained_resource, target_profile)
         end
       end
 
@@ -150,17 +148,15 @@ module USQualityCoreTestKit
           end
 
           fhir_read(reference_type, reference_id)&.resource
+        elsif reference.base_uri.chomp('/') == fhir_client.instance_variable_get(:@base_service_url).chomp('/')
+          fhir_read(reference_type, reference_id)&.resource
         else
-          if reference.base_uri.chomp('/') == fhir_client.instance_variable_get(:@base_service_url).chomp('/')
-            fhir_read(reference_type, reference_id)&.resource
-          else
-            get(reference.reference)&.resource
-          end
+          get(reference.reference)&.resource
         end
       rescue StandardError => e
         Inferno::Application['logger'].error("Unable to resolve reference #{reference.reference}")
         Inferno::Application['logger'].error(e.full_message)
-        return nil
+        nil
       end
     end
 

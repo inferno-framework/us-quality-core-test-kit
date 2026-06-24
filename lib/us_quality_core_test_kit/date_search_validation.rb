@@ -76,7 +76,7 @@ module USQualityCoreTestKit
 
     def validate_datetime_search(search_value, target_value)
       comparator = search_value[0..1]
-      if ['eq', 'ge', 'gt', 'le', 'lt', 'ne', 'sa', 'eb', 'ap'].include? comparator
+      if %w[eq ge gt le lt ne sa eb ap].include? comparator
         search_value = search_value[2..-1]
       else
         comparator = 'eq'
@@ -90,7 +90,7 @@ module USQualityCoreTestKit
 
     def validate_period_search(search_value, target_value)
       comparator = search_value[0..1]
-      if ['eq', 'ge', 'gt', 'le', 'lt', 'ne', 'sa', 'eb', 'ap'].include? comparator
+      if %w[eq ge gt le lt ne sa eb ap].include? comparator
         search_value = search_value[2..-1]
       else
         comparator = 'eq'
@@ -102,7 +102,7 @@ module USQualityCoreTestKit
     end
 
     def is_date?(value)
-     /^\d{4}(-\d{2})?(-\d{2})?$/.match?(value) # YYYY or YYYY-MM or YYYY-MM-DD
+      /^\d{4}(-\d{2})?(-\d{2})?$/.match?(value) # YYYY or YYYY-MM or YYYY-MM-DD
     end
   end
 end

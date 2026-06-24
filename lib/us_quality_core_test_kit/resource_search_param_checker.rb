@@ -6,9 +6,7 @@ module USQualityCoreTestKit
 
     def search_param_paths(name)
       paths = metadata.search_definitions[name.to_sym][:paths]
-      if paths.first =='class'
-        paths[0] = 'local_class'
-      end
+      paths[0] = 'local_class' if paths.first == 'class'
 
       paths
     end
@@ -50,13 +48,13 @@ module USQualityCoreTestKit
         type = metadata.search_definitions[search_param_name.to_sym][:type]
         values_found =
           resolve_path(resource, path)
-            .map do |value|
-          if value.is_a? FHIR::Reference
-            value.reference
-          else
-            value
+          .map do |value|
+            if value.is_a? FHIR::Reference
+              value.reference
+            else
+              value
+            end
           end
-        end
 
         match_found =
           case type
@@ -110,14 +108,14 @@ module USQualityCoreTestKit
               values_found.any? { |identifier| identifier.value == search_value }
             end
           when 'string'
-            searched_values = search_value.downcase.split(/(?<!\\\\),/).map{ |string| string.gsub('\\,', ',') }
+            searched_values = search_value.downcase.split(/(?<!\\\\),/).map { |string| string.gsub('\\,', ',') }
             values_found.any? do |value_found|
               searched_values.any? { |searched_value| value_found.downcase.starts_with? searched_value }
             end
           else
             # searching by patient requires special case because we are searching by a resource identifier
             # references can also be URLs, so we may need to resolve those URLs
-            if ['subject', 'patient'].include? search_param_name.to_s
+            if %w[subject patient].include? search_param_name.to_s
               id = search_value.split('Patient/').last
               possible_values = [id, "Patient/#{id}", "#{url}/Patient/#{id}"]
               values_found.any? do |reference|
@@ -134,6 +132,5 @@ module USQualityCoreTestKit
 
       match_found
     end
-    
   end
 end

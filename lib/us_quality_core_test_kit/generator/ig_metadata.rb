@@ -7,7 +7,6 @@ module USQualityCoreTestKit
     class IGMetadata
       attr_accessor :ig_version, :groups
 
-
       def reformatted_version
         @reformatted_version ||= ig_version.delete('.').gsub('-', '_')
       end

@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
-
 module USQualityCoreTestKit
   class Generator
     class TerminologyBindingMetadataExtractor
       attr_accessor :profile_elements, :ig_resources, :resource
-
 
       def initialize(profile_elements, ig_resources, resource)
         self.profile_elements = profile_elements
@@ -37,7 +35,7 @@ module USQualityCoreTestKit
 
       def profile_elements_with_bindings
         profile_elements
-          .select { |element| element.binding.present? && element.binding.strength == 'required'}
+          .select { |element| element.binding.present? && element.binding.strength == 'required' }
           .reject { |element| element_has_fixed_value?(element) || element_has_optional_binding_slice?(element) }
       end
 
@@ -51,9 +49,7 @@ module USQualityCoreTestKit
             path: element.path.gsub('[x]', '').gsub("#{resource}.", '')
           }
 
-          if element.sliceName.present? && element.min > 0
-            binding[:required_binding_slice] = true
-          end
+          binding[:required_binding_slice] = true if element.sliceName.present? && element.min > 0
 
           binding
         end

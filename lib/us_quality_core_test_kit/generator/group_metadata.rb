@@ -5,39 +5,38 @@ require_relative 'special_cases'
 module USQualityCoreTestKit
   class Generator
     class GroupMetadata
-      ATTRIBUTES = [
-        :name,
-        :class_name,
-        :version,
-        :reformatted_version,
-        :resource,
-        :profile_url,
-        :profile_name,
-        :profile_version,
-        :title,
-        :short_description,
-        :is_delayed,
-        :interactions,
-        :operations,
-        :searches,
-        :search_definitions,
-        :include_params,
-        :revincludes,
-        :required_concepts,
-        :must_supports,
-        :mandatory_elements,
-        :bindings,
-        :references,
-        :tests,
-        :granular_scope_tests,
-        :id,
-        :file_name,
-        :delayed_references,
-        :resource_conformance_expectation
+      ATTRIBUTES = %i[
+        name
+        class_name
+        version
+        reformatted_version
+        resource
+        profile_url
+        profile_name
+        profile_version
+        title
+        short_description
+        is_delayed
+        interactions
+        operations
+        searches
+        search_definitions
+        include_params
+        revincludes
+        required_concepts
+        must_supports
+        mandatory_elements
+        bindings
+        references
+        tests
+        granular_scope_tests
+        id
+        file_name
+        delayed_references
+        resource_conformance_expectation
       ].freeze
 
       ATTRIBUTES.each { |name| attr_accessor name }
-
 
       def initialize(metadata)
         metadata.each do |key, value|
@@ -94,15 +93,15 @@ module USQualityCoreTestKit
       def add_delayed_references(delayed_profiles, ig_resources)
         self.delayed_references =
           references
-            .select { |reference| (reference[:profiles] & delayed_profiles).present? }
-            .map do |reference|
-              profile_urls = (reference[:profiles] & delayed_profiles)
-              delayed_resources = profile_urls.map { |url| ig_resources.resource_for_profile(url) }
-              {
-                path: reference[:path].gsub("#{resource}.", ''),
-                resources: delayed_resources
-              }
-            end
+          .select { |reference| (reference[:profiles] & delayed_profiles).present? }
+          .map do |reference|
+            profile_urls = (reference[:profiles] & delayed_profiles)
+            delayed_resources = profile_urls.map { |url| ig_resources.resource_for_profile(url) }
+            {
+              path: reference[:path].gsub("#{resource}.", ''),
+              resources: delayed_resources
+            }
+          end
       end
 
       def delayed?

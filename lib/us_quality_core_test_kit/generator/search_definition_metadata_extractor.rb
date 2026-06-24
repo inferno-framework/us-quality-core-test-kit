@@ -8,7 +8,6 @@ module USQualityCoreTestKit
     class SearchDefinitionMetadataExtractor
       attr_accessor :ig_resources, :name, :profile_elements, :group_metadata
 
-
       def initialize(name, ig_resources, profile_elements, group_metadata)
         self.name = name
         self.ig_resources = ig_resources
@@ -45,7 +44,7 @@ module USQualityCoreTestKit
       def full_paths
         @full_paths ||=
           begin
-            path = param.expression.gsub(/.where\(resolve\((.*)/, '').gsub(/url = '/, 'url=\'')
+            path = param.expression.gsub(/.where\(resolve\((.*)/, '').gsub('url = \'', 'url=\'')
             path = path[1..-2] if path.start_with?('(') && path.end_with?(')')
             path.scan(/[. ]as[( ]([^)]*)[)]?/).flatten.map do |as_type|
               path.gsub!(/[. ]as[( ](#{as_type}[^)]*)[)]?/, as_type.upcase_first) if as_type.present?
@@ -62,20 +61,21 @@ module USQualityCoreTestKit
       def remove_additional_extension_from_asserted_date(full_paths)
         full_paths.each do |full_path|
           next unless full_path.include?('http://hl7.org/fhir/StructureDefinition/condition-assertedDate')
+
           full_path.gsub!(/\).extension./, ').')
         end
       end
 
       def extension_definition
-         @extension_definition ||=
-            begin
-              ext_definition = nil
-              extensions&.each do |ext_metadata|
-                ext_definition = ig_resources.profile_by_url(ext_metadata[:url])
-                break if ext_definition.present?
-              end
-              ext_definition
+        @extension_definition ||=
+          begin
+            ext_definition = nil
+            extensions&.each do |ext_metadata|
+              ext_definition = ig_resources.profile_by_url(ext_metadata[:url])
+              break if ext_definition.present?
             end
+            ext_definition
+          end
       end
 
       def comparator_expectation_extensions
@@ -107,7 +107,7 @@ module USQualityCoreTestKit
           if profile_element.id.start_with?('Extension') && extension_definition.present?
             # Find the extension instance in a US Core profile
             target_element = profile_elements.find do |element|
-              element.type.any? { |type| type.code == "Extension" && type.profile.include?(extension_definition.url) }
+              element.type.any? { |type| type.code == 'Extension' && type.profile.include?(extension_definition.url) }
             end
             target_element&.max == '*'
           else
@@ -130,8 +130,8 @@ module USQualityCoreTestKit
         return nil if param.chain.blank?
 
         param.chain
-          .zip(chain_expectations)
-          .map { |chain, expectation| { chain: chain, expectation: expectation } }
+             .zip(chain_expectations)
+             .map { |chain, expectation| { chain: chain, expectation: expectation } }
       end
 
       def multiple_or_expectation
@@ -144,9 +144,9 @@ module USQualityCoreTestKit
         short_path = profile_element.path.split('.', 2)[1]
 
         values_from_must_support_slices(profile_element, short_path, true).presence ||
-        values_from_must_support_slices(profile_element, short_path, false).presence ||
-        values_from_must_support_elements(short_path).presence ||
-        []
+          values_from_must_support_slices(profile_element, short_path, false).presence ||
+          values_from_must_support_elements(short_path).presence ||
+          []
       end
 
       def values_from_must_support_slices(profile_element, short_path, mandatory_slice_only)
@@ -154,7 +154,7 @@ module USQualityCoreTestKit
           .select { |slice| [short_path, "#{short_path}.coding"].include?(slice[:path]) }
           .map do |slice|
             slice_element = profile_elements.find { |element| slice[:slice_id] == element.id }
-            next if (profile_element.min > 0 && slice_element.min == 0 && mandatory_slice_only)
+            next if profile_element.min > 0 && slice_element.min == 0 && mandatory_slice_only
 
             case slice[:discriminator][:type]
             when 'patternCoding', 'patternCodeableConcept'
@@ -180,7 +180,6 @@ module USQualityCoreTestKit
 
       EXTENSION_URL_REGEX = /(?:modifierExtension|extension)\.where\(url='([^']+)'\)/
       EXTENSION_VALUE_PATH_REGEX = /\.(?:value(?:[A-Z]\w*|\[x\])?)\z/
-
 
       def value_extractor
         @value_extractor ||= ValueExactor.new(ig_resources, resource, profile_elements)

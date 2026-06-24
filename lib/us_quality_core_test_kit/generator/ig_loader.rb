@@ -12,7 +12,6 @@ module USQualityCoreTestKit
     class IGLoader
       attr_accessor :ig_file_name
 
-
       def initialize(ig_file_name)
         self.ig_file_name = ig_file_name
       end

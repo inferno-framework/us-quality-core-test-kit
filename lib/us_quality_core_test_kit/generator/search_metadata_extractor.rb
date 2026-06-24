@@ -6,10 +6,9 @@ module USQualityCoreTestKit
   class Generator
     class SearchMetadataExtractor
       COMBO_EXTENSION_URL =
-        'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination'.freeze
+        'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination'
 
       attr_accessor :resource_capabilities, :ig_resources, :profile_elements, :group_metadata
-
 
       def initialize(resource_capabilities, ig_resources, profile_elements, group_metadata)
         self.resource_capabilities = resource_capabilities
@@ -34,13 +33,13 @@ module USQualityCoreTestKit
         return [] if no_search_params?
 
         resource_capabilities.searchParam
-          .select { |search_param| ['SHALL', 'SHOULD'].include? conformance_expectation(search_param) }
-          .map do |search_param|
-            {
-              names: [search_param.name],
-              expectation: conformance_expectation(search_param)
-            }
-          end
+                             .select { |search_param| %w[SHALL SHOULD].include? conformance_expectation(search_param) }
+                             .map do |search_param|
+          {
+            names: [search_param.name],
+            expectation: conformance_expectation(search_param)
+          }
+        end
       end
 
       def search_extensions
@@ -52,7 +51,7 @@ module USQualityCoreTestKit
 
         search_extensions
           .select { |extension| extension.url == COMBO_EXTENSION_URL }
-          .select { |extension| ['SHALL', 'SHOULD'].include? conformance_expectation(extension) }
+          .select { |extension| %w[SHALL SHOULD].include? conformance_expectation(extension) }
           .map do |extension|
             names = extension.extension.select { |param| param.valueString.present? }.map(&:valueString)
             {

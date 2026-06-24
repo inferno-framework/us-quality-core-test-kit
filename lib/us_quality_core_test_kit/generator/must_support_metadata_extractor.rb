@@ -7,7 +7,6 @@ module USQualityCoreTestKit
     class MustSupportMetadataExtractor
       attr_accessor :profile_elements, :profile, :resource, :ig_resources
 
-
       def initialize(profile_elements, profile, resource, ig_resources)
         self.profile_elements = profile_elements
         self.profile = profile
@@ -30,7 +29,7 @@ module USQualityCoreTestKit
       def is_uscdi_requirement_element?(element)
         element.extension.any? do |extension|
           extension.url == 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' &&
-          extension.valueBoolean
+            extension.valueBoolean
         end && !element.mustSupport
       end
 
@@ -74,7 +73,7 @@ module USQualityCoreTestKit
             type: 'type',
             code: type_code.upcase_first
           }
-          
+
           discriminator[:path] = type_path unless type_path.empty?
 
           {
@@ -83,9 +82,7 @@ module USQualityCoreTestKit
             path: current_element.path.gsub("#{resource}.", ''),
             discriminator: discriminator
           }.tap do |metadata|
-            if is_uscdi_requirement_element?(current_element)
-              metadata[:uscdi_only] = true
-            end
+            metadata[:uscdi_only] = true if is_uscdi_requirement_element?(current_element)
           end
         end
       end
@@ -95,7 +92,7 @@ module USQualityCoreTestKit
           # 'pattern' is deparected in FHIR R5
           # 'pattern' type is used in US Core v7 and all earlier versions.
           # Since US Core v8, all 'patten' types are moved to 'value' type
-          ['value','pattern'].include?(discriminators(sliced_element(element)).first.type)
+          %w[value pattern].include?(discriminators(sliced_element(element)).first.type)
         end
       end
 
@@ -145,9 +142,7 @@ module USQualityCoreTestKit
               metadata[:discriminator] = pattern_value
             end
 
-            if is_uscdi_requirement_element?(current_element)
-              metadata[:uscdi_only] = true
-            end
+            metadata[:uscdi_only] = true if is_uscdi_requirement_element?(current_element)
           end
         end
       end
@@ -179,7 +174,7 @@ module USQualityCoreTestKit
           value_extractor = ValueExactor.new(ig_resources, resource, profile_elements)
 
           values = value_extractor.codings_from_value_set_binding(pattern_element).presence ||
-                  value_extractor.values_from_resource_metadata([metadata[:path]]).presence || []
+                   value_extractor.values_from_resource_metadata([metadata[:path]]).presence || []
 
           {
             type: 'requiredBinding',
@@ -192,7 +187,7 @@ module USQualityCoreTestKit
       end
 
       def plain_must_support_elements
-        plain_must_supports = all_must_support_elements - must_support_extension_elements - must_support_slice_elements
+        all_must_support_elements - must_support_extension_elements - must_support_slice_elements
       end
 
       def element_part_of_slice_discrimination?(element)
@@ -216,7 +211,7 @@ module USQualityCoreTestKit
       def type_must_support_extension?(extensions)
         extensions&.any? do |extension|
           extension.url == 'http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support' &&
-          extension.valueBoolean
+            extension.valueBoolean
         end
       end
 
@@ -226,17 +221,17 @@ module USQualityCoreTestKit
 
       def get_type_must_support_metadata(current_metadata, current_element)
         current_element.type.map do |type|
-          if type_must_support_extension?(type.extension)
-            metadata =
+          next unless type_must_support_extension?(type.extension)
+
+          metadata =
             {
               path: "#{current_metadata[:path].delete_suffix('[x]')}#{type.code.upcase_first}",
               original_path: current_metadata[:path]
             }
-            metadata[:types] = [type.code] if save_type_code?(type)
-            handle_type_must_support_target_profiles(type, metadata) if type.code == 'Reference'
+          metadata[:types] = [type.code] if save_type_code?(type)
+          handle_type_must_support_target_profiles(type, metadata) if type.code == 'Reference'
 
-            metadata
-          end
+          metadata
         end.compact
       end
 
@@ -255,24 +250,23 @@ module USQualityCoreTestKit
         end
 
         # remove target_profile for FHIR Base resource type.
-        target_profiles.delete_if { |reference| reference.start_with?('http://hl7.org/fhir/StructureDefinition')}
+        target_profiles.delete_if { |reference| reference.start_with?('http://hl7.org/fhir/StructureDefinition') }
         metadata[:target_profiles] = target_profiles if target_profiles.present?
       end
 
       def handle_choice_type_in_sliced_element(current_metadata, must_support_elements_metadata)
         choice_element_metadata = must_support_elements_metadata.find do |metadata|
           metadata[:original_path].present? &&
-          current_metadata[:path].include?( metadata[:original_path] )
+            current_metadata[:path].include?(metadata[:original_path])
         end
 
-        if choice_element_metadata.present?
-          current_metadata[:original_path] = current_metadata[:path]
-          current_metadata[:path] = current_metadata[:path].sub(choice_element_metadata[:original_path], choice_element_metadata[:path])
-        end
+        return unless choice_element_metadata.present?
+
+        current_metadata[:original_path] = current_metadata[:path]
+        current_metadata[:path] = current_metadata[:path].sub(choice_element_metadata[:original_path], choice_element_metadata[:path])
       end
 
       #### SPECIAL CASE ####
-
 
       def is_vital_sign?
         [
@@ -282,7 +276,7 @@ module USQualityCoreTestKit
       end
 
       def is_blood_pressure?
-        ['bp', 'us-core-blood-pressure', 'us-core-average-blood-pressure'].include?(profile.id)
+        %w[bp us-core-blood-pressure us-core-average-blood-pressure].include?(profile.id)
       end
 
       # Exclude Observation.component from vital sign profiles except observation-bp and observation-pulse-ox
@@ -290,10 +284,10 @@ module USQualityCoreTestKit
       def remove_vital_sign_component
         return if is_blood_pressure? || profile.name == 'USCorePulseOximetryProfile'
 
-        if is_vital_sign?
-          @must_supports[:elements].delete_if do |element|
-            element[:path].start_with?('component')
-          end
+        return unless is_vital_sign?
+
+        @must_supports[:elements].delete_if do |element|
+          element[:path].start_with?('component')
         end
       end
 
@@ -302,12 +296,10 @@ module USQualityCoreTestKit
       def remove_blood_pressure_value_data_absent_reason
         return unless is_blood_pressure?
 
-        pattern = /component(:[^.]+)?\.dataAbsentReason/
-
         @must_supports[:elements].delete_if do |element|
           element[:path].start_with?('value[x]') ||
-          element[:original_path]&.start_with?('value[x]') ||
-          element[:path] == ('dataAbsentReason') 
+            element[:original_path]&.start_with?('value[x]') ||
+            element[:path] == ('dataAbsentReason')
         end
 
         @must_supports[:slices].delete_if do |slice|
@@ -327,10 +319,10 @@ module USQualityCoreTestKit
 
         pattern = /(component(:[^.]+)?\.)?dataAbsentReason/
 
-        if profile.type == 'Observation'
-          @must_supports[:elements].delete_if do |element|
-            pattern.match?(element[:path])
-          end
+        return unless profile.type == 'Observation'
+
+        @must_supports[:elements].delete_if do |element|
+          pattern.match?(element[:path])
         end
       end
 
@@ -400,9 +392,7 @@ module USQualityCoreTestKit
                 supported_types = current_element.type.select { |type| save_type_code?(type) }.map { |type| type.code }
                 current_metadata[:types] = supported_types if supported_types.present?
 
-                if current_element.type.first&.code == 'Reference'
-                  handle_type_must_support_target_profiles(current_element.type.first, current_metadata)
-                end
+                handle_type_must_support_target_profiles(current_element.type.first, current_metadata) if current_element.type.first&.code == 'Reference'
 
                 handle_fixed_values(current_metadata, current_element)
 
