@@ -70,7 +70,7 @@ module USQualityCoreTestKit
       end
 
       def search_param_name_string
-        search_metadata[:names].join(' + ') + ' + revInclude:Provenance:target'
+        "#{search_metadata[:names].join(' + ')} + revInclude:Provenance:target"
       end
 
       def search_param_names

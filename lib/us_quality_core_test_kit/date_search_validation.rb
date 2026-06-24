@@ -5,11 +5,12 @@ module USQualityCoreTestKit
     def get_fhir_datetime_range(datetime)
       range = { start: DateTime.xmlschema(datetime), end: nil }
       range[:end] =
-        if /^\d{4}$/.match?(datetime) # YYYY
+        case datetime
+        when /^\d{4}$/ # YYYY
           range[:start].next_year - 1.seconds
-        elsif /^\d{4}-\d{2}$/.match?(datetime) # YYYY-MM
+        when /^\d{4}-\d{2}$/ # YYYY-MM
           range[:start].next_month - 1.seconds
-        elsif /^\d{4}-\d{2}-\d{2}$/.match?(datetime) # YYYY-MM-DD
+        when /^\d{4}-\d{2}-\d{2}$/ # YYYY-MM-DD
           range[:start].next_day - 1.seconds
         else # YYYY-MM-DDThh:mm:ss+zz:zz
           range[:start]
@@ -24,11 +25,12 @@ module USQualityCoreTestKit
 
       period_end_beginning = DateTime.xmlschema(period.end)
       range[:end] =
-        if /^\d{4}$/.match?(period.end) # YYYY
+        case period.end
+        when /^\d{4}$/ # YYYY
           period_end_beginning.next_year - 1.seconds
-        elsif /^\d{4}-\d{2}$/.match?(period.end) # YYYY-MM
+        when /^\d{4}-\d{2}$/ # YYYY-MM
           period_end_beginning.next_month - 1.seconds
-        elsif /^\d{4}-\d{2}-\d{2}$/.match?(period.end) # YYYY-MM-DD
+        when /^\d{4}-\d{2}-\d{2}$/ # YYYY-MM-DD
           period_end_beginning.next_day - 1.seconds
         else # YYYY-MM-DDThh:mm:ss+zz:zz
           period_end_beginning

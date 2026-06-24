@@ -169,7 +169,7 @@ module USQualityCoreTestKit
         @mandatory_elements ||=
           profile_elements
           .select { |element| element.min.positive? }
-          .map { |element| element.path }
+          .map(&:path)
           .uniq
       end
 
