@@ -143,6 +143,12 @@ bundle exec rake usqualitycore:generate mode=server
 bundle exec rake usqualitycore:generate mode=client
 ```
 
+To delete generated suites before regenerating both sides:
+
+```sh
+bundle exec rake usqualitycore:generate clean=true
+```
+
 The `us_quality_core:generate` task is also available as an equivalent alias.
 
 After regeneration, inspect the generated suites and run relevant tests. Future
