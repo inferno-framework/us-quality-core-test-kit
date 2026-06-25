@@ -50,9 +50,9 @@ module USQualityCoreTestKit
       when 'lt' # the range below the search value intersects (i.e. overlaps) with the range of the target value
         target_range[:start].nil? || search_range[:start] > target_range[:start] || (search_range[:start] > (target_range[:start] - 1) && extend_start)
       when 'ge'
-        fhir_date_comparer(search_range, target_range, 'gt', extend_start, extend_end) || fhir_date_comparer(search_range, target_range, 'eq')
+        fhir_date_comparer(search_range, target_range, 'gt', extend_start:, extend_end:) || fhir_date_comparer(search_range, target_range, 'eq')
       when 'le'
-        fhir_date_comparer(search_range, target_range, 'lt', extend_start, extend_end) || fhir_date_comparer(search_range, target_range, 'eq')
+        fhir_date_comparer(search_range, target_range, 'lt', extend_start:, extend_end:) || fhir_date_comparer(search_range, target_range, 'eq')
       when 'sa' # the range above the search value contains the range of the target value
         !target_range[:start].nil? && search_range[:end] < target_range[:start]
       when 'eb' # the range below the search value contains the range of the target value
@@ -87,7 +87,13 @@ module USQualityCoreTestKit
       target_is_date = date?(target_value)
       search_range = get_fhir_datetime_range(search_value)
       target_range = get_fhir_datetime_range(target_value)
-      fhir_date_comparer(search_range, target_range, comparator, !search_is_date && target_is_date, !search_is_date && target_is_date)
+      fhir_date_comparer(
+        search_range,
+        target_range,
+        comparator,
+        extend_start: !search_is_date && target_is_date,
+        extend_end: !search_is_date && target_is_date
+      )
     end
 
     def validate_period_search(search_value, target_value)
@@ -100,7 +106,13 @@ module USQualityCoreTestKit
       search_is_date = date?(search_value)
       search_range = get_fhir_datetime_range(search_value)
       target_range = get_fhir_period_range(target_value)
-      fhir_date_comparer(search_range, target_range, comparator, !search_is_date && date?(target_value.start), !search_is_date && date?(target_value.end))
+      fhir_date_comparer(
+        search_range,
+        target_range,
+        comparator,
+        extend_start: !search_is_date && date?(target_value.start),
+        extend_end: !search_is_date && date?(target_value.end)
+      )
     end
 
     def date?(value)
