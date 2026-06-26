@@ -41,7 +41,7 @@ module USQualityCoreTestKit
           binding = {
             type: element.type.first.code,
             strength: element.binding.strength,
-              system: element.binding.valueSet&.split('|')&.first,
+            system: element.binding.valueSet&.split('|')&.first,
             path: element.path.gsub('[x]', '').gsub("#{resource}.", '')
           }
 
