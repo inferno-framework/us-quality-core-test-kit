@@ -27,7 +27,6 @@ module USQualityCoreTestKit
             class_name: class_name,
             version: version,
             reformatted_version: reformatted_version,
-            # test_id_prefix: test_id_prefix,
             resource: resource,
             profile_url: profile_url,
             profile_name: profile_name,
@@ -46,7 +45,6 @@ module USQualityCoreTestKit
             bindings: bindings,
             references: references,
             resource_conformance_expectation: resource_conformance_expectation
-            # tests: []
           }
 
         mark_mandatory_and_must_support_searches

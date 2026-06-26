@@ -13,9 +13,6 @@ module USQualityCoreTestKit
 
       def terminology_bindings
         (element_terminology_bindings + extension_terminology_bindings).compact
-        # add_terminology_bindings_from_extensions
-        # profile_elements.select { |element| element.type&.first&.code == 'Extension' }
-        #   .each { |extension| add_terminology_bindings_from_extension(extension) }
       end
 
       def element_has_fixed_value?(element)
@@ -44,8 +41,7 @@ module USQualityCoreTestKit
           binding = {
             type: element.type.first.code,
             strength: element.binding.strength,
-            # Goal.target.detail has an unbound binding
-            system: element.binding.valueSet&.split('|')&.first,
+              system: element.binding.valueSet&.split('|')&.first,
             path: element.path.gsub('[x]', '').gsub("#{resource}.", '')
           }
 
