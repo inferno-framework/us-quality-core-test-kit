@@ -1,0 +1,87 @@
+---
+:name: us_quality_core_nutritionorder
+:class_name: USQualityCorev100NutritionorderSequence
+:version: v1.0.0
+:reformatted_version: v100
+:resource: NutritionOrder
+:profile_url: http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-nutritionorder
+:profile_name: US Quality Core NutritionOrder
+:profile_version: 1.0.0-ballot
+:title: NutritionOrder
+:short_description: Verify support for the capabilities required by the US Quality
+  Core NutritionOrder.
+:is_delayed: false
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :names:
+  - patient
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+:search_definitions:
+  :patient:
+    :paths:
+    - patient
+    :full_paths:
+    - NutritionOrder.patient
+    :comparators: {}
+    :values: []
+    :type: Reference
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes:
+- Provenance:target
+:required_concepts: []
+:must_supports:
+  :extensions: []
+  :slices: []
+  :elements: []
+:mandatory_elements:
+- NutritionOrder.status
+- NutritionOrder.intent
+- NutritionOrder.patient
+- NutritionOrder.dateTime
+:bindings:
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/request-status
+  :path: status
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/request-intent
+  :path: intent
+:references:
+- :path: NutritionOrder.patient
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient
+- :path: NutritionOrder.encounter
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
+- :path: NutritionOrder.orderer
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1
+- :path: NutritionOrder.allergyIntolerance
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/AllergyIntolerance|4.0.1
+:tests:
+- :id: us_quality_core_v100_nutrition_order_patient_search_test
+  :file_name: nutrition_order_patient_search_test.rb
+- :id: us_quality_core_v100_nutrition_order_read_test
+  :file_name: nutrition_order_read_test.rb
+- :id: us_quality_core_v100_nutrition_order_provenance_revinclude_search_test
+  :file_name: nutrition_order_provenance_revinclude_search_test.rb
+- :id: us_quality_core_v100_nutrition_order_validation_test
+  :file_name: nutrition_order_validation_test.rb
+- :id: us_quality_core_v100_nutrition_order_must_support_test
+  :file_name: nutrition_order_must_support_test.rb
+:id: us_quality_core_v100_nutrition_order
+:file_name: nutrition_order_group.rb
+:delayed_references: []
+:resource_conformance_expectation: SHALL

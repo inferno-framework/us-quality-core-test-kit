@@ -1,0 +1,225 @@
+---
+:name: us_quality_core_diagnosticreport_note
+:class_name: USQualityCorev100DiagnosticreportNoteSequence
+:version: v1.0.0
+:reformatted_version: v100
+:resource: DiagnosticReport
+:profile_url: http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note
+:profile_name: US Quality Core DiagnosticReport Profile for Report and Note Exchange
+:profile_version: 1.0.0-ballot
+:title: DiagnosticReport for Report and Note Exchange
+:short_description: Verify support for the capabilities required by the US Quality
+  Core DiagnosticReport Profile for Report and Note Exchange.
+:is_delayed: false
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :names:
+  - patient
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - category
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - category
+  - date
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - code
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+:search_definitions:
+  :patient:
+    :paths:
+    - subject
+    :full_paths:
+    - DiagnosticReport.subject
+    :comparators: {}
+    :values: []
+    :type: Reference
+    :contains_multiple: false
+    :multiple_or: MAY
+  :category:
+    :paths:
+    - category
+    :full_paths:
+    - DiagnosticReport.category
+    :comparators: {}
+    :values:
+    - LP29684-5
+    - LP29708-2
+    - LP7839-6
+    :type: CodeableConcept
+    :contains_multiple: true
+    :multiple_or: MAY
+  :date:
+    :paths:
+    - effective
+    :full_paths:
+    - DiagnosticReport.effective
+    :comparators:
+      :eq: MAY
+      :ne: MAY
+      :gt: SHALL
+      :ge: SHALL
+      :lt: SHALL
+      :le: SHALL
+      :sa: MAY
+      :eb: MAY
+      :ap: MAY
+    :values: []
+    :type: date
+    :contains_multiple: false
+    :multiple_or: MAY
+  :code:
+    :paths:
+    - code
+    :full_paths:
+    - DiagnosticReport.code
+    :comparators: {}
+    :values: []
+    :type: CodeableConcept
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes:
+- Provenance:target
+:required_concepts:
+- category
+:must_supports:
+  :extensions: []
+  :slices:
+  - :slice_id: DiagnosticReport.category:us-core
+    :slice_name: us-core
+    :path: category
+    :discriminator:
+      :type: requiredBinding
+      :path: ''
+      :values:
+      - :system: http://loinc.org
+        :code: LP29684-5
+      - :system: http://loinc.org
+        :code: LP29708-2
+      - :system: http://loinc.org
+        :code: LP7839-6
+  :elements:
+  - :path: status
+  - :path: category
+  - :path: code
+  - :path: subject
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient
+  - :path: encounter
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter
+  - :path: effectiveDateTime
+    :original_path: effective[x]
+  - :path: issued
+  - :path: performer
+    :types:
+    - Reference
+  - :path: resultsInterpreter
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+  - :path: result
+    :types:
+    - Reference
+  - :path: presentedForm
+:mandatory_elements:
+- DiagnosticReport.status
+- DiagnosticReport.category
+- DiagnosticReport.code
+- DiagnosticReport.subject
+- DiagnosticReport.media.link
+:bindings:
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/diagnostic-report-status
+  :path: status
+:references:
+- :path: DiagnosticReport.basedOn
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/CarePlan|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/MedicationRequest|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/NutritionOrder|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/ServiceRequest|4.0.1
+- :path: DiagnosticReport.subject
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient
+- :path: DiagnosticReport.encounter
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter
+- :path: DiagnosticReport.performer
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-organization
+- :path: DiagnosticReport.resultsInterpreter
+  :profiles:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
+  - http://hl7.org/fhir/StructureDefinition/PractitionerRole
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam
+- :path: DiagnosticReport.specimen
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Specimen|4.0.1
+- :path: DiagnosticReport.result
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-lab
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-clinical-result
+- :path: DiagnosticReport.imagingStudy
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-imagingstudy
+- :path: DiagnosticReport.media.link
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Media|4.0.1
+:tests:
+- :id: us_quality_core_v100_diagnostic_report_note_patient_search_test
+  :file_name: diagnostic_report_note_patient_search_test.rb
+- :id: us_quality_core_v100_diagnostic_report_note_patient_category_search_test
+  :file_name: diagnostic_report_note_patient_category_search_test.rb
+- :id: us_quality_core_v100_diagnostic_report_note_patient_category_date_search_test
+  :file_name: diagnostic_report_note_patient_category_date_search_test.rb
+- :id: us_quality_core_v100_diagnostic_report_note_patient_code_search_test
+  :file_name: diagnostic_report_note_patient_code_search_test.rb
+- :id: us_quality_core_v100_diagnostic_report_note_read_test
+  :file_name: diagnostic_report_note_read_test.rb
+- :id: us_quality_core_v100_diagnostic_report_note_provenance_revinclude_search_test
+  :file_name: diagnostic_report_note_provenance_revinclude_search_test.rb
+- :id: us_quality_core_v100_diagnostic_report_note_validation_test
+  :file_name: diagnostic_report_note_validation_test.rb
+- :id: us_quality_core_v100_diagnostic_report_note_must_support_test
+  :file_name: diagnostic_report_note_must_support_test.rb
+- :id: us_quality_core_v100_diagnostic_report_note_reference_resolution_test
+  :file_name: diagnostic_report_note_reference_resolution_test.rb
+:id: us_quality_core_v100_diagnostic_report_note
+:file_name: diagnostic_report_note_group.rb
+:delayed_references:
+- :path: encounter
+  :resources:
+  - Encounter
+- :path: performer
+  :resources:
+  - Practitioner
+  - Organization
+:resource_conformance_expectation: SHALL

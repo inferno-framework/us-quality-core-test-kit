@@ -1,0 +1,108 @@
+---
+:name: us_quality_core_goal
+:class_name: USQualityCorev100GoalSequence
+:version: v1.0.0
+:reformatted_version: v100
+:resource: Goal
+:profile_url: http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-goal
+:profile_name: US Quality Core Goal
+:profile_version: 1.0.0-ballot
+:title: Goal
+:short_description: Verify support for the capabilities required by the US Quality
+  Core Goal.
+:is_delayed: false
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :names:
+  - patient
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+:search_definitions:
+  :patient:
+    :paths:
+    - subject
+    :full_paths:
+    - Goal.subject
+    :comparators: {}
+    :values: []
+    :type: Reference
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes:
+- Provenance:target
+:required_concepts: []
+:must_supports:
+  :extensions: []
+  :slices: []
+  :elements:
+  - :path: lifecycleStatus
+  - :path: description
+  - :path: subject
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient
+  - :path: startDate
+    :original_path: start[x]
+  - :path: target
+  - :path: target.dueDate
+    :original_path: target.due[x]
+  - :path: expressedBy
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+:mandatory_elements:
+- Goal.lifecycleStatus
+- Goal.description
+- Goal.subject
+:bindings:
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/goal-status
+  :path: lifecycleStatus
+:references:
+- :path: Goal.subject
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient
+- :path: Goal.expressedBy
+  :profiles:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+  - http://hl7.org/fhir/StructureDefinition/PractitionerRole
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
+- :path: Goal.addresses
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Condition|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/MedicationStatement|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/NutritionOrder|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/ServiceRequest|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/RiskAssessment|4.0.1
+- :path: Goal.outcomeReference
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+:tests:
+- :id: us_quality_core_v100_goal_patient_search_test
+  :file_name: goal_patient_search_test.rb
+- :id: us_quality_core_v100_goal_read_test
+  :file_name: goal_read_test.rb
+- :id: us_quality_core_v100_goal_provenance_revinclude_search_test
+  :file_name: goal_provenance_revinclude_search_test.rb
+- :id: us_quality_core_v100_goal_validation_test
+  :file_name: goal_validation_test.rb
+- :id: us_quality_core_v100_goal_must_support_test
+  :file_name: goal_must_support_test.rb
+- :id: us_quality_core_v100_goal_reference_resolution_test
+  :file_name: goal_reference_resolution_test.rb
+:id: us_quality_core_v100_goal
+:file_name: goal_group.rb
+:delayed_references: []
+:resource_conformance_expectation: SHALL

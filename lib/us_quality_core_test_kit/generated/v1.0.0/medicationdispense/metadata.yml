@@ -1,0 +1,179 @@
+---
+:name: us_quality_core_medicationdispense
+:class_name: USQualityCorev100MedicationdispenseSequence
+:version: v1.0.0
+:reformatted_version: v100
+:resource: MedicationDispense
+:profile_url: http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispense
+:profile_name: US Quality Core MedicationDispense
+:profile_version: 1.0.0-ballot
+:title: MedicationDispense
+:short_description: Verify support for the capabilities required by the US Quality
+  Core MedicationDispense.
+:is_delayed: false
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :expectation: SHALL
+  :names:
+  - patient
+  - status
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :names:
+  - patient
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+:search_definitions:
+  :patient:
+    :paths:
+    - subject
+    :full_paths:
+    - MedicationDispense.subject
+    :comparators: {}
+    :values: []
+    :type: Reference
+    :contains_multiple: false
+    :multiple_or: MAY
+  :status:
+    :paths:
+    - status
+    :full_paths:
+    - MedicationDispense.status
+    :comparators: {}
+    :values:
+    - preparation
+    - in-progress
+    - cancelled
+    - on-hold
+    - completed
+    - entered-in-error
+    - stopped
+    - declined
+    - unknown
+    :type: code
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes:
+- Provenance:target
+:required_concepts: []
+:must_supports:
+  :extensions: []
+  :slices: []
+  :elements:
+  - :path: status
+  - :path: medication[x]
+    :types:
+    - Reference
+  - :path: subject
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient
+  - :path: context
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+  - :path: performer
+  - :path: performer.actor
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
+  - :path: authorizingPrescription
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest
+  - :path: type
+  - :path: quantity
+  - :path: whenHandedOver
+  - :path: dosageInstruction
+  - :path: dosageInstruction.text
+  - :path: dosageInstruction.timing
+  - :path: dosageInstruction.route
+  - :path: dosageInstruction.doseAndRate
+  - :path: dosageInstruction.doseAndRate.doseQuantity
+    :original_path: dosageInstruction.doseAndRate.dose[x]
+:mandatory_elements:
+- MedicationDispense.status
+- MedicationDispense.medication[x]
+- MedicationDispense.subject
+- MedicationDispense.performer.actor
+- MedicationDispense.substitution.wasSubstituted
+:bindings:
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/medicationdispense-status
+  :path: status
+:references:
+- :path: MedicationDispense.partOf
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Procedure|4.0.1
+- :path: MedicationDispense.subject
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient
+- :path: MedicationDispense.context
+  :profiles:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+  - http://hl7.org/fhir/StructureDefinition/EpisodeOfCare
+- :path: MedicationDispense.supportingInformation
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Resource|4.0.1
+- :path: MedicationDispense.performer.actor
+  :profiles:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-device
+- :path: MedicationDispense.location
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Location|4.0.1
+- :path: MedicationDispense.authorizingPrescription
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest
+- :path: MedicationDispense.destination
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Location|4.0.1
+- :path: MedicationDispense.receiver
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Patient|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
+- :path: MedicationDispense.substitution.responsibleParty
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1
+- :path: MedicationDispense.detectedIssue
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/DetectedIssue|4.0.1
+- :path: MedicationDispense.eventHistory
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Provenance|4.0.1
+:tests:
+- :id: us_quality_core_v100_medicationdispense_patient_status_search_test
+  :file_name: medicationdispense_patient_status_search_test.rb
+- :id: us_quality_core_v100_medicationdispense_patient_search_test
+  :file_name: medicationdispense_patient_search_test.rb
+- :id: us_quality_core_v100_medicationdispense_read_test
+  :file_name: medicationdispense_read_test.rb
+- :id: us_quality_core_v100_medicationdispense_provenance_revinclude_search_test
+  :file_name: medicationdispense_provenance_revinclude_search_test.rb
+- :id: us_quality_core_v100_medicationdispense_validation_test
+  :file_name: medicationdispense_validation_test.rb
+- :id: us_quality_core_v100_medicationdispense_must_support_test
+  :file_name: medicationdispense_must_support_test.rb
+- :id: us_quality_core_v100_medicationdispense_reference_resolution_test
+  :file_name: medicationdispense_reference_resolution_test.rb
+:id: us_quality_core_v100_medicationdispense
+:file_name: medicationdispense_group.rb
+:delayed_references: []
+:resource_conformance_expectation: SHALL

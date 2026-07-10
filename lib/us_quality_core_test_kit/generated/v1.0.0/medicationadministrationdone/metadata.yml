@@ -1,0 +1,178 @@
+---
+:name: us_quality_core_medicationadministrationdone
+:class_name: USQualityCorev100MedicationadministrationdoneSequence
+:version: v1.0.0
+:reformatted_version: v100
+:resource: MedicationAdministration
+:profile_url: http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministrationdone
+:profile_name: US Quality Core MedicationAdministration Done
+:profile_version: 1.0.0-ballot
+:title: MedicationAdministration Done
+:short_description: Verify support for the capabilities required by the US Quality
+  Core MedicationAdministration Done.
+:is_delayed: false
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :expectation: SHALL
+  :names:
+  - patient
+  - status
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :names:
+  - patient
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - code
+  :names_not_must_support_or_mandatory:
+  - code
+  :must_support_or_mandatory: false
+- :expectation: SHALL
+  :names:
+  - patient
+  - effective-time
+  :names_not_must_support_or_mandatory:
+  - effective-time
+  :must_support_or_mandatory: false
+:search_definitions:
+  :patient:
+    :paths:
+    - subject
+    :full_paths:
+    - MedicationAdministration.subject
+    :comparators: {}
+    :values: []
+    :type: Reference
+    :contains_multiple: false
+    :multiple_or: MAY
+  :status:
+    :paths:
+    - status
+    :full_paths:
+    - MedicationAdministration.status
+    :comparators: {}
+    :values:
+    - in-progress
+    - on-hold
+    - completed
+    - stopped
+    :type: code
+    :contains_multiple: false
+    :multiple_or: MAY
+  :code:
+    :paths:
+    - medicationCodeableConcept
+    :full_paths:
+    - MedicationAdministration.medicationCodeableConcept
+    :comparators: {}
+    :values: []
+    :type: CodeableConcept
+    :contains_multiple: false
+    :multiple_or: MAY
+  :effective-time:
+    :paths:
+    - effective
+    :full_paths:
+    - MedicationAdministration.effective
+    :comparators:
+      :eq: MAY
+      :ne: MAY
+      :gt: SHALL
+      :ge: SHALL
+      :lt: SHALL
+      :le: SHALL
+      :sa: MAY
+      :eb: MAY
+      :ap: MAY
+    :values: []
+    :type: date
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes:
+- Provenance:target
+:required_concepts: []
+:must_supports:
+  :extensions: []
+  :slices: []
+  :elements: []
+:mandatory_elements:
+- MedicationAdministration.status
+- MedicationAdministration.medication[x]
+- MedicationAdministration.subject
+- MedicationAdministration.effective[x]
+- MedicationAdministration.performer.actor
+:bindings:
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/us/quality-core/ValueSet/us-quality-core-positive-medication-administration-status
+  :path: status
+:references:
+- :path: MedicationAdministration.partOf
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/MedicationAdministration|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Procedure|4.0.1
+- :path: MedicationAdministration.subject
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient
+- :path: MedicationAdministration.context
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter
+  - http://hl7.org/fhir/StructureDefinition/EpisodeOfCare
+- :path: MedicationAdministration.supportingInformation
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Resource|4.0.1
+- :path: MedicationAdministration.performer.actor
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Patient|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/RelatedPerson|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Device|4.0.1
+- :path: MedicationAdministration.reasonReference
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Condition|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/DiagnosticReport|4.0.1
+- :path: MedicationAdministration.request
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest
+- :path: MedicationAdministration.device
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Device|4.0.1
+- :path: MedicationAdministration.eventHistory
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Provenance|4.0.1
+:tests:
+- :id: us_quality_core_v100_medicationadministrationdone_patient_status_search_test
+  :file_name: medicationadministrationdone_patient_status_search_test.rb
+- :id: us_quality_core_v100_medicationadministrationdone_patient_search_test
+  :file_name: medicationadministrationdone_patient_search_test.rb
+- :id: us_quality_core_v100_medicationadministrationdone_patient_code_search_test
+  :file_name: medicationadministrationdone_patient_code_search_test.rb
+- :id: us_quality_core_v100_medicationadministrationdone_patient_effective_time_search_test
+  :file_name: medicationadministrationdone_patient_effective_time_search_test.rb
+- :id: us_quality_core_v100_medicationadministrationdone_read_test
+  :file_name: medicationadministrationdone_read_test.rb
+- :id: us_quality_core_v100_medicationadministrationdone_provenance_revinclude_search_test
+  :file_name: medicationadministrationdone_provenance_revinclude_search_test.rb
+- :id: us_quality_core_v100_medicationadministrationdone_validation_test
+  :file_name: medicationadministrationdone_validation_test.rb
+- :id: us_quality_core_v100_medicationadministrationdone_must_support_test
+  :file_name: medicationadministrationdone_must_support_test.rb
+:id: us_quality_core_v100_medicationadministrationdone
+:file_name: medicationadministrationdone_group.rb
+:delayed_references:
+- :path: context
+  :resources:
+  - Encounter
+:resource_conformance_expectation: SHALL
