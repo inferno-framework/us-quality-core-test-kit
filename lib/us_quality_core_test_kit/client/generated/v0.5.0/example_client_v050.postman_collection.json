@@ -1779,7 +1779,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/DocumentReference?patient=usqualitycore-patient&type=34117-2"
+            "url": "{{base_url}}/DocumentReference?patient=usqualitycore-patient&type=86533-7"
           },
           "event": [
             {
@@ -1820,7 +1820,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/DocumentReference?patient=usqualitycore-patient&category=clinical-note"
+            "url": "{{base_url}}/DocumentReference?patient=usqualitycore-patient&category=42348-3"
           },
           "event": [
             {
@@ -1861,7 +1861,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/DocumentReference?patient=usqualitycore-patient&category=clinical-note&date=ge2015-02-15"
+            "url": "{{base_url}}/DocumentReference?patient=usqualitycore-patient&category=42348-3&date=ge2024-05-16"
           },
           "event": [
             {
