@@ -107,7 +107,7 @@ module USQualityCoreTestKit
       end
 
       def description
-        <<~DESCRIPTION
+        base_description = <<~DESCRIPTION
           #{description_intro}
           It verifies the presence of mandatory elements and that elements with
           required bindings contain appropriate values. CodeableConcept element
@@ -115,6 +115,27 @@ module USQualityCoreTestKit
           to the bound ValueSet. Quantity, Coding, and code element bindings will
           fail if their code/system are not found in the valueset.
         DESCRIPTION
+
+        filter_note = validation_message_filter_note
+        return base_description unless filter_note
+
+        "#{base_description}\n#{filter_note}"
+      end
+
+      def validation_message_filter_note
+        case resource_type
+        when 'Patient'
+          <<~NOTE
+            Note: This test ignores validator messages for `Patient.extension`. This is a workaround for
+            a known validator package interaction where CQL can load US Core 7 definitions into the
+            validator session even though US Quality Core 0.5.0 is based on US Core 6.1.0.
+          NOTE
+        when 'DeviceRequest'
+          <<~NOTE
+            Note: This test ignores a known validator slicing resolution message for
+            `DeviceRequest.modifierExtension`.
+          NOTE
+        end
       end
 
       def description_intro

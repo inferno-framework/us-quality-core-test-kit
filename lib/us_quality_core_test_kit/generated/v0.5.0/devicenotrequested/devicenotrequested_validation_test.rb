@@ -20,6 +20,9 @@ bindings will fail if none of their codings have a code/system belonging
 to the bound ValueSet. Quantity, Coding, and code element bindings will
 fail if their code/system are not found in the valueset.
 
+Note: This test ignores a known validator slicing resolution message for
+`DeviceRequest.modifierExtension`.
+
       )
 
       output :dar_code_found, :dar_extension_found
