@@ -1,6 +1,9 @@
 # Unreleased
 
+# 0.1.2
+
 * Remove the `us_core_test_kit` gem dependency.
+* Fix example patient bundle so that it passes FHIR validation.
 
 # 0.1.1
 
