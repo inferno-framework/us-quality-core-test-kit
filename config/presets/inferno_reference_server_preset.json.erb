@@ -1,5 +1,5 @@
 {
-  "title": "Localhost Server",
+  "title": "Inferno Reference Server",
   "id": null,
   "test_suite_id": "us_quality_core_v050",
   "inputs": [
@@ -8,7 +8,7 @@
       "type": "text",
       "title": "FHIR Endpoint",
       "description": "URL of the FHIR endpoint",
-      "value": "http://localhost:8080/reference-server/r4"
+      "value": "<%= ENV.fetch('FHIR_REFERENCE_SERVER', 'https://inferno.healthit.gov/reference-server/r4') %>"
     },
     {
       "name": "smart_auth_info",

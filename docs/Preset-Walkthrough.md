@@ -34,25 +34,26 @@ docker volume rm us-quality-core-test-kit_fhir-pgdata
 
 Then restart with `./run.sh`.
 
-## Server Suite Against the Local Reference Server
+## Server Suite Against the Inferno Reference Server
 
-Use this path to run the server suite against the local reference server
-included in the Docker setup.
+Use this path to run the server suite against the Inferno Reference Server.
+The preset uses the reference server configured by `FHIR_REFERENCE_SERVER`,
+falling back to the public Inferno Reference Server when the variable is not
+set.
 
 1. Start a new **US Quality Core Server v0.5.0** session.
-2. Select the **Localhost Server** preset from the preset dropdown in the upper
-   left.
+2. Select the **Inferno Reference Server** preset from the preset dropdown in
+   the upper left.
 3. Confirm that the preset filled in:
-   * **FHIR Endpoint**: `http://localhost:8080/reference-server/r4`
+   * **FHIR Endpoint**: the value configured by `FHIR_REFERENCE_SERVER`, or
+     `https://inferno.healthit.gov/reference-server/r4` when it is not set
    * **OAuth Credentials access token**: `SAMPLE_TOKEN`
    * **Patient IDs**: `usqualitycore-patient`
 4. Run the **US Quality Core FHIR API** group, or run selected profile groups
    under it.
 5. Review failures, warnings, skips, and omissions in the Inferno results.
 
-This preset is useful for local development because it points the server suite
-at the same reference server used by the client tests. The local data is
-intended to exercise the generated tests.
+The reference-server data is intended to exercise the generated tests.
 
 ## Server Suite Against the Public US Core Reference Server
 
@@ -156,8 +157,8 @@ Reference Server as a demonstration data source.
 
 A typical local demonstration is:
 
-1. Run the server suite with the **Localhost Server** preset to evaluate the
-   reference server as a US Quality Core data source.
+1. Run the server suite with the **Inferno Reference Server** preset to evaluate
+   the reference server as a US Quality Core data source.
 2. Run the client suite and point a client or the generated Postman collection
    at Inferno's simulated client-suite FHIR base URL.
 3. Compare the client requests with the server-suite requirements for the same
