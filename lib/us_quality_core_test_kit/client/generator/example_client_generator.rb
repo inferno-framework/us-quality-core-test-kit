@@ -126,7 +126,6 @@ module USQualityCoreTestKit
         end
       end
 
-      # rubocop:disable Metrics/ClassLength
       class ExampleClientGenerator
         class << self
           def generate(ig_metadata, base_output_dir)

@@ -1,13 +1,41 @@
 # frozen_string_literal: true
 
-require 'us_core_test_kit/generator/suite_generator'
-
 require_relative 'naming'
 require_relative 'special_cases'
 
 module USQualityCoreTestKit
   class Generator
-    class SuiteGenerator < USCoreTestKit::Generator::SuiteGenerator
+    class SuiteGenerator
+      class << self
+        def generate(ig_metadata, base_output_dir)
+          new(ig_metadata, base_output_dir).generate
+        end
+      end
+
+      attr_accessor :ig_metadata, :base_output_dir
+
+      def initialize(ig_metadata, base_output_dir)
+        self.ig_metadata = ig_metadata
+        self.base_output_dir = base_output_dir
+      end
+
+      def output
+        @output ||= ERB.new(template, trim_mode: '-').result(binding)
+      end
+
+      def output_file_name
+        File.join(base_output_dir, base_output_file_name)
+      end
+
+      def generate
+        File.write(output_file_name, output)
+      end
+
+      def group_file_list
+        @group_file_list ||=
+          groups.map { |group| group.file_name.delete_suffix('.rb') }
+      end
+
       def version_specific_message_filters
         [
           # Patient validation warnings suppressed for US Core extensions because

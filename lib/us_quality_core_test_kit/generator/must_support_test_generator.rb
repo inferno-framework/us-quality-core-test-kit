@@ -1,13 +1,64 @@
 # frozen_string_literal: true
 
-require 'us_core_test_kit/generator/must_support_test_generator'
-
 require_relative 'naming'
 require_relative 'special_cases'
 
 module USQualityCoreTestKit
   class Generator
-    class MustSupportTestGenerator < USCoreTestKit::Generator::MustSupportTestGenerator
+    class MustSupportTestGenerator
+      attr_accessor :group_metadata, :base_output_dir
+
+      def initialize(group_metadata, base_output_dir)
+        self.group_metadata = group_metadata
+        self.base_output_dir = base_output_dir
+      end
+
+      def output
+        @output ||= ERB.new(template, trim_mode: '-').result(binding)
+      end
+
+      def base_output_file_name
+        "#{class_name.underscore}.rb"
+      end
+
+      def output_file_directory
+        File.join(base_output_dir, profile_identifier)
+      end
+
+      def output_file_name
+        File.join(output_file_directory, base_output_file_name)
+      end
+
+      def read_interaction
+        self.class.read_interaction(group_metadata)
+      end
+
+      def resource_type
+        group_metadata.resource
+      end
+
+      def resource_collection_string
+        'all_scratch_resources'
+      end
+
+      def must_support_list_string
+        build_must_support_list_string(false)
+      end
+
+      def uscdi_list_string
+        build_must_support_list_string(true)
+      end
+
+      def generate
+        FileUtils.mkdir_p(output_file_directory)
+        File.write(output_file_name, output)
+
+        group_metadata.add_test(
+          id: test_id,
+          file_name: base_output_file_name
+        )
+      end
+
       class << self
         def generate(ig_metadata, base_output_dir)
           ig_metadata.groups

@@ -1,11 +1,60 @@
 # frozen_string_literal: true
 
-require 'us_core_test_kit/generator/ig_metadata'
 require_relative 'special_cases'
 
 module USQualityCoreTestKit
   class Generator
-    class IGMetadata < USCoreTestKit::Generator::IGMetadata
+    class IGMetadata
+      attr_accessor :ig_version, :groups
+
+      def reformatted_version
+        @reformatted_version ||= ig_version.delete('.').gsub('-', '_')
+      end
+
+      def ordered_groups
+        @ordered_groups ||=
+          [patient_group] + non_delayed_groups + delayed_groups
+      end
+
+      def patient_group
+        @patient_group ||=
+          groups.find { |group| group.resource == 'Patient' }
+      end
+
+      def delayed_groups
+        @delayed_groups ||=
+          groups.select(&:delayed?)
+      end
+
+      def non_delayed_groups
+        @non_delayed_groups ||=
+          groups.reject(&:delayed?) - [patient_group]
+      end
+
+      def postprocess_groups(ig_resources)
+        groups.each do |group|
+          group.add_delayed_references(delayed_profiles, ig_resources)
+        end
+      end
+
+      def granular_scope_resource_type_groups
+        @granular_scope_resource_type_groups ||=
+          Hash.new { |hash, key| hash[key] = [] }
+      end
+
+      def granular_scope_groups
+        @granular_scope_groups ||= []
+      end
+
+      def to_hash
+        {
+          ig_version:,
+          groups: groups.map(&:to_hash),
+          granular_scope_resource_type_groups:,
+          granular_scope_groups:
+        }
+      end
+
       def delayed_profiles
         @delayed_profiles ||=
           delayed_groups.reject { |group| SpecialCases.exclude_group?(group) }.map(&:profile_url)

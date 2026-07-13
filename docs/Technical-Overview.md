@@ -21,8 +21,9 @@ The tests in this repository are designed around these principles:
   as USCDI+ Quality flags, modifier element handling, negation, and reference
   behavior, must be reflected even when they are not fully captured by generated
   code.
-* Reuse US Core testing infrastructure: this test kit depends on the US Core
-  Test Kit and extends its generator and shared test components where practical.
+* Reuse US Core testing infrastructure: selected shared logic from the US Core
+  Test Kit has been ported into the US Quality Core Test Kit namespace where
+  practical.
 
 Features of the server and client suites reflect these principles:
 
@@ -65,10 +66,11 @@ artifacts instead, then regenerate.
 
 ### US Core Test Kit
 
-This test kit depends on the
+This test kit ports selected shared logic from
 [`us_core_test_kit`](https://github.com/inferno-framework/us-core-test-kit)
-gem and reuses portions of the US Core generator and shared test logic. US
-Quality Core-specific behavior lives under `lib/us_quality_core_test_kit/`.
+into the `USQualityCoreTestKit` namespace and does not depend on the
+`us_core_test_kit` gem at runtime. US Quality Core-specific behavior lives under
+`lib/us_quality_core_test_kit/`.
 
 ### Inferno Reference Server
 
@@ -139,6 +141,12 @@ To regenerate only one side:
 ```sh
 bundle exec rake usqualitycore:generate mode=server
 bundle exec rake usqualitycore:generate mode=client
+```
+
+To delete generated suites before regenerating both sides:
+
+```sh
+bundle exec rake usqualitycore:generate clean=true
 ```
 
 The `us_quality_core:generate` task is also available as an equivalent alias.
