@@ -20,6 +20,10 @@ bindings will fail if none of their codings have a code/system belonging
 to the bound ValueSet. Quantity, Coding, and code element bindings will
 fail if their code/system are not found in the valueset.
 
+Note: This test ignores validator messages for `Patient.extension`. This is a workaround for
+a known validator package interaction where CQL can load US Core 7 definitions into the
+validator session even though US Quality Core 0.5.0 is based on US Core 6.1.0.
+
       )
 
       output :dar_code_found, :dar_extension_found
