@@ -4,6 +4,7 @@
 
 * Remove the `us_core_test_kit` gem dependency.
 * Fix example patient bundle so that it passes FHIR validation.
+* Update `inferno_core` dependency and fix resulting issues.
 
 # 0.1.1
 
