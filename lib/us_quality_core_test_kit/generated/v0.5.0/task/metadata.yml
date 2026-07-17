@@ -5,11 +5,11 @@
 :reformatted_version: v050
 :resource: Task
 :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-task
-:profile_name: US Quality Core Task
+:profile_name: US Quality Core Task Profile
 :profile_version: 0.5.0
 :title: Task
 :short_description: Verify support for the capabilities required by the US Quality
-  Core Task.
+  Core Task Profile.
 :is_delayed: false
 :interactions:
 - :code: read

@@ -19,7 +19,7 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Quality Core Simple Observation: `Observation/usqualitycore-simple-observation`."
+          "Inferno did not receive the expected read request for the target instance of the US Quality Core Simple Observation Profile: `Observation/usqualitycore-simple-observation`."
         end
 
         run do

@@ -16,14 +16,14 @@ module USQualityCoreTestKit
 # Background
 
 This test group verifies that the client can access FamilyMemberHistory data
-conforming to the US Quality Core FamilyMemberHistory.
+conforming to the US Quality Core FamilyMemberHistory Profile.
 
 # Testing Methodology
 
 ## Data Access Supported
 
 Clients may not be required to support the FamilyMemberHistory FHIR resource type. However, if they
-do support it, they must support the US Quality Core FamilyMemberHistory and the resource type's search parameters.
+do support it, they must support the US Quality Core FamilyMemberHistory Profile and the resource type's search parameters.
 The tests in this group will not execute if client makes no attempt to access data for the
 FamilyMemberHistory resource type. In this case, the test will be marked as skip if support
 for the resource type is required, and omitted otherwise.

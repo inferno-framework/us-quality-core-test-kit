@@ -5,11 +5,11 @@
 :reformatted_version: v050
 :resource: MedicationRequest
 :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationrequest
-:profile_name: US Quality Core MedicationRequest
+:profile_name: US Quality Core MedicationRequest Profile
 :profile_version: 0.5.0
 :title: MedicationRequest
 :short_description: Verify support for the capabilities required by the US Quality
-  Core MedicationRequest.
+  Core MedicationRequest Profile.
 :is_delayed: false
 :interactions:
 - :code: read

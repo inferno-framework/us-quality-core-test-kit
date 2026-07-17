@@ -19,7 +19,7 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Quality Core Practitioner: `Practitioner/usqualitycore-practitioner`."
+          "Inferno did not receive the expected read request for the target instance of the US Quality Core Practitioner Profile: `Practitioner/usqualitycore-practitioner`."
         end
 
         run do

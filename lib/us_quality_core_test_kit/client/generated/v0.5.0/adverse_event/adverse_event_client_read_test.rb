@@ -19,7 +19,7 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Quality Core AdverseEvent: `AdverseEvent/usqualitycore-adverse-event`."
+          "Inferno did not receive the expected read request for the target instance of the US Quality Core AdverseEvent Profile: `AdverseEvent/usqualitycore-adverse-event`."
         end
 
         run do

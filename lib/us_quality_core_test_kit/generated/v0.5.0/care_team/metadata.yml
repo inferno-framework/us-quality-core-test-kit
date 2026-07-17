@@ -5,11 +5,11 @@
 :reformatted_version: v050
 :resource: CareTeam
 :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-careteam
-:profile_name: US Quality Core CareTeam
+:profile_name: US Quality Core CareTeam Profile
 :profile_version: 0.5.0
 :title: CareTeam
 :short_description: Verify support for the capabilities required by the US Quality
-  Core CareTeam.
+  Core CareTeam Profile.
 :is_delayed: false
 :interactions:
 - :code: read

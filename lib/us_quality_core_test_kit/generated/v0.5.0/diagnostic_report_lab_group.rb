@@ -14,14 +14,14 @@ module USQualityCoreTestKit
     class DiagnosticReportLabGroup < Inferno::TestGroup
       title 'DiagnosticReport for Laboratory Results Reporting Tests'
 
-      short_description 'Verify support for the capabilities required by the US Quality Core DiagnosticReport Profile for Laboratory Results Reporting.'
+      short_description 'Verify support for the capabilities required by the US Quality Core DiagnosticReport Profile for Laboratory Results Reporting Profile.'
 
       description %(
   # Background
 
 These tests verify that the system under test is able to provide correct
 responses for DiagnosticReport queries. These queries must contain resources
-conforming to the US Quality Core DiagnosticReport Profile for Laboratory Results Reporting as specified in the US Quality Core Implementation Guide.
+conforming to the US Quality Core DiagnosticReport Profile for Laboratory Results Reporting Profile as specified in the US Quality Core Implementation Guide.
 
 # Testing Methodology
 ## Searching

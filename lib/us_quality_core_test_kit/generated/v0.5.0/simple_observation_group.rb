@@ -14,14 +14,14 @@ module USQualityCoreTestKit
     class SimpleObservationGroup < Inferno::TestGroup
       title 'Observation Simple Tests'
 
-      short_description 'Verify support for the capabilities required by the US Quality Core Simple Observation.'
+      short_description 'Verify support for the capabilities required by the US Quality Core Simple Observation Profile.'
 
       description %(
   # Background
 
 These tests verify that the system under test is able to provide correct
 responses for Observation queries. These queries must contain resources
-conforming to the US Quality Core Simple Observation as specified in the US Quality Core Implementation Guide.
+conforming to the US Quality Core Simple Observation Profile as specified in the US Quality Core Implementation Guide.
 
 # Testing Methodology
 ## Searching

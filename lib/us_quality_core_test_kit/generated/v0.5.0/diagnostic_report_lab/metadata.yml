@@ -6,10 +6,11 @@
 :resource: DiagnosticReport
 :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-diagnosticreport-lab
 :profile_name: US Quality Core DiagnosticReport Profile for Laboratory Results Reporting
+  Profile
 :profile_version: 0.5.0
 :title: DiagnosticReport for Laboratory Results Reporting
 :short_description: Verify support for the capabilities required by the US Quality
-  Core DiagnosticReport Profile for Laboratory Results Reporting.
+  Core DiagnosticReport Profile for Laboratory Results Reporting Profile.
 :is_delayed: false
 :interactions:
 - :code: read

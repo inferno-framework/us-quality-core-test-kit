@@ -19,7 +19,7 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Quality Core MedicationAdministration: `MedicationAdministration/usqualitycore-medicationadministration`."
+          "Inferno did not receive the expected read request for the target instance of the US Quality Core MedicationAdministration Profile: `MedicationAdministration/usqualitycore-medicationadministration`."
         end
 
         run do

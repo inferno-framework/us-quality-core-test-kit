@@ -13,14 +13,14 @@ module USQualityCoreTestKit
     class ObservationcancelledGroup < Inferno::TestGroup
       title 'Observation Cancelled Tests'
 
-      short_description 'Verify support for the capabilities required by the US Quality Core Observation Cancelled.'
+      short_description 'Verify support for the capabilities required by the US Quality Core Observation Cancelled Profile.'
 
       description %(
   # Background
 
 These tests verify that the system under test is able to provide correct
 responses for Observation queries. These queries must contain resources
-conforming to the US Quality Core Observation Cancelled as specified in the US Quality Core Implementation Guide.
+conforming to the US Quality Core Observation Cancelled Profile as specified in the US Quality Core Implementation Guide.
 
 # Testing Methodology
 ## Searching

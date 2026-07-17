@@ -7,11 +7,11 @@ module USQualityCoreTestKit
 
       id :us_quality_core_v050_adverse_event_validation_test
 
-      title 'AdverseEvent resources returned during previous tests conform to the US Quality Core AdverseEvent'
+      title 'AdverseEvent resources returned during previous tests conform to the US Quality Core AdverseEvent Profile'
 
       description %(
 This test verifies resources returned from the first search conform to
-the [US Quality Core AdverseEvent](http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-adverseevent).
+the [US Quality Core AdverseEvent Profile](http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-adverseevent).
 Systems must demonstrate at least one valid example in order to pass this test.
 
 It verifies the presence of mandatory elements and that elements with

@@ -19,7 +19,7 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Quality Core DeviceRequest: `DeviceRequest/usqualitycore-devicerequest`."
+          "Inferno did not receive the expected read request for the target instance of the US Quality Core DeviceRequest Profile: `DeviceRequest/usqualitycore-devicerequest`."
         end
 
         run do

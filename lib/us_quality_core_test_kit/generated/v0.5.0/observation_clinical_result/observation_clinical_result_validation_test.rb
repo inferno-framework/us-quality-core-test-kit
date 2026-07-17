@@ -7,11 +7,11 @@ module USQualityCoreTestKit
 
       id :us_quality_core_v050_observation_clinical_result_validation_test
 
-      title 'Observation resources returned during previous tests conform to the US Quality Core Observation Clinical Result'
+      title 'Observation resources returned during previous tests conform to the US Quality Core Observation Clinical Result Profile'
 
       description %(
 This test verifies resources returned from the first search conform to
-the [US Quality Core Observation Clinical Result](http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-clinical-result).
+the [US Quality Core Observation Clinical Result Profile](http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-clinical-result).
 Systems must demonstrate at least one valid example in order to pass this test.
 
 It verifies the presence of mandatory elements and that elements with

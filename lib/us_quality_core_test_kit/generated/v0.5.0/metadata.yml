@@ -7,11 +7,11 @@
   :reformatted_version: v050
   :resource: AdverseEvent
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-adverseevent
-  :profile_name: US Quality Core AdverseEvent
+  :profile_name: US Quality Core AdverseEvent Profile
   :profile_version: 0.5.0
   :title: AdverseEvent
   :short_description: Verify support for the capabilities required by the US Quality
-    Core AdverseEvent.
+    Core AdverseEvent Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -221,11 +221,11 @@
   :reformatted_version: v050
   :resource: AllergyIntolerance
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance
-  :profile_name: US Quality Core AllergyIntolerance
+  :profile_name: US Quality Core AllergyIntolerance Profile
   :profile_version: 0.5.0
   :title: AllergyIntolerance
   :short_description: Verify support for the capabilities required by the US Quality
-    Core AllergyIntolerance.
+    Core AllergyIntolerance Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -347,11 +347,11 @@
   :reformatted_version: v050
   :resource: CarePlan
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-careplan
-  :profile_name: US Quality Core CarePlan
+  :profile_name: US Quality Core CarePlan Profile
   :profile_version: 0.5.0
   :title: CarePlan
   :short_description: Verify support for the capabilities required by the US Quality
-    Core CarePlan.
+    Core CarePlan Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -549,11 +549,11 @@
   :reformatted_version: v050
   :resource: CareTeam
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-careteam
-  :profile_name: US Quality Core CareTeam
+  :profile_name: US Quality Core CareTeam Profile
   :profile_version: 0.5.0
   :title: CareTeam
   :short_description: Verify support for the capabilities required by the US Quality
-    Core CareTeam.
+    Core CareTeam Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -673,11 +673,11 @@
   :reformatted_version: v050
   :resource: Condition
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis
-  :profile_name: US Quality Core Condition Encounter Diagnosis
+  :profile_name: US Quality Core Condition Encounter Diagnosis Profile
   :profile_version: 0.5.0
   :title: Condition Encounter Diagnosis
   :short_description: Verify support for the capabilities required by the US Quality
-    Core Condition Encounter Diagnosis.
+    Core Condition Encounter Diagnosis Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -846,11 +846,11 @@
   :reformatted_version: v050
   :resource: Condition
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns
-  :profile_name: US Quality Core Condition Problems Health Concerns
+  :profile_name: US Quality Core Condition Problems Health Concerns Profile
   :profile_version: 0.5.0
   :title: Condition Problems Health Concerns
   :short_description: Verify support for the capabilities required by the US Quality
-    Core Condition Problems Health Concerns.
+    Core Condition Problems Health Concerns Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -1037,11 +1037,11 @@
   :reformatted_version: v050
   :resource: Coverage
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-coverage
-  :profile_name: US Quality Core Coverage
+  :profile_name: US Quality Core Coverage Profile
   :profile_version: 0.5.0
   :title: Coverage
   :short_description: Verify support for the capabilities required by the US Quality
-    Core Coverage.
+    Core Coverage Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -1190,11 +1190,11 @@
   :reformatted_version: v050
   :resource: DeviceRequest
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-devicerequest
-  :profile_name: US Quality Core DeviceRequest
+  :profile_name: US Quality Core DeviceRequest Profile
   :profile_version: 0.5.0
   :title: DeviceRequest
   :short_description: Verify support for the capabilities required by the US Quality
-    Core DeviceRequest.
+    Core DeviceRequest Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -1359,11 +1359,11 @@
   :reformatted_version: v050
   :resource: DeviceRequest
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-devicenotrequested
-  :profile_name: US Quality Core Device Not Requested
+  :profile_name: US Quality Core Device Not Requested Profile
   :profile_version: 0.5.0
   :title: DeviceRequest Device Not Requested
   :short_description: Verify support for the capabilities required by the US Quality
-    Core Device Not Requested.
+    Core Device Not Requested Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -1530,10 +1530,11 @@
   :resource: DiagnosticReport
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-diagnosticreport-note
   :profile_name: US Quality Core DiagnosticReport Profile for Report and Note Exchange
+    Profile
   :profile_version: 0.5.0
   :title: DiagnosticReport for Report and Note Exchange
   :short_description: Verify support for the capabilities required by the US Quality
-    Core DiagnosticReport Profile for Report and Note Exchange.
+    Core DiagnosticReport Profile for Report and Note Exchange Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -1753,10 +1754,11 @@
   :resource: DiagnosticReport
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-diagnosticreport-lab
   :profile_name: US Quality Core DiagnosticReport Profile for Laboratory Results Reporting
+    Profile
   :profile_version: 0.5.0
   :title: DiagnosticReport for Laboratory Results Reporting
   :short_description: Verify support for the capabilities required by the US Quality
-    Core DiagnosticReport Profile for Laboratory Results Reporting.
+    Core DiagnosticReport Profile for Laboratory Results Reporting Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -2205,11 +2207,11 @@
   :reformatted_version: v050
   :resource: Encounter
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter
-  :profile_name: US Quality Core Encounter
+  :profile_name: US Quality Core Encounter Profile
   :profile_version: 0.5.0
   :title: Encounter
   :short_description: Verify support for the capabilities required by the US Quality
-    Core Encounter.
+    Core Encounter Profile.
   :is_delayed: true
   :interactions:
   - :code: read
@@ -2474,11 +2476,11 @@
   :reformatted_version: v050
   :resource: FamilyMemberHistory
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-familymemberhistory
-  :profile_name: US Quality Core FamilyMemberHistory
+  :profile_name: US Quality Core FamilyMemberHistory Profile
   :profile_version: 0.5.0
   :title: FamilyMemberHistory
   :short_description: Verify support for the capabilities required by the US Quality
-    Core FamilyMemberHistory.
+    Core FamilyMemberHistory Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -2556,11 +2558,11 @@
   :reformatted_version: v050
   :resource: Goal
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-goal
-  :profile_name: US Quality Core Goal
+  :profile_name: US Quality Core Goal Profile
   :profile_version: 0.5.0
   :title: Goal
   :short_description: Verify support for the capabilities required by the US Quality
-    Core Goal.
+    Core Goal Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -2658,11 +2660,11 @@
   :reformatted_version: v050
   :resource: Immunization
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-immunization
-  :profile_name: US Quality Core Immunization
+  :profile_name: US Quality Core Immunization Profile
   :profile_version: 0.5.0
   :title: Immunization
   :short_description: Verify support for the capabilities required by the US Quality
-    Core Immunization.
+    Core Immunization Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -2790,11 +2792,11 @@
   :reformatted_version: v050
   :resource: Immunization
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-immunizationnotdone
-  :profile_name: US Quality Core Immunization Not Done
+  :profile_name: US Quality Core Immunization Not Done Profile
   :profile_version: 0.5.0
   :title: Immunization Not Done
   :short_description: Verify support for the capabilities required by the US Quality
-    Core Immunization Not Done.
+    Core Immunization Not Done Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -2919,11 +2921,11 @@
   :reformatted_version: v050
   :resource: Location
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-location
-  :profile_name: US Quality Core Location
+  :profile_name: US Quality Core Location Profile
   :profile_version: 0.5.0
   :title: Location
   :short_description: Verify support for the capabilities required by the US Quality
-    Core Location.
+    Core Location Profile.
   :is_delayed: true
   :interactions:
   - :code: read
@@ -3013,11 +3015,11 @@
   :reformatted_version: v050
   :resource: Medication
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medication
-  :profile_name: US Quality Core Medication
+  :profile_name: US Quality Core Medication Profile
   :profile_version: 0.5.0
   :title: Medication
   :short_description: Verify support for the capabilities required by the US Quality
-    Core Medication.
+    Core Medication Profile.
   :is_delayed: true
   :interactions:
   - :code: read
@@ -3073,11 +3075,11 @@
   :reformatted_version: v050
   :resource: MedicationAdministration
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationadministration
-  :profile_name: US Quality Core MedicationAdministration
+  :profile_name: US Quality Core MedicationAdministration Profile
   :profile_version: 0.5.0
   :title: MedicationAdministration
   :short_description: Verify support for the capabilities required by the US Quality
-    Core MedicationAdministration.
+    Core MedicationAdministration Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -3266,11 +3268,11 @@
   :reformatted_version: v050
   :resource: MedicationAdministration
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationadministrationnotdone
-  :profile_name: US Quality Core MedicationAdministration Not Done
+  :profile_name: US Quality Core MedicationAdministration Not Done Profile
   :profile_version: 0.5.0
   :title: MedicationAdministration Not Done
   :short_description: Verify support for the capabilities required by the US Quality
-    Core MedicationAdministration Not Done.
+    Core MedicationAdministration Not Done Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -3442,11 +3444,11 @@
   :reformatted_version: v050
   :resource: MedicationDispense
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationdispense
-  :profile_name: US Quality Core MedicationDispense
+  :profile_name: US Quality Core MedicationDispense Profile
   :profile_version: 0.5.0
   :title: MedicationDispense
   :short_description: Verify support for the capabilities required by the US Quality
-    Core MedicationDispense.
+    Core MedicationDispense Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -3618,11 +3620,11 @@
   :reformatted_version: v050
   :resource: MedicationDispense
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationdispensedeclined
-  :profile_name: US Quality Core MedicationDispense Declined
+  :profile_name: US Quality Core MedicationDispense Declined Profile
   :profile_version: 0.5.0
   :title: MedicationDispense Declined
   :short_description: Verify support for the capabilities required by the US Quality
-    Core MedicationDispense Declined.
+    Core MedicationDispense Declined Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -3784,11 +3786,11 @@
   :reformatted_version: v050
   :resource: MedicationRequest
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationrequest
-  :profile_name: US Quality Core MedicationRequest
+  :profile_name: US Quality Core MedicationRequest Profile
   :profile_version: 0.5.0
   :title: MedicationRequest
   :short_description: Verify support for the capabilities required by the US Quality
-    Core MedicationRequest.
+    Core MedicationRequest Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -4070,11 +4072,11 @@
   :reformatted_version: v050
   :resource: MedicationRequest
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationnotrequested
-  :profile_name: US Quality Core Medication Not Requested
+  :profile_name: US Quality Core Medication Not Requested Profile
   :profile_version: 0.5.0
   :title: MedicationRequest Medication Not Requested
   :short_description: Verify support for the capabilities required by the US Quality
-    Core Medication Not Requested.
+    Core Medication Not Requested Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -4318,11 +4320,11 @@
   :reformatted_version: v050
   :resource: Observation
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-clinical-result
-  :profile_name: US Quality Core Observation Clinical Result
+  :profile_name: US Quality Core Observation Clinical Result Profile
   :profile_version: 0.5.0
   :title: Observation Clinical Result
   :short_description: Verify support for the capabilities required by the US Quality
-    Core Observation Clinical Result.
+    Core Observation Clinical Result Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -4564,11 +4566,11 @@
   :reformatted_version: v050
   :resource: Observation
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation
-  :profile_name: US Quality Core Simple Observation
+  :profile_name: US Quality Core Simple Observation Profile
   :profile_version: 0.5.0
   :title: Observation Simple
   :short_description: Verify support for the capabilities required by the US Quality
-    Core Simple Observation.
+    Core Simple Observation Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -4823,11 +4825,11 @@
   :reformatted_version: v050
   :resource: Observation
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-screening-assessment
-  :profile_name: US Quality Core Observation Screening Assessment
+  :profile_name: US Quality Core Observation Screening Assessment Profile
   :profile_version: 0.5.0
   :title: Observation Screening Assessment
   :short_description: Verify support for the capabilities required by the US Quality
-    Core Observation Screening Assessment.
+    Core Observation Screening Assessment Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -5088,11 +5090,11 @@
   :reformatted_version: v050
   :resource: Observation
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observationcancelled
-  :profile_name: US Quality Core Observation Cancelled
+  :profile_name: US Quality Core Observation Cancelled Profile
   :profile_version: 0.5.0
   :title: Observation Cancelled
   :short_description: Verify support for the capabilities required by the US Quality
-    Core Observation Cancelled.
+    Core Observation Cancelled Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -6019,11 +6021,11 @@
   :reformatted_version: v050
   :resource: Observation
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-lab
-  :profile_name: US Quality Core Laboratory Result Observation
+  :profile_name: US Quality Core Laboratory Result Observation Profile
   :profile_version: 0.5.0
   :title: Observation Laboratory Result
   :short_description: Verify support for the capabilities required by the US Quality
-    Core Laboratory Result Observation.
+    Core Laboratory Result Observation Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -9567,11 +9569,11 @@
   :reformatted_version: v050
   :resource: Organization
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization
-  :profile_name: US Quality Core Organization
+  :profile_name: US Quality Core Organization Profile
   :profile_version: 0.5.0
   :title: Organization
   :short_description: Verify support for the capabilities required by the US Quality
-    Core Organization.
+    Core Organization Profile.
   :is_delayed: true
   :interactions:
   - :code: read
@@ -9684,11 +9686,11 @@
   :reformatted_version: v050
   :resource: Patient
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
-  :profile_name: US Quality Core Patient
+  :profile_name: US Quality Core Patient Profile
   :profile_version: 0.5.0
   :title: Patient
   :short_description: Verify support for the capabilities required by the US Quality
-    Core Patient.
+    Core Patient Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -9921,11 +9923,11 @@
   :reformatted_version: v050
   :resource: Practitioner
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner
-  :profile_name: US Quality Core Practitioner
+  :profile_name: US Quality Core Practitioner Profile
   :profile_version: 0.5.0
   :title: Practitioner
   :short_description: Verify support for the capabilities required by the US Quality
-    Core Practitioner.
+    Core Practitioner Profile.
   :is_delayed: true
   :interactions:
   - :code: read
@@ -10051,11 +10053,11 @@
   :reformatted_version: v050
   :resource: PractitionerRole
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
-  :profile_name: US Quality Core PractitionerRole
+  :profile_name: US Quality Core PractitionerRole Profile
   :profile_version: 0.5.0
   :title: PractitionerRole
   :short_description: Verify support for the capabilities required by the US Quality
-    Core PractitionerRole.
+    Core PractitionerRole Profile.
   :is_delayed: true
   :interactions:
   - :code: read
@@ -10173,11 +10175,11 @@
   :reformatted_version: v050
   :resource: Procedure
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-procedure
-  :profile_name: US Quality Core Procedure
+  :profile_name: US Quality Core Procedure Profile
   :profile_version: 0.5.0
   :title: Procedure
   :short_description: Verify support for the capabilities required by the US Quality
-    Core Procedure.
+    Core Procedure Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -10391,11 +10393,11 @@
   :reformatted_version: v050
   :resource: Procedure
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-procedurenotdone
-  :profile_name: US Quality Core Procedure Not Done
+  :profile_name: US Quality Core Procedure Not Done Profile
   :profile_version: 0.5.0
   :title: Procedure Not Done
   :short_description: Verify support for the capabilities required by the US Quality
-    Core Procedure Not Done.
+    Core Procedure Not Done Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -10741,11 +10743,11 @@
   :reformatted_version: v050
   :resource: RelatedPerson
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-relatedperson
-  :profile_name: US Quality Core RelatedPerson
+  :profile_name: US Quality Core RelatedPerson Profile
   :profile_version: 0.5.0
   :title: RelatedPerson
   :short_description: Verify support for the capabilities required by the US Quality
-    Core RelatedPerson.
+    Core RelatedPerson Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -10841,11 +10843,11 @@
   :reformatted_version: v050
   :resource: ServiceRequest
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-servicerequest
-  :profile_name: US Quality Core ServiceRequest
+  :profile_name: US Quality Core ServiceRequest Profile
   :profile_version: 0.5.0
   :title: ServiceRequest
   :short_description: Verify support for the capabilities required by the US Quality
-    Core ServiceRequest.
+    Core ServiceRequest Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -11128,11 +11130,11 @@
   :reformatted_version: v050
   :resource: ServiceRequest
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-servicenotrequested
-  :profile_name: US Quality Core Service Not Requested
+  :profile_name: US Quality Core Service Not Requested Profile
   :profile_version: 0.5.0
   :title: ServiceRequest Service Not Requested
   :short_description: Verify support for the capabilities required by the US Quality
-    Core Service Not Requested.
+    Core Service Not Requested Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -11509,11 +11511,11 @@
   :reformatted_version: v050
   :resource: Task
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-task
-  :profile_name: US Quality Core Task
+  :profile_name: US Quality Core Task Profile
   :profile_version: 0.5.0
   :title: Task
   :short_description: Verify support for the capabilities required by the US Quality
-    Core Task.
+    Core Task Profile.
   :is_delayed: false
   :interactions:
   - :code: read
@@ -11716,11 +11718,11 @@
   :reformatted_version: v050
   :resource: Task
   :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-taskrejected
-  :profile_name: US Quality Core Task Rejected
+  :profile_name: US Quality Core Task Rejected Profile
   :profile_version: 0.5.0
   :title: Task Rejected
   :short_description: Verify support for the capabilities required by the US Quality
-    Core Task Rejected.
+    Core Task Rejected Profile.
   :is_delayed: false
   :interactions:
   - :code: read

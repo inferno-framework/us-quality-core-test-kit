@@ -5,11 +5,11 @@
 :reformatted_version: v050
 :resource: Organization
 :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization
-:profile_name: US Quality Core Organization
+:profile_name: US Quality Core Organization Profile
 :profile_version: 0.5.0
 :title: Organization
 :short_description: Verify support for the capabilities required by the US Quality
-  Core Organization.
+  Core Organization Profile.
 :is_delayed: true
 :interactions:
 - :code: read

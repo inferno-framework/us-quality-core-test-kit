@@ -19,7 +19,7 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Quality Core Procedure: `Procedure/usqualitycore-procedure`."
+          "Inferno did not receive the expected read request for the target instance of the US Quality Core Procedure Profile: `Procedure/usqualitycore-procedure`."
         end
 
         run do

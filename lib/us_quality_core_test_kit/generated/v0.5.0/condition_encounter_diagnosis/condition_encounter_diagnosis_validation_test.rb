@@ -7,11 +7,11 @@ module USQualityCoreTestKit
 
       id :us_quality_core_v050_condition_encounter_diagnosis_validation_test
 
-      title 'Condition resources returned during previous tests conform to the US Quality Core Condition Encounter Diagnosis'
+      title 'Condition resources returned during previous tests conform to the US Quality Core Condition Encounter Diagnosis Profile'
 
       description %(
 This test verifies resources returned from the first search conform to
-the [US Quality Core Condition Encounter Diagnosis](http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis).
+the [US Quality Core Condition Encounter Diagnosis Profile](http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis).
 Systems must demonstrate at least one valid example in order to pass this test.
 
 It verifies the presence of mandatory elements and that elements with

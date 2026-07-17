@@ -7,11 +7,11 @@ module USQualityCoreTestKit
 
       id :us_quality_core_v050_care_plan_validation_test
 
-      title 'CarePlan resources returned during previous tests conform to the US Quality Core CarePlan'
+      title 'CarePlan resources returned during previous tests conform to the US Quality Core CarePlan Profile'
 
       description %(
 This test verifies resources returned from the first search conform to
-the [US Quality Core CarePlan](http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-careplan).
+the [US Quality Core CarePlan Profile](http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-careplan).
 Systems must demonstrate at least one valid example in order to pass this test.
 
 It verifies the presence of mandatory elements and that elements with

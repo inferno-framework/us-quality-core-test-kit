@@ -5,11 +5,11 @@
 :reformatted_version: v050
 :resource: PractitionerRole
 :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitionerrole
-:profile_name: US Quality Core PractitionerRole
+:profile_name: US Quality Core PractitionerRole Profile
 :profile_version: 0.5.0
 :title: PractitionerRole
 :short_description: Verify support for the capabilities required by the US Quality
-  Core PractitionerRole.
+  Core PractitionerRole Profile.
 :is_delayed: true
 :interactions:
 - :code: read

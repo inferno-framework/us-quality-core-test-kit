@@ -143,7 +143,7 @@ module USQualityCoreTestKit
 
           ## Profile Validation
           Each resource returned from the first search is expected to conform to
-          the [#{profile_name} Profile](#{profile_url}). Each element is checked against
+          the [#{profile_name}](#{profile_url}). Each element is checked against
           teminology binding and cardinality requirements.
 
           Elements with a required binding are validated against their bound

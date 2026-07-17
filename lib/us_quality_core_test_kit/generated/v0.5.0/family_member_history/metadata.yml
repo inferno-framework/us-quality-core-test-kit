@@ -5,11 +5,11 @@
 :reformatted_version: v050
 :resource: FamilyMemberHistory
 :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-familymemberhistory
-:profile_name: US Quality Core FamilyMemberHistory
+:profile_name: US Quality Core FamilyMemberHistory Profile
 :profile_version: 0.5.0
 :title: FamilyMemberHistory
 :short_description: Verify support for the capabilities required by the US Quality
-  Core FamilyMemberHistory.
+  Core FamilyMemberHistory Profile.
 :is_delayed: false
 :interactions:
 - :code: read

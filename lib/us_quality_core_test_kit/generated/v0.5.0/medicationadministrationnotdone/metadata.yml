@@ -5,11 +5,11 @@
 :reformatted_version: v050
 :resource: MedicationAdministration
 :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationadministrationnotdone
-:profile_name: US Quality Core MedicationAdministration Not Done
+:profile_name: US Quality Core MedicationAdministration Not Done Profile
 :profile_version: 0.5.0
 :title: MedicationAdministration Not Done
 :short_description: Verify support for the capabilities required by the US Quality
-  Core MedicationAdministration Not Done.
+  Core MedicationAdministration Not Done Profile.
 :is_delayed: false
 :interactions:
 - :code: read

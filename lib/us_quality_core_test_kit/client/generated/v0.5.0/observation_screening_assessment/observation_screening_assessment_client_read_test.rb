@@ -19,7 +19,7 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Quality Core Observation Screening Assessment: `Observation/usqualitycore-observation-screening-assessment`."
+          "Inferno did not receive the expected read request for the target instance of the US Quality Core Observation Screening Assessment Profile: `Observation/usqualitycore-observation-screening-assessment`."
         end
 
         run do

@@ -7,11 +7,11 @@ module USQualityCoreTestKit
 
       id :us_quality_core_v050_devicenotrequested_validation_test
 
-      title 'DeviceRequest resources returned during previous tests conform to the US Quality Core Device Not Requested'
+      title 'DeviceRequest resources returned during previous tests conform to the US Quality Core Device Not Requested Profile'
 
       description %(
 This test verifies resources returned from the first search conform to
-the [US Quality Core Device Not Requested](http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-devicenotrequested).
+the [US Quality Core Device Not Requested Profile](http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-devicenotrequested).
 Systems must demonstrate at least one valid example in order to pass this test.
 
 It verifies the presence of mandatory elements and that elements with

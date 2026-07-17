@@ -5,11 +5,11 @@
 :reformatted_version: v050
 :resource: Immunization
 :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-immunizationnotdone
-:profile_name: US Quality Core Immunization Not Done
+:profile_name: US Quality Core Immunization Not Done Profile
 :profile_version: 0.5.0
 :title: Immunization Not Done
 :short_description: Verify support for the capabilities required by the US Quality
-  Core Immunization Not Done.
+  Core Immunization Not Done Profile.
 :is_delayed: false
 :interactions:
 - :code: read

@@ -19,7 +19,7 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Quality Core AllergyIntolerance: `AllergyIntolerance/usqualitycore-allergy-intolerance`."
+          "Inferno did not receive the expected read request for the target instance of the US Quality Core AllergyIntolerance Profile: `AllergyIntolerance/usqualitycore-allergy-intolerance`."
         end
 
         run do

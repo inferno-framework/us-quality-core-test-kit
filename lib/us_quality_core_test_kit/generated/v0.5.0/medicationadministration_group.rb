@@ -14,14 +14,14 @@ module USQualityCoreTestKit
     class MedicationadministrationGroup < Inferno::TestGroup
       title 'MedicationAdministration Tests'
 
-      short_description 'Verify support for the capabilities required by the US Quality Core MedicationAdministration.'
+      short_description 'Verify support for the capabilities required by the US Quality Core MedicationAdministration Profile.'
 
       description %(
   # Background
 
 These tests verify that the system under test is able to provide correct
 responses for MedicationAdministration queries. These queries must contain resources
-conforming to the US Quality Core MedicationAdministration as specified in the US Quality Core Implementation Guide.
+conforming to the US Quality Core MedicationAdministration Profile as specified in the US Quality Core Implementation Guide.
 
 # Testing Methodology
 ## Searching

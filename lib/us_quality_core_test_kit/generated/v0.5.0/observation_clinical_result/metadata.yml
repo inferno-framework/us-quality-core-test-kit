@@ -5,11 +5,11 @@
 :reformatted_version: v050
 :resource: Observation
 :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-clinical-result
-:profile_name: US Quality Core Observation Clinical Result
+:profile_name: US Quality Core Observation Clinical Result Profile
 :profile_version: 0.5.0
 :title: Observation Clinical Result
 :short_description: Verify support for the capabilities required by the US Quality
-  Core Observation Clinical Result.
+  Core Observation Clinical Result Profile.
 :is_delayed: false
 :interactions:
 - :code: read

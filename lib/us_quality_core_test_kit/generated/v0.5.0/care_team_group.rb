@@ -11,14 +11,14 @@ module USQualityCoreTestKit
     class CareTeamGroup < Inferno::TestGroup
       title 'CareTeam Tests'
 
-      short_description 'Verify support for the capabilities required by the US Quality Core CareTeam.'
+      short_description 'Verify support for the capabilities required by the US Quality Core CareTeam Profile.'
 
       description %(
   # Background
 
 These tests verify that the system under test is able to provide correct
 responses for CareTeam queries. These queries must contain resources
-conforming to the US Quality Core CareTeam as specified in the US Quality Core Implementation Guide.
+conforming to the US Quality Core CareTeam Profile as specified in the US Quality Core Implementation Guide.
 
 # Testing Methodology
 ## Searching

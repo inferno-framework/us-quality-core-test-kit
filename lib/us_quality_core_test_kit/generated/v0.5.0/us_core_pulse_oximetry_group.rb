@@ -61,7 +61,7 @@ in the first test for these elements.
 
 ## Profile Validation
 Each resource returned from the first search is expected to conform to
-the [US Core Pulse Oximetry Profile Profile](http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry). Each element is checked against
+the [US Core Pulse Oximetry Profile](http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry). Each element is checked against
 teminology binding and cardinality requirements.
 
 Elements with a required binding are validated against their bound

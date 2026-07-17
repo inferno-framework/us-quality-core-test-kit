@@ -12,14 +12,14 @@ module USQualityCoreTestKit
     class ImmunizationnotdoneGroup < Inferno::TestGroup
       title 'Immunization Not Done Tests'
 
-      short_description 'Verify support for the capabilities required by the US Quality Core Immunization Not Done.'
+      short_description 'Verify support for the capabilities required by the US Quality Core Immunization Not Done Profile.'
 
       description %(
   # Background
 
 These tests verify that the system under test is able to provide correct
 responses for Immunization queries. These queries must contain resources
-conforming to the US Quality Core Immunization Not Done as specified in the US Quality Core Implementation Guide.
+conforming to the US Quality Core Immunization Not Done Profile as specified in the US Quality Core Implementation Guide.
 
 # Testing Methodology
 ## Searching

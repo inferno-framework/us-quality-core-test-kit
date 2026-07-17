@@ -19,7 +19,7 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Quality Core Observation Clinical Result: `Observation/usqualitycore-observation-clinical-result`, `Observation/usqualitycore-observation-lab`."
+          "Inferno did not receive the expected read request for the target instance of the US Quality Core Observation Clinical Result Profile: `Observation/usqualitycore-observation-clinical-result`, `Observation/usqualitycore-observation-lab`."
         end
 
         run do

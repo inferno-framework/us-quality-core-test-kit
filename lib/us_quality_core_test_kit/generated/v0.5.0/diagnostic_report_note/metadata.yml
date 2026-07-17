@@ -6,10 +6,11 @@
 :resource: DiagnosticReport
 :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-diagnosticreport-note
 :profile_name: US Quality Core DiagnosticReport Profile for Report and Note Exchange
+  Profile
 :profile_version: 0.5.0
 :title: DiagnosticReport for Report and Note Exchange
 :short_description: Verify support for the capabilities required by the US Quality
-  Core DiagnosticReport Profile for Report and Note Exchange.
+  Core DiagnosticReport Profile for Report and Note Exchange Profile.
 :is_delayed: false
 :interactions:
 - :code: read

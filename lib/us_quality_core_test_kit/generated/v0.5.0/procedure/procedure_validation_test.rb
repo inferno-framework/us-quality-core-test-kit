@@ -7,11 +7,11 @@ module USQualityCoreTestKit
 
       id :us_quality_core_v050_procedure_validation_test
 
-      title 'Procedure resources returned during previous tests conform to the US Quality Core Procedure'
+      title 'Procedure resources returned during previous tests conform to the US Quality Core Procedure Profile'
 
       description %(
 This test verifies resources returned from the first search conform to
-the [US Quality Core Procedure](http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-procedure).
+the [US Quality Core Procedure Profile](http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-procedure).
 Systems must demonstrate at least one valid example in order to pass this test.
 
 It verifies the presence of mandatory elements and that elements with

@@ -19,7 +19,7 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Quality Core ServiceRequest: `ServiceRequest/usqualitycore-servicerequest`."
+          "Inferno did not receive the expected read request for the target instance of the US Quality Core ServiceRequest Profile: `ServiceRequest/usqualitycore-servicerequest`."
         end
 
         run do

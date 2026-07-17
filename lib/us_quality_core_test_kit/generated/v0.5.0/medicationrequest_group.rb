@@ -12,14 +12,14 @@ module USQualityCoreTestKit
     class MedicationrequestGroup < Inferno::TestGroup
       title 'MedicationRequest Tests'
 
-      short_description 'Verify support for the capabilities required by the US Quality Core MedicationRequest.'
+      short_description 'Verify support for the capabilities required by the US Quality Core MedicationRequest Profile.'
 
       description %(
   # Background
 
 These tests verify that the system under test is able to provide correct
 responses for MedicationRequest queries. These queries must contain resources
-conforming to the US Quality Core MedicationRequest as specified in the US Quality Core Implementation Guide.
+conforming to the US Quality Core MedicationRequest Profile as specified in the US Quality Core Implementation Guide.
 
 # Testing Methodology
 ## Searching
