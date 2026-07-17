@@ -99,7 +99,7 @@ module USQualityCoreTestKit
 
       def profile_name
         profile_name = profile.title.gsub('  ', ' ')
-        # This covers both US Core title style: "US Core Patient Profile" and 
+        # This covers both US Core title style: "US Core Patient Profile" and
         # US Quality Core title style: "US Quality Core Patient"
         profile_name.end_with?(' Profile') ? profile_name : "#{profile_name} Profile"
       end
