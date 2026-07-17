@@ -5,11 +5,11 @@
 :reformatted_version: v050
 :resource: CarePlan
 :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-careplan
-:profile_name: US Quality Core CarePlan
+:profile_name: US Quality Core CarePlan Profile
 :profile_version: 0.5.0
 :title: CarePlan
 :short_description: Verify support for the capabilities required by the US Quality
-  Core CarePlan.
+  Core CarePlan Profile.
 :is_delayed: false
 :interactions:
 - :code: read

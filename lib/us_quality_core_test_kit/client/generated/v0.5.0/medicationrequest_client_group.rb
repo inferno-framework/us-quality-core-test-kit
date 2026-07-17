@@ -17,14 +17,14 @@ module USQualityCoreTestKit
 # Background
 
 This test group verifies that the client can access MedicationRequest data
-conforming to the US Quality Core MedicationRequest.
+conforming to the US Quality Core MedicationRequest Profile.
 
 # Testing Methodology
 
 ## Data Access Supported
 
 Clients may not be required to support the MedicationRequest FHIR resource type. However, if they
-do support it, they must support the US Quality Core MedicationRequest and the resource type's search parameters.
+do support it, they must support the US Quality Core MedicationRequest Profile and the resource type's search parameters.
 The tests in this group will not execute if client makes no attempt to access data for the
 MedicationRequest resource type. In this case, the test will be marked as skip if support
 for the resource type is required, and omitted otherwise.

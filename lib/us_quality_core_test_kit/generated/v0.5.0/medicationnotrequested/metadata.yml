@@ -5,11 +5,11 @@
 :reformatted_version: v050
 :resource: MedicationRequest
 :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationnotrequested
-:profile_name: US Quality Core Medication Not Requested
+:profile_name: US Quality Core Medication Not Requested Profile
 :profile_version: 0.5.0
 :title: MedicationRequest Medication Not Requested
 :short_description: Verify support for the capabilities required by the US Quality
-  Core Medication Not Requested.
+  Core Medication Not Requested Profile.
 :is_delayed: false
 :interactions:
 - :code: read

@@ -5,11 +5,11 @@
 :reformatted_version: v050
 :resource: Procedure
 :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-procedurenotdone
-:profile_name: US Quality Core Procedure Not Done
+:profile_name: US Quality Core Procedure Not Done Profile
 :profile_version: 0.5.0
 :title: Procedure Not Done
 :short_description: Verify support for the capabilities required by the US Quality
-  Core Procedure Not Done.
+  Core Procedure Not Done Profile.
 :is_delayed: false
 :interactions:
 - :code: read

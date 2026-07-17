@@ -11,14 +11,14 @@ module USQualityCoreTestKit
     class AllergyIntoleranceGroup < Inferno::TestGroup
       title 'AllergyIntolerance Tests'
 
-      short_description 'Verify support for the capabilities required by the US Quality Core AllergyIntolerance.'
+      short_description 'Verify support for the capabilities required by the US Quality Core AllergyIntolerance Profile.'
 
       description %(
   # Background
 
 These tests verify that the system under test is able to provide correct
 responses for AllergyIntolerance queries. These queries must contain resources
-conforming to the US Quality Core AllergyIntolerance as specified in the US Quality Core Implementation Guide.
+conforming to the US Quality Core AllergyIntolerance Profile as specified in the US Quality Core Implementation Guide.
 
 # Testing Methodology
 ## Searching

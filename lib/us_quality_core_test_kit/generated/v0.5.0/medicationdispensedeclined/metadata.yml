@@ -5,11 +5,11 @@
 :reformatted_version: v050
 :resource: MedicationDispense
 :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationdispensedeclined
-:profile_name: US Quality Core MedicationDispense Declined
+:profile_name: US Quality Core MedicationDispense Declined Profile
 :profile_version: 0.5.0
 :title: MedicationDispense Declined
 :short_description: Verify support for the capabilities required by the US Quality
-  Core MedicationDispense Declined.
+  Core MedicationDispense Declined Profile.
 :is_delayed: false
 :interactions:
 - :code: read

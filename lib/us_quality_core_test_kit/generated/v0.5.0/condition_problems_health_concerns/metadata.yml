@@ -5,11 +5,11 @@
 :reformatted_version: v050
 :resource: Condition
 :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns
-:profile_name: US Quality Core Condition Problems Health Concerns
+:profile_name: US Quality Core Condition Problems Health Concerns Profile
 :profile_version: 0.5.0
 :title: Condition Problems Health Concerns
 :short_description: Verify support for the capabilities required by the US Quality
-  Core Condition Problems Health Concerns.
+  Core Condition Problems Health Concerns Profile.
 :is_delayed: false
 :interactions:
 - :code: read

@@ -5,11 +5,11 @@
 :reformatted_version: v050
 :resource: DeviceRequest
 :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-devicerequest
-:profile_name: US Quality Core DeviceRequest
+:profile_name: US Quality Core DeviceRequest Profile
 :profile_version: 0.5.0
 :title: DeviceRequest
 :short_description: Verify support for the capabilities required by the US Quality
-  Core DeviceRequest.
+  Core DeviceRequest Profile.
 :is_delayed: false
 :interactions:
 - :code: read

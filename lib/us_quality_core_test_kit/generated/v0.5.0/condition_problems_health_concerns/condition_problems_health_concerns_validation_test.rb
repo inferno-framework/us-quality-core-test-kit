@@ -7,11 +7,11 @@ module USQualityCoreTestKit
 
       id :us_quality_core_v050_condition_problems_health_concerns_validation_test
 
-      title 'Condition resources returned during previous tests conform to the US Quality Core Condition Problems Health Concerns'
+      title 'Condition resources returned during previous tests conform to the US Quality Core Condition Problems Health Concerns Profile'
 
       description %(
 This test verifies resources returned from the first search conform to
-the [US Quality Core Condition Problems Health Concerns](http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns).
+the [US Quality Core Condition Problems Health Concerns Profile](http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns).
 Systems must demonstrate at least one valid example in order to pass this test.
 
 It verifies the presence of mandatory elements and that elements with

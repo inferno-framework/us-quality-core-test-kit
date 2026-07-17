@@ -19,7 +19,7 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Quality Core Goal: `Goal/usqualitycore-goal`."
+          "Inferno did not receive the expected read request for the target instance of the US Quality Core Goal Profile: `Goal/usqualitycore-goal`."
         end
 
         run do

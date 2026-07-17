@@ -7,11 +7,11 @@ module USQualityCoreTestKit
 
       id :us_quality_core_v050_practitioner_role_validation_test
 
-      title 'PractitionerRole resources returned during previous tests conform to the US Quality Core PractitionerRole'
+      title 'PractitionerRole resources returned during previous tests conform to the US Quality Core PractitionerRole Profile'
 
       description %(
 This test verifies resources returned from the first search conform to
-the [US Quality Core PractitionerRole](http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitionerrole).
+the [US Quality Core PractitionerRole Profile](http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitionerrole).
 Systems must demonstrate at least one valid example in order to pass this test.
 
 It verifies the presence of mandatory elements and that elements with

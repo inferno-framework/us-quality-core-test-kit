@@ -13,14 +13,14 @@ module USQualityCoreTestKit
     class ConditionProblemsHealthConcernsGroup < Inferno::TestGroup
       title 'Condition Problems Health Concerns Tests'
 
-      short_description 'Verify support for the capabilities required by the US Quality Core Condition Problems Health Concerns.'
+      short_description 'Verify support for the capabilities required by the US Quality Core Condition Problems Health Concerns Profile.'
 
       description %(
   # Background
 
 These tests verify that the system under test is able to provide correct
 responses for Condition queries. These queries must contain resources
-conforming to the US Quality Core Condition Problems Health Concerns as specified in the US Quality Core Implementation Guide.
+conforming to the US Quality Core Condition Problems Health Concerns Profile as specified in the US Quality Core Implementation Guide.
 
 # Testing Methodology
 ## Searching

@@ -19,7 +19,7 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Quality Core Task Rejected: `Task/usqualitycore-taskrejected`."
+          "Inferno did not receive the expected read request for the target instance of the US Quality Core Task Rejected Profile: `Task/usqualitycore-taskrejected`."
         end
 
         run do

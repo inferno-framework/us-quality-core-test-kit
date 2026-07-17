@@ -5,11 +5,11 @@
 :reformatted_version: v050
 :resource: Observation
 :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-screening-assessment
-:profile_name: US Quality Core Observation Screening Assessment
+:profile_name: US Quality Core Observation Screening Assessment Profile
 :profile_version: 0.5.0
 :title: Observation Screening Assessment
 :short_description: Verify support for the capabilities required by the US Quality
-  Core Observation Screening Assessment.
+  Core Observation Screening Assessment Profile.
 :is_delayed: false
 :interactions:
 - :code: read

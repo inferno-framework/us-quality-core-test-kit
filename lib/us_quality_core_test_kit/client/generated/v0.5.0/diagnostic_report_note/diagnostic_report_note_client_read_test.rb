@@ -19,7 +19,7 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Quality Core DiagnosticReport Profile for Report and Note Exchange: `DiagnosticReport/usqualitycore-diagnostic-report-note`."
+          "Inferno did not receive the expected read request for the target instance of the US Quality Core DiagnosticReport Profile for Report and Note Exchange Profile: `DiagnosticReport/usqualitycore-diagnostic-report-note`."
         end
 
         run do

@@ -19,7 +19,7 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Quality Core Immunization: `Immunization/usqualitycore-immunization`."
+          "Inferno did not receive the expected read request for the target instance of the US Quality Core Immunization Profile: `Immunization/usqualitycore-immunization`."
         end
 
         run do

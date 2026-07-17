@@ -14,14 +14,14 @@ module USQualityCoreTestKit
     class ObservationScreeningAssessmentGroup < Inferno::TestGroup
       title 'Observation Screening Assessment Tests'
 
-      short_description 'Verify support for the capabilities required by the US Quality Core Observation Screening Assessment.'
+      short_description 'Verify support for the capabilities required by the US Quality Core Observation Screening Assessment Profile.'
 
       description %(
   # Background
 
 These tests verify that the system under test is able to provide correct
 responses for Observation queries. These queries must contain resources
-conforming to the US Quality Core Observation Screening Assessment as specified in the US Quality Core Implementation Guide.
+conforming to the US Quality Core Observation Screening Assessment Profile as specified in the US Quality Core Implementation Guide.
 
 # Testing Methodology
 ## Searching

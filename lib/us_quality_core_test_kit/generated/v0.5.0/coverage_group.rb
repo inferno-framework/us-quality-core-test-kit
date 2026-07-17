@@ -11,14 +11,14 @@ module USQualityCoreTestKit
     class CoverageGroup < Inferno::TestGroup
       title 'Coverage Tests'
 
-      short_description 'Verify support for the capabilities required by the US Quality Core Coverage.'
+      short_description 'Verify support for the capabilities required by the US Quality Core Coverage Profile.'
 
       description %(
   # Background
 
 These tests verify that the system under test is able to provide correct
 responses for Coverage queries. These queries must contain resources
-conforming to the US Quality Core Coverage as specified in the US Quality Core Implementation Guide.
+conforming to the US Quality Core Coverage Profile as specified in the US Quality Core Implementation Guide.
 
 # Testing Methodology
 ## Searching

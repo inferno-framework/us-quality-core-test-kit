@@ -5,11 +5,11 @@
 :reformatted_version: v050
 :resource: AllergyIntolerance
 :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance
-:profile_name: US Quality Core AllergyIntolerance
+:profile_name: US Quality Core AllergyIntolerance Profile
 :profile_version: 0.5.0
 :title: AllergyIntolerance
 :short_description: Verify support for the capabilities required by the US Quality
-  Core AllergyIntolerance.
+  Core AllergyIntolerance Profile.
 :is_delayed: false
 :interactions:
 - :code: read

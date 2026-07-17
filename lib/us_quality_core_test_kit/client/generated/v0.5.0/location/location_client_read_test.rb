@@ -19,7 +19,7 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Quality Core Location: `Location/usqualitycore-location`."
+          "Inferno did not receive the expected read request for the target instance of the US Quality Core Location Profile: `Location/usqualitycore-location`."
         end
 
         run do

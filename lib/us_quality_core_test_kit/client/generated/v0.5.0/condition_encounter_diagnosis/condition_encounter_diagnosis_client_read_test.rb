@@ -19,7 +19,7 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Quality Core Condition Encounter Diagnosis: `Condition/usqualitycore-condition-encounter-diagnosis`."
+          "Inferno did not receive the expected read request for the target instance of the US Quality Core Condition Encounter Diagnosis Profile: `Condition/usqualitycore-condition-encounter-diagnosis`."
         end
 
         run do

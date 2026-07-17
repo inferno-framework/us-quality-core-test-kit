@@ -5,11 +5,11 @@
 :reformatted_version: v050
 :resource: Observation
 :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-lab
-:profile_name: US Quality Core Laboratory Result Observation
+:profile_name: US Quality Core Laboratory Result Observation Profile
 :profile_version: 0.5.0
 :title: Observation Laboratory Result
 :short_description: Verify support for the capabilities required by the US Quality
-  Core Laboratory Result Observation.
+  Core Laboratory Result Observation Profile.
 :is_delayed: false
 :interactions:
 - :code: read

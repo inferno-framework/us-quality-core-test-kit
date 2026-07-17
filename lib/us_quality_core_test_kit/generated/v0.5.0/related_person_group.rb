@@ -12,14 +12,14 @@ module USQualityCoreTestKit
     class RelatedPersonGroup < Inferno::TestGroup
       title 'RelatedPerson Tests'
 
-      short_description 'Verify support for the capabilities required by the US Quality Core RelatedPerson.'
+      short_description 'Verify support for the capabilities required by the US Quality Core RelatedPerson Profile.'
 
       description %(
   # Background
 
 These tests verify that the system under test is able to provide correct
 responses for RelatedPerson queries. These queries must contain resources
-conforming to the US Quality Core RelatedPerson as specified in the US Quality Core Implementation Guide.
+conforming to the US Quality Core RelatedPerson Profile as specified in the US Quality Core Implementation Guide.
 
 # Testing Methodology
 ## Searching

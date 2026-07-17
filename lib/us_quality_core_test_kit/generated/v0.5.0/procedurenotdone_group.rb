@@ -13,14 +13,14 @@ module USQualityCoreTestKit
     class ProcedurenotdoneGroup < Inferno::TestGroup
       title 'Procedure Not Done Tests'
 
-      short_description 'Verify support for the capabilities required by the US Quality Core Procedure Not Done.'
+      short_description 'Verify support for the capabilities required by the US Quality Core Procedure Not Done Profile.'
 
       description %(
   # Background
 
 These tests verify that the system under test is able to provide correct
 responses for Procedure queries. These queries must contain resources
-conforming to the US Quality Core Procedure Not Done as specified in the US Quality Core Implementation Guide.
+conforming to the US Quality Core Procedure Not Done Profile as specified in the US Quality Core Implementation Guide.
 
 # Testing Methodology
 ## Searching

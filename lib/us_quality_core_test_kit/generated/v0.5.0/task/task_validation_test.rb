@@ -7,11 +7,11 @@ module USQualityCoreTestKit
 
       id :us_quality_core_v050_task_validation_test
 
-      title 'Task resources returned during previous tests conform to the US Quality Core Task'
+      title 'Task resources returned during previous tests conform to the US Quality Core Task Profile'
 
       description %(
 This test verifies resources returned from the first search conform to
-the [US Quality Core Task](http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-task).
+the [US Quality Core Task Profile](http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-task).
 Systems must demonstrate at least one valid example in order to pass this test.
 
 It verifies the presence of mandatory elements and that elements with

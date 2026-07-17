@@ -5,11 +5,11 @@
 :reformatted_version: v050
 :resource: Immunization
 :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-immunization
-:profile_name: US Quality Core Immunization
+:profile_name: US Quality Core Immunization Profile
 :profile_version: 0.5.0
 :title: Immunization
 :short_description: Verify support for the capabilities required by the US Quality
-  Core Immunization.
+  Core Immunization Profile.
 :is_delayed: false
 :interactions:
 - :code: read

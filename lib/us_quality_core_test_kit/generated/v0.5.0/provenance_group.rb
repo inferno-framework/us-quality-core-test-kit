@@ -30,7 +30,7 @@ in the first test for these elements.
 
 ## Profile Validation
 Each resource returned from the first search is expected to conform to
-the [US Core Provenance Profile Profile](http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance). Each element is checked against
+the [US Core Provenance Profile](http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance). Each element is checked against
 teminology binding and cardinality requirements.
 
 Elements with a required binding are validated against their bound

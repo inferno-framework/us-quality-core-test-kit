@@ -5,11 +5,11 @@
 :reformatted_version: v050
 :resource: MedicationAdministration
 :profile_url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationadministration
-:profile_name: US Quality Core MedicationAdministration
+:profile_name: US Quality Core MedicationAdministration Profile
 :profile_version: 0.5.0
 :title: MedicationAdministration
 :short_description: Verify support for the capabilities required by the US Quality
-  Core MedicationAdministration.
+  Core MedicationAdministration Profile.
 :is_delayed: false
 :interactions:
 - :code: read

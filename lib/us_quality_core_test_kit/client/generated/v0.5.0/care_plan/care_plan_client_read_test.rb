@@ -19,7 +19,7 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Quality Core CarePlan: `CarePlan/usqualitycore-care-plan`."
+          "Inferno did not receive the expected read request for the target instance of the US Quality Core CarePlan Profile: `CarePlan/usqualitycore-care-plan`."
         end
 
         run do

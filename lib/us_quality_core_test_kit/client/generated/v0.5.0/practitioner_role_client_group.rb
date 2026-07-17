@@ -15,14 +15,14 @@ module USQualityCoreTestKit
 # Background
 
 This test group verifies that the client can access PractitionerRole data
-conforming to the US Quality Core PractitionerRole.
+conforming to the US Quality Core PractitionerRole Profile.
 
 # Testing Methodology
 
 ## Data Access Supported
 
 Clients may not be required to support the PractitionerRole FHIR resource type. However, if they
-do support it, they must support the US Quality Core PractitionerRole and the resource type's search parameters.
+do support it, they must support the US Quality Core PractitionerRole Profile and the resource type's search parameters.
 The tests in this group will not execute if client makes no attempt to access data for the
 PractitionerRole resource type. In this case, the test will be marked as skip if support
 for the resource type is required, and omitted otherwise.

@@ -13,14 +13,14 @@ module USQualityCoreTestKit
     class TaskGroup < Inferno::TestGroup
       title 'Task Tests'
 
-      short_description 'Verify support for the capabilities required by the US Quality Core Task.'
+      short_description 'Verify support for the capabilities required by the US Quality Core Task Profile.'
 
       description %(
   # Background
 
 These tests verify that the system under test is able to provide correct
 responses for Task queries. These queries must contain resources
-conforming to the US Quality Core Task as specified in the US Quality Core Implementation Guide.
+conforming to the US Quality Core Task Profile as specified in the US Quality Core Implementation Guide.
 
 # Testing Methodology
 ## Searching
