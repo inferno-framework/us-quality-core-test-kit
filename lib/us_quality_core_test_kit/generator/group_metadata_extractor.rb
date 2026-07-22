@@ -248,6 +248,10 @@ module USQualityCoreTestKit
       def mark_mandatory_and_must_support_searches
         searches.each do |search|
           search[:names_not_must_support_or_mandatory] = search[:names].reject do |name|
+            # Treat the ServiceRequest do-not-perform search parameter as required. See:
+            # https://github.com/onc-healthit/us-quality-core/issues/39
+            next true if resource == 'ServiceRequest' && name == 'do-not-perform'
+
             full_paths = search_definitions[name.to_sym][:full_paths]
             any_must_support_elements = must_supports[:elements].any? do |element|
               full_must_support_paths = ["#{resource}.#{element[:original_path]}", "#{resource}.#{element[:path]}"]
@@ -275,7 +279,9 @@ module USQualityCoreTestKit
             end
 
             any_mandatory_elements = mandatory_elements.any? do |element|
-              full_paths.include?(element)
+              full_paths.any? do |path|
+                mandatory_element_matches_search_path?(element, path)
+              end
             end
 
             any_must_support_elements || any_must_support_slices || any_mandatory_elements
@@ -283,6 +289,19 @@ module USQualityCoreTestKit
 
           search[:must_support_or_mandatory] = search[:names_not_must_support_or_mandatory].empty?
         end
+      end
+
+      def mandatory_element_matches_search_path?(element, path)
+        # Extension search parameters identify an extension with a FHIRPath
+        # filter (for example, `modifierExtension.where(url='...').value`),
+        # while the snapshot records the mandatory value as
+        # `modifierExtension.value[x]`. Remove the filter and normalize choice
+        # elements before comparing the paths.
+        normalized_path = path.gsub(/\.where\(url\s*=\s*'[^']+'\)/, '').gsub('[x]', '')
+        normalized_element = element.gsub('[x]', '')
+
+        normalized_path == normalized_element ||
+          (element.end_with?('[x]') && normalized_path.start_with?(normalized_element))
       end
 
       def search_metadata_extractor

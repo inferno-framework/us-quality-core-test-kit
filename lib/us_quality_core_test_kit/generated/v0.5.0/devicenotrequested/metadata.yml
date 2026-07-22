@@ -22,9 +22,8 @@
   :names:
   - patient
   - do-not-perform
-  :names_not_must_support_or_mandatory:
-  - do-not-perform
-  :must_support_or_mandatory: false
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
 - :names:
   - patient
   :expectation: SHALL

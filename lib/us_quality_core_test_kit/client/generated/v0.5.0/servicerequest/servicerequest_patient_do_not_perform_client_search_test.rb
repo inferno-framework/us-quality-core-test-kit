@@ -14,7 +14,7 @@ module USQualityCoreTestKit
           The client demonstrates SHALL support for searching patient + do-not-perform on Servicerequest.
         )
 
-        optional true
+        optional false
 
         def required_params
           ["patient", "do-not-perform"]

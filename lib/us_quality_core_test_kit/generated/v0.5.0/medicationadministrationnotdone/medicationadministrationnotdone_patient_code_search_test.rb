@@ -24,7 +24,7 @@ Medications, the search will be repeated with
 
       id :us_quality_core_v050_medicationadministrationnotdone_patient_code_search_test
 
-  optional
+  
 
   
       input :patient_ids,
