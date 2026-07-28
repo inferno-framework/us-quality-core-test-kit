@@ -133,6 +133,11 @@ The tests will not pass unless at least one profile group passes.
 
         )
 
+        input :client_wait_timeout,
+          title: 'Client Wait Timeout (seconds)',
+          description: 'Maximum time Inferno waits for the client to make the required requests.',
+          default: '900'
+
         links [
           {
             type: 'report_issue',

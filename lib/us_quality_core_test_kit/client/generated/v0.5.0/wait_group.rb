@@ -40,6 +40,10 @@ module USQualityCoreTestKit
             output :access_token
 
             run do
+              assert client_wait_timeout.match?(/\A[1-9]\d*\z/),
+                     'Client Wait Timeout must be a positive whole number of seconds.'
+              timeout = client_wait_timeout.to_i
+
               token = SecureRandom.uuid
               output access_token: token
 
@@ -470,7 +474,7 @@ module USQualityCoreTestKit
   * searches:
     * _id
                 ),
-                timeout: 900
+                timeout: timeout
               )
             end
           end
