@@ -14,7 +14,7 @@ module USQualityCoreTestKit
           The client demonstrates SHALL support for searching patient + effective-time on Medicationadministrationnotdone.
         )
 
-        optional true
+        optional false
 
         def required_params
           ["patient", "effective-time"]

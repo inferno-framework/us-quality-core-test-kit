@@ -31,7 +31,7 @@ FHIR R4 specification.
 
       id :us_quality_core_v050_devicenotrequested_patient_do_not_perform_search_test
 
-  optional
+  
 
   
       input :patient_ids,

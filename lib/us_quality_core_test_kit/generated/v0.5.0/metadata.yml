@@ -1207,9 +1207,8 @@
     :names:
     - patient
     - do-not-perform
-    :names_not_must_support_or_mandatory:
-    - do-not-perform
-    :must_support_or_mandatory: false
+    :names_not_must_support_or_mandatory: []
+    :must_support_or_mandatory: true
   - :names:
     - patient
     :expectation: SHALL
@@ -1376,9 +1375,8 @@
     :names:
     - patient
     - do-not-perform
-    :names_not_must_support_or_mandatory:
-    - do-not-perform
-    :must_support_or_mandatory: false
+    :names_not_must_support_or_mandatory: []
+    :must_support_or_mandatory: true
   - :names:
     - patient
     :expectation: SHALL
@@ -3296,16 +3294,14 @@
     :names:
     - patient
     - code
-    :names_not_must_support_or_mandatory:
-    - code
-    :must_support_or_mandatory: false
+    :names_not_must_support_or_mandatory: []
+    :must_support_or_mandatory: true
   - :expectation: SHALL
     :names:
     - patient
     - effective-time
-    :names_not_must_support_or_mandatory:
-    - effective-time
-    :must_support_or_mandatory: false
+    :names_not_must_support_or_mandatory: []
+    :must_support_or_mandatory: true
   :search_definitions:
     :patient:
       :paths:
@@ -10860,9 +10856,8 @@
     :names:
     - patient
     - do-not-perform
-    :names_not_must_support_or_mandatory:
-    - do-not-perform
-    :must_support_or_mandatory: false
+    :names_not_must_support_or_mandatory: []
+    :must_support_or_mandatory: true
   - :names:
     - _id
     :expectation: SHALL
