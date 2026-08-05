@@ -8,6 +8,7 @@ require_relative 'read_endpoint'
 require_relative 'search_endpoint'
 require_relative '../../test_helper'
 require_relative 'wait_group'
+require_relative '../../custom_groups/pagination_group'
 
 require_relative 'patient_client_group'
 require_relative 'adverse_event_client_group'
@@ -161,6 +162,7 @@ The tests will not pass unless at least one profile group passes.
         ))
 
         suite_endpoint :post, SEARCH_POST_ROUTE, SearchEndpoint
+        suite_endpoint :get, FHIR_ROUTE, SearchEndpoint
         suite_endpoint :get, SEARCH_ROUTE, SearchEndpoint
         suite_endpoint :get, READ_ROUTE, ReadEndpoint
 
@@ -243,9 +245,13 @@ CapabilityStatement](http://fhir.org/guides/onc/us-quality-core/CapabilityStatem
           group from: :us_quality_core_client_v050_provenance
           group from: :us_quality_core_client_v050_specimen
 
+          group from: :us_quality_core_client_pagination_group
+
           run do
             profile_groups = groups.reject do |group|
-              group.id == 'us_quality_core_client_access_group_v050' || group.id.end_with?('-us_quality_core_client_access_group_v050')
+              group.id == 'us_quality_core_client_access_group_v050' ||
+                group.id.end_with?('-us_quality_core_client_access_group_v050') ||
+                group.id == 'us_quality_core_client_pagination_group'
             end
 
             passing_profile_group = profile_groups.any? do |group|

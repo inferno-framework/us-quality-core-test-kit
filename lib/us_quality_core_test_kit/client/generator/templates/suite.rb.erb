@@ -8,6 +8,7 @@ require_relative 'read_endpoint'
 require_relative 'search_endpoint'
 require_relative '../../test_helper'
 require_relative 'wait_group'
+require_relative '../../custom_groups/pagination_group'
 
 <%- group_file_list.each do |group| -%>
 require_relative '<%= group %>'
@@ -55,6 +56,7 @@ module USQualityCoreTestKit
         ))
 
         suite_endpoint :post, SEARCH_POST_ROUTE, SearchEndpoint
+        suite_endpoint :get, FHIR_ROUTE, SearchEndpoint
         suite_endpoint :get, SEARCH_ROUTE, SearchEndpoint
         suite_endpoint :get, READ_ROUTE, ReadEndpoint
 
@@ -77,9 +79,13 @@ module USQualityCoreTestKit
           group from: :<%= group %>
           <%- end -%>
 
+          group from: :us_quality_core_client_pagination_group
+
           run do
             profile_groups = groups.reject do |group|
-              group.id == '<%= access_group_id %>' || group.id.end_with?('-<%= access_group_id %>')
+              group.id == '<%= access_group_id %>' ||
+                group.id.end_with?('-<%= access_group_id %>') ||
+                group.id == 'us_quality_core_client_pagination_group'
             end
 
             passing_profile_group = profile_groups.any? do |group|

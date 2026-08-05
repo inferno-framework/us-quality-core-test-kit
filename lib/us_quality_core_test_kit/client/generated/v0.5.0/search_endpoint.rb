@@ -20,7 +20,7 @@ module USQualityCoreTestKit
         end
 
         def tags
-          [SEARCH_REQUEST_TAG, resource_to_tag(resource_type)]
+          [SEARCH_REQUEST_TAG, resource_to_tag(resource_type)].compact
         end
 
         def resource_to_tag(resource)

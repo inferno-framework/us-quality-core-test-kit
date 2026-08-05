@@ -38,7 +38,7 @@ module USQualityCoreTestKit
         resource_type = request.params[:resource_type]
         request_params = request.params.to_h.except(:resource_type).stringify_keys
 
-        server_response = proxy_client.get(resource_type, request_params)
+        server_response = proxy_client.get(resource_type || '', request_params)
         response.status = server_response.status
         response.body = if response.status == 200
                           replace_bundle_urls(FHIR.from_contents(server_response.body)).to_json
