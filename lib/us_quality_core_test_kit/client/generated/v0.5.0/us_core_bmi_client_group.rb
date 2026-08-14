@@ -5,7 +5,6 @@ require_relative 'us_core_bmi/us_core_bmi_patient_code_client_search_test'
 require_relative 'us_core_bmi/us_core_bmi_patient_category_status_client_search_test'
 require_relative 'us_core_bmi/us_core_bmi_patient_category_client_search_test'
 require_relative 'us_core_bmi/us_core_bmi_patient_category_date_client_search_test'
-require_relative 'us_core_bmi/us_core_bmi_non_required_search_parameters_client_search_test'
 
 module USQualityCoreTestKit
   module Client
@@ -62,7 +61,6 @@ Inferno will also look for searches using the following optional parameters:
         test from: :us_quality_core_v050_us_core_bmi_patient_category_status_client_search_test
         test from: :us_quality_core_v050_us_core_bmi_patient_category_client_search_test
         test from: :us_quality_core_v050_us_core_bmi_patient_category_date_client_search_test
-        test from: :us_quality_core_v050_us_core_bmi_non_required_search_parameters_client_search_test
       end
     end
   end

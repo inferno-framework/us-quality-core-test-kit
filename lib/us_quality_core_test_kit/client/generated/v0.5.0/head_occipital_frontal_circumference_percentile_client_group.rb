@@ -5,7 +5,6 @@ require_relative 'head_occipital_frontal_circumference_percentile/head_occipital
 require_relative 'head_occipital_frontal_circumference_percentile/head_occipital_frontal_circumference_percentile_patient_category_status_client_search_test'
 require_relative 'head_occipital_frontal_circumference_percentile/head_occipital_frontal_circumference_percentile_patient_category_client_search_test'
 require_relative 'head_occipital_frontal_circumference_percentile/head_occipital_frontal_circumference_percentile_patient_category_date_client_search_test'
-require_relative 'head_occipital_frontal_circumference_percentile/head_occipital_frontal_circumference_percentile_non_required_search_parameters_client_search_test'
 
 module USQualityCoreTestKit
   module Client
@@ -62,7 +61,6 @@ Inferno will also look for searches using the following optional parameters:
         test from: :us_quality_core_v050_head_occipital_frontal_circumference_percentile_patient_category_status_client_search_test
         test from: :us_quality_core_v050_head_occipital_frontal_circumference_percentile_patient_category_client_search_test
         test from: :us_quality_core_v050_head_occipital_frontal_circumference_percentile_patient_category_date_client_search_test
-        test from: :us_quality_core_v050_head_occipital_frontal_circumference_percentile_non_required_search_parameters_client_search_test
       end
     end
   end

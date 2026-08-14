@@ -54,6 +54,13 @@ module USQualityCoreTestKit
           "The client demonstrates #{conformance_expectation} support for searching " \
             "#{search_param_name_string} on #{profile_identifier.camelize}."
         end
+
+        def all_required_search_parameters
+          group_metadata.searches
+                        .select { |search| search[:expectation] == 'SHALL' }
+                        .flat_map { |search| search[:names] }
+                        .uniq
+        end
       end
     end
   end

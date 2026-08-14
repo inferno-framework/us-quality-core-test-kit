@@ -5,7 +5,6 @@ require_relative 'diagnostic_report_lab/diagnostic_report_lab_patient_category_c
 require_relative 'diagnostic_report_lab/diagnostic_report_lab_patient_client_search_test'
 require_relative 'diagnostic_report_lab/diagnostic_report_lab_patient_category_date_client_search_test'
 require_relative 'diagnostic_report_lab/diagnostic_report_lab_patient_code_client_search_test'
-require_relative 'diagnostic_report_lab/diagnostic_report_lab_non_required_search_parameters_client_search_test'
 
 module USQualityCoreTestKit
   module Client
@@ -62,7 +61,6 @@ Inferno will also look for searches using the following optional parameters:
         test from: :us_quality_core_v050_diagnostic_report_lab_patient_client_search_test
         test from: :us_quality_core_v050_diagnostic_report_lab_patient_category_date_client_search_test
         test from: :us_quality_core_v050_diagnostic_report_lab_patient_code_client_search_test
-        test from: :us_quality_core_v050_diagnostic_report_lab_non_required_search_parameters_client_search_test
       end
     end
   end

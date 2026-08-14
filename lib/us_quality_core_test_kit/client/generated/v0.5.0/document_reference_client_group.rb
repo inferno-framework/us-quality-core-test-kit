@@ -6,7 +6,6 @@ require_relative 'document_reference/document_reference_id_client_search_test'
 require_relative 'document_reference/document_reference_patient_type_client_search_test'
 require_relative 'document_reference/document_reference_patient_category_client_search_test'
 require_relative 'document_reference/document_reference_patient_category_date_client_search_test'
-require_relative 'document_reference/document_reference_non_required_search_parameters_client_search_test'
 
 module USQualityCoreTestKit
   module Client
@@ -65,7 +64,6 @@ Inferno will also look for searches using the following optional parameters:
         test from: :us_quality_core_v050_document_reference_patient_type_client_search_test
         test from: :us_quality_core_v050_document_reference_patient_category_client_search_test
         test from: :us_quality_core_v050_document_reference_patient_category_date_client_search_test
-        test from: :us_quality_core_v050_document_reference_non_required_search_parameters_client_search_test
       end
     end
   end

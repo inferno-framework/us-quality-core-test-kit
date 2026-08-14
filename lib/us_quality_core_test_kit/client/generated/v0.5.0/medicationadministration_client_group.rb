@@ -5,7 +5,6 @@ require_relative 'medicationadministration/medicationadministration_patient_stat
 require_relative 'medicationadministration/medicationadministration_patient_client_search_test'
 require_relative 'medicationadministration/medicationadministration_patient_code_client_search_test'
 require_relative 'medicationadministration/medicationadministration_patient_effective_time_client_search_test'
-require_relative 'medicationadministration/medicationadministration_non_required_search_parameters_client_search_test'
 
 module USQualityCoreTestKit
   module Client
@@ -62,7 +61,6 @@ Inferno will also look for searches using the following optional parameters:
         test from: :us_quality_core_v050_medicationadministration_patient_client_search_test
         test from: :us_quality_core_v050_medicationadministration_patient_code_client_search_test
         test from: :us_quality_core_v050_medicationadministration_patient_effective_time_client_search_test
-        test from: :us_quality_core_v050_medicationadministration_non_required_search_parameters_client_search_test
       end
     end
   end

@@ -3,7 +3,6 @@
 require_relative 'medicationrequest/medicationrequest_client_read_test'
 require_relative 'medicationrequest/medicationrequest_patient_intent_do_not_perform_client_search_test'
 require_relative 'medicationrequest/medicationrequest_patient_intent_client_search_test'
-require_relative 'medicationrequest/medicationrequest_non_required_search_parameters_client_search_test'
 
 module USQualityCoreTestKit
   module Client
@@ -56,7 +55,6 @@ Inferno will also look for searches using the following optional parameters:
         test from: :us_quality_core_v050_medicationrequest_client_read_test
         test from: :us_quality_core_v050_medicationrequest_patient_intent_do_not_perform_client_search_test
         test from: :us_quality_core_v050_medicationrequest_patient_intent_client_search_test
-        test from: :us_quality_core_v050_medicationrequest_non_required_search_parameters_client_search_test
       end
     end
   end
