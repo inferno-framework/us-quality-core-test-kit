@@ -2,6 +2,7 @@
 
 require_relative 'family_member_history/family_member_history_client_read_test'
 require_relative 'family_member_history/family_member_history_patient_client_search_test'
+require_relative 'family_member_history/family_member_history_non_required_search_parameters_client_search_test'
 
 module USQualityCoreTestKit
   module Client
@@ -52,6 +53,7 @@ Inferno will also look for searches using the following optional parameters:
 
         test from: :us_quality_core_v050_family_member_history_client_read_test
         test from: :us_quality_core_v050_family_member_history_patient_client_search_test
+        test from: :us_quality_core_v050_family_member_history_non_required_search_parameters_client_search_test
       end
     end
   end

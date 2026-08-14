@@ -2,6 +2,7 @@
 
 require_relative 'care_team/care_team_client_read_test'
 require_relative 'care_team/care_team_patient_status_client_search_test'
+require_relative 'care_team/care_team_non_required_search_parameters_client_search_test'
 
 module USQualityCoreTestKit
   module Client
@@ -52,6 +53,7 @@ Inferno will also look for searches using the following optional parameters:
 
         test from: :us_quality_core_v050_care_team_client_read_test
         test from: :us_quality_core_v050_care_team_patient_status_client_search_test
+        test from: :us_quality_core_v050_care_team_non_required_search_parameters_client_search_test
       end
     end
   end

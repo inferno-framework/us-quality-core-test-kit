@@ -4,6 +4,7 @@ require_relative 'condition_problems_health_concerns/condition_problems_health_c
 require_relative 'condition_problems_health_concerns/condition_problems_health_concerns_patient_category_client_search_test'
 require_relative 'condition_problems_health_concerns/condition_problems_health_concerns_patient_client_search_test'
 require_relative 'condition_problems_health_concerns/condition_problems_health_concerns_patient_code_client_search_test'
+require_relative 'condition_problems_health_concerns/condition_problems_health_concerns_non_required_search_parameters_client_search_test'
 
 module USQualityCoreTestKit
   module Client
@@ -58,6 +59,7 @@ Inferno will also look for searches using the following optional parameters:
         test from: :us_quality_core_v050_condition_problems_health_concerns_patient_category_client_search_test
         test from: :us_quality_core_v050_condition_problems_health_concerns_patient_client_search_test
         test from: :us_quality_core_v050_condition_problems_health_concerns_patient_code_client_search_test
+        test from: :us_quality_core_v050_condition_problems_health_concerns_non_required_search_parameters_client_search_test
       end
     end
   end

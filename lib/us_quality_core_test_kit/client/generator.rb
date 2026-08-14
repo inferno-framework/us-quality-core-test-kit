@@ -13,6 +13,7 @@ require_relative 'generator/capability_statement_generator'
 require_relative 'generator/suite_generator'
 require_relative 'generator/read_test_generator'
 require_relative 'generator/search_test_generator'
+require_relative 'generator/non_required_search_parameters_test_generator'
 require_relative 'generator/wait_group_generator'
 require_relative 'generator/read_endpoint_generator'
 require_relative 'generator/search_endpoint_generator'
@@ -98,6 +99,7 @@ module USQualityCoreTestKit
 
       def generate_search_tests
         SearchTestGenerator.generate(ig_metadata, base_output_dir)
+        NonRequiredSearchParametersTestGenerator.generate(ig_metadata, base_output_dir)
       end
 
       def generate_endpoints

@@ -4,6 +4,7 @@ require_relative 'procedure/procedure_client_read_test'
 require_relative 'procedure/procedure_patient_status_client_search_test'
 require_relative 'procedure/procedure_patient_client_search_test'
 require_relative 'procedure/procedure_patient_date_client_search_test'
+require_relative 'procedure/procedure_non_required_search_parameters_client_search_test'
 
 module USQualityCoreTestKit
   module Client
@@ -58,6 +59,7 @@ Inferno will also look for searches using the following optional parameters:
         test from: :us_quality_core_v050_procedure_patient_status_client_search_test
         test from: :us_quality_core_v050_procedure_patient_client_search_test
         test from: :us_quality_core_v050_procedure_patient_date_client_search_test
+        test from: :us_quality_core_v050_procedure_non_required_search_parameters_client_search_test
       end
     end
   end

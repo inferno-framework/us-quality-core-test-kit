@@ -5,6 +5,7 @@ require_relative 'observation_clinical_result/observation_clinical_result_patien
 require_relative 'observation_clinical_result/observation_clinical_result_patient_category_client_search_test'
 require_relative 'observation_clinical_result/observation_clinical_result_patient_category_date_client_search_test'
 require_relative 'observation_clinical_result/observation_clinical_result_patient_code_client_search_test'
+require_relative 'observation_clinical_result/observation_clinical_result_non_required_search_parameters_client_search_test'
 
 module USQualityCoreTestKit
   module Client
@@ -62,6 +63,7 @@ Inferno will also look for searches using the following optional parameters:
         test from: :us_quality_core_v050_observation_clinical_result_patient_category_client_search_test
         test from: :us_quality_core_v050_observation_clinical_result_patient_category_date_client_search_test
         test from: :us_quality_core_v050_observation_clinical_result_patient_code_client_search_test
+        test from: :us_quality_core_v050_observation_clinical_result_non_required_search_parameters_client_search_test
       end
     end
   end
