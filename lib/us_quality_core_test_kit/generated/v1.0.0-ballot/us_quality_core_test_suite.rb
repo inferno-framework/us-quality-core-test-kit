@@ -130,7 +130,7 @@ module USQualityCoreTestKit
       id :us_quality_core_v100_ballot
 
       fhir_resource_validator do
-        igs 'fhir.onc.us-quality-core#1.0.0-ballot'
+        igs 'hl7.fhir.us.quality-core#1.0.0-ballot'
 
         message_filters = VALIDATION_MESSAGE_FILTERS
 
