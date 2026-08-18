@@ -1851,7 +1851,7 @@
         "id": "usqualitycore-adverse-event",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-adverseevent"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-adverseevent"
           ]
         },
         "identifier": {
@@ -1941,7 +1941,7 @@
         "id": "usqualitycore-allergy-intolerance",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance"
           ]
         },
         "identifier": [
@@ -2069,7 +2069,7 @@
         "id": "usqualitycore-allergy-intolerance-dup1",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance"
           ]
         },
         "clinicalStatus": {
@@ -2129,7 +2129,7 @@
         "resourceType": "AllergyIntolerance",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance"
           ]
         },
         "clinicalStatus": {
@@ -2190,7 +2190,7 @@
         "resourceType": "AllergyIntolerance",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance"
           ]
         },
         "clinicalStatus": {
@@ -2251,7 +2251,7 @@
         "resourceType": "AllergyIntolerance",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance"
           ]
         },
         "clinicalStatus": {
@@ -2312,7 +2312,7 @@
         "resourceType": "AllergyIntolerance",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance"
           ]
         },
         "clinicalStatus": {
@@ -2373,7 +2373,7 @@
         "resourceType": "AllergyIntolerance",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance"
           ]
         },
         "clinicalStatus": {
@@ -2434,7 +2434,7 @@
         "resourceType": "AllergyIntolerance",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance"
           ]
         },
         "clinicalStatus": {
@@ -2495,7 +2495,7 @@
         "resourceType": "AllergyIntolerance",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance"
           ]
         },
         "clinicalStatus": {
@@ -2556,7 +2556,7 @@
         "resourceType": "AllergyIntolerance",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance"
           ]
         },
         "clinicalStatus": {
@@ -2617,7 +2617,7 @@
         "resourceType": "AllergyIntolerance",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance"
           ]
         },
         "clinicalStatus": {
@@ -2678,7 +2678,7 @@
         "resourceType": "AllergyIntolerance",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance"
           ]
         },
         "clinicalStatus": {
@@ -2740,7 +2740,7 @@
         "id": "usqualitycore-allergy-intolerance-dup2",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance"
           ]
         },
         "clinicalStatus": {
@@ -2800,7 +2800,7 @@
         "resourceType": "AllergyIntolerance",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance"
           ]
         },
         "clinicalStatus": {
@@ -2862,7 +2862,7 @@
         "id": "usqualitycore-allergy-intolerance-dup3",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance"
           ]
         },
         "clinicalStatus": {
@@ -2922,7 +2922,7 @@
         "resourceType": "AllergyIntolerance",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance"
           ]
         },
         "clinicalStatus": {
@@ -2983,7 +2983,7 @@
         "resourceType": "AllergyIntolerance",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance"
           ]
         },
         "clinicalStatus": {
@@ -3044,7 +3044,7 @@
         "resourceType": "AllergyIntolerance",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance"
           ]
         },
         "clinicalStatus": {
@@ -3105,7 +3105,7 @@
         "resourceType": "AllergyIntolerance",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance"
           ]
         },
         "clinicalStatus": {
@@ -3166,7 +3166,7 @@
         "resourceType": "AllergyIntolerance",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance"
           ]
         },
         "clinicalStatus": {
@@ -3227,7 +3227,7 @@
         "resourceType": "AllergyIntolerance",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance"
           ]
         },
         "clinicalStatus": {
@@ -3883,7 +3883,7 @@
             }
           ],
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis"
           ]
         },
         "extension": [
@@ -3987,7 +3987,7 @@
             }
           ],
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns"
           ]
         },
         "extension": [
@@ -4088,7 +4088,7 @@
         "id": "usqualitycore-coverage",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-coverage"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-coverage"
           ]
         },
         "identifier": [
@@ -4185,7 +4185,7 @@
         "id": "usqualitycore-device",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-device"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-device"
           ]
         },
         "identifier": [
@@ -4260,12 +4260,12 @@
         "id": "usqualitycore-devicenotrequested",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-devicenotrequested"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-devicenotrequested"
           ]
         },
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-doNotPerformReason",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-doNotPerformReason",
             "valueCodeableConcept": {
               "coding": [
                 {
@@ -4356,7 +4356,7 @@
         "id": "usqualitycore-devicerequest",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-devicerequest"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-devicerequest"
           ]
         },
         "modifierExtension": [
@@ -4497,7 +4497,7 @@
         "id": "usqualitycore-diagnostic-report-note",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-diagnosticreport-note"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note"
           ]
         },
         "status": "final",
@@ -4580,7 +4580,7 @@
         "id": "usqualitycore-encounter",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter"
           ]
         },
         "identifier": [
@@ -4689,7 +4689,7 @@
           {
             "extension": [
               {
-                "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter-diagnosisPresentOnAdmission",
+                "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter-diagnosisPresentOnAdmission",
                 "valueCodeableConcept": {
                   "coding": [
                     {
@@ -4731,7 +4731,7 @@
         "id": "usqualitycore-family-member-history",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-familymemberhistory"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-familymemberhistory"
           ]
         },
         "status": "completed",
@@ -4813,7 +4813,7 @@
         "id": "usqualitycore-goal",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-goal"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-goal"
           ]
         },
         "identifier": [
@@ -4943,7 +4943,7 @@
         "id": "usqualitycore-immunization",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-immunization"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunization"
           ]
         },
         "identifier": [
@@ -5267,7 +5267,7 @@
         "id": "usqualitycore-immunizationnotdone",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-immunizationnotdone"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationnotdone"
           ]
         },
         "identifier": [
@@ -5289,7 +5289,7 @@
         "vaccineCode": {
           "extension": [
             {
-              "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
+              "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
               "valueCanonical": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.526.3.1254"
             }
           ],
@@ -5423,7 +5423,7 @@
         "id": "usqualitycore-immunizationnotdone-2",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-immunizationnotdone"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationnotdone"
           ]
         },
         "identifier": [
@@ -5685,7 +5685,7 @@
         "id": "usqualitycore-location",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-location"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-location"
           ]
         },
         "identifier": [
@@ -5778,7 +5778,7 @@
         "id": "usqualitycore-medication",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medication"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medication"
           ]
         },
         "contained": [
@@ -5787,7 +5787,7 @@
             "id": "org6",
             "meta": {
               "profile": [
-                "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization"
+                "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-organization"
               ]
             },
             "identifier": [
@@ -5882,12 +5882,12 @@
         "id": "usqualitycore-medicationadministration",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationadministration"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministration"
           ]
         },
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-recorded",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
             "valueDateTime": "2017-01-17"
           }
         ],
@@ -5955,7 +5955,7 @@
         },
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-recorded",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
             "valueDateTime": "2017-01-17"
           }
         ],
@@ -6025,12 +6025,12 @@
         "id": "usqualitycore-medicationadministrationnotdone",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationadministrationnotdone"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministrationnotdone"
           ]
         },
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-recorded",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
             "valueDateTime": "2017-01-17"
           }
         ],
@@ -6104,12 +6104,12 @@
         "id": "usqualitycore-medicationdispense",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationdispense"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispense"
           ]
         },
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-recorded",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
             "valueDateTime": "2017-01-17"
           }
         ],
@@ -6251,7 +6251,7 @@
         },
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-recorded",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
             "valueDateTime": "2017-01-17"
           }
         ],
@@ -6388,12 +6388,12 @@
         "id": "usqualitycore-medicationdispensedeclined",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationdispensedeclined"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedeclined"
           ]
         },
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-recorded",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
             "valueDateTime": "2017-01-17"
           }
         ],
@@ -6410,7 +6410,7 @@
         "medicationCodeableConcept": {
           "extension": [
             {
-              "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
+              "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
               "valueCanonical": "http://cts.nlm.nih.gov/fhir/1.3.6.1.4.1.6997.4.1.2.268.13.35211.1.13.1.999.321"
             }
           ],
@@ -6539,7 +6539,7 @@
         "id": "usqualitycore-medicationnotrequested",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationnotrequested"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationnotrequested"
           ]
         },
         "status": "active",
@@ -6559,7 +6559,7 @@
         "medicationCodeableConcept": {
           "extension": [
             {
-              "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
+              "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
               "valueCanonical": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1045.39"
             }
           ],
@@ -6790,7 +6790,7 @@
         "id": "usqualitycore-medicationrequest",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationrequest"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest"
           ]
         },
         "status": "active",
@@ -7159,7 +7159,7 @@
             }
           ],
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-clinical-result"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-clinical-result"
           ]
         },
         "status": "final",
@@ -7238,7 +7238,7 @@
             }
           ],
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-clinical-result"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-clinical-result"
           ]
         },
         "status": "final",
@@ -7321,7 +7321,7 @@
             }
           ],
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-clinical-result"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-clinical-result"
           ]
         },
         "status": "final",
@@ -7409,7 +7409,7 @@
             }
           ],
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-clinical-result"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-clinical-result"
           ]
         },
         "status": "final",
@@ -7499,7 +7499,7 @@
           "versionId": "1165",
           "lastUpdated": "2016-03-09T15:29:58.328+00:00",
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-lab"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-lab"
           ]
         },
         "status": "final",
@@ -7599,7 +7599,7 @@
           "versionId": "1165",
           "lastUpdated": "2016-03-09T15:29:58.328+00:00",
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-lab"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-lab"
           ]
         },
         "status": "final",
@@ -7706,7 +7706,7 @@
           "versionId": "1165",
           "lastUpdated": "2016-03-09T15:29:58.328+00:00",
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-lab"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-lab"
           ]
         },
         "status": "final",
@@ -7811,7 +7811,7 @@
           "versionId": "1165",
           "lastUpdated": "2016-03-09T15:29:58.328+00:00",
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-lab"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-lab"
           ]
         },
         "status": "final",
@@ -7904,7 +7904,7 @@
         "id": "usqualitycore-observation-screening-assessment",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-screening-assessment"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-screening-assessment"
           ]
         },
         "status": "final",
@@ -7999,7 +7999,7 @@
         "id": "usqualitycore-observation-screening-assessment-2",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-screening-assessment"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-screening-assessment"
           ]
         },
         "status": "final",
@@ -8072,7 +8072,7 @@
         "id": "usqualitycore-observation-screening-assessment-3",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-screening-assessment"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-screening-assessment"
           ]
         },
         "status": "final",
@@ -8154,7 +8154,7 @@
         "id": "usqualitycore-observation-screening-assessment-4",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-screening-assessment"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-screening-assessment"
           ]
         },
         "status": "final",
@@ -8236,12 +8236,12 @@
         "id": "usqualitycore-observationcancelled",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observationcancelled"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observationcancelled"
           ]
         },
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneReason",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-notDoneReason",
             "valueCodeableConcept": {
               "coding": [
                 {
@@ -8317,7 +8317,7 @@
         "id": "usqualitycore-organization",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-organization"
           ]
         },
         "identifier": [
@@ -8391,7 +8391,7 @@
         "id": "usqualitycore-patient",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient"
           ]
         },
         "extension": [
@@ -8688,7 +8688,7 @@
         "id": "usqualitycore-practitioner",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitioner"
           ]
         },
         "identifier": [
@@ -8781,7 +8781,7 @@
         "id": "usqualitycore-practitioner-role",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitionerrole"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitionerrole"
           ]
         },
         "identifier": [
@@ -8856,12 +8856,12 @@
         "id": "usqualitycore-procedure",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-procedure"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedure"
           ]
         },
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-recorded",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
             "valueDateTime": "2013-04-05T09:35:00-04:00"
           }
         ],
@@ -9067,12 +9067,12 @@
         "id": "usqualitycore-procedurenotdone",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-procedurenotdone"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedurenotdone"
           ]
         },
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-recorded",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
             "valueDateTime": "2013-04-05T09:35:00-04:00"
           }
         ],
@@ -9169,7 +9169,7 @@
         "id": "usqualitycore-questionnaire-response",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-questionnaireresponse"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-questionnaireresponse"
           ]
         },
         "questionnaire": "http://hl7.org/fhir/uv/sdc/Questionnaire/questionnaire-sdc-profile-example-PHQ9",
@@ -9334,7 +9334,7 @@
         "id": "usqualitycore-related-person",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-relatedperson"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-relatedperson"
           ]
         },
         "active": true,
@@ -9405,12 +9405,12 @@
         "id": "usqualitycore-servicenotrequested",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-servicenotrequested"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicenotrequested"
           ]
         },
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-doNotPerformReason",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-doNotPerformReason",
             "valueCodeableConcept": {
               "coding": [
                 {
@@ -9611,7 +9611,7 @@
         "id": "usqualitycore-servicerequest",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-servicerequest"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest"
           ]
         },
         "status": "completed",
@@ -9803,7 +9803,7 @@
         "id": "usqualitycore-simple-observation",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation"
           ]
         },
         "status": "final",
@@ -9880,7 +9880,7 @@
         "id": "usqualitycore-simple-observation-2",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation"
           ]
         },
         "status": "final",
@@ -9955,7 +9955,7 @@
         "id": "usqualitycore-simple-observation-3",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation"
           ]
         },
         "status": "final",
@@ -10016,7 +10016,7 @@
         "id": "usqualitycore-simple-observation-4",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation"
           ]
         },
         "status": "final",
@@ -10072,7 +10072,7 @@
         "id": "usqualitycore-task",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-task"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-task"
           ]
         },
         "text": {
@@ -10207,7 +10207,7 @@
         "id": "usqualitycore-taskrejected",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-taskrejected"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-taskrejected"
           ]
         },
         "text": {
@@ -10265,7 +10265,7 @@
         "id": "usqualitycore-taskrejected-2",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-taskrejected"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-taskrejected"
           ]
         },
         "text": {
@@ -10290,7 +10290,7 @@
         "code": {
           "extension": [
             {
-              "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
+              "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
               "valueCanonical": "http://cts.nlm.nih.gov/fhir/2.16.840.1.113883.3.117.1.7.1.214"
             }
           ]

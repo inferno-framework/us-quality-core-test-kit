@@ -62,7 +62,10 @@
     - Observation.category
     :comparators: {}
     :values:
-    - activity
+    - sdoh
+    - functional-status
+    - disability-status
+    - cognitive-status
     :type: CodeableConcept
     :contains_multiple: true
     :multiple_or: MAY

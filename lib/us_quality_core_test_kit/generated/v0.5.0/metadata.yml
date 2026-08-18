@@ -4373,7 +4373,13 @@
       - Observation.category
       :comparators: {}
       :values:
+      - laboratory
       - exam
+      - therapy
+      - imaging
+      - procedure
+      - vital-signs
+      - activity
       :type: CodeableConcept
       :contains_multiple: true
       :multiple_or: MAY
@@ -4619,7 +4625,10 @@
       - Observation.category
       :comparators: {}
       :values:
-      - activity
+      - sdoh
+      - functional-status
+      - disability-status
+      - cognitive-status
       :type: CodeableConcept
       :contains_multiple: true
       :multiple_or: MAY
@@ -5143,6 +5152,14 @@
       - Observation.category
       :comparators: {}
       :values:
+      - social-history
+      - vital-signs
+      - imaging
+      - laboratory
+      - procedure
+      - survey
+      - exam
+      - therapy
       - activity
       :type: CodeableConcept
       :contains_multiple: true

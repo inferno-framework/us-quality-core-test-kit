@@ -1,0 +1,214 @@
+---
+:name: us_quality_core_procedurenotdone
+:class_name: USQualityCorev100_ballotProcedurenotdoneSequence
+:version: v1.0.0-ballot
+:reformatted_version: v100_ballot
+:resource: Procedure
+:profile_url: http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedurenotdone
+:profile_name: US Quality Core Procedure Not Done Profile
+:profile_version: 1.0.0-ballot
+:title: Procedure Not Done
+:short_description: Verify support for the capabilities required by the US Quality
+  Core Procedure Not Done Profile.
+:is_delayed: false
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :expectation: SHALL
+  :names:
+  - patient
+  - status
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :names:
+  - patient
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - date
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+:search_definitions:
+  :patient:
+    :paths:
+    - subject
+    :full_paths:
+    - Procedure.subject
+    :comparators: {}
+    :values: []
+    :type: Reference
+    :contains_multiple: false
+    :multiple_or: MAY
+  :status:
+    :paths:
+    - status
+    :full_paths:
+    - Procedure.status
+    :comparators: {}
+    :values:
+    - not-done
+    :type: code
+    :contains_multiple: false
+    :multiple_or: SHALL
+  :date:
+    :paths:
+    - performed
+    :full_paths:
+    - Procedure.performed
+    :comparators:
+      :eq: MAY
+      :ne: MAY
+      :gt: SHALL
+      :ge: SHALL
+      :lt: SHALL
+      :le: SHALL
+      :sa: MAY
+      :eb: MAY
+      :ap: MAY
+    :values: []
+    :type: date
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes:
+- Provenance:target
+:required_concepts: []
+:must_supports:
+  :extensions: []
+  :slices: []
+  :elements:
+  - :path: basedOn
+    :uscdi_only: true
+    :types:
+    - Reference
+  - :path: status
+    :fixed_value: not-done
+  - :path: code
+  - :path: subject
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient
+  - :path: encounter
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+  - :path: performedDateTime
+    :original_path: performed[x]
+  - :path: performer
+    :uscdi_only: true
+  - :path: performer.actor
+    :uscdi_only: true
+    :types:
+    - Reference
+  - :path: reasonCode
+    :uscdi_only: true
+  - :path: reasonReference
+    :uscdi_only: true
+    :types:
+    - Reference
+:mandatory_elements:
+- Procedure.extension
+- Procedure.status
+- Procedure.statusReason
+- Procedure.code
+- Procedure.subject
+- Procedure.performer.actor
+- Procedure.focalDevice.manipulated
+:bindings: []
+:references:
+- :path: Procedure.basedOn
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-careplan
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest
+- :path: Procedure.partOf
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Procedure|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/MedicationAdministration|4.0.1
+- :path: Procedure.subject
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient
+- :path: Procedure.encounter
+  :profiles:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+- :path: Procedure.recorder
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Patient|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/RelatedPerson|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1
+- :path: Procedure.asserter
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Patient|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/RelatedPerson|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1
+- :path: Procedure.performer.actor
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-organization
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-relatedperson
+- :path: Procedure.performer.onBehalfOf
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Organization|4.0.1
+- :path: Procedure.location
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Location|4.0.1
+- :path: Procedure.reasonReference
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0
+- :path: Procedure.report
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/DiagnosticReport|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/DocumentReference|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Composition|4.0.1
+- :path: Procedure.complicationDetail
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Condition|4.0.1
+- :path: Procedure.focalDevice.manipulated
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Device|4.0.1
+- :path: Procedure.usedReference
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Device|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Medication|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Substance|4.0.1
+:tests:
+- :id: us_quality_core_v100_ballot_procedurenotdone_patient_status_search_test
+  :file_name: procedurenotdone_patient_status_search_test.rb
+- :id: us_quality_core_v100_ballot_procedurenotdone_patient_search_test
+  :file_name: procedurenotdone_patient_search_test.rb
+- :id: us_quality_core_v100_ballot_procedurenotdone_patient_date_search_test
+  :file_name: procedurenotdone_patient_date_search_test.rb
+- :id: us_quality_core_v100_ballot_procedurenotdone_read_test
+  :file_name: procedurenotdone_read_test.rb
+- :id: us_quality_core_v100_ballot_procedurenotdone_provenance_revinclude_search_test
+  :file_name: procedurenotdone_provenance_revinclude_search_test.rb
+- :id: us_quality_core_v100_ballot_procedurenotdone_validation_test
+  :file_name: procedurenotdone_validation_test.rb
+- :id: us_quality_core_v100_ballot_procedurenotdone_must_support_test
+  :file_name: procedurenotdone_must_support_test.rb
+- :id: us_quality_core_v100_ballot_procedurenotdone_reference_resolution_test
+  :file_name: procedurenotdone_reference_resolution_test.rb
+:id: us_quality_core_v100_ballot_procedurenotdone
+:file_name: procedurenotdone_group.rb
+:delayed_references:
+- :path: performer.actor
+  :resources:
+  - Practitioner
+  - Organization
+:resource_conformance_expectation: SHALL

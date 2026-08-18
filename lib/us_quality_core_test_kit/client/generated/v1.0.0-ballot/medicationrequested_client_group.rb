@@ -1,0 +1,61 @@
+# frozen_string_literal: true
+
+require_relative 'medicationrequested/medicationrequested_client_read_test'
+require_relative 'medicationrequested/medicationrequested_patient_intent_do_not_perform_client_search_test'
+require_relative 'medicationrequested/medicationrequested_patient_intent_client_search_test'
+
+module USQualityCoreTestKit
+  module Client
+    module USQualityCoreClientV100_BALLOT
+      class MedicationrequestedClientGroup < Inferno::TestGroup
+        id :us_quality_core_client_v100_ballot_medicationrequested
+
+        title 'MedicationRequested'
+
+        description %(
+
+# Background
+
+This test group verifies that the client can access MedicationRequest data
+conforming to the US Quality Core MedicationRequested Profile.
+
+# Testing Methodology
+
+## Data Access Supported
+
+Clients may not be required to support the MedicationRequest FHIR resource type. However, if they
+do support it, they must support the US Quality Core MedicationRequested Profile and the resource type's search parameters.
+The tests in this group will not execute if client makes no attempt to access data for the
+MedicationRequest resource type. In this case, the test will be marked as skip if support
+for the resource type is required, and omitted otherwise.
+
+## Reading
+This test will check that the client performed a read of the following id:
+
+* `usqualitycore-medicationrequested`
+
+## Searching
+These tests will check that the client performed searches against the
+MedicationRequest resource type with the following required parameters:
+
+* patient + intent + do-not-perform
+* patient + intent
+
+Inferno will also look for searches using the following optional parameters:
+
+
+
+
+        )
+
+        optional false
+
+        run_as_group
+
+        test from: :us_quality_core_v100_ballot_medicationrequested_client_read_test
+        test from: :us_quality_core_v100_ballot_medicationrequested_patient_intent_do_not_perform_client_search_test
+        test from: :us_quality_core_v100_ballot_medicationrequested_patient_intent_client_search_test
+      end
+    end
+  end
+end

@@ -60,6 +60,7 @@ module USQualityCoreTestKit
         }
 
         if resource_type == 'Medication'
+          binding.pry if medication_request_metadata.nil?
           medication_request_metadata.add_test(**test_metadata)
         else
           group_metadata.add_test(**test_metadata)

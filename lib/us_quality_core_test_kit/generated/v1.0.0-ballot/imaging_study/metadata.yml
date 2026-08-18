@@ -1,0 +1,141 @@
+---
+:name: us_quality_core_imagingstudy
+:class_name: USQualityCorev100_ballotImagingstudySequence
+:version: v1.0.0-ballot
+:reformatted_version: v100_ballot
+:resource: ImagingStudy
+:profile_url: http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-imagingstudy
+:profile_name: US Quality Core ImagingStudy Profile
+:profile_version: 1.0.0-ballot
+:title: ImagingStudy
+:short_description: Verify support for the capabilities required by the US Quality
+  Core ImagingStudy Profile.
+:is_delayed: false
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :names:
+  - subject
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+:search_definitions:
+  :subject:
+    :paths:
+    - subject
+    :full_paths:
+    - ImagingStudy.subject
+    :comparators: {}
+    :values: []
+    :type: Reference
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes:
+- Provenance:target
+:required_concepts: []
+:must_supports:
+  :extensions: []
+  :slices: []
+  :elements: []
+:mandatory_elements:
+- ImagingStudy.status
+- ImagingStudy.subject
+- ImagingStudy.series.uid
+- ImagingStudy.series.modality
+- ImagingStudy.series.performer.actor
+- ImagingStudy.series.instance.uid
+- ImagingStudy.series.instance.sopClass
+:bindings:
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/imagingstudy-status
+  :path: status
+:references:
+- :path: ImagingStudy.subject
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient
+- :path: ImagingStudy.encounter
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter
+- :path: ImagingStudy.basedOn
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-careplan
+- :path: ImagingStudy.referrer
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitionerrole
+- :path: ImagingStudy.interpreter
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitionerrole
+- :path: ImagingStudy.endpoint
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Endpoint|4.0.1
+- :path: ImagingStudy.procedureReference
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedure
+- :path: ImagingStudy.location
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-location
+- :path: ImagingStudy.reasonReference
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation
+  - http://hl7.org/fhir/StructureDefinition/Media
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note
+  - http://hl7.org/fhir/StructureDefinition/DocumentReference
+- :path: ImagingStudy.series.endpoint
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Endpoint|4.0.1
+- :path: ImagingStudy.series.specimen
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Specimen|4.0.1
+- :path: ImagingStudy.series.performer.actor
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitioner
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitionerrole
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-organization
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-careteam
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-device|9.0.0
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-relatedperson
+:tests:
+- :id: us_quality_core_v100_ballot_imaging_study_subject_search_test
+  :file_name: imaging_study_subject_search_test.rb
+- :id: us_quality_core_v100_ballot_imaging_study_read_test
+  :file_name: imaging_study_read_test.rb
+- :id: us_quality_core_v100_ballot_imaging_study_provenance_revinclude_search_test
+  :file_name: imaging_study_provenance_revinclude_search_test.rb
+- :id: us_quality_core_v100_ballot_imaging_study_validation_test
+  :file_name: imaging_study_validation_test.rb
+- :id: us_quality_core_v100_ballot_imaging_study_must_support_test
+  :file_name: imaging_study_must_support_test.rb
+:id: us_quality_core_v100_ballot_imaging_study
+:file_name: imaging_study_group.rb
+:delayed_references:
+- :path: encounter
+  :resources:
+  - Encounter
+- :path: referrer
+  :resources:
+  - Practitioner
+  - PractitionerRole
+- :path: interpreter
+  :resources:
+  - Practitioner
+  - PractitionerRole
+- :path: location
+  :resources:
+  - Location
+- :path: series.performer.actor
+  :resources:
+  - Practitioner
+  - PractitionerRole
+  - Organization
+:resource_conformance_expectation: SHALL

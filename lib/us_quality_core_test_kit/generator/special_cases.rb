@@ -10,7 +10,7 @@ module USQualityCoreTestKit
       # The generator will not create tests for resources found in this list
       # for the specified IG versions.
       RESOURCES_TO_EXCLUDE = {
-        'Medication' => %w[v050 v100]
+        'Medication' => %w[v050 v100_ballot]
       }.freeze
 
       # This list is meant to capture "abstract" profiles that do not themselves
@@ -33,8 +33,8 @@ module USQualityCoreTestKit
       # These resources will be gathered for testing via references from other
       # resources.
       DELAYED = {
-        'Encounter' => %w[v050 v100],
-        'Location' => %w[v050 v100]
+        'Encounter' => %w[v050 v100_ballot],
+        'Location' => %w[v050 v100_ballot]
       }.freeze
 
       # Category should be included in the initial search for these profiles.
@@ -46,7 +46,14 @@ module USQualityCoreTestKit
         CONDITION_PROBLEMS_HEALTH_CONCERNS
       ].freeze
 
-      VERSION_SPECIFIC_CATEGORY_FIRST_PROFILES = {}.freeze
+      VERSION_SPECIFIC_CATEGORY_FIRST_PROFILES = {
+        'http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-careplan' => ['v050'],
+        'http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis' => ['v050'],
+        'http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns' => ['v050'],
+        'http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-diagnosticreport-lab' => ['v050'],
+        'http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-diagnosticreport-note' => ['v050']
+  
+      }.freeze
 
       PROFILE_CATEGORY_SEARCH_VALUES = {
         OBSERVATION_CLINICAL_RESULT => ['exam'],

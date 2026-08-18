@@ -1,0 +1,224 @@
+---
+:name: us_quality_core_patient
+:class_name: USQualityCorev100_ballotPatientSequence
+:version: v1.0.0-ballot
+:reformatted_version: v100_ballot
+:resource: Patient
+:profile_url: http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient
+:profile_name: US Quality Core Patient Profile
+:profile_version: 1.0.0-ballot
+:title: Patient
+:short_description: Verify support for the capabilities required by the US Quality
+  Core Patient Profile.
+:is_delayed: false
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :names:
+  - _id
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+:search_definitions:
+  :_id:
+    :paths:
+    - id
+    :full_paths:
+    - Patient.id
+    :comparators: {}
+    :values: []
+    :type: http://hl7.org/fhirpath/System.String
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes:
+- Provenance:target
+:required_concepts: []
+:must_supports:
+  :extensions:
+  - :id: Patient.extension:race
+    :path: extension
+    :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-race|9.0.0
+    :uscdi_only: true
+  - :id: Patient.extension:ethnicity
+    :path: extension
+    :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity|9.0.0
+    :uscdi_only: true
+  - :id: Patient.extension:tribalAffiliation
+    :path: extension
+    :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation|9.0.0
+    :uscdi_only: true
+  - :id: Patient.extension:sex
+    :path: extension
+    :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-individual-sex|9.0.0
+    :uscdi_only: true
+  - :id: Patient.extension:interpreterRequired
+    :path: extension
+    :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-needed
+    :uscdi_only: true
+  :slices: []
+  :elements:
+  - :path: identifier
+  - :path: identifier.system
+  - :path: identifier.value
+  - :path: name
+  - :path: name.use
+    :uscdi_only: true
+  - :path: name.family
+  - :path: name.given
+  - :path: name.suffix
+    :uscdi_only: true
+  - :path: name.period
+    :uscdi_only: true
+  - :path: telecom
+    :uscdi_only: true
+  - :path: telecom.system
+  - :path: telecom.value
+  - :path: telecom.use
+  - :path: birthDate
+  - :path: deceased[x]
+    :uscdi_only: true
+  - :path: address
+  - :path: address.use
+    :uscdi_only: true
+  - :path: address.line
+  - :path: address.city
+  - :path: address.state
+  - :path: address.postalCode
+  - :path: address.period
+    :uscdi_only: true
+  - :path: communication
+    :uscdi_only: true
+  - :path: communication.language
+:mandatory_elements:
+- Patient.identifier
+- Patient.identifier.system
+- Patient.identifier.value
+- Patient.name
+- Patient.telecom.system
+- Patient.telecom.value
+- Patient.communication.language
+- Patient.link.other
+- Patient.link.type
+:bindings:
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/identifier-use
+  :path: identifier.use
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/name-use
+  :path: name.use
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/contact-point-system
+  :path: telecom.system
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/contact-point-use
+  :path: telecom.use
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/administrative-gender
+  :path: gender
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/address-use
+  :path: address.use
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/address-type
+  :path: address.type
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/administrative-gender
+  :path: contact.gender
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/link-type
+  :path: link.type
+- :type: Coding
+  :strength: required
+  :system: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.4.642.2.575
+  :path: value
+  :extensions:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-race|9.0.0
+  - ombCategory
+- :type: Coding
+  :strength: required
+  :system: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.25
+  :path: value
+  :extensions:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-race|9.0.0
+  - detailed
+- :type: Coding
+  :strength: required
+  :system: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.4.642.40.2.48.3
+  :path: value
+  :extensions:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity|9.0.0
+  - ombCategory
+- :type: Coding
+  :strength: required
+  :system: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.4.642.40.2.48.1
+  :path: value
+  :extensions:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity|9.0.0
+  - detailed
+- :type: CodeableConcept
+  :strength: preferred
+  :system: http://terminology.hl7.org/ValueSet/v3-TribalEntityUS
+  :path: value
+  :extensions:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation|9.0.0
+  - tribalAffiliation
+- :type: Coding
+  :strength: extensible
+  :system: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.121
+  :path: value
+  :extensions:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-individual-sex|9.0.0
+- :type: Coding
+  :strength: required
+  :system: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.16
+  :path: value
+  :extensions:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-needed
+:references:
+- :path: Patient.identifier.assigner
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Organization|4.0.1
+- :path: Patient.contact.organization
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Organization|4.0.1
+- :path: Patient.generalPractitioner
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Organization|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1
+- :path: Patient.managingOrganization
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Organization|4.0.1
+- :path: Patient.link.other
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient
+:tests:
+- :id: us_quality_core_v100_ballot_patient__id_search_test
+  :file_name: patient_id_search_test.rb
+- :id: us_quality_core_v100_ballot_patient_read_test
+  :file_name: patient_read_test.rb
+- :id: us_quality_core_v100_ballot_patient_provenance_revinclude_search_test
+  :file_name: patient_provenance_revinclude_search_test.rb
+- :id: us_quality_core_v100_ballot_patient_validation_test
+  :file_name: patient_validation_test.rb
+- :id: us_quality_core_v100_ballot_patient_must_support_test
+  :file_name: patient_must_support_test.rb
+:id: us_quality_core_v100_ballot_patient
+:file_name: patient_group.rb
+:delayed_references: []
+:resource_conformance_expectation: SHALL
