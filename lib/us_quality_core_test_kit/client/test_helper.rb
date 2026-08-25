@@ -19,15 +19,25 @@ module USQualityCoreTestKit
 
       def filter_requests_by_search_parameters(requests, search_parameters)
         requests.select do |request|
-          included_params =
-            if request.verb.downcase == 'get'
-              url_params(request.url).keys
-            elsif request.verb.downcase == 'post'
-              CGI.parse(request.request_body).keys
-            end
+          included_params = search_parameters_for_request(request)
           next unless included_params.present?
 
           search_parameters.all? { |param| included_params.include? param }
+        end
+      end
+
+      def non_required_search_parameters(requests, required_search_parameters)
+        requests
+          .flat_map { |request| search_parameters_for_request(request) || [] }
+          .uniq
+          .difference(required_search_parameters)
+      end
+
+      def search_parameters_for_request(request)
+        if request.verb.downcase == 'get'
+          url_params(request.url).keys
+        elsif request.verb.downcase == 'post'
+          CGI.parse(request.request_body).keys
         end
       end
 
