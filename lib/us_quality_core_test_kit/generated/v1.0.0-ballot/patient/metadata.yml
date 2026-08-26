@@ -107,6 +107,15 @@
     :uscdi_only: true
     :uscdi_plus_quality: true
   - :path: communication.language
+  :choices:
+  - :paths:
+    - address.period.end
+    - address.use
+    :uscdi_plus_quality: true
+  - :paths:
+    - name.period.end
+    - name.use
+    :uscdi_plus_quality: true
 :mandatory_elements:
 - Patient.identifier
 - Patient.identifier.system

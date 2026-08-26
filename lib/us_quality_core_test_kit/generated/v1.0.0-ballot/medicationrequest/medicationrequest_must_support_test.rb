@@ -26,7 +26,6 @@ module USQualityCoreTestKit
         * MedicationRequest.encounter
         * MedicationRequest.intent
         * MedicationRequest.medication[x]
-        * MedicationRequest.reasonCode or MedicationRequest.reasonReference
         * MedicationRequest.reportedBoolean or MedicationRequest.reportedReference
         * MedicationRequest.reported[x]:reportedReference
         * MedicationRequest.requester
@@ -48,8 +47,7 @@ module USQualityCoreTestKit
         * MedicationRequest.dosageInstruction.timing.repeat.periodUnit
         * MedicationRequest.extension:medicationAdherence
         * MedicationRequest.medication[x].extension:codeOptions
-        * MedicationRequest.reasonCode
-        * MedicationRequest.reasonReference
+        * MedicationRequest.reasonCode or MedicationRequest.reasonReference
       )
 
       id :us_quality_core_v100_ballot_medicationrequest_must_support_test

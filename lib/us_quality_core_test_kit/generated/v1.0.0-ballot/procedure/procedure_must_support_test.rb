@@ -23,8 +23,7 @@ module USQualityCoreTestKit
 
         * Procedure.partOf
         * Procedure.performer.actor
-        * Procedure.reasonCode
-        * Procedure.reasonReference
+        * Procedure.reasonCode or Procedure.reasonReference
         * Procedure.statusReason
       )
 

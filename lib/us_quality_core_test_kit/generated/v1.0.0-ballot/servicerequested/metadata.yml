@@ -206,6 +206,11 @@
     :types:
     - Reference
     :uscdi_plus_quality: true
+  :choices:
+  - :paths:
+    - reasonCode
+    - reasonReference
+    :uscdi_plus_quality: true
 :mandatory_elements:
 - ServiceRequest.status
 - ServiceRequest.intent

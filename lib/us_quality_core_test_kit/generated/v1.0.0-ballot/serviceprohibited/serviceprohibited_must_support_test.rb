@@ -27,8 +27,7 @@ module USQualityCoreTestKit
 
         * ServiceRequest.code.extension:codeOptions
         * ServiceRequest.doNotPerform
-        * ServiceRequest.reasonCode
-        * ServiceRequest.reasonReference
+        * ServiceRequest.reasonCode or ServiceRequest.reasonReference
       )
 
       id :us_quality_core_v100_ballot_serviceprohibited_must_support_test

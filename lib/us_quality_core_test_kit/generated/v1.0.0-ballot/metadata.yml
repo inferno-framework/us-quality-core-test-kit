@@ -6110,7 +6110,7 @@
     - :paths:
       - reasonCode
       - reasonReference
-      :uscdi_only: true
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - MedicationRequest.status
   - MedicationRequest.intent
@@ -6434,7 +6434,7 @@
     - :paths:
       - reasonCode
       - reasonReference
-      :uscdi_only: true
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - MedicationRequest.status
   - MedicationRequest.intent
@@ -6761,7 +6761,7 @@
     - :paths:
       - reasonCode
       - reasonReference
-      :uscdi_only: true
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - MedicationRequest.status
   - MedicationRequest.intent
@@ -12880,6 +12880,15 @@
       :uscdi_only: true
       :uscdi_plus_quality: true
     - :path: communication.language
+    :choices:
+    - :paths:
+      - address.period.end
+      - address.use
+      :uscdi_plus_quality: true
+    - :paths:
+      - name.period.end
+      - name.use
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - Patient.identifier
   - Patient.identifier.system
@@ -13394,6 +13403,11 @@
       :types:
       - Reference
       :uscdi_plus_quality: true
+    :choices:
+    - :paths:
+      - reasonCode
+      - reasonReference
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - Procedure.extension
   - Procedure.status
@@ -13626,6 +13640,11 @@
       :types:
       - Reference
       :uscdi_plus_quality: true
+    :choices:
+    - :paths:
+      - reasonCode
+      - reasonReference
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - Procedure.extension
   - Procedure.status
@@ -13849,6 +13868,11 @@
       :uscdi_only: true
       :types:
       - Reference
+      :uscdi_plus_quality: true
+    :choices:
+    - :paths:
+      - reasonCode
+      - reasonReference
       :uscdi_plus_quality: true
   :mandatory_elements:
   - Procedure.extension
@@ -14568,6 +14592,11 @@
       :types:
       - Reference
       :uscdi_plus_quality: true
+    :choices:
+    - :paths:
+      - reasonCode
+      - reasonReference
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - ServiceRequest.status
   - ServiceRequest.intent
@@ -14882,6 +14911,11 @@
       :uscdi_only: true
       :types:
       - Reference
+      :uscdi_plus_quality: true
+    :choices:
+    - :paths:
+      - reasonCode
+      - reasonReference
       :uscdi_plus_quality: true
   :mandatory_elements:
   - ServiceRequest.status
@@ -15199,6 +15233,11 @@
       :uscdi_only: true
       :types:
       - Reference
+      :uscdi_plus_quality: true
+    :choices:
+    - :paths:
+      - reasonCode
+      - reasonReference
       :uscdi_plus_quality: true
   :mandatory_elements:
   - ServiceRequest.status
