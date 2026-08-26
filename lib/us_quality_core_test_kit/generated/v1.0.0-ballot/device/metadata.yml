@@ -59,19 +59,13 @@
   :slices: []
   :elements:
   - :path: udiCarrier
-    :uscdi_only: true
   - :path: udiCarrier.deviceIdentifier
   - :path: udiCarrier.carrierHRF
   - :path: distinctIdentifier
-    :uscdi_only: true
   - :path: manufactureDate
-    :uscdi_only: true
   - :path: expirationDate
-    :uscdi_only: true
   - :path: lotNumber
-    :uscdi_only: true
   - :path: serialNumber
-    :uscdi_only: true
   - :path: type
   - :path: patient
     :types:

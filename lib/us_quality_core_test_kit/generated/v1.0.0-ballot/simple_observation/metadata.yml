@@ -162,9 +162,9 @@
   - :path: valueBoolean
     :original_path: value[x]
   - :path: derivedFrom
-    :uscdi_only: true
     :types:
     - Reference
+    :uscdi_only: true
 :mandatory_elements:
 - Observation.status
 - Observation.category

@@ -120,12 +120,11 @@
     :types:
     - Reference
   - :path: reasonCode
-    :uscdi_only: true
     :uscdi_plus_quality: true
   - :path: reasonReference
-    :uscdi_only: true
     :types:
     - Reference
+    :uscdi_only: true
   - :path: dosageInstruction
   - :path: dosageInstruction.text
   - :path: dosageInstruction.timing

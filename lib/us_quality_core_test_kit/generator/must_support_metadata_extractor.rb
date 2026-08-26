@@ -86,9 +86,7 @@ module USQualityCoreTestKit
             slice_name: current_element.sliceName,
             path: current_element.path.gsub("#{resource}.", ''),
             discriminator: discriminator
-          }.tap do |metadata|
-            metadata[:uscdi_only] = true if uscdi_requirement_element?(current_element)
-          end
+          }
         end
       end
 
@@ -146,8 +144,6 @@ module USQualityCoreTestKit
             elsif pattern_value.present?
               metadata[:discriminator] = pattern_value
             end
-
-            metadata[:uscdi_only] = true if uscdi_requirement_element?(current_element)
           end
         end
       end
@@ -342,14 +338,6 @@ module USQualityCoreTestKit
         end
       end
 
-      def add_uscdi_plus_quality_flag(profile_element, metadata_element)
-        if uscdi_plus_quality_element?(profile_element)
-          metadata_element.merge(uscdi_plus_quality: true)
-        else
-          metadata_element
-        end
-      end
-
       def all_must_support_elements
         profile_elements.select do |element|
           element.mustSupport || uscdi_plus_quality_element?(element) || uscdi_requirement_element?(element)
@@ -357,24 +345,34 @@ module USQualityCoreTestKit
       end
 
       def must_support_extensions
-        must_support_extension_elements.map do |element|
+        must_support_extension_elements.map do |profile_element|
           metadata = {
-            id: element.id,
-            path: element.path.gsub("#{resource}.", ''),
-            url: element.type.first.profile.first
+            id: profile_element.id,
+            path: profile_element.path.gsub("#{resource}.", ''),
+            url: profile_element.type.first.profile.first
           }
 
-          metadata[:uscdi_only] = true if uscdi_requirement_element?(element)
-
-          add_uscdi_plus_quality_flag(element, metadata)
+          if uscdi_plus_quality_element?(profile_element)
+            metadata[:uscdi_plus_quality] = true 
+          elsif uscdi_requirement_element?(profile_element)
+            metadata[:uscdi_only] = true 
+          end
+          
+          metadata
         end
       end
 
       def must_support_slices
-        (type_slices + value_slices).map do |slice|
-          profile_element = must_support_slice_elements.find { |e| e.id == slice[:slice_id] }
+        (type_slices + value_slices).map do |metadata|
+          profile_element = must_support_slice_elements.find { |e| e.id == metadata[:slice_id] }
 
-          add_uscdi_plus_quality_flag(profile_element, slice)
+          if uscdi_plus_quality_element?(profile_element)
+            metadata[:uscdi_plus_quality] = true 
+          elsif uscdi_requirement_element?(profile_element)
+            metadata[:uscdi_only] = true 
+          end
+
+          metadata
         end
       end
 
@@ -389,8 +387,6 @@ module USQualityCoreTestKit
 
                 next if must_support_slice_elements.none? { |slice| slice.sliceName == slice_name }
               end
-
-              current_metadata[:uscdi_only] = true if uscdi_requirement_element?(current_element)
 
               type_must_support_metadata = get_type_must_support_metadata(current_metadata, current_element)
 
@@ -413,13 +409,19 @@ module USQualityCoreTestKit
 
         return ms_elements unless profile.url.include?('us-quality-core')
 
-        ms_elements.map do |element|
+        ms_elements.map do |metadata|
           profile_element = plain_must_support_elements.find do |e|
             path = e.id.gsub("#{resource}.", '')
-            [element[:path], element[:original_path]].include?(path)
+            [metadata[:path], metadata[:original_path]].include?(path)
           end
 
-          add_uscdi_plus_quality_flag(profile_element, element)
+          if uscdi_plus_quality_element?(profile_element)
+            metadata[:uscdi_plus_quality] = true 
+          elsif uscdi_requirement_element?(profile_element)
+            metadata[:uscdi_only] = true 
+          end
+
+          metadata
         end
       end
 

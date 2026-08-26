@@ -89,9 +89,9 @@
   :slices: []
   :elements:
   - :path: basedOn
-    :uscdi_only: true
     :types:
     - Reference
+    :uscdi_only: true
   - :path: partOf
     :types:
     - Reference
@@ -115,15 +115,12 @@
   - :path: performer
     :uscdi_only: true
   - :path: performer.actor
-    :uscdi_only: true
     :types:
     - Reference
     :uscdi_plus_quality: true
   - :path: reasonCode
-    :uscdi_only: true
     :uscdi_plus_quality: true
   - :path: reasonReference
-    :uscdi_only: true
     :types:
     - Reference
     :uscdi_plus_quality: true

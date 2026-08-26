@@ -81,7 +81,6 @@
   - :id: MedicationRequest.extension:medicationAdherence
     :path: extension
     :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence|9.0.0
-    :uscdi_only: true
     :uscdi_plus_quality: true
   - :id: MedicationRequest.medication[x].extension:codeOptions
     :path: medication[x].extension
@@ -139,10 +138,8 @@
     :types:
     - Reference
   - :path: reasonCode
-    :uscdi_only: true
     :uscdi_plus_quality: true
   - :path: reasonReference
-    :uscdi_only: true
     :types:
     - Reference
     :uscdi_plus_quality: true

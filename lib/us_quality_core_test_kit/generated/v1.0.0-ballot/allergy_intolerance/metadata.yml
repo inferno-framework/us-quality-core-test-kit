@@ -57,7 +57,6 @@
   - :path: recordedDate
     :uscdi_plus_quality: true
   - :path: recorder
-    :uscdi_only: true
     :types:
     - Reference
     :uscdi_plus_quality: true

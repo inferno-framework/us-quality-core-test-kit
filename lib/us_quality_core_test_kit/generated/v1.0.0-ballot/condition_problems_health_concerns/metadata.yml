@@ -123,7 +123,6 @@
     :original_path: abatement[x]
   - :path: recordedDate
   - :path: recorder
-    :uscdi_only: true
     :types:
     - Reference
     :uscdi_plus_quality: true

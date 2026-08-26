@@ -65,12 +65,10 @@
     :target_profiles:
     - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient
   - :path: contributor
-    :uscdi_only: true
     :types:
     - Reference
     :uscdi_plus_quality: true
   - :path: addresses
-    :uscdi_only: true
     :types:
     - Reference
     :target_profiles:

@@ -273,7 +273,6 @@
     - :path: recordedDate
       :uscdi_plus_quality: true
     - :path: recorder
-      :uscdi_only: true
       :types:
       - Reference
       :uscdi_plus_quality: true
@@ -412,12 +411,10 @@
       :target_profiles:
       - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient
     - :path: contributor
-      :uscdi_only: true
       :types:
       - Reference
       :uscdi_plus_quality: true
     - :path: addresses
-      :uscdi_only: true
       :types:
       - Reference
       :target_profiles:
@@ -1323,7 +1320,6 @@
       :uscdi_plus_quality: true
     - :path: recordedDate
     - :path: recorder
-      :uscdi_only: true
       :types:
       - Reference
       :uscdi_plus_quality: true
@@ -1515,7 +1511,6 @@
       :original_path: abatement[x]
     - :path: recordedDate
     - :path: recorder
-      :uscdi_only: true
       :types:
       - Reference
       :uscdi_plus_quality: true
@@ -1800,19 +1795,13 @@
     :slices: []
     :elements:
     - :path: udiCarrier
-      :uscdi_only: true
     - :path: udiCarrier.deviceIdentifier
     - :path: udiCarrier.carrierHRF
     - :path: distinctIdentifier
-      :uscdi_only: true
     - :path: manufactureDate
-      :uscdi_only: true
     - :path: expirationDate
-      :uscdi_only: true
     - :path: lotNumber
-      :uscdi_only: true
     - :path: serialNumber
-      :uscdi_only: true
     - :path: type
     - :path: patient
       :types:
@@ -6008,7 +5997,6 @@
     - :id: MedicationRequest.extension:medicationAdherence
       :path: extension
       :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence|9.0.0
-      :uscdi_only: true
       :uscdi_plus_quality: true
     - :id: MedicationRequest.medication[x].extension:codeOptions
       :path: medication[x].extension
@@ -6066,10 +6054,8 @@
       :types:
       - Reference
     - :path: reasonCode
-      :uscdi_only: true
       :uscdi_plus_quality: true
     - :path: reasonReference
-      :uscdi_only: true
       :types:
       - Reference
       :uscdi_plus_quality: true
@@ -6332,7 +6318,6 @@
     - :id: MedicationRequest.extension:medicationAdherence
       :path: extension
       :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence|9.0.0
-      :uscdi_only: true
       :uscdi_plus_quality: true
     - :id: MedicationRequest.medication[x].extension:codeOptions
       :path: medication[x].extension
@@ -6390,10 +6375,8 @@
       :types:
       - Reference
     - :path: reasonCode
-      :uscdi_only: true
       :uscdi_plus_quality: true
     - :path: reasonReference
-      :uscdi_only: true
       :types:
       - Reference
       :uscdi_plus_quality: true
@@ -6659,7 +6642,6 @@
     - :id: MedicationRequest.extension:medicationAdherence
       :path: extension
       :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence|9.0.0
-      :uscdi_only: true
       :uscdi_plus_quality: true
     - :id: MedicationRequest.medication[x].extension:codeOptions
       :path: medication[x].extension
@@ -6717,10 +6699,8 @@
       :types:
       - Reference
     - :path: reasonCode
-      :uscdi_only: true
       :uscdi_plus_quality: true
     - :path: reasonReference
-      :uscdi_only: true
       :types:
       - Reference
       :uscdi_plus_quality: true
@@ -7683,7 +7663,6 @@
     - :path: effectiveDateTime
       :original_path: effective[x]
     - :path: performer
-      :uscdi_only: true
       :types:
       - Reference
     - :path: valueString
@@ -7939,9 +7918,9 @@
     - :path: valueBoolean
       :original_path: value[x]
     - :path: derivedFrom
-      :uscdi_only: true
       :types:
       - Reference
+      :uscdi_only: true
   :mandatory_elements:
   - Observation.status
   - Observation.category
@@ -8453,7 +8432,6 @@
       :target_profiles:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
     - :path: performer
-      :uscdi_only: true
       :types:
       - Reference
   :mandatory_elements:
@@ -8697,7 +8675,6 @@
       :target_profiles:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
     - :path: performer
-      :uscdi_only: true
       :types:
       - Reference
   :mandatory_elements:
@@ -9456,7 +9433,6 @@
       :target_profiles:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
     - :path: performer
-      :uscdi_only: true
       :types:
       - Reference
     - :path: component
@@ -12816,27 +12792,22 @@
     - :id: Patient.extension:race
       :path: extension
       :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-race|9.0.0
-      :uscdi_only: true
       :uscdi_plus_quality: true
     - :id: Patient.extension:ethnicity
       :path: extension
       :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity|9.0.0
-      :uscdi_only: true
       :uscdi_plus_quality: true
     - :id: Patient.extension:tribalAffiliation
       :path: extension
       :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation|9.0.0
-      :uscdi_only: true
       :uscdi_plus_quality: true
     - :id: Patient.extension:sex
       :path: extension
       :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-individual-sex|9.0.0
-      :uscdi_only: true
       :uscdi_plus_quality: true
     - :id: Patient.extension:interpreterRequired
       :path: extension
       :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-needed
-      :uscdi_only: true
       :uscdi_plus_quality: true
     :slices: []
     :elements:
@@ -12845,39 +12816,31 @@
     - :path: identifier.value
     - :path: name
     - :path: name.use
-      :uscdi_only: true
       :uscdi_plus_quality: true
     - :path: name.family
     - :path: name.given
     - :path: name.suffix
-      :uscdi_only: true
       :uscdi_plus_quality: true
     - :path: name.period
-      :uscdi_only: true
       :uscdi_plus_quality: true
     - :path: telecom
-      :uscdi_only: true
       :uscdi_plus_quality: true
     - :path: telecom.system
     - :path: telecom.value
     - :path: telecom.use
     - :path: birthDate
     - :path: deceased[x]
-      :uscdi_only: true
       :uscdi_plus_quality: true
     - :path: address
     - :path: address.use
-      :uscdi_only: true
       :uscdi_plus_quality: true
     - :path: address.line
     - :path: address.city
     - :path: address.state
     - :path: address.postalCode
     - :path: address.period
-      :uscdi_only: true
       :uscdi_plus_quality: true
     - :path: communication
-      :uscdi_only: true
       :uscdi_plus_quality: true
     - :path: communication.language
     :choices:
@@ -13365,9 +13328,9 @@
     :slices: []
     :elements:
     - :path: basedOn
-      :uscdi_only: true
       :types:
       - Reference
+      :uscdi_only: true
     - :path: partOf
       :types:
       - Reference
@@ -13391,15 +13354,12 @@
     - :path: performer
       :uscdi_only: true
     - :path: performer.actor
-      :uscdi_only: true
       :types:
       - Reference
       :uscdi_plus_quality: true
     - :path: reasonCode
-      :uscdi_only: true
       :uscdi_plus_quality: true
     - :path: reasonReference
-      :uscdi_only: true
       :types:
       - Reference
       :uscdi_plus_quality: true
@@ -13601,9 +13561,9 @@
     :slices: []
     :elements:
     - :path: basedOn
-      :uscdi_only: true
       :types:
       - Reference
+      :uscdi_only: true
     - :path: partOf
       :types:
       - Reference
@@ -13628,15 +13588,12 @@
     - :path: performer
       :uscdi_only: true
     - :path: performer.actor
-      :uscdi_only: true
       :types:
       - Reference
       :uscdi_plus_quality: true
     - :path: reasonCode
-      :uscdi_only: true
       :uscdi_plus_quality: true
     - :path: reasonReference
-      :uscdi_only: true
       :types:
       - Reference
       :uscdi_plus_quality: true
@@ -13831,9 +13788,9 @@
     :slices: []
     :elements:
     - :path: basedOn
-      :uscdi_only: true
       :types:
       - Reference
+      :uscdi_only: true
     - :path: partOf
       :types:
       - Reference
@@ -13857,15 +13814,12 @@
     - :path: performer
       :uscdi_only: true
     - :path: performer.actor
-      :uscdi_only: true
       :types:
       - Reference
       :uscdi_plus_quality: true
     - :path: reasonCode
-      :uscdi_only: true
       :uscdi_plus_quality: true
     - :path: reasonReference
-      :uscdi_only: true
       :types:
       - Reference
       :uscdi_plus_quality: true
@@ -14585,10 +14539,8 @@
       :types:
       - Reference
     - :path: reasonCode
-      :uscdi_only: true
       :uscdi_plus_quality: true
     - :path: reasonReference
-      :uscdi_only: true
       :types:
       - Reference
       :uscdi_plus_quality: true
@@ -14905,10 +14857,8 @@
       :types:
       - Reference
     - :path: reasonCode
-      :uscdi_only: true
       :uscdi_plus_quality: true
     - :path: reasonReference
-      :uscdi_only: true
       :types:
       - Reference
       :uscdi_plus_quality: true
@@ -15227,10 +15177,8 @@
       :types:
       - Reference
     - :path: reasonCode
-      :uscdi_only: true
       :uscdi_plus_quality: true
     - :path: reasonReference
-      :uscdi_only: true
       :types:
       - Reference
       :uscdi_plus_quality: true
@@ -15399,11 +15347,8 @@
       :target_profiles:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
     - :path: collection
-      :uscdi_only: true
     - :path: collection.bodySite
-      :uscdi_only: true
     - :path: condition
-      :uscdi_only: true
     :choices:
     - :paths:
       - accessionIdentifier

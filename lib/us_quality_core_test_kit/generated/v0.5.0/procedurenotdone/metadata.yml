@@ -89,9 +89,9 @@
   :slices: []
   :elements:
   - :path: basedOn
-    :uscdi_only: true
     :types:
     - Reference
+    :uscdi_only: true
   - :path: partOf
     :types:
     - Reference

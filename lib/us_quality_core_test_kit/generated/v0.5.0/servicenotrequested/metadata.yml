@@ -174,10 +174,8 @@
     :types:
     - Reference
   - :path: reasonCode
-    :uscdi_only: true
     :uscdi_plus_quality: true
   - :path: reasonReference
-    :uscdi_only: true
     :types:
     - Reference
     :uscdi_plus_quality: true

@@ -142,7 +142,6 @@
   - :path: effectiveDateTime
     :original_path: effective[x]
   - :path: performer
-    :uscdi_only: true
     :types:
     - Reference
   - :path: valueString
