@@ -16,20 +16,39 @@ module USQualityCoreTestKit
         choices = []
 
         case profile.type       
-        when 'DocumentReference' # https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-documentreference.html
+        when 'DocumentReference' 
           choices << { paths: ['content.attachment.data', 'content.attachment.url'] }
-        when 'Encounter' # https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-encounter.html
+        when 'Encounter' 
           choices << { paths: ['reasonCode', 'reasonReference'] }
           choices << { paths: ['location.location', 'serviceProvider'] }
-        when 'Goal'
+        when 'Goal' 
           choices << { paths: ['startDate', 'target.dueDate'] }          
         when 'MedicationRequest'
           choices << { paths: ['reportedBoolean', 'reportedReference'] }
           choices << {
             paths: ['reasonCode', 'reasonReference'],
-            uscdi_only: true
-          }          
-        when 'Specimen' # https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-specimen.html
+            uscdi_plus_quality: true
+          }     
+        when 'Patient'
+          choices << {
+            paths: ['address.period.end', 'address.use'],
+            uscdi_plus_quality: true
+          }
+          choices << {
+            paths: ['name.period.end', 'name.use'],
+            uscdi_plus_quality: true
+          }
+        when 'Procedure'
+          choices << {
+            paths: ['reasonCode', 'reasonReference'],
+            uscdi_plus_quality: true
+          }
+        when 'ServiceRequest'
+          choices << {
+            paths: ['reasonCode', 'reasonReference'],
+            uscdi_plus_quality: true
+          }
+        when 'Specimen' 
           choices << { paths: ['accessionIdentifier', 'identifier'] }
         end
 

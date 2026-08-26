@@ -332,7 +332,7 @@ module USQualityCoreTestKit
       end
 
       def uscdi_plus_quality_element?(element)
-        return false if element.mustSupport
+        return false if element.mustSupport 
 
         element.extension.any? do |extension|
           extension.url.downcase.end_with?(
