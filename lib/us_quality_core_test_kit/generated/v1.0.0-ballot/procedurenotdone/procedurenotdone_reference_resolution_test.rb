@@ -18,6 +18,7 @@ module USQualityCoreTestKit
 
         * Procedure.basedOn
         * Procedure.encounter
+        * Procedure.partOf
         * Procedure.performer.actor
         * Procedure.reasonReference
         * Procedure.subject

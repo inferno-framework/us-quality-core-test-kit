@@ -12,6 +12,19 @@ module USQualityCoreTestKit
         found previously for the following Must Support and USCDI-flagged elements:
 
 
+
+        For ONC USCDI+ Quality requirements, each Task must support the following additional elements:
+
+        * Task.basedOn
+        * Task.code
+        * Task.code.extension:codeOptions
+        * Task.executionPeriod
+        * Task.focus
+        * Task.for
+        * Task.reasonCode
+        * Task.requester
+        * Task.status
+        * Task.statusReason
       )
 
       id :us_quality_core_v100_ballot_taskrejected_must_support_test

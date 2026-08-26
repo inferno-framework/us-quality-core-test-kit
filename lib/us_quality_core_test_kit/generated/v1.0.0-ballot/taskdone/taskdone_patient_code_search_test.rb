@@ -20,7 +20,7 @@ none are returned, the test is skipped.
 
       id :us_quality_core_v100_ballot_taskdone_patient_code_search_test
 
-  optional
+  
 
   
       input :patient_ids,

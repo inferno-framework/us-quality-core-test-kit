@@ -12,6 +12,17 @@ module USQualityCoreTestKit
         found previously for the following Must Support and USCDI-flagged elements:
 
 
+
+        For ONC USCDI+ Quality requirements, each DeviceRequest must support the following additional elements:
+
+        * DeviceRequest.authoredOn
+        * DeviceRequest.code[x]
+        * DeviceRequest.code[x]:codeCodeableConcept.extension:codeOptions
+        * DeviceRequest.intent
+        * DeviceRequest.modifierExtension:doNotPerform
+        * DeviceRequest.reasonCode
+        * DeviceRequest.requester
+        * DeviceRequest.status
       )
 
       id :us_quality_core_v100_ballot_devicerequest_must_support_test

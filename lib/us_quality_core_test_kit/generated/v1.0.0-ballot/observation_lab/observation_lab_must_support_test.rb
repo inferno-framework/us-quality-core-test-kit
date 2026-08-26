@@ -28,6 +28,10 @@ module USQualityCoreTestKit
         * Observation.valueCodeableConcept
         * Observation.valueQuantity
         * Observation.valueString
+
+        For ONC USCDI+ Quality requirements, each Observation must support the following additional elements:
+
+        * Observation.issued
       )
 
       id :us_quality_core_v100_ballot_observation_lab_must_support_test

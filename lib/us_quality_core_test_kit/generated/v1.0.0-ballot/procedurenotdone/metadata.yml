@@ -81,15 +81,29 @@
 - Provenance:target
 :required_concepts: []
 :must_supports:
-  :extensions: []
+  :extensions:
+  - :id: Procedure.extension:recorded
+    :path: extension
+    :url: http://hl7.org/fhir/5.0/StructureDefinition/extension-Procedure.recorded
+    :uscdi_plus_quality: true
+  - :id: Procedure.code.extension:codeOptions
+    :path: code.extension
+    :url: http://hl7.org/fhir/StructureDefinition/codeOptions
+    :uscdi_plus_quality: true
   :slices: []
   :elements:
   - :path: basedOn
     :uscdi_only: true
     :types:
     - Reference
+  - :path: partOf
+    :types:
+    - Reference
+    :uscdi_plus_quality: true
   - :path: status
     :fixed_value: not-done
+  - :path: statusReason
+    :uscdi_plus_quality: true
   - :path: code
   - :path: subject
     :types:
@@ -109,12 +123,15 @@
     :uscdi_only: true
     :types:
     - Reference
+    :uscdi_plus_quality: true
   - :path: reasonCode
     :uscdi_only: true
+    :uscdi_plus_quality: true
   - :path: reasonReference
     :uscdi_only: true
     :types:
     - Reference
+    :uscdi_plus_quality: true
 :mandatory_elements:
 - Procedure.extension
 - Procedure.status

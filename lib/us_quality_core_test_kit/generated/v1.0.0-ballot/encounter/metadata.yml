@@ -113,6 +113,8 @@
   - :path: status
   - :path: class
   - :path: type
+  - :path: priority
+    :uscdi_plus_quality: true
   - :path: subject
     :types:
     - Reference
@@ -132,6 +134,12 @@
     :target_profiles:
     - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns
     - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis
+  - :path: diagnosis
+    :uscdi_plus_quality: true
+  - :path: diagnosis.use
+    :uscdi_plus_quality: true
+  - :path: diagnosis.rank
+    :uscdi_plus_quality: true
   - :path: hospitalization
   - :path: hospitalization.dischargeDisposition
   - :path: location

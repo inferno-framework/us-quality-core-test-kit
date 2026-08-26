@@ -12,6 +12,17 @@ module USQualityCoreTestKit
         found previously for the following Must Support and USCDI-flagged elements:
 
 
+
+        For ONC USCDI+ Quality requirements, each Communication must support the following additional elements:
+
+        * Communication.category
+        * Communication.extension:event-recorded
+        * Communication.sent
+        * Communication.status
+        * Communication.statusReason
+        * Communication.subject
+        * Communication.topic
+        * Communication.topic.extension:codeOptions
       )
 
       id :us_quality_core_v100_ballot_communicationnotdone_must_support_test

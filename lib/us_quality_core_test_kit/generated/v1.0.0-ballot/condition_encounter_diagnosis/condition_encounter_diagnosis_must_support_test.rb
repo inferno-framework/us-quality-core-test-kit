@@ -17,8 +17,13 @@ module USQualityCoreTestKit
         * Condition.encounter
         * Condition.extension:assertedDate
         * Condition.recordedDate
-        * Condition.recorder
         * Condition.subject
+
+        For ONC USCDI+ Quality requirements, each Condition must support the following additional elements:
+
+        * Condition.abatement[x]
+        * Condition.onset[x]
+        * Condition.recorder
       )
 
       id :us_quality_core_v100_ballot_condition_encounter_diagnosis_must_support_test

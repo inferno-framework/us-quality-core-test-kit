@@ -42,13 +42,13 @@
   - :path: identifier.system
   - :path: identifier.value
   - :path: identifier:NPI.system
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: identifier:NPI.value
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: identifier:ein.system
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: identifier:ein.value
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: name
   - :path: name.family
   - :path: telecom

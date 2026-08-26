@@ -14,7 +14,7 @@ module USQualityCoreTestKit
           The client demonstrates SHALL support for searching subject + status on Communication.
         )
 
-        optional true
+        optional false
 
         def required_params
           ["subject", "status"]

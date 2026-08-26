@@ -29,6 +29,10 @@ module USQualityCoreTestKit
         * Practitioner.telecom
         * Practitioner.telecom.system
         * Practitioner.telecom.value
+
+        For ONC USCDI+ Quality requirements, each Practitioner must support the following additional elements:
+
+        * Practitioner.identifier:ein.value
       )
 
       id :us_quality_core_v100_ballot_practitioner_must_support_test

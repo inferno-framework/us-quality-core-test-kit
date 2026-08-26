@@ -21,24 +21,20 @@
 - :names:
   - subject
   :expectation: SHALL
-  :names_not_must_support_or_mandatory:
-  - subject
-  :must_support_or_mandatory: false
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
 - :expectation: SHALL
   :names:
   - subject
   - topic
-  :names_not_must_support_or_mandatory:
-  - subject
-  - topic
-  :must_support_or_mandatory: false
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
 - :expectation: SHALL
   :names:
   - subject
   - status
-  :names_not_must_support_or_mandatory:
-  - subject
-  :must_support_or_mandatory: false
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
 :search_definitions:
   :subject:
     :paths:
@@ -67,14 +63,7 @@
     - Communication.status
     :comparators: {}
     :values:
-    - preparation
-    - in-progress
     - not-done
-    - on-hold
-    - stopped
-    - completed
-    - entered-in-error
-    - unknown
     :type: code
     :contains_multiple: false
     :multiple_or: MAY
@@ -83,9 +72,32 @@
 - Provenance:target
 :required_concepts: []
 :must_supports:
-  :extensions: []
+  :extensions:
+  - :id: Communication.extension:event-recorded
+    :path: extension
+    :url: http://hl7.org/fhir/StructureDefinition/event-recorded
+    :uscdi_plus_quality: true
+  - :id: Communication.topic.extension:codeOptions
+    :path: topic.extension
+    :url: http://hl7.org/fhir/StructureDefinition/codeOptions
+    :uscdi_plus_quality: true
   :slices: []
-  :elements: []
+  :elements:
+  - :path: status
+    :fixed_value: not-done
+    :uscdi_plus_quality: true
+  - :path: statusReason
+    :uscdi_plus_quality: true
+  - :path: category
+    :uscdi_plus_quality: true
+  - :path: subject
+    :types:
+    - Reference
+    :uscdi_plus_quality: true
+  - :path: topic
+    :uscdi_plus_quality: true
+  - :path: sent
+    :uscdi_plus_quality: true
 :mandatory_elements:
 - Communication.extension
 - Communication.status
@@ -153,6 +165,8 @@
   :file_name: communicationnotdone_validation_test.rb
 - :id: us_quality_core_v100_ballot_communicationnotdone_must_support_test
   :file_name: communicationnotdone_must_support_test.rb
+- :id: us_quality_core_v100_ballot_communicationnotdone_reference_resolution_test
+  :file_name: communicationnotdone_reference_resolution_test.rb
 :id: us_quality_core_v100_ballot_communicationnotdone
 :file_name: communicationnotdone_group.rb
 :delayed_references:

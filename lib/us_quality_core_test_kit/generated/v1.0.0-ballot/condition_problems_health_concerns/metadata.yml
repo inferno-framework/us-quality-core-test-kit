@@ -109,6 +109,8 @@
   - :path: clinicalStatus
   - :path: verificationStatus
   - :path: category
+  - :path: severity
+    :uscdi_plus_quality: true
   - :path: code
   - :path: subject
     :types:
@@ -124,6 +126,7 @@
     :uscdi_only: true
     :types:
     - Reference
+    :uscdi_plus_quality: true
 :mandatory_elements:
 - Condition.category
 - Condition.code

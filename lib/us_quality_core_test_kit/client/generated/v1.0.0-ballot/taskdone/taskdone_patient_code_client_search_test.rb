@@ -14,7 +14,7 @@ module USQualityCoreTestKit
           The client demonstrates SHALL support for searching patient + code on Taskdone.
         )
 
-        optional true
+        optional false
 
         def required_params
           ["patient", "code"]

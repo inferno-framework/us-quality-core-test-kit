@@ -22,9 +22,13 @@ module USQualityCoreTestKit
         * Condition.meta.lastUpdated
         * Condition.onsetDateTime
         * Condition.recordedDate
-        * Condition.recorder
         * Condition.subject
         * Condition.verificationStatus
+
+        For ONC USCDI+ Quality requirements, each Condition must support the following additional elements:
+
+        * Condition.recorder
+        * Condition.severity
       )
 
       id :us_quality_core_v100_ballot_condition_problems_health_concerns_must_support_test

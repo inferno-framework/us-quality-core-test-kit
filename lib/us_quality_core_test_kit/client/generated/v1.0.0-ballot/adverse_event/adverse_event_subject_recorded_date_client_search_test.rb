@@ -14,7 +14,7 @@ module USQualityCoreTestKit
           The client demonstrates SHALL support for searching subject + recorded-date on AdverseEvent.
         )
 
-        optional true
+        optional false
 
         def required_params
           ["subject", "recorded-date"]

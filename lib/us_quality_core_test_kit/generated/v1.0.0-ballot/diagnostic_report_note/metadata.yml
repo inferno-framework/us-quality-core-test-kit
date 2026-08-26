@@ -145,6 +145,12 @@
   - :path: result
     :types:
     - Reference
+  - :path: imagingStudy
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-imagingstudy
+    :uscdi_plus_quality: true
   - :path: presentedForm
 :mandatory_elements:
 - DiagnosticReport.status

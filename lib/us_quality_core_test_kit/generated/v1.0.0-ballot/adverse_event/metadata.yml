@@ -33,9 +33,8 @@
   :names:
   - subject
   - recorded-date
-  :names_not_must_support_or_mandatory:
-  - recorded-date
-  :must_support_or_mandatory: false
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
 :search_definitions:
   :subject:
     :paths:
@@ -85,7 +84,29 @@
 :must_supports:
   :extensions: []
   :slices: []
-  :elements: []
+  :elements:
+  - :path: actuality
+    :uscdi_plus_quality: true
+  - :path: event
+    :uscdi_plus_quality: true
+  - :path: subject
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient
+    :uscdi_plus_quality: true
+  - :path: date
+    :uscdi_plus_quality: true
+  - :path: detected
+    :uscdi_plus_quality: true
+  - :path: recordedDate
+    :uscdi_plus_quality: true
+  - :path: outcome
+    :uscdi_plus_quality: true
+  - :path: recorder
+    :types:
+    - Reference
+    :uscdi_plus_quality: true
 :mandatory_elements:
 - AdverseEvent.actuality
 - AdverseEvent.event
@@ -172,6 +193,8 @@
   :file_name: adverse_event_validation_test.rb
 - :id: us_quality_core_v100_ballot_adverse_event_must_support_test
   :file_name: adverse_event_must_support_test.rb
+- :id: us_quality_core_v100_ballot_adverse_event_reference_resolution_test
+  :file_name: adverse_event_reference_resolution_test.rb
 :id: us_quality_core_v100_ballot_adverse_event
 :file_name: adverse_event_group.rb
 :delayed_references:

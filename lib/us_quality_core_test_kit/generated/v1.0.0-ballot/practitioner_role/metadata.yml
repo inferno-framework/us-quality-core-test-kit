@@ -24,6 +24,12 @@
   :extensions: []
   :slices: []
   :elements:
+  - :path: identifier
+    :uscdi_plus_quality: true
+  - :path: identifier.system
+    :uscdi_plus_quality: true
+  - :path: identifier.value
+    :uscdi_plus_quality: true
   - :path: practitioner
     :types:
     - Reference

@@ -113,7 +113,7 @@
   - :path: verificationStatus
   - :path: category
   - :path: severity
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: code
   - :path: subject
     :types:

@@ -23,9 +23,8 @@
   - patient
   - intent
   - do-not-perform
-  :names_not_must_support_or_mandatory:
-  - do-not-perform
-  :must_support_or_mandatory: false
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
 - :expectation: SHALL
   :names:
   - patient
@@ -83,6 +82,11 @@
     :path: extension
     :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence|9.0.0
     :uscdi_only: true
+    :uscdi_plus_quality: true
+  - :id: MedicationRequest.medication[x].extension:codeOptions
+    :path: medication[x].extension
+    :url: http://hl7.org/fhir/StructureDefinition/codeOptions
+    :uscdi_plus_quality: true
   :slices:
   - :slice_id: MedicationRequest.reported[x]:reportedReference
     :slice_name: reportedReference
@@ -109,6 +113,8 @@
   - :path: status
   - :path: intent
   - :path: category
+  - :path: doNotPerform
+    :uscdi_plus_quality: true
   - :path: reportedBoolean
     :original_path: reported[x]
   - :path: reportedReference
@@ -134,20 +140,42 @@
     - Reference
   - :path: reasonCode
     :uscdi_only: true
+    :uscdi_plus_quality: true
   - :path: reasonReference
     :uscdi_only: true
     :types:
     - Reference
+    :uscdi_plus_quality: true
   - :path: dosageInstruction
   - :path: dosageInstruction.text
   - :path: dosageInstruction.timing
+  - :path: dosageInstruction.timing.repeat
+    :uscdi_plus_quality: true
+  - :path: dosageInstruction.timing.repeat.bounds[x]
+    :uscdi_plus_quality: true
+  - :path: dosageInstruction.timing.repeat.frequency
+    :uscdi_plus_quality: true
+  - :path: dosageInstruction.timing.repeat.frequencyMax
+    :uscdi_plus_quality: true
+  - :path: dosageInstruction.timing.repeat.period
+    :uscdi_plus_quality: true
+  - :path: dosageInstruction.timing.repeat.periodMax
+    :uscdi_plus_quality: true
+  - :path: dosageInstruction.timing.repeat.periodUnit
+    :uscdi_plus_quality: true
+  - :path: dosageInstruction.asNeeded[x]
+    :uscdi_plus_quality: true
   - :path: dosageInstruction.route
   - :path: dosageInstruction.doseAndRate
   - :path: dosageInstruction.doseAndRate.doseQuantity
     :original_path: dosageInstruction.doseAndRate.dose[x]
   - :path: dispenseRequest
+  - :path: dispenseRequest.validityPeriod
+    :uscdi_plus_quality: true
   - :path: dispenseRequest.numberOfRepeatsAllowed
   - :path: dispenseRequest.quantity
+  - :path: dispenseRequest.expectedSupplyDuration
+    :uscdi_plus_quality: true
   :choices:
   - :paths:
     - reportedBoolean

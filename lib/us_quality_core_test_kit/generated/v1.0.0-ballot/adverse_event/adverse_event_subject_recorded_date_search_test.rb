@@ -20,7 +20,7 @@ none are returned, the test is skipped.
 
       id :us_quality_core_v100_ballot_adverse_event_subject_recorded_date_search_test
 
-  optional
+  
 
   
       input :patient_ids,

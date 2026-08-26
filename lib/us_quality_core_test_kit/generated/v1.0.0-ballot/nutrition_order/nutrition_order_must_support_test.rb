@@ -12,6 +12,21 @@ module USQualityCoreTestKit
         found previously for the following Must Support and USCDI-flagged elements:
 
 
+
+        For ONC USCDI+ Quality requirements, each NutritionOrder must support the following additional elements:
+
+        * NutritionOrder.enteralFormula
+        * NutritionOrder.enteralFormula.baseFormulaType
+        * NutritionOrder.enteralFormula.baseFormulaType.extension:codeOptions
+        * NutritionOrder.oralDiet
+        * NutritionOrder.oralDiet.type
+        * NutritionOrder.oralDiet.type.extension:codeOptions
+        * NutritionOrder.orderer
+        * NutritionOrder.patient
+        * NutritionOrder.status
+        * NutritionOrder.supplement
+        * NutritionOrder.supplement.type
+        * NutritionOrder.supplement.type.extension:codeOptions
       )
 
       id :us_quality_core_v100_ballot_nutrition_order_must_support_test

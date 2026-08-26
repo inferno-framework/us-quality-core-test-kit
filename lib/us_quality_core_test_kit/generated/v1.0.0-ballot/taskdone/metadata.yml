@@ -22,22 +22,19 @@
   :names:
   - patient
   - status
-  :names_not_must_support_or_mandatory:
-  - patient
-  :must_support_or_mandatory: false
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
 - :names:
   - patient
   :expectation: SHALL
-  :names_not_must_support_or_mandatory:
-  - patient
-  :must_support_or_mandatory: false
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
 - :expectation: SHALL
   :names:
   - patient
   - code
-  :names_not_must_support_or_mandatory:
-  - patient
-  :must_support_or_mandatory: false
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
 :search_definitions:
   :patient:
     :paths:
@@ -84,7 +81,35 @@
 :must_supports:
   :extensions: []
   :slices: []
-  :elements: []
+  :elements:
+  - :path: basedOn
+    :types:
+    - Reference
+    :uscdi_plus_quality: true
+  - :path: status
+    :uscdi_plus_quality: true
+  - :path: statusReason
+    :uscdi_plus_quality: true
+  - :path: code
+    :uscdi_plus_quality: true
+  - :path: focus
+    :types:
+    - Reference
+    :uscdi_plus_quality: true
+  - :path: for
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient
+    :uscdi_plus_quality: true
+  - :path: executionPeriod
+    :uscdi_plus_quality: true
+  - :path: requester
+    :types:
+    - Reference
+    :uscdi_plus_quality: true
+  - :path: reasonCode
+    :uscdi_plus_quality: true
 :mandatory_elements:
 - Task.status
 - Task.intent
@@ -177,6 +202,8 @@
   :file_name: taskdone_validation_test.rb
 - :id: us_quality_core_v100_ballot_taskdone_must_support_test
   :file_name: taskdone_must_support_test.rb
+- :id: us_quality_core_v100_ballot_taskdone_reference_resolution_test
+  :file_name: taskdone_reference_resolution_test.rb
 :id: us_quality_core_v100_ballot_taskdone
 :file_name: taskdone_group.rb
 :delayed_references:

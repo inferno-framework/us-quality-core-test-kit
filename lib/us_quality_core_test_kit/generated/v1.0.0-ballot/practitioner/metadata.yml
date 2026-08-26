@@ -43,6 +43,8 @@
   - :path: identifier.value
   - :path: identifier:NPI.system
   - :path: identifier:NPI.value
+  - :path: identifier:ein.value
+    :uscdi_plus_quality: true
   - :path: name
   - :path: name.family
   - :path: telecom

@@ -175,12 +175,12 @@
     - Reference
   - :path: reasonCode
     :uscdi_only: true
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: reasonReference
     :uscdi_only: true
     :types:
     - Reference
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
 :mandatory_elements:
 - ServiceRequest.extension
 - ServiceRequest.status

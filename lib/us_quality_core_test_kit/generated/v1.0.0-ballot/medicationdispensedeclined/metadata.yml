@@ -56,11 +56,21 @@
 - Provenance:target
 :required_concepts: []
 :must_supports:
-  :extensions: []
+  :extensions:
+  - :id: MedicationDispense.extension:recorded
+    :path: extension
+    :url: http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.recorded
+    :uscdi_plus_quality: true
+  - :id: MedicationDispense.medication[x].extension:codeOptions
+    :path: medication[x].extension
+    :url: http://hl7.org/fhir/StructureDefinition/codeOptions
+    :uscdi_plus_quality: true
   :slices: []
   :elements:
   - :path: status
     :fixed_value: declined
+  - :path: statusReason[x]
+    :uscdi_plus_quality: true
   - :path: medication[x]
     :types:
     - Reference
@@ -87,6 +97,8 @@
     - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest
   - :path: type
   - :path: quantity
+  - :path: daysSupply
+    :uscdi_plus_quality: true
   - :path: whenHandedOver
   - :path: dosageInstruction
   - :path: dosageInstruction.text

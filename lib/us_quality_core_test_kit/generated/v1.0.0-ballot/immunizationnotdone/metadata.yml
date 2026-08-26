@@ -56,7 +56,11 @@
 - Provenance:target
 :required_concepts: []
 :must_supports:
-  :extensions: []
+  :extensions:
+  - :id: Immunization.vaccineCode.extension:codeOptions
+    :path: vaccineCode.extension
+    :url: http://hl7.org/fhir/StructureDefinition/codeOptions
+    :uscdi_plus_quality: true
   :slices: []
   :elements:
   - :path: status
@@ -75,6 +79,8 @@
     - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter
   - :path: occurrenceDateTime
     :original_path: occurrence[x]
+  - :path: recorded
+    :uscdi_plus_quality: true
   - :path: primarySource
   - :path: location
     :types:

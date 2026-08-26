@@ -5,6 +5,7 @@ require_relative 'communicationnotdone/communicationnotdone_read_test'
 require_relative 'communicationnotdone/communicationnotdone_provenance_revinclude_search_test'
 require_relative 'communicationnotdone/communicationnotdone_validation_test'
 require_relative 'communicationnotdone/communicationnotdone_must_support_test'
+require_relative 'communicationnotdone/communicationnotdone_reference_resolution_test'
 
 
 module USQualityCoreTestKit
@@ -91,6 +92,7 @@ read succeeds.
       test from: :us_quality_core_v100_ballot_communicationnotdone_provenance_revinclude_search_test
       test from: :us_quality_core_v100_ballot_communicationnotdone_validation_test
       test from: :us_quality_core_v100_ballot_communicationnotdone_must_support_test
+      test from: :us_quality_core_v100_ballot_communicationnotdone_reference_resolution_test
     end
   end
 end

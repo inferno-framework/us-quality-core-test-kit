@@ -108,7 +108,7 @@
   - :path: class
   - :path: type
   - :path: priority
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: subject
     :types:
     - Reference
@@ -126,7 +126,7 @@
     :types:
     - Reference
   - :path: diagnosis
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: hospitalization
   - :path: hospitalization.dischargeDisposition
   - :path: location

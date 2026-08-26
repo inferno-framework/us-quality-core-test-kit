@@ -12,6 +12,17 @@ module USQualityCoreTestKit
         found previously for the following Must Support and USCDI-flagged elements:
 
 
+
+        For ONC USCDI+ Quality requirements, each AdverseEvent must support the following additional elements:
+
+        * AdverseEvent.actuality
+        * AdverseEvent.date
+        * AdverseEvent.detected
+        * AdverseEvent.event
+        * AdverseEvent.outcome
+        * AdverseEvent.recordedDate
+        * AdverseEvent.recorder
+        * AdverseEvent.subject
       )
 
       id :us_quality_core_v100_ballot_adverse_event_must_support_test

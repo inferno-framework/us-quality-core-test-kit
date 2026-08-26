@@ -14,7 +14,7 @@ module USQualityCoreTestKit
           The client demonstrates SHALL support for searching patient on Taskrejected.
         )
 
-        optional true
+        optional false
 
         def required_params
           ["patient"]

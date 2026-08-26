@@ -99,7 +99,7 @@
   - :path: intent
   - :path: category
   - :path: doNotPerform
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: reportedReference
     :original_path: reported[x]
     :types:
@@ -121,7 +121,7 @@
     - Reference
   - :path: reasonCode
     :uscdi_only: true
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: reasonReference
     :uscdi_only: true
     :types:

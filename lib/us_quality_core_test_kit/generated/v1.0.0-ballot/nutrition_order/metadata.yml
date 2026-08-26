@@ -39,9 +39,45 @@
 - Provenance:target
 :required_concepts: []
 :must_supports:
-  :extensions: []
+  :extensions:
+  - :id: NutritionOrder.oralDiet.type.extension:codeOptions
+    :path: oralDiet.type.extension
+    :url: http://hl7.org/fhir/StructureDefinition/codeOptions
+    :uscdi_plus_quality: true
+  - :id: NutritionOrder.supplement.type.extension:codeOptions
+    :path: supplement.type.extension
+    :url: http://hl7.org/fhir/StructureDefinition/codeOptions
+    :uscdi_plus_quality: true
+  - :id: NutritionOrder.enteralFormula.baseFormulaType.extension:codeOptions
+    :path: enteralFormula.baseFormulaType.extension
+    :url: http://hl7.org/fhir/StructureDefinition/codeOptions
+    :uscdi_plus_quality: true
   :slices: []
-  :elements: []
+  :elements:
+  - :path: status
+    :uscdi_plus_quality: true
+  - :path: patient
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient
+    :uscdi_plus_quality: true
+  - :path: orderer
+    :types:
+    - Reference
+    :uscdi_plus_quality: true
+  - :path: oralDiet
+    :uscdi_plus_quality: true
+  - :path: oralDiet.type
+    :uscdi_plus_quality: true
+  - :path: supplement
+    :uscdi_plus_quality: true
+  - :path: supplement.type
+    :uscdi_plus_quality: true
+  - :path: enteralFormula
+    :uscdi_plus_quality: true
+  - :path: enteralFormula.baseFormulaType
+    :uscdi_plus_quality: true
 :mandatory_elements:
 - NutritionOrder.status
 - NutritionOrder.intent
@@ -81,6 +117,8 @@
   :file_name: nutrition_order_validation_test.rb
 - :id: us_quality_core_v100_ballot_nutrition_order_must_support_test
   :file_name: nutrition_order_must_support_test.rb
+- :id: us_quality_core_v100_ballot_nutrition_order_reference_resolution_test
+  :file_name: nutrition_order_reference_resolution_test.rb
 :id: us_quality_core_v100_ballot_nutrition_order
 :file_name: nutrition_order_group.rb
 :delayed_references: []

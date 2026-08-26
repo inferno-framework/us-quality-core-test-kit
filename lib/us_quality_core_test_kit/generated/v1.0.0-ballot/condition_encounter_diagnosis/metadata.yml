@@ -101,11 +101,16 @@
     - Reference
     :target_profiles:
     - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter
+  - :path: onset[x]
+    :uscdi_plus_quality: true
+  - :path: abatement[x]
+    :uscdi_plus_quality: true
   - :path: recordedDate
   - :path: recorder
     :uscdi_only: true
     :types:
     - Reference
+    :uscdi_plus_quality: true
 :mandatory_elements:
 - Condition.category
 - Condition.code

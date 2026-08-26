@@ -12,6 +12,18 @@ module USQualityCoreTestKit
         found previously for the following Must Support and USCDI-flagged elements:
 
 
+
+        For ONC USCDI+ Quality requirements, each MedicationAdministration must support the following additional elements:
+
+        * MedicationAdministration.dosage
+        * MedicationAdministration.dosage.dose
+        * MedicationAdministration.dosage.route
+        * MedicationAdministration.effective[x]
+        * MedicationAdministration.medication[x]
+        * MedicationAdministration.medication[x].extension:codeOptions
+        * MedicationAdministration.performer.actor
+        * MedicationAdministration.status
+        * MedicationAdministration.statusReason
       )
 
       id :us_quality_core_v100_ballot_medicationadministrationnotdone_must_support_test

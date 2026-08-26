@@ -103,9 +103,31 @@
 - Provenance:target
 :required_concepts: []
 :must_supports:
-  :extensions: []
+  :extensions:
+  - :id: MedicationAdministration.medication[x].extension:codeOptions
+    :path: medication[x].extension
+    :url: http://hl7.org/fhir/StructureDefinition/codeOptions
+    :uscdi_plus_quality: true
   :slices: []
-  :elements: []
+  :elements:
+  - :path: status
+    :uscdi_plus_quality: true
+  - :path: medication[x]
+    :types:
+    - Reference
+    :uscdi_plus_quality: true
+  - :path: effective[x]
+    :uscdi_plus_quality: true
+  - :path: performer.actor
+    :types:
+    - Reference
+    :uscdi_plus_quality: true
+  - :path: dosage
+    :uscdi_plus_quality: true
+  - :path: dosage.route
+    :uscdi_plus_quality: true
+  - :path: dosage.dose
+    :uscdi_plus_quality: true
 :mandatory_elements:
 - MedicationAdministration.status
 - MedicationAdministration.medication[x]
@@ -170,6 +192,8 @@
   :file_name: medicationadministration_validation_test.rb
 - :id: us_quality_core_v100_ballot_medicationadministration_must_support_test
   :file_name: medicationadministration_must_support_test.rb
+- :id: us_quality_core_v100_ballot_medicationadministration_reference_resolution_test
+  :file_name: medicationadministration_reference_resolution_test.rb
 :id: us_quality_core_v100_ballot_medicationadministration
 :file_name: medicationadministration_group.rb
 :delayed_references:

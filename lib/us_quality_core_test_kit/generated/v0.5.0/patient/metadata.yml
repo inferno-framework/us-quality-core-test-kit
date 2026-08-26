@@ -44,17 +44,17 @@
     :path: extension
     :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-race|6.1.0
     :uscdi_only: true
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :id: Patient.extension:ethnicity
     :path: extension
     :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity|6.1.0
     :uscdi_only: true
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :id: Patient.extension:tribalAffiliation
     :path: extension
     :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation|6.1.0
     :uscdi_only: true
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :id: Patient.extension:sex
     :path: extension
     :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex
@@ -67,18 +67,18 @@
   - :path: name
   - :path: name.use
     :uscdi_only: true
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: name.family
   - :path: name.given
   - :path: name.suffix
     :uscdi_only: true
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: name.period
     :uscdi_only: true
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: telecom
     :uscdi_only: true
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: telecom.system
   - :path: telecom.value
   - :path: telecom.use
@@ -86,21 +86,21 @@
   - :path: birthDate
   - :path: deceased[x]
     :uscdi_only: true
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: address
   - :path: address.use
     :uscdi_only: true
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: address.line
   - :path: address.city
   - :path: address.state
   - :path: address.postalCode
   - :path: address.period
     :uscdi_only: true
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: communication
     :uscdi_only: true
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: communication.language
 :mandatory_elements:
 - Patient.identifier

@@ -14,7 +14,7 @@ module USQualityCoreTestKit
           The client demonstrates SHALL support for searching patient + intent + do-not-perform on Medicationrequest.
         )
 
-        optional true
+        optional false
 
         def required_params
           ["patient", "intent", "do-not-perform"]

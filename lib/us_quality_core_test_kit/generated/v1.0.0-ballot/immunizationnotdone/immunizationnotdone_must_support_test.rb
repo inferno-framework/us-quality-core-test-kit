@@ -22,6 +22,11 @@ module USQualityCoreTestKit
         * Immunization.status
         * Immunization.statusReason
         * Immunization.vaccineCode
+
+        For ONC USCDI+ Quality requirements, each Immunization must support the following additional elements:
+
+        * Immunization.recorded
+        * Immunization.vaccineCode.extension:codeOptions
       )
 
       id :us_quality_core_v100_ballot_immunizationnotdone_must_support_test

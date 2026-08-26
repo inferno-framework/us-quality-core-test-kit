@@ -12,6 +12,12 @@ module USQualityCoreTestKit
         found previously for the following Must Support and USCDI-flagged elements:
 
 
+
+        For ONC USCDI+ Quality requirements, each ImagingStudy must support the following additional elements:
+
+        * ImagingStudy.interpreter
+        * ImagingStudy.series.performer.actor
+        * ImagingStudy.status
       )
 
       id :us_quality_core_v100_ballot_imaging_study_must_support_test

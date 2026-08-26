@@ -21,24 +21,20 @@
 - :names:
   - subject
   :expectation: SHALL
-  :names_not_must_support_or_mandatory:
-  - subject
-  :must_support_or_mandatory: false
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
 - :expectation: SHALL
   :names:
   - subject
   - topic
-  :names_not_must_support_or_mandatory:
-  - subject
-  - topic
-  :must_support_or_mandatory: false
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
 - :expectation: SHALL
   :names:
   - subject
   - status
-  :names_not_must_support_or_mandatory:
-  - subject
-  :must_support_or_mandatory: false
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
 :search_definitions:
   :subject:
     :paths:
@@ -83,9 +79,25 @@
 - Provenance:target
 :required_concepts: []
 :must_supports:
-  :extensions: []
+  :extensions:
+  - :id: Communication.topic.extension:codeOptions
+    :path: topic.extension
+    :url: http://hl7.org/fhir/StructureDefinition/codeOptions
+    :uscdi_plus_quality: true
   :slices: []
-  :elements: []
+  :elements:
+  - :path: status
+    :uscdi_plus_quality: true
+  - :path: category
+    :uscdi_plus_quality: true
+  - :path: subject
+    :types:
+    - Reference
+    :uscdi_plus_quality: true
+  - :path: topic
+    :uscdi_plus_quality: true
+  - :path: sent
+    :uscdi_plus_quality: true
 :mandatory_elements:
 - Communication.status
 - Communication.payload.content[x]
@@ -155,6 +167,8 @@
   :file_name: communication_validation_test.rb
 - :id: us_quality_core_v100_ballot_communication_must_support_test
   :file_name: communication_must_support_test.rb
+- :id: us_quality_core_v100_ballot_communication_reference_resolution_test
+  :file_name: communication_reference_resolution_test.rb
 :id: us_quality_core_v100_ballot_communication
 :file_name: communication_group.rb
 :delayed_references:

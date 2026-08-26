@@ -19,11 +19,16 @@ module USQualityCoreTestKit
         * ServiceRequest.encounter
         * ServiceRequest.intent
         * ServiceRequest.occurrencePeriod
-        * ServiceRequest.reasonCode
-        * ServiceRequest.reasonReference
         * ServiceRequest.requester
         * ServiceRequest.status
         * ServiceRequest.subject
+
+        For ONC USCDI+ Quality requirements, each ServiceRequest must support the following additional elements:
+
+        * ServiceRequest.code.extension:codeOptions
+        * ServiceRequest.doNotPerform
+        * ServiceRequest.reasonCode
+        * ServiceRequest.reasonReference
       )
 
       id :us_quality_core_v100_ballot_servicerequested_must_support_test

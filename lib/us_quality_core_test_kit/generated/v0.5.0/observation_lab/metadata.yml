@@ -139,7 +139,7 @@
   - :path: effectiveDateTime
     :original_path: effective[x]
   - :path: issued
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: valueQuantity
     :original_path: value[x]
   - :path: valueCodeableConcept
@@ -147,7 +147,7 @@
   - :path: valueString
     :original_path: value[x]
   - :path: interpretation
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: specimen
     :types:
     - Reference

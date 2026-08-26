@@ -16,8 +16,14 @@ module USQualityCoreTestKit
         * AllergyIntolerance.patient
         * AllergyIntolerance.reaction
         * AllergyIntolerance.reaction.manifestation
-        * AllergyIntolerance.recorder
         * AllergyIntolerance.verificationStatus
+
+        For ONC USCDI+ Quality requirements, each AllergyIntolerance must support the following additional elements:
+
+        * AllergyIntolerance.lastOccurrence
+        * AllergyIntolerance.onset[x]
+        * AllergyIntolerance.recordedDate
+        * AllergyIntolerance.recorder
       )
 
       id :us_quality_core_v100_ballot_allergy_intolerance_must_support_test

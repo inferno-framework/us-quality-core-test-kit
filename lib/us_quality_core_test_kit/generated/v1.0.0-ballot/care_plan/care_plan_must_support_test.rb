@@ -11,15 +11,18 @@ module USQualityCoreTestKit
         This test will look through the CarePlan resources
         found previously for the following Must Support and USCDI-flagged elements:
 
-        * CarePlan.addresses
         * CarePlan.category
-        * CarePlan.contributor
         * CarePlan.intent
         * CarePlan.status
         * CarePlan.subject
         * CarePlan.text
         * CarePlan.text.div
         * CarePlan.text.status
+
+        For ONC USCDI+ Quality requirements, each CarePlan must support the following additional elements:
+
+        * CarePlan.addresses
+        * CarePlan.contributor
       )
 
       id :us_quality_core_v100_ballot_care_plan_must_support_test

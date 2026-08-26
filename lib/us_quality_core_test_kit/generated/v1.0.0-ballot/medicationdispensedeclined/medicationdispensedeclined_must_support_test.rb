@@ -27,6 +27,13 @@ module USQualityCoreTestKit
         * MedicationDispense.subject
         * MedicationDispense.type
         * MedicationDispense.whenHandedOver
+
+        For ONC USCDI+ Quality requirements, each MedicationDispense must support the following additional elements:
+
+        * MedicationDispense.daysSupply
+        * MedicationDispense.extension:recorded
+        * MedicationDispense.medication[x].extension:codeOptions
+        * MedicationDispense.statusReason[x]
       )
 
       id :us_quality_core_v100_ballot_medicationdispensedeclined_must_support_test

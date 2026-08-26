@@ -6,6 +6,7 @@ require_relative 'medicationadministrationdone/medicationadministrationdone_read
 require_relative 'medicationadministrationdone/medicationadministrationdone_provenance_revinclude_search_test'
 require_relative 'medicationadministrationdone/medicationadministrationdone_validation_test'
 require_relative 'medicationadministrationdone/medicationadministrationdone_must_support_test'
+require_relative 'medicationadministrationdone/medicationadministrationdone_reference_resolution_test'
 
 
 module USQualityCoreTestKit
@@ -94,6 +95,7 @@ read succeeds.
       test from: :us_quality_core_v100_ballot_medicationadministrationdone_provenance_revinclude_search_test
       test from: :us_quality_core_v100_ballot_medicationadministrationdone_validation_test
       test from: :us_quality_core_v100_ballot_medicationadministrationdone_must_support_test
+      test from: :us_quality_core_v100_ballot_medicationadministrationdone_reference_resolution_test
     end
   end
 end

@@ -27,6 +27,10 @@ module USQualityCoreTestKit
         * Coverage.status
         * Coverage.subscriberId
         * Coverage.type
+
+        For ONC USCDI+ Quality requirements, each Coverage must support the following additional elements:
+
+        * Coverage.class:group.name
       )
 
       id :us_quality_core_v100_ballot_coverage_must_support_test

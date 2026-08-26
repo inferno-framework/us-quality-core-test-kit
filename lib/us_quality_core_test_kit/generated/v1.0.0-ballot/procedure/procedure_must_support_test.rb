@@ -16,11 +16,16 @@ module USQualityCoreTestKit
         * Procedure.encounter
         * Procedure.performedDateTime
         * Procedure.performer
+        * Procedure.status
+        * Procedure.subject
+
+        For ONC USCDI+ Quality requirements, each Procedure must support the following additional elements:
+
+        * Procedure.partOf
         * Procedure.performer.actor
         * Procedure.reasonCode
         * Procedure.reasonReference
-        * Procedure.status
-        * Procedure.subject
+        * Procedure.statusReason
       )
 
       id :us_quality_core_v100_ballot_procedure_must_support_test

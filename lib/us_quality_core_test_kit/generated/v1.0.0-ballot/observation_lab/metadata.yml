@@ -148,6 +148,8 @@
     - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter
   - :path: effectiveDateTime
     :original_path: effective[x]
+  - :path: issued
+    :uscdi_plus_quality: true
   - :path: performer
     :types:
     - Reference

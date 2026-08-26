@@ -41,7 +41,17 @@
 :must_supports:
   :extensions: []
   :slices: []
-  :elements: []
+  :elements:
+  - :path: status
+    :uscdi_plus_quality: true
+  - :path: interpreter
+    :types:
+    - Reference
+    :uscdi_plus_quality: true
+  - :path: series.performer.actor
+    :types:
+    - Reference
+    :uscdi_plus_quality: true
 :mandatory_elements:
 - ImagingStudy.status
 - ImagingStudy.subject
@@ -116,6 +126,8 @@
   :file_name: imaging_study_validation_test.rb
 - :id: us_quality_core_v100_ballot_imaging_study_must_support_test
   :file_name: imaging_study_must_support_test.rb
+- :id: us_quality_core_v100_ballot_imaging_study_reference_resolution_test
+  :file_name: imaging_study_reference_resolution_test.rb
 :id: us_quality_core_v100_ballot_imaging_study
 :file_name: imaging_study_group.rb
 :delayed_references:

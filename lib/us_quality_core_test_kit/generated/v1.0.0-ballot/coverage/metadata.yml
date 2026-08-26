@@ -83,6 +83,8 @@
     - Reference
   - :path: class
   - :path: class:group.value
+  - :path: class:group.name
+    :uscdi_plus_quality: true
   - :path: class:plan.value
   - :path: class:plan.name
 :mandatory_elements:

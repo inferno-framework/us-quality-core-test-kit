@@ -20,6 +20,12 @@ module USQualityCoreTestKit
         * PractitionerRole.telecom
         * PractitionerRole.telecom.system
         * PractitionerRole.telecom.value
+
+        For ONC USCDI+ Quality requirements, each PractitionerRole must support the following additional elements:
+
+        * PractitionerRole.identifier
+        * PractitionerRole.identifier.system
+        * PractitionerRole.identifier.value
       )
 
       id :us_quality_core_v100_ballot_practitioner_role_must_support_test

@@ -35,11 +35,15 @@ module USQualityCoreTestKit
       end
 
       def must_support_extension_elements
-        all_must_support_elements.select { |element| element.path.end_with? 'extension' }
+        all_must_support_elements.select { |element| extension_element?(element) }
       end
 
       def must_support_slice_elements
-        all_must_support_elements.select { |element| !element.path.end_with?('extension') && element.sliceName.present? }
+        all_must_support_elements.select { |element| !extension_element?(element) && element.sliceName.present? }
+      end
+
+      def extension_element?(element)
+        element.type.any? { |type| type.code == 'Extension' }
       end
 
       def sliced_element(slice)
@@ -328,14 +332,19 @@ module USQualityCoreTestKit
       end
 
       def uscdi_plus_quality_element?(element)
-        !element.mustSupport && element.extension.any? do |extension|
-          extension.url.downcase.ends_with? 'uscdiplusquality'
+        return false if element.mustSupport
+
+        element.extension.any? do |extension|
+          extension.url.downcase.end_with?(
+            'uscdiplusquality',
+            'us-quality-core-uscdi-quality-extension'
+          )
         end
       end
 
-      def add_us_quality_coreuscdi_plus_quality_flag(profile_element, metadata_element)
+      def add_uscdi_plus_quality_flag(profile_element, metadata_element)
         if uscdi_plus_quality_element?(profile_element)
-          metadata_element.merge(us_quality_coreuscdi_plus_quality: true)
+          metadata_element.merge(uscdi_plus_quality: true)
         else
           metadata_element
         end
@@ -357,7 +366,7 @@ module USQualityCoreTestKit
 
           metadata[:uscdi_only] = true if uscdi_requirement_element?(element)
 
-          add_us_quality_coreuscdi_plus_quality_flag(element, metadata)
+          add_uscdi_plus_quality_flag(element, metadata)
         end
       end
 
@@ -365,7 +374,7 @@ module USQualityCoreTestKit
         (type_slices + value_slices).map do |slice|
           profile_element = must_support_slice_elements.find { |e| e.id == slice[:slice_id] }
 
-          add_us_quality_coreuscdi_plus_quality_flag(profile_element, slice)
+          add_uscdi_plus_quality_flag(profile_element, slice)
         end
       end
 
@@ -410,7 +419,7 @@ module USQualityCoreTestKit
             [element[:path], element[:original_path]].include?(path)
           end
 
-          add_us_quality_coreuscdi_plus_quality_flag(profile_element, element)
+          add_uscdi_plus_quality_flag(profile_element, element)
         end
       end
 

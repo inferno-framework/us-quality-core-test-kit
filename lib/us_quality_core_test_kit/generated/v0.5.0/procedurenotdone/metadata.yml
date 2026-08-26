@@ -85,7 +85,7 @@
   - :id: Procedure.extension:recorded
     :path: extension
     :url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-recorded
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   :slices: []
   :elements:
   - :path: basedOn
@@ -95,11 +95,11 @@
   - :path: partOf
     :types:
     - Reference
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: status
     :fixed_value: not-done
   - :path: statusReason
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: code
   - :path: subject
     :types:
@@ -109,11 +109,11 @@
   - :path: performedDateTime
     :original_path: performed[x]
   - :path: reasonCode
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: reasonReference
     :types:
     - Reference
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
 :mandatory_elements:
 - Procedure.extension
 - Procedure.status

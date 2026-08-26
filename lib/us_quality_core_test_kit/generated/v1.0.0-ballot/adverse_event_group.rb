@@ -5,6 +5,7 @@ require_relative 'adverse_event/adverse_event_read_test'
 require_relative 'adverse_event/adverse_event_provenance_revinclude_search_test'
 require_relative 'adverse_event/adverse_event_validation_test'
 require_relative 'adverse_event/adverse_event_must_support_test'
+require_relative 'adverse_event/adverse_event_reference_resolution_test'
 
 
 module USQualityCoreTestKit
@@ -91,6 +92,7 @@ read succeeds.
       test from: :us_quality_core_v100_ballot_adverse_event_provenance_revinclude_search_test
       test from: :us_quality_core_v100_ballot_adverse_event_validation_test
       test from: :us_quality_core_v100_ballot_adverse_event_must_support_test
+      test from: :us_quality_core_v100_ballot_adverse_event_reference_resolution_test
     end
   end
 end

@@ -140,7 +140,11 @@
 :required_concepts:
 - category
 :must_supports:
-  :extensions: []
+  :extensions:
+  - :id: ServiceRequest.code.extension:codeOptions
+    :path: code.extension
+    :url: http://hl7.org/fhir/StructureDefinition/codeOptions
+    :uscdi_plus_quality: true
   :slices:
   - :slice_id: ServiceRequest.category:us-core
     :slice_name: us-core
@@ -173,6 +177,8 @@
   - :path: status
   - :path: intent
   - :path: category
+  - :path: doNotPerform
+    :uscdi_plus_quality: true
   - :path: code
   - :path: code.text
     :uscdi_only: true
@@ -194,10 +200,12 @@
     - Reference
   - :path: reasonCode
     :uscdi_only: true
+    :uscdi_plus_quality: true
   - :path: reasonReference
     :uscdi_only: true
     :types:
     - Reference
+    :uscdi_plus_quality: true
 :mandatory_elements:
 - ServiceRequest.status
 - ServiceRequest.intent

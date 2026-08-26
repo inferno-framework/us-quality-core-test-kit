@@ -90,6 +90,8 @@
     - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest
   - :path: type
   - :path: quantity
+  - :path: daysSupply
+    :uscdi_plus_quality: true
   - :path: whenHandedOver
   - :path: dosageInstruction
   - :path: dosageInstruction.text

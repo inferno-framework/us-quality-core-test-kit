@@ -14,32 +14,35 @@ module USQualityCoreTestKit
         * Patient.address
         * Patient.address.city
         * Patient.address.line
-        * Patient.address.period
         * Patient.address.postalCode
         * Patient.address.state
-        * Patient.address.use
         * Patient.birthDate
-        * Patient.communication
         * Patient.communication.language
-        * Patient.deceased[x]
-        * Patient.extension:ethnicity
-        * Patient.extension:interpreterRequired
-        * Patient.extension:race
-        * Patient.extension:sex
-        * Patient.extension:tribalAffiliation
         * Patient.identifier
         * Patient.identifier.system
         * Patient.identifier.value
         * Patient.name
         * Patient.name.family
         * Patient.name.given
+        * Patient.telecom.system
+        * Patient.telecom.use
+        * Patient.telecom.value
+
+        For ONC USCDI+ Quality requirements, each Patient must support the following additional elements:
+
+        * Patient.address.period
+        * Patient.address.use
+        * Patient.communication
+        * Patient.deceased[x]
+        * Patient.extension:ethnicity
+        * Patient.extension:interpreterRequired
+        * Patient.extension:race
+        * Patient.extension:sex
+        * Patient.extension:tribalAffiliation
         * Patient.name.period
         * Patient.name.suffix
         * Patient.name.use
         * Patient.telecom
-        * Patient.telecom.system
-        * Patient.telecom.use
-        * Patient.telecom.value
       )
 
       id :us_quality_core_v100_ballot_patient_must_support_test

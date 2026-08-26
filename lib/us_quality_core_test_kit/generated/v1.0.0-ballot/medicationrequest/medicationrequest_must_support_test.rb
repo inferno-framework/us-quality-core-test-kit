@@ -24,7 +24,6 @@ module USQualityCoreTestKit
         * MedicationRequest.dosageInstruction.text
         * MedicationRequest.dosageInstruction.timing
         * MedicationRequest.encounter
-        * MedicationRequest.extension:medicationAdherence
         * MedicationRequest.intent
         * MedicationRequest.medication[x]
         * MedicationRequest.reasonCode or MedicationRequest.reasonReference
@@ -33,6 +32,24 @@ module USQualityCoreTestKit
         * MedicationRequest.requester
         * MedicationRequest.status
         * MedicationRequest.subject
+
+        For ONC USCDI+ Quality requirements, each MedicationRequest must support the following additional elements:
+
+        * MedicationRequest.dispenseRequest.expectedSupplyDuration
+        * MedicationRequest.dispenseRequest.validityPeriod
+        * MedicationRequest.doNotPerform
+        * MedicationRequest.dosageInstruction.asNeeded[x]
+        * MedicationRequest.dosageInstruction.timing.repeat
+        * MedicationRequest.dosageInstruction.timing.repeat.bounds[x]
+        * MedicationRequest.dosageInstruction.timing.repeat.frequency
+        * MedicationRequest.dosageInstruction.timing.repeat.frequencyMax
+        * MedicationRequest.dosageInstruction.timing.repeat.period
+        * MedicationRequest.dosageInstruction.timing.repeat.periodMax
+        * MedicationRequest.dosageInstruction.timing.repeat.periodUnit
+        * MedicationRequest.extension:medicationAdherence
+        * MedicationRequest.medication[x].extension:codeOptions
+        * MedicationRequest.reasonCode
+        * MedicationRequest.reasonReference
       )
 
       id :us_quality_core_v100_ballot_medicationrequest_must_support_test

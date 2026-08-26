@@ -35,7 +35,7 @@ FHIR R4 specification.
 
       id :us_quality_core_v100_ballot_medicationrequest_patient_intent_do_not_perform_search_test
 
-  optional
+  
 
   
       input :patient_ids,

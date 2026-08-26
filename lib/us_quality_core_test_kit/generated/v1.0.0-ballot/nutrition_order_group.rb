@@ -3,6 +3,7 @@ require_relative 'nutrition_order/nutrition_order_read_test'
 require_relative 'nutrition_order/nutrition_order_provenance_revinclude_search_test'
 require_relative 'nutrition_order/nutrition_order_validation_test'
 require_relative 'nutrition_order/nutrition_order_must_support_test'
+require_relative 'nutrition_order/nutrition_order_reference_resolution_test'
 
 
 module USQualityCoreTestKit
@@ -85,6 +86,7 @@ read succeeds.
       test from: :us_quality_core_v100_ballot_nutrition_order_provenance_revinclude_search_test
       test from: :us_quality_core_v100_ballot_nutrition_order_validation_test
       test from: :us_quality_core_v100_ballot_nutrition_order_must_support_test
+      test from: :us_quality_core_v100_ballot_nutrition_order_reference_resolution_test
     end
   end
 end
