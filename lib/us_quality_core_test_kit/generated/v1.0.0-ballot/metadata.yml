@@ -2887,6 +2887,10 @@
       :target_profiles:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
     - :path: context.period
+    :choices:
+    - :paths:
+      - content.attachment.data
+      - content.attachment.url
   :mandatory_elements:
   - DocumentReference.status
   - DocumentReference.type
@@ -3256,6 +3260,10 @@
     - :path: content.attachment.data
     - :path: content.attachment.url
     - :path: content.format
+    :choices:
+    - :paths:
+      - content.attachment.data
+      - content.attachment.url
   :mandatory_elements:
   - DocumentReference.status
   - DocumentReference.type
@@ -3486,6 +3494,13 @@
       - Reference
       :target_profiles:
       - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-organization
+    :choices:
+    - :paths:
+      - reasonCode
+      - reasonReference
+    - :paths:
+      - location.location
+      - serviceProvider
   :mandatory_elements:
   - Encounter.identifier.system
   - Encounter.identifier.value
@@ -3777,6 +3792,10 @@
       - Reference
       :target_profiles:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+    :choices:
+    - :paths:
+      - startDate
+      - target.dueDate
   :mandatory_elements:
   - Goal.lifecycleStatus
   - Goal.description
@@ -5771,6 +5790,14 @@
     - :path: dispenseRequest
     - :path: dispenseRequest.numberOfRepeatsAllowed
     - :path: dispenseRequest.quantity
+    :choices:
+    - :paths:
+      - reportedBoolean
+      - reportedReference
+    - :paths:
+      - reasonCode
+      - reasonReference
+      :uscdi_only: true
   :mandatory_elements:
   - MedicationRequest.status
   - MedicationRequest.intent
@@ -6058,6 +6085,14 @@
     - :path: dispenseRequest
     - :path: dispenseRequest.numberOfRepeatsAllowed
     - :path: dispenseRequest.quantity
+    :choices:
+    - :paths:
+      - reportedBoolean
+      - reportedReference
+    - :paths:
+      - reasonCode
+      - reasonReference
+      :uscdi_only: true
   :mandatory_elements:
   - MedicationRequest.status
   - MedicationRequest.intent
@@ -6349,6 +6384,14 @@
     - :path: dispenseRequest
     - :path: dispenseRequest.numberOfRepeatsAllowed
     - :path: dispenseRequest.quantity
+    :choices:
+    - :paths:
+      - reportedBoolean
+      - reportedReference
+    - :paths:
+      - reasonCode
+      - reasonReference
+      :uscdi_only: true
   :mandatory_elements:
   - MedicationRequest.status
   - MedicationRequest.intent
@@ -14832,6 +14875,10 @@
       :uscdi_only: true
     - :path: condition
       :uscdi_only: true
+    :choices:
+    - :paths:
+      - accessionIdentifier
+      - identifier
   :mandatory_elements:
   - Specimen.type
   :bindings:

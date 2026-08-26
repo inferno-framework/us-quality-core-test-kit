@@ -27,10 +27,8 @@ module USQualityCoreTestKit
         * MedicationRequest.extension:medicationAdherence
         * MedicationRequest.intent
         * MedicationRequest.medication[x]
-        * MedicationRequest.reasonCode
-        * MedicationRequest.reasonReference
-        * MedicationRequest.reportedBoolean
-        * MedicationRequest.reportedReference
+        * MedicationRequest.reasonCode or MedicationRequest.reasonReference
+        * MedicationRequest.reportedBoolean or MedicationRequest.reportedReference
         * MedicationRequest.reported[x]:reportedReference
         * MedicationRequest.requester
         * MedicationRequest.status

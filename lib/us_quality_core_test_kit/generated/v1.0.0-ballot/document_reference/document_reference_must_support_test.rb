@@ -17,8 +17,7 @@ module USQualityCoreTestKit
         * DocumentReference.content
         * DocumentReference.content.attachment
         * DocumentReference.content.attachment.contentType
-        * DocumentReference.content.attachment.data
-        * DocumentReference.content.attachment.url
+        * DocumentReference.content.attachment.data or DocumentReference.content.attachment.url
         * DocumentReference.content.format
         * DocumentReference.date
         * DocumentReference.identifier

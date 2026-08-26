@@ -20,7 +20,7 @@ module USQualityCoreTestKit
         * Encounter.identifier.system
         * Encounter.identifier.value
         * Encounter.location
-        * Encounter.location.location
+        * Encounter.location.location or Encounter.serviceProvider
         * Encounter.meta
         * Encounter.meta.lastUpdated
         * Encounter.participant
@@ -28,9 +28,7 @@ module USQualityCoreTestKit
         * Encounter.participant.period
         * Encounter.participant.type
         * Encounter.period
-        * Encounter.reasonCode
-        * Encounter.reasonReference
-        * Encounter.serviceProvider
+        * Encounter.reasonCode or Encounter.reasonReference
         * Encounter.status
         * Encounter.subject
         * Encounter.type
