@@ -52,7 +52,7 @@ module USQualityCoreTestKit
         'http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns' => ['v050'],
         'http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-diagnosticreport-lab' => ['v050'],
         'http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-diagnosticreport-note' => ['v050']
-  
+
       }.freeze
 
       PROFILE_CATEGORY_SEARCH_VALUES = {

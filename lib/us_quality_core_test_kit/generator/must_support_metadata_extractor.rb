@@ -328,7 +328,7 @@ module USQualityCoreTestKit
       end
 
       def uscdi_plus_quality_element?(element)
-        return false if element.mustSupport 
+        return false if element.mustSupport
 
         element.extension.any? do |extension|
           extension.url.downcase.end_with?(
@@ -353,11 +353,11 @@ module USQualityCoreTestKit
           }
 
           if uscdi_plus_quality_element?(profile_element)
-            metadata[:uscdi_plus_quality] = true 
+            metadata[:uscdi_plus_quality] = true
           elsif uscdi_requirement_element?(profile_element)
-            metadata[:uscdi_only] = true 
+            metadata[:uscdi_only] = true
           end
-          
+
           metadata
         end
       end
@@ -367,9 +367,9 @@ module USQualityCoreTestKit
           profile_element = must_support_slice_elements.find { |e| e.id == metadata[:slice_id] }
 
           if uscdi_plus_quality_element?(profile_element)
-            metadata[:uscdi_plus_quality] = true 
+            metadata[:uscdi_plus_quality] = true
           elsif uscdi_requirement_element?(profile_element)
-            metadata[:uscdi_only] = true 
+            metadata[:uscdi_only] = true
           end
 
           metadata
@@ -416,9 +416,9 @@ module USQualityCoreTestKit
           end
 
           if uscdi_plus_quality_element?(profile_element)
-            metadata[:uscdi_plus_quality] = true 
+            metadata[:uscdi_plus_quality] = true
           elsif uscdi_requirement_element?(profile_element)
-            metadata[:uscdi_only] = true 
+            metadata[:uscdi_only] = true
           end
 
           metadata
@@ -439,9 +439,9 @@ module USQualityCoreTestKit
         remove_vital_sign_component
         remove_blood_pressure_value_data_absent_reason
         remove_observation_data_absent_reason
-        
+
         if (profile.url.start_with?('http://hl7.org/fhir/us/quality-core') && profile.version.start_with?('1.0.0')) ||
-          (profile.url.start_with?('http://hl7.org/fhir/us/core') && profile.version == '9.0.0')
+           (profile.url.start_with?('http://hl7.org/fhir/us/core') && profile.version == '9.0.0')
           MustSupportMetadataExtractorV1.new(profile, @must_supports).handle_special_cases
         end
       end

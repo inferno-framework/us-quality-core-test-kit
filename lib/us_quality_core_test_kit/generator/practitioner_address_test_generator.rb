@@ -4,8 +4,8 @@ module USQualityCoreTestKit
       class << self
         def generate(ig_metadata, base_output_dir)
           ig_metadata.groups
-            .select { |group| group.resource == 'Practitioner' }
-            .each { |group| new(group, base_output_dir).generate }
+                     .select { |group| group.resource == 'Practitioner' }
+                     .each { |group| new(group, base_output_dir).generate }
         end
       end
 
@@ -45,16 +45,16 @@ module USQualityCoreTestKit
       end
 
       def class_name
-        "PractitionerAddressTest"
+        'PractitionerAddressTest'
       end
 
       def module_name
         "USQualityCore#{group_metadata.reformatted_version.upcase}"
       end
 
-      def generate        
+      def generate
         FileUtils.mkdir_p(output_file_directory)
-        File.open(output_file_name, 'w') { |f| f.write(output) }
+        File.write(output_file_name, output)
 
         group_metadata.add_test(
           id: test_id,

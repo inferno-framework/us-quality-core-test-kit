@@ -59,7 +59,7 @@ module USQualityCoreTestKit
           search_and_check_response(search_params, resource_type)
 
           practitioner_roles = fetch_all_bundled_resources(resource_type:)
-            .select { |resource| resource.resourceType == resource_type }
+                               .select { |resource| resource.resourceType == resource_type }
 
           next false if practitioner_roles.empty?
           next true if config.options[:skip_practitioner_role_validation]

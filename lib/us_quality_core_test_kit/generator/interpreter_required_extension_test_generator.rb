@@ -4,8 +4,8 @@ module USQualityCoreTestKit
       class << self
         def generate(ig_metadata, base_output_dir)
           ig_metadata.groups
-            .select { |group| group.resource == 'Encounter' }
-            .each { |group| new(group, base_output_dir).generate }
+                     .select { |group| group.resource == 'Encounter' }
+                     .each { |group| new(group, base_output_dir).generate }
         end
       end
 

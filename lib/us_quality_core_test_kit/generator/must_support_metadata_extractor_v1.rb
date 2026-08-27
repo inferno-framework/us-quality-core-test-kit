@@ -13,49 +13,49 @@ module USQualityCoreTestKit
         add_patient_uscdi_elements
         update_patient_previous_name_address
         remove_practitioner_address
-      end      
+      end
 
       def add_must_support_choices
         choices = []
 
-        case profile.type       
-        when 'DocumentReference' 
-          # https://hl7.org/fhir/us/core/STU9/requirements.html#CONF-0368 
+        case profile.type
+        when 'DocumentReference'
+          # https://hl7.org/fhir/us/core/STU9/requirements.html#CONF-0368
           choices << { paths: ['content.attachment.data', 'content.attachment.url'] }
-        when 'Encounter' 
+        when 'Encounter'
           # https://hl7.org/fhir/us/core/STU9/requirements.html#CONF-0375
-          choices << { paths: ['reasonCode', 'reasonReference'] }
+          choices << { paths: %w[reasonCode reasonReference] }
           # https://hl7.org/fhir/us/core/STU9/requirements.html#CONF-0379
           choices << { paths: ['location.location', 'serviceProvider'] }
-        when 'Goal' 
+        when 'Goal'
           # https://hl7.org/fhir/us/core/STU9/requirements.html#CONF-0387
-          choices << { paths: ['startDate', 'target.dueDate'] }          
+          choices << { paths: ['startDate', 'target.dueDate'] }
         when 'MedicationRequest'
           # https://hl7.org/fhir/us/core/STU9/requirements.html#CONF-0408
-          choices << { paths: ['reportedBoolean', 'reportedReference'] }
+          choices << { paths: %w[reportedBoolean reportedReference] }
           # https://hl7.org/fhir/us/core/STU9/requirements.html#CONF-0411
           choices << {
-            paths: ['reasonCode', 'reasonReference'],
+            paths: %w[reasonCode reasonReference],
             uscdi_plus_quality: true
-          }     
+          }
         when 'Procedure'
           # https://hl7.org/fhir/us/core/STU9/requirements.html#CONF-0484
           choices << {
-            paths: ['reasonCode', 'reasonReference'],
+            paths: %w[reasonCode reasonReference],
             uscdi_plus_quality: true
           }
         when 'ServiceRequest'
           # https://hl7.org/fhir/us/core/STU9/requirements.html#CONF-0518
           choices << {
-            paths: ['reasonCode', 'reasonReference'],
+            paths: %w[reasonCode reasonReference],
             uscdi_plus_quality: true
           }
-        when 'Specimen' 
+        when 'Specimen'
           # https://hl7.org/fhir/us/core/STU9/requirements.html#CONF-0524
-          choices << { paths: ['accessionIdentifier', 'identifier'] }
+          choices << { paths: %w[accessionIdentifier identifier] }
         end
 
-        must_supports[:choices] = choices if choices.present?        
+        must_supports[:choices] = choices if choices.present?
       end
 
       def add_patient_uscdi_elements
@@ -68,8 +68,8 @@ module USQualityCoreTestKit
           # their parent elements telecom, and communication are not MustSupport but listed under "Additional USCDI requirements"
           # According to the updated FHIR spec that "When a child element is defined as Must Support and the parent element isn't,
           # a system must support the child if it support the parent, but there's no expectation that the system must support the parent.",
-          # We add uscdi_only tag to these elements  
-          if path.include?('telecom.') || path.include?('communication.')          
+          # We add uscdi_only tag to these elements
+          if path.include?('telecom.') || path.include?('communication.')
             element[:uscdi_plus_quality] = true
           elsif path == 'deceased[x]'
             # https://hl7.org/fhir/us/core/STU9/requirements.html#CONF-0465
@@ -77,8 +77,8 @@ module USQualityCoreTestKit
             element[:path] = 'deceasedDateTime'
           end
         end
-      end     
-      
+      end
+
       # https://hl7.org/fhir/us/core/STU9/requirements.html#CONF-0466
       # https://hl7.org/fhir/us/core/STU9/requirements.html#CONF-0467
       def update_patient_previous_name_address
@@ -110,27 +110,35 @@ module USQualityCoreTestKit
           end
         end
 
-        must_supports[:elements] << {
-          path: 'name.period.end',
-          uscdi_plus_quality: true
-        } unless name_period_exists
+        unless name_period_exists
+          must_supports[:elements] << {
+            path: 'name.period.end',
+            uscdi_plus_quality: true
+          }
+        end
 
-        must_supports[:elements] << {
-          path: 'name.use',
-          fixed_value: 'old',
-          uscdi_plus_quality: true
-        } unless name_use_exists
+        unless name_use_exists
+          must_supports[:elements] << {
+            path: 'name.use',
+            fixed_value: 'old',
+            uscdi_plus_quality: true
+          }
+        end
 
-        must_supports[:elements] << {
-          path: 'address.period.end',
-          uscdi_plus_quality: true
-        } unless address_period_exists
+        unless address_period_exists
+          must_supports[:elements] << {
+            path: 'address.period.end',
+            uscdi_plus_quality: true
+          }
+        end
 
-        must_supports[:elements] << {
-          path: 'address.use',
-          fixed_value: 'old',
-          uscdi_plus_quality: true
-        } unless address_use_exists
+        unless address_use_exists
+          must_supports[:elements] << {
+            path: 'address.use',
+            fixed_value: 'old',
+            uscdi_plus_quality: true
+          }
+        end
 
         must_supports[:choices] ||= []
 
@@ -143,8 +151,8 @@ module USQualityCoreTestKit
           paths: ['name.period.end', 'name.use'],
           uscdi_plus_quality: true
         }
-      end  
-      
+      end
+
       # https://hl7.org/fhir/us/core/STU9/requirements.html#CONF-0474
       # https://hl7.org/fhir/us/core/STU9/requirements.html#CONF-0475
       def remove_practitioner_address
@@ -152,7 +160,6 @@ module USQualityCoreTestKit
 
         must_supports[:elements].delete_if { |element| element[:path].start_with?('address') }
       end
-      
     end
   end
 end

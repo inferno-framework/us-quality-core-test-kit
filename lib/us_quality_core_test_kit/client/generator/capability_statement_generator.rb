@@ -36,7 +36,7 @@ module USQualityCoreTestKit
         end
 
         def template
-          @template ||= 
+          @template ||=
             if ig_metadata.ig_version == 'v0.5.0'
               File.read(File.join(__dir__, 'templates', 'v0.5.0', 'capability_statement.json.erb'))
             else
