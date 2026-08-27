@@ -3785,6 +3785,8 @@
     :file_name: encounter_must_support_test.rb
   - :id: us_quality_core_v100_ballot_encounter_reference_resolution_test
     :file_name: encounter_reference_resolution_test.rb
+  - :id: us_quality_core_v100_ballot_interpreter_required_extension_test
+    :file_name: interpreter_required_extension_test.rb
   :id: us_quality_core_v100_ballot_encounter
   :file_name: encounter_group.rb
   :delayed_references:
@@ -12817,32 +12819,39 @@
     - :path: name
     - :path: name.use
       :uscdi_plus_quality: true
+      :fixed_value: old
     - :path: name.family
     - :path: name.given
     - :path: name.suffix
       :uscdi_plus_quality: true
-    - :path: name.period
+    - :path: name.period.end
       :uscdi_plus_quality: true
     - :path: telecom
       :uscdi_plus_quality: true
     - :path: telecom.system
-    - :path: telecom.value
-    - :path: telecom.use
-    - :path: birthDate
-    - :path: deceased[x]
       :uscdi_plus_quality: true
+    - :path: telecom.value
+      :uscdi_plus_quality: true
+    - :path: telecom.use
+      :uscdi_plus_quality: true
+    - :path: birthDate
+    - :path: deceasedDateTime
+      :uscdi_plus_quality: true
+      :original_path: deceased[x]
     - :path: address
     - :path: address.use
       :uscdi_plus_quality: true
+      :fixed_value: old
     - :path: address.line
     - :path: address.city
     - :path: address.state
     - :path: address.postalCode
-    - :path: address.period
+    - :path: address.period.end
       :uscdi_plus_quality: true
     - :path: communication
       :uscdi_plus_quality: true
     - :path: communication.language
+      :uscdi_plus_quality: true
     :choices:
     - :paths:
       - address.period.end
@@ -13031,12 +13040,6 @@
     - :path: telecom
     - :path: telecom.system
     - :path: telecom.value
-    - :path: address
-    - :path: address.line
-    - :path: address.city
-    - :path: address.state
-    - :path: address.postalCode
-    - :path: address.country
   :mandatory_elements:
   - Practitioner.identifier
   - Practitioner.identifier.system
@@ -13109,6 +13112,8 @@
     :file_name: practitioner_validation_test.rb
   - :id: us_quality_core_v100_ballot_practitioner_must_support_test
     :file_name: practitioner_must_support_test.rb
+  - :id: us_quality_core_v100_ballot_practitioner_address_test
+    :file_name: practitioner_address_test.rb
   :id: us_quality_core_v100_ballot_practitioner
   :file_name: practitioner_group.rb
   :delayed_references: []

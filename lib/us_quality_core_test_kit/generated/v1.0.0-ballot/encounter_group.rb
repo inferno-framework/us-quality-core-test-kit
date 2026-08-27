@@ -7,6 +7,7 @@ require_relative 'encounter/encounter_provenance_revinclude_search_test'
 require_relative 'encounter/encounter_validation_test'
 require_relative 'encounter/encounter_must_support_test'
 require_relative 'encounter/encounter_reference_resolution_test'
+require_relative 'encounter/interpreter_required_extension_test'
 
 
 module USQualityCoreTestKit
@@ -96,6 +97,7 @@ read succeeds.
       test from: :us_quality_core_v100_ballot_encounter_validation_test
       test from: :us_quality_core_v100_ballot_encounter_must_support_test
       test from: :us_quality_core_v100_ballot_encounter_reference_resolution_test
+      test from: :us_quality_core_v100_ballot_interpreter_required_extension_test
     end
   end
 end

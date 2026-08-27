@@ -245,6 +245,8 @@
   :file_name: encounter_must_support_test.rb
 - :id: us_quality_core_v050_encounter_reference_resolution_test
   :file_name: encounter_reference_resolution_test.rb
+- :id: us_quality_core_v050_interpreter_required_extension_test
+  :file_name: interpreter_required_extension_test.rb
 :id: us_quality_core_v050_encounter
 :file_name: encounter_group.rb
 :delayed_references:

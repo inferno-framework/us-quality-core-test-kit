@@ -9,6 +9,8 @@ require_relative 'generator/must_support_test_generator'
 require_relative 'generator/provenance_revinclude_search_test_generator'
 require_relative 'generator/reference_resolution_test_generator'
 require_relative 'generator/group_generator'
+require_relative 'generator/practitioner_address_test_generator'
+require_relative 'generator/interpreter_required_extension_test_generator'
 require_relative 'generator/suite_generator'
 
 module USQualityCoreTestKit
@@ -36,12 +38,16 @@ module USQualityCoreTestKit
 
       # Generation
       FileUtils.mkdir_p(base_output_dir)
+
       generate_search_tests
       generate_read_tests
       generate_provenance_revinclude_search_tests
       generate_validation_tests
       generate_must_support_tests
       generate_reference_resolution_tests
+      generate_practitioner_address_tests
+      generate_interpreter_required_extension_test_generator
+
       generate_groups
       generate_suites
 
@@ -89,6 +95,14 @@ module USQualityCoreTestKit
 
     def generate_groups
       GroupGenerator.generate(ig_metadata, base_output_dir)
+    end
+
+    def generate_practitioner_address_tests
+      PractitionerAddressTestGenerator.generate(ig_metadata, base_output_dir)
+    end
+
+    def generate_interpreter_required_extension_test_generator
+      InterpreterRequiredExtensionTestGenerator.generate(ig_metadata, base_output_dir)
     end
 
     def generate_suites
