@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module USQualityCoreTestKit
   class Generator
     class MustSupportMetadataExtractorV1
@@ -38,13 +40,8 @@ module USQualityCoreTestKit
             paths: %w[reasonCode reasonReference],
             uscdi_plus_quality: true
           }
-        when 'Procedure'
+        when 'Procedure', 'ServiceRequest'
           # https://hl7.org/fhir/us/core/STU9/requirements.html#CONF-0484
-          choices << {
-            paths: %w[reasonCode reasonReference],
-            uscdi_plus_quality: true
-          }
-        when 'ServiceRequest'
           # https://hl7.org/fhir/us/core/STU9/requirements.html#CONF-0518
           choices << {
             paths: %w[reasonCode reasonReference],
