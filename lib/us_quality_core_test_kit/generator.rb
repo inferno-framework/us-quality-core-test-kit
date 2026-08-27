@@ -11,6 +11,7 @@ require_relative 'generator/reference_resolution_test_generator'
 require_relative 'generator/group_generator'
 require_relative 'generator/practitioner_address_test_generator'
 require_relative 'generator/interpreter_required_extension_test_generator'
+require_relative 'generator/document_reference_custodian_test_generator'
 require_relative 'generator/suite_generator'
 
 module USQualityCoreTestKit
@@ -47,6 +48,7 @@ module USQualityCoreTestKit
       generate_reference_resolution_tests
       generate_practitioner_address_tests
       generate_interpreter_required_extension_test_generator
+      generate_document_reference_custodian_tests
 
       generate_groups
       generate_suites
@@ -103,6 +105,10 @@ module USQualityCoreTestKit
 
     def generate_interpreter_required_extension_test_generator
       InterpreterRequiredExtensionTestGenerator.generate(ig_metadata, base_output_dir)
+    end
+
+    def generate_document_reference_custodian_tests
+      DocumentReferenceCustodianTestGenerator.generate(ig_metadata, base_output_dir)
     end
 
     def generate_suites

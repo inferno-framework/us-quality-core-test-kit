@@ -1958,7 +1958,7 @@
   :profile_url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
   :profile_name: US Core DocumentReference Profile
   :profile_version: 6.1.0
-  :title: US Core DocumentReference
+  :title: DocumentReference US Core
   :short_description: Verify support for the capabilities required by the US Core
     DocumentReference Profile.
   :is_delayed: false
@@ -2175,28 +2175,30 @@
     :profiles:
     - http://hl7.org/fhir/StructureDefinition/Resource
   :tests:
-  - :id: us_quality_core_v050_document_reference_patient_search_test
-    :file_name: document_reference_patient_search_test.rb
-  - :id: us_quality_core_v050_document_reference__id_search_test
-    :file_name: document_reference_id_search_test.rb
-  - :id: us_quality_core_v050_document_reference_patient_type_search_test
-    :file_name: document_reference_patient_type_search_test.rb
-  - :id: us_quality_core_v050_document_reference_patient_category_search_test
-    :file_name: document_reference_patient_category_search_test.rb
-  - :id: us_quality_core_v050_document_reference_patient_category_date_search_test
-    :file_name: document_reference_patient_category_date_search_test.rb
-  - :id: us_quality_core_v050_document_reference_read_test
-    :file_name: document_reference_read_test.rb
-  - :id: us_quality_core_v050_document_reference_provenance_revinclude_search_test
-    :file_name: document_reference_provenance_revinclude_search_test.rb
-  - :id: us_quality_core_v050_document_reference_validation_test
-    :file_name: document_reference_validation_test.rb
-  - :id: us_quality_core_v050_document_reference_must_support_test
-    :file_name: document_reference_must_support_test.rb
-  - :id: us_quality_core_v050_document_reference_reference_resolution_test
-    :file_name: document_reference_reference_resolution_test.rb
-  :id: us_quality_core_v050_document_reference
-  :file_name: document_reference_group.rb
+  - :id: us_quality_core_v050_us_core_documentreference_patient_search_test
+    :file_name: us_core_documentreference_patient_search_test.rb
+  - :id: us_quality_core_v050_us_core_documentreference__id_search_test
+    :file_name: us_core_documentreference_id_search_test.rb
+  - :id: us_quality_core_v050_us_core_documentreference_patient_type_search_test
+    :file_name: us_core_documentreference_patient_type_search_test.rb
+  - :id: us_quality_core_v050_us_core_documentreference_patient_category_search_test
+    :file_name: us_core_documentreference_patient_category_search_test.rb
+  - :id: us_quality_core_v050_us_core_documentreference_patient_category_date_search_test
+    :file_name: us_core_documentreference_patient_category_date_search_test.rb
+  - :id: us_quality_core_v050_us_core_documentreference_read_test
+    :file_name: us_core_documentreference_read_test.rb
+  - :id: us_quality_core_v050_us_core_documentreference_provenance_revinclude_search_test
+    :file_name: us_core_documentreference_provenance_revinclude_search_test.rb
+  - :id: us_quality_core_v050_us_core_documentreference_validation_test
+    :file_name: us_core_documentreference_validation_test.rb
+  - :id: us_quality_core_v050_us_core_documentreference_must_support_test
+    :file_name: us_core_documentreference_must_support_test.rb
+  - :id: us_quality_core_v050_us_core_documentreference_reference_resolution_test
+    :file_name: us_core_documentreference_reference_resolution_test.rb
+  - :id: us_quality_core_v050_us_core_documentreference_custodian_test
+    :file_name: document_reference_custodian_test.rb
+  :id: us_quality_core_v050_us_core_documentreference
+  :file_name: us_core_documentreference_group.rb
   :delayed_references: []
   :resource_conformance_expectation: SHALL
 - :name: us_quality_core_encounter

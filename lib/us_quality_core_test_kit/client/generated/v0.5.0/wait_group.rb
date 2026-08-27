@@ -145,9 +145,9 @@ module USQualityCoreTestKit
     * patient
     * patient + category + date
     * patient + code
-* **DocumentReference**
+* **UsCoreDocumentreference**
   * read id:
-    * usqualitycore-document-reference
+    * usqualitycore-us-core-documentreference
   * searches:
     * patient
     * _id

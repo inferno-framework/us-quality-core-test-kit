@@ -17,7 +17,8 @@ require_relative 'devicerequested_group'
 require_relative 'deviceprohibited_group'
 require_relative 'diagnostic_report_note_group'
 require_relative 'diagnostic_report_lab_group'
-require_relative 'document_reference_group'
+require_relative 'us_core_documentreference_group'
+require_relative 'us_core_adi_documentreference_group'
 require_relative 'family_member_history_group'
 require_relative 'goal_group'
 require_relative 'imaging_study_group'
@@ -182,7 +183,8 @@ module USQualityCoreTestKit
         group from: :us_quality_core_v100_ballot_deviceprohibited
         group from: :us_quality_core_v100_ballot_diagnostic_report_note
         group from: :us_quality_core_v100_ballot_diagnostic_report_lab
-        group from: :us_quality_core_v100_ballot_document_reference
+        group from: :us_quality_core_v100_ballot_us_core_documentreference
+        group from: :us_quality_core_v100_ballot_us_core_adi_documentreference
         group from: :us_quality_core_v100_ballot_family_member_history
         group from: :us_quality_core_v100_ballot_goal
         group from: :us_quality_core_v100_ballot_imaging_study

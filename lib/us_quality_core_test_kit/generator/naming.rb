@@ -107,7 +107,7 @@ module USQualityCoreTestKit
 
       class << self
         def resources_with_multiple_profiles
-          %w[Communication Condition DeviceRequest DiagnosticReport Immunization MedicationAdministration
+          %w[Communication Condition DeviceRequest DiagnosticReport DocumentReference Immunization MedicationAdministration
              MedicationDispense MedicationRequest Observation Procedure ServiceRequest Task]
         end
 

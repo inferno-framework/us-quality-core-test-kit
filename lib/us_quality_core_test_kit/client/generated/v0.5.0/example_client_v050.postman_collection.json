@@ -1646,10 +1646,10 @@
       ]
     },
     {
-      "name": "US Core DocumentReference",
+      "name": "DocumentReference US Core",
       "item": [
         {
-          "name": "Read DocumentReference/usqualitycore-document-reference",
+          "name": "Read DocumentReference/usqualitycore-us-core-documentreference",
           "request": {
             "method": "GET",
             "header": [
@@ -1662,7 +1662,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/DocumentReference/usqualitycore-document-reference"
+            "url": "{{base_url}}/DocumentReference/usqualitycore-us-core-documentreference"
           },
           "event": [
             {
@@ -1738,7 +1738,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/DocumentReference?_id=usqualitycore-document-reference"
+            "url": "{{base_url}}/DocumentReference?_id=usqualitycore-us-core-documentreference"
           },
           "event": [
             {

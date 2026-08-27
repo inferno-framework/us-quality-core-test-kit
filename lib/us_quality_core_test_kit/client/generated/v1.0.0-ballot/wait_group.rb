@@ -179,18 +179,18 @@ module USQualityCoreTestKit
     * patient
     * patient + category + date
     * patient + code
-* **DocumentReference**
+* **UsCoreDocumentreference**
   * read id:
-    * usqualitycore-document-reference
+    * usqualitycore-us-core-documentreference
   * searches:
     * patient
     * _id
     * patient + type
     * patient + category
     * patient + category + date
-* **DocumentReference**
+* **UsCoreAdiDocumentreference**
   * read id:
-    * usqualitycore-document-reference
+    * usqualitycore-us-core-adi-documentreference
   * searches:
     * patient
     * _id

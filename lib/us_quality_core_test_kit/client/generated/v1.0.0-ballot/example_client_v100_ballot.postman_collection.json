@@ -2420,10 +2420,10 @@
       ]
     },
     {
-      "name": "US Core DocumentReference",
+      "name": "DocumentReference US Core",
       "item": [
         {
-          "name": "Read DocumentReference/usqualitycore-document-reference",
+          "name": "Read DocumentReference/usqualitycore-us-core-documentreference",
           "request": {
             "method": "GET",
             "header": [
@@ -2436,7 +2436,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/DocumentReference/usqualitycore-document-reference"
+            "url": "{{base_url}}/DocumentReference/usqualitycore-us-core-documentreference"
           },
           "event": [
             {
@@ -2512,7 +2512,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/DocumentReference?_id=usqualitycore-document-reference"
+            "url": "{{base_url}}/DocumentReference?_id=usqualitycore-us-core-documentreference"
           },
           "event": [
             {
@@ -2665,10 +2665,10 @@
       ]
     },
     {
-      "name": "US Core ADI DocumentReference",
+      "name": "DocumentReference US Core ADI",
       "item": [
         {
-          "name": "Read DocumentReference/usqualitycore-document-reference",
+          "name": "Read DocumentReference/usqualitycore-us-core-adi-documentreference",
           "request": {
             "method": "GET",
             "header": [
@@ -2681,7 +2681,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/DocumentReference/usqualitycore-document-reference"
+            "url": "{{base_url}}/DocumentReference/usqualitycore-us-core-adi-documentreference"
           },
           "event": [
             {
@@ -2757,7 +2757,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/DocumentReference?_id=usqualitycore-document-reference"
+            "url": "{{base_url}}/DocumentReference?_id=usqualitycore-us-core-adi-documentreference"
           },
           "event": [
             {
@@ -2880,7 +2880,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/DocumentReference?patient=usqualitycore-patient&category=42348-3&date=ge2024-05-16"
+            "url": "{{base_url}}/DocumentReference?patient=usqualitycore-patient&category=42348-3&date=ge2024-10-08"
           },
           "event": [
             {

@@ -28,12 +28,21 @@ module USQualityCoreTestKit
           "Inferno did not receive the expected search made for the `Task` resource type with required search parameters: `#{required_params.join(' + ')}`."
         end
 
+        def all_required_search_parameters
+          ["patient", "status", "code"]
+        end
+
         run do
           requests = load_tagged_requests(SEARCH_TASK_TAG)
           skip_if requests.blank?, skip_message
 
           requests_with_params = filter_requests_by_search_parameters(requests, required_params)
           assert requests_with_params.any?, failure_message
+
+          non_required_search_parameters(requests_with_params, all_required_search_parameters).each do |parameter|
+            warning "The client used the non-required search parameter `#{parameter}` for `Task`. " \
+                    'The server may not accept search parameters other than those required by the IG CapabilityStatement.'
+          end
         end
       end
     end
