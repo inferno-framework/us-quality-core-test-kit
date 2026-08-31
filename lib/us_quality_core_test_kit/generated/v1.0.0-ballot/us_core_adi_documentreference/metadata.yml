@@ -364,7 +364,7 @@
 - :id: us_quality_core_v100_ballot_us_core_adi_documentreference_reference_resolution_test
   :file_name: us_core_adi_documentreference_reference_resolution_test.rb
 - :id: us_quality_core_v100_ballot_us_core_adi_documentreference_custodian_test
-  :file_name: document_reference_custodian_test.rb
+  :file_name: us_core_adi_documentreference_document_reference_custodian_test.rb
 :id: us_quality_core_v100_ballot_us_core_adi_documentreference
 :file_name: us_core_adi_documentreference_group.rb
 :delayed_references: []

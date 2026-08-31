@@ -1,6 +1,6 @@
 module USQualityCoreTestKit
   module USQualityCoreV100_BALLOT
-    class DocumentReferenceCustodianTest < Inferno::Test
+    class UsCoreDocumentreferenceDocumentReferenceCustodianTest < Inferno::Test
       id :us_quality_core_v100_ballot_us_core_documentreference_custodian_test
 
       title 'DocumentReference resources returned during previous tests have custodian'

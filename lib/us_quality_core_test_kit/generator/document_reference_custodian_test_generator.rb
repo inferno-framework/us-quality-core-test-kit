@@ -47,7 +47,7 @@ module USQualityCoreTestKit
       end
 
       def class_name
-        'DocumentReferenceCustodianTest'
+        "#{Naming.upper_camel_case_for_profile(group_metadata)}DocumentReferenceCustodianTest"
       end
 
       def module_name

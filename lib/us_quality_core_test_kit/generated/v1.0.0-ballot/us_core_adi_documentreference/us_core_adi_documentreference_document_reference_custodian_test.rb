@@ -1,7 +1,7 @@
 module USQualityCoreTestKit
-  module USQualityCoreV050
-    class DocumentReferenceCustodianTest < Inferno::Test
-      id :us_quality_core_v050_us_core_documentreference_custodian_test
+  module USQualityCoreV100_BALLOT
+    class UsCoreAdiDocumentreferenceDocumentReferenceCustodianTest < Inferno::Test
+      id :us_quality_core_v100_ballot_us_core_adi_documentreference_custodian_test
 
       title 'DocumentReference resources returned during previous tests have custodian'
       description %(
@@ -10,7 +10,7 @@ module USQualityCoreTestKit
       )
 
       def scratch_resources
-        scratch[:us_core_documentreference_resources] ||= {}
+        scratch[:us_core_adi_documentreference_resources] ||= {}
       end
 
       def scratch_provenance_resources
