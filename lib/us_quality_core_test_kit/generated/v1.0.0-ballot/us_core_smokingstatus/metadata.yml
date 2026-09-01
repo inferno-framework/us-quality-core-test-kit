@@ -103,7 +103,11 @@
     :full_paths:
     - Observation.code
     :comparators: {}
-    :values: []
+    :values:
+    - 11367-0
+    - '401201003'
+    - 72166-2
+    - '782516008'
     :type: CodeableConcept
     :contains_multiple: false
     :multiple_or: SHOULD
