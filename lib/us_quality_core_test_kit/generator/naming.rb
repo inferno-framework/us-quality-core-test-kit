@@ -3,7 +3,7 @@
 module USQualityCoreTestKit
   class Generator
     module Naming
-      # From US Quality Core
+      # From US Quality Core 1.0
       ADVERSE_EVENT = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-adverseevent'
       ALLERGY_INTOLERANCE = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance'
       BODY_STRUCTURE = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-bodystructure'
@@ -64,11 +64,17 @@ module USQualityCoreTestKit
       QUESTIONNAIRE_RESPONSE = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-questionnaireresponse'
       RELATED_PERSON = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-relatedperson'
       SERVICE_REQUEST = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest'
-      SERVICE_NOT_REQUESTED = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicenotrequested'
+      SERVICE_REQUESTED = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequested'
+      SERVICE_PROHIBITED = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited'
       SUBSTANCE = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-substance'
       TASK = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-task'
       TASK_DONE = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-taskdone'
       TASK_REJECTED = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-taskrejected'
+
+      # From US Quality Core v0.5.0
+      DEVICE_NOT_REQUESTED = 'http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-devicenotrequested'
+      MEDICATION_REQUEST_NOT_REQUESTED = 'http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationnotrequested'
+      SERVICE_NOT_REQUESTED = 'http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-servicenotrequested'
 
       # From US Core directly
       IMPLANTABLE_DEVICE = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device'

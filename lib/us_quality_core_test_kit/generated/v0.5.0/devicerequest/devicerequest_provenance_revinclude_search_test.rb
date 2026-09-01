@@ -6,11 +6,11 @@ module USQualityCoreTestKit
     class DevicerequestProvenanceRevincludeSearchTest < Inferno::Test
       include USQualityCoreTestKit::SearchTest
 
-      title 'Server returns Provenance resources from DeviceRequest search by patient + do-not-perform + revInclude:Provenance:target'
+      title 'Server returns Provenance resources from DeviceRequest search by patient + revInclude:Provenance:target'
       description %(
         A server SHALL be capable of supporting _revIncludes:Provenance:target.
 
-        This test will perform a search by patient + do-not-perform + revInclude:Provenance:target and
+        This test will perform a search by patient + revInclude:Provenance:target and
         will pass if a Provenance resource is found in the response.
       %)
 
@@ -22,9 +22,8 @@ module USQualityCoreTestKit
   
       def properties
         @properties ||= SearchTestProperties.new(
-          fixed_value_search: true,
-        resource_type: 'DeviceRequest',
-        search_param_names: ['patient', 'do-not-perform']
+          resource_type: 'DeviceRequest',
+        search_param_names: ['patient']
         )
       end
 

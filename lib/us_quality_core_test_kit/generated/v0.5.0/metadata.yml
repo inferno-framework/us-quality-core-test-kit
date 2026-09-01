@@ -1203,12 +1203,6 @@
     :expectation: SHALL
   :operations: []
   :searches:
-  - :expectation: SHALL
-    :names:
-    - patient
-    - do-not-perform
-    :names_not_must_support_or_mandatory: []
-    :must_support_or_mandatory: true
   - :names:
     - patient
     :expectation: SHALL
@@ -1218,6 +1212,12 @@
     :names:
     - patient
     - code
+    :names_not_must_support_or_mandatory: []
+    :must_support_or_mandatory: true
+  - :expectation: SHALL
+    :names:
+    - patient
+    - do-not-perform
     :names_not_must_support_or_mandatory: []
     :must_support_or_mandatory: true
   :search_definitions:
@@ -1332,12 +1332,12 @@
     :profiles:
     - http://hl7.org/fhir/StructureDefinition/Provenance|4.0.1
   :tests:
-  - :id: us_quality_core_v050_devicerequest_patient_do_not_perform_search_test
-    :file_name: devicerequest_patient_do_not_perform_search_test.rb
   - :id: us_quality_core_v050_devicerequest_patient_search_test
     :file_name: devicerequest_patient_search_test.rb
   - :id: us_quality_core_v050_devicerequest_patient_code_search_test
     :file_name: devicerequest_patient_code_search_test.rb
+  - :id: us_quality_core_v050_devicerequest_patient_do_not_perform_search_test
+    :file_name: devicerequest_patient_do_not_perform_search_test.rb
   - :id: us_quality_core_v050_devicerequest_read_test
     :file_name: devicerequest_read_test.rb
   - :id: us_quality_core_v050_devicerequest_provenance_revinclude_search_test
@@ -3803,16 +3803,16 @@
     :names:
     - patient
     - intent
-    - do-not-perform
-    :names_not_must_support_or_mandatory:
-    - do-not-perform
-    :must_support_or_mandatory: false
+    :names_not_must_support_or_mandatory: []
+    :must_support_or_mandatory: true
   - :expectation: SHALL
     :names:
     - patient
     - intent
-    :names_not_must_support_or_mandatory: []
-    :must_support_or_mandatory: true
+    - do-not-perform
+    :names_not_must_support_or_mandatory:
+    - do-not-perform
+    :must_support_or_mandatory: false
   :search_definitions:
     :patient:
       :paths:
@@ -4035,10 +4035,10 @@
     :profiles:
     - http://hl7.org/fhir/StructureDefinition/Provenance
   :tests:
-  - :id: us_quality_core_v050_medicationrequest_patient_intent_do_not_perform_search_test
-    :file_name: medicationrequest_patient_intent_do_not_perform_search_test.rb
   - :id: us_quality_core_v050_medicationrequest_patient_intent_search_test
     :file_name: medicationrequest_patient_intent_search_test.rb
+  - :id: us_quality_core_v050_medicationrequest_patient_intent_do_not_perform_search_test
+    :file_name: medicationrequest_patient_intent_do_not_perform_search_test.rb
   - :id: us_quality_core_v050_medicationrequest_read_test
     :file_name: medicationrequest_read_test.rb
   - :id: us_quality_core_v050_medicationrequest_provenance_revinclude_search_test
@@ -10861,19 +10861,13 @@
     :expectation: SHALL
   :operations: []
   :searches:
-  - :expectation: SHALL
-    :names:
-    - patient
-    - do-not-perform
-    :names_not_must_support_or_mandatory: []
-    :must_support_or_mandatory: true
   - :names:
-    - _id
+    - patient
     :expectation: SHALL
     :names_not_must_support_or_mandatory: []
     :must_support_or_mandatory: true
   - :names:
-    - patient
+    - _id
     :expectation: SHALL
     :names_not_must_support_or_mandatory: []
     :must_support_or_mandatory: true
@@ -10894,6 +10888,12 @@
     :names:
     - patient
     - code
+    :names_not_must_support_or_mandatory: []
+    :must_support_or_mandatory: true
+  - :expectation: SHALL
+    :names:
+    - patient
+    - do-not-perform
     :names_not_must_support_or_mandatory: []
     :must_support_or_mandatory: true
   :search_definitions:
@@ -11095,18 +11095,18 @@
     :profiles:
     - http://hl7.org/fhir/StructureDefinition/Provenance
   :tests:
-  - :id: us_quality_core_v050_servicerequest_patient_do_not_perform_search_test
-    :file_name: servicerequest_patient_do_not_perform_search_test.rb
-  - :id: us_quality_core_v050_servicerequest__id_search_test
-    :file_name: servicerequest_id_search_test.rb
   - :id: us_quality_core_v050_servicerequest_patient_search_test
     :file_name: servicerequest_patient_search_test.rb
+  - :id: us_quality_core_v050_servicerequest__id_search_test
+    :file_name: servicerequest_id_search_test.rb
   - :id: us_quality_core_v050_servicerequest_patient_category_search_test
     :file_name: servicerequest_patient_category_search_test.rb
   - :id: us_quality_core_v050_servicerequest_patient_category_authored_search_test
     :file_name: servicerequest_patient_category_authored_search_test.rb
   - :id: us_quality_core_v050_servicerequest_patient_code_search_test
     :file_name: servicerequest_patient_code_search_test.rb
+  - :id: us_quality_core_v050_servicerequest_patient_do_not_perform_search_test
+    :file_name: servicerequest_patient_do_not_perform_search_test.rb
   - :id: us_quality_core_v050_servicerequest_read_test
     :file_name: servicerequest_read_test.rb
   - :id: us_quality_core_v050_servicerequest_provenance_revinclude_search_test

@@ -1,5 +1,5 @@
-require_relative 'medicationrequest/medicationrequest_patient_intent_do_not_perform_search_test'
 require_relative 'medicationrequest/medicationrequest_patient_intent_search_test'
+require_relative 'medicationrequest/medicationrequest_patient_intent_do_not_perform_search_test'
 require_relative 'medicationrequest/medicationrequest_read_test'
 require_relative 'medicationrequest/medicationrequest_provenance_revinclude_search_test'
 require_relative 'medicationrequest/medicationrequest_validation_test'
@@ -27,8 +27,8 @@ This test sequence will first perform each required search associated
 with this resource. This sequence will perform searches with the
 following parameters:
 
-* patient + intent + do-not-perform
 * patient + intent
+* patient + intent + do-not-perform
 
 ### Search Parameters
 The first search uses the selected patient(s) from the prior launch
@@ -83,8 +83,8 @@ read succeeds.
       end
 
   
-      test from: :us_quality_core_v100_ballot_medicationrequest_patient_intent_do_not_perform_search_test
       test from: :us_quality_core_v100_ballot_medicationrequest_patient_intent_search_test
+      test from: :us_quality_core_v100_ballot_medicationrequest_patient_intent_do_not_perform_search_test
       test from: :us_quality_core_v100_ballot_medicationrequest_read_test
       test from: :us_quality_core_v100_ballot_medicationrequest_provenance_revinclude_search_test
       test from: :us_quality_core_v100_ballot_medicationrequest_validation_test

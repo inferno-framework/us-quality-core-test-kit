@@ -18,12 +18,6 @@
   :expectation: SHALL
 :operations: []
 :searches:
-- :expectation: SHALL
-  :names:
-  - patient
-  - do-not-perform
-  :names_not_must_support_or_mandatory: []
-  :must_support_or_mandatory: true
 - :names:
   - patient
   :expectation: SHALL
@@ -33,6 +27,12 @@
   :names:
   - patient
   - code
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - do-not-perform
   :names_not_must_support_or_mandatory: []
   :must_support_or_mandatory: true
 :search_definitions:
@@ -147,12 +147,12 @@
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Provenance|4.0.1
 :tests:
-- :id: us_quality_core_v050_devicerequest_patient_do_not_perform_search_test
-  :file_name: devicerequest_patient_do_not_perform_search_test.rb
 - :id: us_quality_core_v050_devicerequest_patient_search_test
   :file_name: devicerequest_patient_search_test.rb
 - :id: us_quality_core_v050_devicerequest_patient_code_search_test
   :file_name: devicerequest_patient_code_search_test.rb
+- :id: us_quality_core_v050_devicerequest_patient_do_not_perform_search_test
+  :file_name: devicerequest_patient_do_not_perform_search_test.rb
 - :id: us_quality_core_v050_devicerequest_read_test
   :file_name: devicerequest_read_test.rb
 - :id: us_quality_core_v050_devicerequest_provenance_revinclude_search_test

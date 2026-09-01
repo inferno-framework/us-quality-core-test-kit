@@ -21,17 +21,14 @@ module USQualityCoreTestKit
       input :patient_ids,
         title: 'Patient IDs',
         description: 'Comma separated list of patient IDs that in sum contain all MUST SUPPORT elements'
-  <% end %>
-
-  <% if needs_care_plan_category_code? %>
+  <% end %><% if needs_care_plan_category_code? %>
       input :care_plan_category_code,
         title: 'CarePlan Category Code',
         description: 'Code used for the CarePlan category search parameter'
 
       def fixed_value_search_param_values
         [care_plan_category_code]
-      end
-  <% end %>
+      end<% end %>
 
       def self.properties
         @properties ||= SearchTestProperties.new(

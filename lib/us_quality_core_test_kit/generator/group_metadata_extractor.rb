@@ -203,6 +203,10 @@ module USQualityCoreTestKit
           SpecialCases::VERSION_SPECIFIC_CATEGORY_FIRST_PROFILES[profile_url]&.include?(reformatted_version)
       end
 
+      def do_not_perform_profile?
+        SpecialCases::DO_NOT_PERFORM_PROFILES.include?(profile_url)
+      end
+
       def first_search_params
         @first_search_params ||=
           if category_first_profile?
@@ -214,8 +218,8 @@ module USQualityCoreTestKit
               %w[patient code]
             end
           elsif resource == 'MedicationRequest'
-            %w[patient intent do-not-perform]
-          elsif %w[DeviceRequest ServiceRequest].include?(resource)
+            do_not_perform_profile? ? %w[patient intent do-not-perform] : %w[patient intent]
+          elsif do_not_perform_profile?
             %w[patient do-not-perform]
           elsif %w[CareTeam Immunization MedicationAdministration MedicationDispense Procedure Task].include?(resource)
             %w[patient status]

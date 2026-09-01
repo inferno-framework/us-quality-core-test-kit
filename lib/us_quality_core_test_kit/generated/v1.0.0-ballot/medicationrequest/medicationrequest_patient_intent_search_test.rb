@@ -19,6 +19,17 @@ If any MedicationRequest resources use external references to
 Medications, the search will be repeated with
 `_include=MedicationRequest:medication`.
 
+This test verifies that the server supports searching by reference using
+the form `patient=[id]` as well as `patient=Patient/[id]`. The two
+different forms are expected to return the same number of results.
+
+Because this is the first search of the sequence, resources in the
+response will be used for subsequent tests.
+
+Additionally, this test will check that GET and POST search methods
+return the same number of results. Search by POST is required by the
+FHIR R4 specification.
+
 
       )
 
@@ -34,10 +45,15 @@ Medications, the search will be repeated with
 
       def self.properties
         @properties ||= SearchTestProperties.new(
-          resource_type: 'MedicationRequest',
+          first_search: true,
+        fixed_value_search: true,
+        resource_type: 'MedicationRequest',
         search_param_names: ['patient', 'intent'],
+        saves_delayed_references: true,
         test_medication_inclusion: true,
-        multiple_or_search_params: ['intent']
+        test_reference_variants: true,
+        multiple_or_search_params: ['intent'],
+        test_post_search: true
         )
       end
 

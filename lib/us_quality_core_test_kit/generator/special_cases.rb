@@ -40,10 +40,10 @@ module USQualityCoreTestKit
       # Category should be included in the initial search for these profiles.
       ALL_VERSION_CATEGORY_FIRST_PROFILES = [
         CARE_PLAN,
-        DIAGNOSTIC_REPORT_LAB,
-        DIAGNOSTIC_REPORT_NOTE,
         CONDITION_ENCOUNTER_DIAGNOSIS,
-        CONDITION_PROBLEMS_HEALTH_CONCERNS
+        CONDITION_PROBLEMS_HEALTH_CONCERNS,
+        DIAGNOSTIC_REPORT_LAB,
+        DIAGNOSTIC_REPORT_NOTE
       ].freeze
 
       VERSION_SPECIFIC_CATEGORY_FIRST_PROFILES = {
@@ -60,6 +60,18 @@ module USQualityCoreTestKit
         SIMPLE_OBSERVATION => ['activity'],
         OBSERVATION_CANCELLED => ['activity']
       }.freeze
+
+      DO_NOT_PERFORM_PROFILES = [
+        DEVICE_NOT_REQUESTED, #v0.5.0
+        DEVICE_REQUESTED,
+        DEVICE_PROHIBITED,
+        MEDICATION_REQUEST_NOT_REQUESTED, #v0.5.0
+        MEDICATION_REQUEST_REQUESTED,
+        MEDICATION_REQUEST_PROHIBITED,
+        SERVICE_NOT_REQUESTED, #v0.5.0
+        SERVICE_REQUESTED,
+        SERVICE_PROHIBITED
+    ].freeze
 
       class << self
         def exclude_group?(group)

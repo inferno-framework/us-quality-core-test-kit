@@ -119,9 +119,9 @@ module USQualityCoreTestKit
   * read id:
     * usqualitycore-devicerequest
   * searches:
-    * patient + do-not-perform
     * patient
     * patient + code
+    * patient + do-not-perform
 * **Devicenotrequested**
   * read id:
     * usqualitycore-devicenotrequested
@@ -208,8 +208,8 @@ module USQualityCoreTestKit
   * read id:
     * usqualitycore-medicationrequest
   * searches:
-    * patient + intent + do-not-perform
     * patient + intent
+    * patient + intent + do-not-perform
 * **Medicationnotrequested**
   * read id:
     * usqualitycore-medicationnotrequested
@@ -401,12 +401,12 @@ module USQualityCoreTestKit
   * read id:
     * usqualitycore-servicerequest
   * searches:
-    * patient + do-not-perform
-    * _id
     * patient
+    * _id
     * patient + category
     * patient + category + authored
     * patient + code
+    * patient + do-not-perform
 * **Servicenotrequested**
   * read id:
     * usqualitycore-servicenotrequested

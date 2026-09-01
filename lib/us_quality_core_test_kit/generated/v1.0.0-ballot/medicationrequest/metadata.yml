@@ -22,13 +22,13 @@
   :names:
   - patient
   - intent
-  - do-not-perform
   :names_not_must_support_or_mandatory: []
   :must_support_or_mandatory: true
 - :expectation: SHALL
   :names:
   - patient
   - intent
+  - do-not-perform
   :names_not_must_support_or_mandatory: []
   :must_support_or_mandatory: true
 :search_definitions:
@@ -291,10 +291,10 @@
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Provenance|4.0.1
 :tests:
-- :id: us_quality_core_v100_ballot_medicationrequest_patient_intent_do_not_perform_search_test
-  :file_name: medicationrequest_patient_intent_do_not_perform_search_test.rb
 - :id: us_quality_core_v100_ballot_medicationrequest_patient_intent_search_test
   :file_name: medicationrequest_patient_intent_search_test.rb
+- :id: us_quality_core_v100_ballot_medicationrequest_patient_intent_do_not_perform_search_test
+  :file_name: medicationrequest_patient_intent_do_not_perform_search_test.rb
 - :id: us_quality_core_v100_ballot_medicationrequest_read_test
   :file_name: medicationrequest_read_test.rb
 - :id: us_quality_core_v100_ballot_medicationrequest_provenance_revinclude_search_test
