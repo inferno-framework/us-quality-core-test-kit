@@ -84,9 +84,39 @@
         "subject": {
           "reference": "Patient/usqualitycore-patient"
         },
-        "collection": {
-          "collectedDateTime": "2022-09-27T18:07:12Z"
-        },
+  "collection": {
+    "collectedDateTime": "2022-09-27T18:07:12Z",
+    "bodySite": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "119364003",
+          "display": "Serum specimen"
+        }
+      ]
+    }
+  },
+  "identifier": [
+    {
+      "system": "http://example.org/specimens",
+      "value": "USQC-SPECIMEN-001"
+    }
+  ],
+  "accessionIdentifier": {
+    "system": "http://example.org/accessions",
+    "value": "USQC-ACCESSION-001"
+  },
+  "condition": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0493",
+          "code": "FROZ",
+          "display": "Frozen"
+        }
+      ]
+    }
+  ],
         "container": [
           {
             "type": {
@@ -135,11 +165,21 @@
             "coding": [
               {
                 "system": "http://loinc.org",
-                "code": "42348-3",
-                "display": "Advance healthcare directives"
+                "code": "11369-6",
+                "display": "History of Advance Directive Document"
               }
             ],
             "text": "Advance Directives"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+                "code": "clinical-note",
+                "display": "Clinical Note"
+              }
+            ],
+            "text": "Clinical Note"
           }
         ],
         "subject": {
@@ -252,11 +292,21 @@
             "coding": [
               {
                 "system": "http://loinc.org",
-                "code": "42348-3",
-                "display": "Advance healthcare directives"
+                "code": "11369-6",
+                "display": "History of Advance Directive Document"
               }
             ],
             "text": "Advance Directives"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+                "code": "clinical-note",
+                "display": "Clinical Note"
+              }
+            ],
+            "text": "Clinical Note"
           }
         ],
         "subject": {
@@ -317,6 +367,12 @@
           }
         ],
         "code": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://snomed.info/sct?fhir_vs"
+            }
+          ],
           "coding": [
             {
               "system": "http://loinc.org",
@@ -349,8 +405,14 @@
         },
         "component": [
           {
-            "code": {
-              "coding": [
+  "code": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+        "valueCanonical": "http://snomed.info/sct?fhir_vs"
+      }
+    ],
+    "coding": [
                 {
                   "system": "http://loinc.org",
                   "code": "45473-6",
@@ -405,6 +467,12 @@
           }
         ],
         "code": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://snomed.info/sct?fhir_vs"
+            }
+          ],
           "coding": [
             {
               "system": "http://loinc.org",
@@ -423,7 +491,16 @@
             "reference": "Practitioner/usqualitycore-practitioner"
           }
         ],
-        "valueString": "If I am experiencing significant pain or suffering, I prefer comfort-focused treatment and palliative care involvement to support me and my family.",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "304251008",
+        "display": "Treatment preference"
+      }
+    ],
+    "text": "If I am experiencing significant pain or suffering, I prefer comfort-focused treatment and palliative care involvement to support me and my family."
+  },
         "text": {
           "status": "generated",
           "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-treatment-intervention-preference</div>"
@@ -457,6 +534,12 @@
           }
         ],
         "code": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://snomed.info/sct?fhir_vs"
+            }
+          ],
           "coding": [
             {
               "system": "http://loinc.org",
@@ -520,8 +603,14 @@
             "text": "Social History"
           }
         ],
-        "code": {
-          "coding": [
+  "code": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+        "valueCanonical": "http://snomed.info/sct?fhir_vs"
+      }
+    ],
+    "coding": [
             {
               "system": "http://loinc.org",
               "code": "82810-3",
@@ -584,8 +673,14 @@
             "text": "Social History"
           }
         ],
-        "code": {
-          "coding": [
+  "code": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+        "valueCanonical": "http://snomed.info/sct?fhir_vs"
+      }
+    ],
+    "coding": [
             {
               "system": "http://loinc.org",
               "code": "72166-2",
@@ -1912,13 +2007,16 @@
             "type": {
               "coding": [
                 {
-                  "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type",
+                  "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
                   "code": "transmitter",
                   "display": "Transmitter"
                 }
               ]
             },
             "who": {
+              "reference": "Organization/usqualitycore-organization"
+            },
+            "onBehalfOf": {
               "reference": "Organization/usqualitycore-organization"
             }
           }
@@ -4090,6 +4188,7 @@
         "resourceType": "Condition",
         "id": "usqualitycore-condition-problems-health-concerns",
         "meta": {
+          "lastUpdated": "2024-05-16T01:06:06Z",
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
@@ -4414,6 +4513,12 @@
         "status": "completed",
         "intent": "original-order",
         "codeCodeableConcept": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/device-kind"
+            }
+          ],
           "coding": [
             {
               "system": "http://snomed.info/sct",
@@ -4427,6 +4532,20 @@
           "reference": "Patient/usqualitycore-patient"
         },
         "authoredOn": "2015-03-25T19:32:52-05:00",
+        "requester": {
+          "reference": "Practitioner/usqualitycore-practitioner"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "29857009",
+                "display": "Chest pain"
+              }
+            ]
+          }
+        ],
         "text": {
           "status": "generated",
           "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-devicerequest</div>"
@@ -4455,6 +4574,12 @@
         "status": "completed",
         "intent": "original-order",
         "codeCodeableConcept": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/device-kind"
+            }
+          ],
           "coding": [
             {
               "system": "http://snomed.info/sct",
@@ -4468,6 +4593,20 @@
           "reference": "Patient/usqualitycore-patient"
         },
         "authoredOn": "2015-03-25T19:32:52-05:00",
+        "requester": {
+          "reference": "Practitioner/usqualitycore-practitioner"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "29857009",
+                "display": "Chest pain"
+              }
+            ]
+          }
+        ],
         "text": {
           "status": "generated",
           "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-deviceprohibited</div>"
@@ -4496,6 +4635,12 @@
         "status": "completed",
         "intent": "original-order",
         "codeCodeableConcept": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/device-kind"
+            }
+          ],
           "coding": [
             {
               "system": "http://snomed.info/sct",
@@ -4509,6 +4654,20 @@
           "reference": "Patient/usqualitycore-patient"
         },
         "authoredOn": "2015-03-25T19:32:52-05:00",
+        "requester": {
+          "reference": "Practitioner/usqualitycore-practitioner"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "29857009",
+                "display": "Chest pain"
+              }
+            ]
+          }
+        ],
         "text": {
           "status": "generated",
           "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-devicerequest</div>"
@@ -4537,6 +4696,12 @@
         "status": "completed",
         "intent": "original-order",
         "codeCodeableConcept": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/device-kind"
+            }
+          ],
           "coding": [
             {
               "system": "http://snomed.info/sct",
@@ -4550,6 +4715,20 @@
           "reference": "Patient/usqualitycore-patient"
         },
         "authoredOn": "2015-03-25T19:32:52-05:00",
+        "requester": {
+          "reference": "Practitioner/usqualitycore-practitioner"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "29857009",
+                "display": "Chest pain"
+              }
+            ]
+          }
+        ],
         "text": {
           "status": "generated",
           "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-devicerequested</div>"
@@ -4679,6 +4858,11 @@
             "reference": "Observation/usqualitycore-observation-lab"
           }
         ],
+        "imagingStudy": [
+          {
+            "reference": "ImagingStudy/usqualitycore-imaging-study"
+          }
+        ],
         "media": [
           {
             "link": {
@@ -4707,10 +4891,17 @@
         "resourceType": "Encounter",
         "id": "usqualitycore-encounter",
         "meta": {
+          "lastUpdated": "2015-02-15T16:30:00+01:00",
           "profile": [
             "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter"
           ]
         },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-needed",
+            "valueBoolean": true
+          }
+        ],
         "identifier": [
           {
             "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
@@ -4817,7 +5008,7 @@
           {
             "extension": [
               {
-                "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter-diagnosisPresentOnAdmission",
+                "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosis-present-on-admission",
                 "valueCodeableConcept": {
                   "coding": [
                     {
@@ -4862,6 +5053,14 @@
             "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-familymemberhistory"
           ]
         },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory-recorder",
+            "valueReference": {
+              "reference": "Practitioner/usqualitycore-practitioner"
+            }
+          }
+        ],
         "status": "completed",
         "patient": {
           "reference": "Patient/usqualitycore-patient",
@@ -5419,6 +5618,10 @@
             {
               "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
               "valueCanonical": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.526.3.1254"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/vaccine-code"
             }
           ],
           "text": "Not Done Value Set: Influenza vaccine"
@@ -5723,6 +5926,11 @@
           }
         ],
         "status": "available",
+        "interpreter": [
+          {
+            "reference": "Practitioner/usqualitycore-practitioner"
+          }
+        ],
         "subject": {
           "reference": "Patient/usqualitycore-patient"
         },
@@ -6013,14 +6221,24 @@
             "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministration"
           ]
         },
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
-            "valueDateTime": "2017-01-17"
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
+      "valueDateTime": "2017-01-17"
+    },
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.recorded",
+      "valueDateTime": "2017-01-17"
           }
         ],
         "status": "completed",
         "medicationCodeableConcept": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/medication-codes"
+            }
+          ],
           "coding": [
             {
               "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
@@ -6045,6 +6263,13 @@
         "request": {
           "reference": "MedicationRequest/usqualitycore-medicationrequest"
         },
+        "performer": [
+          {
+            "actor": {
+              "reference": "Practitioner/usqualitycore-practitioner"
+            }
+          }
+        ],
         "dosage": {
           "route": {
             "coding": [
@@ -6089,6 +6314,12 @@
         ],
         "status": "completed",
         "medicationCodeableConcept": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/medication-codes"
+            }
+          ],
           "coding": [
             {
               "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
@@ -6175,6 +6406,12 @@
           }
         ],
         "medicationCodeableConcept": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/medication-codes"
+            }
+          ],
           "coding": [
             {
               "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
@@ -6199,6 +6436,13 @@
         "request": {
           "reference": "MedicationRequest/usqualitycore-medicationrequest"
         },
+        "performer": [
+          {
+            "actor": {
+              "reference": "Practitioner/usqualitycore-practitioner"
+            }
+          }
+        ],
         "dosage": {
           "route": {
             "coding": [
@@ -6239,10 +6483,20 @@
           {
             "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
             "valueDateTime": "2017-01-17"
+          },
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.recorded",
+            "valueDateTime": "2017-01-17"
           }
         ],
         "status": "completed",
         "medicationCodeableConcept": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/medication-codes"
+            }
+          ],
           "coding": [
             {
               "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
@@ -6385,6 +6639,12 @@
         ],
         "status": "completed",
         "medicationCodeableConcept": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/medication-codes"
+            }
+          ],
           "coding": [
             {
               "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
@@ -6523,6 +6783,10 @@
           {
             "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
             "valueDateTime": "2017-01-17"
+          },
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.recorded",
+            "valueDateTime": "2017-01-17"
           }
         ],
         "status": "declined",
@@ -6540,6 +6804,10 @@
             {
               "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
               "valueCanonical": "http://cts.nlm.nih.gov/fhir/1.3.6.1.4.1.6997.4.1.2.268.13.35211.1.13.1.999.321"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/medication-codes"
             }
           ],
           "text": "Not Done Value Set: Ophthalmic Antihistamines"
@@ -6788,6 +7056,29 @@
             "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationprohibited"
           ]
         },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence",
+            "extension": [
+              {
+                "url": "medicationAdherence",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "715036001",
+                      "display": "Does not take medication"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "dateAsserted",
+                "valueDateTime": "2017-01-17"
+              }
+            ]
+          }
+        ],
         "status": "active",
         "intent": "order",
         "category": [
@@ -6806,6 +7097,12 @@
           "reference": "Practitioner/usqualitycore-practitioner"
         },
         "medicationCodeableConcept": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/medication-codes"
+            }
+          ],
           "coding": [
             {
               "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
@@ -6921,6 +7218,29 @@
             "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest"
           ]
         },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence",
+            "extension": [
+              {
+                "url": "medicationAdherence",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "1156699004",
+                      "display": "Complies with drug therapy"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "dateAsserted",
+                "valueDateTime": "2017-01-17"
+              }
+            ]
+          }
+        ],
         "status": "active",
         "intent": "order",
         "category": [
@@ -6938,8 +7258,14 @@
         "reportedReference": {
           "reference": "Practitioner/usqualitycore-practitioner"
         },
-        "medicationCodeableConcept": {
-          "coding": [
+  "medicationCodeableConcept": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+        "valueCanonical": "http://hl7.org/fhir/ValueSet/medication-codes"
+      }
+    ],
+    "coding": [
             {
               "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
               "code": "1594660",
@@ -7049,6 +7375,29 @@
             "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequested"
           ]
         },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence",
+            "extension": [
+              {
+                "url": "medicationAdherence",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "1156699004",
+                      "display": "Complies with drug therapy"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "dateAsserted",
+                "valueDateTime": "2017-01-17"
+              }
+            ]
+          }
+        ],
         "status": "active",
         "intent": "order",
         "category": [
@@ -7066,8 +7415,14 @@
         "reportedReference": {
           "reference": "Practitioner/usqualitycore-practitioner"
         },
-        "medicationCodeableConcept": {
-          "coding": [
+  "medicationCodeableConcept": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+        "valueCanonical": "http://hl7.org/fhir/ValueSet/medication-codes"
+      }
+    ],
+    "coding": [
             {
               "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
               "code": "1594660",
@@ -7086,8 +7441,14 @@
           "reference": "Practitioner/usqualitycore-practitioner"
         },
         "reasonCode": [
+      {
+        "extension": [
           {
-            "coding": [
+            "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+            "valueCanonical": "http://hl7.org/fhir/ValueSet/diet"
+          }
+        ],
+        "coding": [
               {
                 "system": "http://snomed.info/sct",
                 "code": "151811000119109",
@@ -7157,8 +7518,44 @@
             "system": "http://unitsofmeasure.org",
             "code": "d"
           }
-        },
-        "text": {
+  },
+  "supplement": [
+    {
+      "type": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+            "valueCanonical": "http://hl7.org/fhir/ValueSet/enteralformula-type"
+          }
+        ],
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "226447000",
+            "display": "Enteral nutrition supplement"
+          }
+        ]
+      }
+    }
+  ],
+  "enteralFormula": {
+    "baseFormulaType": {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+          "valueCanonical": "http://hl7.org/fhir/ValueSet/enteralformula-type"
+        }
+      ],
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "226447000",
+          "display": "Enteral nutrition supplement"
+        }
+      ]
+    }
+  },
+  "text": {
           "status": "generated",
           "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-medicationrequested</div>"
         },
@@ -7216,9 +7613,15 @@
           }
         ],
         "oralDiet": {
-          "type": [
-            {
-              "coding": [
+              "type": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+                      "valueCanonical": "http://hl7.org/fhir/ValueSet/diet"
+                    }
+                  ],
+                  "coding": [
                 {
                   "system": "http://snomed.info/sct",
                   "code": "160670007",
@@ -7260,6 +7663,42 @@
               }
             }
           ]
+        },
+        "supplement": [
+          {
+            "type": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+                  "valueCanonical": "http://hl7.org/fhir/ValueSet/enteralformula-type"
+                }
+              ],
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "226447000",
+                  "display": "Enteral nutrition supplement"
+                }
+              ]
+            }
+          }
+        ],
+        "enteralFormula": {
+          "baseFormulaType": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+                "valueCanonical": "http://hl7.org/fhir/ValueSet/enteralformula-type"
+              }
+            ],
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "226447000",
+                "display": "Enteral nutrition supplement"
+              }
+            ]
+          }
         },
         "text": {
           "status": "generated",
@@ -7658,8 +8097,11 @@
           "reference": "Patient/usqualitycore-patient",
           "display": "Amy Shaw"
         },
-        "effectiveDateTime": "2005-07-05",
-        "performer": [
+  "effectiveDateTime": "2005-07-05",
+  "encounter": {
+    "reference": "Encounter/usqualitycore-encounter"
+  },
+  "performer": [
           {
             "reference": "Organization/usqualitycore-organization",
             "display": "Hendricks Country Hospital"
@@ -9010,9 +9452,17 @@
             "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedure"
           ]
         },
-        "extension": [
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
+      "valueDateTime": "2013-04-05T09:35:00-04:00"
+    },
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Procedure.recorded",
+      "valueDateTime": "2013-04-05T09:35:00-04:00"
+          },
           {
-            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Procedure.recorded",
             "valueDateTime": "2013-04-05T09:35:00-04:00"
           }
         ],
@@ -9037,6 +9487,12 @@
           ]
         },
         "code": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/procedure-code"
+            }
+          ],
           "coding": [
             {
               "system": "http://snomed.info/sct",
@@ -9138,8 +9594,14 @@
             }
           ]
         },
-        "code": {
-          "coding": [
+  "code": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+        "valueCanonical": "http://hl7.org/fhir/ValueSet/procedure-code"
+      }
+    ],
+    "coding": [
             {
               "system": "http://snomed.info/sct",
               "code": "80146002",
@@ -9225,6 +9687,10 @@
           {
             "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
             "valueDateTime": "2013-04-05T09:35:00-04:00"
+          },
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Procedure.recorded",
+            "valueDateTime": "2013-04-05T09:35:00-04:00"
           }
         ],
         "basedOn": [
@@ -9248,6 +9714,12 @@
           ]
         },
         "code": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/procedure-code"
+            }
+          ],
           "coding": [
             {
               "system": "http://snomed.info/sct",
@@ -9324,6 +9796,22 @@
           ]
         },
         "questionnaire": "http://hl7.org/fhir/uv/sdc/Questionnaire/questionnaire-sdc-profile-example-PHQ9",
+        "_questionnaire": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/display",
+              "valueString": "Patient Health Questionnaire-9"
+            },
+            {
+              "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-extension-questionnaire-uri",
+              "valueUri": "http://hl7.org/fhir/uv/sdc/Questionnaire/questionnaire-sdc-profile-example-PHQ9"
+            }
+          ]
+        },
+        "identifier": {
+          "system": "http://example.org/questionnaire-responses",
+          "value": "USQC-PHQ9-001"
+        },
         "status": "completed",
         "subject": {
           "reference": "Patient/usqualitycore-patient"
@@ -9333,6 +9821,36 @@
           "reference": "Practitioner/usqualitycore-practitioner"
         },
         "item": [
+          {
+            "linkId": "ms-coverage",
+            "text": "Must Support coverage",
+            "answer": [
+              {
+                "valueDecimal": 1.0
+              },
+              {
+                "valueString": "No concerns"
+              },
+              {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "385432009",
+                  "display": "Not applicable"
+                },
+                "item": [
+                  {
+                    "linkId": "ms-follow-up",
+                    "text": "Follow-up",
+                    "answer": [
+                      {
+                        "valueString": "None"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
           {
             "linkId": "H1/T1",
             "text": "Over the last two weeks, how often have you been bothered by any of the following problems?",
@@ -9599,6 +10117,12 @@
         "priority": "urgent",
         "doNotPerform": true,
         "code": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://snomed.info/sct?fhir_vs"
+            }
+          ],
           "coding": [
             {
               "system": "http://snomed.info/sct",
@@ -9695,6 +10219,12 @@
         "priority": "urgent",
         "doNotPerform": true,
         "code": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://snomed.info/sct?fhir_vs"
+            }
+          ],
           "coding": [
             {
               "system": "http://snomed.info/sct",
@@ -9791,6 +10321,12 @@
         "priority": "urgent",
         "doNotPerform": false,
         "code": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://snomed.info/sct?fhir_vs"
+            }
+          ],
           "coding": [
             {
               "system": "http://snomed.info/sct",
@@ -9887,6 +10423,12 @@
         "priority": "urgent",
         "doNotPerform": false,
         "code": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://snomed.info/sct?fhir_vs"
+            }
+          ],
           "coding": [
             {
               "system": "http://snomed.info/sct",
@@ -10236,6 +10778,9 @@
             "value": "19009"
           }
         ],
+        "requester": {
+          "reference": "Practitioner/usqualitycore-practitioner"
+        },
         "status": "accepted",
         "statusReason": {
           "text": "Missing"
@@ -10294,6 +10839,9 @@
             "value": "19009"
           }
         ],
+        "requester": {
+          "reference": "Practitioner/usqualitycore-practitioner"
+        },
         "status": "completed",
         "statusReason": {
           "text": "Missing"
@@ -10371,6 +10919,9 @@
             "value": "19009"
           }
         ],
+        "requester": {
+          "reference": "Practitioner/usqualitycore-practitioner"
+        },
         "status": "rejected",
         "statusReason": {
           "text": "Missing"
@@ -10381,6 +10932,12 @@
         "intent": "proposal",
         "priority": "routine",
         "code": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/task-code"
+            }
+          ],
           "coding": [
             {
               "system": "http://hl7.org/fhir/CodeSystem/task-code",
@@ -10461,6 +11018,101 @@
           "start": "2018-06-11",
           "end": "2018-06-11"
         }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:usqualitycore-us-core-smokingstatus-quantity",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "usqualitycore-us-core-smokingstatus-quantity",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus|6.1.0"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "social-history",
+                "display": "Social History"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72166-2",
+              "display": "Tobacco smoking status"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/usqualitycore-patient"
+        },
+        "effectiveDateTime": "2016-03-18T05:27:04Z",
+        "valueQuantity": {
+          "value": 1,
+          "unit": "{score}",
+          "system": "http://unitsofmeasure.org",
+          "code": "{score}"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-smokingstatus-quantity</div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/usqualitycore-us-core-smokingstatus-quantity"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:usqualitycore-us-core-treatment-intervention-preference-string",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "usqualitycore-us-core-treatment-intervention-preference-string",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-treatment-intervention-preference|9.0.0"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "treatment-intervention-preference"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "75773-2"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/usqualitycore-patient"
+        },
+        "effectiveDateTime": "2024-05-16T01:06:06Z",
+        "valueString": "Prefers comfort-focused treatment when significant pain or suffering occurs.",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-treatment-intervention-preference-string</div>"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/usqualitycore-us-core-treatment-intervention-preference-string"
       }
     }
   ]
