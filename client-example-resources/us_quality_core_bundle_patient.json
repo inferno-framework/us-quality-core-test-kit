@@ -3431,7 +3431,7 @@
         ],
         "addresses": [
           {
-            "display": "pregnancy"
+            "reference": "Condition/usqualitycore-condition-problems-health-concerns"
           }
         ],
         "goal": [
@@ -3774,14 +3774,12 @@
           "reference": "Patient/usqualitycore-patient"
         },
         "topic": {
-          "coding": [
+          "extension": [
             {
-              "system": "http://terminology.hl7.org/CodeSystem/communication-topic",
-              "code": "progress-update",
-              "display": "Progress Update"
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://terminology.hl7.org/ValueSet/communication-topic"
             }
-          ],
-          "text": "Progress Update"
+          ]
         },
         "encounter": {
           "reference": "Encounter/usqualitycore-encounter"
@@ -3849,14 +3847,12 @@
           "reference": "Patient/usqualitycore-patient"
         },
         "topic": {
-          "coding": [
+          "extension": [
             {
-              "system": "http://terminology.hl7.org/CodeSystem/communication-topic",
-              "code": "progress-update",
-              "display": "Progress Update"
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://terminology.hl7.org/ValueSet/communication-topic"
             }
-          ],
-          "text": "Progress Update"
+          ]
         },
         "encounter": {
           "reference": "Encounter/usqualitycore-encounter"
@@ -3940,14 +3936,12 @@
           "reference": "Patient/usqualitycore-patient"
         },
         "topic": {
-          "coding": [
+          "extension": [
             {
-              "system": "http://terminology.hl7.org/CodeSystem/communication-topic",
-              "code": "progress-update",
-              "display": "Progress Update"
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://terminology.hl7.org/ValueSet/communication-topic"
             }
-          ],
-          "text": "Progress Update"
+          ]
         },
         "encounter": {
           "reference": "Encounter/usqualitycore-encounter"
@@ -4030,6 +4024,16 @@
                 "code": "problem-list-item"
               }
             ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "sdoh",
+                "display": "Social Determinant of Health"
+              }
+            ],
+            "text": "Social Determinant of Health"
           },
           {
             "coding": [
@@ -4134,6 +4138,16 @@
                 "code": "problem-list-item"
               }
             ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "sdoh",
+                "display": "Social Determinant of Health"
+              }
+            ],
+            "text": "Social Determinant of Health"
           },
           {
             "coding": [
@@ -4324,7 +4338,11 @@
         ],
         "status": "active",
         "manufacturer": "Acme Devices, Inc",
+        "distinctIdentifier": "1234567890",
+        "manufactureDate": "2013-02-01",
+        "expirationDate": "2020-02-01",
         "lotNumber": "43453424",
+        "serialNumber": "AMID-342135-8464",
         "modelNumber": "AB 45-J",
         "type": {
           "coding": [

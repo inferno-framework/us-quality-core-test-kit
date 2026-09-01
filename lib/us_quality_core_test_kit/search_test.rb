@@ -144,8 +144,6 @@ module USQualityCoreTestKit
         resource.resourceType == resource_type
       end
 
-      filter_devices(post_search_resources) if resource_type == 'Device'
-
       get_resource_count = get_search_resources.length
       post_resource_count = post_search_resources.length
 
