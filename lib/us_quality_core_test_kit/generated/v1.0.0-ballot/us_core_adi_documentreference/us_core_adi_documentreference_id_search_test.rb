@@ -19,11 +19,6 @@ none are returned, the test is skipped.
       )
 
       id :us_quality_core_v100_ballot_us_core_adi_documentreference__id_search_test
-
-  
-
-  
-
       def self.properties
         @properties ||= SearchTestProperties.new(
           resource_type: 'DocumentReference',

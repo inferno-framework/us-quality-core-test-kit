@@ -34,15 +34,10 @@ FHIR R4 specification.
       )
 
       id :us_quality_core_v100_ballot_medicationprohibited_patient_intent_do_not_perform_search_test
-
-  
-
-  
       input :patient_ids,
         title: 'Patient IDs',
         description: 'Comma separated list of patient IDs that in sum contain all MUST SUPPORT elements'
   
-
       def self.properties
         @properties ||= SearchTestProperties.new(
           first_search: true,

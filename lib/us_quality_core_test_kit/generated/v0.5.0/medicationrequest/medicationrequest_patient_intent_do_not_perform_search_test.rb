@@ -23,15 +23,12 @@ Medications, the search will be repeated with
       )
 
       id :us_quality_core_v050_medicationrequest_patient_intent_do_not_perform_search_test
-
-  optional
-
+      optional
   
       input :patient_ids,
         title: 'Patient IDs',
         description: 'Comma separated list of patient IDs that in sum contain all MUST SUPPORT elements'
   
-
       def self.properties
         @properties ||= SearchTestProperties.new(
           resource_type: 'MedicationRequest',

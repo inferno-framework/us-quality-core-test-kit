@@ -19,15 +19,12 @@ none are returned, the test is skipped.
       )
 
       id :us_quality_core_v100_ballot_us_core_observation_adi_documentation_patient_category_date_search_test
-
-  optional
-
+      optional
   
       input :patient_ids,
         title: 'Patient IDs',
         description: 'Comma separated list of patient IDs that in sum contain all MUST SUPPORT elements'
   
-
       def self.properties
         @properties ||= SearchTestProperties.new(
           resource_type: 'Observation',
