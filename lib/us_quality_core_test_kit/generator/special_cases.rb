@@ -62,16 +62,16 @@ module USQualityCoreTestKit
       }.freeze
 
       DO_NOT_PERFORM_PROFILES = [
-        DEVICE_NOT_REQUESTED, #v0.5.0
+        DEVICE_NOT_REQUESTED, # v0.5.0
         DEVICE_REQUESTED,
         DEVICE_PROHIBITED,
-        MEDICATION_REQUEST_NOT_REQUESTED, #v0.5.0
+        MEDICATION_REQUEST_NOT_REQUESTED, # v0.5.0
         MEDICATION_REQUEST_REQUESTED,
         MEDICATION_REQUEST_PROHIBITED,
-        SERVICE_NOT_REQUESTED, #v0.5.0
+        SERVICE_NOT_REQUESTED, # v0.5.0
         SERVICE_REQUESTED,
         SERVICE_PROHIBITED
-    ].freeze
+      ].freeze
 
       class << self
         def exclude_group?(group)

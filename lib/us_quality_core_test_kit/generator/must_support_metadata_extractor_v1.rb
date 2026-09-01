@@ -66,14 +66,14 @@ module USQualityCoreTestKit
           # According to the updated FHIR spec that "When a child element is defined as Must Support and the parent element isn't,
           # a system must support the child if it support the parent, but there's no expectation that the system must support the parent.",
           # We add uscdi_only tag to these elements
-          if path.include?('telecom.') || path.include?('communication.')
-            element[:uscdi_plus_quality] = true
+          next unless path.include?('telecom.') || path.include?('communication.')
+
+          element[:uscdi_plus_quality] = true
           # temporary remove this logic because US Quality Core may have different logic here
           # elsif path == 'deceased[x]'
-            # https://hl7.org/fhir/us/core/STU9/requirements.html#CONF-0465
-            # element[:original_path] = element[:path]
-            # element[:path] = 'deceasedDateTime'
-          end
+          # https://hl7.org/fhir/us/core/STU9/requirements.html#CONF-0465
+          # element[:original_path] = element[:path]
+          # element[:path] = 'deceasedDateTime'
         end
       end
 
