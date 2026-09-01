@@ -68,10 +68,11 @@ module USQualityCoreTestKit
           # We add uscdi_only tag to these elements
           if path.include?('telecom.') || path.include?('communication.')
             element[:uscdi_plus_quality] = true
-          elsif path == 'deceased[x]'
+          # temporary remove this logic because US Quality Core may have different logic here
+          # elsif path == 'deceased[x]'
             # https://hl7.org/fhir/us/core/STU9/requirements.html#CONF-0465
-            element[:original_path] = element[:path]
-            element[:path] = 'deceasedDateTime'
+            # element[:original_path] = element[:path]
+            # element[:path] = 'deceasedDateTime'
           end
         end
       end

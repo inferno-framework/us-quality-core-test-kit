@@ -37,6 +37,14 @@ FHIR R4 specification.
       input :patient_ids,
         title: 'Patient IDs',
         description: 'Comma separated list of patient IDs that in sum contain all MUST SUPPORT elements'
+
+      input :care_plan_category_code,
+        title: 'CarePlan Category Code',
+        description: 'Code used for the CarePlan category search parameter'
+
+      def fixed_value_search_param_values
+        [care_plan_category_code]
+      end
   
 
       def self.properties

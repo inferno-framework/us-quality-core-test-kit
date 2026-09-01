@@ -84,9 +84,8 @@
   - :path: telecom.use
     :uscdi_plus_quality: true
   - :path: birthDate
-  - :path: deceasedDateTime
+  - :path: deceased[x]
     :uscdi_plus_quality: true
-    :original_path: deceased[x]
   - :path: address
   - :path: address.use
     :uscdi_plus_quality: true

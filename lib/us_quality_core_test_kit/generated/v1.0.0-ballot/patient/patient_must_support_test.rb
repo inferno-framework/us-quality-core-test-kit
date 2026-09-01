@@ -29,7 +29,7 @@ module USQualityCoreTestKit
         * Patient.address.period.end or Patient.address.use
         * Patient.communication
         * Patient.communication.language
-        * Patient.deceasedDateTime
+        * Patient.deceased[x]
         * Patient.extension:ethnicity
         * Patient.extension:interpreterRequired
         * Patient.extension:race
