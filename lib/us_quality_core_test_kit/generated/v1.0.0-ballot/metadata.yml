@@ -692,6 +692,12 @@
     :expectation: SHALL
   :operations: []
   :searches:
+  - :expectation: SHALL
+    :names:
+    - subject
+    - status
+    :names_not_must_support_or_mandatory: []
+    :must_support_or_mandatory: true
   - :names:
     - subject
     :expectation: SHALL
@@ -701,12 +707,6 @@
     :names:
     - subject
     - topic
-    :names_not_must_support_or_mandatory: []
-    :must_support_or_mandatory: true
-  - :expectation: SHALL
-    :names:
-    - subject
-    - status
     :names_not_must_support_or_mandatory: []
     :must_support_or_mandatory: true
   :search_definitions:
@@ -827,12 +827,12 @@
     - http://hl7.org/fhir/StructureDefinition/DiagnosticReport|4.0.1
     - http://hl7.org/fhir/StructureDefinition/DocumentReference|4.0.1
   :tests:
+  - :id: us_quality_core_v100_ballot_communication_subject_status_search_test
+    :file_name: communication_subject_status_search_test.rb
   - :id: us_quality_core_v100_ballot_communication_subject_search_test
     :file_name: communication_subject_search_test.rb
   - :id: us_quality_core_v100_ballot_communication_subject_topic_search_test
     :file_name: communication_subject_topic_search_test.rb
-  - :id: us_quality_core_v100_ballot_communication_subject_status_search_test
-    :file_name: communication_subject_status_search_test.rb
   - :id: us_quality_core_v100_ballot_communication_read_test
     :file_name: communication_read_test.rb
   - :id: us_quality_core_v100_ballot_communication_provenance_revinclude_search_test
@@ -874,6 +874,12 @@
     :expectation: SHALL
   :operations: []
   :searches:
+  - :expectation: SHALL
+    :names:
+    - subject
+    - status
+    :names_not_must_support_or_mandatory: []
+    :must_support_or_mandatory: true
   - :names:
     - subject
     :expectation: SHALL
@@ -883,12 +889,6 @@
     :names:
     - subject
     - topic
-    :names_not_must_support_or_mandatory: []
-    :must_support_or_mandatory: true
-  - :expectation: SHALL
-    :names:
-    - subject
-    - status
     :names_not_must_support_or_mandatory: []
     :must_support_or_mandatory: true
   :search_definitions:
@@ -1005,12 +1005,12 @@
     - http://hl7.org/fhir/StructureDefinition/DiagnosticReport|4.0.1
     - http://hl7.org/fhir/StructureDefinition/DocumentReference|4.0.1
   :tests:
+  - :id: us_quality_core_v100_ballot_communicationdone_subject_status_search_test
+    :file_name: communicationdone_subject_status_search_test.rb
   - :id: us_quality_core_v100_ballot_communicationdone_subject_search_test
     :file_name: communicationdone_subject_search_test.rb
   - :id: us_quality_core_v100_ballot_communicationdone_subject_topic_search_test
     :file_name: communicationdone_subject_topic_search_test.rb
-  - :id: us_quality_core_v100_ballot_communicationdone_subject_status_search_test
-    :file_name: communicationdone_subject_status_search_test.rb
   - :id: us_quality_core_v100_ballot_communicationdone_read_test
     :file_name: communicationdone_read_test.rb
   - :id: us_quality_core_v100_ballot_communicationdone_provenance_revinclude_search_test
@@ -1052,6 +1052,12 @@
     :expectation: SHALL
   :operations: []
   :searches:
+  - :expectation: SHALL
+    :names:
+    - subject
+    - status
+    :names_not_must_support_or_mandatory: []
+    :must_support_or_mandatory: true
   - :names:
     - subject
     :expectation: SHALL
@@ -1061,12 +1067,6 @@
     :names:
     - subject
     - topic
-    :names_not_must_support_or_mandatory: []
-    :must_support_or_mandatory: true
-  - :expectation: SHALL
-    :names:
-    - subject
-    - status
     :names_not_must_support_or_mandatory: []
     :must_support_or_mandatory: true
   :search_definitions:
@@ -1184,12 +1184,12 @@
     - http://hl7.org/fhir/StructureDefinition/DiagnosticReport|4.0.1
     - http://hl7.org/fhir/StructureDefinition/DocumentReference|4.0.1
   :tests:
+  - :id: us_quality_core_v100_ballot_communicationnotdone_subject_status_search_test
+    :file_name: communicationnotdone_subject_status_search_test.rb
   - :id: us_quality_core_v100_ballot_communicationnotdone_subject_search_test
     :file_name: communicationnotdone_subject_search_test.rb
   - :id: us_quality_core_v100_ballot_communicationnotdone_subject_topic_search_test
     :file_name: communicationnotdone_subject_topic_search_test.rb
-  - :id: us_quality_core_v100_ballot_communicationnotdone_subject_status_search_test
-    :file_name: communicationnotdone_subject_status_search_test.rb
   - :id: us_quality_core_v100_ballot_communicationnotdone_read_test
     :file_name: communicationnotdone_read_test.rb
   - :id: us_quality_core_v100_ballot_communicationnotdone_provenance_revinclude_search_test

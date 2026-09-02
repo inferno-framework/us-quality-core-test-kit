@@ -15,6 +15,13 @@ subject + status on the Communication resource. This test
 will pass if resources are returned and match the search criteria. If
 none are returned, the test is skipped.
 
+Because this is the first search of the sequence, resources in the
+response will be used for subsequent tests.
+
+Additionally, this test will check that GET and POST search methods
+return the same number of results. Search by POST is required by the
+FHIR R4 specification.
+
 
       )
 
@@ -25,8 +32,12 @@ none are returned, the test is skipped.
   
       def self.properties
         @properties ||= SearchTestProperties.new(
-          resource_type: 'Communication',
-        search_param_names: ['subject', 'status']
+          first_search: true,
+        fixed_value_search: true,
+        resource_type: 'Communication',
+        search_param_names: ['subject', 'status'],
+        saves_delayed_references: true,
+        test_post_search: true
         )
       end
 

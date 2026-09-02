@@ -1,6 +1,6 @@
+require_relative 'communication/communication_subject_status_search_test'
 require_relative 'communication/communication_subject_search_test'
 require_relative 'communication/communication_subject_topic_search_test'
-require_relative 'communication/communication_subject_status_search_test'
 require_relative 'communication/communication_read_test'
 require_relative 'communication/communication_provenance_revinclude_search_test'
 require_relative 'communication/communication_validation_test'
@@ -28,9 +28,9 @@ This test sequence will first perform each required search associated
 with this resource. This sequence will perform searches with the
 following parameters:
 
+* subject + status
 * subject
 * subject + topic
-* subject + status
 
 ### Search Parameters
 The first search uses the selected patient(s) from the prior launch
@@ -85,9 +85,9 @@ read succeeds.
       end
 
   
+      test from: :us_quality_core_v100_ballot_communication_subject_status_search_test
       test from: :us_quality_core_v100_ballot_communication_subject_search_test
       test from: :us_quality_core_v100_ballot_communication_subject_topic_search_test
-      test from: :us_quality_core_v100_ballot_communication_subject_status_search_test
       test from: :us_quality_core_v100_ballot_communication_read_test
       test from: :us_quality_core_v100_ballot_communication_provenance_revinclude_search_test
       test from: :us_quality_core_v100_ballot_communication_validation_test

@@ -6,11 +6,11 @@ module USQualityCoreTestKit
     class CommunicationProvenanceRevincludeSearchTest < Inferno::Test
       include USQualityCoreTestKit::SearchTest
 
-      title 'Server returns Provenance resources from Communication search by subject + revInclude:Provenance:target'
+      title 'Server returns Provenance resources from Communication search by subject + status + revInclude:Provenance:target'
       description %(
         A server SHALL be capable of supporting _revIncludes:Provenance:target.
 
-        This test will perform a search by subject + revInclude:Provenance:target and
+        This test will perform a search by subject + status + revInclude:Provenance:target and
         will pass if a Provenance resource is found in the response.
       %)
 
@@ -22,9 +22,9 @@ module USQualityCoreTestKit
   
       def properties
         @properties ||= SearchTestProperties.new(
-          resource_type: 'Communication',
-        search_param_names: ['subject'],
-        possible_status_search: true
+          fixed_value_search: true,
+        resource_type: 'Communication',
+        search_param_names: ['subject', 'status']
         )
       end
 

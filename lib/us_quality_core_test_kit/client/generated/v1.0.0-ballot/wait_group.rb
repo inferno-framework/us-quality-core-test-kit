@@ -100,23 +100,23 @@ module USQualityCoreTestKit
   * read id:
     * usqualitycore-communication
   * searches:
+    * subject + status
     * subject
     * subject + topic
-    * subject + status
 * **Communicationdone**
   * read id:
     * usqualitycore-communicationdone
   * searches:
+    * subject + status
     * subject
     * subject + topic
-    * subject + status
 * **Communicationnotdone**
   * read id:
     * usqualitycore-communicationnotdone
   * searches:
+    * subject + status
     * subject
     * subject + topic
-    * subject + status
 * **ConditionEncounterDiagnosis**
   * read id:
     * usqualitycore-condition-encounter-diagnosis

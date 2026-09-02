@@ -29,7 +29,7 @@ module USQualityCoreTestKit
         end
 
         def all_required_search_parameters
-          ["subject", "topic", "status"]
+          ["subject", "status", "topic"]
         end
 
         run do

@@ -543,6 +543,47 @@
           ]
         },
         {
+          "name": "Search Communication subject + status",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/fhir+json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/Communication?subject=usqualitycore-patient&status=in-progress"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('response status is 2xx', function () {",
+                  "  pm.expect(pm.response.code).to.be.within(200, 299);",
+                  "});",
+                  "",
+                  "pm.test('response body is a search Bundle', function () {",
+                  "  const body = pm.response.json();",
+                  "  pm.expect(body.resourceType).to.eql('Bundle');",
+                  "});",
+                  "",
+                  "const bundle = pm.response.json();",
+                  "if (!Array.isArray(bundle.entry) || bundle.entry.length === 0) {",
+                  "  const selfLink = (bundle.link || []).find((link) => link.relation === 'self');",
+                  "  console.warn(`SKIP: ${selfLink?.url || pm.info.requestName} - search response bundle was empty`);",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
           "name": "Search Communication subject",
           "request": {
             "method": "GET",
@@ -598,47 +639,6 @@
               }
             ],
             "url": "{{base_url}}/Communication?subject=usqualitycore-patient&topic="
-          },
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.test('response status is 2xx', function () {",
-                  "  pm.expect(pm.response.code).to.be.within(200, 299);",
-                  "});",
-                  "",
-                  "pm.test('response body is a search Bundle', function () {",
-                  "  const body = pm.response.json();",
-                  "  pm.expect(body.resourceType).to.eql('Bundle');",
-                  "});",
-                  "",
-                  "const bundle = pm.response.json();",
-                  "if (!Array.isArray(bundle.entry) || bundle.entry.length === 0) {",
-                  "  const selfLink = (bundle.link || []).find((link) => link.relation === 'self');",
-                  "  console.warn(`SKIP: ${selfLink?.url || pm.info.requestName} - search response bundle was empty`);",
-                  "}"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Search Communication subject + status",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/fhir+json"
-              },
-              {
-                "key": "Authorization",
-                "value": "Bearer {{access_token}}"
-              }
-            ],
-            "url": "{{base_url}}/Communication?subject=usqualitycore-patient&status=in-progress"
           },
           "event": [
             {
@@ -706,6 +706,47 @@
           ]
         },
         {
+          "name": "Search Communication subject + status",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/fhir+json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/Communication?subject=usqualitycore-patient&status=completed"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('response status is 2xx', function () {",
+                  "  pm.expect(pm.response.code).to.be.within(200, 299);",
+                  "});",
+                  "",
+                  "pm.test('response body is a search Bundle', function () {",
+                  "  const body = pm.response.json();",
+                  "  pm.expect(body.resourceType).to.eql('Bundle');",
+                  "});",
+                  "",
+                  "const bundle = pm.response.json();",
+                  "if (!Array.isArray(bundle.entry) || bundle.entry.length === 0) {",
+                  "  const selfLink = (bundle.link || []).find((link) => link.relation === 'self');",
+                  "  console.warn(`SKIP: ${selfLink?.url || pm.info.requestName} - search response bundle was empty`);",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
           "name": "Search Communication subject",
           "request": {
             "method": "GET",
@@ -761,47 +802,6 @@
               }
             ],
             "url": "{{base_url}}/Communication?subject=usqualitycore-patient&topic="
-          },
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.test('response status is 2xx', function () {",
-                  "  pm.expect(pm.response.code).to.be.within(200, 299);",
-                  "});",
-                  "",
-                  "pm.test('response body is a search Bundle', function () {",
-                  "  const body = pm.response.json();",
-                  "  pm.expect(body.resourceType).to.eql('Bundle');",
-                  "});",
-                  "",
-                  "const bundle = pm.response.json();",
-                  "if (!Array.isArray(bundle.entry) || bundle.entry.length === 0) {",
-                  "  const selfLink = (bundle.link || []).find((link) => link.relation === 'self');",
-                  "  console.warn(`SKIP: ${selfLink?.url || pm.info.requestName} - search response bundle was empty`);",
-                  "}"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Search Communication subject + status",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/fhir+json"
-              },
-              {
-                "key": "Authorization",
-                "value": "Bearer {{access_token}}"
-              }
-            ],
-            "url": "{{base_url}}/Communication?subject=usqualitycore-patient&status=completed"
           },
           "event": [
             {
@@ -869,6 +869,47 @@
           ]
         },
         {
+          "name": "Search Communication subject + status",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/fhir+json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/Communication?subject=usqualitycore-patient&status=not-done"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('response status is 2xx', function () {",
+                  "  pm.expect(pm.response.code).to.be.within(200, 299);",
+                  "});",
+                  "",
+                  "pm.test('response body is a search Bundle', function () {",
+                  "  const body = pm.response.json();",
+                  "  pm.expect(body.resourceType).to.eql('Bundle');",
+                  "});",
+                  "",
+                  "const bundle = pm.response.json();",
+                  "if (!Array.isArray(bundle.entry) || bundle.entry.length === 0) {",
+                  "  const selfLink = (bundle.link || []).find((link) => link.relation === 'self');",
+                  "  console.warn(`SKIP: ${selfLink?.url || pm.info.requestName} - search response bundle was empty`);",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
           "name": "Search Communication subject",
           "request": {
             "method": "GET",
@@ -924,47 +965,6 @@
               }
             ],
             "url": "{{base_url}}/Communication?subject=usqualitycore-patient&topic="
-          },
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.test('response status is 2xx', function () {",
-                  "  pm.expect(pm.response.code).to.be.within(200, 299);",
-                  "});",
-                  "",
-                  "pm.test('response body is a search Bundle', function () {",
-                  "  const body = pm.response.json();",
-                  "  pm.expect(body.resourceType).to.eql('Bundle');",
-                  "});",
-                  "",
-                  "const bundle = pm.response.json();",
-                  "if (!Array.isArray(bundle.entry) || bundle.entry.length === 0) {",
-                  "  const selfLink = (bundle.link || []).find((link) => link.relation === 'self');",
-                  "  console.warn(`SKIP: ${selfLink?.url || pm.info.requestName} - search response bundle was empty`);",
-                  "}"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Search Communication subject + status",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/fhir+json"
-              },
-              {
-                "key": "Authorization",
-                "value": "Bearer {{access_token}}"
-              }
-            ],
-            "url": "{{base_url}}/Communication?subject=usqualitycore-patient&status=not-done"
           },
           "event": [
             {

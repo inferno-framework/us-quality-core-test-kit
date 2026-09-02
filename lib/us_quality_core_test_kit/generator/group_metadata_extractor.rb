@@ -223,6 +223,8 @@ module USQualityCoreTestKit
             %w[patient do-not-perform]
           elsif %w[CareTeam Immunization MedicationAdministration MedicationDispense Procedure Task].include?(resource)
             %w[patient status]
+          elsif resource == 'Communication'
+            %w[subject status]
           else
             ['patient']
           end
