@@ -4513,12 +4513,6 @@
         "status": "completed",
         "intent": "original-order",
         "codeCodeableConcept": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
-              "valueCanonical": "http://hl7.org/fhir/ValueSet/device-kind"
-            }
-          ],
           "coding": [
             {
               "system": "http://snomed.info/sct",
@@ -4555,6 +4549,74 @@
     {
       "request": {
         "method": "PUT",
+        "url": "DeviceRequest/usqualitycore-devicenotrequested-codeoptions"
+      },
+      "resource": {
+        "resourceType": "DeviceRequest",
+        "id": "usqualitycore-devicenotrequested-codeoptions",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-devicenotrequested"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-doNotPerformReason",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "410534003",
+                  "display": "Not indicated (qualifier value)"
+                }
+              ]
+            }
+          }
+        ],
+        "modifierExtension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceRequest.doNotPerform",
+            "valueBoolean": true
+          }
+        ],
+        "status": "completed",
+        "intent": "original-order",
+        "codeCodeableConcept": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/device-kind"
+            }
+          ],
+          "text": "ECG"
+        },
+        "subject": {
+          "reference": "Patient/usqualitycore-patient"
+        },
+        "authoredOn": "2015-03-25T19:32:52-05:00",
+        "requester": {
+          "reference": "Practitioner/usqualitycore-practitioner"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "29857009",
+                "display": "Chest pain"
+              }
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-devicerequest (code options)</div>"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
         "url": "DeviceRequest/usqualitycore-deviceprohibited"
       },
       "resource": {
@@ -4574,12 +4636,6 @@
         "status": "completed",
         "intent": "original-order",
         "codeCodeableConcept": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
-              "valueCanonical": "http://hl7.org/fhir/ValueSet/device-kind"
-            }
-          ],
           "coding": [
             {
               "system": "http://snomed.info/sct",
@@ -4616,6 +4672,60 @@
     {
       "request": {
         "method": "PUT",
+        "url": "DeviceRequest/usqualitycore-deviceprohibited-codeoptions"
+      },
+      "resource": {
+        "resourceType": "DeviceRequest",
+        "id": "usqualitycore-deviceprohibited-codeoptions",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-deviceprohibited"
+          ]
+        },
+        "modifierExtension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceRequest.doNotPerform",
+            "valueBoolean": true
+          }
+        ],
+        "status": "completed",
+        "intent": "original-order",
+        "codeCodeableConcept": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/device-kind"
+            }
+          ],
+          "text": "ECG"
+        },
+        "subject": {
+          "reference": "Patient/usqualitycore-patient"
+        },
+        "authoredOn": "2015-03-25T19:32:52-05:00",
+        "requester": {
+          "reference": "Practitioner/usqualitycore-practitioner"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "29857009",
+                "display": "Chest pain"
+              }
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-deviceprohibited-codeoptions (code options)</div>"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
         "url": "DeviceRequest/usqualitycore-devicerequest"
       },
       "resource": {
@@ -4635,12 +4745,6 @@
         "status": "completed",
         "intent": "original-order",
         "codeCodeableConcept": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
-              "valueCanonical": "http://hl7.org/fhir/ValueSet/device-kind"
-            }
-          ],
           "coding": [
             {
               "system": "http://snomed.info/sct",
@@ -4677,6 +4781,60 @@
     {
       "request": {
         "method": "PUT",
+        "url": "DeviceRequest/usqualitycore-devicerequest-codeoptions"
+      },
+      "resource": {
+        "resourceType": "DeviceRequest",
+        "id": "usqualitycore-devicerequest-codeoptions",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-devicerequest"
+          ]
+        },
+        "modifierExtension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceRequest.doNotPerform",
+            "valueBoolean": false
+          }
+        ],
+        "status": "completed",
+        "intent": "original-order",
+        "codeCodeableConcept": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/device-kind"
+            }
+          ],
+          "text": "ECG"
+        },
+        "subject": {
+          "reference": "Patient/usqualitycore-patient"
+        },
+        "authoredOn": "2015-03-25T19:32:52-05:00",
+        "requester": {
+          "reference": "Practitioner/usqualitycore-practitioner"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "29857009",
+                "display": "Chest pain"
+              }
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-devicerequest-codeoptions (code options)</div>"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
         "url": "DeviceRequest/usqualitycore-devicerequested"
       },
       "resource": {
@@ -4696,12 +4854,6 @@
         "status": "completed",
         "intent": "original-order",
         "codeCodeableConcept": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
-              "valueCanonical": "http://hl7.org/fhir/ValueSet/device-kind"
-            }
-          ],
           "coding": [
             {
               "system": "http://snomed.info/sct",
@@ -4732,6 +4884,60 @@
         "text": {
           "status": "generated",
           "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-devicerequested</div>"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "DeviceRequest/usqualitycore-devicerequested-codeoptions"
+      },
+      "resource": {
+        "resourceType": "DeviceRequest",
+        "id": "usqualitycore-devicerequested-codeoptions",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-devicerequested"
+          ]
+        },
+        "modifierExtension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceRequest.doNotPerform",
+            "valueBoolean": false
+          }
+        ],
+        "status": "completed",
+        "intent": "original-order",
+        "codeCodeableConcept": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/device-kind"
+            }
+          ],
+          "text": "ECG"
+        },
+        "subject": {
+          "reference": "Patient/usqualitycore-patient"
+        },
+        "authoredOn": "2015-03-25T19:32:52-05:00",
+        "requester": {
+          "reference": "Practitioner/usqualitycore-practitioner"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "29857009",
+                "display": "Chest pain"
+              }
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-devicerequested-codeoptions (code options)</div>"
         }
       }
     },
