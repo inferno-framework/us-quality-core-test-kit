@@ -4128,10 +4128,10 @@
               {
                 "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
                 "code": "sdoh",
-                "display": "Social Determinant of Health"
+                "display": "SDOH"
               }
             ],
-            "text": "Social Determinant of Health"
+            "text": "SDOH"
           },
           {
             "coding": [
@@ -4243,10 +4243,10 @@
               {
                 "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
                 "code": "sdoh",
-                "display": "Social Determinant of Health"
+                "display": "SDOH"
               }
             ],
-            "text": "Social Determinant of Health"
+            "text": "SDOH"
           },
           {
             "coding": [
@@ -4899,7 +4899,11 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-needed",
-            "valueBoolean": true
+            "valueCoding": {
+              "system": "http://snomed.info/sct",
+              "code": "373066001",
+              "display": "Yes"
+            }
           }
         ],
         "identifier": [
