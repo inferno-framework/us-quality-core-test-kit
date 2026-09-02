@@ -1,7 +1,7 @@
+require_relative 'us_core_documentreference/us_core_documentreference_patient_category_search_test'
 require_relative 'us_core_documentreference/us_core_documentreference_patient_search_test'
 require_relative 'us_core_documentreference/us_core_documentreference_id_search_test'
 require_relative 'us_core_documentreference/us_core_documentreference_patient_type_search_test'
-require_relative 'us_core_documentreference/us_core_documentreference_patient_category_search_test'
 require_relative 'us_core_documentreference/us_core_documentreference_patient_category_date_search_test'
 require_relative 'us_core_documentreference/us_core_documentreference_read_test'
 require_relative 'us_core_documentreference/us_core_documentreference_provenance_revinclude_search_test'
@@ -31,10 +31,10 @@ This test sequence will first perform each required search associated
 with this resource. This sequence will perform searches with the
 following parameters:
 
+* patient + category
 * patient
 * _id
 * patient + type
-* patient + category
 * patient + category + date
 
 ### Search Parameters
@@ -90,10 +90,10 @@ read succeeds.
       end
 
   
+      test from: :us_quality_core_v050_us_core_documentreference_patient_category_search_test
       test from: :us_quality_core_v050_us_core_documentreference_patient_search_test
       test from: :us_quality_core_v050_us_core_documentreference__id_search_test
       test from: :us_quality_core_v050_us_core_documentreference_patient_type_search_test
-      test from: :us_quality_core_v050_us_core_documentreference_patient_category_search_test
       test from: :us_quality_core_v050_us_core_documentreference_patient_category_date_search_test
       test from: :us_quality_core_v050_us_core_documentreference_read_test
       test from: :us_quality_core_v050_us_core_documentreference_provenance_revinclude_search_test

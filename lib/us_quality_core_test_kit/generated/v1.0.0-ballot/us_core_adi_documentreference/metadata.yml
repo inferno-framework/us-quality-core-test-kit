@@ -18,6 +18,12 @@
   :expectation: SHALL
 :operations: []
 :searches:
+- :expectation: SHALL
+  :names:
+  - patient
+  - category
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
 - :names:
   - patient
   :expectation: SHALL
@@ -32,12 +38,6 @@
   :names:
   - patient
   - type
-  :names_not_must_support_or_mandatory: []
-  :must_support_or_mandatory: true
-- :expectation: SHALL
-  :names:
-  - patient
-  - category
   :names_not_must_support_or_mandatory: []
   :must_support_or_mandatory: true
 - :expectation: SHALL
@@ -85,51 +85,7 @@
     - DocumentReference.category
     :comparators: {}
     :values:
-    - 11369-6
-    - 11485-0
-    - 11486-8
-    - 11488-4
-    - 11506-3
-    - 11543-6
-    - 15508-5
-    - 18726-0
-    - 18761-7
-    - 18842-5
-    - 26436-6
-    - 26441-6
-    - 26442-4
-    - 27895-2
-    - 27896-0
-    - 27897-8
-    - 27898-6
-    - 28570-0
-    - 28619-5
-    - 28634-4
-    - 29749-9
-    - 29750-7
-    - 29751-5
-    - 29752-3
-    - 34109-9
-    - 34117-2
-    - 34121-4
-    - 34122-2
-    - 34133-9
-    - 34140-4
-    - 34748-4
-    - 34775-7
-    - 47039-3
-    - 47042-7
-    - 47045-0
-    - 47046-8
-    - 47049-2
-    - 57017-6
-    - 57016-8
-    - 56445-0
-    - 53576-5
-    - 56447-6
-    - 18748-4
-    - 11504-8
-    - 57133-1
+    - 42348-3
     :type: CodeableConcept
     :contains_multiple: true
     :multiple_or: MAY
@@ -168,95 +124,7 @@
       :path: ''
       :values:
       - :system: http://loinc.org
-        :code: 11369-6
-      - :system: http://loinc.org
-        :code: 11485-0
-      - :system: http://loinc.org
-        :code: 11486-8
-      - :system: http://loinc.org
-        :code: 11488-4
-      - :system: http://loinc.org
-        :code: 11506-3
-      - :system: http://loinc.org
-        :code: 11543-6
-      - :system: http://loinc.org
-        :code: 15508-5
-      - :system: http://loinc.org
-        :code: 18726-0
-      - :system: http://loinc.org
-        :code: 18761-7
-      - :system: http://loinc.org
-        :code: 18842-5
-      - :system: http://loinc.org
-        :code: 26436-6
-      - :system: http://loinc.org
-        :code: 26441-6
-      - :system: http://loinc.org
-        :code: 26442-4
-      - :system: http://loinc.org
-        :code: 27895-2
-      - :system: http://loinc.org
-        :code: 27896-0
-      - :system: http://loinc.org
-        :code: 27897-8
-      - :system: http://loinc.org
-        :code: 27898-6
-      - :system: http://loinc.org
-        :code: 28570-0
-      - :system: http://loinc.org
-        :code: 28619-5
-      - :system: http://loinc.org
-        :code: 28634-4
-      - :system: http://loinc.org
-        :code: 29749-9
-      - :system: http://loinc.org
-        :code: 29750-7
-      - :system: http://loinc.org
-        :code: 29751-5
-      - :system: http://loinc.org
-        :code: 29752-3
-      - :system: http://loinc.org
-        :code: 34109-9
-      - :system: http://loinc.org
-        :code: 34117-2
-      - :system: http://loinc.org
-        :code: 34121-4
-      - :system: http://loinc.org
-        :code: 34122-2
-      - :system: http://loinc.org
-        :code: 34133-9
-      - :system: http://loinc.org
-        :code: 34140-4
-      - :system: http://loinc.org
-        :code: 34748-4
-      - :system: http://loinc.org
-        :code: 34775-7
-      - :system: http://loinc.org
-        :code: 47039-3
-      - :system: http://loinc.org
-        :code: 47042-7
-      - :system: http://loinc.org
-        :code: 47045-0
-      - :system: http://loinc.org
-        :code: 47046-8
-      - :system: http://loinc.org
-        :code: 47049-2
-      - :system: http://loinc.org
-        :code: 57017-6
-      - :system: http://loinc.org
-        :code: 57016-8
-      - :system: http://loinc.org
-        :code: 56445-0
-      - :system: http://loinc.org
-        :code: 53576-5
-      - :system: http://loinc.org
-        :code: 56447-6
-      - :system: http://loinc.org
-        :code: 18748-4
-      - :system: http://loinc.org
-        :code: 11504-8
-      - :system: http://loinc.org
-        :code: 57133-1
+        :code: 42348-3
   :elements:
   - :path: identifier
   - :path: status
@@ -343,14 +211,14 @@
   :profiles:
   - http://hl7.org/fhir/StructureDefinition/Resource|4.0.1
 :tests:
+- :id: us_quality_core_v100_ballot_us_core_adi_documentreference_patient_category_search_test
+  :file_name: us_core_adi_documentreference_patient_category_search_test.rb
 - :id: us_quality_core_v100_ballot_us_core_adi_documentreference_patient_search_test
   :file_name: us_core_adi_documentreference_patient_search_test.rb
 - :id: us_quality_core_v100_ballot_us_core_adi_documentreference__id_search_test
   :file_name: us_core_adi_documentreference_id_search_test.rb
 - :id: us_quality_core_v100_ballot_us_core_adi_documentreference_patient_type_search_test
   :file_name: us_core_adi_documentreference_patient_type_search_test.rb
-- :id: us_quality_core_v100_ballot_us_core_adi_documentreference_patient_category_search_test
-  :file_name: us_core_adi_documentreference_patient_category_search_test.rb
 - :id: us_quality_core_v100_ballot_us_core_adi_documentreference_patient_category_date_search_test
   :file_name: us_core_adi_documentreference_patient_category_date_search_test.rb
 - :id: us_quality_core_v100_ballot_us_core_adi_documentreference_read_test

@@ -1969,6 +1969,12 @@
     :expectation: SHALL
   :operations: []
   :searches:
+  - :expectation: SHALL
+    :names:
+    - patient
+    - category
+    :names_not_must_support_or_mandatory: []
+    :must_support_or_mandatory: true
   - :names:
     - patient
     :expectation: SHALL
@@ -1983,12 +1989,6 @@
     :names:
     - patient
     - type
-    :names_not_must_support_or_mandatory: []
-    :must_support_or_mandatory: true
-  - :expectation: SHALL
-    :names:
-    - patient
-    - category
     :names_not_must_support_or_mandatory: []
     :must_support_or_mandatory: true
   - :expectation: SHALL
@@ -2175,14 +2175,14 @@
     :profiles:
     - http://hl7.org/fhir/StructureDefinition/Resource
   :tests:
+  - :id: us_quality_core_v050_us_core_documentreference_patient_category_search_test
+    :file_name: us_core_documentreference_patient_category_search_test.rb
   - :id: us_quality_core_v050_us_core_documentreference_patient_search_test
     :file_name: us_core_documentreference_patient_search_test.rb
   - :id: us_quality_core_v050_us_core_documentreference__id_search_test
     :file_name: us_core_documentreference_id_search_test.rb
   - :id: us_quality_core_v050_us_core_documentreference_patient_type_search_test
     :file_name: us_core_documentreference_patient_type_search_test.rb
-  - :id: us_quality_core_v050_us_core_documentreference_patient_category_search_test
-    :file_name: us_core_documentreference_patient_category_search_test.rb
   - :id: us_quality_core_v050_us_core_documentreference_patient_category_date_search_test
     :file_name: us_core_documentreference_patient_category_date_search_test.rb
   - :id: us_quality_core_v050_us_core_documentreference_read_test

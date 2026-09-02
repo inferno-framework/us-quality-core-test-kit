@@ -25,9 +25,8 @@ module USQualityCoreTestKit
       DEVICE_USE_STATEMENT = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-deviceusestatement'
       DIAGNOSTIC_REPORT_LAB = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-lab'
       DIAGNOSTIC_REPORT_NOTE = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note'
-      ENCOUNTER = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter'
-      FAMILY_MEMBER_HISTORY = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-familymemberhistory'
-      FLAG = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-flag'
+      DOCUMENT_REFERENCE = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
+      ADI_DOCUMENT_REFERENCE = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference"
       GOAL = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-goal'
       IMAGING_STUDY = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-imagingstudy'
       IMMUNIZATION = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunization'

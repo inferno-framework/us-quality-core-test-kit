@@ -29,7 +29,7 @@ module USQualityCoreTestKit
         end
 
         def all_required_search_parameters
-          ["patient", "_id", "type", "category", "date"]
+          ["patient", "category", "_id", "type", "date"]
         end
 
         run do

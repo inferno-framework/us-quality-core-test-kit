@@ -183,19 +183,19 @@ module USQualityCoreTestKit
   * read id:
     * usqualitycore-us-core-documentreference
   * searches:
+    * patient + category
     * patient
     * _id
     * patient + type
-    * patient + category
     * patient + category + date
 * **UsCoreAdiDocumentreference**
   * read id:
     * usqualitycore-us-core-adi-documentreference
   * searches:
+    * patient + category
     * patient
     * _id
     * patient + type
-    * patient + category
     * patient + category + date
 * **FamilyMemberHistory**
   * read id:

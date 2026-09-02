@@ -2458,6 +2458,47 @@
           ]
         },
         {
+          "name": "Search DocumentReference patient + category",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/fhir+json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/DocumentReference?patient=usqualitycore-patient&category=clinical-note"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('response status is 2xx', function () {",
+                  "  pm.expect(pm.response.code).to.be.within(200, 299);",
+                  "});",
+                  "",
+                  "pm.test('response body is a search Bundle', function () {",
+                  "  const body = pm.response.json();",
+                  "  pm.expect(body.resourceType).to.eql('Bundle');",
+                  "});",
+                  "",
+                  "const bundle = pm.response.json();",
+                  "if (!Array.isArray(bundle.entry) || bundle.entry.length === 0) {",
+                  "  const selfLink = (bundle.link || []).find((link) => link.relation === 'self');",
+                  "  console.warn(`SKIP: ${selfLink?.url || pm.info.requestName} - search response bundle was empty`);",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
           "name": "Search DocumentReference patient",
           "request": {
             "method": "GET",
@@ -2581,47 +2622,6 @@
           ]
         },
         {
-          "name": "Search DocumentReference patient + category",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/fhir+json"
-              },
-              {
-                "key": "Authorization",
-                "value": "Bearer {{access_token}}"
-              }
-            ],
-            "url": "{{base_url}}/DocumentReference?patient=usqualitycore-patient&category=11369-6"
-          },
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.test('response status is 2xx', function () {",
-                  "  pm.expect(pm.response.code).to.be.within(200, 299);",
-                  "});",
-                  "",
-                  "pm.test('response body is a search Bundle', function () {",
-                  "  const body = pm.response.json();",
-                  "  pm.expect(body.resourceType).to.eql('Bundle');",
-                  "});",
-                  "",
-                  "const bundle = pm.response.json();",
-                  "if (!Array.isArray(bundle.entry) || bundle.entry.length === 0) {",
-                  "  const selfLink = (bundle.link || []).find((link) => link.relation === 'self');",
-                  "  console.warn(`SKIP: ${selfLink?.url || pm.info.requestName} - search response bundle was empty`);",
-                  "}"
-                ]
-              }
-            }
-          ]
-        },
-        {
           "name": "Search DocumentReference patient + category + date",
           "request": {
             "method": "GET",
@@ -2635,7 +2635,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/DocumentReference?patient=usqualitycore-patient&category=11369-6&date=ge2024-05-16"
+            "url": "{{base_url}}/DocumentReference?patient=usqualitycore-patient&category=clinical-note&date=ge2024-05-16"
           },
           "event": [
             {
@@ -2697,6 +2697,47 @@
                   "  const body = pm.response.json();",
                   "  pm.expect(body.resourceType).to.eql('DocumentReference');",
                   "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Search DocumentReference patient + category",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/fhir+json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/DocumentReference?patient=usqualitycore-patient&category=42348-3"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('response status is 2xx', function () {",
+                  "  pm.expect(pm.response.code).to.be.within(200, 299);",
+                  "});",
+                  "",
+                  "pm.test('response body is a search Bundle', function () {",
+                  "  const body = pm.response.json();",
+                  "  pm.expect(body.resourceType).to.eql('Bundle');",
+                  "});",
+                  "",
+                  "const bundle = pm.response.json();",
+                  "if (!Array.isArray(bundle.entry) || bundle.entry.length === 0) {",
+                  "  const selfLink = (bundle.link || []).find((link) => link.relation === 'self');",
+                  "  console.warn(`SKIP: ${selfLink?.url || pm.info.requestName} - search response bundle was empty`);",
+                  "}"
                 ]
               }
             }
@@ -2826,47 +2867,6 @@
           ]
         },
         {
-          "name": "Search DocumentReference patient + category",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/fhir+json"
-              },
-              {
-                "key": "Authorization",
-                "value": "Bearer {{access_token}}"
-              }
-            ],
-            "url": "{{base_url}}/DocumentReference?patient=usqualitycore-patient&category=11369-6"
-          },
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.test('response status is 2xx', function () {",
-                  "  pm.expect(pm.response.code).to.be.within(200, 299);",
-                  "});",
-                  "",
-                  "pm.test('response body is a search Bundle', function () {",
-                  "  const body = pm.response.json();",
-                  "  pm.expect(body.resourceType).to.eql('Bundle');",
-                  "});",
-                  "",
-                  "const bundle = pm.response.json();",
-                  "if (!Array.isArray(bundle.entry) || bundle.entry.length === 0) {",
-                  "  const selfLink = (bundle.link || []).find((link) => link.relation === 'self');",
-                  "  console.warn(`SKIP: ${selfLink?.url || pm.info.requestName} - search response bundle was empty`);",
-                  "}"
-                ]
-              }
-            }
-          ]
-        },
-        {
           "name": "Search DocumentReference patient + category + date",
           "request": {
             "method": "GET",
@@ -2880,7 +2880,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/DocumentReference?patient=usqualitycore-patient&category=11369-6&date=ge2024-10-08"
+            "url": "{{base_url}}/DocumentReference?patient=usqualitycore-patient&category=42348-3&date=ge2024-10-08"
           },
           "event": [
             {

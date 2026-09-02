@@ -294,6 +294,55 @@
         "multipleOr": true,
         "multipleAnd": true
       }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "SearchParameter/us-quality-core-communication-topic"
+      },
+      "resource": {
+        "resourceType" : "SearchParameter",
+        "id" : "us-quality-core-communication-topic",
+        "language" : "en",
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: SearchParameter us-quality-core-communication-topic</b></p><a name=\"us-quality-core-communication-topic\"> </a><a name=\"hcus-quality-core-communication-topic\"> </a><h2>USQualityCoreCommunicationTopic</h2><p>Parameter <code>topic</code>:<code>token</code></p><div><p>US Quality Core Communication topic Search Parameter</p>\n</div><table class=\"grid\"><tr><td>Resource</td><td><a href=\"http://hl7.org/fhir/R4/communication.html\">Communication</a></td></tr><tr><td>Expression</td><td><code>Communication.topic</code></td></tr><tr><td>Processing Mode</td><td>Normal</td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: The parameter may repeat in order to specify multiple values that must all be true</li><li>multipleOr: The parameter may have multiple values (separated by comma) where at least one must be true</li></ul></td></tr></table></div>"
+        },
+        "url" : "http://hl7.org/fhir/us/quality-core/SearchParameter/us-quality-core-communication-topic",
+        "version" : "1.0.0-ballot",
+        "name" : "USQualityCoreCommunicationTopic",
+        "status" : "active",
+        "date" : "2026-06-30",
+        "publisher" : "HL7 International / Clinical Quality Information",
+        "contact" : [{
+          "name" : "HL7 International / Clinical Quality Information",
+          "telecom" : [{
+            "system" : "url",
+            "value" : "http://www.hl7.org/Special/committees/cqi"
+          }]
+        },
+        {
+          "name" : "Clinical Quality Information WG",
+          "telecom" : [{
+            "system" : "url",
+            "value" : "http://www.hl7.org/Special/committees/cqi"
+          }]
+        }],
+        "description" : "US Quality Core Communication topic Search Parameter",
+        "jurisdiction" : [{
+          "coding" : [{
+            "system" : "urn:iso:std:iso:3166",
+            "code" : "US"
+          }]
+        }],
+        "code" : "topic",
+        "base" : ["Communication"],
+        "type" : "token",
+        "expression" : "Communication.topic",
+        "xpathUsage" : "normal",
+        "multipleOr" : true,
+        "multipleAnd" : true
+      }
     }
   ]
 }
