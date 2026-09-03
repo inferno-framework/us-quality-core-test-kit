@@ -140,6 +140,13 @@
     - Reference
     :target_profiles:
     - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization
+  :choices:
+  - :paths:
+    - reasonCode
+    - reasonReference
+  - :paths:
+    - location.location
+    - serviceProvider
 :mandatory_elements:
 - Encounter.identifier.system
 - Encounter.identifier.value

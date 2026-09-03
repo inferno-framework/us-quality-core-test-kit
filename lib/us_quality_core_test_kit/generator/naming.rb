@@ -42,7 +42,7 @@ module USQualityCoreTestKit
       MEDICATION_DISPENSE = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispense'
       MEDICATION_DISPENSE_DONE = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedone'
       MEDICATION_DISPENSE_DECLINED = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedeclined'
-      MEDICATION_REQUEST = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest'
+      MEDICATION_REQUEST = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest'    
       MEDICATION_REQUEST_REQUESTED = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequested'
       MEDICATION_REQUEST_PROHIBITED = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationprohibited'
       MEDICATION_STATEMENT = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationstatement'
@@ -71,8 +71,11 @@ module USQualityCoreTestKit
       TASK_REJECTED = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-taskrejected'
 
       # From US Quality Core v0.5.0
+      DEVICE_REQUEST_V050 = 'http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-devicerequest'
       DEVICE_NOT_REQUESTED = 'http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-devicenotrequested'
+      MEDICATION_REQUEST_V050 = 'http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationrequest'
       MEDICATION_REQUEST_NOT_REQUESTED = 'http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationnotrequested'
+      SERVICE_REQUEST_V050 = 'http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-servicerequest'
       SERVICE_NOT_REQUESTED = 'http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-servicenotrequested'
 
       # From US Core directly
@@ -145,7 +148,10 @@ module USQualityCoreTestKit
 
           tag = profile.gsub('us-quality-core-', '').underscore.dasherize
 
-          "usqualitycore-#{tag}"
+          id = "usqualitycore-#{tag}"
+          return id if id.end_with?('notdone')
+
+          id.delete_suffix('done')
         end
       end
     end

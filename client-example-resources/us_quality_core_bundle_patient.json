@@ -98,13 +98,13 @@
         },
         "identifier": [
           {
-            "system": "urn:ietf:rfc:3986",
-            "value": "cdf16bbc-cdc3-4381-a1d9-9aaf4ab493e3"
+            "system": "https://github.com/inferno-framework/us-quality-core-test-kit",
+            "value": "usqualitycore-specimen"
           }
         ],
         "accessionIdentifier": {
           "system": "urn:ietf:rfc:3986",
-          "value": "cdf16bbc-cdc3-4381-a1d9-9aaf4ab493e3"
+          "value": "urn:uuid:cdf16bbc-cdc3-4381-a1d9-9aaf4ab493e3"
         },
         "condition": [
           {
@@ -140,12 +140,12 @@
         "id": "usqualitycore-us-core-documentreference",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference|9.0.0"
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0"
           ]
         },
         "identifier": [
           {
-            "system": "https://github.com/inferno-framework/us-quality-core-test-kit/document-reference",
+            "system": "https://github.com/inferno-framework/us-quality-core-test-kit",
             "value": "usqualitycore-us-core-documentreference"
           }
         ],
@@ -184,8 +184,7 @@
         "custodian": {
           "reference": "Organization/usqualitycore-organization"
         },
-        "description": "Advance directive documentation for the US Quality Core test kit patient.",
-        "content": [
+          "content": [
           {
             "attachment": {
               "contentType": "text/plain",
@@ -222,7 +221,7 @@
         "method": "PUT",
         "url": "DocumentReference/usqualitycore-us-core-adi-documentreference"
       },
-      "resource": {
+      "resource": { 
         "resourceType": "DocumentReference",
         "id": "usqualitycore-us-core-adi-documentreference",
         "meta": {
@@ -261,8 +260,8 @@
         ],
         "identifier": [
           {
-            "system": "urn:ietf:rfc:3986",
-            "value": "urn:oid:2.16.840.1.113883.19.5.99999.1"
+            "system": "https://github.com/inferno-framework/us-quality-core-test-kit",
+            "value": "usqualitycore-us-core-adi-documentreference"
           }
         ],
         "status": "current",
@@ -294,8 +293,7 @@
         "date": "2024-10-08T19:48:54.316108-07:00",
         "author": [
           {
-            "reference": "Patient/usqualitycore-patient",
-            "display": "Amy V. Shaw"
+            "reference": "Practitioner/usqualitycore-practitioner"
           }
         ],
         "content": [
@@ -332,8 +330,7 @@
           {
             "url": "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo",
             "valueReference": {
-              "reference": "DocumentReference/usqualitycore-us-core-documentreference",
-              "display": "Advance directive documentation"
+              "reference": "DocumentReference/usqualitycore-us-core-documentreference"
             }
           }
         ],
@@ -346,8 +343,7 @@
                 "code": "observation-adi-documentation",
                 "display": "Observation ADI Documentation"
               }
-            ],
-            "text": "Observation ADI Documentation"
+            ]
           }
         ],
         "code": {
@@ -357,13 +353,11 @@
               "code": "45473-6",
               "display": "Advance healthcare directive completed"
             }
-          ],
-          "text": "Advance healthcare directive completed"
+          ]
         },
         "subject": {
           "reference": "Patient/usqualitycore-patient"
         },
-        "effectiveDateTime": "2024-05-16T01:06:06Z",
         "issued": "2024-05-16T01:06:06Z",
         "performer": [
           {
@@ -374,41 +368,10 @@
           "coding": [
             {
               "system": "http://snomed.info/sct",
-              "version": "http://snomed.info/sct/731000124108",
               "code": "373066001",
-              "display": "Yes (qualifier value)"
+              "display": "Yes"
             }
-          ],
-          "text": "Yes"
-        },
-        "component": [
-          {
-            "code": {
-              "coding": [
-                {
-                  "system": "http://loinc.org",
-                  "code": "45473-6",
-                  "display": "Advance healthcare directive completed"
-                }
-              ],
-              "text": "Advance healthcare directive completed"
-            },
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "http://snomed.info/sct",
-                  "version": "http://snomed.info/sct/731000124108",
-                  "code": "373066001",
-                  "display": "Yes (qualifier value)"
-                }
-              ],
-              "text": "Yes"
-            }
-          }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-observation-adi-documentation</div>"
+          ]
         }
       }
     },
@@ -462,14 +425,10 @@
             {
               "system": "http://snomed.info/sct",
               "code": "304251008",
-              "display": "Treatment preference"
+              "display": "Resuscitation status"
             }
           ],
           "text": "If I am experiencing significant pain or suffering, I prefer comfort-focused treatment and palliative care involvement to support me and my family."
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-treatment-intervention-preference</div>"
         }
       }
     },
@@ -646,7 +605,7 @@
         "effectiveDateTime": "2016-03-18T05:27:04Z",
         "performer": [
           {
-            "reference": "Organization/usqualitycore-organization"
+            "reference": "Practitioner/usqualitycore-practitioner"
           }
         ],
         "valueCodeableConcept": {
@@ -1743,9 +1702,6 @@
             "reference": "Communication/usqualitycore-communication"
           },
           {
-            "reference": "Communication/usqualitycore-communicationdone"
-          },
-          {
             "reference": "Communication/usqualitycore-communicationnotdone"
           },
           {
@@ -1761,16 +1717,10 @@
             "reference": "Device/usqualitycore-device"
           },
           {
-            "reference": "DeviceRequest/usqualitycore-devicenotrequested"
-          },
-          {
             "reference": "DeviceRequest/usqualitycore-deviceprohibited"
           },
           {
             "reference": "DeviceRequest/usqualitycore-devicerequest"
-          },
-          {
-            "reference": "DeviceRequest/usqualitycore-devicerequested"
           },
           {
             "reference": "DiagnosticReport/usqualitycore-diagnostic-report-lab"
@@ -1794,13 +1744,10 @@
             "reference": "Immunization/usqualitycore-immunization"
           },
           {
-            "reference": "Immunization/usqualitycore-immunizationdone"
-          },
-          {
             "reference": "Immunization/usqualitycore-immunizationnotdone"
           },
           {
-            "reference": "Immunization/usqualitycore-immunizationnotdone-2"
+            "reference": "Immunization/usqualitycore-immunizationnotdone-codeoptions"
           },
           {
             "reference": "ImagingStudy/usqualitycore-imaging-study"
@@ -1809,31 +1756,19 @@
             "reference": "MedicationAdministration/usqualitycore-medicationadministration"
           },
           {
-            "reference": "MedicationAdministration/usqualitycore-medicationadministrationdone"
-          },
-          {
             "reference": "MedicationAdministration/usqualitycore-medicationadministrationnotdone"
           },
           {
             "reference": "MedicationDispense/usqualitycore-medicationdispense"
           },
           {
-            "reference": "MedicationDispense/usqualitycore-medicationdispensedone"
-          },
-          {
             "reference": "MedicationDispense/usqualitycore-medicationdispensedeclined"
-          },
-          {
-            "reference": "MedicationRequest/usqualitycore-medicationnotrequested"
           },
           {
             "reference": "MedicationRequest/usqualitycore-medicationprohibited"
           },
           {
             "reference": "MedicationRequest/usqualitycore-medicationrequest"
-          },
-          {
-            "reference": "MedicationRequest/usqualitycore-medicationrequested"
           },
           {
             "reference": "NutritionOrder/usqualitycore-nutrition-order"
@@ -1875,13 +1810,13 @@
             "reference": "Observation/usqualitycore-observation-screening-assessment-4"
           },
           {
+            "reference": "Observation/usqualitycore-observation-screening-assessment-5"
+          },
+          {
             "reference": "Observation/usqualitycore-observationcancelled"
           },
           {
             "reference": "Procedure/usqualitycore-procedure"
-          },
-          {
-            "reference": "Procedure/usqualitycore-proceduredone"
           },
           {
             "reference": "Procedure/usqualitycore-procedurenotdone"
@@ -1896,13 +1831,7 @@
             "reference": "ServiceRequest/usqualitycore-servicenotrequested"
           },
           {
-            "reference": "ServiceRequest/usqualitycore-serviceprohibited"
-          },
-          {
             "reference": "ServiceRequest/usqualitycore-servicerequest"
-          },
-          {
-            "reference": "ServiceRequest/usqualitycore-servicerequested"
           },
           {
             "reference": "Observation/usqualitycore-simple-observation"
@@ -1920,13 +1849,10 @@
             "reference": "Task/usqualitycore-task"
           },
           {
-            "reference": "Task/usqualitycore-taskdone"
-          },
-          {
             "reference": "Task/usqualitycore-taskrejected"
           },
           {
-            "reference": "Task/usqualitycore-taskrejected-2"
+            "reference": "Task/usqualitycore-taskrejected-codeoptions"
           },
           {
             "reference": "DocumentReference/usqualitycore-us-core-adi-documentreference"
@@ -1945,7 +1871,7 @@
               ]
             },
             "who": {
-              "reference": "Practitioner/usqualitycore-practitioner"
+              "reference": "Organization/usqualitycore-organization"
             },
             "onBehalfOf": {
               "reference": "Organization/usqualitycore-organization"
@@ -1955,7 +1881,13 @@
             "type": {
               "coding": [
                 {
+                  "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type",
+                  "code": "transmitter",
+                  "display": "Transmitter"
+                },                
+                {
                   "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+                  "version": "2.0.0",
                   "code": "transmitter",
                   "display": "Transmitter"
                 }
@@ -3804,18 +3736,6 @@
             "text": "Alert"
           }
         ],
-        "medium": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode",
-                "code": "WRITTEN",
-                "display": "written"
-              }
-            ],
-            "text": "written"
-          }
-        ],
         "subject": {
           "reference": "Patient/usqualitycore-patient"
         },
@@ -3827,11 +3747,7 @@
             }
           ]
         },
-        "encounter": {
-          "reference": "Encounter/usqualitycore-encounter"
-        },
         "sent": "2014-12-12T18:01:10-08:00",
-        "received": "2014-12-12T18:01:11-08:00",
         "recipient": [
           {
             "reference": "Practitioner/usqualitycore-practitioner"
@@ -3839,15 +3755,6 @@
         ],
         "sender": {
           "reference": "Organization/usqualitycore-organization"
-        },
-        "payload": [
-          {
-            "contentString": "A progress update was sent to the care team for the patient."
-          }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-communication (code options)</div>"
         }
       }
     },
@@ -3877,18 +3784,6 @@
             "text": "Alert"
           }
         ],
-        "medium": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode",
-                "code": "WRITTEN",
-                "display": "written"
-              }
-            ],
-            "text": "written"
-          }
-        ],
         "subject": {
           "reference": "Patient/usqualitycore-patient"
         },
@@ -3901,11 +3796,7 @@
             }
           ]
         },
-        "encounter": {
-          "reference": "Encounter/usqualitycore-encounter"
-        },
         "sent": "2014-12-12T18:01:10-08:00",
-        "received": "2014-12-12T18:01:11-08:00",
         "recipient": [
           {
             "reference": "Practitioner/usqualitycore-practitioner"
@@ -3913,162 +3804,6 @@
         ],
         "sender": {
           "reference": "Organization/usqualitycore-organization"
-        },
-        "payload": [
-          {
-            "contentString": "A progress update was sent to the care team for the patient."
-          }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-communication</div>"
-        }
-      }
-    },
-    {
-      "request": {
-        "method": "PUT",
-        "url": "Communication/usqualitycore-communicationdone-codeOptions"
-      },
-      "resource": {
-        "resourceType": "Communication",
-        "id": "usqualitycore-communicationdone-codeOptions",
-        "meta": {
-          "profile": [
-            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-communicationdone"
-          ]
-        },
-        "status": "completed",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/communication-category",
-                "code": "alert",
-                "display": "Alert"
-              }
-            ],
-            "text": "Alert"
-          }
-        ],
-        "medium": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode",
-                "code": "WRITTEN",
-                "display": "written"
-              }
-            ],
-            "text": "written"
-          }
-        ],
-        "subject": {
-          "reference": "Patient/usqualitycore-patient"
-        },
-        "topic": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
-              "valueCanonical": "http://terminology.hl7.org/ValueSet/communication-topic"
-            }
-          ]
-        },
-        "encounter": {
-          "reference": "Encounter/usqualitycore-encounter"
-        },
-        "sent": "2014-12-12T18:01:10-08:00",
-        "received": "2014-12-12T18:01:11-08:00",
-        "recipient": [
-          {
-            "reference": "Practitioner/usqualitycore-practitioner"
-          }
-        ],
-        "sender": {
-          "reference": "Organization/usqualitycore-organization"
-        },
-        "payload": [
-          {
-            "contentString": "A progress update was completed and delivered to the care team."
-          }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-communicationdone (code options)</div>"
-        }
-      }
-    },
-    {
-      "request": {
-        "method": "PUT",
-        "url": "Communication/usqualitycore-communicationdone"
-      },
-      "resource": {
-        "resourceType": "Communication",
-        "id": "usqualitycore-communicationdone",
-        "meta": {
-          "profile": [
-            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-communicationdone"
-          ]
-        },
-        "status": "completed",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/communication-category",
-                "code": "alert",
-                "display": "Alert"
-              }
-            ],
-            "text": "Alert"
-          }
-        ],
-        "medium": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode",
-                "code": "WRITTEN",
-                "display": "written"
-              }
-            ],
-            "text": "written"
-          }
-        ],
-        "subject": {
-          "reference": "Patient/usqualitycore-patient"
-        },
-        "topic": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/communication-category",
-              "code": "alert",
-              "display": "Alert"
-            }
-          ]
-        },
-        "encounter": {
-          "reference": "Encounter/usqualitycore-encounter"
-        },
-        "sent": "2014-12-12T18:01:10-08:00",
-        "received": "2014-12-12T18:01:11-08:00",
-        "recipient": [
-          {
-            "reference": "Practitioner/usqualitycore-practitioner"
-          }
-        ],
-        "sender": {
-          "reference": "Organization/usqualitycore-organization"
-        },
-        "payload": [
-          {
-            "contentString": "A progress update was completed and delivered to the care team."
-          }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-communicationdone</div>"
         }
       }
     },
@@ -4114,18 +3849,6 @@
             "text": "Alert"
           }
         ],
-        "medium": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode",
-                "code": "WRITTEN",
-                "display": "written"
-              }
-            ],
-            "text": "written"
-          }
-        ],
         "subject": {
           "reference": "Patient/usqualitycore-patient"
         },
@@ -4141,7 +3864,6 @@
           "reference": "Encounter/usqualitycore-encounter"
         },
         "sent": "2014-12-12T18:01:10-08:00",
-        "received": "2014-12-12T18:01:11-08:00",
         "recipient": [
           {
             "reference": "Practitioner/usqualitycore-practitioner"
@@ -4149,15 +3871,6 @@
         ],
         "sender": {
           "reference": "Organization/usqualitycore-organization"
-        },
-        "payload": [
-          {
-            "contentString": "A progress update was not sent because medical care was unavailable."
-          }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-communicationnotdone (code options)</div>"
         }
       }
     },
@@ -4203,18 +3916,6 @@
             "text": "Alert"
           }
         ],
-        "medium": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode",
-                "code": "WRITTEN",
-                "display": "written"
-              }
-            ],
-            "text": "written"
-          }
-        ],
         "subject": {
           "reference": "Patient/usqualitycore-patient"
         },
@@ -4231,7 +3932,6 @@
           "reference": "Encounter/usqualitycore-encounter"
         },
         "sent": "2014-12-12T18:01:10-08:00",
-        "received": "2014-12-12T18:01:11-08:00",
         "recipient": [
           {
             "reference": "Practitioner/usqualitycore-practitioner"
@@ -4239,15 +3939,6 @@
         ],
         "sender": {
           "reference": "Organization/usqualitycore-organization"
-        },
-        "payload": [
-          {
-            "contentString": "A progress update was not sent because medical care was unavailable."
-          }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-communicationnotdone</div>"
         }
       }
     },
@@ -4666,19 +4357,20 @@
     {
       "request": {
         "method": "PUT",
-        "url": "DeviceRequest/usqualitycore-devicenotrequested"
+        "url": "DeviceRequest/usqualitycore-deviceprohibited"
       },
       "resource": {
         "resourceType": "DeviceRequest",
-        "id": "usqualitycore-devicenotrequested",
+        "id": "usqualitycore-deviceprohibited",
         "meta": {
           "profile": [
-            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-devicenotrequested"
+            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-devicenotrequested",
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-deviceprohibited"
           ]
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-doNotPerformReason",
+            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-doNotPerformReason",
             "valueCodeableConcept": {
               "coding": [
                 {
@@ -4735,61 +4427,6 @@
     {
       "request": {
         "method": "PUT",
-        "url": "DeviceRequest/usqualitycore-deviceprohibited"
-      },
-      "resource": {
-        "resourceType": "DeviceRequest",
-        "id": "usqualitycore-deviceprohibited",
-        "meta": {
-          "profile": [
-            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-deviceprohibited"
-          ]
-        },
-        "modifierExtension": [
-          {
-            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceRequest.doNotPerform",
-            "valueBoolean": true
-          }
-        ],
-        "status": "completed",
-        "intent": "original-order",
-        "codeCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "86184003",
-              "display": "Electrocardiographic monitor and recorder"
-            }
-          ],
-          "text": "ECG"
-        },
-        "subject": {
-          "reference": "Patient/usqualitycore-patient"
-        },
-        "authoredOn": "2015-03-25T19:32:52-05:00",
-        "requester": {
-          "reference": "Practitioner/usqualitycore-practitioner"
-        },
-        "reasonCode": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "29857009",
-                "display": "Chest pain"
-              }
-            ]
-          }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-deviceprohibited</div>"
-        }
-      }
-    },
-    {
-      "request": {
-        "method": "PUT",
         "url": "DeviceRequest/usqualitycore-deviceprohibited-codeoptions"
       },
       "resource": {
@@ -4800,6 +4437,20 @@
             "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-deviceprohibited"
           ]
         },
+        "extension": [
+          {
+            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-doNotPerformReason",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "410534003",
+                  "display": "Not indicated (qualifier value)"
+                }
+              ]
+            }
+          }
+        ],        
         "modifierExtension": [
           {
             "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceRequest.doNotPerform",
@@ -4810,6 +4461,10 @@
         "intent": "original-order",
         "codeCodeableConcept": {
           "extension": [
+            {
+              "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/device-kind"
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
               "valueCanonical": "http://hl7.org/fhir/ValueSet/device-kind"
@@ -4834,11 +4489,7 @@
               }
             ]
           }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-deviceprohibited-codeoptions (code options)</div>"
-        }
+        ]
       }
     },
     {
@@ -4889,11 +4540,7 @@
               }
             ]
           }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-devicerequest</div>"
-        }
+        ]
       }
     },
     {
@@ -4943,120 +4590,7 @@
               }
             ]
           }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-devicerequest-codeoptions (code options)</div>"
-        }
-      }
-    },
-    {
-      "request": {
-        "method": "PUT",
-        "url": "DeviceRequest/usqualitycore-devicerequested"
-      },
-      "resource": {
-        "resourceType": "DeviceRequest",
-        "id": "usqualitycore-devicerequested",
-        "meta": {
-          "profile": [
-            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-devicerequested"
-          ]
-        },
-        "modifierExtension": [
-          {
-            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceRequest.doNotPerform",
-            "valueBoolean": false
-          }
-        ],
-        "status": "completed",
-        "intent": "original-order",
-        "codeCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "86184003",
-              "display": "Electrocardiographic monitor and recorder"
-            }
-          ],
-          "text": "ECG"
-        },
-        "subject": {
-          "reference": "Patient/usqualitycore-patient"
-        },
-        "authoredOn": "2015-03-25T19:32:52-05:00",
-        "requester": {
-          "reference": "Practitioner/usqualitycore-practitioner"
-        },
-        "reasonCode": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "29857009",
-                "display": "Chest pain"
-              }
-            ]
-          }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-devicerequested</div>"
-        }
-      }
-    },
-    {
-      "request": {
-        "method": "PUT",
-        "url": "DeviceRequest/usqualitycore-devicerequested-codeoptions"
-      },
-      "resource": {
-        "resourceType": "DeviceRequest",
-        "id": "usqualitycore-devicerequested-codeoptions",
-        "meta": {
-          "profile": [
-            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-devicerequested"
-          ]
-        },
-        "modifierExtension": [
-          {
-            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceRequest.doNotPerform",
-            "valueBoolean": false
-          }
-        ],
-        "status": "completed",
-        "intent": "original-order",
-        "codeCodeableConcept": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
-              "valueCanonical": "http://hl7.org/fhir/ValueSet/device-kind"
-            }
-          ],
-          "text": "ECG"
-        },
-        "subject": {
-          "reference": "Patient/usqualitycore-patient"
-        },
-        "authoredOn": "2015-03-25T19:32:52-05:00",
-        "requester": {
-          "reference": "Practitioner/usqualitycore-practitioner"
-        },
-        "reasonCode": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "29857009",
-                "display": "Chest pain"
-              }
-            ]
-          }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-devicerequested-codeoptions (code options)</div>"
-        }
+        ]
       }
     },
     {
@@ -5336,6 +4870,17 @@
           {
             "extension": [
               {
+                "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter-diagnosisPresentOnAdmission",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/HospitalAcqCond/Coding",
+                      "code": "Y"
+                    }
+                  ]
+                }
+              },
+              {
                 "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosis-present-on-admission",
                 "valueCodeableConcept": {
                   "coding": [
@@ -5378,7 +4923,7 @@
         "id": "usqualitycore-family-member-history",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-familymemberhistory"
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory"
           ]
         },
         "extension": [
@@ -5603,8 +5148,8 @@
         },
         "identifier": [
           {
-            "system": "urn:ietf:rfc:3986",
-            "value": "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234"
+            "system": "https://github.com/inferno-framework/us-quality-core-test-kit",
+            "value": "usqualitycore-immunization"
           }
         ],
         "status": "completed",
@@ -5644,34 +5189,7 @@
         "location": {
           "reference": "Location/usqualitycore-location"
         },
-        "manufacturer": {
-          "reference": "Organization/usqualitycore-organization"
-        },
         "lotNumber": "AAJN11K",
-        "expirationDate": "2015-02-15",
-        "site": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/v3-ActSite",
-              "code": "LA",
-              "display": "left arm"
-            }
-          ]
-        },
-        "route": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
-              "code": "IM",
-              "display": "Injection, intramuscular"
-            }
-          ]
-        },
-        "doseQuantity": {
-          "value": 5,
-          "system": "http://unitsofmeasure.org",
-          "code": "mg"
-        },
         "performer": [
           {
             "function": {
@@ -5699,238 +5217,22 @@
               "reference": "Practitioner/usqualitycore-practitioner"
             }
           }
-        ],
-        "note": [
-          {
-            "text": "Notes on adminstration of vaccine"
-          }
-        ],
-        "reasonCode": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "429060002"
-              }
-            ]
-          }
-        ],
-        "reaction": [
-          {
-            "date": "2013-01-10",
-            "detail": {
-              "reference": "Observation/usqualitycore-observation-lab"
-            },
-            "reported": true
-          }
-        ],
-        "protocolApplied": [
-          {
-            "series": "Vaccination Series 1",
-            "authority": {
-              "reference": "Organization/usqualitycore-organization"
-            },
-            "targetDisease": [
-              {
-                "coding": [
-                  {
-                    "system": "http://snomed.info/sct",
-                    "code": "1857005"
-                  }
-                ]
-              }
-            ],
-            "doseNumberPositiveInt": 1,
-            "seriesDosesPositiveInt": 2
-          }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-immunization</div>"
-        }
+        ]
       }
     },
     {
       "request": {
         "method": "PUT",
-        "url": "Immunization/usqualitycore-immunizationdone"
+        "url": "Immunization/usqualitycore-immunizationnotdone-codeoptions"
       },
       "resource": {
         "resourceType": "Immunization",
-        "id": "usqualitycore-immunizationdone",
-        "meta": {
-          "profile": [
-            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationdone"
-          ]
-        },
-        "identifier": [
-          {
-            "system": "urn:ietf:rfc:3986",
-            "value": "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234"
-          }
-        ],
-        "status": "completed",
-        "statusReason": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-              "code": "IMMUNE",
-              "display": "immunity"
-            }
-          ]
-        },
-        "vaccineCode": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/sid/cvx",
-              "code": "197",
-              "display": "Influenza, high-dose, quadrivalent, PF"
-            },
-            {
-              "system": "http://hl7.org/fhir/sid/ndc",
-              "code": "49281012165",
-              "display": "FLUZONE High-Dose Quadrivalent Northern Hemisphere, 10 SYRINGE, GLASS in 1 PACKAGE (49281-121-65) > .7 mL in 1 SYRINGE, GLASS (49281-121-88) (package)"
-            }
-          ],
-          "text": "Influenza, high-dose, quadrivalent, PF"
-        },
-        "patient": {
-          "reference": "Patient/usqualitycore-patient"
-        },
-        "encounter": {
-          "reference": "Encounter/usqualitycore-encounter"
-        },
-        "occurrenceDateTime": "2013-01-01",
-        "recorded": "2013-01-10",
-        "primarySource": true,
-        "location": {
-          "reference": "Location/usqualitycore-location"
-        },
-        "manufacturer": {
-          "reference": "Organization/usqualitycore-organization"
-        },
-        "lotNumber": "AAJN11K",
-        "expirationDate": "2015-02-15",
-        "site": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/v3-ActSite",
-              "code": "LA",
-              "display": "left arm"
-            }
-          ]
-        },
-        "route": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
-              "code": "IM",
-              "display": "Injection, intramuscular"
-            }
-          ]
-        },
-        "doseQuantity": {
-          "value": 5,
-          "system": "http://unitsofmeasure.org",
-          "code": "mg"
-        },
-        "performer": [
-          {
-            "function": {
-              "coding": [
-                {
-                  "system": "http://terminology.hl7.org/CodeSystem/v2-0443",
-                  "code": "OP"
-                }
-              ]
-            },
-            "actor": {
-              "reference": "Practitioner/usqualitycore-practitioner"
-            }
-          },
-          {
-            "function": {
-              "coding": [
-                {
-                  "system": "http://terminology.hl7.org/CodeSystem/v2-0443",
-                  "code": "AP"
-                }
-              ]
-            },
-            "actor": {
-              "reference": "Practitioner/usqualitycore-practitioner"
-            }
-          }
-        ],
-        "note": [
-          {
-            "text": "Notes on adminstration of vaccine"
-          }
-        ],
-        "reasonCode": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "429060002"
-              }
-            ]
-          }
-        ],
-        "reaction": [
-          {
-            "date": "2013-01-10",
-            "detail": {
-              "reference": "Observation/usqualitycore-observation-lab"
-            },
-            "reported": true
-          }
-        ],
-        "protocolApplied": [
-          {
-            "series": "Vaccination Series 1",
-            "authority": {
-              "reference": "Organization/usqualitycore-organization"
-            },
-            "targetDisease": [
-              {
-                "coding": [
-                  {
-                    "system": "http://snomed.info/sct",
-                    "code": "1857005"
-                  }
-                ]
-              }
-            ],
-            "doseNumberPositiveInt": 1,
-            "seriesDosesPositiveInt": 2
-          }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-immunizationdone</div>"
-        }
-      }
-    },
-    {
-      "request": {
-        "method": "PUT",
-        "url": "Immunization/usqualitycore-immunizationnotdone"
-      },
-      "resource": {
-        "resourceType": "Immunization",
-        "id": "usqualitycore-immunizationnotdone",
+        "id": "usqualitycore-immunizationnotdone-codeoptions",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationnotdone"
           ]
         },
-        "identifier": [
-          {
-            "system": "urn:ietf:rfc:3986",
-            "value": "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234"
-          }
-        ],
         "status": "not-done",
         "statusReason": {
           "coding": [
@@ -5944,7 +5246,7 @@
         "vaccineCode": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
+              "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
               "valueCanonical": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.526.3.1254"
             },
             {
@@ -5966,34 +5268,7 @@
         "location": {
           "reference": "Location/usqualitycore-location"
         },
-        "manufacturer": {
-          "reference": "Organization/usqualitycore-organization"
-        },
         "lotNumber": "AAJN11K",
-        "expirationDate": "2015-02-15",
-        "site": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/v3-ActSite",
-              "code": "LA",
-              "display": "left arm"
-            }
-          ]
-        },
-        "route": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
-              "code": "IM",
-              "display": "Injection, intramuscular"
-            }
-          ]
-        },
-        "doseQuantity": {
-          "value": 5,
-          "system": "http://unitsofmeasure.org",
-          "code": "mg"
-        },
         "performer": [
           {
             "function": {
@@ -6021,76 +5296,22 @@
               "reference": "Practitioner/usqualitycore-practitioner"
             }
           }
-        ],
-        "note": [
-          {
-            "text": "Notes on adminstration of vaccine"
-          }
-        ],
-        "reasonCode": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "429060002"
-              }
-            ]
-          }
-        ],
-        "reaction": [
-          {
-            "date": "2013-01-10",
-            "detail": {
-              "reference": "Observation/usqualitycore-observation-lab"
-            },
-            "reported": true
-          }
-        ],
-        "protocolApplied": [
-          {
-            "series": "Vaccination Series 1",
-            "authority": {
-              "reference": "Organization/usqualitycore-organization"
-            },
-            "targetDisease": [
-              {
-                "coding": [
-                  {
-                    "system": "http://snomed.info/sct",
-                    "code": "1857005"
-                  }
-                ]
-              }
-            ],
-            "doseNumberPositiveInt": 1,
-            "seriesDosesPositiveInt": 2
-          }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-immunizationnotdone</div>"
-        }
+        ]
       }
     },
     {
       "request": {
         "method": "PUT",
-        "url": "Immunization/usqualitycore-immunizationnotdone-2"
+        "url": "Immunization/usqualitycore-immunizationnotdone"
       },
       "resource": {
         "resourceType": "Immunization",
-        "id": "usqualitycore-immunizationnotdone-2",
+        "id": "usqualitycore-immunizationnotdone",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationnotdone"
           ]
         },
-        "identifier": [
-          {
-            "system": "urn:ietf:rfc:3986",
-            "value": "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234"
-          }
-        ],
         "status": "not-done",
         "statusReason": {
           "coding": [
@@ -6128,34 +5349,7 @@
         "location": {
           "reference": "Location/usqualitycore-location"
         },
-        "manufacturer": {
-          "reference": "Organization/usqualitycore-organization"
-        },
         "lotNumber": "AAJN11K",
-        "expirationDate": "2015-02-15",
-        "site": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/v3-ActSite",
-              "code": "LA",
-              "display": "left arm"
-            }
-          ]
-        },
-        "route": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
-              "code": "IM",
-              "display": "Injection, intramuscular"
-            }
-          ]
-        },
-        "doseQuantity": {
-          "value": 5,
-          "system": "http://unitsofmeasure.org",
-          "code": "mg"
-        },
         "performer": [
           {
             "function": {
@@ -6198,40 +5392,7 @@
               }
             ]
           }
-        ],
-        "reaction": [
-          {
-            "date": "2013-01-10",
-            "detail": {
-              "reference": "Observation/usqualitycore-observation-lab"
-            },
-            "reported": true
-          }
-        ],
-        "protocolApplied": [
-          {
-            "series": "Vaccination Series 1",
-            "authority": {
-              "reference": "Organization/usqualitycore-organization"
-            },
-            "targetDisease": [
-              {
-                "coding": [
-                  {
-                    "system": "http://snomed.info/sct",
-                    "code": "1857005"
-                  }
-                ]
-              }
-            ],
-            "doseNumberPositiveInt": 1,
-            "seriesDosesPositiveInt": 2
-          }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-immunizationnotdone-2</div>"
-        }
+        ]
       }
     },
     {
@@ -6249,8 +5410,8 @@
         },
         "identifier": [
           {
-            "system": "urn:dicom:uid",
-            "value": "urn:oid:1.2.840.113619.2.55.3.604688654.1234.1672531200.1"
+            "system": "https://github.com/inferno-framework/us-quality-core-test-kit",
+            "value": "usqualitycore-imaging-study"
           }
         ],
         "status": "available",
@@ -6332,11 +5493,7 @@
               }
             ]
           }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-imaging-study</div>"
-        }
+        ]
       }
     },
     {
@@ -6425,10 +5582,6 @@
         },
         "managingOrganization": {
           "reference": "Organization/usqualitycore-organization"
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-location</div>"
         }
       }
     },
@@ -6449,11 +5602,6 @@
           {
             "resourceType": "Organization",
             "id": "org6",
-            "meta": {
-              "profile": [
-                "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-organization"
-              ]
-            },
             "identifier": [
               {
                 "use": "temp",
@@ -6549,16 +5697,6 @@
             "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministration"
           ]
         },
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
-            "valueDateTime": "2017-01-17"
-          },
-          {
-            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.recorded",
-            "valueDateTime": "2017-01-17"
-          }
-        ],
         "status": "completed",
         "medicationCodeableConcept": {
           "coding": [
@@ -6573,11 +5711,6 @@
           "reference": "Patient/usqualitycore-patient",
           "display": "Donald Duck"
         },
-        "supportingInformation": [
-          {
-            "reference": "Condition/usqualitycore-condition-problems-health-concerns"
-          }
-        ],
         "effectivePeriod": {
           "start": "2015-01-15T14:30:00+01:00",
           "end": "2015-01-15T14:30:00+01:00"
@@ -6591,7 +5724,7 @@
               "reference": "Practitioner/usqualitycore-practitioner"
             }
           }
-        ],
+        ],        
         "dosage": {
           "route": {
             "coding": [
@@ -6608,10 +5741,6 @@
             "system": "http://unitsofmeasure.org",
             "code": "mg"
           }
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-medicationadministration</div>"
         }
       }
     },
@@ -6628,16 +5757,6 @@
             "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministration"
           ]
         },
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
-            "valueDateTime": "2017-01-17"
-          },
-          {
-            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.recorded",
-            "valueDateTime": "2017-01-17"
-          }
-        ],
         "status": "completed",
         "medicationCodeableConcept": {
           "extension": [
@@ -6651,11 +5770,6 @@
           "reference": "Patient/usqualitycore-patient",
           "display": "Donald Duck"
         },
-        "supportingInformation": [
-          {
-            "reference": "Condition/usqualitycore-condition-problems-health-concerns"
-          }
-        ],
         "effectivePeriod": {
           "start": "2015-01-15T14:30:00+01:00",
           "end": "2015-01-15T14:30:00+01:00"
@@ -6669,7 +5783,7 @@
               "reference": "Practitioner/usqualitycore-practitioner"
             }
           }
-        ],
+        ],        
         "dosage": {
           "route": {
             "coding": [
@@ -6686,160 +5800,7 @@
             "system": "http://unitsofmeasure.org",
             "code": "mg"
           }
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-medicationadministration (code options)</div>"
         }
-      }
-    },
-    {
-      "request": {
-        "method": "PUT",
-        "url": "MedicationAdministration/usqualitycore-medicationadministrationdone"
-      },
-      "resource": {
-        "resourceType": "MedicationAdministration",
-        "id": "usqualitycore-medicationadministrationdone",
-        "meta": {
-          "profile": [
-            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministrationdone"
-          ]
-        },
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
-            "valueDateTime": "2017-01-17"
-          }
-        ],
-        "status": "completed",
-        "medicationCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-              "code": "1594660",
-              "display": "alemtuzumab 10 MG/ML [Lemtrada]"
-            }
-          ]
-        },
-        "subject": {
-          "reference": "Patient/usqualitycore-patient",
-          "display": "Donald Duck"
-        },
-        "supportingInformation": [
-          {
-            "reference": "Condition/usqualitycore-condition-problems-health-concerns"
-          }
-        ],
-        "effectivePeriod": {
-          "start": "2015-01-15T14:30:00+01:00",
-          "end": "2015-01-15T14:30:00+01:00"
-        },
-        "request": {
-          "reference": "MedicationRequest/usqualitycore-medicationrequest"
-        },
-        "dosage": {
-          "route": {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "47625008",
-                "display": "Intravenous route (qualifier value)"
-              }
-            ]
-          },
-          "dose": {
-            "value": 3,
-            "unit": "mg",
-            "system": "http://unitsofmeasure.org",
-            "code": "mg"
-          }
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-medicationadministrationdone</div>"
-        },
-        "performer": [
-          {
-            "actor": {
-              "reference": "Practitioner/usqualitycore-practitioner"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "request": {
-        "method": "PUT",
-        "url": "MedicationAdministration/usqualitycore-medicationadministrationdone-codeoptions"
-      },
-      "resource": {
-        "resourceType": "MedicationAdministration",
-        "id": "usqualitycore-medicationadministrationdone-codeoptions",
-        "meta": {
-          "profile": [
-            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministrationdone"
-          ]
-        },
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
-            "valueDateTime": "2017-01-17"
-          }
-        ],
-        "status": "completed",
-        "medicationCodeableConcept": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
-              "valueCanonical": "http://hl7.org/fhir/ValueSet/medication-codes"
-            }
-          ]
-        },
-        "subject": {
-          "reference": "Patient/usqualitycore-patient",
-          "display": "Donald Duck"
-        },
-        "supportingInformation": [
-          {
-            "reference": "Condition/usqualitycore-condition-problems-health-concerns"
-          }
-        ],
-        "effectivePeriod": {
-          "start": "2015-01-15T14:30:00+01:00",
-          "end": "2015-01-15T14:30:00+01:00"
-        },
-        "request": {
-          "reference": "MedicationRequest/usqualitycore-medicationrequest"
-        },
-        "dosage": {
-          "route": {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "47625008",
-                "display": "Intravenous route (qualifier value)"
-              }
-            ]
-          },
-          "dose": {
-            "value": 3,
-            "unit": "mg",
-            "system": "http://unitsofmeasure.org",
-            "code": "mg"
-          }
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-medicationadministrationdone (code options)</div>"
-        },
-        "performer": [
-          {
-            "actor": {
-              "reference": "Practitioner/usqualitycore-practitioner"
-            }
-          }
-        ]
       }
     },
     {
@@ -6857,10 +5818,10 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
+            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-recorded",
             "valueDateTime": "2017-01-17"
           }
-        ],
+        ],        
         "status": "not-done",
         "statusReason": [
           {
@@ -6886,11 +5847,6 @@
           "reference": "Patient/usqualitycore-patient",
           "display": "Donald Duck"
         },
-        "supportingInformation": [
-          {
-            "reference": "Condition/usqualitycore-condition-problems-health-concerns"
-          }
-        ],
         "effectivePeriod": {
           "start": "2015-01-15T14:30:00+01:00",
           "end": "2015-01-15T14:30:00+01:00"
@@ -6904,7 +5860,7 @@
               "reference": "Practitioner/usqualitycore-practitioner"
             }
           }
-        ],
+        ],        
         "dosage": {
           "route": {
             "coding": [
@@ -6921,10 +5877,6 @@
             "system": "http://unitsofmeasure.org",
             "code": "mg"
           }
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-medicationadministration</div>"
         }
       }
     },
@@ -6943,10 +5895,10 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
+            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-recorded",
             "valueDateTime": "2017-01-17"
           }
-        ],
+        ],          
         "status": "not-done",
         "statusReason": [
           {
@@ -6962,20 +5914,20 @@
         "medicationCodeableConcept": {
           "extension": [
             {
+              "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/medication-codes"
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
               "valueCanonical": "http://hl7.org/fhir/ValueSet/medication-codes"
             }
-          ]
+          ],
+          "text": "alemtuzumab 10 MG/ML [Lemtrada]"
         },
         "subject": {
           "reference": "Patient/usqualitycore-patient",
           "display": "Donald Duck"
         },
-        "supportingInformation": [
-          {
-            "reference": "Condition/usqualitycore-condition-problems-health-concerns"
-          }
-        ],
         "effectivePeriod": {
           "start": "2015-01-15T14:30:00+01:00",
           "end": "2015-01-15T14:30:00+01:00"
@@ -6989,7 +5941,7 @@
               "reference": "Practitioner/usqualitycore-practitioner"
             }
           }
-        ],
+        ],        
         "dosage": {
           "route": {
             "coding": [
@@ -7006,10 +5958,6 @@
             "system": "http://unitsofmeasure.org",
             "code": "mg"
           }
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-medicationadministration (code options)</div>"
         }
       }
     },
@@ -7026,16 +5974,6 @@
             "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispense"
           ]
         },
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
-            "valueDateTime": "2017-01-17"
-          },
-          {
-            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.recorded",
-            "valueDateTime": "2017-01-17"
-          }
-        ],
         "status": "completed",
         "medicationCodeableConcept": {
           "coding": [
@@ -7090,7 +6028,6 @@
           "system": "http://unitsofmeasure.org",
           "code": "d"
         },
-        "whenPrepared": "2012-05-30T16:20:00+00:00",
         "whenHandedOver": "2012-05-31T10:20:00+00:00",
         "destination": {
           "reference": "Location/usqualitycore-location"
@@ -7139,24 +6076,7 @@
               }
             ]
           }
-        ],
-        "substitution": {
-          "wasSubstituted": false,
-          "type": {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution",
-                "code": "N",
-                "display": "none"
-              }
-            ],
-            "text": "No substitution occurred or is permitted."
-          }
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-medicationdispense</div>"
-        }
+        ]
       }
     },
     {
@@ -7172,157 +6092,12 @@
             "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispense"
           ]
         },
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
-            "valueDateTime": "2017-01-17"
-          },
-          {
-            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.recorded",
-            "valueDateTime": "2017-01-17"
-          }
-        ],
-        "status": "completed",
-        "medicationCodeableConcept": {},
-        "subject": {
-          "reference": "Patient/usqualitycore-patient"
-        },
-        "context": {
-          "reference": "Encounter/usqualitycore-encounter"
-        },
-        "performer": [
-          {
-            "actor": {
-              "reference": "Practitioner/usqualitycore-practitioner"
-            }
-          },
-          {
-            "actor": {
-              "reference": "Organization/usqualitycore-organization"
-            }
-          }
-        ],
-        "authorizingPrescription": [
-          {
-            "reference": "MedicationRequest/usqualitycore-medicationrequest"
-          }
-        ],
-        "type": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-              "code": "DF",
-              "display": "Daily Fill"
-            }
-          ]
-        },
-        "quantity": {
-          "value": 100,
-          "unit": "ml",
-          "system": "http://unitsofmeasure.org",
-          "code": "ml"
-        },
-        "daysSupply": {
-          "value": 30,
-          "unit": "Day",
-          "system": "http://unitsofmeasure.org",
-          "code": "d"
-        },
-        "whenPrepared": "2012-05-30T16:20:00+00:00",
-        "whenHandedOver": "2012-05-31T10:20:00+00:00",
-        "destination": {
-          "reference": "Location/usqualitycore-location"
-        },
-        "receiver": [
-          {
-            "reference": "Patient/usqualitycore-patient"
-          }
-        ],
-        "dosageInstruction": [
-          {
-            "text": "1 tablet 3 times daily",
-            "timing": {
-              "repeat": {
-                "frequency": 3,
-                "period": 1,
-                "periodUnit": "d"
-              }
-            },
-            "route": {
-              "coding": [
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "394899003",
-                  "display": "oral administration of treatment"
-                }
-              ]
-            },
-            "doseAndRate": [
-              {
-                "type": {
-                  "coding": [
-                    {
-                      "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
-                      "code": "ordered",
-                      "display": "Ordered"
-                    }
-                  ]
-                },
-                "doseQuantity": {
-                  "value": 5,
-                  "unit": "ml",
-                  "system": "http://unitsofmeasure.org",
-                  "code": "ml"
-                }
-              }
-            ]
-          }
-        ],
-        "substitution": {
-          "wasSubstituted": false,
-          "type": {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution",
-                "code": "N",
-                "display": "none"
-              }
-            ],
-            "text": "No substitution occurred or is permitted."
-          }
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-medicationdispense (code options)</div>"
-        }
-      }
-    },
-    {
-      "request": {
-        "method": "PUT",
-        "url": "MedicationDispense/usqualitycore-medicationdispensedone"
-      },
-      "resource": {
-        "resourceType": "MedicationDispense",
-        "id": "usqualitycore-medicationdispensedone",
-        "meta": {
-          "profile": [
-            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedone"
-          ]
-        },
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
-            "valueDateTime": "2017-01-17"
-          }
-        ],
         "status": "completed",
         "medicationCodeableConcept": {
-          "coding": [
+          "extension": [
             {
-              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-              "code": "1594660",
-              "display": "alemtuzumab 10 MG/ML [Lemtrada]"
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/medication-codes"
             }
           ]
         },
@@ -7370,7 +6145,6 @@
           "system": "http://unitsofmeasure.org",
           "code": "d"
         },
-        "whenPrepared": "2012-05-30T16:20:00+00:00",
         "whenHandedOver": "2012-05-31T10:20:00+00:00",
         "destination": {
           "reference": "Location/usqualitycore-location"
@@ -7419,158 +6193,7 @@
               }
             ]
           }
-        ],
-        "substitution": {
-          "wasSubstituted": false,
-          "type": {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution",
-                "code": "N",
-                "display": "none"
-              }
-            ],
-            "text": "No substitution occurred or is permitted."
-          }
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-medicationdispensedone</div>"
-        }
-      }
-    },
-    {
-      "request": {
-        "method": "PUT",
-        "url": "MedicationDispense/usqualitycore-medicationdispensedone-codeoptions"
-      },
-      "resource": {
-        "resourceType": "MedicationDispense",
-        "id": "usqualitycore-medicationdispensedone-codeoptions",
-        "meta": {
-          "profile": [
-            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedone"
-          ]
-        },
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
-            "valueDateTime": "2017-01-17"
-          }
-        ],
-        "status": "completed",
-        "medicationCodeableConcept": {},
-        "subject": {
-          "reference": "Patient/usqualitycore-patient"
-        },
-        "context": {
-          "reference": "Encounter/usqualitycore-encounter"
-        },
-        "performer": [
-          {
-            "actor": {
-              "reference": "Practitioner/usqualitycore-practitioner"
-            }
-          },
-          {
-            "actor": {
-              "reference": "Organization/usqualitycore-organization"
-            }
-          }
-        ],
-        "authorizingPrescription": [
-          {
-            "reference": "MedicationRequest/usqualitycore-medicationrequest"
-          }
-        ],
-        "type": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-              "code": "DF",
-              "display": "Daily Fill"
-            }
-          ]
-        },
-        "quantity": {
-          "value": 100,
-          "unit": "ml",
-          "system": "http://unitsofmeasure.org",
-          "code": "ml"
-        },
-        "daysSupply": {
-          "value": 30,
-          "unit": "Day",
-          "system": "http://unitsofmeasure.org",
-          "code": "d"
-        },
-        "whenPrepared": "2012-05-30T16:20:00+00:00",
-        "whenHandedOver": "2012-05-31T10:20:00+00:00",
-        "destination": {
-          "reference": "Location/usqualitycore-location"
-        },
-        "receiver": [
-          {
-            "reference": "Patient/usqualitycore-patient"
-          }
-        ],
-        "dosageInstruction": [
-          {
-            "text": "1 tablet 3 times daily",
-            "timing": {
-              "repeat": {
-                "frequency": 3,
-                "period": 1,
-                "periodUnit": "d"
-              }
-            },
-            "route": {
-              "coding": [
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "394899003",
-                  "display": "oral administration of treatment"
-                }
-              ]
-            },
-            "doseAndRate": [
-              {
-                "type": {
-                  "coding": [
-                    {
-                      "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
-                      "code": "ordered",
-                      "display": "Ordered"
-                    }
-                  ]
-                },
-                "doseQuantity": {
-                  "value": 5,
-                  "unit": "ml",
-                  "system": "http://unitsofmeasure.org",
-                  "code": "ml"
-                }
-              }
-            ]
-          }
-        ],
-        "substitution": {
-          "wasSubstituted": false,
-          "type": {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution",
-                "code": "N",
-                "display": "none"
-              }
-            ],
-            "text": "No substitution occurred or is permitted."
-          }
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-medicationdispensedone (code options)</div>"
-        }
+        ]
       }
     },
     {
@@ -7588,7 +6211,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
+            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-recorded",
             "valueDateTime": "2017-01-17"
           },
           {
@@ -7609,7 +6232,7 @@
         "medicationCodeableConcept": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
+              "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
               "valueCanonical": "http://cts.nlm.nih.gov/fhir/1.3.6.1.4.1.6997.4.1.2.268.13.35211.1.13.1.999.321"
             },
             {
@@ -7712,142 +6335,7 @@
               }
             ]
           }
-        ],
-        "substitution": {
-          "wasSubstituted": false,
-          "type": {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution",
-                "code": "N",
-                "display": "none"
-              }
-            ],
-            "text": "No substitution occurred or is permitted."
-          }
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-medicationdispense</div>"
-        }
-      }
-    },
-    {
-      "request": {
-        "method": "PUT",
-        "url": "MedicationRequest/usqualitycore-medicationnotrequested"
-      },
-      "resource": {
-        "resourceType": "MedicationRequest",
-        "id": "usqualitycore-medicationnotrequested",
-        "meta": {
-          "profile": [
-            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationnotrequested"
-          ]
-        },
-        "status": "active",
-        "intent": "order",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
-                "code": "inpatient",
-                "display": "Inpatient"
-              }
-            ]
-          }
-        ],
-        "doNotPerform": true,
-        "medicationCodeableConcept": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
-              "valueCanonical": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1045.39"
-            }
-          ],
-          "text": "Not Done Value Set: Low Dose Unfractionated Heparin for VTE Prophylaxis"
-        },
-        "reportedReference": {
-          "reference": "Practitioner/usqualitycore-practitioner"
-        },
-        "subject": {
-          "reference": "Patient/usqualitycore-patient"
-        },
-        "encounter": {
-          "reference": "Encounter/usqualitycore-encounter"
-        },
-        "authoredOn": "2015-03-25T19:32:52-05:00",
-        "requester": {
-          "reference": "Practitioner/usqualitycore-practitioner"
-        },
-        "reasonCode": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "151811000119109",
-                "display": "Health condition feared but not present"
-              }
-            ]
-          }
-        ],
-        "reasonReference": [
-          {
-            "reference": "Condition/usqualitycore-condition-problems-health-concerns"
-          }
-        ],
-        "dosageInstruction": [
-          {
-            "text": "1 tablet 3 times daily",
-            "timing": {
-              "repeat": {
-                "boundsPeriod": {
-                  "start": "2014",
-                  "end": "2015"
-                },
-                "frequency": 3,
-                "frequencyMax": 3,
-                "period": 1,
-                "periodMax": 1,
-                "periodUnit": "d"
-              }
-            },
-            "asNeededBoolean": false,
-            "route": {
-              "coding": [
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "394899003",
-                  "display": "oral administration of treatment"
-                }
-              ]
-            },
-            "doseAndRate": [
-              {
-                "doseQuantity": {
-                  "value": 5,
-                  "unit": "ml",
-                  "system": "http://unitsofmeasure.org",
-                  "code": "ml"
-                }
-              }
-            ]
-          }
-        ],
-        "dispenseRequest": {
-          "numberOfRepeatsAllowed": 3,
-          "quantity": {
-            "value": 100,
-            "unit": "ml",
-            "system": "http://unitsofmeasure.org",
-            "code": "ml"
-          }
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-medicationrequest</div>"
-        }
+        ]
       }
     },
     {
@@ -7860,6 +6348,7 @@
         "id": "usqualitycore-medicationprohibited",
         "meta": {
           "profile": [
+            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationnotrequested",
             "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationprohibited"
           ]
         },
@@ -7996,13 +6485,6 @@
             "system": "http://unitsofmeasure.org",
             "code": "d"
           }
-        },
-        "substitution": {
-          "allowedBoolean": false
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-medicationprohibited</div>"
         }
       }
     },
@@ -8062,11 +6544,15 @@
         "medicationCodeableConcept": {
           "extension": [
             {
+              "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
+              "valueCanonical": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1045.39"
+            },            
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
               "valueCanonical": "http://hl7.org/fhir/ValueSet/medication-codes"
             }
           ],
-          "text": "alemtuzumab 10 MG/ML [Lemtrada]"
+          "text": "Not Done Value Set: Low Dose Unfractionated Heparin for VTE Prophylaxis"
         },
         "subject": {
           "reference": "Patient/usqualitycore-patient"
@@ -8151,13 +6637,6 @@
             "system": "http://unitsofmeasure.org",
             "code": "d"
           }
-        },
-        "substitution": {
-          "allowedBoolean": false
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-medicationprohibited (code options)</div>"
         }
       }
     },
@@ -8305,10 +6784,6 @@
             "system": "http://unitsofmeasure.org",
             "code": "d"
           }
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-medicationrequest</div>"
         }
       }
     },
@@ -8455,317 +6930,6 @@
             "system": "http://unitsofmeasure.org",
             "code": "d"
           }
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-medicationrequest (code options)</div>"
-        }
-      }
-    },
-    {
-      "request": {
-        "method": "PUT",
-        "url": "MedicationRequest/usqualitycore-medicationrequested"
-      },
-      "resource": {
-        "resourceType": "MedicationRequest",
-        "id": "usqualitycore-medicationrequested",
-        "meta": {
-          "profile": [
-            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequested"
-          ]
-        },
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence",
-            "extension": [
-              {
-                "url": "medicationAdherence",
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "system": "http://snomed.info/sct",
-                      "code": "1156699004",
-                      "display": "Complies with drug therapy"
-                    }
-                  ]
-                }
-              },
-              {
-                "url": "dateAsserted",
-                "valueDateTime": "2017-01-17"
-              }
-            ]
-          }
-        ],
-        "status": "active",
-        "intent": "order",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
-                "code": "inpatient",
-                "display": "Inpatient"
-              }
-            ]
-          }
-        ],
-        "doNotPerform": false,
-        "reportedReference": {
-          "reference": "Practitioner/usqualitycore-practitioner"
-        },
-        "medicationCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-              "code": "1594660",
-              "display": "alemtuzumab 10 MG/ML [Lemtrada]"
-            }
-          ]
-        },
-        "subject": {
-          "reference": "Patient/usqualitycore-patient"
-        },
-        "encounter": {
-          "reference": "Encounter/usqualitycore-encounter"
-        },
-        "authoredOn": "2015-03-25T19:32:52-05:00",
-        "requester": {
-          "reference": "Practitioner/usqualitycore-practitioner"
-        },
-        "reasonCode": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "151811000119109",
-                "display": "Health condition feared but not present"
-              }
-            ]
-          }
-        ],
-        "reasonReference": [
-          {
-            "reference": "Condition/usqualitycore-condition-problems-health-concerns"
-          }
-        ],
-        "dosageInstruction": [
-          {
-            "text": "1 tablet 3 times daily",
-            "timing": {
-              "repeat": {
-                "boundsPeriod": {
-                  "start": "2014",
-                  "end": "2015"
-                },
-                "frequency": 3,
-                "frequencyMax": 3,
-                "period": 1,
-                "periodMax": 1,
-                "periodUnit": "d"
-              }
-            },
-            "asNeededBoolean": false,
-            "route": {
-              "coding": [
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "394899003",
-                  "display": "oral administration of treatment"
-                }
-              ]
-            },
-            "doseAndRate": [
-              {
-                "doseQuantity": {
-                  "value": 5,
-                  "unit": "ml",
-                  "system": "http://unitsofmeasure.org",
-                  "code": "ml"
-                }
-              }
-            ]
-          }
-        ],
-        "dispenseRequest": {
-          "validityPeriod": {
-            "start": "2019-05-24",
-            "end": "2020-02-24"
-          },
-          "numberOfRepeatsAllowed": 3,
-          "quantity": {
-            "value": 100,
-            "unit": "ml",
-            "system": "http://unitsofmeasure.org",
-            "code": "ml"
-          },
-          "expectedSupplyDuration": {
-            "value": 5,
-            "unit": "days",
-            "system": "http://unitsofmeasure.org",
-            "code": "d"
-          }
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-medicationrequested</div>"
-        },
-        "substitution": {
-          "allowedBoolean": true
-        }
-      }
-    },
-    {
-      "request": {
-        "method": "PUT",
-        "url": "MedicationRequest/usqualitycore-medicationrequested-codeoptions"
-      },
-      "resource": {
-        "resourceType": "MedicationRequest",
-        "id": "usqualitycore-medicationrequested-codeoptions",
-        "meta": {
-          "profile": [
-            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequested"
-          ]
-        },
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence",
-            "extension": [
-              {
-                "url": "medicationAdherence",
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "system": "http://snomed.info/sct",
-                      "code": "1156699004",
-                      "display": "Complies with drug therapy"
-                    }
-                  ]
-                }
-              },
-              {
-                "url": "dateAsserted",
-                "valueDateTime": "2017-01-17"
-              }
-            ]
-          }
-        ],
-        "status": "active",
-        "intent": "order",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
-                "code": "inpatient",
-                "display": "Inpatient"
-              }
-            ]
-          }
-        ],
-        "doNotPerform": false,
-        "reportedReference": {
-          "reference": "Practitioner/usqualitycore-practitioner"
-        },
-        "medicationCodeableConcept": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
-              "valueCanonical": "http://hl7.org/fhir/ValueSet/medication-codes"
-            }
-          ]
-        },
-        "subject": {
-          "reference": "Patient/usqualitycore-patient"
-        },
-        "encounter": {
-          "reference": "Encounter/usqualitycore-encounter"
-        },
-        "authoredOn": "2015-03-25T19:32:52-05:00",
-        "requester": {
-          "reference": "Practitioner/usqualitycore-practitioner"
-        },
-        "reasonCode": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "151811000119109",
-                "display": "Health condition feared but not present"
-              }
-            ]
-          }
-        ],
-        "reasonReference": [
-          {
-            "reference": "Condition/usqualitycore-condition-problems-health-concerns"
-          }
-        ],
-        "dosageInstruction": [
-          {
-            "text": "1 tablet 3 times daily",
-            "timing": {
-              "repeat": {
-                "boundsPeriod": {
-                  "start": "2014",
-                  "end": "2015"
-                },
-                "frequency": 3,
-                "frequencyMax": 3,
-                "period": 1,
-                "periodMax": 1,
-                "periodUnit": "d"
-              }
-            },
-            "asNeededBoolean": false,
-            "route": {
-              "coding": [
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "394899003",
-                  "display": "oral administration of treatment"
-                }
-              ]
-            },
-            "doseAndRate": [
-              {
-                "doseQuantity": {
-                  "value": 5,
-                  "unit": "ml",
-                  "system": "http://unitsofmeasure.org",
-                  "code": "ml"
-                }
-              }
-            ]
-          }
-        ],
-        "dispenseRequest": {
-          "validityPeriod": {
-            "start": "2019-05-24",
-            "end": "2020-02-24"
-          },
-          "numberOfRepeatsAllowed": 3,
-          "quantity": {
-            "value": 100,
-            "unit": "ml",
-            "system": "http://unitsofmeasure.org",
-            "code": "ml"
-          },
-          "expectedSupplyDuration": {
-            "value": 5,
-            "unit": "days",
-            "system": "http://unitsofmeasure.org",
-            "code": "d"
-          }
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-medicationrequested (code options)</div>"
-        },
-        "substitution": {
-          "allowedBoolean": true
         }
       }
     },
@@ -8782,41 +6946,15 @@
             "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-nutritionorder"
           ]
         },
-        "identifier": [
-          {
-            "system": "urn:ietf:rfc:3986",
-            "value": "cdf16bbc-cdc3-4381-a1d9-9aaf4ab493e3"
-          }
-        ],
         "status": "active",
         "intent": "order",
         "patient": {
           "reference": "Patient/usqualitycore-patient"
         },
-        "encounter": {
-          "reference": "Encounter/usqualitycore-encounter"
-        },
         "dateTime": "2014-09-17",
         "orderer": {
           "reference": "Practitioner/usqualitycore-practitioner"
         },
-        "allergyIntolerance": [
-          {
-            "reference": "AllergyIntolerance/usqualitycore-allergy-intolerance"
-          }
-        ],
-        "foodPreferenceModifier": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/diet",
-                "code": "dairy-free",
-                "display": "Dairy Free"
-              }
-            ],
-            "text": "Dairy Free"
-          }
-        ],
         "oralDiet": {
           "type": [
             {
@@ -8825,15 +6963,7 @@
                   "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
                   "valueCanonical": "http://hl7.org/fhir/ValueSet/diet"
                 }
-              ],
-              "coding": [
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "160670007",
-                  "display": "Diabetic diet"
-                }
-              ],
-              "text": "Diabetic diet"
+              ]
             }
           ],
           "schedule": [
@@ -8877,13 +7007,6 @@
                   "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
                   "valueCanonical": "http://hl7.org/fhir/ValueSet/enteralformula-type"
                 }
-              ],
-              "coding": [
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "226447000",
-                  "display": "Enteral nutrition supplement"
-                }
               ]
             }
           }
@@ -8895,19 +7018,8 @@
                 "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
                 "valueCanonical": "http://hl7.org/fhir/ValueSet/enteralformula-type"
               }
-            ],
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "226447000",
-                "display": "Enteral nutrition supplement"
-              }
             ]
           }
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-nutrition-order</div>"
         }
       }
     },
@@ -8962,6 +7074,7 @@
           "reference": "Patient/usqualitycore-patient"
         },
         "encounter": {
+          "reference": "Encounter/usqualitycore-encounter",
           "display": "Cardiology Consult"
         },
         "effectiveDateTime": "2021-11-10T16:48:57.246958-08:00",
@@ -8983,11 +7096,7 @@
               ]
             }
           }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-observation-clinical-result</div>"
-        }
+        ]
       }
     },
     {
@@ -9045,6 +7154,7 @@
           "reference": "Patient/usqualitycore-patient"
         },
         "encounter": {
+          "reference": "Encounter/usqualitycore-encounter",
           "display": "Cardiology Consult"
         },
         "effectiveDateTime": "2021-11-10T16:48:57.246958-08:00",
@@ -9133,6 +7243,7 @@
           "reference": "Patient/usqualitycore-patient"
         },
         "encounter": {
+          "reference": "Encounter/usqualitycore-encounter",
           "display": "Cardiology Consult"
         },
         "effectiveDateTime": "2021-11-10T16:48:57.246958-08:00",
@@ -9221,6 +7332,7 @@
           "reference": "Patient/usqualitycore-patient"
         },
         "encounter": {
+          "reference": "Encounter/usqualitycore-encounter",
           "display": "Cardiology Consult"
         },
         "effectiveDateTime": "2021-11-10T16:48:57.246958-08:00",
@@ -9308,8 +7420,7 @@
         },
         "performer": [
           {
-            "reference": "Organization/usqualitycore-organization",
-            "display": "Hendricks Country Hospital"
+            "reference": "Practitioner/usqualitycore-practitioner"
           }
         ],
         "valueQuantity": {
@@ -9345,11 +7456,7 @@
               "text": "Normal Range"
             }
           }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-observation-lab</div>"
-        }
+        ]
       }
     },
     {
@@ -9557,11 +7664,7 @@
               "text": "Normal Range"
             }
           }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-observation-lab-3</div>"
-        }
+        ]
       }
     },
     {
@@ -9662,11 +7765,7 @@
               "text": "Normal Range"
             }
           }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-observation-lab-4</div>"
-        }
+        ]
       }
     },
     {
@@ -9750,13 +7849,9 @@
         },
         "hasMember": [
           {
-            "reference": "QuestionnaireResponse/usqualitycore-questionnaire-response"
+            "reference": "Observation/usqualitycore-observation-screening-assessment-2"
           }
         ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-observation-screening-assessment</div>"
-        },
         "derivedFrom": [
           {
             "reference": "QuestionnaireResponse/usqualitycore-questionnaire-response"
@@ -9830,11 +7925,7 @@
           {
             "reference": "QuestionnaireResponse/usqualitycore-questionnaire-response"
           }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-observation-screening-assessment-2</div>"
-        }
+        ]
       }
     },
     {
@@ -9912,11 +8003,7 @@
           {
             "reference": "QuestionnaireResponse/usqualitycore-questionnaire-response"
           }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-observation-screening-assessment-3</div>"
-        }
+        ]
       }
     },
     {
@@ -10004,6 +8091,75 @@
     {
       "request": {
         "method": "PUT",
+        "url": "Observation/usqualitycore-observation-screening-assessment-5"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "usqualitycore-observation-screening-assessment-5",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-screening-assessment"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
+              }
+            ],
+            "text": "Survey"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "social-history",
+                "display": "Social History"
+              },
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "functional-status",
+                "display": "Functional Status"
+              }
+            ],
+            "text": "Functional Status"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "28139-4",
+              "display": "Blood pressure alteration [CCC]"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/usqualitycore-patient",
+          "display": "Amy Shaw"
+        },
+        "effectiveDateTime": "2005-07-05",
+        "performer": [
+          {
+            "reference": "Organization/usqualitycore-organization",
+            "display": "Hendricks Country Hospital"
+          }
+        ],
+        "valueBoolean": true,
+        "hasMember": [
+          {
+            "reference": "QuestionnaireResponse/usqualitycore-questionnaire-response"
+          }
+        ]
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
         "url": "Observation/usqualitycore-observationcancelled"
       },
       "resource": {
@@ -10011,12 +8167,12 @@
         "id": "usqualitycore-observationcancelled",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observationcancelled"
+            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observationcancelled"
           ]
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-notDoneReason",
+            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneReason",
             "valueCodeableConcept": {
               "coding": [
                 {
@@ -10075,10 +8231,6 @@
               "display": "Dependence on wheelchair (finding)"
             }
           ]
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-simple-observation</div>"
         }
       }
     },
@@ -10149,11 +8301,7 @@
             "postalCode": "48104",
             "country": "USA"
           }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-organization</div>"
-        }
+        ]
       }
     },
     {
@@ -10469,10 +8617,6 @@
         ],
         "managingOrganization": {
           "reference": "Organization/usqualitycore-organization"
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-patient</div>"
         }
       }
     },
@@ -10562,11 +8706,7 @@
               "display": "Example University"
             }
           }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-practitioner</div>"
-        }
+        ]
       }
     },
     {
@@ -10637,11 +8777,7 @@
           {
             "reference": "Endpoint/usqualitycore-r4-endpoint"
           }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-practitioner-role</div>"
-        }
+        ]
       }
     },
     {
@@ -10659,7 +8795,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
+            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-recorded",
             "valueDateTime": "2013-04-05T09:35:00-04:00"
           },
           {
@@ -10727,43 +8863,27 @@
           {
             "reference": "DiagnosticReport/usqualitycore-diagnostic-report-note"
           }
-        ],
-        "bodySite": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "66754008",
-                "display": "Appendix structure"
-              }
-            ]
-          }
-        ],
-        "report": [
-          {
-            "reference": "DiagnosticReport/usqualitycore-diagnostic-report-lab"
-          }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-procedure</div>"
-        }
+        ]
       }
     },
     {
       "request": {
         "method": "PUT",
-        "url": "Procedure/usqualitycore-proceduredone"
+        "url": "Procedure/usqualitycore-procedure-codeoptions"
       },
       "resource": {
         "resourceType": "Procedure",
-        "id": "usqualitycore-proceduredone",
+        "id": "usqualitycore-procedure-codeoptions",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-proceduredone"
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedure"
           ]
         },
         "extension": [
+          {
+            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-recorded",
+            "valueDateTime": "2013-04-05T09:35:00-04:00"
+          },
           {
             "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Procedure.recorded",
             "valueDateTime": "2013-04-05T09:35:00-04:00"
@@ -10790,11 +8910,14 @@
           ]
         },
         "code": {
-          "coding": [
+          "extension": [
             {
-              "system": "http://snomed.info/sct",
-              "code": "80146002",
-              "display": "Excision of appendix (procedure)"
+              "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/procedure-code"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/procedure-code"
             }
           ],
           "text": "Excision of appendix (procedure)"
@@ -10829,44 +8952,17 @@
           {
             "reference": "DiagnosticReport/usqualitycore-diagnostic-report-note"
           }
-        ],
-        "bodySite": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "66754008",
-                "display": "Appendix structure"
-              }
-            ]
-          }
-        ],
-        "report": [
-          {
-            "reference": "DiagnosticReport/usqualitycore-diagnostic-report-lab"
-          }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-proceduredone</div>"
-        },
-        "focalDevice": [
-          {
-            "manipulated": {
-              "reference": "Device/usqualitycore-device"
-            }
-          }
         ]
       }
     },
     {
       "request": {
         "method": "PUT",
-        "url": "Procedure/usqualitycore-procedurenotdone"
+        "url": "Procedure/usqualitycore-procedurenotdone-codeoptions"
       },
       "resource": {
         "resourceType": "Procedure",
-        "id": "usqualitycore-procedurenotdone",
+        "id": "usqualitycore-procedurenotdone-codeoptions",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedurenotdone"
@@ -10874,7 +8970,7 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-recorded",
+            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-recorded",
             "valueDateTime": "2013-04-05T09:35:00-04:00"
           },
           {
@@ -10905,10 +9001,93 @@
         "code": {
           "extension": [
             {
+              "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/procedure-code"
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
               "valueCanonical": "http://hl7.org/fhir/ValueSet/procedure-code"
             }
           ],
+          "text": "Excision of appendix (procedure)"
+        },
+        "subject": {
+          "reference": "Patient/usqualitycore-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/usqualitycore-encounter"
+        },
+        "performedDateTime": "2013-04-05T09:20:00-04:00",
+        "performer": [
+          {
+            "actor": {
+              "reference": "Practitioner/usqualitycore-practitioner",
+              "display": "Dr Cecil Surgeon"
+            }
+          }
+        ],
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "21522001",
+                "display": "Abdominal pain (finding)"
+              }
+            ]
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "DiagnosticReport/usqualitycore-diagnostic-report-note"
+          }
+        ]
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/usqualitycore-procedurenotdone"
+      },
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "usqualitycore-procedurenotdone",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedurenotdone"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-recorded",
+            "valueDateTime": "2013-04-05T09:35:00-04:00"
+          },
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Procedure.recorded",
+            "valueDateTime": "2013-04-05T09:35:00-04:00"
+          }
+        ],
+        "basedOn": [
+          {
+            "reference": "ServiceRequest/usqualitycore-servicerequest"
+          }
+        ],
+        "partOf": [
+          {
+            "reference": "Observation/usqualitycore-observation-lab"
+          }
+        ],
+        "status": "not-done",
+        "statusReason": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "183932001",
+              "display": "Procedure contraindicated"
+            }
+          ]
+        },
+        "code": {
           "coding": [
             {
               "system": "http://snomed.info/sct",
@@ -10948,27 +9127,7 @@
           {
             "reference": "DiagnosticReport/usqualitycore-diagnostic-report-note"
           }
-        ],
-        "bodySite": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "66754008",
-                "display": "Appendix structure"
-              }
-            ]
-          }
-        ],
-        "report": [
-          {
-            "reference": "DiagnosticReport/usqualitycore-diagnostic-report-lab"
-          }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-procedure</div>"
-        }
+        ]
       }
     },
     {
@@ -10984,7 +9143,7 @@
             "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-questionnaireresponse"
           ]
         },
-        "questionnaire": "http://hl7.org/fhir/uv/sdc/Questionnaire/questionnaire-sdc-profile-example-PHQ9",
+        "questionnaire": "https://github.com/inferno-framework/us-quality-core-test-kit/Questionnaire/questionnaire-response-must-support-coverage",
         "_questionnaire": {
           "extension": [
             {
@@ -10993,13 +9152,13 @@
             },
             {
               "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-extension-questionnaire-uri",
-              "valueUri": "http://hl7.org/fhir/uv/sdc/Questionnaire/questionnaire-sdc-profile-example-PHQ9"
+              "valueUri": "https://github.com/inferno-framework/us-quality-core-test-kit/Questionnaire/questionnaire-response-must-support-coverage"
             }
           ]
-        },
+        },        
         "identifier": {
           "system": "urn:ietf:rfc:3986",
-          "value": "cdf16bbc-cdc3-4381-a1d9-9aaf4ab493e3"
+          "value": "urn:uuid:cdf16bbc-cdc3-4381-a1d9-9aaf4ab493e3"  
         },
         "status": "completed",
         "subject": {
@@ -11015,17 +9174,7 @@
             "text": "Must Support coverage",
             "answer": [
               {
-                "valueDecimal": 1
-              },
-              {
-                "valueString": "No concerns"
-              },
-              {
-                "valueCoding": {
-                  "system": "http://snomed.info/sct",
-                  "code": "385432009",
-                  "display": "Not applicable"
-                },
+                "valueDecimal": 1,
                 "item": [
                   {
                     "linkId": "ms-follow-up",
@@ -11037,149 +9186,35 @@
                     ]
                   }
                 ]
+              },
+              {
+                "valueString": "No concerns"
+              },
+              {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "385432009",
+                  "display": "Not applicable"
+                }
               }
             ]
           },
           {
-            "linkId": "H1/T1",
-            "text": "Over the last two weeks, how often have you been bothered by any of the following problems?",
+            "linkId": "ms-nested-group",
+            "text": "Nested item group",
             "item": [
               {
-                "linkId": "H1/T1/Q1",
-                "text": "Little interest or pleasure in doing things?",
+                "linkId": "ms-nested-item",
+                "text": "Nested item response",
                 "answer": [
                   {
-                    "valueCoding": {
-                      "system": "http://hl7.org/fhir/uv/sdc/CodeSystem/CSPHQ9",
-                      "code": "Not-at-all",
-                      "display": "Not at all"
-                    }
-                  }
-                ]
-              },
-              {
-                "linkId": "H1/T1/Q2",
-                "text": "Feeling down, depressed, or hopeless?",
-                "answer": [
-                  {
-                    "valueCoding": {
-                      "system": "http://hl7.org/fhir/uv/sdc/CodeSystem/CSPHQ9",
-                      "code": "Not-at-all",
-                      "display": "Not at all"
-                    }
-                  }
-                ]
-              },
-              {
-                "linkId": "H1/T1/Q3",
-                "text": "Trouble falling or staying asleep, or sleeping too much?",
-                "answer": [
-                  {
-                    "valueCoding": {
-                      "system": "http://hl7.org/fhir/uv/sdc/CodeSystem/CSPHQ9",
-                      "code": "Not-at-all",
-                      "display": "Not at all"
-                    }
-                  }
-                ]
-              },
-              {
-                "linkId": "H1/T1/Q4",
-                "text": "Feeling tired or having little energy?",
-                "answer": [
-                  {
-                    "valueCoding": {
-                      "system": "http://hl7.org/fhir/uv/sdc/CodeSystem/CSPHQ9",
-                      "code": "Several-days",
-                      "display": "Several days"
-                    }
-                  }
-                ]
-              },
-              {
-                "linkId": "H1/T1/Q5",
-                "text": "Poor appetite or overeating?",
-                "answer": [
-                  {
-                    "valueCoding": {
-                      "system": "http://hl7.org/fhir/uv/sdc/CodeSystem/CSPHQ9",
-                      "code": "More than half the days",
-                      "display": "More than half the days"
-                    }
-                  }
-                ]
-              },
-              {
-                "linkId": "H1/T1/Q6",
-                "text": "Feeling bad about yourself - or that you are a failure or have let yourself or your family down?",
-                "answer": [
-                  {
-                    "valueCoding": {
-                      "system": "http://hl7.org/fhir/uv/sdc/CodeSystem/CSPHQ9",
-                      "code": "Several-days",
-                      "display": "Several days"
-                    }
-                  }
-                ]
-              },
-              {
-                "linkId": "H1/T1/Q7",
-                "text": "Trouble concentrating on things, such as reading the newspaper or watching television?",
-                "answer": [
-                  {
-                    "valueCoding": {
-                      "system": "http://hl7.org/fhir/uv/sdc/CodeSystem/CSPHQ9",
-                      "code": "Nearly every day",
-                      "display": "Nearly every day"
-                    }
-                  }
-                ]
-              },
-              {
-                "linkId": "H1/T1/Q8",
-                "text": "Moving or speaking so slowly that other people could gave noticed? Or so fidgety or restless that you have been moving a lot more than usual?",
-                "answer": [
-                  {
-                    "valueCoding": {
-                      "system": "http://hl7.org/fhir/uv/sdc/CodeSystem/CSPHQ9",
-                      "code": "More than half the days",
-                      "display": "More than half the days"
-                    }
-                  }
-                ]
-              },
-              {
-                "linkId": "H1/T1/Q9",
-                "text": "Thoughts that you would be better off dead, or thoughts of hurting yourself in some way?",
-                "answer": [
-                  {
-                    "valueCoding": {
-                      "system": "http://hl7.org/fhir/uv/sdc/CodeSystem/CSPHQ9",
-                      "code": "Several-days",
-                      "display": "Several days"
-                    }
-                  }
-                ]
-              },
-              {
-                "linkId": "H1/TS",
-                "text": "Patient health questionnaire 9 item total score",
-                "answer": [
-                  {
-                    "valueQuantity": {
-                      "value": 13,
-                      "unit": "{score}"
-                    }
+                    "valueString": "Nested item value"
                   }
                 ]
               }
             ]
           }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-questionnaire-response</div>"
-        }
+        ]
       }
     },
     {
@@ -11237,20 +9272,7 @@
             "state": "UT",
             "postalCode": "84414"
           }
-        ],
-        "photo": [
-          {
-            "contentType": "image/jpeg",
-            "url": "Binary/f012"
-          }
-        ],
-        "period": {
-          "start": "2012-03-11"
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-related-person</div>"
-        }
+        ]
       }
     },
     {
@@ -11263,12 +9285,13 @@
         "id": "usqualitycore-servicenotrequested",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicenotrequested"
+            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-servicenotrequested",
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited"            
           ]
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-doNotPerformReason",
+            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-doNotPerformReason",
             "valueCodeableConcept": {
               "coding": [
                 {
@@ -11303,7 +9326,6 @@
             "text": "Functional Status"
           }
         ],
-        "priority": "urgent",
         "doNotPerform": true,
         "code": {
           "coding": [
@@ -11325,7 +9347,6 @@
           "start": "2013-04-05",
           "end": "2013-04-05"
         },
-        "asNeededBoolean": true,
         "authoredOn": "2013-04-04",
         "requester": {
           "reference": "Practitioner/usqualitycore-practitioner"
@@ -11345,35 +9366,117 @@
           {
             "reference": "DiagnosticReport/usqualitycore-diagnostic-report-note"
           }
-        ],
-        "bodySite": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "66754008",
-                "display": "Appendix structure"
-              }
-            ]
-          }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-servicerequest</div>"
-        }
+        ]
       }
     },
     {
       "request": {
         "method": "PUT",
-        "url": "ServiceRequest/usqualitycore-serviceprohibited"
+        "url": "ServiceRequest/usqualitycore-servicenotrequested-codeoptions"
       },
       "resource": {
         "resourceType": "ServiceRequest",
-        "id": "usqualitycore-serviceprohibited",
+        "id": "usqualitycore-servicenotrequested-codeoptions",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited"
+            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-servicenotrequested",
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited"            
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-doNotPerformReason",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "416406003",
+                  "display": "Procedure discontinued (situation)"
+                }
+              ]
+            }
+          }
+        ],
+        "status": "completed",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "387713003",
+                "display": "Surgical Procedure"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "functional-status",
+                "display": "Functional Status"
+              }
+            ],
+            "text": "Functional Status"
+          }
+        ],
+        "doNotPerform": true,
+        "code": {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
+              "valueCanonical": "http://snomed.info/sct?fhir_vs"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://snomed.info/sct?fhir_vs"
+            }
+          ],
+          "text": "Excision of appendix (procedure)"          
+        },
+        "subject": {
+          "reference": "Patient/usqualitycore-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/usqualitycore-encounter"
+        },
+        "occurrencePeriod": {
+          "start": "2013-04-05",
+          "end": "2013-04-05"
+        },
+        "authoredOn": "2013-04-04",
+        "requester": {
+          "reference": "Practitioner/usqualitycore-practitioner"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "21522001",
+                "display": "Abdominal pain (finding)"
+              }
+            ]
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "DiagnosticReport/usqualitycore-diagnostic-report-note"
+          }
+        ]
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "ServiceRequest/usqualitycore-servicerequest-codeoptions"
+      },
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "usqualitycore-servicerequest-codeoptions",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest"
           ]
         },
         "status": "completed",
@@ -11399,20 +9502,12 @@
             "text": "Functional Status"
           }
         ],
-        "priority": "urgent",
-        "doNotPerform": true,
+        "doNotPerform": false,
         "code": {
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
               "valueCanonical": "http://snomed.info/sct?fhir_vs"
-            }
-          ],
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "80146002",
-              "display": "Excision of appendix (procedure)"
             }
           ],
           "text": "Excision of appendix (procedure)"
@@ -11427,7 +9522,6 @@
           "start": "2013-04-05",
           "end": "2013-04-05"
         },
-        "asNeededBoolean": true,
         "authoredOn": "2013-04-04",
         "requester": {
           "reference": "Practitioner/usqualitycore-practitioner"
@@ -11447,22 +9541,7 @@
           {
             "reference": "DiagnosticReport/usqualitycore-diagnostic-report-note"
           }
-        ],
-        "bodySite": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "66754008",
-                "display": "Appendix structure"
-              }
-            ]
-          }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-serviceprohibited</div>"
-        }
+        ]
       }
     },
     {
@@ -11501,15 +9580,8 @@
             "text": "Functional Status"
           }
         ],
-        "priority": "urgent",
         "doNotPerform": false,
         "code": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
-              "valueCanonical": "http://snomed.info/sct?fhir_vs"
-            }
-          ],
           "coding": [
             {
               "system": "http://snomed.info/sct",
@@ -11529,7 +9601,6 @@
           "start": "2013-04-05",
           "end": "2013-04-05"
         },
-        "asNeededBoolean": true,
         "authoredOn": "2013-04-04",
         "requester": {
           "reference": "Practitioner/usqualitycore-practitioner"
@@ -11549,124 +9620,7 @@
           {
             "reference": "DiagnosticReport/usqualitycore-diagnostic-report-note"
           }
-        ],
-        "bodySite": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "66754008",
-                "display": "Appendix structure"
-              }
-            ]
-          }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-servicerequest</div>"
-        }
-      }
-    },
-    {
-      "request": {
-        "method": "PUT",
-        "url": "ServiceRequest/usqualitycore-servicerequested"
-      },
-      "resource": {
-        "resourceType": "ServiceRequest",
-        "id": "usqualitycore-servicerequested",
-        "meta": {
-          "profile": [
-            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequested"
-          ]
-        },
-        "status": "completed",
-        "intent": "order",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "387713003",
-                "display": "Surgical Procedure"
-              }
-            ]
-          },
-          {
-            "coding": [
-              {
-                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
-                "code": "functional-status",
-                "display": "Functional Status"
-              }
-            ],
-            "text": "Functional Status"
-          }
-        ],
-        "priority": "urgent",
-        "doNotPerform": false,
-        "code": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
-              "valueCanonical": "http://snomed.info/sct?fhir_vs"
-            }
-          ],
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "80146002",
-              "display": "Excision of appendix (procedure)"
-            }
-          ],
-          "text": "Excision of appendix (procedure)"
-        },
-        "subject": {
-          "reference": "Patient/usqualitycore-patient"
-        },
-        "encounter": {
-          "reference": "Encounter/usqualitycore-encounter"
-        },
-        "occurrencePeriod": {
-          "start": "2013-04-05",
-          "end": "2013-04-05"
-        },
-        "asNeededBoolean": true,
-        "authoredOn": "2013-04-04",
-        "requester": {
-          "reference": "Practitioner/usqualitycore-practitioner"
-        },
-        "reasonCode": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "21522001",
-                "display": "Abdominal pain (finding)"
-              }
-            ]
-          }
-        ],
-        "reasonReference": [
-          {
-            "reference": "DiagnosticReport/usqualitycore-diagnostic-report-note"
-          }
-        ],
-        "bodySite": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "66754008",
-                "display": "Appendix structure"
-              }
-            ]
-          }
-        ],
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-servicerequested</div>"
-        }
+        ]
       }
     },
     {
@@ -11739,10 +9693,6 @@
               "display": "Dependence on wheelchair (finding)"
             }
           ]
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-simple-observation</div>"
         }
       }
     },
@@ -11951,23 +9901,19 @@
             "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-task"
           ]
         },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Task example</b></p><a name=\"example\"> </a><a name=\"hcexample\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-quality-core-task.html\">US Quality Core Task</a></p></div><p><b>identifier</b>: <code>http://www.acme.org/tasks</code>/19009</p><p><b>status</b>: Draft</p><p><b>intent</b>: proposal</p><p><b>priority</b>: Routine</p><p><b>code</b>: <span title=\"Codes:\">Medication Reconciliation</span></p><p><b>for</b>: <a href=\"Patient-example.html\">Jim Chalmers  Male, DoB: 1974-12-25 ( Medical record number (use: usual, period: 2001-05-06 --&gt; (ongoing)))</a></p><p><b>executionPeriod</b>: 2018-06-11 --&gt; 2018-06-11</p></div>"
-        },
-        "identifier": [
-          {
-            "system": "https://github.com/inferno-framework/ids/tasks",
-            "value": "19009"
-          }
-        ],
         "requester": {
           "reference": "Practitioner/usqualitycore-practitioner"
         },
+        "identifier": [
+          {
+            "system": "https://github.com/inferno-framework/us-quality-core-test-kit",
+            "value": "usqualitycore-task"
+          }
+        ],
         "status": "accepted",
         "statusReason": {
           "text": "Missing"
-        },
+        },        
         "reasonCode": {
           "text": "Cancellation"
         },
@@ -12002,30 +9948,27 @@
     {
       "request": {
         "method": "PUT",
-        "url": "Task/usqualitycore-taskdone"
+        "url": "Task/usqualitycore-taskrejected-codeoptions"
       },
       "resource": {
         "resourceType": "Task",
-        "id": "usqualitycore-taskdone",
+        "id": "usqualitycore-taskrejected-codeoptions",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-taskdone"
+            "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-taskrejected",
+            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-taskrejected"
           ]
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-taskdone</div>"
         },
         "identifier": [
           {
-            "system": "https://github.com/inferno-framework/ids/tasks",
-            "value": "19009"
+            "system": "https://github.com/inferno-framework/us-quality-core-test-kit",
+            "value": "usqualitycore-taskrejected-codeoptions"
           }
-        ],
+        ],        
         "requester": {
           "reference": "Practitioner/usqualitycore-practitioner"
         },
-        "status": "completed",
+        "status": "rejected",
         "statusReason": {
           "text": "Missing"
         },
@@ -12035,11 +9978,14 @@
         "intent": "proposal",
         "priority": "routine",
         "code": {
-          "coding": [
+          "extension": [
             {
-              "system": "http://hl7.org/fhir/CodeSystem/task-code",
-              "code": "approve",
-              "display": "Activate/approve the focal resource"
+              "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
+              "valueCanonical": "http://cts.nlm.nih.gov/fhir/2.16.840.1.113883.3.117.1.7.1.214"
+            },            
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/task-code"
             }
           ]
         },
@@ -12057,26 +10003,7 @@
         "executionPeriod": {
           "start": "2018-06-11",
           "end": "2018-06-11"
-        },
-        "encounter": {
-          "reference": "Encounter/usqualitycore-encounter"
-        },
-        "input": [
-          {
-            "type": {
-              "text": "Medication list"
-            },
-            "valueString": "Medication list reconciled"
-          }
-        ],
-        "output": [
-          {
-            "type": {
-              "text": "Reconciliation result"
-            },
-            "valueString": "Medication reconciliation completed"
-          }
-        ]
+        }
       }
     },
     {
@@ -12092,16 +10019,12 @@
             "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-taskrejected"
           ]
         },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Task example</b></p><a name=\"example\"> </a><a name=\"hcexample\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-quality-core-task.html\">US Quality Core Task</a></p></div><p><b>identifier</b>: <code>http://www.acme.org/tasks</code>/19009</p><p><b>status</b>: Draft</p><p><b>intent</b>: proposal</p><p><b>priority</b>: Routine</p><p><b>code</b>: <span title=\"Codes:\">Medication Reconciliation</span></p><p><b>for</b>: <a href=\"Patient-example.html\">Jim Chalmers  Male, DoB: 1974-12-25 ( Medical record number (use: usual, period: 2001-05-06 --&gt; (ongoing)))</a></p><p><b>executionPeriod</b>: 2018-06-11 --&gt; 2018-06-11</p></div>"
-        },
         "identifier": [
           {
-            "system": "https://github.com/inferno-framework/ids/tasks",
-            "value": "19009"
+            "system": "https://github.com/inferno-framework/us-quality-core-test-kit",
+            "value": "usqualitycore-taskrejected-codeoptions"
           }
-        ],
+        ],           
         "requester": {
           "reference": "Practitioner/usqualitycore-practitioner"
         },
@@ -12115,74 +10038,11 @@
         "intent": "proposal",
         "priority": "routine",
         "code": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/codeOptions",
-              "valueCanonical": "http://hl7.org/fhir/ValueSet/task-code"
-            }
-          ],
           "coding": [
             {
               "system": "http://hl7.org/fhir/CodeSystem/task-code",
               "code": "approve",
               "display": "Activate/approve the focal resource"
-            }
-          ]
-        },
-        "for": {
-          "reference": "Patient/usqualitycore-patient"
-        },
-        "basedOn": [
-          {
-            "reference": "DiagnosticReport/usqualitycore-diagnostic-report-note"
-          }
-        ],
-        "focus": {
-          "reference": "Immunization/usqualitycore-immunization"
-        },
-        "executionPeriod": {
-          "start": "2018-06-11",
-          "end": "2018-06-11"
-        }
-      }
-    },
-    {
-      "request": {
-        "method": "PUT",
-        "url": "Task/usqualitycore-taskrejected-2"
-      },
-      "resource": {
-        "resourceType": "Task",
-        "id": "usqualitycore-taskrejected-2",
-        "meta": {
-          "profile": [
-            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-taskrejected"
-          ]
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Task example</b></p><a name=\"example\"> </a><a name=\"hcexample\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-quality-core-task.html\">US Quality Core Task</a></p></div><p><b>identifier</b>: <code>http://www.acme.org/tasks</code>/19009</p><p><b>status</b>: Draft</p><p><b>intent</b>: proposal</p><p><b>priority</b>: Routine</p><p><b>code</b>: <span title=\"Codes:\">Medication Reconciliation</span></p><p><b>for</b>: <a href=\"Patient-example.html\">Jim Chalmers  Male, DoB: 1974-12-25 ( Medical record number (use: usual, period: 2001-05-06 --> (ongoing)))</a></p><p><b>executionPeriod</b>: 2018-06-11 --> 2018-06-11</p></div>"
-        },
-        "identifier": [
-          {
-            "system": "https://github.com/inferno-framework/ids/tasks",
-            "value": "19009"
-          }
-        ],
-        "status": "rejected",
-        "statusReason": {
-          "text": "Missing"
-        },
-        "reasonCode": {
-          "text": "Cancellation"
-        },
-        "intent": "proposal",
-        "priority": "routine",
-        "code": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-notDoneValueSet",
-              "valueCanonical": "http://cts.nlm.nih.gov/fhir/2.16.840.1.113883.3.117.1.7.1.214"
             }
           ]
         },
@@ -12228,9 +10088,9 @@
         "code": {
           "coding": [
             {
-              "system": "http://loinc.org",
-              "code": "72166-2",
-              "display": "Tobacco smoking status"
+              "system": "http://snomed.info/sct",
+              "code": "401201003",
+              "display": "Cigarette pack-years"
             }
           ]
         },
@@ -12239,14 +10099,10 @@
         },
         "effectiveDateTime": "2016-03-18T05:27:04Z",
         "valueQuantity": {
-          "value": 1,
-          "unit": "{score}",
+          "value": 26,
+          "unit": "pack-years",
           "system": "http://unitsofmeasure.org",
-          "code": "{score}"
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-smokingstatus-quantity</div>"
+          "code": "{pack-years}"
         }
       },
       "request": {
@@ -12287,11 +10143,7 @@
           "reference": "Patient/usqualitycore-patient"
         },
         "effectiveDateTime": "2024-05-16T01:06:06Z",
-        "valueString": "Prefers comfort-focused treatment when significant pain or suffering occurs.",
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Generated Narrative: usqualitycore-us-core-treatment-intervention-preference-string</div>"
-        }
+        "valueString": "Prefers comfort-focused treatment when significant pain or suffering occurs."
       },
       "request": {
         "method": "PUT",

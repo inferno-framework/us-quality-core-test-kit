@@ -950,6 +950,47 @@
           ]
         },
         {
+          "name": "Search DeviceRequest patient + do-not-perform",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/fhir+json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/DeviceRequest?patient=usqualitycore-patient&do-not-perform=false"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('response status is 2xx', function () {",
+                  "  pm.expect(pm.response.code).to.be.within(200, 299);",
+                  "});",
+                  "",
+                  "pm.test('response body is a search Bundle', function () {",
+                  "  const body = pm.response.json();",
+                  "  pm.expect(body.resourceType).to.eql('Bundle');",
+                  "});",
+                  "",
+                  "const bundle = pm.response.json();",
+                  "if (!Array.isArray(bundle.entry) || bundle.entry.length === 0) {",
+                  "  const selfLink = (bundle.link || []).find((link) => link.relation === 'self');",
+                  "  console.warn(`SKIP: ${selfLink?.url || pm.info.requestName} - search response bundle was empty`);",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
           "name": "Search DeviceRequest patient",
           "request": {
             "method": "GET",
@@ -1005,47 +1046,6 @@
               }
             ],
             "url": "{{base_url}}/DeviceRequest?patient=usqualitycore-patient&code=86184003"
-          },
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.test('response status is 2xx', function () {",
-                  "  pm.expect(pm.response.code).to.be.within(200, 299);",
-                  "});",
-                  "",
-                  "pm.test('response body is a search Bundle', function () {",
-                  "  const body = pm.response.json();",
-                  "  pm.expect(body.resourceType).to.eql('Bundle');",
-                  "});",
-                  "",
-                  "const bundle = pm.response.json();",
-                  "if (!Array.isArray(bundle.entry) || bundle.entry.length === 0) {",
-                  "  const selfLink = (bundle.link || []).find((link) => link.relation === 'self');",
-                  "  console.warn(`SKIP: ${selfLink?.url || pm.info.requestName} - search response bundle was empty`);",
-                  "}"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Search DeviceRequest patient + do-not-perform",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/fhir+json"
-              },
-              {
-                "key": "Authorization",
-                "value": "Bearer {{access_token}}"
-              }
-            ],
-            "url": "{{base_url}}/DeviceRequest?patient=usqualitycore-patient&do-not-perform=false"
           },
           "event": [
             {
@@ -2987,7 +2987,7 @@
           ]
         },
         {
-          "name": "Search MedicationRequest patient + intent",
+          "name": "Search MedicationRequest patient + intent + do-not-perform",
           "request": {
             "method": "GET",
             "header": [
@@ -3000,7 +3000,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/MedicationRequest?patient=usqualitycore-patient&intent=order"
+            "url": "{{base_url}}/MedicationRequest?patient=usqualitycore-patient&intent=order&do-not-perform=false"
           },
           "event": [
             {
@@ -3028,7 +3028,7 @@
           ]
         },
         {
-          "name": "Search MedicationRequest patient + intent + do-not-perform",
+          "name": "Search MedicationRequest patient + intent",
           "request": {
             "method": "GET",
             "header": [
@@ -3041,7 +3041,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/MedicationRequest?patient=usqualitycore-patient&intent=order&do-not-perform=false"
+            "url": "{{base_url}}/MedicationRequest?patient=usqualitycore-patient&intent=order"
           },
           "event": [
             {
@@ -7794,7 +7794,7 @@
           ]
         },
         {
-          "name": "Search ServiceRequest patient",
+          "name": "Search ServiceRequest patient + do-not-perform",
           "request": {
             "method": "GET",
             "header": [
@@ -7807,7 +7807,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/ServiceRequest?patient=usqualitycore-patient"
+            "url": "{{base_url}}/ServiceRequest?patient=usqualitycore-patient&do-not-perform=false"
           },
           "event": [
             {
@@ -7849,6 +7849,47 @@
               }
             ],
             "url": "{{base_url}}/ServiceRequest?_id=usqualitycore-servicerequest"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('response status is 2xx', function () {",
+                  "  pm.expect(pm.response.code).to.be.within(200, 299);",
+                  "});",
+                  "",
+                  "pm.test('response body is a search Bundle', function () {",
+                  "  const body = pm.response.json();",
+                  "  pm.expect(body.resourceType).to.eql('Bundle');",
+                  "});",
+                  "",
+                  "const bundle = pm.response.json();",
+                  "if (!Array.isArray(bundle.entry) || bundle.entry.length === 0) {",
+                  "  const selfLink = (bundle.link || []).find((link) => link.relation === 'self');",
+                  "  console.warn(`SKIP: ${selfLink?.url || pm.info.requestName} - search response bundle was empty`);",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Search ServiceRequest patient",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/fhir+json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/ServiceRequest?patient=usqualitycore-patient"
           },
           "event": [
             {
@@ -7972,47 +8013,6 @@
               }
             ],
             "url": "{{base_url}}/ServiceRequest?patient=usqualitycore-patient&code=80146002"
-          },
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.test('response status is 2xx', function () {",
-                  "  pm.expect(pm.response.code).to.be.within(200, 299);",
-                  "});",
-                  "",
-                  "pm.test('response body is a search Bundle', function () {",
-                  "  const body = pm.response.json();",
-                  "  pm.expect(body.resourceType).to.eql('Bundle');",
-                  "});",
-                  "",
-                  "const bundle = pm.response.json();",
-                  "if (!Array.isArray(bundle.entry) || bundle.entry.length === 0) {",
-                  "  const selfLink = (bundle.link || []).find((link) => link.relation === 'self');",
-                  "  console.warn(`SKIP: ${selfLink?.url || pm.info.requestName} - search response bundle was empty`);",
-                  "}"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Search ServiceRequest patient + do-not-perform",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/fhir+json"
-              },
-              {
-                "key": "Authorization",
-                "value": "Bearer {{access_token}}"
-              }
-            ],
-            "url": "{{base_url}}/ServiceRequest?patient=usqualitycore-patient&do-not-perform=false"
           },
           "event": [
             {

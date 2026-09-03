@@ -440,10 +440,10 @@ module USQualityCoreTestKit
         remove_blood_pressure_value_data_absent_reason
         remove_observation_data_absent_reason
 
-        if (profile.url.start_with?('http://hl7.org/fhir/us/quality-core') && profile.version.start_with?('1.0.0')) ||
-           (profile.url.start_with?('http://hl7.org/fhir/us/core') && profile.version == '9.0.0')
-          MustSupportMetadataExtractorV1.new(profile, @must_supports).handle_special_cases
-        end
+        # if (profile.url.start_with?('http://hl7.org/fhir/us/quality-core') && profile.version.start_with?('1.0.0')) ||
+        #   (profile.url.start_with?('http://hl7.org/fhir/us/core') && profile.version == '9.0.0')
+        MustSupportMetadataExtractorV1.new(profile, @must_supports).handle_special_cases
+        #end
       end
     end
   end

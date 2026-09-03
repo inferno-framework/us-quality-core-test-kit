@@ -105,7 +105,7 @@ module USQualityCoreTestKit
     * subject + topic
 * **Communicationdone**
   * read id:
-    * usqualitycore-communicationdone
+    * usqualitycore-communication
   * searches:
     * subject + status
     * subject
@@ -226,7 +226,7 @@ module USQualityCoreTestKit
     * patient
 * **Immunizationdone**
   * read id:
-    * usqualitycore-immunizationdone
+    * usqualitycore-immunization
   * searches:
     * patient + status
     * patient
@@ -248,7 +248,7 @@ module USQualityCoreTestKit
     * patient + effective-time
 * **Medicationadministrationdone**
   * read id:
-    * usqualitycore-medicationadministrationdone
+    * usqualitycore-medicationadministration
   * searches:
     * patient + status
     * patient
@@ -268,7 +268,7 @@ module USQualityCoreTestKit
     * patient
 * **Medicationdispensedone**
   * read id:
-    * usqualitycore-medicationdispensedone
+    * usqualitycore-medicationdispense
   * searches:
     * patient + status
     * patient
@@ -480,7 +480,7 @@ module USQualityCoreTestKit
     * patient + date
 * **Proceduredone**
   * read id:
-    * usqualitycore-proceduredone
+    * usqualitycore-procedure
   * searches:
     * patient + status
     * patient
@@ -543,7 +543,7 @@ module USQualityCoreTestKit
     * patient + code
 * **Taskdone**
   * read id:
-    * usqualitycore-taskdone
+    * usqualitycore-task
   * searches:
     * patient + status
     * patient

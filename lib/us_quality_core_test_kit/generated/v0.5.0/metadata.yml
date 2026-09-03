@@ -1203,6 +1203,12 @@
     :expectation: SHALL
   :operations: []
   :searches:
+  - :expectation: SHALL
+    :names:
+    - patient
+    - do-not-perform
+    :names_not_must_support_or_mandatory: []
+    :must_support_or_mandatory: true
   - :names:
     - patient
     :expectation: SHALL
@@ -1212,12 +1218,6 @@
     :names:
     - patient
     - code
-    :names_not_must_support_or_mandatory: []
-    :must_support_or_mandatory: true
-  - :expectation: SHALL
-    :names:
-    - patient
-    - do-not-perform
     :names_not_must_support_or_mandatory: []
     :must_support_or_mandatory: true
   :search_definitions:
@@ -1332,12 +1332,12 @@
     :profiles:
     - http://hl7.org/fhir/StructureDefinition/Provenance|4.0.1
   :tests:
+  - :id: us_quality_core_v050_devicerequest_patient_do_not_perform_search_test
+    :file_name: devicerequest_patient_do_not_perform_search_test.rb
   - :id: us_quality_core_v050_devicerequest_patient_search_test
     :file_name: devicerequest_patient_search_test.rb
   - :id: us_quality_core_v050_devicerequest_patient_code_search_test
     :file_name: devicerequest_patient_code_search_test.rb
-  - :id: us_quality_core_v050_devicerequest_patient_do_not_perform_search_test
-    :file_name: devicerequest_patient_do_not_perform_search_test.rb
   - :id: us_quality_core_v050_devicerequest_read_test
     :file_name: devicerequest_read_test.rb
   - :id: us_quality_core_v050_devicerequest_provenance_revinclude_search_test
@@ -2112,6 +2112,10 @@
       :target_profiles:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
     - :path: context.period
+    :choices:
+    - :paths:
+      - content.attachment.data
+      - content.attachment.url
   :mandatory_elements:
   - DocumentReference.status
   - DocumentReference.type
@@ -2342,6 +2346,13 @@
       - Reference
       :target_profiles:
       - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization
+    :choices:
+    - :paths:
+      - reasonCode
+      - reasonReference
+    - :paths:
+      - location.location
+      - serviceProvider
   :mandatory_elements:
   - Encounter.identifier.system
   - Encounter.identifier.value
@@ -2609,6 +2620,10 @@
     - :path: target
     - :path: target.dueDate
       :original_path: target.due[x]
+    :choices:
+    - :paths:
+      - startDate
+      - target.dueDate
   :mandatory_elements:
   - Goal.lifecycleStatus
   - Goal.description
@@ -3803,16 +3818,16 @@
     :names:
     - patient
     - intent
-    :names_not_must_support_or_mandatory: []
-    :must_support_or_mandatory: true
-  - :expectation: SHALL
-    :names:
-    - patient
-    - intent
     - do-not-perform
     :names_not_must_support_or_mandatory:
     - do-not-perform
     :must_support_or_mandatory: false
+  - :expectation: SHALL
+    :names:
+    - patient
+    - intent
+    :names_not_must_support_or_mandatory: []
+    :must_support_or_mandatory: true
   :search_definitions:
     :patient:
       :paths:
@@ -3938,6 +3953,14 @@
     - :path: dispenseRequest.quantity
     - :path: dispenseRequest.expectedSupplyDuration
       :uscdi_plus_quality: true
+    :choices:
+    - :paths:
+      - reportedBoolean
+      - reportedReference
+    - :paths:
+      - reasonCode
+      - reasonReference
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - MedicationRequest.status
   - MedicationRequest.intent
@@ -4035,10 +4058,10 @@
     :profiles:
     - http://hl7.org/fhir/StructureDefinition/Provenance
   :tests:
-  - :id: us_quality_core_v050_medicationrequest_patient_intent_search_test
-    :file_name: medicationrequest_patient_intent_search_test.rb
   - :id: us_quality_core_v050_medicationrequest_patient_intent_do_not_perform_search_test
     :file_name: medicationrequest_patient_intent_do_not_perform_search_test.rb
+  - :id: us_quality_core_v050_medicationrequest_patient_intent_search_test
+    :file_name: medicationrequest_patient_intent_search_test.rb
   - :id: us_quality_core_v050_medicationrequest_read_test
     :file_name: medicationrequest_read_test.rb
   - :id: us_quality_core_v050_medicationrequest_provenance_revinclude_search_test
@@ -4198,6 +4221,14 @@
     - :path: dispenseRequest
     - :path: dispenseRequest.numberOfRepeatsAllowed
     - :path: dispenseRequest.quantity
+    :choices:
+    - :paths:
+      - reportedBoolean
+      - reportedReference
+    - :paths:
+      - reasonCode
+      - reasonReference
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - MedicationRequest.status
   - MedicationRequest.intent
@@ -9759,17 +9790,21 @@
     - :path: name
     - :path: name.use
       :uscdi_plus_quality: true
+      :fixed_value: old
     - :path: name.family
     - :path: name.given
     - :path: name.suffix
       :uscdi_plus_quality: true
-    - :path: name.period
+    - :path: name.period.end
       :uscdi_plus_quality: true
     - :path: telecom
       :uscdi_plus_quality: true
     - :path: telecom.system
+      :uscdi_plus_quality: true
     - :path: telecom.value
+      :uscdi_plus_quality: true
     - :path: telecom.use
+      :uscdi_plus_quality: true
     - :path: gender
     - :path: birthDate
     - :path: deceased[x]
@@ -9777,15 +9812,26 @@
     - :path: address
     - :path: address.use
       :uscdi_plus_quality: true
+      :fixed_value: old
     - :path: address.line
     - :path: address.city
     - :path: address.state
     - :path: address.postalCode
-    - :path: address.period
+    - :path: address.period.end
       :uscdi_plus_quality: true
     - :path: communication
       :uscdi_plus_quality: true
     - :path: communication.language
+      :uscdi_plus_quality: true
+    :choices:
+    - :paths:
+      - address.period.end
+      - address.use
+      :uscdi_plus_quality: true
+    - :paths:
+      - name.period.end
+      - name.use
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - Patient.identifier
   - Patient.identifier.system
@@ -9975,12 +10021,6 @@
     - :path: telecom
     - :path: telecom.system
     - :path: telecom.value
-    - :path: address
-    - :path: address.line
-    - :path: address.city
-    - :path: address.state
-    - :path: address.postalCode
-    - :path: address.country
   :mandatory_elements:
   - Practitioner.identifier
   - Practitioner.identifier.system
@@ -10294,6 +10334,11 @@
       :types:
       - Reference
       :uscdi_plus_quality: true
+    :choices:
+    - :paths:
+      - reasonCode
+      - reasonReference
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - Procedure.status
   - Procedure.code
@@ -10505,6 +10550,11 @@
     - :path: reasonReference
       :types:
       - Reference
+      :uscdi_plus_quality: true
+    :choices:
+    - :paths:
+      - reasonCode
+      - reasonReference
       :uscdi_plus_quality: true
   :mandatory_elements:
   - Procedure.extension
@@ -10861,13 +10911,19 @@
     :expectation: SHALL
   :operations: []
   :searches:
-  - :names:
+  - :expectation: SHALL
+    :names:
     - patient
-    :expectation: SHALL
+    - do-not-perform
     :names_not_must_support_or_mandatory: []
     :must_support_or_mandatory: true
   - :names:
     - _id
+    :expectation: SHALL
+    :names_not_must_support_or_mandatory: []
+    :must_support_or_mandatory: true
+  - :names:
+    - patient
     :expectation: SHALL
     :names_not_must_support_or_mandatory: []
     :must_support_or_mandatory: true
@@ -10888,12 +10944,6 @@
     :names:
     - patient
     - code
-    :names_not_must_support_or_mandatory: []
-    :must_support_or_mandatory: true
-  - :expectation: SHALL
-    :names:
-    - patient
-    - do-not-perform
     :names_not_must_support_or_mandatory: []
     :must_support_or_mandatory: true
   :search_definitions:
@@ -11022,6 +11072,11 @@
       :types:
       - Reference
       :uscdi_plus_quality: true
+    :choices:
+    - :paths:
+      - reasonCode
+      - reasonReference
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - ServiceRequest.status
   - ServiceRequest.intent
@@ -11095,18 +11150,18 @@
     :profiles:
     - http://hl7.org/fhir/StructureDefinition/Provenance
   :tests:
-  - :id: us_quality_core_v050_servicerequest_patient_search_test
-    :file_name: servicerequest_patient_search_test.rb
+  - :id: us_quality_core_v050_servicerequest_patient_do_not_perform_search_test
+    :file_name: servicerequest_patient_do_not_perform_search_test.rb
   - :id: us_quality_core_v050_servicerequest__id_search_test
     :file_name: servicerequest_id_search_test.rb
+  - :id: us_quality_core_v050_servicerequest_patient_search_test
+    :file_name: servicerequest_patient_search_test.rb
   - :id: us_quality_core_v050_servicerequest_patient_category_search_test
     :file_name: servicerequest_patient_category_search_test.rb
   - :id: us_quality_core_v050_servicerequest_patient_category_authored_search_test
     :file_name: servicerequest_patient_category_authored_search_test.rb
   - :id: us_quality_core_v050_servicerequest_patient_code_search_test
     :file_name: servicerequest_patient_code_search_test.rb
-  - :id: us_quality_core_v050_servicerequest_patient_do_not_perform_search_test
-    :file_name: servicerequest_patient_do_not_perform_search_test.rb
   - :id: us_quality_core_v050_servicerequest_read_test
     :file_name: servicerequest_read_test.rb
   - :id: us_quality_core_v050_servicerequest_provenance_revinclude_search_test
@@ -11305,6 +11360,11 @@
       :types:
       - Reference
       :uscdi_plus_quality: true
+    :choices:
+    - :paths:
+      - reasonCode
+      - reasonReference
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - ServiceRequest.extension
   - ServiceRequest.status
@@ -11466,6 +11526,10 @@
       - Reference
       :target_profiles:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+    :choices:
+    - :paths:
+      - accessionIdentifier
+      - identifier
   :mandatory_elements:
   - Specimen.type
   :bindings:

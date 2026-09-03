@@ -638,7 +638,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/Communication?subject=usqualitycore-patient&topic="
+            "url": "{{base_url}}/Communication?subject=usqualitycore-patient&topic=alert"
           },
           "event": [
             {
@@ -671,7 +671,7 @@
       "name": "CommunicationDone",
       "item": [
         {
-          "name": "Read Communication/usqualitycore-communicationdone",
+          "name": "Read Communication/usqualitycore-communication",
           "request": {
             "method": "GET",
             "header": [
@@ -684,7 +684,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/Communication/usqualitycore-communicationdone"
+            "url": "{{base_url}}/Communication/usqualitycore-communication"
           },
           "event": [
             {
@@ -719,7 +719,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/Communication?subject=usqualitycore-patient&status=completed"
+            "url": "{{base_url}}/Communication?subject=usqualitycore-patient&status=in-progress"
           },
           "event": [
             {
@@ -801,7 +801,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/Communication?subject=usqualitycore-patient&topic="
+            "url": "{{base_url}}/Communication?subject=usqualitycore-patient&topic=alert"
           },
           "event": [
             {
@@ -964,7 +964,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/Communication?subject=usqualitycore-patient&topic="
+            "url": "{{base_url}}/Communication?subject=usqualitycore-patient&topic=alert"
           },
           "event": [
             {
@@ -3400,7 +3400,7 @@
       "name": "Immunization Done",
       "item": [
         {
-          "name": "Read Immunization/usqualitycore-immunizationdone",
+          "name": "Read Immunization/usqualitycore-immunization",
           "request": {
             "method": "GET",
             "header": [
@@ -3413,7 +3413,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/Immunization/usqualitycore-immunizationdone"
+            "url": "{{base_url}}/Immunization/usqualitycore-immunization"
           },
           "event": [
             {
@@ -3930,7 +3930,7 @@
       "name": "MedicationAdministration Done",
       "item": [
         {
-          "name": "Read MedicationAdministration/usqualitycore-medicationadministrationdone",
+          "name": "Read MedicationAdministration/usqualitycore-medicationadministration",
           "request": {
             "method": "GET",
             "header": [
@@ -3943,7 +3943,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/MedicationAdministration/usqualitycore-medicationadministrationdone"
+            "url": "{{base_url}}/MedicationAdministration/usqualitycore-medicationadministration"
           },
           "event": [
             {
@@ -4378,7 +4378,7 @@
       "name": "MedicationDispense Done",
       "item": [
         {
-          "name": "Read MedicationDispense/usqualitycore-medicationdispensedone",
+          "name": "Read MedicationDispense/usqualitycore-medicationdispense",
           "request": {
             "method": "GET",
             "header": [
@@ -4391,7 +4391,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/MedicationDispense/usqualitycore-medicationdispensedone"
+            "url": "{{base_url}}/MedicationDispense/usqualitycore-medicationdispense"
           },
           "event": [
             {
@@ -5357,7 +5357,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=observation-adi-documentation&date=ge2024-05-16"
+            "url": "{{base_url}}/Observation?patient=usqualitycore-patient&category=observation-adi-documentation&date="
           },
           "event": [
             {
@@ -9592,7 +9592,7 @@
       "name": "Procedure Done",
       "item": [
         {
-          "name": "Read Procedure/usqualitycore-proceduredone",
+          "name": "Read Procedure/usqualitycore-procedure",
           "request": {
             "method": "GET",
             "header": [
@@ -9605,7 +9605,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/Procedure/usqualitycore-proceduredone"
+            "url": "{{base_url}}/Procedure/usqualitycore-procedure"
           },
           "event": [
             {
@@ -11183,7 +11183,7 @@
       "name": "Task Done",
       "item": [
         {
-          "name": "Read Task/usqualitycore-taskdone",
+          "name": "Read Task/usqualitycore-task",
           "request": {
             "method": "GET",
             "header": [
@@ -11196,7 +11196,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/Task/usqualitycore-taskdone"
+            "url": "{{base_url}}/Task/usqualitycore-task"
           },
           "event": [
             {
@@ -11231,7 +11231,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/Task?patient=usqualitycore-patient&status=completed"
+            "url": "{{base_url}}/Task?patient=usqualitycore-patient&status=accepted"
           },
           "event": [
             {

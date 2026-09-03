@@ -1,9 +1,9 @@
-require_relative 'servicerequest/servicerequest_patient_search_test'
+require_relative 'servicerequest/servicerequest_patient_do_not_perform_search_test'
 require_relative 'servicerequest/servicerequest_id_search_test'
+require_relative 'servicerequest/servicerequest_patient_search_test'
 require_relative 'servicerequest/servicerequest_patient_category_search_test'
 require_relative 'servicerequest/servicerequest_patient_category_authored_search_test'
 require_relative 'servicerequest/servicerequest_patient_code_search_test'
-require_relative 'servicerequest/servicerequest_patient_do_not_perform_search_test'
 require_relative 'servicerequest/servicerequest_read_test'
 require_relative 'servicerequest/servicerequest_provenance_revinclude_search_test'
 require_relative 'servicerequest/servicerequest_validation_test'
@@ -31,12 +31,12 @@ This test sequence will first perform each required search associated
 with this resource. This sequence will perform searches with the
 following parameters:
 
-* patient
+* patient + do-not-perform
 * _id
+* patient
 * patient + category
 * patient + category + authored
 * patient + code
-* patient + do-not-perform
 
 ### Search Parameters
 The first search uses the selected patient(s) from the prior launch
@@ -91,12 +91,12 @@ read succeeds.
       end
 
   
-      test from: :us_quality_core_v050_servicerequest_patient_search_test
+      test from: :us_quality_core_v050_servicerequest_patient_do_not_perform_search_test
       test from: :us_quality_core_v050_servicerequest__id_search_test
+      test from: :us_quality_core_v050_servicerequest_patient_search_test
       test from: :us_quality_core_v050_servicerequest_patient_category_search_test
       test from: :us_quality_core_v050_servicerequest_patient_category_authored_search_test
       test from: :us_quality_core_v050_servicerequest_patient_code_search_test
-      test from: :us_quality_core_v050_servicerequest_patient_do_not_perform_search_test
       test from: :us_quality_core_v050_servicerequest_read_test
       test from: :us_quality_core_v050_servicerequest_provenance_revinclude_search_test
       test from: :us_quality_core_v050_servicerequest_validation_test
