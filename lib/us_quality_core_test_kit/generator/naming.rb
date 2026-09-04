@@ -25,8 +25,8 @@ module USQualityCoreTestKit
       DEVICE_USE_STATEMENT = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-deviceusestatement'
       DIAGNOSTIC_REPORT_LAB = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-lab'
       DIAGNOSTIC_REPORT_NOTE = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note'
-      DOCUMENT_REFERENCE = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
-      ADI_DOCUMENT_REFERENCE = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference"
+      DOCUMENT_REFERENCE = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference'
+      ADI_DOCUMENT_REFERENCE = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference'
       GOAL = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-goal'
       IMAGING_STUDY = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-imagingstudy'
       IMMUNIZATION = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunization'
@@ -42,7 +42,7 @@ module USQualityCoreTestKit
       MEDICATION_DISPENSE = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispense'
       MEDICATION_DISPENSE_DONE = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedone'
       MEDICATION_DISPENSE_DECLINED = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedeclined'
-      MEDICATION_REQUEST = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest'    
+      MEDICATION_REQUEST = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest'
       MEDICATION_REQUEST_REQUESTED = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequested'
       MEDICATION_REQUEST_PROHIBITED = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationprohibited'
       MEDICATION_STATEMENT = 'http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationstatement'
