@@ -88,19 +88,19 @@
     :slices: []
     :elements:
     - :path: category
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: event
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: date
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: detected
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: recordedDate
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: suspectEntity.instance
       :types:
       - Reference
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - AdverseEvent.actuality
   - AdverseEvent.event
@@ -269,11 +269,11 @@
       :target_profiles:
       - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient
     - :path: onset[x]
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: recordedDate
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: lastOccurrence
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: reaction
     - :path: reaction.manifestation
   :mandatory_elements:
@@ -953,7 +953,7 @@
     - :path: verificationStatus
     - :path: category
     - :path: severity
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: code
     - :path: subject
       :types:
@@ -1263,7 +1263,7 @@
     - :path: code[x]
       :types:
       - Reference
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - DeviceRequest.modifierExtension.url
   - DeviceRequest.modifierExtension.value[x]
@@ -1428,7 +1428,7 @@
     :slices: []
     :elements:
     - :path: code[x]
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - DeviceRequest.extension
   - DeviceRequest.modifierExtension
@@ -1958,7 +1958,7 @@
   :profile_url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
   :profile_name: US Core DocumentReference Profile
   :profile_version: 6.1.0
-  :title: US Core DocumentReference
+  :title: DocumentReference US Core
   :short_description: Verify support for the capabilities required by the US Core
     DocumentReference Profile.
   :is_delayed: false
@@ -1969,6 +1969,12 @@
     :expectation: SHALL
   :operations: []
   :searches:
+  - :expectation: SHALL
+    :names:
+    - patient
+    - category
+    :names_not_must_support_or_mandatory: []
+    :must_support_or_mandatory: true
   - :names:
     - patient
     :expectation: SHALL
@@ -1983,12 +1989,6 @@
     :names:
     - patient
     - type
-    :names_not_must_support_or_mandatory: []
-    :must_support_or_mandatory: true
-  - :expectation: SHALL
-    :names:
-    - patient
-    - category
     :names_not_must_support_or_mandatory: []
     :must_support_or_mandatory: true
   - :expectation: SHALL
@@ -2112,6 +2112,10 @@
       :target_profiles:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
     - :path: context.period
+    :choices:
+    - :paths:
+      - content.attachment.data
+      - content.attachment.url
   :mandatory_elements:
   - DocumentReference.status
   - DocumentReference.type
@@ -2175,28 +2179,30 @@
     :profiles:
     - http://hl7.org/fhir/StructureDefinition/Resource
   :tests:
-  - :id: us_quality_core_v050_document_reference_patient_search_test
-    :file_name: document_reference_patient_search_test.rb
-  - :id: us_quality_core_v050_document_reference__id_search_test
-    :file_name: document_reference_id_search_test.rb
-  - :id: us_quality_core_v050_document_reference_patient_type_search_test
-    :file_name: document_reference_patient_type_search_test.rb
-  - :id: us_quality_core_v050_document_reference_patient_category_search_test
-    :file_name: document_reference_patient_category_search_test.rb
-  - :id: us_quality_core_v050_document_reference_patient_category_date_search_test
-    :file_name: document_reference_patient_category_date_search_test.rb
-  - :id: us_quality_core_v050_document_reference_read_test
-    :file_name: document_reference_read_test.rb
-  - :id: us_quality_core_v050_document_reference_provenance_revinclude_search_test
-    :file_name: document_reference_provenance_revinclude_search_test.rb
-  - :id: us_quality_core_v050_document_reference_validation_test
-    :file_name: document_reference_validation_test.rb
-  - :id: us_quality_core_v050_document_reference_must_support_test
-    :file_name: document_reference_must_support_test.rb
-  - :id: us_quality_core_v050_document_reference_reference_resolution_test
-    :file_name: document_reference_reference_resolution_test.rb
-  :id: us_quality_core_v050_document_reference
-  :file_name: document_reference_group.rb
+  - :id: us_quality_core_v050_us_core_documentreference_patient_category_search_test
+    :file_name: us_core_documentreference_patient_category_search_test.rb
+  - :id: us_quality_core_v050_us_core_documentreference_patient_search_test
+    :file_name: us_core_documentreference_patient_search_test.rb
+  - :id: us_quality_core_v050_us_core_documentreference__id_search_test
+    :file_name: us_core_documentreference_id_search_test.rb
+  - :id: us_quality_core_v050_us_core_documentreference_patient_type_search_test
+    :file_name: us_core_documentreference_patient_type_search_test.rb
+  - :id: us_quality_core_v050_us_core_documentreference_patient_category_date_search_test
+    :file_name: us_core_documentreference_patient_category_date_search_test.rb
+  - :id: us_quality_core_v050_us_core_documentreference_read_test
+    :file_name: us_core_documentreference_read_test.rb
+  - :id: us_quality_core_v050_us_core_documentreference_provenance_revinclude_search_test
+    :file_name: us_core_documentreference_provenance_revinclude_search_test.rb
+  - :id: us_quality_core_v050_us_core_documentreference_validation_test
+    :file_name: us_core_documentreference_validation_test.rb
+  - :id: us_quality_core_v050_us_core_documentreference_must_support_test
+    :file_name: us_core_documentreference_must_support_test.rb
+  - :id: us_quality_core_v050_us_core_documentreference_reference_resolution_test
+    :file_name: us_core_documentreference_reference_resolution_test.rb
+  - :id: us_quality_core_v050_us_core_documentreference_custodian_test
+    :file_name: us_core_documentreference_document_reference_custodian_test.rb
+  :id: us_quality_core_v050_us_core_documentreference
+  :file_name: us_core_documentreference_group.rb
   :delayed_references: []
   :resource_conformance_expectation: SHALL
 - :name: us_quality_core_encounter
@@ -2308,7 +2314,7 @@
     - :path: class
     - :path: type
     - :path: priority
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: subject
       :types:
       - Reference
@@ -2326,7 +2332,7 @@
       :types:
       - Reference
     - :path: diagnosis
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: hospitalization
     - :path: hospitalization.dischargeDisposition
     - :path: location
@@ -2340,6 +2346,13 @@
       - Reference
       :target_profiles:
       - http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization
+    :choices:
+    - :paths:
+      - reasonCode
+      - reasonReference
+    - :paths:
+      - location.location
+      - serviceProvider
   :mandatory_elements:
   - Encounter.identifier.system
   - Encounter.identifier.value
@@ -2445,6 +2458,8 @@
     :file_name: encounter_must_support_test.rb
   - :id: us_quality_core_v050_encounter_reference_resolution_test
     :file_name: encounter_reference_resolution_test.rb
+  - :id: us_quality_core_v050_interpreter_required_extension_test
+    :file_name: interpreter_required_extension_test.rb
   :id: us_quality_core_v050_encounter
   :file_name: encounter_group.rb
   :delayed_references:
@@ -2512,7 +2527,7 @@
     :slices: []
     :elements:
     - :path: condition.code
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - FamilyMemberHistory.status
   - FamilyMemberHistory.patient
@@ -2605,6 +2620,10 @@
     - :path: target
     - :path: target.dueDate
       :original_path: target.due[x]
+    :choices:
+    - :paths:
+      - startDate
+      - target.dueDate
   :mandatory_elements:
   - Goal.lifecycleStatus
   - Goal.description
@@ -2941,7 +2960,7 @@
     - :path: status
     - :path: name
     - :path: type
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: telecom
     - :path: address
     - :path: address.line
@@ -3174,19 +3193,19 @@
     :slices: []
     :elements:
     - :path: status
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: medication[x]
       :types:
       - Reference
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: effective[x]
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: dosage
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: dosage.route
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: dosage.dose
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - MedicationAdministration.status
   - MedicationAdministration.medication[x]
@@ -3362,9 +3381,9 @@
     :elements:
     - :path: status
       :fixed_value: not-done
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: statusReason
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - MedicationAdministration.extension
   - MedicationAdministration.status
@@ -3525,13 +3544,13 @@
     - :path: type
     - :path: quantity
     - :path: daysSupply
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: whenHandedOver
     - :path: dosageInstruction
     - :path: dosageInstruction.text
     - :path: dosageInstruction.timing
     - :path: dosageInstruction.route
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: dosageInstruction.doseAndRate
     - :path: dosageInstruction.doseAndRate.doseQuantity
       :original_path: dosageInstruction.doseAndRate.dose[x]
@@ -3672,7 +3691,7 @@
     - :path: status
       :fixed_value: declined
     - :path: statusReason[x]
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: medication[x]
       :types:
       - Reference
@@ -3898,44 +3917,50 @@
       :types:
       - Reference
     - :path: reasonCode
-      :uscdi_only: true
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: reasonReference
-      :uscdi_only: true
       :types:
       - Reference
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: dosageInstruction
     - :path: dosageInstruction.text
     - :path: dosageInstruction.timing
     - :path: dosageInstruction.timing.repeat
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: dosageInstruction.timing.repeat.bounds[x]
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: dosageInstruction.timing.repeat.frequency
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: dosageInstruction.timing.repeat.frequencyMax
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: dosageInstruction.timing.repeat.period
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: dosageInstruction.timing.repeat.periodMax
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: dosageInstruction.timing.repeat.periodUnit
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: dosageInstruction.asNeeded[x]
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: dosageInstruction.route
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: dosageInstruction.doseAndRate
     - :path: dosageInstruction.doseAndRate.doseQuantity
       :original_path: dosageInstruction.doseAndRate.dose[x]
     - :path: dispenseRequest
     - :path: dispenseRequest.validityPeriod
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: dispenseRequest.numberOfRepeatsAllowed
     - :path: dispenseRequest.quantity
     - :path: dispenseRequest.expectedSupplyDuration
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
+    :choices:
+    - :paths:
+      - reportedBoolean
+      - reportedReference
+    - :paths:
+      - reasonCode
+      - reasonReference
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - MedicationRequest.status
   - MedicationRequest.intent
@@ -4161,7 +4186,7 @@
     - :path: intent
     - :path: category
     - :path: doNotPerform
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: reportedReference
       :original_path: reported[x]
       :types:
@@ -4182,12 +4207,11 @@
       :types:
       - Reference
     - :path: reasonCode
-      :uscdi_only: true
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: reasonReference
-      :uscdi_only: true
       :types:
       - Reference
+      :uscdi_only: true
     - :path: dosageInstruction
     - :path: dosageInstruction.text
     - :path: dosageInstruction.timing
@@ -4197,6 +4221,14 @@
     - :path: dispenseRequest
     - :path: dispenseRequest.numberOfRepeatsAllowed
     - :path: dispenseRequest.quantity
+    :choices:
+    - :paths:
+      - reportedBoolean
+      - reportedReference
+    - :paths:
+      - reasonCode
+      - reasonReference
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - MedicationRequest.status
   - MedicationRequest.intent
@@ -4373,7 +4405,13 @@
       - Observation.category
       :comparators: {}
       :values:
+      - laboratory
       - exam
+      - therapy
+      - imaging
+      - procedure
+      - vital-signs
+      - activity
       :type: CodeableConcept
       :contains_multiple: true
       :multiple_or: MAY
@@ -4619,7 +4657,10 @@
       - Observation.category
       :comparators: {}
       :values:
-      - activity
+      - sdoh
+      - functional-status
+      - disability-status
+      - cognitive-status
       :type: CodeableConcept
       :contains_multiple: true
       :multiple_or: MAY
@@ -4719,9 +4760,9 @@
     - :path: valueBoolean
       :original_path: value[x]
     - :path: derivedFrom
-      :uscdi_only: true
       :types:
       - Reference
+      :uscdi_only: true
   :mandatory_elements:
   - Observation.status
   - Observation.category
@@ -5143,6 +5184,14 @@
       - Observation.category
       :comparators: {}
       :values:
+      - social-history
+      - vital-signs
+      - imaging
+      - laboratory
+      - procedure
+      - survey
+      - exam
+      - therapy
       - activity
       :type: CodeableConcept
       :contains_multiple: true
@@ -5195,20 +5244,20 @@
     - :id: Observation.extension:notDoneReason
       :path: extension
       :url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneReason
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     :slices: []
     :elements:
     - :path: status
       :fixed_value: cancelled
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: category
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: code
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: effective[x]
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: value[x]
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - Observation.extension
   - Observation.status
@@ -6150,7 +6199,7 @@
     - :path: effectiveDateTime
       :original_path: effective[x]
     - :path: issued
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: valueQuantity
       :original_path: value[x]
     - :path: valueCodeableConcept
@@ -6158,7 +6207,7 @@
     - :path: valueString
       :original_path: value[x]
     - :path: interpretation
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: specimen
       :types:
       - Reference
@@ -9720,18 +9769,15 @@
     - :id: Patient.extension:race
       :path: extension
       :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-race|6.1.0
-      :uscdi_only: true
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :id: Patient.extension:ethnicity
       :path: extension
       :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity|6.1.0
-      :uscdi_only: true
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :id: Patient.extension:tribalAffiliation
       :path: extension
       :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation|6.1.0
-      :uscdi_only: true
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :id: Patient.extension:sex
       :path: extension
       :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex
@@ -9743,42 +9789,49 @@
     - :path: identifier.value
     - :path: name
     - :path: name.use
-      :uscdi_only: true
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
+      :fixed_value: old
     - :path: name.family
     - :path: name.given
     - :path: name.suffix
-      :uscdi_only: true
-      :us_quality_coreuscdi_plus_quality: true
-    - :path: name.period
-      :uscdi_only: true
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
+    - :path: name.period.end
+      :uscdi_plus_quality: true
     - :path: telecom
-      :uscdi_only: true
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: telecom.system
+      :uscdi_plus_quality: true
     - :path: telecom.value
+      :uscdi_plus_quality: true
     - :path: telecom.use
+      :uscdi_plus_quality: true
     - :path: gender
     - :path: birthDate
     - :path: deceased[x]
-      :uscdi_only: true
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: address
     - :path: address.use
-      :uscdi_only: true
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
+      :fixed_value: old
     - :path: address.line
     - :path: address.city
     - :path: address.state
     - :path: address.postalCode
-    - :path: address.period
-      :uscdi_only: true
-      :us_quality_coreuscdi_plus_quality: true
+    - :path: address.period.end
+      :uscdi_plus_quality: true
     - :path: communication
-      :uscdi_only: true
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: communication.language
+      :uscdi_plus_quality: true
+    :choices:
+    - :paths:
+      - address.period.end
+      - address.use
+      :uscdi_plus_quality: true
+    - :paths:
+      - name.period.end
+      - name.use
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - Patient.identifier
   - Patient.identifier.system
@@ -9956,24 +10009,18 @@
     - :path: identifier.system
     - :path: identifier.value
     - :path: identifier:NPI.system
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: identifier:NPI.value
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: identifier:ein.system
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: identifier:ein.value
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: name
     - :path: name.family
     - :path: telecom
     - :path: telecom.system
     - :path: telecom.value
-    - :path: address
-    - :path: address.line
-    - :path: address.city
-    - :path: address.state
-    - :path: address.postalCode
-    - :path: address.country
   :mandatory_elements:
   - Practitioner.identifier
   - Practitioner.identifier.system
@@ -10039,6 +10086,8 @@
     :file_name: practitioner_validation_test.rb
   - :id: us_quality_core_v050_practitioner_must_support_test
     :file_name: practitioner_must_support_test.rb
+  - :id: us_quality_core_v050_practitioner_address_test
+    :file_name: practitioner_address_test.rb
   :id: us_quality_core_v050_practitioner
   :file_name: practitioner_group.rb
   :delayed_references: []
@@ -10069,11 +10118,11 @@
     :slices: []
     :elements:
     - :path: identifier
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: identifier.system
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: identifier.value
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: practitioner
       :types:
       - Reference
@@ -10257,20 +10306,20 @@
     - :id: Procedure.extension:recorded
       :path: extension
       :url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-recorded
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     :slices: []
     :elements:
     - :path: basedOn
-      :uscdi_only: true
       :types:
       - Reference
+      :uscdi_only: true
     - :path: partOf
       :types:
       - Reference
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: status
     - :path: statusReason
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: code
     - :path: subject
       :types:
@@ -10280,11 +10329,16 @@
     - :path: performedDateTime
       :original_path: performed[x]
     - :path: reasonCode
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: reasonReference
       :types:
       - Reference
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
+    :choices:
+    - :paths:
+      - reasonCode
+      - reasonReference
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - Procedure.status
   - Procedure.code
@@ -10468,21 +10522,21 @@
     - :id: Procedure.extension:recorded
       :path: extension
       :url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-recorded
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     :slices: []
     :elements:
     - :path: basedOn
-      :uscdi_only: true
       :types:
       - Reference
+      :uscdi_only: true
     - :path: partOf
       :types:
       - Reference
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: status
       :fixed_value: not-done
     - :path: statusReason
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: code
     - :path: subject
       :types:
@@ -10492,11 +10546,16 @@
     - :path: performedDateTime
       :original_path: performed[x]
     - :path: reasonCode
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: reasonReference
       :types:
       - Reference
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
+    :choices:
+    - :paths:
+      - reasonCode
+      - reasonReference
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - Procedure.extension
   - Procedure.status
@@ -11008,13 +11067,16 @@
       :types:
       - Reference
     - :path: reasonCode
-      :uscdi_only: true
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: reasonReference
-      :uscdi_only: true
       :types:
       - Reference
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
+    :choices:
+    - :paths:
+      - reasonCode
+      - reasonReference
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - ServiceRequest.status
   - ServiceRequest.intent
@@ -11293,13 +11355,16 @@
       :types:
       - Reference
     - :path: reasonCode
-      :uscdi_only: true
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: reasonReference
-      :uscdi_only: true
       :types:
       - Reference
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
+    :choices:
+    - :paths:
+      - reasonCode
+      - reasonReference
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - ServiceRequest.extension
   - ServiceRequest.status
@@ -11461,6 +11526,10 @@
       - Reference
       :target_profiles:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+    :choices:
+    - :paths:
+      - accessionIdentifier
+      - identifier
   :mandatory_elements:
   - Specimen.type
   :bindings:
@@ -11592,21 +11661,21 @@
     - :path: basedOn
       :types:
       - Reference
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: status
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: statusReason
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: code
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: focus
       :types:
       - Reference
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: executionPeriod
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: reasonCode
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - Task.identifier
   - Task.status
@@ -11788,22 +11857,22 @@
     - :path: basedOn
       :types:
       - Reference
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: status
       :fixed_value: rejected
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: statusReason
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: code
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: focus
       :types:
       - Reference
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: executionPeriod
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
     - :path: reasonCode
-      :us_quality_coreuscdi_plus_quality: true
+      :uscdi_plus_quality: true
   :mandatory_elements:
   - Task.status
   - Task.statusReason

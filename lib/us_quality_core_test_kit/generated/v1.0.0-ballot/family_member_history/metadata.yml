@@ -1,0 +1,96 @@
+---
+:name: us_core_familymemberhistory
+:class_name: UsCoreFamilymemberhistorySequence
+:version: v1.0.0-ballot
+:reformatted_version: v100_ballot
+:resource: FamilyMemberHistory
+:profile_url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory
+:profile_name: US Core FamilyMemberHistory Profile
+:profile_version: 9.0.0
+:title: US Core FamilyMemberHistory
+:short_description: Verify support for the capabilities required by the US Core FamilyMemberHistory
+  Profile.
+:is_delayed: false
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :names:
+  - patient
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+:search_definitions:
+  :patient:
+    :paths:
+    - patient
+    :full_paths:
+    - FamilyMemberHistory.patient
+    :comparators: {}
+    :values: []
+    :type: Reference
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes:
+- Provenance:target
+:required_concepts: []
+:must_supports:
+  :extensions:
+  - :id: FamilyMemberHistory.extension:recorder
+    :path: extension
+    :url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory-recorder
+    :uscdi_only: true
+  :slices: []
+  :elements:
+  - :path: status
+  - :path: patient
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+  - :path: relationship
+  - :path: condition
+  - :path: condition.code
+:mandatory_elements:
+- FamilyMemberHistory.status
+- FamilyMemberHistory.patient
+- FamilyMemberHistory.relationship
+- FamilyMemberHistory.condition.code
+:bindings:
+- :type: code
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/history-status
+  :path: status
+:references:
+- :path: FamilyMemberHistory.patient
+  :profiles:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+- :path: FamilyMemberHistory.reasonReference
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Condition|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/AllergyIntolerance|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/DiagnosticReport|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/DocumentReference|4.0.1
+:tests:
+- :id: us_quality_core_v100_ballot_family_member_history_patient_search_test
+  :file_name: family_member_history_patient_search_test.rb
+- :id: us_quality_core_v100_ballot_family_member_history_read_test
+  :file_name: family_member_history_read_test.rb
+- :id: us_quality_core_v100_ballot_family_member_history_provenance_revinclude_search_test
+  :file_name: family_member_history_provenance_revinclude_search_test.rb
+- :id: us_quality_core_v100_ballot_family_member_history_validation_test
+  :file_name: family_member_history_validation_test.rb
+- :id: us_quality_core_v100_ballot_family_member_history_must_support_test
+  :file_name: family_member_history_must_support_test.rb
+- :id: us_quality_core_v100_ballot_family_member_history_reference_resolution_test
+  :file_name: family_member_history_reference_resolution_test.rb
+:id: us_quality_core_v100_ballot_family_member_history
+:file_name: family_member_history_group.rb
+:delayed_references: []
+:resource_conformance_expectation: SHALL

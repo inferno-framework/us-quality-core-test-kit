@@ -1,0 +1,41 @@
+require_relative '../../../must_support_test'
+
+module USQualityCoreTestKit
+  module USQualityCoreV100_BALLOT
+    class FamilyMemberHistoryMustSupportTest < Inferno::Test
+      include USQualityCoreTestKit::MustSupportTest
+
+      title 'All must support elements are provided in the FamilyMemberHistory resources returned'
+
+      description %(
+        This test will look through the FamilyMemberHistory resources
+        found previously for the following Must Support and USCDI-flagged elements:
+
+        * FamilyMemberHistory.condition
+        * FamilyMemberHistory.condition.code
+        * FamilyMemberHistory.extension:recorder
+        * FamilyMemberHistory.patient
+        * FamilyMemberHistory.relationship
+        * FamilyMemberHistory.status
+      )
+
+      id :us_quality_core_v100_ballot_family_member_history_must_support_test
+
+      def resource_type
+        'FamilyMemberHistory'
+      end
+
+      def self.metadata
+        @metadata ||= Generator::GroupMetadata.new(YAML.load_file(File.join(__dir__, 'metadata.yml'), aliases: true))
+      end
+
+      def scratch_resources
+        scratch[:family_member_history_resources] ||= {}
+      end
+
+      run do
+        perform_must_support_test(all_scratch_resources)
+      end
+    end
+  end
+end

@@ -10,7 +10,7 @@ module USQualityCoreTestKit
       # The generator will not create tests for resources found in this list
       # for the specified IG versions.
       RESOURCES_TO_EXCLUDE = {
-        'Medication' => %w[v050]
+        'Medication' => %w[v050 v100_ballot]
       }.freeze
 
       # This list is meant to capture "abstract" profiles that do not themselves
@@ -33,26 +33,49 @@ module USQualityCoreTestKit
       # These resources will be gathered for testing via references from other
       # resources.
       DELAYED = {
-        'Encounter' => %w[v050],
-        'Location' => %w[v050]
+        'Encounter' => %w[v050 v100_ballot],
+        'Location' => %w[v050 v100_ballot]
       }.freeze
 
       # Category should be included in the initial search for these profiles.
       ALL_VERSION_CATEGORY_FIRST_PROFILES = [
         CARE_PLAN,
+        CONDITION_ENCOUNTER_DIAGNOSIS,
+        CONDITION_PROBLEMS_HEALTH_CONCERNS,
         DIAGNOSTIC_REPORT_LAB,
         DIAGNOSTIC_REPORT_NOTE,
-        CONDITION_ENCOUNTER_DIAGNOSIS,
-        CONDITION_PROBLEMS_HEALTH_CONCERNS
+        DOCUMENT_REFERENCE,
+        ADI_DOCUMENT_REFERENCE
       ].freeze
 
-      VERSION_SPECIFIC_CATEGORY_FIRST_PROFILES = {}.freeze
+      VERSION_SPECIFIC_CATEGORY_FIRST_PROFILES = {
+        'http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-careplan' => ['v050'],
+        'http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis' => ['v050'],
+        'http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns' => ['v050'],
+        'http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-diagnosticreport-lab' => ['v050'],
+        'http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-diagnosticreport-note' => ['v050']
+
+      }.freeze
 
       PROFILE_CATEGORY_SEARCH_VALUES = {
         OBSERVATION_CLINICAL_RESULT => ['exam'],
-        SIMPLE_OBSERVATION => ['activity'],
         OBSERVATION_CANCELLED => ['activity']
       }.freeze
+
+      DO_NOT_PERFORM_PROFILES = [
+        DEVICE_NOT_REQUESTED, # v0.5.0
+        DEVICE_REQUEST_V050, # v0.5.0
+        MEDICATION_REQUEST_NOT_REQUESTED, # v0.5.0
+        MEDICATION_REQUEST_V050, # v0.5.0
+        SERVICE_NOT_REQUESTED, # v0.5.0
+        SERVICE_REQUEST_V050, # v0.5.0
+        DEVICE_REQUESTED,
+        DEVICE_PROHIBITED,
+        MEDICATION_REQUEST_REQUESTED,
+        MEDICATION_REQUEST_PROHIBITED,
+        SERVICE_REQUESTED,
+        SERVICE_PROHIBITED
+      ].freeze
 
       class << self
         def exclude_group?(group)

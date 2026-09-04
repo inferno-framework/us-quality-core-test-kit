@@ -21,8 +21,7 @@ module USQualityCoreTestKit
 
         * Procedure.extension:recorded
         * Procedure.partOf
-        * Procedure.reasonCode
-        * Procedure.reasonReference
+        * Procedure.reasonCode or Procedure.reasonReference
         * Procedure.statusReason
       )
 

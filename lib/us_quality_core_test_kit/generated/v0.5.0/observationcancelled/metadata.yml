@@ -62,6 +62,14 @@
     - Observation.category
     :comparators: {}
     :values:
+    - social-history
+    - vital-signs
+    - imaging
+    - laboratory
+    - procedure
+    - survey
+    - exam
+    - therapy
     - activity
     :type: CodeableConcept
     :contains_multiple: true
@@ -115,20 +123,20 @@
   - :id: Observation.extension:notDoneReason
     :path: extension
     :url: http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneReason
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   :slices: []
   :elements:
   - :path: status
     :fixed_value: cancelled
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: category
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: code
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: effective[x]
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: value[x]
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
 :mandatory_elements:
 - Observation.extension
 - Observation.status

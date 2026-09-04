@@ -1,0 +1,177 @@
+---
+:name: us_quality_core_condition_encounter_diagnosis
+:class_name: USQualityCorev100_ballotConditionEncounterDiagnosisSequence
+:version: v1.0.0-ballot
+:reformatted_version: v100_ballot
+:resource: Condition
+:profile_url: http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis
+:profile_name: US Quality Core Condition Encounter Diagnosis Profile
+:profile_version: 1.0.0-ballot
+:title: Condition Encounter Diagnosis
+:short_description: Verify support for the capabilities required by the US Quality
+  Core Condition Encounter Diagnosis Profile.
+:is_delayed: false
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :expectation: SHALL
+  :names:
+  - patient
+  - category
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :names:
+  - patient
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :expectation: SHALL
+  :names:
+  - patient
+  - code
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+:search_definitions:
+  :patient:
+    :paths:
+    - subject
+    :full_paths:
+    - Condition.subject
+    :comparators: {}
+    :values: []
+    :type: Reference
+    :contains_multiple: false
+    :multiple_or: MAY
+  :category:
+    :paths:
+    - category
+    :full_paths:
+    - Condition.category
+    :comparators: {}
+    :values:
+    - encounter-diagnosis
+    :type: CodeableConcept
+    :contains_multiple: true
+    :multiple_or: MAY
+  :code:
+    :paths:
+    - code
+    :full_paths:
+    - Condition.code
+    :comparators: {}
+    :values:
+    - '160245001'
+    :type: CodeableConcept
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes:
+- Provenance:target
+:required_concepts:
+- clinicalStatus
+- verificationStatus
+:must_supports:
+  :extensions:
+  - :id: Condition.extension:assertedDate
+    :path: extension
+    :url: http://hl7.org/fhir/StructureDefinition/condition-assertedDate|5.3.0
+  :slices:
+  - :slice_id: Condition.category:us-core
+    :slice_name: us-core
+    :path: category
+    :discriminator:
+      :type: patternCodeableConcept
+      :path: ''
+      :code: encounter-diagnosis
+      :system: http://terminology.hl7.org/CodeSystem/condition-category
+  :elements:
+  - :path: category
+  - :path: code
+  - :path: subject
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient
+  - :path: encounter
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter
+  - :path: onset[x]
+    :uscdi_plus_quality: true
+  - :path: abatement[x]
+    :uscdi_plus_quality: true
+  - :path: recordedDate
+  - :path: recorder
+    :types:
+    - Reference
+    :uscdi_plus_quality: true
+:mandatory_elements:
+- Condition.category
+- Condition.code
+- Condition.subject
+:bindings:
+- :type: CodeableConcept
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/condition-clinical
+  :path: clinicalStatus
+- :type: CodeableConcept
+  :strength: required
+  :system: http://hl7.org/fhir/ValueSet/condition-ver-status
+  :path: verificationStatus
+:references:
+- :path: Condition.subject
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient
+  - http://hl7.org/fhir/StructureDefinition/Group
+- :path: Condition.encounter
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter
+- :path: Condition.recorder
+  :profiles:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+  - http://hl7.org/fhir/StructureDefinition/PractitionerRole
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
+- :path: Condition.asserter
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Patient|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/RelatedPerson|4.0.1
+- :path: Condition.stage.assessment
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/ClinicalImpression|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/DiagnosticReport|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+- :path: Condition.evidence.detail
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Resource|4.0.1
+:tests:
+- :id: us_quality_core_v100_ballot_condition_encounter_diagnosis_patient_category_search_test
+  :file_name: condition_encounter_diagnosis_patient_category_search_test.rb
+- :id: us_quality_core_v100_ballot_condition_encounter_diagnosis_patient_search_test
+  :file_name: condition_encounter_diagnosis_patient_search_test.rb
+- :id: us_quality_core_v100_ballot_condition_encounter_diagnosis_patient_code_search_test
+  :file_name: condition_encounter_diagnosis_patient_code_search_test.rb
+- :id: us_quality_core_v100_ballot_condition_encounter_diagnosis_read_test
+  :file_name: condition_encounter_diagnosis_read_test.rb
+- :id: us_quality_core_v100_ballot_condition_encounter_diagnosis_provenance_revinclude_search_test
+  :file_name: condition_encounter_diagnosis_provenance_revinclude_search_test.rb
+- :id: us_quality_core_v100_ballot_condition_encounter_diagnosis_validation_test
+  :file_name: condition_encounter_diagnosis_validation_test.rb
+- :id: us_quality_core_v100_ballot_condition_encounter_diagnosis_must_support_test
+  :file_name: condition_encounter_diagnosis_must_support_test.rb
+- :id: us_quality_core_v100_ballot_condition_encounter_diagnosis_reference_resolution_test
+  :file_name: condition_encounter_diagnosis_reference_resolution_test.rb
+:id: us_quality_core_v100_ballot_condition_encounter_diagnosis
+:file_name: condition_encounter_diagnosis_group.rb
+:delayed_references:
+- :path: encounter
+  :resources:
+  - Encounter
+:resource_conformance_expectation: SHALL

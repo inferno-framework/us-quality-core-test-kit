@@ -62,7 +62,13 @@
     - Observation.category
     :comparators: {}
     :values:
+    - laboratory
     - exam
+    - therapy
+    - imaging
+    - procedure
+    - vital-signs
+    - activity
     :type: CodeableConcept
     :contains_multiple: true
     :multiple_or: MAY

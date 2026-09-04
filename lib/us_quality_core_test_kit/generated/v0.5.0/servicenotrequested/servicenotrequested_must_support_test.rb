@@ -23,8 +23,7 @@ module USQualityCoreTestKit
 
         For ONC USCDI+ Quality requirements, each ServiceRequest must support the following additional elements:
 
-        * ServiceRequest.reasonCode
-        * ServiceRequest.reasonReference
+        * ServiceRequest.reasonCode or ServiceRequest.reasonReference
       )
 
       id :us_quality_core_v050_servicenotrequested_must_support_test

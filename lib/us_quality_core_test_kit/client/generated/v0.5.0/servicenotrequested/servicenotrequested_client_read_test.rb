@@ -19,14 +19,14 @@ module USQualityCoreTestKit
         end
 
         def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Quality Core Service Not Requested Profile: `ServiceRequest/usqualitycore-servicenotrequested`."
+          "Inferno did not receive the expected read request for the target instance of the US Quality Core Service Not Requested Profile: `ServiceRequest/usqualitycore-serviceprohibited`."
         end
 
         run do
           requests = load_tagged_requests(READ_SERVICE_REQUEST_TAG)
           skip_if requests.blank?, skip_message
 
-          requests_for_id = filter_requests_by_resource_id(requests, 'usqualitycore-servicenotrequested')
+          requests_for_id = filter_requests_by_resource_id(requests, 'usqualitycore-serviceprohibited')
           assert requests_for_id.any?, failure_message
         end
       end

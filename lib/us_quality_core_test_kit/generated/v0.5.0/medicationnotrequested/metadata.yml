@@ -99,7 +99,7 @@
   - :path: intent
   - :path: category
   - :path: doNotPerform
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: reportedReference
     :original_path: reported[x]
     :types:
@@ -120,12 +120,11 @@
     :types:
     - Reference
   - :path: reasonCode
-    :uscdi_only: true
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: reasonReference
-    :uscdi_only: true
     :types:
     - Reference
+    :uscdi_only: true
   - :path: dosageInstruction
   - :path: dosageInstruction.text
   - :path: dosageInstruction.timing
@@ -135,6 +134,14 @@
   - :path: dispenseRequest
   - :path: dispenseRequest.numberOfRepeatsAllowed
   - :path: dispenseRequest.quantity
+  :choices:
+  - :paths:
+    - reportedBoolean
+    - reportedReference
+  - :paths:
+    - reasonCode
+    - reasonReference
+    :uscdi_plus_quality: true
 :mandatory_elements:
 - MedicationRequest.status
 - MedicationRequest.intent

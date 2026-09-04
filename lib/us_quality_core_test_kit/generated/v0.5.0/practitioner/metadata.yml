@@ -42,24 +42,18 @@
   - :path: identifier.system
   - :path: identifier.value
   - :path: identifier:NPI.system
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: identifier:NPI.value
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: identifier:ein.system
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: identifier:ein.value
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: name
   - :path: name.family
   - :path: telecom
   - :path: telecom.system
   - :path: telecom.value
-  - :path: address
-  - :path: address.line
-  - :path: address.city
-  - :path: address.state
-  - :path: address.postalCode
-  - :path: address.country
 :mandatory_elements:
 - Practitioner.identifier
 - Practitioner.identifier.system
@@ -125,6 +119,8 @@
   :file_name: practitioner_validation_test.rb
 - :id: us_quality_core_v050_practitioner_must_support_test
   :file_name: practitioner_must_support_test.rb
+- :id: us_quality_core_v050_practitioner_address_test
+  :file_name: practitioner_address_test.rb
 :id: us_quality_core_v050_practitioner
 :file_name: practitioner_group.rb
 :delayed_references: []
