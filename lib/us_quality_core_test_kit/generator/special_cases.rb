@@ -59,7 +59,6 @@ module USQualityCoreTestKit
 
       PROFILE_CATEGORY_SEARCH_VALUES = {
         OBSERVATION_CLINICAL_RESULT => ['exam'],
-        SIMPLE_OBSERVATION => ['activity'],
         OBSERVATION_CANCELLED => ['activity']
       }.freeze
 

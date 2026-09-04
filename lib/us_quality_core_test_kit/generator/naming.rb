@@ -110,7 +110,13 @@ module USQualityCoreTestKit
 
       INSTANCE_ID_OVERRIDES = {
         'head_occipital_frontal_circumference_percentile' =>
-          'usqualitycore-head-circumference-percentile'
+          'usqualitycore-head-circumference-percentile',
+        'devicenotrequested' => 'usqualitycore-deviceprohibited',
+        'devicerequested' => 'usqualitycore-devicerequest',
+        'medicationnotrequested' => 'usqualitycore-medicationprohibited',
+        'medicationrequested' => 'usqualitycore-medicationrequest',
+        'servicenotrequested' => 'usqualitycore-serviceprohibited',
+        'servicerequested' => 'usqualitycore-servicerequest'
       }.freeze
 
       class << self

@@ -7693,7 +7693,12 @@
       - Observation.category
       :comparators: {}
       :values:
+      - sdoh
+      - functional-status
+      - disability-status
+      - cognitive-status
       - activity
+      - social-history
       :type: CodeableConcept
       :contains_multiple: true
       :multiple_or: MAY

@@ -1689,7 +1689,7 @@
       "name": "DeviceRequested",
       "item": [
         {
-          "name": "Read DeviceRequest/usqualitycore-devicerequested",
+          "name": "Read DeviceRequest/usqualitycore-devicerequest",
           "request": {
             "method": "GET",
             "header": [
@@ -1702,7 +1702,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/DeviceRequest/usqualitycore-devicerequested"
+            "url": "{{base_url}}/DeviceRequest/usqualitycore-devicerequest"
           },
           "event": [
             {
@@ -4744,7 +4744,7 @@
       "name": "MedicationRequested",
       "item": [
         {
-          "name": "Read MedicationRequest/usqualitycore-medicationrequested",
+          "name": "Read MedicationRequest/usqualitycore-medicationrequest",
           "request": {
             "method": "GET",
             "header": [
@@ -4757,7 +4757,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/MedicationRequest/usqualitycore-medicationrequested"
+            "url": "{{base_url}}/MedicationRequest/usqualitycore-medicationrequest"
           },
           "event": [
             {
@@ -9844,7 +9844,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/QuestionnaireResponse?patient=usqualitycore-patient&questionnaire=http%3A%2F%2Fhl7.org%2Ffhir%2Fuv%2Fsdc%2FQuestionnaire%2Fquestionnaire-sdc-profile-example-PHQ9"
+            "url": "{{base_url}}/QuestionnaireResponse?patient=usqualitycore-patient&questionnaire=https%3A%2F%2Fgithub.com%2Finferno-framework%2Fus-quality-core-test-kit%2FQuestionnaire%2Fquestionnaire-response-must-support-coverage"
           },
           "event": [
             {
@@ -10571,7 +10571,7 @@
       "name": "ServiceRequested",
       "item": [
         {
-          "name": "Read ServiceRequest/usqualitycore-servicerequested",
+          "name": "Read ServiceRequest/usqualitycore-servicerequest",
           "request": {
             "method": "GET",
             "header": [
@@ -10584,7 +10584,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/ServiceRequest/usqualitycore-servicerequested"
+            "url": "{{base_url}}/ServiceRequest/usqualitycore-servicerequest"
           },
           "event": [
             {
@@ -10660,7 +10660,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/ServiceRequest?_id=usqualitycore-servicerequested"
+            "url": "{{base_url}}/ServiceRequest?_id=usqualitycore-servicerequest"
           },
           "event": [
             {

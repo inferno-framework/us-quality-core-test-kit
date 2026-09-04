@@ -1747,9 +1747,6 @@
             "reference": "Immunization/usqualitycore-immunizationnotdone"
           },
           {
-            "reference": "Immunization/usqualitycore-immunizationnotdone-codeoptions"
-          },
-          {
             "reference": "ImagingStudy/usqualitycore-imaging-study"
           },
           {
@@ -1828,7 +1825,7 @@
             "reference": "RelatedPerson/usqualitycore-related-person"
           },
           {
-            "reference": "ServiceRequest/usqualitycore-servicenotrequested"
+            "reference": "ServiceRequest/usqualitycore-serviceprohibited"
           },
           {
             "reference": "ServiceRequest/usqualitycore-servicerequest"
@@ -9278,11 +9275,11 @@
     {
       "request": {
         "method": "PUT",
-        "url": "ServiceRequest/usqualitycore-servicenotrequested"
+        "url": "ServiceRequest/usqualitycore-serviceprohibited"
       },
       "resource": {
         "resourceType": "ServiceRequest",
-        "id": "usqualitycore-servicenotrequested",
+        "id": "usqualitycore-serviceprohibited",
         "meta": {
           "profile": [
             "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-servicenotrequested",
@@ -9372,11 +9369,11 @@
     {
       "request": {
         "method": "PUT",
-        "url": "ServiceRequest/usqualitycore-servicenotrequested-codeoptions"
+        "url": "ServiceRequest/usqualitycore-serviceprohibited-codeoptions"
       },
       "resource": {
         "resourceType": "ServiceRequest",
-        "id": "usqualitycore-servicenotrequested-codeoptions",
+        "id": "usqualitycore-serviceprohibited-codeoptions",
         "meta": {
           "profile": [
             "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-servicenotrequested",

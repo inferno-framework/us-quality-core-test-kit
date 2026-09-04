@@ -1078,7 +1078,7 @@
       "name": "DeviceRequest Device Not Requested",
       "item": [
         {
-          "name": "Read DeviceRequest/usqualitycore-devicenotrequested",
+          "name": "Read DeviceRequest/usqualitycore-deviceprohibited",
           "request": {
             "method": "GET",
             "header": [
@@ -1091,7 +1091,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/DeviceRequest/usqualitycore-devicenotrequested"
+            "url": "{{base_url}}/DeviceRequest/usqualitycore-deviceprohibited"
           },
           "event": [
             {
@@ -3074,7 +3074,7 @@
       "name": "MedicationRequest Medication Not Requested",
       "item": [
         {
-          "name": "Read MedicationRequest/usqualitycore-medicationnotrequested",
+          "name": "Read MedicationRequest/usqualitycore-medicationprohibited",
           "request": {
             "method": "GET",
             "header": [
@@ -3087,7 +3087,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/MedicationRequest/usqualitycore-medicationnotrequested"
+            "url": "{{base_url}}/MedicationRequest/usqualitycore-medicationprohibited"
           },
           "event": [
             {
@@ -8045,7 +8045,7 @@
       "name": "ServiceRequest Service Not Requested",
       "item": [
         {
-          "name": "Read ServiceRequest/usqualitycore-servicenotrequested",
+          "name": "Read ServiceRequest/usqualitycore-serviceprohibited",
           "request": {
             "method": "GET",
             "header": [
@@ -8058,7 +8058,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/ServiceRequest/usqualitycore-servicenotrequested"
+            "url": "{{base_url}}/ServiceRequest/usqualitycore-serviceprohibited"
           },
           "event": [
             {
@@ -8134,7 +8134,7 @@
                 "value": "Bearer {{access_token}}"
               }
             ],
-            "url": "{{base_url}}/ServiceRequest?_id=usqualitycore-servicenotrequested"
+            "url": "{{base_url}}/ServiceRequest?_id=usqualitycore-serviceprohibited"
           },
           "event": [
             {
