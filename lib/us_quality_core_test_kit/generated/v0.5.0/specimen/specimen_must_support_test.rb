@@ -11,6 +11,7 @@ module USQualityCoreTestKit
         This test will look through the Specimen resources
         found previously for the following Must Support and USCDI-flagged elements:
 
+        * Specimen.accessionIdentifier or Specimen.identifier
         * Specimen.subject
         * Specimen.type
       )

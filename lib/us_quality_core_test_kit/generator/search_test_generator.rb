@@ -216,6 +216,12 @@ module USQualityCoreTestKit
           (resource_type == 'Patient' && search_metadata[:names].include?('_id'))
       end
 
+      def needs_care_plan_category_code?
+        group_metadata.version == 'v1.0.0-ballot' &&
+          resource_type == 'CarePlan' &&
+          search_param_names.include?('category')
+      end
+
       def fixed_value_search?
         first_search? && search_metadata[:names] != ['patient'] &&
           search_metadata[:names] != ['subject'] &&

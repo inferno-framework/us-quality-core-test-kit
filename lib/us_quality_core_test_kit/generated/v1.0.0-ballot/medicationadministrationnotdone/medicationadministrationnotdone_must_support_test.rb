@@ -1,0 +1,48 @@
+require_relative '../../../must_support_test'
+
+module USQualityCoreTestKit
+  module USQualityCoreV100_BALLOT
+    class MedicationadministrationnotdoneMustSupportTest < Inferno::Test
+      include USQualityCoreTestKit::MustSupportTest
+
+      title 'All must support elements are provided in the MedicationAdministration resources returned'
+
+      description %(
+        This test will look through the MedicationAdministration resources
+        found previously for the following Must Support and USCDI-flagged elements:
+
+
+
+        For ONC USCDI+ Quality requirements, each MedicationAdministration must support the following additional elements:
+
+        * MedicationAdministration.dosage
+        * MedicationAdministration.dosage.dose
+        * MedicationAdministration.dosage.route
+        * MedicationAdministration.effective[x]
+        * MedicationAdministration.medication[x]
+        * MedicationAdministration.medication[x].extension:codeOptions
+        * MedicationAdministration.performer.actor
+        * MedicationAdministration.status
+        * MedicationAdministration.statusReason
+      )
+
+      id :us_quality_core_v100_ballot_medicationadministrationnotdone_must_support_test
+
+      def resource_type
+        'MedicationAdministration'
+      end
+
+      def self.metadata
+        @metadata ||= Generator::GroupMetadata.new(YAML.load_file(File.join(__dir__, 'metadata.yml'), aliases: true))
+      end
+
+      def scratch_resources
+        scratch[:medicationadministrationnotdone_resources] ||= {}
+      end
+
+      run do
+        perform_must_support_test(all_scratch_resources)
+      end
+    end
+  end
+end

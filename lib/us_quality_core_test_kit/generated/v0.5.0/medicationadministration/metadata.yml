@@ -106,19 +106,19 @@
   :slices: []
   :elements:
   - :path: status
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: medication[x]
     :types:
     - Reference
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: effective[x]
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: dosage
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: dosage.route
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: dosage.dose
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
 :mandatory_elements:
 - MedicationAdministration.status
 - MedicationAdministration.medication[x]

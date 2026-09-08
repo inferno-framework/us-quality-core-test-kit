@@ -22,7 +22,7 @@ require_relative 'devicerequest_client_group'
 require_relative 'devicenotrequested_client_group'
 require_relative 'diagnostic_report_note_client_group'
 require_relative 'diagnostic_report_lab_client_group'
-require_relative 'document_reference_client_group'
+require_relative 'us_core_documentreference_client_group'
 require_relative 'family_member_history_client_group'
 require_relative 'goal_client_group'
 require_relative 'immunization_client_group'
@@ -199,7 +199,7 @@ CapabilityStatement](http://fhir.org/guides/onc/us-quality-core/CapabilityStatem
           group from: :us_quality_core_client_v050_devicenotrequested
           group from: :us_quality_core_client_v050_diagnostic_report_note
           group from: :us_quality_core_client_v050_diagnostic_report_lab
-          group from: :us_quality_core_client_v050_document_reference
+          group from: :us_quality_core_client_v050_us_core_documentreference
           group from: :us_quality_core_client_v050_family_member_history
           group from: :us_quality_core_client_v050_goal
           group from: :us_quality_core_client_v050_immunization

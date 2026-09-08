@@ -1,5 +1,4 @@
-/data/*.db
-/data/*.db-journal
+/data/inferno_*.db*
 /data/igs/*.tgz
 /data/redis/*.rdb
 /data/redis/*.aof

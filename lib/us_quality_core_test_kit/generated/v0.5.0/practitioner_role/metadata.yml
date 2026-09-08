@@ -25,11 +25,11 @@
   :slices: []
   :elements:
   - :path: identifier
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: identifier.system
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: identifier.value
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: practitioner
     :types:
     - Reference

@@ -1,0 +1,152 @@
+---
+:name: us_quality_core_immunizationdone
+:class_name: USQualityCorev100_ballotImmunizationdoneSequence
+:version: v1.0.0-ballot
+:reformatted_version: v100_ballot
+:resource: Immunization
+:profile_url: http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationdone
+:profile_name: US Quality Core Immunization Done Profile
+:profile_version: 1.0.0-ballot
+:title: Immunization Done
+:short_description: Verify support for the capabilities required by the US Quality
+  Core Immunization Done Profile.
+:is_delayed: false
+:interactions:
+- :code: read
+  :expectation: SHALL
+- :code: search-type
+  :expectation: SHALL
+:operations: []
+:searches:
+- :expectation: SHALL
+  :names:
+  - patient
+  - status
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+- :names:
+  - patient
+  :expectation: SHALL
+  :names_not_must_support_or_mandatory: []
+  :must_support_or_mandatory: true
+:search_definitions:
+  :patient:
+    :paths:
+    - patient
+    :full_paths:
+    - Immunization.patient
+    :comparators: {}
+    :values: []
+    :type: Reference
+    :contains_multiple: false
+    :multiple_or: MAY
+  :status:
+    :paths:
+    - status
+    :full_paths:
+    - Immunization.status
+    :comparators: {}
+    :values:
+    - completed
+    :type: code
+    :contains_multiple: false
+    :multiple_or: MAY
+:include_params: []
+:revincludes:
+- Provenance:target
+:required_concepts: []
+:must_supports:
+  :extensions: []
+  :slices: []
+  :elements:
+  - :path: status
+    :fixed_value: completed
+  - :path: statusReason
+  - :path: vaccineCode
+  - :path: patient
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient
+  - :path: encounter
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter
+  - :path: occurrenceDateTime
+    :original_path: occurrence[x]
+  - :path: primarySource
+  - :path: location
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-location
+  - :path: lotNumber
+  - :path: performer
+  - :path: performer.actor
+    :types:
+    - Reference
+    :target_profiles:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+:mandatory_elements:
+- Immunization.status
+- Immunization.vaccineCode
+- Immunization.patient
+- Immunization.occurrence[x]
+- Immunization.performer.actor
+- Immunization.protocolApplied.doseNumber[x]
+:bindings: []
+:references:
+- :path: Immunization.patient
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient
+- :path: Immunization.encounter
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter
+- :path: Immunization.location
+  :profiles:
+  - http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-location
+- :path: Immunization.manufacturer
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Organization|4.0.1
+- :path: Immunization.performer.actor
+  :profiles:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
+- :path: Immunization.reasonReference
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Condition|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+  - http://hl7.org/fhir/StructureDefinition/DiagnosticReport|4.0.1
+- :path: Immunization.reaction.detail
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+- :path: Immunization.protocolApplied.authority
+  :profiles:
+  - http://hl7.org/fhir/StructureDefinition/Organization|4.0.1
+:tests:
+- :id: us_quality_core_v100_ballot_immunizationdone_patient_status_search_test
+  :file_name: immunizationdone_patient_status_search_test.rb
+- :id: us_quality_core_v100_ballot_immunizationdone_patient_search_test
+  :file_name: immunizationdone_patient_search_test.rb
+- :id: us_quality_core_v100_ballot_immunizationdone_read_test
+  :file_name: immunizationdone_read_test.rb
+- :id: us_quality_core_v100_ballot_immunizationdone_provenance_revinclude_search_test
+  :file_name: immunizationdone_provenance_revinclude_search_test.rb
+- :id: us_quality_core_v100_ballot_immunizationdone_validation_test
+  :file_name: immunizationdone_validation_test.rb
+- :id: us_quality_core_v100_ballot_immunizationdone_must_support_test
+  :file_name: immunizationdone_must_support_test.rb
+- :id: us_quality_core_v100_ballot_immunizationdone_reference_resolution_test
+  :file_name: immunizationdone_reference_resolution_test.rb
+:id: us_quality_core_v100_ballot_immunizationdone
+:file_name: immunizationdone_group.rb
+:delayed_references:
+- :path: encounter
+  :resources:
+  - Encounter
+- :path: location
+  :resources:
+  - Location
+:resource_conformance_expectation: SHALL

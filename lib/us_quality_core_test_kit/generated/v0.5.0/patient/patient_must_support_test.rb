@@ -17,7 +17,6 @@ module USQualityCoreTestKit
         * Patient.address.postalCode
         * Patient.address.state
         * Patient.birthDate
-        * Patient.communication.language
         * Patient.extension:sex
         * Patient.gender
         * Patient.identifier
@@ -26,23 +25,22 @@ module USQualityCoreTestKit
         * Patient.name
         * Patient.name.family
         * Patient.name.given
-        * Patient.telecom.system
-        * Patient.telecom.use
-        * Patient.telecom.value
 
         For ONC USCDI+ Quality requirements, each Patient must support the following additional elements:
 
-        * Patient.address.period
-        * Patient.address.use
+        * Patient.address.period.end or Patient.address.use
         * Patient.communication
+        * Patient.communication.language
         * Patient.deceased[x]
         * Patient.extension:ethnicity
         * Patient.extension:race
         * Patient.extension:tribalAffiliation
-        * Patient.name.period
+        * Patient.name.period.end or Patient.name.use
         * Patient.name.suffix
-        * Patient.name.use
         * Patient.telecom
+        * Patient.telecom.system
+        * Patient.telecom.use
+        * Patient.telecom.value
       )
 
       id :us_quality_core_v050_patient_must_support_test

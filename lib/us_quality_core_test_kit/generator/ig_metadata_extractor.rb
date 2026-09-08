@@ -23,7 +23,7 @@ module USQualityCoreTestKit
       end
 
       def add_metadata_from_ig
-        metadata.ig_version = "v#{ig_resources.ig.version}".delete('-ballot')
+        metadata.ig_version = "v#{ig_resources.ig.version}"
       end
 
       def resources_in_capability_statement

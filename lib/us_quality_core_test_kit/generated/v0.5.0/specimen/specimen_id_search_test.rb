@@ -26,11 +26,6 @@ FHIR R4 specification.
       )
 
       id :us_quality_core_v050_specimen__id_search_test
-
-  
-
-  
-
       def self.properties
         @properties ||= SearchTestProperties.new(
           first_search: true,

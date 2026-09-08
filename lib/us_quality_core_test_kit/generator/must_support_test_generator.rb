@@ -91,22 +91,22 @@ module USQualityCoreTestKit
         build_must_support_list_string(true)
       end
 
-      def build_must_support_list_string(us_quality_coreuscdi_plus_quality)
+      def build_must_support_list_string(uscdi_plus_quality)
         slice_names = group_metadata.must_supports[:slices]
-                                    .select { |slice| slice[:us_quality_coreuscdi_plus_quality].presence == us_quality_coreuscdi_plus_quality.presence }
+                                    .select { |slice| slice[:uscdi_plus_quality].presence == uscdi_plus_quality.presence }
                                     .map { |slice| slice[:slice_id] }
 
         element_names = group_metadata.must_supports[:elements]
-                                      .select { |element| element[:us_quality_coreuscdi_plus_quality].presence == us_quality_coreuscdi_plus_quality.presence }
+                                      .select { |element| element[:uscdi_plus_quality].presence == uscdi_plus_quality.presence }
                                       .map { |element| "#{resource_type}.#{element[:path]}" }
 
         extension_names = group_metadata.must_supports[:extensions]
-                                        .select { |extension| extension[:us_quality_coreuscdi_plus_quality].presence == us_quality_coreuscdi_plus_quality.presence }
+                                        .select { |extension| extension[:uscdi_plus_quality].presence == uscdi_plus_quality.presence }
                                         .map { |extension| extension[:id] }
 
         choice_names = []
         group_metadata.must_supports[:choices]&.map do |choice|
-          next unless choice[:us_quality_coreuscdi_plus_quality].presence == us_quality_coreuscdi_plus_quality.presence
+          next unless choice[:uscdi_plus_quality].presence == uscdi_plus_quality.presence
 
           combined = []
           if choice.key?(:paths)

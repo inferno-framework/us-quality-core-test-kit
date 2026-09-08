@@ -76,7 +76,7 @@
   :slices: []
   :elements:
   - :path: code[x]
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
 :mandatory_elements:
 - DeviceRequest.extension
 - DeviceRequest.modifierExtension

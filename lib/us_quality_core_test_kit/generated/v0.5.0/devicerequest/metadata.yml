@@ -78,7 +78,7 @@
   - :path: code[x]
     :types:
     - Reference
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
 :mandatory_elements:
 - DeviceRequest.modifierExtension.url
 - DeviceRequest.modifierExtension.value[x]

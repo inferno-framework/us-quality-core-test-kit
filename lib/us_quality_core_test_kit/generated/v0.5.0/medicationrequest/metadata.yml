@@ -121,44 +121,50 @@
     :types:
     - Reference
   - :path: reasonCode
-    :uscdi_only: true
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: reasonReference
-    :uscdi_only: true
     :types:
     - Reference
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: dosageInstruction
   - :path: dosageInstruction.text
   - :path: dosageInstruction.timing
   - :path: dosageInstruction.timing.repeat
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: dosageInstruction.timing.repeat.bounds[x]
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: dosageInstruction.timing.repeat.frequency
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: dosageInstruction.timing.repeat.frequencyMax
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: dosageInstruction.timing.repeat.period
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: dosageInstruction.timing.repeat.periodMax
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: dosageInstruction.timing.repeat.periodUnit
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: dosageInstruction.asNeeded[x]
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: dosageInstruction.route
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: dosageInstruction.doseAndRate
   - :path: dosageInstruction.doseAndRate.doseQuantity
     :original_path: dosageInstruction.doseAndRate.dose[x]
   - :path: dispenseRequest
   - :path: dispenseRequest.validityPeriod
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: dispenseRequest.numberOfRepeatsAllowed
   - :path: dispenseRequest.quantity
   - :path: dispenseRequest.expectedSupplyDuration
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
+  :choices:
+  - :paths:
+    - reportedBoolean
+    - reportedReference
+  - :paths:
+    - reasonCode
+    - reasonReference
+    :uscdi_plus_quality: true
 :mandatory_elements:
 - MedicationRequest.status
 - MedicationRequest.intent

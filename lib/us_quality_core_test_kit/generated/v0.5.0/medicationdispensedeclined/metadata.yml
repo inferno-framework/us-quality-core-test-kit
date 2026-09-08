@@ -62,7 +62,7 @@
   - :path: status
     :fixed_value: declined
   - :path: statusReason[x]
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: medication[x]
     :types:
     - Reference

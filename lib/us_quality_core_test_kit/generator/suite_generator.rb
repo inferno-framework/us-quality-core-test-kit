@@ -76,7 +76,11 @@ module USQualityCoreTestKit
 
       def ig_identifier
         version = ig_metadata.ig_version[1..] # Remove leading 'v'
-        "fhir.onc.us-quality-core##{version}"
+        if version == '0.5.0'
+          "fhir.onc.us-quality-core##{version}"
+        else
+          "hl7.fhir.us.quality-core##{version}"
+        end
       end
 
       def ig_link

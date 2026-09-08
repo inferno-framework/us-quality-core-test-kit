@@ -30,15 +30,12 @@ FHIR R4 specification.
       )
 
       id :us_quality_core_v050_taskrejected_patient_status_search_test
-
-  optional
-
+      optional
   
       input :patient_ids,
         title: 'Patient IDs',
         description: 'Comma separated list of patient IDs that in sum contain all MUST SUPPORT elements'
   
-
       def self.properties
         @properties ||= SearchTestProperties.new(
           first_search: true,

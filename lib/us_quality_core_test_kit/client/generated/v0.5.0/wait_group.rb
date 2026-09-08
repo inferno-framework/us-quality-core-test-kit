@@ -124,7 +124,7 @@ module USQualityCoreTestKit
     * patient + code
 * **Devicenotrequested**
   * read id:
-    * usqualitycore-devicenotrequested
+    * usqualitycore-deviceprohibited
   * searches:
     * patient + do-not-perform
     * patient
@@ -145,14 +145,14 @@ module USQualityCoreTestKit
     * patient
     * patient + category + date
     * patient + code
-* **DocumentReference**
+* **UsCoreDocumentreference**
   * read id:
-    * usqualitycore-document-reference
+    * usqualitycore-us-core-documentreference
   * searches:
+    * patient + category
     * patient
     * _id
     * patient + type
-    * patient + category
     * patient + category + date
 * **FamilyMemberHistory**
   * read id:
@@ -212,7 +212,7 @@ module USQualityCoreTestKit
     * patient + intent
 * **Medicationnotrequested**
   * read id:
-    * usqualitycore-medicationnotrequested
+    * usqualitycore-medicationprohibited
   * searches:
     * patient + intent + do-not-perform
     * patient + intent
@@ -409,7 +409,7 @@ module USQualityCoreTestKit
     * patient + code
 * **Servicenotrequested**
   * read id:
-    * usqualitycore-servicenotrequested
+    * usqualitycore-serviceprohibited
   * searches:
     * patient + do-not-perform
     * _id

@@ -90,13 +90,13 @@
   - :path: type
   - :path: quantity
   - :path: daysSupply
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: whenHandedOver
   - :path: dosageInstruction
   - :path: dosageInstruction.text
   - :path: dosageInstruction.timing
   - :path: dosageInstruction.route
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: dosageInstruction.doseAndRate
   - :path: dosageInstruction.doseAndRate.doseQuantity
     :original_path: dosageInstruction.doseAndRate.dose[x]

@@ -13,10 +13,9 @@ module USQualityCoreTestKit
 
         * Goal.description
         * Goal.lifecycleStatus
-        * Goal.startDate
+        * Goal.startDate or Goal.target.dueDate
         * Goal.subject
         * Goal.target
-        * Goal.target.dueDate
       )
 
       id :us_quality_core_v050_goal_must_support_test

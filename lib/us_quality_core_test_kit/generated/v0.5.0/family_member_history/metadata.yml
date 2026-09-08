@@ -43,7 +43,7 @@
   :slices: []
   :elements:
   - :path: condition.code
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
 :mandatory_elements:
 - FamilyMemberHistory.status
 - FamilyMemberHistory.patient

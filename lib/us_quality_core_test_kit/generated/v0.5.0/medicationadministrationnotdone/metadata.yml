@@ -102,9 +102,9 @@
   :elements:
   - :path: status
     :fixed_value: not-done
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
   - :path: statusReason
-    :us_quality_coreuscdi_plus_quality: true
+    :uscdi_plus_quality: true
 :mandatory_elements:
 - MedicationAdministration.extension
 - MedicationAdministration.status

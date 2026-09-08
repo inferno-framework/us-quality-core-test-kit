@@ -85,7 +85,9 @@ module USQualityCoreTestKit
 
     suite_ids %i[
       us_quality_core_v050
+      us_quality_core_v100_ballot
       us_quality_core_client_v050
+      us_quality_core_client_v100_ballot
     ]
 
     tags ['US Quality Core']

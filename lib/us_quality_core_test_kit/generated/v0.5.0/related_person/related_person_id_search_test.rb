@@ -19,11 +19,6 @@ none are returned, the test is skipped.
       )
 
       id :us_quality_core_v050_related_person__id_search_test
-
-  
-
-  
-
       def self.properties
         @properties ||= SearchTestProperties.new(
           resource_type: 'RelatedPerson',

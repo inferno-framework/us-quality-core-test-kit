@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'value_extractor'
+require_relative 'must_support_metadata_extractor_v1'
 
 module USQualityCoreTestKit
   class Generator
@@ -34,11 +35,15 @@ module USQualityCoreTestKit
       end
 
       def must_support_extension_elements
-        all_must_support_elements.select { |element| element.path.end_with? 'extension' }
+        all_must_support_elements.select { |element| extension_element?(element) }
       end
 
       def must_support_slice_elements
-        all_must_support_elements.select { |element| !element.path.end_with?('extension') && element.sliceName.present? }
+        all_must_support_elements.select { |element| !extension_element?(element) && element.sliceName.present? }
+      end
+
+      def extension_element?(element)
+        element.type.any? { |type| type.code == 'Extension' }
       end
 
       def sliced_element(slice)
@@ -81,9 +86,7 @@ module USQualityCoreTestKit
             slice_name: current_element.sliceName,
             path: current_element.path.gsub("#{resource}.", ''),
             discriminator: discriminator
-          }.tap do |metadata|
-            metadata[:uscdi_only] = true if uscdi_requirement_element?(current_element)
-          end
+          }
         end
       end
 
@@ -141,8 +144,6 @@ module USQualityCoreTestKit
             elsif pattern_value.present?
               metadata[:discriminator] = pattern_value
             end
-
-            metadata[:uscdi_only] = true if uscdi_requirement_element?(current_element)
           end
         end
       end
@@ -327,16 +328,13 @@ module USQualityCoreTestKit
       end
 
       def uscdi_plus_quality_element?(element)
-        !element.mustSupport && element.extension.any? do |extension|
-          extension.url.downcase.ends_with? 'uscdiplusquality'
-        end
-      end
+        return false if element.mustSupport
 
-      def add_us_quality_coreuscdi_plus_quality_flag(profile_element, metadata_element)
-        if uscdi_plus_quality_element?(profile_element)
-          metadata_element.merge(us_quality_coreuscdi_plus_quality: true)
-        else
-          metadata_element
+        element.extension.any? do |extension|
+          extension.url.downcase.end_with?(
+            'uscdiplusquality',
+            'us-quality-core-uscdi-quality-extension'
+          )
         end
       end
 
@@ -347,24 +345,34 @@ module USQualityCoreTestKit
       end
 
       def must_support_extensions
-        must_support_extension_elements.map do |element|
+        must_support_extension_elements.map do |profile_element|
           metadata = {
-            id: element.id,
-            path: element.path.gsub("#{resource}.", ''),
-            url: element.type.first.profile.first
+            id: profile_element.id,
+            path: profile_element.path.gsub("#{resource}.", ''),
+            url: profile_element.type.first.profile.first
           }
 
-          metadata[:uscdi_only] = true if uscdi_requirement_element?(element)
+          if uscdi_plus_quality_element?(profile_element)
+            metadata[:uscdi_plus_quality] = true
+          elsif uscdi_requirement_element?(profile_element)
+            metadata[:uscdi_only] = true
+          end
 
-          add_us_quality_coreuscdi_plus_quality_flag(element, metadata)
+          metadata
         end
       end
 
       def must_support_slices
-        (type_slices + value_slices).map do |slice|
-          profile_element = must_support_slice_elements.find { |e| e.id == slice[:slice_id] }
+        (type_slices + value_slices).map do |metadata|
+          profile_element = must_support_slice_elements.find { |e| e.id == metadata[:slice_id] }
 
-          add_us_quality_coreuscdi_plus_quality_flag(profile_element, slice)
+          if uscdi_plus_quality_element?(profile_element)
+            metadata[:uscdi_plus_quality] = true
+          elsif uscdi_requirement_element?(profile_element)
+            metadata[:uscdi_only] = true
+          end
+
+          metadata
         end
       end
 
@@ -379,8 +387,6 @@ module USQualityCoreTestKit
 
                 next if must_support_slice_elements.none? { |slice| slice.sliceName == slice_name }
               end
-
-              current_metadata[:uscdi_only] = true if uscdi_requirement_element?(current_element)
 
               type_must_support_metadata = get_type_must_support_metadata(current_metadata, current_element)
 
@@ -403,13 +409,19 @@ module USQualityCoreTestKit
 
         return ms_elements unless profile.url.include?('us-quality-core')
 
-        ms_elements.map do |element|
+        ms_elements.map do |metadata|
           profile_element = plain_must_support_elements.find do |e|
             path = e.id.gsub("#{resource}.", '')
-            [element[:path], element[:original_path]].include?(path)
+            [metadata[:path], metadata[:original_path]].include?(path)
           end
 
-          add_us_quality_coreuscdi_plus_quality_flag(profile_element, element)
+          if uscdi_plus_quality_element?(profile_element)
+            metadata[:uscdi_plus_quality] = true
+          elsif uscdi_requirement_element?(profile_element)
+            metadata[:uscdi_only] = true
+          end
+
+          metadata
         end
       end
 
@@ -427,6 +439,11 @@ module USQualityCoreTestKit
         remove_vital_sign_component
         remove_blood_pressure_value_data_absent_reason
         remove_observation_data_absent_reason
+
+        # if (profile.url.start_with?('http://hl7.org/fhir/us/quality-core') && profile.version.start_with?('1.0.0')) ||
+        #   (profile.url.start_with?('http://hl7.org/fhir/us/core') && profile.version == '9.0.0')
+        MustSupportMetadataExtractorV1.new(profile, @must_supports).handle_special_cases
+        # end
       end
     end
   end
