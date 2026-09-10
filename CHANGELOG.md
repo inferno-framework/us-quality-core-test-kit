@@ -1,5 +1,9 @@
 # Unreleased
 
+# 0.2.0
+
+* Update the test kit to include US Quality Core v1.0.0-ballot.
+
 # 0.1.2
 
 * Remove the `us_core_test_kit` gem dependency.
