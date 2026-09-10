@@ -2,10 +2,12 @@
 
 The **US Quality Core Test Kit** is an automated conformance testing tool for
 servers and clients implementing the [2026 US Quality Core Implementation
-Guide v0.5.0](https://fhir.org/guides/onc/us-quality-core/). It tests the IG's
-conformance scope for USCDI+ Quality V1 data, including in-scope profiles,
-USCDI+ Quality-flagged elements, inherited US Core MustSupport elements, and
-FHIR RESTful API requirements from the US Quality Core CapabilityStatements.
+Guide v0.5.0](https://fhir.org/guides/onc/us-quality-core/) and the [US Quality
+Core Implementation Guide v1.0.0-ballot](http://hl7.org/fhir/us/quality-core/1.0.0-202609-ballot/en).
+It tests each guide's conformance scope—USCDI+ Quality V1 for v0.5.0 and Draft
+USCDI+ Quality V2 for v1.0.0-ballot—including in-scope profiles, USCDI+
+Quality-flagged elements, inherited US Core MustSupport elements, and FHIR
+RESTful API requirements from the US Quality Core CapabilityStatements.
 
 The following documentation describes how to use and contribute to this test
 kit.
@@ -25,7 +27,12 @@ kit.
 ## Resources
 
 * [Example Postman Collection](https://raw.githubusercontent.com/inferno-framework/us-quality-core-test-kit/main/lib/us_quality_core_test_kit/client/generated/v0.5.0/example_client_v050.postman_collection.json):
-  Demonstration client requests for the US Quality Core client suite.
+  Demonstration client requests for the v0.5.0 client suite.
+* [v1.0.0-ballot Postman Collection](https://raw.githubusercontent.com/inferno-framework/us-quality-core-test-kit/main/lib/us_quality_core_test_kit/client/generated/v1.0.0-ballot/example_client_v100_ballot.postman_collection.json):
+  Demonstration client requests for the v1.0.0-ballot client suite.
+* `inferno_reference_server_100_ballot` preset:
+  Preset for testing the v1.0.0-ballot client suite against the local Inferno
+  Reference Server.
 * [Example Patient Bundle](https://raw.githubusercontent.com/inferno-framework/us-quality-core-test-kit/main/client-example-resources/us_quality_core_bundle_patient.json):
   Example US Quality Core resources loaded into the local Inferno Reference
   Server.
