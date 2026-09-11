@@ -10,8 +10,10 @@ module USQualityCoreTestKit
 
     description <<~DESCRIPTION
       The US Quality Core Test Kit validates server and client implementations
-      against the [US Quality Core Implementation Guide
-      v0.5.0](https://fhir.org/guides/onc/us-quality-core/).
+      against the following US Quality Core versions:
+
+      * [2026 US Quality Core Implementation Guide v0.5.0](https://fhir.org/guides/onc/us-quality-core/) (USCDI+ Quality V1)
+      * [US Quality Core Implementation Guide v1.0.0-ballot](http://hl7.org/fhir/us/quality-core/1.0.0-202609-ballot/en) (Draft USCDI+ Quality V2)
 
       <!-- break -->
 
@@ -25,18 +27,21 @@ module USQualityCoreTestKit
 
       ## Status
 
-      These tests are a DRAFT intended to allow US Quality Core implementers to
-      perform preliminary checks of their implementations against the
-      [US Quality Core conformance requirements](https://fhir.org/guides/onc/us-quality-core/general-requirements.html)
-      and provide feedback on the tests. Future versions may validate
-      additional requirements or change how these requirements are tested.
+      These tests are DRAFT tests intended to allow US Quality Core
+      implementers to perform preliminary checks of their implementations
+      against the relevant conformance requirements and provide feedback on the
+      tests. Future versions may validate additional requirements or change how
+      these requirements are tested.
 
       ## Scope
 
-      The scope of this test kit is intended to match the conformance scope
-      defined by US Quality Core v0.5.0. The IG is derived from QI-Core STU 6
-      and includes inherited profiles to ease adoption, but its conformance
-      requirements are focused on USCDI+ Quality V1 data. The IG's
+      The test kit has separate suites for each supported implementation guide.
+      The v0.5.0 suites cover USCDI+ Quality V1 data, and the v1.0.0-ballot
+      suites cover Draft USCDI+ Quality V2 data.
+
+      The 2026 US Quality Core Implementation Guide v0.5.0 is derived from
+      QI-Core STU 6 and includes inherited profiles to ease adoption, but its
+      conformance requirements are focused on USCDI+ Quality V1 data. The v0.5.0 IG's
       [USCDI+ Quality mapping](https://fhir.org/guides/onc/us-quality-core/uscdiquality.html)
       identifies the in-scope V1 data elements. For conformance,
       implementations are expected to support profile types with at least one
@@ -48,7 +53,7 @@ module USQualityCoreTestKit
       The US Quality Core Server Suite verifies support for the IG's in-scope
       profile, element, and API requirements. It includes:
 
-      * Support for in-scope US Quality Core and US Core profiles that implement USCDI+ Quality V1 data elements
+      * Support for in-scope US Quality Core and US Core profiles that implement USCDI+ Quality V1 or Draft USCDI+ Quality V2 data elements, as applicable to the selected suite
       * Support for USCDI+ Quality-flagged elements and inherited US Core MustSupport elements
       * Support for FHIR read and search operations required by the [US Quality Core Server CapabilityStatement](https://fhir.org/guides/onc/us-quality-core/CapabilityStatement-us-quality-core-server.html)
       * Support for base FHIR requirements and terminology bindings, with validation performed by the HL7 FHIR Validator using tx.fhir.org
@@ -62,11 +67,14 @@ module USQualityCoreTestKit
       * The ability to request profile-conformant data from Inferno's simulated US Quality Core server
       * Support for read and search interaction requests described by the [US Quality Core CapabilityStatements](https://fhir.org/guides/onc/us-quality-core/capability-statements.html)
 
-      ## Repository
+      ## Repository and Documentation
 
       The [US Quality Core Test Kit](https://github.com/inferno-framework/us-quality-core-test-kit)
       repository contains the source code for this test kit.
 
+      For setup and test-use guidance, see the [US Quality Core Test Kit
+      documentation](https://github.com/inferno-framework/us-quality-core-test-kit/wiki),
+      including the [Preset Walkthrough](https://github.com/inferno-framework/us-quality-core-test-kit/wiki/Preset-Walkthrough).
 
       ## Providing Feedback and Reporting Issues
 

@@ -1,10 +1,13 @@
 # US Quality Core Test Kit
 
 The **US Quality Core Test Kit** validates the conformance of server and client
-implementations to the [2026 US Quality Core Implementation Guide
-v0.5.0](https://fhir.org/guides/onc/us-quality-core/). The test kit includes
-server and client suites focused on the IG's conformance scope for USCDI+
-Quality V1 data.
+implementations to the US Quality Core Implementation Guide. The test kit
+includes server and client suites for evaluating systems against the guide's conformance scope.
+
+## Supported Implementation Guide Versions
+
+- [2026 US Quality Core Implementation Guide v0.5.0](https://fhir.org/guides/onc/us-quality-core/) (USCDI+ Quality V1)
+- [US Quality Core Implementation Guide v1.0.0-ballot](http://hl7.org/fhir/us/quality-core/1.0.0-202609-ballot/en) (Draft USCDI+ Quality V2)
 
 For additional details on the tests, including their scope, usage, and local
 demonstration notes, see the
@@ -28,6 +31,11 @@ wiki:
 - [Preset Walkthrough](https://github.com/inferno-framework/us-quality-core-test-kit/wiki/Preset-Walkthrough)
 - [Server Suite Overview](https://github.com/inferno-framework/us-quality-core-test-kit/wiki/Overview-Server)
 - [Client Suite Overview](https://github.com/inferno-framework/us-quality-core-test-kit/wiki/Overview-Client)
+
+When using a local Inferno Reference Server to test the v1.0.0-ballot client
+suite, select the `inferno_reference_server_100_ballot` preset. The matching
+[v1.0.0-ballot Postman collection](https://raw.githubusercontent.com/inferno-framework/us-quality-core-test-kit/main/lib/us_quality_core_test_kit/client/generated/v1.0.0-ballot/example_client_v100_ballot.postman_collection.json)
+contains example client requests for that suite.
 
 The Docker setup starts an [Inferno Reference
 Server](https://github.com/inferno-framework/inferno-reference-server) loaded

@@ -1,38 +1,17 @@
 # Preset Walkthrough
 
 This walkthrough shows how to exercise the US Quality Core suites using the
-presets included in this repository. It is intended for local setup, smoke
-testing, and demonstration. It is not a substitute for testing a real
-implementation with representative production-like data.
+presets included in this repository.
 
-## Start Inferno Locally
+Before using this walkthrough, follow the [Getting Started instructions](../README.md#getting-started)
+to install and start the test kit locally. This walkthrough assumes that the
+local Inferno stack and its reference server are running.  A
+demonstration instance is hosted on [Inferno on HealthIT.gov](https://inferno.healthit.gov/test-kits/us-quality-core/) as well.
 
-From the repository root:
-
-```sh
-./setup.sh
-./run.sh
-```
-
-Open `http://localhost` after the containers start. The Docker setup starts
-Inferno, the HL7 FHIR Validator service, the FHIRPath service, and an Inferno
-Reference Server at:
-
-```text
-http://localhost:8080/reference-server/r4
-```
-
-The reference server is loaded from `client-example-resources/` when its
-database is empty.
-
-If you change the example resources and need the reference server to reload
-them, stop the stack and remove the backing volume:
-
-```sh
-docker volume rm us-quality-core-test-kit_fhir-pgdata
-```
-
-Then restart with `./run.sh`.
+The examples below use the v0.5.0 suites. The same workflow applies to every
+supported suite version; select the server or client suite that corresponds to
+the version you are testing, and use that version's preset, FHIR base URL, and
+Postman collection where applicable.
 
 ## Server Suite Against the Inferno Reference Server
 
@@ -41,7 +20,7 @@ The preset uses the reference server configured by `FHIR_REFERENCE_SERVER`,
 falling back to the public Inferno Reference Server when the variable is not
 set.
 
-1. Start a new **US Quality Core Server v0.5.0** session.
+1. Start a new **US Quality Core Server** session for the version being tested.
 2. Select the **Inferno Reference Server** preset from the preset dropdown in
    the upper left.
 3. Confirm that the preset filled in:
@@ -68,7 +47,7 @@ Use this preset only as a limited smoke test for behavior shared with US Core.
 It is not expected to demonstrate full US Quality Core conformance because the
 target server is not loaded with US Quality Core-specific data.
 
-1. Start a new **US Quality Core Server v0.5.0** session.
+1. Start a new **US Quality Core Server** session for the version being tested.
 2. Select the **US Core-Only Reference Server** preset.
 3. Run selected groups that are useful for the question you are investigating.
 4. Interpret failures in light of the preset's limited data scope.
@@ -81,12 +60,11 @@ Inferno Reference Server configured by `FHIR_REFERENCE_SERVER`.
 
 1. Make sure the Docker stack is running and the local reference server is
    available.
-2. Start a new **US Quality Core Client v0.5.0** session.
+2. Start a new **US Quality Core Client** session for the version being tested.
 3. Run the **Read & Search** group or its **Client Access** subgroup.
 4. Inferno will generate a unique access token for this run.
-5. Inferno will display a FHIR base URL under
-   `/custom/us_quality_core_client_v050/fhir` and the access token for the run.
-   Configure the client under test to use that URL.
+5. Inferno will display a version-specific FHIR base URL and the access token
+   for the run. Configure the client under test to use that URL.
 6. Configure the client to send:
 
    ```text
@@ -109,10 +87,12 @@ Inferno Reference Server configured by `FHIR_REFERENCE_SERVER`.
 10. Run the profile groups you want to evaluate, or run the full **Read &
     Search** group.
 
-For a concrete request example, see the generated Postman collection:
+For concrete request examples, see the generated Postman collection for the
+version being tested:
 
 ```text
 lib/us_quality_core_test_kit/client/generated/v0.5.0/example_client_v050.postman_collection.json
+lib/us_quality_core_test_kit/client/generated/v1.0.0-ballot/example_client_v100_ballot.postman_collection.json
 ```
 
 ### Using the Generated Postman Collection
@@ -125,13 +105,13 @@ Inferno Reference Server.
 The collection includes two variables:
 
 * `base_url`: the simulated US Quality Core FHIR server URL exposed by Inferno.
-  The checked-in default is
-  `http://localhost:4567/custom/us_quality_core_client_v050/fhir`, which
-  matches the developer-mode Inferno server. If using the Docker setup through
-  the non-developer `http://localhost` entrypoint, update this value to
-  `http://localhost/custom/us_quality_core_client_v050/fhir`. If running
-  against a hosted Inferno instance, set this to the FHIR base URL displayed by
-  that Inferno Client Access step.
+  The checked-in defaults use a version-specific path—for example,
+  `/custom/us_quality_core_client_v050/fhir` for v0.5.0 and
+  `/custom/us_quality_core_client_v100_ballot/fhir` for v1.0.0-ballot. These
+  defaults use the developer-mode Inferno server at `http://localhost:4567`.
+  If using the Docker setup through the non-developer `http://localhost`
+  entrypoint or a hosted Inferno instance, set this value to the FHIR base URL
+  displayed by that Inferno Client Access step.
 * `access_token`: the value Postman sends as
   `Authorization: Bearer <access_token>`. This must match the access token
   generated by Inferno for the current Client Access run.
@@ -139,7 +119,8 @@ The collection includes two variables:
 To use the collection locally:
 
 1. Import the collection into Postman.
-2. Start the **US Quality Core Client v0.5.0** suite in Inferno.
+2. Start the **US Quality Core Client** suite for the version being tested in
+   Inferno.
 3. Run **Read & Search** or **Client Access**.
 4. When Inferno displays the Client Access instructions, set the collection
    `access_token` variable to the generated token value shown there.
