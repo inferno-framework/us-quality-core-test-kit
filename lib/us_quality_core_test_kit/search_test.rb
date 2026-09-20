@@ -339,15 +339,19 @@ module USQualityCoreTestKit
       all_search_params.each do |patient_id, params_list|
         next unless params_list.present?
 
-        search_params = params_list.first
+        # The multiple-or params are replaced below, so the remaining params still constrain the search.
+        # Only expect values from resources that match them: a fixed value search can have several values
+        # (e.g. Observation category) and a patient may only have data for some of them.
+        search_params, matching_resources = multiple_or_search_params_and_resources(patient_id, params_list)
+        next if search_params.nil?
+
         existing_values = {}
         missing_values = {}
 
         multiple_or_search_params.each do |param_name|
           search_value = default_search_values(param_name.to_sym)
           search_params = search_params.merge(param_name.to_s => search_value)
-          existing_values[param_name.to_sym] =
-            scratch_resources_for_patient(patient_id).map(&param_name.to_sym).compact.uniq
+          existing_values[param_name.to_sym] = matching_resources.map(&param_name.to_sym).compact.uniq
         end
 
         # skip patient without multiple-or values
@@ -376,6 +380,23 @@ module USQualityCoreTestKit
 
         break if resolved_one
       end
+    end
+
+    # Returns the first search params in params_list that the patient's scratch resources match, ignoring the
+    # multiple-or params, along with those resources. Returns nil if no resources match any of them.
+    def multiple_or_search_params_and_resources(patient_id, params_list)
+      multiple_or_names = multiple_or_search_params.map(&:to_s)
+
+      params_list.each do |params|
+        base_params = params.reject { |name, _value| multiple_or_names.include?(name.to_s) || patient_id_param?(name) }
+        resources = scratch_resources_for_patient(patient_id).select do |resource|
+          base_params.all? { |name, value| resource_matches_param?(resource, name, value) }
+        end
+
+        return [params, resources] if resources.present?
+      end
+
+      nil
     end
 
     def test_medication_inclusion(base_resources, params, patient_id)
