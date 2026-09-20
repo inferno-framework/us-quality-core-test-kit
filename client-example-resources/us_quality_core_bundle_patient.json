@@ -358,6 +358,7 @@
         "subject": {
           "reference": "Patient/usqualitycore-patient"
         },
+        "effectiveDateTime": "2024-05-16T01:06:06Z",
         "issued": "2024-05-16T01:06:06Z",
         "performer": [
           {
