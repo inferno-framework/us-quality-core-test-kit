@@ -19,6 +19,7 @@ none are returned, the test is skipped.
       )
 
       id :us_quality_core_v100_ballot_related_person__id_search_test
+      verifies_requirements 'us-quality-core-v1.0.0-ballot@CONF-5'
       def self.properties
         @properties ||= SearchTestProperties.new(
           resource_type: 'RelatedPerson',

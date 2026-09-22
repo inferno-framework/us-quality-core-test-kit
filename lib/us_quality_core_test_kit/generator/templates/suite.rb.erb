@@ -57,6 +57,13 @@ module USQualityCoreTestKit
       end
 
       id :<%= suite_id %>
+<% if ig_metadata.ig_version == 'v1.0.0-ballot' -%>
+
+      requirement_sets(
+        { identifier: 'us-quality-core-v1.0.0-ballot', title: 'US Quality Core requirements', actor: 'Server' },
+        { identifier: 'us-quality-core-v1.0.0-ballot', title: 'Application requirements (not server verification)', actor: 'Client' }
+      )
+<% end -%>
 
       fhir_resource_validator do
         igs '<%= ig_identifier %>'

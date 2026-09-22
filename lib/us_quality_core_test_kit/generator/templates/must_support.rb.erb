@@ -19,6 +19,16 @@ module USQualityCoreTestKit
       )
 
       id :<%= test_id %>
+<% if group_metadata.reformatted_version == 'v100_ballot' -%>
+<%
+  requirements = []
+  requirements << 'us-quality-core-v1.0.0-ballot@CONF-2' if uscdi_plus_quality_list_string.present?
+  requirements << 'us-quality-core-v1.0.0-ballot@CONF-3' if must_support_list_string.present?
+-%>
+<% if requirements.any? -%>
+      verifies_requirements <%= requirements.map { |id| "'#{id}'" }.join(', ') %>
+<% end -%>
+<% end -%>
 
       def resource_type
         '<%= resource_type %>'

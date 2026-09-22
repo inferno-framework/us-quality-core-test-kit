@@ -30,6 +30,7 @@ FHIR R4 specification.
       )
 
       id :us_quality_core_v100_ballot_immunizationdone_patient_status_search_test
+      verifies_requirements 'us-quality-core-v1.0.0-ballot@CONF-5'
       input :patient_ids,
         title: 'Patient IDs',
         description: 'Comma separated list of patient IDs that in sum contain all MUST SUPPORT elements'

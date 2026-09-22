@@ -10,6 +10,7 @@ module USQualityCoreTestKit
       description 'A server SHALL support the FamilyMemberHistory read interaction.'
 
       id :us_quality_core_v100_ballot_family_member_history_read_test
+      verifies_requirements 'us-quality-core-v1.0.0-ballot@CONF-5'
 
       def resource_type
         'FamilyMemberHistory'

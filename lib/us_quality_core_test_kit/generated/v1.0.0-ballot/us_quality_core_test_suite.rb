@@ -130,6 +130,11 @@ module USQualityCoreTestKit
 
       id :us_quality_core_v100_ballot
 
+      requirement_sets(
+        { identifier: 'us-quality-core-v1.0.0-ballot', title: 'US Quality Core requirements', actor: 'Server' },
+        { identifier: 'us-quality-core-v1.0.0-ballot', title: 'Application requirements (not server verification)', actor: 'Client' }
+      )
+
       fhir_resource_validator do
         igs 'hl7.fhir.us.quality-core#1.0.0-ballot'
 

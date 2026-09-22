@@ -13,7 +13,8 @@ module USQualityCoreTestKit
 <%= description %>
       )
 
-      id :<%= test_id %><% if optional? %>
+      id :<%= test_id %><% if group_metadata.reformatted_version == 'v100_ballot' && conformance_expectation == 'SHALL' %>
+      verifies_requirements 'us-quality-core-v1.0.0-ballot@CONF-5'<% end %><% if optional? %>
       optional
   <% end %><% if needs_patient_id? %>
       input :patient_ids,

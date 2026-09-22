@@ -34,6 +34,7 @@ module USQualityCoreTestKit
       )
 
       id :us_quality_core_v100_ballot_coverage_must_support_test
+      verifies_requirements 'us-quality-core-v1.0.0-ballot@CONF-2', 'us-quality-core-v1.0.0-ballot@CONF-3'
 
       def resource_type
         'Coverage'

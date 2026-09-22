@@ -10,6 +10,7 @@ module USQualityCoreTestKit
       description 'A server SHALL support the Condition read interaction.'
 
       id :us_quality_core_v100_ballot_condition_problems_health_concerns_read_test
+      verifies_requirements 'us-quality-core-v1.0.0-ballot@CONF-5'
 
       def resource_type
         'Condition'
