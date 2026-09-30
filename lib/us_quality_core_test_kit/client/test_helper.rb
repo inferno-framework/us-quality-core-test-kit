@@ -17,12 +17,12 @@ module USQualityCoreTestKit
         end
       end
 
-      def filter_requests_by_search_parameters(requests, search_parameters)
+      def filter_requests_by_search_parameter_combinations(requests, combinations)
         requests.select do |request|
           included_params = search_parameters_for_request(request)
           next unless included_params.present?
 
-          search_parameters.all? { |param| included_params.include? param }
+          combinations.any? { |combination| combination.all? { |param| included_params.include? param } }
         end
       end
 

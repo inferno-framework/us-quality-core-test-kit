@@ -12,11 +12,10 @@ module USQualityCoreTestKit
           def generate(ig_metadata, base_output_dir)
             ig_metadata.groups
                        .reject { |group| USQualityCoreTestKit::Generator::SpecialCases.exclude_group? group }
-                       .select { |group| group.searches.present? }
+                       .select { |group| group.searches.any? { |search| search[:expectation] == 'SHALL' } }
                        .each do |group|
-              group.searches.each do |search|
-                new(group, search, base_output_dir).generate
-              end
+              first_required_search = group.searches.find { |search| search[:expectation] == 'SHALL' }
+              new(group, first_required_search, base_output_dir).generate
             end
           end
         end
@@ -30,7 +29,7 @@ module USQualityCoreTestKit
         end
 
         def class_name
-          "#{profile_identifier.camelize}#{search_identifier.camelize}ClientSearchTest"
+          "#{profile_identifier.camelize}ClientSearchTest"
         end
 
         def resource
@@ -46,20 +45,22 @@ module USQualityCoreTestKit
         end
 
         def title
-          "#{conformance_expectation} support #{search_param_name_string} search " \
-            "of #{profile_identifier.camelize}"
+          "Search #{resource_type} using a supported combination"
         end
 
         def description
-          "The client demonstrates #{conformance_expectation} support for searching " \
-            "#{search_param_name_string} on #{profile_identifier.camelize}."
+          "The client demonstrates at least one required server search combination for #{profile_identifier.camelize}."
+        end
+
+        def required_search_combinations
+          group_metadata.searches
+                        .select { |search| search[:expectation] == 'SHALL' }
+                        .map { |search| search[:names] }
+                        .uniq
         end
 
         def all_required_search_parameters
-          group_metadata.searches
-                        .select { |search| search[:expectation] == 'SHALL' }
-                        .flat_map { |search| search[:names] }
-                        .uniq
+          required_search_combinations.flatten.uniq
         end
       end
     end

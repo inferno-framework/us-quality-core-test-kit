@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'allergy_intolerance/allergy_intolerance_client_read_test'
-require_relative 'allergy_intolerance/allergy_intolerance_patient_client_search_test'
+require_relative 'allergy_intolerance/allergy_intolerance_client_search_test'
 
 module USQualityCoreTestKit
   module Client
@@ -23,7 +23,7 @@ conforming to the US Quality Core AllergyIntolerance Profile.
 ## Data Access Supported
 
 Clients may not be required to support the AllergyIntolerance FHIR resource type. However, if they
-do support it, they must support the US Quality Core AllergyIntolerance Profile and the resource type's search parameters.
+do support it, they must support the US Quality Core AllergyIntolerance Profile and use a supported search to access its data.
 The tests in this group will not execute if client makes no attempt to access data for the
 AllergyIntolerance resource type. In this case, the test will be marked as skip if support
 for the resource type is required, and omitted otherwise.
@@ -34,14 +34,10 @@ This test will check that the client performed a read of the following id:
 * `usqualitycore-allergy-intolerance`
 
 ## Searching
-These tests will check that the client performed searches against the
-AllergyIntolerance resource type with the following required parameters:
+The client must demonstrate at least one of the following search parameter
+combinations supported by the server for AllergyIntolerance:
 
 * patient
-
-Inferno will also look for searches using the following optional parameters:
-
-
 
 
         )
@@ -51,7 +47,7 @@ Inferno will also look for searches using the following optional parameters:
         run_as_group
 
         test from: :us_quality_core_v050_allergy_intolerance_client_read_test
-        test from: :us_quality_core_v050_allergy_intolerance_patient_client_search_test
+        test from: :us_quality_core_v050_allergy_intolerance_client_search_test
       end
     end
   end

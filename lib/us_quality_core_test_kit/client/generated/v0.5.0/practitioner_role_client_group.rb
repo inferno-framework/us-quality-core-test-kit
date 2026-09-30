@@ -22,7 +22,7 @@ conforming to the US Quality Core PractitionerRole Profile.
 ## Data Access Supported
 
 Clients may not be required to support the PractitionerRole FHIR resource type. However, if they
-do support it, they must support the US Quality Core PractitionerRole Profile and the resource type's search parameters.
+do support it, they must support the US Quality Core PractitionerRole Profile and use a supported search to access its data.
 The tests in this group will not execute if client makes no attempt to access data for the
 PractitionerRole resource type. In this case, the test will be marked as skip if support
 for the resource type is required, and omitted otherwise.
@@ -33,12 +33,8 @@ This test will check that the client performed a read of the following id:
 * `usqualitycore-practitioner-role`
 
 ## Searching
-These tests will check that the client performed searches against the
-PractitionerRole resource type with the following required parameters:
-
-
-
-Inferno will also look for searches using the following optional parameters:
+The client must demonstrate at least one of the following search parameter
+combinations supported by the server for PractitionerRole:
 
 
 

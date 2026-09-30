@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'adverse_event/adverse_event_client_read_test'
-require_relative 'adverse_event/adverse_event_subject_client_search_test'
-require_relative 'adverse_event/adverse_event_subject_event_client_search_test'
-require_relative 'adverse_event/adverse_event_subject_recorded_date_client_search_test'
+require_relative 'adverse_event/adverse_event_client_search_test'
 
 module USQualityCoreTestKit
   module Client
@@ -25,7 +23,7 @@ conforming to the US Quality Core AdverseEvent Profile.
 ## Data Access Supported
 
 Clients may not be required to support the AdverseEvent FHIR resource type. However, if they
-do support it, they must support the US Quality Core AdverseEvent Profile and the resource type's search parameters.
+do support it, they must support the US Quality Core AdverseEvent Profile and use a supported search to access its data.
 The tests in this group will not execute if client makes no attempt to access data for the
 AdverseEvent resource type. In this case, the test will be marked as skip if support
 for the resource type is required, and omitted otherwise.
@@ -36,16 +34,12 @@ This test will check that the client performed a read of the following id:
 * `usqualitycore-adverse-event`
 
 ## Searching
-These tests will check that the client performed searches against the
-AdverseEvent resource type with the following required parameters:
+The client must demonstrate at least one of the following search parameter
+combinations supported by the server for AdverseEvent:
 
 * subject
 * subject + event
 * subject + recorded-date
-
-Inferno will also look for searches using the following optional parameters:
-
-
 
 
         )
@@ -55,9 +49,7 @@ Inferno will also look for searches using the following optional parameters:
         run_as_group
 
         test from: :us_quality_core_v100_ballot_adverse_event_client_read_test
-        test from: :us_quality_core_v100_ballot_adverse_event_subject_client_search_test
-        test from: :us_quality_core_v100_ballot_adverse_event_subject_event_client_search_test
-        test from: :us_quality_core_v100_ballot_adverse_event_subject_recorded_date_client_search_test
+        test from: :us_quality_core_v100_ballot_adverse_event_client_search_test
       end
     end
   end
