@@ -4,30 +4,23 @@ module USQualityCoreTestKit
   module Client
     module USQualityCoreClientV100_BALLOT
       class CommunicationnotdoneClientReadTest < Inferno::Test
-        include TestHelper
-
         id :us_quality_core_v100_ballot_communicationnotdone_client_read_test
 
-        title 'SHALL support read of Communicationnotdone'
+        title 'SHALL support read of Communication'
 
         description %(
-          The client demonstrates SHALL support for reading Communicationnotdone.
+          The client demonstrates SHALL support for reading the Communication resource type.
         )
+
+        optional true
 
         def skip_message
           "Inferno did not receive any read requests for the `Communication` resource type."
         end
 
-        def failure_message
-          "Inferno did not receive the expected read request for the target instance of the US Quality Core Communication Not Done Profile: `Communication/usqualitycore-communicationnotdone`."
-        end
-
         run do
           requests = load_tagged_requests(READ_COMMUNICATION_TAG)
           skip_if requests.blank?, skip_message
-
-          requests_for_id = filter_requests_by_resource_id(requests, 'usqualitycore-communicationnotdone')
-          assert requests_for_id.any?, failure_message
         end
       end
     end

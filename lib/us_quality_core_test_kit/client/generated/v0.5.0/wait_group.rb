@@ -70,84 +70,71 @@ module USQualityCoreTestKit
   The following requirements will be checked:
 
   * **Patient**
-  * read id:
-    * usqualitycore-patient
+  * read: any Patient resource (any ID)
   * searches:
     * _id
 * **AdverseEvent**
-  * read id:
-    * usqualitycore-adverse-event
+  * read: any AdverseEvent resource (any ID)
   * searches:
     * subject
     * subject + event
     * subject + recorded-date
 * **AllergyIntolerance**
-  * read id:
-    * usqualitycore-allergy-intolerance
+  * read: any AllergyIntolerance resource (any ID)
   * searches:
     * patient
 * **CarePlan**
-  * read id:
-    * usqualitycore-care-plan
+  * read: any CarePlan resource (any ID)
   * searches:
     * patient + category
 * **CareTeam**
-  * read id:
-    * usqualitycore-care-team
+  * read: any CareTeam resource (any ID)
   * searches:
     * patient + status
 * **ConditionEncounterDiagnosis**
-  * read id:
-    * usqualitycore-condition-encounter-diagnosis
+  * read: any Condition resource (any ID)
   * searches:
     * patient + category
     * patient
     * patient + code
 * **ConditionProblemsHealthConcerns**
-  * read id:
-    * usqualitycore-condition-problems-health-concerns
+  * read: any Condition resource (any ID)
   * searches:
     * patient + category
     * patient
     * patient + code
 * **Coverage**
-  * read id:
-    * usqualitycore-coverage
+  * read: any Coverage resource (any ID)
   * searches:
     * patient
 * **Devicerequest**
-  * read id:
-    * usqualitycore-devicerequest
+  * read: any DeviceRequest resource (any ID)
   * searches:
     * patient + do-not-perform
     * patient
     * patient + code
 * **Devicenotrequested**
-  * read id:
-    * usqualitycore-deviceprohibited
+  * read: any DeviceRequest resource (any ID)
   * searches:
     * patient + do-not-perform
     * patient
     * patient + code
 * **DiagnosticReportNote**
-  * read id:
-    * usqualitycore-diagnostic-report-note
+  * read: any DiagnosticReport resource (any ID)
   * searches:
     * patient + category
     * patient
     * patient + category + date
     * patient + code
 * **DiagnosticReportLab**
-  * read id:
-    * usqualitycore-diagnostic-report-lab
+  * read: any DiagnosticReport resource (any ID)
   * searches:
     * patient + category
     * patient
     * patient + category + date
     * patient + code
 * **UsCoreDocumentreference**
-  * read id:
-    * usqualitycore-us-core-documentreference
+  * read: any DocumentReference resource (any ID)
   * searches:
     * patient + category
     * patient
@@ -155,251 +142,216 @@ module USQualityCoreTestKit
     * patient + type
     * patient + category + date
 * **FamilyMemberHistory**
-  * read id:
-    * usqualitycore-family-member-history
+  * read: any FamilyMemberHistory resource (any ID)
   * searches:
     * patient
 * **Goal**
-  * read id:
-    * usqualitycore-goal
+  * read: any Goal resource (any ID)
   * searches:
     * patient
 * **Immunization**
-  * read id:
-    * usqualitycore-immunization
+  * read: any Immunization resource (any ID)
   * searches:
     * patient + status
     * patient
 * **Immunizationnotdone**
-  * read id:
-    * usqualitycore-immunizationnotdone
+  * read: any Immunization resource (any ID)
   * searches:
     * patient + status
     * patient
 * **Medicationadministration**
-  * read id:
-    * usqualitycore-medicationadministration
+  * read: any MedicationAdministration resource (any ID)
   * searches:
     * patient + status
     * patient
     * patient + code
     * patient + effective-time
 * **Medicationadministrationnotdone**
-  * read id:
-    * usqualitycore-medicationadministrationnotdone
+  * read: any MedicationAdministration resource (any ID)
   * searches:
     * patient + status
     * patient
     * patient + code
     * patient + effective-time
 * **Medicationdispense**
-  * read id:
-    * usqualitycore-medicationdispense
+  * read: any MedicationDispense resource (any ID)
   * searches:
     * patient + status
     * patient
 * **Medicationdispensedeclined**
-  * read id:
-    * usqualitycore-medicationdispensedeclined
+  * read: any MedicationDispense resource (any ID)
   * searches:
     * patient + status
     * patient
 * **Medicationrequest**
-  * read id:
-    * usqualitycore-medicationrequest
+  * read: any MedicationRequest resource (any ID)
   * searches:
     * patient + intent + do-not-perform
     * patient + intent
 * **Medicationnotrequested**
-  * read id:
-    * usqualitycore-medicationprohibited
+  * read: any MedicationRequest resource (any ID)
   * searches:
     * patient + intent + do-not-perform
     * patient + intent
 * **ObservationClinicalResult**
-  * read id:
-    * usqualitycore-observation-clinical-result
-    * usqualitycore-observation-lab
+  * read: any Observation resource (any ID)
   * searches:
     * patient + category + status
     * patient + category
     * patient + category + date
     * patient + code
 * **SimpleObservation**
-  * read id:
-    * usqualitycore-simple-observation
+  * read: any Observation resource (any ID)
   * searches:
     * patient + category + status
     * patient + category
     * patient + category + date
     * patient + code
 * **ObservationScreeningAssessment**
-  * read id:
-    * usqualitycore-observation-screening-assessment
+  * read: any Observation resource (any ID)
   * searches:
     * patient + category + status
     * patient + category
     * patient + category + date
     * patient + code
 * **Observationcancelled**
-  * read id:
-    * usqualitycore-observationcancelled
+  * read: any Observation resource (any ID)
   * searches:
     * patient + category + status
     * patient + category
     * patient + category + date
     * patient + code
 * **UsCoreObservationPregnancyintent**
-  * read id:
-    * usqualitycore-us-core-observation-pregnancyintent
+  * read: any Observation resource (any ID)
   * searches:
     * patient + code
     * patient + category + status
     * patient + category
     * patient + category + date
 * **UsCoreObservationPregnancystatus**
-  * read id:
-    * usqualitycore-us-core-observation-pregnancystatus
+  * read: any Observation resource (any ID)
   * searches:
     * patient + code
     * patient + category + status
     * patient + category
     * patient + category + date
 * **UsCoreSmokingstatus**
-  * read id:
-    * usqualitycore-us-core-smokingstatus
+  * read: any Observation resource (any ID)
   * searches:
     * patient + code
     * patient + category + status
     * patient + category
     * patient + category + date
 * **ObservationLab**
-  * read id:
-    * usqualitycore-observation-lab
+  * read: any Observation resource (any ID)
   * searches:
     * patient + category + status
     * patient + category
     * patient + category + date
     * patient + code
 * **UsCoreObservationOccupation**
-  * read id:
-    * usqualitycore-us-core-observation-occupation
+  * read: any Observation resource (any ID)
   * searches:
     * patient + code
     * patient + category + status
     * patient + category
     * patient + category + date
 * **UsCoreBloodPressure**
-  * read id:
-    * usqualitycore-us-core-blood-pressure
+  * read: any Observation resource (any ID)
   * searches:
     * patient + code
     * patient + category + status
     * patient + category
     * patient + category + date
 * **UsCoreBmi**
-  * read id:
-    * usqualitycore-us-core-bmi
+  * read: any Observation resource (any ID)
   * searches:
     * patient + code
     * patient + category + status
     * patient + category
     * patient + category + date
 * **PediatricBmiForAge**
-  * read id:
-    * usqualitycore-pediatric-bmi-for-age
+  * read: any Observation resource (any ID)
   * searches:
     * patient + code
     * patient + category + status
     * patient + category
     * patient + category + date
 * **UsCoreBodyHeight**
-  * read id:
-    * usqualitycore-us-core-body-height
+  * read: any Observation resource (any ID)
   * searches:
     * patient + code
     * patient + category + status
     * patient + category
     * patient + category + date
 * **UsCoreBodyTemperature**
-  * read id:
-    * usqualitycore-us-core-body-temperature
+  * read: any Observation resource (any ID)
   * searches:
     * patient + code
     * patient + category + status
     * patient + category
     * patient + category + date
 * **UsCoreBodyWeight**
-  * read id:
-    * usqualitycore-us-core-body-weight
+  * read: any Observation resource (any ID)
   * searches:
     * patient + code
     * patient + category + status
     * patient + category
     * patient + category + date
 * **HeadOccipitalFrontalCircumferencePercentile**
-  * read id:
-    * usqualitycore-head-circumference-percentile
+  * read: any Observation resource (any ID)
   * searches:
     * patient + code
     * patient + category + status
     * patient + category
     * patient + category + date
 * **UsCoreHeartRate**
-  * read id:
-    * usqualitycore-us-core-heart-rate
+  * read: any Observation resource (any ID)
   * searches:
     * patient + code
     * patient + category + status
     * patient + category
     * patient + category + date
 * **UsCorePulseOximetry**
-  * read id:
-    * usqualitycore-us-core-pulse-oximetry
+  * read: any Observation resource (any ID)
   * searches:
     * patient + code
     * patient + category + status
     * patient + category
     * patient + category + date
 * **UsCoreRespiratoryRate**
-  * read id:
-    * usqualitycore-us-core-respiratory-rate
+  * read: any Observation resource (any ID)
   * searches:
     * patient + code
     * patient + category + status
     * patient + category
     * patient + category + date
 * **PediatricWeightForHeight**
-  * read id:
-    * usqualitycore-pediatric-weight-for-height
+  * read: any Observation resource (any ID)
   * searches:
     * patient + code
     * patient + category + status
     * patient + category
     * patient + category + date
 * **Procedure**
-  * read id:
-    * usqualitycore-procedure
+  * read: any Procedure resource (any ID)
   * searches:
     * patient + status
     * patient
     * patient + date
 * **Procedurenotdone**
-  * read id:
-    * usqualitycore-procedurenotdone
+  * read: any Procedure resource (any ID)
   * searches:
     * patient + status
     * patient
     * patient + date
 * **RelatedPerson**
-  * read id:
-    * usqualitycore-related-person
+  * read: any RelatedPerson resource (any ID)
   * searches:
     * patient
     * _id
 * **Servicerequest**
-  * read id:
-    * usqualitycore-servicerequest
+  * read: any ServiceRequest resource (any ID)
   * searches:
     * patient + do-not-perform
     * _id
@@ -408,8 +360,7 @@ module USQualityCoreTestKit
     * patient + category + authored
     * patient + code
 * **Servicenotrequested**
-  * read id:
-    * usqualitycore-serviceprohibited
+  * read: any ServiceRequest resource (any ID)
   * searches:
     * patient + do-not-perform
     * _id
@@ -418,55 +369,46 @@ module USQualityCoreTestKit
     * patient + category + authored
     * patient + code
 * **Task**
-  * read id:
-    * usqualitycore-task
+  * read: any Task resource (any ID)
   * searches:
     * patient + status
     * patient
     * patient + code
 * **Taskrejected**
-  * read id:
-    * usqualitycore-taskrejected
+  * read: any Task resource (any ID)
   * searches:
     * patient + status
     * patient
     * patient + code
 * **Encounter**
-  * read id:
-    * usqualitycore-encounter
+  * read: any Encounter resource (any ID)
   * searches:
     * patient
     * _id
     * patient + type
     * patient + date
 * **Location**
-  * read id:
-    * usqualitycore-location
+  * read: any Location resource (any ID)
   * searches:
 
 * **Organization**
-  * read id:
-    * usqualitycore-organization
+  * read: any Organization resource (any ID)
   * searches:
 
 * **Practitioner**
-  * read id:
-    * usqualitycore-practitioner
+  * read: any Practitioner resource (any ID)
   * searches:
 
 * **PractitionerRole**
-  * read id:
-    * usqualitycore-practitioner-role
+  * read: any PractitionerRole resource (any ID)
   * searches:
 
 * **Provenance**
-  * read id:
-    * usqualitycore-provenance
+  * read: any Provenance resource (any ID)
   * searches:
 
 * **Specimen**
-  * read id:
-    * usqualitycore-specimen
+  * read: any Specimen resource (any ID)
   * searches:
     * _id
                 ),

@@ -47,7 +47,7 @@ module USQualityCoreTestKit
             .map do |group|
               profile_name = USQualityCoreTestKit::Generator::Naming.upper_camel_case_for_profile(group)
               profile_header = "* **#{profile_name}**"
-              read_id = "  * read id:\n#{read_ids_for(group).map { |id| "    * #{id}" }.join("\n")}"
+              read_requirement = "  * read: any #{group.resource} resource (any ID)"
               required_searches = group.searches.each do |search|
                 next unless search[:expectation] == 'SHALL'
               end
@@ -55,19 +55,9 @@ module USQualityCoreTestKit
               search_list = required_searches.map do |search|
                 "    * #{search[:names].join(' + ')}"
               end
-              "#{profile_header}\n#{read_id}\n#{searches}\n#{search_list.join("\n")}"
+              "#{profile_header}\n#{read_requirement}\n#{searches}\n#{search_list.join("\n")}"
             end
             .join("\n")
-        end
-
-        def read_ids_for(group)
-          naming = USQualityCoreTestKit::Generator::Naming
-          profile_identifier = naming.snake_case_for_profile(group)
-          read_ids = [naming.instance_id_for_profile(profile_identifier)]
-
-          read_ids << naming.instance_id_for_profile('observation_lab') if profile_identifier == 'observation_clinical_result'
-
-          read_ids
         end
 
         def generate

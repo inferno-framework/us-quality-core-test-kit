@@ -30,9 +30,7 @@ MedicationRequest resource type. In this case, the test will be marked as skip i
 for the resource type is required, and omitted otherwise.
 
 ## Reading
-This test will check that the client performed a read of the following id:
-
-* `usqualitycore-medicationprohibited`
+This test checks that the client performed a read of any MedicationRequest resource, regardless of its ID.
 
 ## Searching
 These tests will check that the client performed searches against the

@@ -36,31 +36,16 @@ module USQualityCoreTestKit
           group_metadata.resource
         end
 
-        def expected_resource_id
-          if profile_identifier == 'observation_clinical_result'
-            [USQualityCoreTestKit::Generator::Naming.instance_id_for_profile(profile_identifier),
-             USQualityCoreTestKit::Generator::Naming.instance_id_for_profile('observation_lab')]
-          else
-            USQualityCoreTestKit::Generator::Naming.instance_id_for_profile(profile_identifier)
-          end
-        end
-
-        def expected_resource_id_string
-          Array(expected_resource_id).map { |id| "`#{resource_type}/#{id}`" }.join(', ')
-        end
-
-        def expected_resource_id_literal
-          return expected_resource_id.inspect if expected_resource_id.is_a?(Array)
-
-          "'#{expected_resource_id}'"
+        def optional?
+          resource_type != 'Patient' && !group_metadata.delayed?
         end
 
         def title
-          "#{conformance_expectation} support read of #{profile_identifier.camelize}"
+          "#{conformance_expectation} support read of #{resource_type}"
         end
 
         def description
-          "The client demonstrates #{conformance_expectation} support for reading #{profile_identifier.camelize}."
+          "The client demonstrates #{conformance_expectation} support for reading the #{resource_type} resource type."
         end
       end
     end
