@@ -29,9 +29,7 @@ RelatedPerson resource type. In this case, the test will be marked as skip if su
 for the resource type is required, and omitted otherwise.
 
 ## Reading
-This test will check that the client performed a read of the following id:
-
-* `usqualitycore-related-person`
+This test checks that the client performed a read of any RelatedPerson resource, regardless of its ID.
 
 ## Searching
 The client must demonstrate at least one of the following search parameter

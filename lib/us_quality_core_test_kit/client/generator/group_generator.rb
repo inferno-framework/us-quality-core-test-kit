@@ -47,9 +47,7 @@ module USQualityCoreTestKit
             for the resource type is required, and omitted otherwise.
 
             ## Reading
-            This test will check that the client performed a read of #{expected_resource_id.length > 1 ? 'one of the following ids' : 'the following id'}:
-
-            #{expected_resource_id_string}
+            This test checks that the client performed a read of any #{resource_type} resource, regardless of its ID.
 
             ## Searching
             The client must demonstrate at least one of the following search parameter
@@ -68,18 +66,6 @@ module USQualityCoreTestKit
           File.write(output_file_name, output)
           group_metadata.id = group_id
           group_metadata.file_name = base_output_file_name
-        end
-
-        def expected_resource_id
-          resource_id = [USQualityCoreTestKit::Generator::Naming.instance_id_for_profile(profile_identifier)]
-
-          resource_id << USQualityCoreTestKit::Generator::Naming.instance_id_for_profile('observation_lab') if profile_identifier == 'observation_clinical_result'
-
-          resource_id
-        end
-
-        def expected_resource_id_string
-          expected_resource_id.map { |id| "* `#{id}`" }.join("\n")
         end
       end
     end
