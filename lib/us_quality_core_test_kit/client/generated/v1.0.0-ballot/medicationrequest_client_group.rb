@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'medicationrequest/medicationrequest_client_read_test'
-require_relative 'medicationrequest/medicationrequest_patient_intent_client_search_test'
-require_relative 'medicationrequest/medicationrequest_patient_intent_do_not_perform_client_search_test'
+require_relative 'medicationrequest/medicationrequest_client_search_test'
 
 module USQualityCoreTestKit
   module Client
@@ -24,7 +23,7 @@ conforming to the US Quality Core MedicationRequest Profile.
 ## Data Access Supported
 
 Clients may not be required to support the MedicationRequest FHIR resource type. However, if they
-do support it, they must support the US Quality Core MedicationRequest Profile and the resource type's search parameters.
+do support it, they must support the US Quality Core MedicationRequest Profile and use a supported search to access its data.
 The tests in this group will not execute if client makes no attempt to access data for the
 MedicationRequest resource type. In this case, the test will be marked as skip if support
 for the resource type is required, and omitted otherwise.
@@ -35,15 +34,11 @@ This test will check that the client performed a read of the following id:
 * `usqualitycore-medicationrequest`
 
 ## Searching
-These tests will check that the client performed searches against the
-MedicationRequest resource type with the following required parameters:
+The client must demonstrate at least one of the following search parameter
+combinations supported by the server for MedicationRequest:
 
 * patient + intent
 * patient + intent + do-not-perform
-
-Inferno will also look for searches using the following optional parameters:
-
-
 
 
         )
@@ -53,8 +48,7 @@ Inferno will also look for searches using the following optional parameters:
         run_as_group
 
         test from: :us_quality_core_v100_ballot_medicationrequest_client_read_test
-        test from: :us_quality_core_v100_ballot_medicationrequest_patient_intent_client_search_test
-        test from: :us_quality_core_v100_ballot_medicationrequest_patient_intent_do_not_perform_client_search_test
+        test from: :us_quality_core_v100_ballot_medicationrequest_client_search_test
       end
     end
   end

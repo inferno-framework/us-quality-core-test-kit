@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Only SHALL client searches are generated. SHOULD search tests may be added later.
 module USQualityCoreTestKit
   module Client
     module <%= module_name %>
@@ -12,41 +13,37 @@ module USQualityCoreTestKit
 
         description %(
           <%= description %>
+          Accepted combinations: <%= required_search_combinations.map { |names| "`#{names.join(' + ')}`" }.join(', ') %>.
         )
 
-        optional <%= optional? %>
-
-        def required_params
-          <%= search_metadata[:names] %>
+        def required_search_combinations
+          <%= required_search_combinations.inspect %>
         end
 
         def skip_message
-          "Inferno did not receive any search requests for the `<%= resource_type %>` resource type."
+          'Inferno did not receive any search requests for the `<%= resource_type %>` resource type.'
         end
 
         def failure_message
-          "Inferno did not receive the expected search made for the `<%= resource_type %>` resource type with required search parameters: `#{required_params.join(' + ')}`."
-        end
+          'Inferno did not receive a search for `<%= resource_type %>` using any of these combinations: ' \
+          "#{required_search_combinations.map { |names| names.join(' + ') }.join(', ')}."
+        end        
 
-        <%- unless optional? -%>
         def all_required_search_parameters
           <%= all_required_search_parameters.inspect %>
         end
 
-        <%- end -%>
         run do
           requests = load_tagged_requests(SEARCH_<%= resource.underscore.upcase %>_TAG)
           skip_if requests.blank?, skip_message
 
-          requests_with_params = filter_requests_by_search_parameters(requests, required_params)
-          assert requests_with_params.any?, failure_message
-          <%- unless optional? -%>
+          matching_requests = filter_requests_by_search_parameter_combinations(requests, required_search_combinations)
+          assert matching_requests.any?, failure_message
 
-          non_required_search_parameters(requests_with_params, all_required_search_parameters).each do |parameter|
+          non_required_search_parameters(matching_requests, all_required_search_parameters).each do |parameter|
             warning "The client used the non-required search parameter `#{parameter}` for `<%= resource_type %>`. " \
                     'The server may not accept search parameters other than those required by the IG CapabilityStatement.'
           end
-          <%- end -%>
         end
       end
     end

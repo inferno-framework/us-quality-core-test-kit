@@ -102,7 +102,7 @@ Inferno will then evaluate the requests in aggregate to verify that
 they demonstrate that the client:
 
 * Retrieved a target instance for each profile.
-* Performed searches using the required search parameters and search
+* Performed a search using at least one of the required server search
   parameter combinations for the profile's resource type.
 
 # Interpreting the Results
@@ -119,8 +119,8 @@ makes requests for.
   all profiles of that resource type will be evaluated, meaning that
   the group for each profile of that resource type will be executed,
   checking that the client read the target instance for that profile
-  and perform searches with all required search parameters and
-  combinations for the resource type. The executed group will pass or
+  and performed a search with at least one required server search
+  combination for the resource type. The executed group will pass or
   fail and include details of the issues encountered by Inferno.
 - If a client makes no requests for a given resource type, support
   is not evaluated. If support for the resource type is required, the

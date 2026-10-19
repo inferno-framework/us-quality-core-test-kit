@@ -31,8 +31,8 @@ generate_us_quality_core = lambda do
   targets = mode.empty? ? supported_modes : [mode]
 
   if clean == 'true'
-    FileUtils.rm_rf('lib/us_quality_core_test_kit/generated')
-    FileUtils.rm_rf('lib/us_quality_core_test_kit/client/generated')
+    FileUtils.rm_rf('lib/us_quality_core_test_kit/generated') if targets.include?('server')
+    FileUtils.rm_rf('lib/us_quality_core_test_kit/client/generated') if targets.include?('client')
   end
 
   require_relative 'lib/us_quality_core_test_kit/generator'

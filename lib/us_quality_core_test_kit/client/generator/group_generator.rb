@@ -41,7 +41,7 @@ module USQualityCoreTestKit
             ## Data Access Supported
 
             Clients may not be required to support the #{resource_type} FHIR resource type. However, if they
-            do support it, they must support the #{profile_name} and the resource type's search parameters.
+            do support it, they must support the #{profile_name} and use a supported search to access its data.
             The tests in this group will not execute if client makes no attempt to access data for the
             #{resource_type} resource type. In this case, the test will be marked as skip if support
             for the resource type is required, and omitted otherwise.
@@ -52,27 +52,12 @@ module USQualityCoreTestKit
             #{expected_resource_id_string}
 
             ## Searching
-            These tests will check that the client performed searches against the
-            #{resource_type} resource type with the following required parameters:
+            The client must demonstrate at least one of the following search parameter
+            combinations supported by the server for #{resource_type}:
 
             #{search_param_name_string}
 
-            Inferno will also look for searches using the following optional parameters:
-
-            #{optional_search_param_name_string}
-
           DESCRIPTION
-        end
-
-        def optional_searches
-          group_metadata.searches.reject { |search| search[:expectation] == 'SHALL' }
-        end
-
-        def optional_search_param_name_string
-          optional_searches
-            .map { |search| search[:names].join(' + ') }
-            .map { |names| "* #{names}" }
-            .join("\n")
         end
 
         def conformance_optional?

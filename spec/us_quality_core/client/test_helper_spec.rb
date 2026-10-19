@@ -34,4 +34,24 @@ RSpec.describe USQualityCoreTestKit::Client::TestHelper do
 
     expect(helper.non_required_search_parameters(requests, %w[patient category date])).to be_empty
   end
+
+  describe '#filter_requests_by_search_parameter_combinations' do
+    let(:combinations) { [%w[subject], %w[subject event], %w[subject recorded-date]] }
+
+    it 'accepts any listed combination in GET and POST requests' do
+      requests = [
+        request_class.new('GET', 'http://example.com/AdverseEvent?event=123'),
+        request_class.new('GET', 'http://example.com/AdverseEvent?subject=Patient/1'),
+        request_class.new('POST', 'http://example.com/AdverseEvent/_search', 'subject=Patient%2F1&event=123')
+      ]
+
+      expect(helper.filter_requests_by_search_parameter_combinations(requests, combinations)).to eq(requests.last(2))
+    end
+
+    it 'rejects requests that do not contain a complete combination' do
+      requests = [request_class.new('GET', 'http://example.com/CarePlan?patient=1')]
+
+      expect(helper.filter_requests_by_search_parameter_combinations(requests, [%w[patient category]])).to be_empty
+    end
+  end
 end
