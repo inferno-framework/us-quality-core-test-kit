@@ -6,6 +6,8 @@ require_relative 'special_cases'
 module USQualityCoreTestKit
   class Generator
     class ReferenceResolutionTestGenerator
+      TARGET_PROFILE_VERSIONS_FILE_NAME = 'target_profile_versions.yml'
+
       attr_accessor :group_metadata, :base_output_dir
 
       def initialize(group_metadata, base_output_dir)
@@ -64,9 +66,33 @@ module USQualityCoreTestKit
 
       class << self
         def generate(ig_metadata, base_output_dir)
+          generate_target_profile_versions(ig_metadata, base_output_dir)
+
           ig_metadata.groups
                      .reject { |group| SpecialCases.exclude_group? group }
                      .each { |group| new(group, base_output_dir).generate }
+        end
+
+        def generate_target_profile_versions(ig_metadata, base_output_dir)
+          File.write(File.join(base_output_dir, TARGET_PROFILE_VERSIONS_FILE_NAME),
+                     YAML.dump(target_profile_versions(ig_metadata)))
+        end
+
+        # The version of each IG this suite has groups for, keyed by canonical base
+        # (e.g. v0.5.0: US Quality Core 0.5.0 and US Core 6.1.0). Raises if a base has no version or more than one,
+        # because its target profiles would then be validated against whichever version the validator loaded last.
+        def target_profile_versions(ig_metadata)
+          ig_metadata.groups
+                     .map { |group| [group.profile_url.split('StructureDefinition/').first, group.profile_version] }
+                     .uniq
+                     .group_by(&:first)
+                     .to_h do |base, pairs|
+            versions = pairs.map(&:last)
+            raise "Profile version is blank for #{base}" if versions.any?(&:blank?)
+            raise "Multiple profile versions for #{base}: #{versions.join(', ')}" if versions.many?
+
+            [base, versions.first]
+          end
         end
       end
 

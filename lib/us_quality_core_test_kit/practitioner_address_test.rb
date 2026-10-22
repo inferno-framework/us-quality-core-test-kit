@@ -64,8 +64,10 @@ module USQualityCoreTestKit
           next false if practitioner_roles.empty?
           next true if config.options[:skip_practitioner_role_validation]
 
+          # The canonical base differs between IG versions (v0.5.0 is http://fhir.org/guides/onc/us-quality-core/)
+          canonical_base = metadata.profile_url.split('StructureDefinition/').first
           target_profile_with_version =
-            "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitionerrole|#{metadata.profile_version}"
+            "#{canonical_base}StructureDefinition/us-quality-core-practitionerrole|#{metadata.profile_version}"
 
           practitioner_roles.any? { |pr| resource_is_valid_with_target_profile?(pr, target_profile_with_version) }
         end

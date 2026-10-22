@@ -165,7 +165,34 @@ module USQualityCoreTestKit
     def resource_is_valid_with_target_profile?(resource, target_profile)
       return true if target_profile.blank?
 
-      resource_is_valid?(resource:, profile_url: target_profile, add_messages_to_runnable: false)
+      resource_is_valid?(resource:, profile_url: versioned_target_profile(target_profile),
+                         add_messages_to_runnable: false)
+    end
+
+    # One validator session can load several versions of an IG (v0.5.0 loads US Core 6.1.0, and 7.0.0 through
+    # hl7.fhir.us.cql), and an unversioned profile resolves to the newest one. Each target profile gets the
+    # version of its own IG, from the map the generator writes for the suite version. Profiles from IGs the suite
+    # has no groups for, and tests or versions without a map, are left unversioned.
+    def versioned_target_profile(target_profile)
+      return target_profile if target_profile.include?('|')
+
+      version = target_profile_versions[target_profile.split('StructureDefinition/').first]
+      version.present? ? "#{target_profile}|#{version}" : target_profile
+    end
+
+    def target_profile_versions
+      return {} unless self.class.respond_to?(:metadata)
+
+      ReferenceResolutionTest.target_profile_versions_for(self.class.metadata.version)
+    end
+
+    def self.target_profile_versions_for(version)
+      @target_profile_versions ||= {}
+      @target_profile_versions[version] ||=
+        begin
+          path = File.join(__dir__, 'generated', version.to_s, 'target_profile_versions.yml')
+          File.exist?(path) ? YAML.load_file(path) : {}
+        end
     end
   end
 end
