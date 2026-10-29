@@ -1,5 +1,10 @@
 # Unreleased
 
+# 0.2.1
+
+* Allow client search tests to pass using any one required server search parameter combination.
+* Update client read tests to accept reads of any instance of the resource type and make reads optional where appropriate.
+
 # 0.2.0
 
 * Update the test kit to include US Quality Core v1.0.0-ballot.
