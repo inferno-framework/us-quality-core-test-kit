@@ -64,9 +64,7 @@ module USQualityCoreTestKit
   All requests will be recorded. When finished, the requests will be inspected to ensure that the client under test is making the required requests.
   Requests should target the following patient record:
   - **Resource ID**: `usqualitycore-patient`
-
   - **CarePlan Category Code**: `assess-plan`
-
 
   [Click here](#{resume_pass_url}?token=#{token}) when finished.
 

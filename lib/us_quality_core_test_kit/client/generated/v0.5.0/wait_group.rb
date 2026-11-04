@@ -65,7 +65,6 @@ module USQualityCoreTestKit
   Requests should target the following patient record:
   - **Resource ID**: `usqualitycore-patient`
 
-
   [Click here](#{resume_pass_url}?token=#{token}) when finished.
 
   The following requirements will be checked:
