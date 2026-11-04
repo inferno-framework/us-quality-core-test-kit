@@ -65,6 +65,9 @@ module USQualityCoreTestKit
   Requests should target the following patient record:
   - **Resource ID**: `usqualitycore-patient`
 
+  - **CarePlan Category Code**: `assess-plan`
+
+
   [Click here](#{resume_pass_url}?token=#{token}) when finished.
 
   The following requirements will be checked:
