@@ -100,4 +100,9 @@ Access followed by selected profile groups to evaluate a smaller set of client
 requests.
 
 The generated Postman collection can be used as a concrete example of the
-expected request patterns.
+expected request patterns. Its search values are selected from IG metadata or
+syntactically valid placeholders; generating the collection does not read the
+sample patient bundle. Searches may return empty Bundles, which produce a
+console warning rather than a failed Postman assertion. The collection still
+checks for successful HTTP responses and the expected resource type. Read
+requests continue to use the predefined resource IDs on the reference server.
